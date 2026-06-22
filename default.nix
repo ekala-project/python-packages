@@ -1,8 +1,10 @@
 let
-  stdenvRepo = builtins.fetchGit {
-    url = "https://github.com/jonringer/stdenv.git";
-    rev = "415802fd971557fefc332d295527d61e304687e9";
+  core = builtins.fetchGit {
+    url = "https://github.com/ekala-project/corepkgs.git";
+    rev = "1b780e9063fbe4d3b3b6014c04ba22030b667491";
   };
+
+  coreRepo = import core;
 
   lib = import (builtins.fetchGit {
     url = "https://github.com/jonringer/nix-lib.git";
@@ -25,15 +27,15 @@ in
 { overlays ? [], config ? { }, ... }@args:
 
 let
-  filteredAttrs = lib.filterAttrs [ "overlays" "config" ] args;
+  filteredAttrs = builtins.removeAttrs args [ "overlays" "config" ];
 in
 
-import stdenvRepo ({
+coreRepo ({
   overlays = [
     toplevelOverlay
   ] ++ overlays;
 
   config = config // {
-    pythonOverlays = [ pythonOverlay ] ++ (config.pythonOverlays or [ ]);
+    overlays.python = [ pythonOverlay ] ++ (config.overlays.python or [ ]);
   };
 } // filteredAttrs)
