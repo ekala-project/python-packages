@@ -1,0 +1,29 @@
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  setuptools,
+}:
+
+buildPythonPackage (finalAttrs: {
+  pname = "dill";
+  version = "0.4.1";
+  pyproject = true;
+
+  src = fetchFromGitHub {
+    owner = "uqfoundation";
+    repo = "dill";
+    tag = finalAttrs.version;
+    hash = "sha256-Yh9WvescLgV7DmxGBTGKsb29+eRzF9qjZMg0DQQyLyY=";
+  };
+
+  build-system = [ setuptools ];
+
+  pythonImportsCheck = [ "dill" ];
+
+  meta = {
+    description = "Serialize all of python (almost)";
+    homepage = "https://github.com/uqfoundation/dill/";
+    license = lib.licenses.bsd3;
+  };
+})

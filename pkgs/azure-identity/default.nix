@@ -1,0 +1,43 @@
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  azure-core,
+  cryptography,
+  msal,
+  msal-extensions,
+  typing-extensions,
+  setuptools,
+}:
+
+buildPythonPackage rec {
+  pname = "azure-identity";
+  version = "1.25.1";
+  pyproject = true;
+
+  src = fetchPypi {
+    pname = "azure_identity";
+    inherit version;
+    hash = "sha256-h8qDKIg95gNkQ+HDe0Do3I+3SJgkD2EHHgnS42k2FFY=";
+  };
+
+  build-system = [ setuptools ];
+
+  dependencies = [
+    azure-core
+    cryptography
+    msal
+    msal-extensions
+    typing-extensions
+  ];
+
+  pythonImportsCheck = [ "azure.identity" ];
+
+  doCheck = false;
+
+  meta = {
+    description = "Microsoft Azure Identity Library for Python";
+    homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/identity/azure-identity";
+    license = lib.licenses.mit;
+  };
+}
