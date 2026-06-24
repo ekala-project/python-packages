@@ -5,7 +5,7 @@
   numpy,
   packaging,
   pandas,
-  pyarrow,
+  pyarrow ? null,
   setuptools,
 }:
 
@@ -27,6 +27,7 @@ buildPythonPackage rec {
     numpy
     packaging
     pandas
+  ] ++ lib.optionals (pyarrow != null) [
     pyarrow
   ];
 
