@@ -7,7 +7,6 @@
   setuptools,
 
   # optional-dependencies
-  aiodns,
   aiohttp,
   boto3,
   sqlalchemy,
@@ -31,7 +30,6 @@ buildPythonPackage (finalAttrs: {
 
   optional-dependencies = {
     optional = [
-      aiodns
       aiohttp
       boto3
       sqlalchemy
