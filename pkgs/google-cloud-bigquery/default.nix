@@ -12,7 +12,7 @@
   protobuf,
   python-dateutil,
   requests,
-  pyarrow,
+  pyarrow ? null,
   db-dtypes,
   pandas,
   tqdm,
@@ -49,13 +49,11 @@ buildPythonPackage rec {
     bqstorage = [
       google-cloud-bigquery-storage
       grpcio
-      pyarrow
-    ];
+    ] ++ lib.optionals (pyarrow != null) [ pyarrow ];
     pandas = [
       db-dtypes
       pandas
-      pyarrow
-    ];
+    ] ++ lib.optionals (pyarrow != null) [ pyarrow ];
     tqdm = [ tqdm ];
     ipython = [ ipython ];
   };
