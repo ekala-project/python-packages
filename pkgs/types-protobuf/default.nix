@@ -2,7 +2,6 @@
   lib,
   buildPythonPackage,
   fetchPypi,
-  types-futures,
 }:
 
 buildPythonPackage rec {
@@ -15,8 +14,6 @@ buildPythonPackage rec {
     inherit version;
     hash = "sha256-bV+wYKYWv7B2y7YbSzw5afX8i+xYEPmi9+ZI7ly8v24=";
   };
-
-  propagatedBuildInputs = [ types-futures ];
 
   # Module doesn't have tests
   doCheck = false;
