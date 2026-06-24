@@ -3,7 +3,6 @@
   stdenv,
   buildPythonPackage,
   fetchFromGitHub,
-  isPyPy,
 
   # build-system
   poetry-core,
@@ -14,7 +13,6 @@
 
   # dependencies
   python-dateutil,
-  time-machine,
   tzdata,
 }:
 
@@ -48,9 +46,6 @@ buildPythonPackage rec {
   propagatedBuildInputs = [
     python-dateutil
     tzdata
-  ]
-  ++ lib.optionals (!isPyPy) [
-    time-machine
   ];
 
   pythonImportsCheck = [ "pendulum" ];
