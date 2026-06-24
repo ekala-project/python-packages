@@ -5,7 +5,6 @@
   setuptools,
   setuptools-scm,
   fsspec,
-  pathlib-abc,
 }:
 
 buildPythonPackage rec {
@@ -26,7 +25,6 @@ buildPythonPackage rec {
 
   dependencies = [
     fsspec
-    pathlib-abc
   ];
 
   pythonImportsCheck = [ "upath" ];
