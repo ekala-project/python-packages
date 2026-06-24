@@ -5,7 +5,6 @@
   google-auth,
   googleapis-common-protos,
   grpcio,
-  grpcio-gcp,
   grpcio-status,
   proto-plus,
   protobuf,
@@ -43,8 +42,6 @@ buildPythonPackage rec {
       grpcio
       grpcio-status
     ];
-    grpcgcp = [ grpcio-gcp ];
-    grpcio-gcp = [ grpcio-gcp ];
   };
 
   pythonImportsCheck = [ "google.api_core" ];
