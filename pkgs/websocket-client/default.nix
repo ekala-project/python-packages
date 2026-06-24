@@ -2,7 +2,6 @@
   lib,
   buildPythonPackage,
   fetchPypi,
-  python-socks,
   setuptools,
 }:
 
@@ -21,7 +20,7 @@ buildPythonPackage rec {
 
   optional-dependencies = {
     optional = [
-      python-socks
+      # python-socks is not available at the moment
       # wsaccel is not available at the moment
     ];
   };
