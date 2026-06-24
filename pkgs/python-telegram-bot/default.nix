@@ -1,7 +1,5 @@
 {
   lib,
-  aiolimiter,
-  apscheduler,
   buildPythonPackage,
   cachetools,
   cffi,
@@ -10,7 +8,6 @@
   hatchling,
   httpx,
   pythonAtLeast,
-  pytz,
   setuptools,
   tornado,
 }:
@@ -37,14 +34,9 @@ buildPythonPackage rec {
   optional-dependencies = rec {
     all = ext ++ http2 ++ passport ++ socks;
     callback-data = [ cachetools ];
-    ext = callback-data ++ job-queue ++ rate-limiter ++ webhooks;
+    ext = callback-data ++ webhooks;
     http2 = httpx.optional-dependencies.http2;
-    job-queue = [
-      apscheduler
-      pytz
-    ];
     passport = [ cryptography ] ++ lib.optionals (pythonAtLeast "3.13") [ cffi ];
-    rate-limiter = [ aiolimiter ];
     socks = httpx.optional-dependencies.socks;
     webhooks = [ tornado ];
   };
