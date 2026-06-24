@@ -14,33 +14,23 @@
   mmh3,
   pydantic,
   pyparsing,
-  pyroaring,
   requests,
   rich,
-  strictyaml,
   tenacity,
   zstandard,
 
   # optional-dependencies
-  adlfs,
   google-cloud-bigquery,
-  datafusion,
   duckdb,
-  pyarrow,
+  pyarrow ? null,
   boto3,
   azure-identity,
   google-auth,
   gcsfs,
   huggingface-hub,
-  thrift,
-  kerberos,
   pandas,
   polars,
-  pyiceberg-core,
-  ray,
   s3fs,
-  python-snappy,
-  psycopg2-binary,
   sqlalchemy,
 }:
 
@@ -71,18 +61,13 @@ buildPythonPackage (finalAttrs: {
     mmh3
     pydantic
     pyparsing
-    pyroaring
     requests
     rich
-    strictyaml
     tenacity
     zstandard
   ];
 
   optional-dependencies = {
-    adlfs = [
-      adlfs
-    ];
     bigquery = [
       google-cloud-bigquery
     ];
@@ -92,13 +77,9 @@ buildPythonPackage (finalAttrs: {
     daft = [
       # daft
     ];
-    datafusion = [
-      datafusion
-    ];
     duckdb = [
       duckdb
-      pyarrow
-    ];
+    ] ++ lib.optionals (pyarrow != null) [ pyarrow ];
     dynamodb = [
       boto3
     ];
@@ -117,32 +98,14 @@ buildPythonPackage (finalAttrs: {
     hf = [
       huggingface-hub
     ];
-    hive = [
-      thrift
-    ];
-    hive-kerberos = [
-      kerberos
-      thrift
-      # thrift-sasl
-    ];
     pandas = [
       pandas
-      pyarrow
-    ];
+    ] ++ lib.optionals (pyarrow != null) [ pyarrow ];
     polars = [
       polars
     ];
-    pyarrow = [
+    pyarrow = lib.optionals (pyarrow != null) [
       pyarrow
-      pyiceberg-core
-    ];
-    pyiceberg-core = [
-      pyiceberg-core
-    ];
-    ray = [
-      pandas
-      pyarrow
-      ray
     ];
     rest-sigv4 = [
       boto3
@@ -150,11 +113,7 @@ buildPythonPackage (finalAttrs: {
     s3fs = [
       s3fs
     ];
-    snappy = [
-      python-snappy
-    ];
     sql-postgres = [
-      psycopg2-binary
       sqlalchemy
     ];
     sql-sqlite = [
