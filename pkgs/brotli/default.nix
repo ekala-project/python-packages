@@ -1,29 +1,30 @@
 {
   lib,
-  brotli,
   buildPythonPackage,
-  pkgconfig,
+  fetchFromGitHub,
   setuptools,
 }:
 
 buildPythonPackage rec {
   pname = "brotli";
-  inherit (brotli) version src;
+  version = "1.2.0";
   pyproject = true;
 
+  src = fetchFromGitHub {
+    owner = "google";
+    repo = "brotli";
+    tag = "v${version}";
+    hash = "sha256-kl8ZHt71v17QR2bDP+ad/5uixf+GStEPLQ5ooFoC5i8=";
+  };
+
   build-system = [
-    pkgconfig
     setuptools
   ];
 
   # only returns information how to really build
   dontConfigure = true;
 
-  env.USE_SYSTEM_BROTLI = 1;
-
-  buildInputs = [
-    brotli
-  ];
+  pythonImportsCheck = [ "brotli" ];
 
   meta = {
     homepage = "https://github.com/google/brotli";
