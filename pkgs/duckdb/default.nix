@@ -4,36 +4,40 @@
   fetchFromGitHub,
   cmake,
   ninja,
-  duckdb,
-  fsspec,
-  ipython,
-  numpy,
   openssl,
-  pandas,
-  pyarrow,
   pybind11,
   scikit-build-core,
   setuptools-scm,
 }:
 
+let
+  # DuckDB C++ source (used as a submodule by the Python package)
+  duckdbVersion = "1.5.2";
+  duckdbRev = "8a5851971fae891f292c2714d86046ee018e9737";
+  duckdbSrc = fetchFromGitHub {
+    owner = "duckdb";
+    repo = "duckdb";
+    tag = "v${duckdbVersion}";
+    hash = "sha256-FWoVF7s/n28NN1HtnO0Cr3YyoIDgJcWBtBiO7vWiSOU=";
+  };
+in
+
 buildPythonPackage rec {
-  inherit (duckdb)
-    pname
-    version # nixpkgs-update: no auto update
-    ;
+  pname = "duckdb";
+  version = duckdbVersion;
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "duckdb";
     repo = "duckdb-python";
     tag = "v${version}";
-    hash = duckdb.passthru.pythonHash;
+    hash = "sha256-B14dXW5pPnToiKbSD9ACzNksIhBG+ui1P9l67Qyke8o=";
   };
 
   postPatch = ''
     # The build depends on a duckdb git submodule
     rm -r external/duckdb
-    ln -s ${duckdb.src} external/duckdb
+    ln -s ${duckdbSrc} external/duckdb
 
     # replace pybind11[global] with pybind11
     substituteInPlace pyproject.toml \
@@ -61,20 +65,8 @@ buildPythonPackage rec {
   ];
 
   buildInputs = [
-    duckdb
     openssl
   ];
-
-  optional-dependencies = {
-    all = [
-      # FIXME package adbc_driver_manager
-      ipython
-      fsspec
-      numpy
-      pandas
-      pyarrow
-    ];
-  };
 
   env = {
     DUCKDB_BUILD_UNITY = 1;
@@ -84,7 +76,7 @@ buildPythonPackage rec {
   };
 
   cmakeFlags = [
-    (lib.cmakeFeature "OVERRIDE_GIT_DESCRIBE" "v${version}-0-g${duckdb.rev}")
+    (lib.cmakeFeature "OVERRIDE_GIT_DESCRIBE" "v${version}-0-g${duckdbRev}")
   ];
 
   pythonImportsCheck = [ "duckdb" ];
