@@ -7,7 +7,6 @@
   setuptools,
 
   # dependencies
-  adal,
   certifi,
   durationpy,
   google-auth,
@@ -48,10 +47,6 @@ buildPythonPackage rec {
     urllib3
     websocket-client
   ];
-
-  optional-dependencies = {
-    adal = [ adal ];
-  };
 
   pythonImportsCheck = [ "kubernetes" ];
 
