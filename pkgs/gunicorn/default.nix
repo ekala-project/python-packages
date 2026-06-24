@@ -10,7 +10,6 @@
   packaging,
 
   # optional-dependencies
-  eventlet,
   gevent,
   tornado,
   setproctitle,
@@ -34,7 +33,6 @@ buildPythonPackage rec {
 
   optional-dependencies = {
     gevent = [ gevent ];
-    eventlet = [ eventlet ];
     tornado = [ tornado ];
     gthread = [ ];
     setproctitle = [ setproctitle ];
