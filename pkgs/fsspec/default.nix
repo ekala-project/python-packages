@@ -8,22 +8,12 @@
   hatch-vcs,
 
   # optional-dependencies
-  adlfs,
-  pyarrow,
-  dask,
-  distributed,
+  pyarrow ? null,
   requests,
-  dropbox,
   aiohttp,
-  fusepy,
   gcsfs,
-  libarchive-c,
-  ocifs,
-  panel,
   paramiko,
-  pygit2,
   s3fs,
-  smbprotocol,
   tqdm,
 }:
 
@@ -45,50 +35,23 @@ buildPythonPackage rec {
   ];
 
   optional-dependencies = {
-    abfs = [ adlfs ];
-    adl = [ adlfs ];
-    arrow = [ pyarrow ];
-    dask = [
-      dask
-      distributed
-    ];
-    dropbox = [
-      dropbox
-      requests
-    ];
+    arrow = lib.optionals (pyarrow != null) [ pyarrow ];
     entrypoints = [ ];
     full = [
-      adlfs
       aiohttp
-      dask
-      distributed
-      dropbox
-      fusepy
       gcsfs
-      libarchive-c
-      ocifs
-      panel
       paramiko
-      pyarrow
-      pygit2
       requests
       s3fs
-      smbprotocol
       tqdm
-    ];
-    fuse = [ fusepy ];
+    ] ++ lib.optionals (pyarrow != null) [ pyarrow ];
     gcs = [ gcsfs ];
-    git = [ pygit2 ];
     github = [ requests ];
     gs = [ gcsfs ];
-    gui = [ panel ];
-    hdfs = [ pyarrow ];
+    hdfs = lib.optionals (pyarrow != null) [ pyarrow ];
     http = [ aiohttp ];
-    libarchive = [ libarchive-c ];
-    oci = [ ocifs ];
     s3 = [ s3fs ];
     sftp = [ paramiko ];
-    smb = [ smbprotocol ];
     ssh = [ paramiko ];
     tqdm = [ tqdm ];
   };
