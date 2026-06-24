@@ -4,7 +4,6 @@
   fetchFromGitHub,
   setuptools,
   asgiref,
-  twisted,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -22,8 +21,6 @@ buildPythonPackage (finalAttrs: {
   build-system = [ setuptools ];
 
   dependencies = [ asgiref ];
-
-  optional-dependencies.twisted = [ twisted ];
 
   __darwinAllowLocalNetworking = true;
 
