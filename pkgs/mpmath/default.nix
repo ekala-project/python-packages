@@ -2,8 +2,6 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
-  gmpy2,
-  isPyPy,
   setuptools,
   setuptools-scm,
 }:
@@ -24,10 +22,6 @@ buildPythonPackage rec {
     setuptools
     setuptools-scm
   ];
-
-  optional-dependencies = {
-    gmpy = lib.optionals (!isPyPy) [ gmpy2 ];
-  };
 
   meta = {
     homepage = "https://mpmath.org/";
