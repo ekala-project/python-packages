@@ -11,7 +11,6 @@
   libiconv,
   requests,
   regex,
-  blobfile,
 }:
 let
   pname = "tiktoken";
@@ -60,7 +59,6 @@ buildPythonPackage {
   dependencies = [
     requests
     regex
-    blobfile
   ];
 
   doCheck = false;
