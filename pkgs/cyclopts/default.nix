@@ -8,11 +8,7 @@
   hatchling,
   pyyaml,
   rich,
-  rich-rst,
   trio,
-  mkdocs,
-  markdown,
-  pymdown-extensions,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -36,17 +32,11 @@ buildPythonPackage (finalAttrs: {
     attrs
     docstring-parser
     rich
-    rich-rst
   ];
 
   optional-dependencies = {
     trio = [ trio ];
     yaml = [ pyyaml ];
-    mkdocs = [
-      mkdocs
-      markdown
-      pymdown-extensions
-    ];
   };
 
   pythonImportsCheck = [ "cyclopts" ];
