@@ -8,7 +8,7 @@
   google-api-core,
   google-auth,
   google-cloud-bigquery-storage,
-  pyarrow,
+  pyarrow ? null,
   pytz,
 }:
 
@@ -29,8 +29,9 @@ buildPythonPackage rec {
     google-api-core
     google-auth
     google-cloud-bigquery
-    pyarrow
     sqlalchemy
+  ] ++ lib.optionals (pyarrow != null) [
+    pyarrow
   ];
 
   optional-dependencies = {
