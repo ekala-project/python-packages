@@ -4,7 +4,6 @@
   cython,
   fetchFromGitHub,
   lz4,
-  cramjam,
   setuptools,
   zstandard,
 }:
@@ -32,11 +31,9 @@ buildPythonPackage rec {
 
   optional-dependencies = {
     codecs = [
-      cramjam
       lz4
       zstandard
     ];
-    snappy = [ cramjam ];
     zstandard = [ zstandard ];
     lz4 = [ lz4 ];
   };
