@@ -19,7 +19,6 @@
 
   # optional-dependencies (aiohttp)
   aiohttp,
-  httpx-aiohttp,
 
   # optional-dependencies (datalib)
   numpy,
@@ -29,14 +28,10 @@
   # optional-dependencies (realtime)
   websockets,
 
-  # optional-dependencies (voice-helpers)
-  sounddevice,
-
   # optional-dependencies toggle
   withAiohttp ? true,
   withDatalib ? false,
   withRealtime ? true,
-  withVoiceHelpers ? true,
 }:
 
 buildPythonPackage rec {
@@ -70,13 +65,11 @@ buildPythonPackage rec {
   ]
   ++ lib.optionals withAiohttp optional-dependencies.aiohttp
   ++ lib.optionals withDatalib optional-dependencies.datalib
-  ++ lib.optionals withRealtime optional-dependencies.realtime
-  ++ lib.optionals withVoiceHelpers optional-dependencies.voice-helpers;
+  ++ lib.optionals withRealtime optional-dependencies.realtime;
 
   optional-dependencies = {
     aiohttp = [
       aiohttp
-      httpx-aiohttp
     ];
     datalib = [
       numpy
@@ -85,10 +78,6 @@ buildPythonPackage rec {
     ];
     realtime = [
       websockets
-    ];
-    voice-helpers = [
-      numpy
-      sounddevice
     ];
   };
 
