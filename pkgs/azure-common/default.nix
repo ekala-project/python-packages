@@ -2,7 +2,6 @@
   lib,
   buildPythonPackage,
   fetchPypi,
-  azure-nspkg,
   isPyPy,
   setuptools,
   python,
@@ -23,7 +22,7 @@ buildPythonPackage (finalAttrs: {
 
   build-system = [ setuptools ];
 
-  dependencies = [ azure-nspkg ] ++ lib.optionals (!isPy3k) [ setuptools ];
+  dependencies = lib.optionals (!isPy3k) [ setuptools ];
 
   postInstall = lib.optionalString (!isPy3k) ''
     echo "__import__('pkg_resources').declare_namespace(__name__)" >> "$out/${python.sitePackages}"/azure/__init__.py
