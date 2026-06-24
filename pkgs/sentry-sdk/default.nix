@@ -13,37 +13,24 @@
   # optional-dependencies
   aiohttp,
   anthropic,
-  apache-beam,
   asttokens,
   asyncpg,
   blinker,
-  bottle,
   celery,
-  celery-redbeat,
-  chalice,
-  clickhouse-driver,
   django,
   executing,
-  falcon,
   fastapi,
   flask,
   grpcio,
   httpcore,
   httpx,
-  huey,
   huggingface-hub,
-  langchain,
-  litestar,
   loguru,
   markupsafe,
   openai,
   protobuf,
   pure-eval,
   pymongo,
-  pyspark,
-  quart,
-  rq,
-  sanic,
   sqlalchemy,
   starlette,
   tiktoken,
@@ -80,14 +67,8 @@ buildPythonPackage (finalAttrs: {
     anthropic = [ anthropic ];
     asyncpg = [ asyncpg ];
     asyncio = [ httpcore ] ++ httpcore.optional-dependencies.asyncio;
-    beam = [ apache-beam ];
-    bottle = [ bottle ];
     celery = [ celery ];
-    celery-redbeat = [ celery-redbeat ];
-    chalice = [ chalice ];
-    clickhouse-driver = [ clickhouse-driver ];
     django = [ django ];
-    falcon = [ falcon ];
     fastapi = [ fastapi ];
     flask = [
       blinker
@@ -100,10 +81,7 @@ buildPythonPackage (finalAttrs: {
     ];
     http2 = [ httpcore ] ++ httpcore.optional-dependencies.http2;
     httpx = [ httpx ];
-    huey = [ huey ];
     huggingface-hub = [ huggingface-hub ];
-    langchain = [ langchain ];
-    litestar = [ litestar ];
     loguru = [ loguru ];
     openai = [
       openai
@@ -115,13 +93,6 @@ buildPythonPackage (finalAttrs: {
       pure-eval
     ];
     pymongo = [ pymongo ];
-    pyspark = [ pyspark ];
-    quart = [
-      blinker
-      quart
-    ];
-    rq = [ rq ];
-    sanic = [ sanic ];
     sqlalchemy = [ sqlalchemy ];
     starlette = [ starlette ];
     tornado = [ tornado ];
