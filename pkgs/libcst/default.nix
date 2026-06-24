@@ -4,10 +4,8 @@
   buildPythonPackage,
   fetchFromGitHub,
   cargo,
-  isPy313,
   libiconv,
   pyyaml,
-  pyyaml-ft,
   rustPlatform,
   rustc,
   setuptools-rust,
@@ -52,7 +50,7 @@ buildPythonPackage rec {
   buildInputs = lib.optionals stdenv.hostPlatform.isDarwin [ libiconv ];
 
   dependencies = [
-    (if isPy313 then pyyaml-ft else pyyaml)
+    pyyaml
   ];
 
   pythonImportsCheck = [ "libcst" ];
