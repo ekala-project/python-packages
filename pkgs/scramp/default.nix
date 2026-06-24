@@ -2,9 +2,8 @@
   lib,
   asn1crypto,
   buildPythonPackage,
-  fetchFromGitHub,
+  fetchPypi,
   hatchling,
-  versioningit,
 }:
 
 buildPythonPackage rec {
@@ -12,16 +11,13 @@ buildPythonPackage rec {
   version = "1.4.5";
   pyproject = true;
 
-  src = fetchFromGitHub {
-    owner = "tlocke";
-    repo = "scramp";
-    rev = version;
-    hash = "sha256-KpododRJ+CYRGBR7Sr5cVBhJvUwh9YmPERd/DAJqEcY=";
+  src = fetchPypi {
+    inherit pname version;
+    hash = "sha256-vj++d0yld6emWBF9ygFOXSVNFYzsrj3WAzLf4zzm144=";
   };
 
   build-system = [
     hatchling
-    versioningit
   ];
 
   dependencies = [ asn1crypto ];
@@ -37,7 +33,7 @@ buildPythonPackage rec {
 
   meta = {
     description = "Implementation of the SCRAM authentication protocol";
-    homepage = "https://github.com/tlocke/scramp";
+    homepage = "https://codeberg.org/tlocke/scramp";
     license = lib.licenses.mit;
   };
 }
