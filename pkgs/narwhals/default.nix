@@ -7,13 +7,8 @@
   packaging,
   pandas,
   polars,
-  pyarrow-hotfix,
-  pyarrow,
-  pyspark,
-  dask,
-  ibis-framework,
+  pyarrow ? null,
   rich,
-  sqlframe,
 }:
 
 buildPythonPackage rec {
@@ -52,19 +47,11 @@ buildPythonPackage rec {
 
   optional-dependencies = {
     # cudf = [ cudf ];
-    dask = [ dask ] ++ dask.optional-dependencies.dataframe;
+    # dask = [ dask ] ++ dask.optional-dependencies.dataframe;
     # modin = [ modin ];
     pandas = [ pandas ];
     polars = [ polars ];
-    pyarrow = [ pyarrow ];
-    pyspark = [ pyspark ];
-    ibis = [
-      ibis-framework
-      rich
-      packaging
-      pyarrow-hotfix
-    ];
-    sqlframe = [ sqlframe ];
+    pyarrow = lib.optionals (pyarrow != null) [ pyarrow ];
   };
 
   pythonImportsCheck = [ "narwhals" ];
