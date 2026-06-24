@@ -4,7 +4,6 @@
   lib,
   python,
   setuptools,
-  protobuf,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -18,10 +17,6 @@ buildPythonPackage (finalAttrs: {
   };
 
   build-system = [ setuptools ];
-
-  propagatedNativeBuildInputs = [
-    protobuf
-  ];
 
   pythonImportsCheck = [
     "google.protobuf"
