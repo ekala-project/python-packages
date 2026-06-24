@@ -7,8 +7,6 @@
   google-api-core,
   google-cloud-core,
   grpc-google-iam-v1,
-  grpc-interceptor,
-  opentelemetry-resourcedetector-gcp,
   proto-plus,
   protobuf,
   sqlparse,
@@ -43,8 +41,6 @@ buildPythonPackage rec {
     google-api-core
     google-cloud-core
     grpc-google-iam-v1
-    grpc-interceptor
-    opentelemetry-resourcedetector-gcp
     proto-plus
     protobuf
     sqlparse
