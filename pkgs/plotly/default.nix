@@ -12,7 +12,6 @@
 
   # optional-dependencies
   numpy,
-  kaleido,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -48,7 +47,6 @@ buildPythonPackage (finalAttrs: {
 
   optional-dependencies = {
     express = [ numpy ];
-    kaleido = [ kaleido ];
   };
 
   pythonImportsCheck = [ "plotly" ];
