@@ -2,16 +2,12 @@
   lib,
   fetchFromGitHub,
   buildPythonPackage,
-  selenium-manager,
   setuptools,
   certifi,
   trio,
-  trio-typing,
-  trio-websocket,
   typing-extensions,
   websocket-client,
   urllib3,
-  stdenv,
   python,
 }:
 
@@ -44,14 +40,6 @@ buildPythonPackage rec {
     cp ../third_party/js/selenium/webdriver.json $DST_FF/webdriver_prefs.json
 
     find $out/${python.sitePackages}/
-  ''
-  + lib.optionalString stdenv.hostPlatform.isDarwin ''
-    mkdir -p $DST_PREFIX/common/macos
-    ln -s ${lib.getExe selenium-manager} $DST_PREFIX/common/macos/
-  ''
-  + lib.optionalString stdenv.hostPlatform.isLinux ''
-    mkdir -p $DST_PREFIX/common/linux/
-    ln -s ${lib.getExe selenium-manager} $DST_PREFIX/common/linux/
   '';
 
   build-system = [ setuptools ];
@@ -59,8 +47,6 @@ buildPythonPackage rec {
   dependencies = [
     certifi
     trio
-    trio-typing
-    trio-websocket
     typing-extensions
     urllib3
     websocket-client
