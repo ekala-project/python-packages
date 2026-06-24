@@ -3,10 +3,8 @@
   aiosqlite,
   anyio,
   buildPythonPackage,
-  daphne,
   fastapi,
   fetchFromGitHub,
-  granian,
   setuptools,
   sqlalchemy,
   starlette,
@@ -32,7 +30,6 @@ buildPythonPackage rec {
   ];
 
   optional-dependencies = {
-    daphne = [ daphne ];
     examples = [
       aiosqlite
       fastapi
@@ -41,7 +38,6 @@ buildPythonPackage rec {
       uvicorn
     ]
     ++ sqlalchemy.optional-dependencies.asyncio;
-    granian = [ granian ];
     uvicorn = [ uvicorn ];
   };
 
