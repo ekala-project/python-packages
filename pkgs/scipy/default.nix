@@ -13,7 +13,6 @@
   gfortran,
   meson-python,
   nukeReferences,
-  pythran,
   pkg-config,
   setuptools,
 
@@ -21,10 +20,6 @@
   blas,
   lapack,
   pybind11,
-  pooch,
-  xsimd,
-  boost189,
-  qhull,
 
   # dependencies
   numpy,
@@ -67,7 +62,6 @@ buildPythonPackage (finalAttrs: {
     gfortran
     meson-python
     nukeReferences
-    pythran
     pkg-config
     setuptools
   ];
@@ -76,10 +70,6 @@ buildPythonPackage (finalAttrs: {
     blas
     lapack
     pybind11
-    pooch
-    xsimd
-    boost189
-    qhull
   ];
 
   dependencies = [ numpy ];
@@ -101,7 +91,7 @@ buildPythonPackage (finalAttrs: {
     "-Dblas=${blas.pname}"
     "-Dlapack=${lapack.pname}"
     "--cross-file=${finalAttrs.finalPackage.passthru.crossFile}"
-    "-Duse-system-libraries=all"
+    "-Duse-system-libraries=blas,lapack"
   ];
 
   hardeningDisable = lib.optionals (stdenv.hostPlatform.isAarch64 && stdenv.hostPlatform.isDarwin) [
@@ -132,7 +122,7 @@ buildPythonPackage (finalAttrs: {
     buildConfig = {
       properties = {
         numpy-include-dir = numpy.coreIncludeDir;
-        pythran-include-dir = "${pythran}/${python.sitePackages}/pythran";
+        # pythran-include-dir = "${pythran}/${python.sitePackages}/pythran";
         host-python-path = python.interpreter;
         host-python-version = python.pythonVersion;
       };
