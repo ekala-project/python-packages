@@ -1,21 +1,15 @@
 {
   lib,
   amqp,
-  azure-identity,
-  azure-servicebus,
-  azure-storage-queue,
   boto3,
   buildPythonPackage,
-  confluent-kafka,
   fetchFromGitHub,
   google-cloud-pubsub,
   google-cloud-monitoring,
   grpcio,
-  kazoo,
   msgpack,
   packaging,
   protobuf,
-  pycurl,
   pymongo,
   pyyaml,
   redis,
@@ -55,16 +49,8 @@ buildPythonPackage rec {
     sqs = [
       boto3
       urllib3
-      pycurl
     ];
-    zookeeper = [ kazoo ];
     sqlalchemy = [ sqlalchemy ];
-    azurestoragequeues = [
-      azure-identity
-      azure-storage-queue
-    ];
-    azureservicebus = [ azure-servicebus ];
-    confluentkafka = [ confluent-kafka ];
     gcpubsub = [
       google-cloud-pubsub
       google-cloud-monitoring
