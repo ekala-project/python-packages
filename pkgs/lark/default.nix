@@ -24,6 +24,8 @@ buildPythonPackage rec {
     setuptools-scm
   ];
 
+  env.SETUPTOOLS_SCM_PRETEND_VERSION = version;
+
   dependencies = [ regex ];
 
   pythonImportsCheck = [
