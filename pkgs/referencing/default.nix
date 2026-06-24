@@ -18,8 +18,7 @@ buildPythonPackage rec {
     owner = "python-jsonschema";
     repo = "referencing";
     tag = "v${version}";
-    fetchSubmodules = true;
-    hash = "sha256-4e06rzvIOyWAgkpzAisc4uUK8pWshDZiQ6qpvJCq3GY=";
+    hash = "sha256-cuy9NS4PtfBILjw9gv7GRfheKez4FEf8ym94/O6nNcE=";
   };
 
   build-system = [
