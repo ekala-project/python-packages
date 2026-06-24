@@ -7,7 +7,6 @@
   setuptools,
 
   # dependencies
-  aiodns,
   aiohttp,
   azure-core,
   certifi,
@@ -33,7 +32,6 @@ buildPythonPackage {
   build-system = [ setuptools ];
 
   dependencies = [
-    aiodns
     aiohttp
     azure-core
     certifi
