@@ -5,13 +5,9 @@
   hatchling,
   pydantic,
   typing-extensions,
-  cron-converter,
   semver,
   pendulum,
-  phonenumbers,
-  pycountry,
   pymongo,
-  python-ulid,
   pytz,
   tzdata,
 }:
@@ -37,21 +33,13 @@ buildPythonPackage rec {
 
   optional-dependencies = {
     all = [
-      cron-converter
       pendulum
-      phonenumbers
-      pycountry
       pymongo
-      python-ulid
       pytz
       semver
       tzdata
     ];
-    cron = [ cron-converter ];
-    phonenumbers = [ phonenumbers ];
-    pycountry = [ pycountry ];
     semver = [ semver ];
-    python_ulid = [ python-ulid ];
     pendulum = [ pendulum ];
   };
 
