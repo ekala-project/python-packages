@@ -5,10 +5,6 @@
   setuptools,
   setuptools-scm,
   typing-extensions,
-  glibcLocales,
-  sphinxHook,
-  sphinx-autodoc-typehints,
-  sphinx-rtd-theme,
 }:
 
 buildPythonPackage rec {
@@ -21,25 +17,14 @@ buildPythonPackage rec {
     hash = "sha256-On/S3/twXU0O+u1DBqcEyJud7oULaI8GCosWFaeeX3Q=";
   };
 
-  outputs = [
-    "out"
-    "doc"
-  ];
-
   build-system = [
-    glibcLocales
     setuptools
     setuptools-scm
-    sphinxHook
-    sphinx-autodoc-typehints
-    sphinx-rtd-theme
   ];
 
   dependencies = [
     typing-extensions
   ];
-
-  env.LC_ALL = "en_US.utf-8";
 
   pythonImportsCheck = [ "typeguard" ];
 
