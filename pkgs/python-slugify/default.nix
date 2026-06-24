@@ -4,7 +4,6 @@
   fetchFromGitHub,
   setuptools,
   text-unidecode,
-  unidecode,
 }:
 
 buildPythonPackage rec {
@@ -22,10 +21,6 @@ buildPythonPackage rec {
   nativeBuildInputs = [ setuptools ];
 
   propagatedBuildInputs = [ text-unidecode ];
-
-  optional-dependencies = {
-    unidecode = [ unidecode ];
-  };
 
   pythonImportsCheck = [ "slugify" ];
 
