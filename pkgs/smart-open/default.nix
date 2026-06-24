@@ -1,6 +1,5 @@
 {
   lib,
-  backports-zstd,
   buildPythonPackage,
   fetchFromGitHub,
   azure-common,
@@ -45,7 +44,6 @@ buildPythonPackage rec {
     http = [ requests ];
     webhdfs = [ requests ];
     ssh = [ paramiko ];
-    zst = [ backports-zstd ];
   };
 
   pythonImportsCheck = [ "smart_open" ];
