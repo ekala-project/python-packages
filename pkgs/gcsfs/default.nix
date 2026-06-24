@@ -13,12 +13,8 @@
   google-auth,
   google-auth-oauthlib,
   google-cloud-storage,
-  google-cloud-storage-control,
   requests,
 
-  # optional-dependencies
-  fusepy,
-  crcmod,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -45,14 +41,8 @@ buildPythonPackage (finalAttrs: {
     google-auth
     google-auth-oauthlib
     google-cloud-storage
-    google-cloud-storage-control
     requests
   ];
-
-  optional-dependencies = {
-    gcsfuse = [ fusepy ];
-    crc = [ crcmod ];
-  };
 
   # Tests require a running Docker instance
   doCheck = false;
