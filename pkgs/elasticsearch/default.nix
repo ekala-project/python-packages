@@ -6,7 +6,7 @@
   fetchPypi,
   hatchling,
   orjson,
-  pyarrow,
+  pyarrow ? null,
   python-dateutil,
   requests,
   typing-extensions,
@@ -34,7 +34,7 @@ buildPythonPackage rec {
     requests = [ requests ];
     async = [ aiohttp ];
     orjson = [ orjson ];
-    pyarrow = [ pyarrow ];
+    pyarrow = lib.optionals (pyarrow != null) [ pyarrow ];
   };
 
   pythonImportsCheck = [ "elasticsearch" ];
