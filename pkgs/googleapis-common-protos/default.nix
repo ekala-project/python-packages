@@ -2,7 +2,7 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
-  grpc,
+  grpcio,
   protobuf,
   setuptools,
 }:
@@ -28,9 +28,12 @@ buildPythonPackage (finalAttrs: {
   ];
 
   dependencies = [
-    grpc
     protobuf
   ];
+
+  optional-dependencies = {
+    grpc = [ grpcio ];
+  };
 
   # does not contain tests
   doCheck = false;
