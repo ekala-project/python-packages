@@ -5,9 +5,7 @@
   billiard,
   boto3,
   brotli,
-  brotlipy,
   buildPythonPackage,
-  cassandra-driver,
   click,
   click-didyoumean,
   click-plugins,
@@ -17,26 +15,16 @@
   django,
   elastic-transport,
   elasticsearch,
-  ephem,
   fetchFromGitHub,
   gevent,
-  google-cloud-firestore,
   google-cloud-storage,
   grpcio,
-  isPyPy,
-  kazoo,
   kombu,
   pydantic,
-  pydocumentdb,
-  pylibmc,
-  pytest-celery,
   python-dateutil,
-  python-memcached,
   pyzmq,
   setuptools,
   tzlocal,
-  sphinx-autobuild,
-  tblib,
   urllib3,
   vine,
   zstandard,
@@ -84,11 +72,10 @@ buildPythonPackage (finalAttrs: {
       azure-identity
       azure-storage-blob
     ];
-    brotli = if isPyPy then [ brotlipy ] else [ brotli ];
-    cassandra = [ cassandra-driver ];
+    brotli = [ brotli ];
     consul = [
     ];
-    cosmosdbsql = [ pydocumentdb ];
+    cosmosdbsql = [ ];
     couchbase = [ ];
     couchdb = [
     ];
@@ -100,38 +87,30 @@ buildPythonPackage (finalAttrs: {
     ];
     eventlet = [ ];
     gcs = [
-      google-cloud-firestore
       google-cloud-storage
       grpcio
     ];
     gevent = [ gevent ];
-    memcache = [ pylibmc ];
+    memcache = [ ];
     mongodb = kombu.optional-dependencies.mongodb;
     msgpack = kombu.optional-dependencies.msgpack;
     pydantic = [ pydantic ];
-    pymemcache = [ python-memcached ];
+    pymemcache = [ ];
     pyro = [ ];
-    pytest = [
-      pytest-celery
-    ]
-    ++ pytest-celery.optional-dependencies.all;
+    pytest = [ ];
     redis = kombu.optional-dependencies.redis;
     s3 = [ boto3 ];
     slmq = [
     ];
-    solar = lib.optionals isPyPy [ ephem ];
-    sphinxautobuild = [ sphinx-autobuild ];
     sqlalchemy = kombu.optional-dependencies.sqlalchemy;
     sqs = [
       boto3
       urllib3
     ]
     ++ kombu.optional-dependencies.sqs;
-    tblib = [ tblib ];
     thread = [ ];
     yaml = kombu.optional-dependencies.yaml;
     zeromq = [ pyzmq ];
-    zookeeper = [ kazoo ];
     zsdt = [ zstandard ];
   };
 
