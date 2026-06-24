@@ -1,6 +1,5 @@
 {
   lib,
-  aioquic,
   buildPythonPackage,
   cryptography,
   fetchPypi,
@@ -33,7 +32,6 @@ buildPythonPackage rec {
     idna = [ idna ];
     dnssec = [ cryptography ];
     trio = [ trio ];
-    doq = [ aioquic ];
   };
 
   pythonImportsCheck = [ "dns" ];
