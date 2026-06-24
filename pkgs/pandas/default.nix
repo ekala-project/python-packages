@@ -4,11 +4,9 @@
   fetchFromGitHub,
 
   # build-system
-  cython_3_1,
   meson-python,
   meson,
   pkg-config,
-  versioneer,
   wheel,
 
   # propagates
@@ -19,31 +17,20 @@
 
   # optionals
   beautifulsoup4,
-  bottleneck,
-  blosc2,
   fsspec,
   gcsfs,
   html5lib,
   jinja2,
   lxml,
   matplotlib,
-  numba,
-  numexpr,
-  odfpy,
   openpyxl,
-  psycopg2,
-  pyarrow,
+  psycopg2 ? null,
+  pyarrow ? null,
   pymysql,
-  pyqt5,
-  pyreadstat,
-  pyxlsb,
-  qtpy,
   s3fs,
   scipy,
   sqlalchemy,
-  tables,
   tabulate,
-  xarray,
   xlrd,
   xlsxwriter,
   zstandard,
@@ -67,12 +54,10 @@ buildPythonPackage rec {
   '';
 
   build-system = [
-    cython_3_1
     meson-python
     meson
     numpy
     pkg-config
-    versioneer
     wheel
   ];
 
@@ -90,29 +75,22 @@ buildPythonPackage rec {
       extras = {
         aws = [ s3fs ];
         clipboard = [
-          pyqt5
-          qtpy
         ];
         compression = [ zstandard ];
         computation = [
           scipy
-          xarray
         ];
         excel = [
-          odfpy
           openpyxl
-          pyxlsb
           xlrd
           xlsxwriter
         ];
-        feather = [ pyarrow ];
+        feather = lib.optionals (pyarrow != null) [ pyarrow ];
         fss = [ fsspec ];
         gcp = [
           gcsfs
         ];
         hdf5 = [
-          blosc2
-          tables
         ];
         html = [
           beautifulsoup4
@@ -127,18 +105,16 @@ buildPythonPackage rec {
           jinja2
           tabulate
         ];
-        parquet = [ pyarrow ];
+        parquet = lib.optionals (pyarrow != null) [ pyarrow ];
         performance = [
-          bottleneck
-          numba
-          numexpr
         ];
         plot = [ matplotlib ];
         postgresql = [
           sqlalchemy
+        ] ++ lib.optionals (psycopg2 != null) [
           psycopg2
         ];
-        spss = [ pyreadstat ];
+        spss = [ ];
         sql-other = [ sqlalchemy ];
         xml = [ lxml ];
       };
