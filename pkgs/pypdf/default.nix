@@ -6,11 +6,6 @@
   # build-system
   flit-core,
 
-  # docs
-  sphinxHook,
-  sphinx-rtd-theme,
-  myst-parser,
-
   # optionals
   cryptography,
   fonttools,
@@ -30,23 +25,12 @@ buildPythonPackage rec {
     hash = "sha256-P/tm4roaVVnEq/bUsyk3S2ts7UWBWbDuZ1RqNKGxUS0=";
   };
 
-  outputs = [
-    "out"
-    "doc"
-  ];
-
   postPatch = ''
     substituteInPlace pyproject.toml \
       --replace-fail "--disable-socket" ""
   '';
 
   build-system = [ flit-core ];
-
-  nativeBuildInputs = [
-    sphinxHook
-    sphinx-rtd-theme
-    myst-parser
-  ];
 
   optional-dependencies = rec {
     full = crypto ++ fonts ++ image;
