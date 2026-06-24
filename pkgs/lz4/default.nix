@@ -2,9 +2,10 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
-  pkgconfig,
   setuptools,
   setuptools-scm,
+  pkgconfig,
+  pkg-config,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -20,10 +21,12 @@ buildPythonPackage (finalAttrs: {
   };
 
   build-system = [
-    pkgconfig
     setuptools-scm
     setuptools
+    pkgconfig
   ];
+
+  nativeBuildInputs = [ pkg-config ];
 
   # for lz4.steam
   env.PYLZ4_EXPERIMENTAL = true;
