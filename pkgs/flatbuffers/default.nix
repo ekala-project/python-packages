@@ -1,24 +1,27 @@
 {
   lib,
   buildPythonPackage,
-  flatbuffers,
+  fetchPypi,
+  setuptools,
 }:
 
 buildPythonPackage rec {
-  inherit (flatbuffers) pname version src;
+  pname = "flatbuffers";
+  version = "25.2.10";
+  pyproject = true;
 
-  format = "setuptools";
+  src = fetchPypi {
+    inherit pname version;
+    hash = "sha256-UKzMMIkGz6ruOb82IS43p8IzS/kd/e4ISo0pVIqxb4I=";
+  };
 
-  sourceRoot = "${src.name}/python";
-
-  # flatbuffers needs VERSION environment variable for setting the correct
-  # version, otherwise it uses the current date.
-  env.VERSION = version;
+  build-system = [ setuptools ];
 
   pythonImportsCheck = [ "flatbuffers" ];
 
-  meta = flatbuffers.meta // {
+  meta = {
     description = "Python runtime library for use with the Flatbuffers serialization format";
-    mainProgram = "flatc";
+    homepage = "https://google.github.io/flatbuffers/";
+    license = lib.licenses.asl20;
   };
 }
