@@ -11,8 +11,6 @@
   async-timeout,
 
   # optional-dependencies
-  pybreaker,
-  hiredis,
   pyjwt,
   cryptography,
   pyopenssl,
@@ -38,8 +36,6 @@ buildPythonPackage rec {
   ];
 
   optional-dependencies = {
-    circuit_breaker = [ pybreaker ];
-    hiredis = [ hiredis ];
     jwt = [ pyjwt ];
     ocsp = [
       cryptography
