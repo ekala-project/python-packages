@@ -1,24 +1,22 @@
 {
   lib,
   buildPythonPackage,
+  fetchPypi,
   setuptools,
-  antlr4,
 }:
 
 buildPythonPackage rec {
   pname = "antlr4-python3-runtime";
-  inherit (antlr4.runtime.cpp) version src;
-
+  version = "4.13.2";
   pyproject = true;
 
-  sourceRoot = "${src.name}/runtime/Python3";
+  src = fetchPypi {
+    pname = "antlr4_python3_runtime";
+    inherit version;
+    hash = "sha256-kJtkfh0vwrcBgKxYbfOTPjiRnIX5jMxlapbNPyXvORY=";
+  };
 
   build-system = [ setuptools ];
-
-  postPatch = ''
-    substituteInPlace tests/TestIntervalSet.py \
-      --replace "assertEquals" "assertEqual"
-  '';
 
   pythonImportsCheck = [ "antlr4" ];
 
