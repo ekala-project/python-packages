@@ -10,17 +10,10 @@
   lxml,
   brotli,
   brotlicffi,
-  zopfli,
-  unicodedata2,
   lz4,
   scipy,
-  munkres,
-  pycairo,
   matplotlib,
   sympy,
-  xattr,
-  skia-pathops,
-  uharfbuzz,
 }:
 
 buildPythonPackage rec {
@@ -47,19 +40,17 @@ buildPythonPackage rec {
         lxml = [ lxml ];
         woff = [
           (if isPyPy then brotlicffi else brotli)
-          zopfli
         ];
-        unicode = lib.optional (pythonOlder "3.13") unicodedata2;
+        unicode = [ ];
         graphite = [ lz4 ];
         interpolatable = [
-          pycairo
-          (if isPyPy then munkres else scipy)
+          scipy
         ];
         plot = [ matplotlib ];
         symfont = [ sympy ];
-        type1 = lib.optional stdenv.hostPlatform.isDarwin xattr;
-        pathops = lib.optional (lib.meta.availableOn stdenv.hostPlatform skia-pathops) skia-pathops;
-        repacker = [ uharfbuzz ];
+        type1 = [ ];
+        pathops = [ ];
+        repacker = [ ];
       };
     in
     extras // { all = lib.concatLists (lib.attrValues extras); };
