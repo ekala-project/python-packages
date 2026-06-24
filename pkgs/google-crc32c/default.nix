@@ -2,7 +2,6 @@
   lib,
   buildPythonPackage,
   cffi,
-  crc32c,
   fetchFromGitHub,
   setuptools,
 }:
@@ -21,14 +20,7 @@ buildPythonPackage rec {
 
   build-system = [ setuptools ];
 
-  buildInputs = [ crc32c ];
-
   dependencies = [ cffi ];
-
-  env = {
-    LDFLAGS = "-L${crc32c}/lib";
-    CFLAGS = "-I${crc32c}/include";
-  };
 
   pythonImportsCheck = [ "google_crc32c" ];
 
