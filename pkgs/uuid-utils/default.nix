@@ -2,7 +2,6 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
-  maturin,
   rustPlatform,
 }:
 
@@ -26,10 +25,6 @@ buildPythonPackage rec {
   nativeBuildInputs = with rustPlatform; [
     cargoSetupHook
     maturinBuildHook
-  ];
-
-  build-system = [
-    maturin
   ];
 
   pythonImportsCheck = [
