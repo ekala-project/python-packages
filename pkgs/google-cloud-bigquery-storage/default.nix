@@ -6,7 +6,7 @@
   google-api-core,
   pandas,
   protobuf,
-  pyarrow,
+  pyarrow ? null,
   setuptools,
 }:
 
@@ -36,7 +36,7 @@ buildPythonPackage rec {
   optional-dependencies = {
     fastavro = [ fastavro ];
     pandas = [ pandas ];
-    pyarrow = [ pyarrow ];
+    pyarrow = lib.optionals (pyarrow != null) [ pyarrow ];
   };
 
   pythonImportsCheck = [
