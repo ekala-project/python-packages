@@ -9,11 +9,6 @@
   # build-system
   setuptools,
 
-  # patched in
-  geos,
-  gdal,
-  withGdal ? false,
-
   # dependencies
   asgiref,
   sqlparse,
@@ -46,13 +41,6 @@ buildPythonPackage (finalAttrs: {
     ./6.x/pythonpath.patch
     ./6.x/disable-failing-test.patch
     ./6.x/invalidate-importlib-cache.patch
-  ]
-  ++ lib.optionals withGdal [
-    (replaceVars ./6.x/gdal.patch {
-      geos = geos;
-      gdal = gdal;
-      extension = stdenv.hostPlatform.extensions.sharedLibrary;
-    })
   ];
 
   build-system = [ setuptools ];
