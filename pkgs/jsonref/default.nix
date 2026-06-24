@@ -18,7 +18,7 @@ buildPythonPackage rec {
     hash = "sha256-tOhabmqCkktJUZjCrzjOjUGgA/X6EVz0KqehyLtigfc=";
   };
 
-  nativeBuildInputs = [
+  build-system = [
     pdm-backend
     pdm-pep517
   ];
