@@ -2,11 +2,10 @@
   lib,
   buildPythonPackage,
   fetchPypi,
-  passlib,
   python-dateutil,
   scramp,
   hatchling,
-  versioningit,
+  setuptools,
 }:
 
 buildPythonPackage rec {
@@ -19,13 +18,19 @@ buildPythonPackage rec {
     hash = "sha256-RuuwO+UrenfAPHJcedosooHW6PWVd8pmsXyQCWGMrng=";
   };
 
+  postPatch = ''
+    # Upstream uses versioningit to set the version
+    sed -i "/versioningit >=/d" pyproject.toml
+    sed -i '/^name =.*/a version = "${version}"' pyproject.toml
+    sed -i "/dynamic =/d" pyproject.toml
+  '';
+
   build-system = [
     hatchling
-    versioningit
+    setuptools
   ];
 
   dependencies = [
-    passlib
     python-dateutil
     scramp
   ];
