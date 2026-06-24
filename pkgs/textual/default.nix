@@ -13,18 +13,11 @@
   typing-extensions,
   mdit-py-plugins,
 
+  # dependencies
+  linkify-it-py,
+
   # optional-dependencies
   tree-sitter,
-  tree-sitter-c-sharp,
-  tree-sitter-html,
-  tree-sitter-javascript,
-  tree-sitter-make,
-  tree-sitter-markdown,
-  tree-sitter-python,
-  tree-sitter-rust,
-  tree-sitter-sql,
-  tree-sitter-yaml,
-  tree-sitter-zeek,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -46,28 +39,17 @@ buildPythonPackage (finalAttrs: {
     "rich"
   ];
   dependencies = [
+    linkify-it-py
     markdown-it-py
     mdit-py-plugins
     platformdirs
     rich
     typing-extensions
-  ]
-  ++ markdown-it-py.optional-dependencies.plugins
-  ++ markdown-it-py.optional-dependencies.linkify;
+  ];
 
   optional-dependencies = {
     syntax = [
       tree-sitter
-      tree-sitter-c-sharp
-      tree-sitter-html
-      tree-sitter-javascript
-      tree-sitter-make
-      tree-sitter-markdown
-      tree-sitter-python
-      tree-sitter-rust
-      tree-sitter-sql
-      tree-sitter-yaml
-      tree-sitter-zeek
     ];
   };
 
