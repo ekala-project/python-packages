@@ -14,7 +14,6 @@
   setuptools,
   sniffio,
   tenacity,
-  twine,
   typing-extensions,
   websockets,
 }:
@@ -35,7 +34,6 @@ buildPythonPackage rec {
     packaging
     pkginfo
     setuptools
-    twine
   ];
 
   pythonRelaxDeps = [
@@ -54,8 +52,7 @@ buildPythonPackage rec {
     tenacity
     typing-extensions
     websockets
-  ]
-  ++ google-auth.optional-dependencies.requests;
+  ];
 
   optional-dependencies = {
     aiohttp = [ aiohttp ];
