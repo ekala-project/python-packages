@@ -11,37 +11,11 @@
   rustc,
   rustPlatform,
   setuptools,
-  mimalloc,
-  jemalloc,
-  rust-jemalloc-sys,
-  # Another alternative is to try `mimalloc`
-  polarsMemoryAllocator ? mimalloc, # polarsJemalloc,
-  polarsJemalloc ?
-    let
-      jemalloc' = rust-jemalloc-sys.override {
-        jemalloc = jemalloc.override {
-          # "libjemalloc.so.2: cannot allocate memory in static TLS block"
-
-          # https://github.com/pola-rs/polars/issues/5401#issuecomment-1300998316
-          disableInitExecTls = true;
-        };
-      };
-    in
-    assert builtins.elem "--disable-initial-exec-tls" jemalloc'.configureFlags;
-    jemalloc',
 }:
-
-let
-  version = "1.40.1";
-
-  # Hide symbols to prevent accidental use
-  rust-jemalloc-sys = throw "polars: use polarsMemoryAllocator over rust-jemalloc-sys";
-  jemalloc = throw "polars: use polarsMemoryAllocator over jemalloc";
-in
 
 buildPythonPackage rec {
   pname = "polars";
-  inherit version;
+  version = "1.40.1";
   pyproject = true;
 
   src = fetchFromGitHub {
@@ -75,7 +49,6 @@ buildPythonPackage rec {
   ];
 
   buildInputs = [
-    polarsMemoryAllocator
     (pkgs.__splicedPackages.zstd or pkgs.zstd)
   ];
 
@@ -86,11 +59,6 @@ buildPythonPackage rec {
     # https://discourse.nixos.org/t/nixpkgs-rustplatform-and-nightly/22870
     RUSTC_BOOTSTRAP = true;
 
-    RUSTFLAGS = lib.concatStringsSep " " (
-      lib.optionals (polarsMemoryAllocator.pname == "mimalloc") [
-        "--cfg allocator=\"mimalloc\""
-      ]
-    );
     RUST_BACKTRACE = true;
   };
 
