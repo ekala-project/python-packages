@@ -3,7 +3,6 @@
   buildPythonPackage,
   fetchPypi,
   setuptools,
-  types-urllib3,
   urllib3,
 }:
 
@@ -21,7 +20,6 @@ buildPythonPackage rec {
   build-system = [ setuptools ];
 
   dependencies = [
-    types-urllib3
     urllib3
   ];
 
