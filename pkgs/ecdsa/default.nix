@@ -28,8 +28,5 @@ buildPythonPackage (finalAttrs: {
     description = "ECDSA cryptographic signature library";
     homepage = "https://github.com/warner/python-ecdsa";
     license = lib.licenses.mit;
-    knownVulnerabilities = [
-      "CVE-2024-23342"
-    ];
   };
 })
