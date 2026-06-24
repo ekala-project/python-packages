@@ -11,8 +11,6 @@
   matplotlib,
   numpy,
   pandas,
-  pydot,
-  pygraphviz,
   scipy,
   sympy,
 }:
@@ -38,8 +36,6 @@ buildPythonPackage rec {
     ];
     extra = [
       lxml
-      pygraphviz
-      pydot
       sympy
     ];
   };
