@@ -22,7 +22,6 @@
   boto3,
   botocore,
   aiohttp,
-  httpx-aiohttp,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -62,7 +61,6 @@ buildPythonPackage (finalAttrs: {
   optional-dependencies = {
     aiohttp = [
       aiohttp
-      httpx-aiohttp
     ];
     bedrock = [
       boto3
