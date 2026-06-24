@@ -6,8 +6,6 @@
 
   # build-system
   hatchling,
-  uv-dynamic-versioning,
-
   # dependencies
   anyio,
   httpx,
@@ -51,7 +49,6 @@ buildPythonPackage (finalAttrs: {
 
   build-system = [
     hatchling
-    uv-dynamic-versioning
   ];
 
   pythonRelaxDeps = [
