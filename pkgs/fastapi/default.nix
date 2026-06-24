@@ -13,7 +13,6 @@
   typing-extensions,
 
   # optional-dependencies
-  fastapi-cli,
   httpx,
   jinja2,
   itsdangerous,
@@ -55,7 +54,6 @@ buildPythonPackage rec {
 
   optional-dependencies = {
     all = [
-      fastapi-cli
       httpx
       jinja2
       python-multipart
@@ -70,17 +68,14 @@ buildPythonPackage rec {
       pydantic-settings
       pydantic-extra-types
     ]
-    ++ fastapi-cli.optional-dependencies.standard
     ++ uvicorn.optional-dependencies.standard;
     standard = [
-      fastapi-cli
       httpx
       jinja2
       python-multipart
       email-validator
       uvicorn
     ]
-    ++ fastapi-cli.optional-dependencies.standard
     ++ uvicorn.optional-dependencies.standard;
   };
 
