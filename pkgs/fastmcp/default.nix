@@ -5,36 +5,29 @@
 
   # build-system
   hatchling,
-  uv-dynamic-versioning,
 
   # dependencies
+  email-validator,
   anthropic,
   authlib,
   azure-identity,
   cyclopts,
   exceptiongroup,
-  griffelib,
   httpx,
   jsonref,
   jsonschema-path,
   mcp,
-  fakeredis,
   google-genai,
   openai,
-  openapi-pydantic,
   opentelemetry-api,
   packaging,
   platformdirs,
-  py-key-value-aio,
   pydantic,
-  pydantic-monty,
-  pydocket,
   pyjwt,
   pyperclip,
   python-dotenv,
   pyyaml,
   rich,
-  uncalled-for,
   uvicorn,
   watchfiles,
   websockets,
@@ -55,42 +48,29 @@ buildPythonPackage (finalAttrs: {
 
   build-system = [
     hatchling
-    uv-dynamic-versioning
-  ];
-
-  pythonRelaxDeps = [
-    "py-key-value-aio"
-    "pydocket"
   ];
 
   dependencies = [
     authlib
     cyclopts
     exceptiongroup
-    griffelib
     httpx
     jsonref
     jsonschema-path
     mcp
-    openapi-pydantic
     opentelemetry-api
     packaging
     platformdirs
-    py-key-value-aio
     pydantic
     pyperclip
     python-dotenv
     pyyaml
     rich
-    uncalled-for
     uvicorn
     watchfiles
     websockets
-  ]
-  ++ py-key-value-aio.optional-dependencies.filetree
-  ++ py-key-value-aio.optional-dependencies.keyring
-  ++ py-key-value-aio.optional-dependencies.memory
-  ++ pydantic.optional-dependencies.email;
+    email-validator
+  ];
 
   optional-dependencies = {
     anthropic = [ anthropic ];
@@ -98,14 +78,8 @@ buildPythonPackage (finalAttrs: {
       azure-identity
       pyjwt
     ];
-    code-mode = [ pydantic-monty ];
     gemini = [ google-genai ];
     openai = [ openai ];
-    tasks = [
-      pydocket
-      fakeredis
-    ]
-    ++ fakeredis.optional-dependencies.lua;
   };
 
   pythonImportsCheck = [ "fastmcp" ];
