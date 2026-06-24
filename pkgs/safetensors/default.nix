@@ -6,18 +6,9 @@
 
   # optional-dependencies
   numpy,
-  packaging,
-  torch,
-  tensorflow,
-  flax,
-  jax,
-  mlx,
-  paddlepaddle,
-  h5py,
   huggingface-hub,
   setuptools-rust,
   pytest,
-  pytest-benchmark,
   hypothesis,
   fsspec,
 }:
@@ -50,36 +41,14 @@ buildPythonPackage (finalAttrs: {
 
   optional-dependencies = lib.fix (self: {
     numpy = [ numpy ];
-    torch = self.numpy ++ [
-      packaging
-      torch
-    ];
-    tensorflow = self.numpy ++ [
-      tensorflow
-    ];
-    pinned-tf = self.numpy ++ [
-      tensorflow
-    ];
-    jax = self.numpy ++ [
-      flax
-      jax
-    ];
-    mlx = [
-      mlx
-    ];
-    paddlepaddle = self.numpy ++ [
-      paddlepaddle
-    ];
     testing = self.numpy ++ [
-      h5py
       huggingface-hub
       setuptools-rust
       pytest
-      pytest-benchmark
       hypothesis
       fsspec
     ];
-    all = self.torch ++ self.numpy ++ self.pinned-tf ++ self.jax ++ self.paddlepaddle ++ self.testing;
+    all = self.numpy ++ self.testing;
     dev = self.all;
   });
 
