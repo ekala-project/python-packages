@@ -5,7 +5,6 @@
 
   # build-system
   hatchling,
-  hatch-requirements-txt,
   setuptools,
 
   # dependencies
@@ -25,7 +24,6 @@ buildPythonPackage rec {
 
   build-system = [
     hatchling
-    hatch-requirements-txt
     setuptools
   ];
 
