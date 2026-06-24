@@ -9,7 +9,6 @@
   # dependencies
   filelock,
   fsspec,
-  hf-xet,
   httpx,
   packaging,
   pyyaml,
@@ -18,17 +17,6 @@
   typing-extensions,
 
   # optional-dependencies
-  # torch
-  torch,
-  safetensors,
-  # fastai
-  toml,
-  fastai,
-  fastcore,
-  # gradio
-  gradio,
-  requests,
-  # mcp
   mcp,
 }:
 
@@ -49,7 +37,6 @@ buildPythonPackage (finalAttrs: {
   dependencies = [
     filelock
     fsspec
-    hf-xet
     httpx
     packaging
     pyyaml
@@ -61,23 +48,6 @@ buildPythonPackage (finalAttrs: {
   optional-dependencies = {
     all = [
 
-    ];
-    torch = [
-      torch
-      safetensors
-    ]
-    ++ safetensors.optional-dependencies.torch;
-    fastai = [
-      toml
-      fastai
-      fastcore
-    ];
-    gradio = [
-      gradio
-      requests
-    ];
-    hf_xet = [
-      hf-xet
     ];
     mcp = [
       mcp
