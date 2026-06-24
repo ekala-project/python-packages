@@ -8,7 +8,6 @@
   numpy,
   pandas,
   scipy,
-  statsmodels,
 }:
 
 buildPythonPackage rec {
@@ -52,7 +51,6 @@ buildPythonPackage rec {
   optional-dependencies = {
     stats = [
       scipy
-      statsmodels
     ];
   };
 
