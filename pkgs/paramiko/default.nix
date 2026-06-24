@@ -4,9 +4,7 @@
   buildPythonPackage,
   cryptography,
   fetchPypi,
-  gssapi,
   invoke,
-  pyasn1,
   pynacl,
   setuptools,
 }:
@@ -30,10 +28,6 @@ buildPythonPackage rec {
   ];
 
   optional-dependencies = {
-    gssapi = [
-      pyasn1
-      gssapi
-    ];
     ed25519 = [ ];
     invoke = [ invoke ];
   };
