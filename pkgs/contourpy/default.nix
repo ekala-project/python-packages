@@ -5,19 +5,15 @@
   python,
 
   # build
-  meson,
   meson-python,
-  ninja,
-  nukeReferences,
   pybind11,
   pkg-config,
+  pkgs,
 
   # propagates
   numpy,
 
   # optionals
-  bokeh,
-  chromedriver,
   selenium,
 }:
 
@@ -40,9 +36,9 @@ buildPythonPackage rec {
   '';
 
   nativeBuildInputs = [
-    meson
-    ninja
-    nukeReferences
+    pkgs.meson
+    pkgs.ninja
+    pkgs.nukeReferences
     pkg-config
   ];
 
@@ -56,8 +52,6 @@ buildPythonPackage rec {
 
   passthru.optional-depdendencies = {
     bokeh = [
-      bokeh
-      chromedriver
       selenium
     ];
   };
