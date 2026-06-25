@@ -12,7 +12,7 @@ let
   });
 
   pkgsOverlay = lib.mkAutoCalledPackageDir ./pkgs;
-  pythonOverrides = import ./python-packges.nix;
+  pythonOverrides = import ./python-packages.nix;
   pythonOverlay = lib.composeManyExtensions [
     pkgsOverlay
     pythonOverrides
