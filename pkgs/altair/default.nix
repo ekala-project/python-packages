@@ -32,18 +32,19 @@ buildPythonPackage (finalAttrs: {
 
   build-system = [ hatchling ];
 
-  dependencies = [
-    jinja2
-    jsonschema
-    narwhals
-    numpy
-    packaging
-    pandas
-    toolz
-  ]
-  ++ lib.optionals (pythonOlder "3.14") [
-    typing-extensions
-  ];
+  dependencies =
+    [
+      jinja2
+      jsonschema
+      narwhals
+      numpy
+      packaging
+      pandas
+      toolz
+    ]
+    ++ lib.optionals (pythonOlder "3.14") [
+      typing-extensions
+    ];
 
   pythonImportsCheck = [ "altair" ];
 

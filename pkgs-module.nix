@@ -8,6 +8,9 @@ in
 {
   overlays = {
     pkgs = [ pkgsOverlay ];
-    python = [ pythonOverlay pythonOverrides ];
+    python = [
+      pythonOverlay
+      pythonOverrides
+    ];
   };
 }

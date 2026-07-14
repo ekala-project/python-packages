@@ -49,20 +49,21 @@ buildPythonPackage (finalAttrs: {
 
   build-system = [ setuptools ];
 
-  dependencies = [
-    billiard
-    click
-    click-didyoumean
-    click-plugins
-    exceptiongroup
-    kombu
-    python-dateutil
-    tzlocal
-    vine
-  ]
-  ++ lib.optionals withAmqpRepl [
-    click-repl
-  ];
+  dependencies =
+    [
+      billiard
+      click
+      click-didyoumean
+      click-plugins
+      exceptiongroup
+      kombu
+      python-dateutil
+      tzlocal
+      vine
+    ]
+    ++ lib.optionals withAmqpRepl [
+      click-repl
+    ];
 
   optional-dependencies = {
     arangodb = [
@@ -106,8 +107,7 @@ buildPythonPackage (finalAttrs: {
     sqs = [
       boto3
       urllib3
-    ]
-    ++ kombu.optional-dependencies.sqs;
+    ] ++ kombu.optional-dependencies.sqs;
     thread = [ ];
     yaml = kombu.optional-dependencies.yaml;
     zeromq = [ pyzmq ];

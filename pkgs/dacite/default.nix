@@ -18,14 +18,15 @@ buildPythonPackage rec {
     hash = "sha256-mAPqWvBpkTbtzHpwtCSDXMNkoc8/hbRH3OIEeK2yStU=";
   };
 
-  postPatch = ''
-    substituteInPlace pyproject.toml \
-      --replace "--benchmark-autosave --benchmark-json=benchmark.json" ""
-  ''
-  + lib.optionalString (pythonAtLeast "3.14") ''
-    substituteInPlace tests/core/test_union.py \
-      --replace-fail "typing.Union[int, str]" "int | str"
-  '';
+  postPatch =
+    ''
+      substituteInPlace pyproject.toml \
+        --replace "--benchmark-autosave --benchmark-json=benchmark.json" ""
+    ''
+    + lib.optionalString (pythonAtLeast "3.14") ''
+      substituteInPlace tests/core/test_union.py \
+        --replace-fail "typing.Union[int, str]" "int | str"
+    '';
 
   build-system = [ setuptools ];
 

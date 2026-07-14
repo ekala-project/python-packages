@@ -8,9 +8,11 @@ final: prev:
 let
   # core-pkgs sphinxcontrib packages fail pythonImportsCheck because
   # docutils is missing from their runtime closure. Disable the check.
-  fixSphinxcontrib = pkg: pkg.overridePythonAttrs (old: {
-    pythonImportsCheck = [ ];
-  });
+  fixSphinxcontrib =
+    pkg:
+    pkg.overridePythonAttrs (old: {
+      pythonImportsCheck = [ ];
+    });
 in
 {
 

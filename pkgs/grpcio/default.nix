@@ -51,15 +51,16 @@ buildPythonPackage rec {
     typing-extensions
   ];
 
-  preBuild = ''
-    export GRPC_PYTHON_BUILD_EXT_COMPILER_JOBS="$NIX_BUILD_CORES"
-    if [ -z "$enableParallelBuilding" ]; then
-      GRPC_PYTHON_BUILD_EXT_COMPILER_JOBS=1
-    fi
-  ''
-  + lib.optionalString stdenv.hostPlatform.isDarwin ''
-    unset AR
-  '';
+  preBuild =
+    ''
+      export GRPC_PYTHON_BUILD_EXT_COMPILER_JOBS="$NIX_BUILD_CORES"
+      if [ -z "$enableParallelBuilding" ]; then
+        GRPC_PYTHON_BUILD_EXT_COMPILER_JOBS=1
+      fi
+    ''
+    + lib.optionalString stdenv.hostPlatform.isDarwin ''
+      unset AR
+    '';
 
   env = {
     GRPC_BUILD_WITH_BORING_SSL_ASM = "";

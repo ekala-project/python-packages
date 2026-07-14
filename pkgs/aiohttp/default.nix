@@ -71,19 +71,20 @@ buildPythonPackage (finalAttrs: {
 
   env.AIOHTTP_USE_SYSTEM_DEPS = true;
 
-  dependencies = [
-    aiohappyeyeballs
-    aiosignal
-    attrs
-    frozenlist
-    multidict
-    propcache
-    yarl
-  ]
-  ++ lib.optionals (pythonOlder "3.11") [
-    async-timeout
-  ]
-  ++ finalAttrs.optional-dependencies.speedups;
+  dependencies =
+    [
+      aiohappyeyeballs
+      aiosignal
+      attrs
+      frozenlist
+      multidict
+      propcache
+      yarl
+    ]
+    ++ lib.optionals (pythonOlder "3.11") [
+      async-timeout
+    ]
+    ++ finalAttrs.optional-dependencies.speedups;
 
   optional-dependencies.speedups = [
     aiodns

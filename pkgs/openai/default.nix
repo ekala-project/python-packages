@@ -53,19 +53,20 @@ buildPythonPackage rec {
     hatch-fancy-pypi-readme
   ];
 
-  dependencies = [
-    anyio
-    distro
-    httpx
-    jiter
-    pydantic
-    sniffio
-    tqdm
-    typing-extensions
-  ]
-  ++ lib.optionals withAiohttp optional-dependencies.aiohttp
-  ++ lib.optionals withDatalib optional-dependencies.datalib
-  ++ lib.optionals withRealtime optional-dependencies.realtime;
+  dependencies =
+    [
+      anyio
+      distro
+      httpx
+      jiter
+      pydantic
+      sniffio
+      tqdm
+      typing-extensions
+    ]
+    ++ lib.optionals withAiohttp optional-dependencies.aiohttp
+    ++ lib.optionals withDatalib optional-dependencies.datalib
+    ++ lib.optionals withRealtime optional-dependencies.realtime;
 
   optional-dependencies = {
     aiohttp = [

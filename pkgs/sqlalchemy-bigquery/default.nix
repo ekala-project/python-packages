@@ -25,14 +25,16 @@ buildPythonPackage rec {
 
   build-system = [ setuptools ];
 
-  dependencies = [
-    google-api-core
-    google-auth
-    google-cloud-bigquery
-    sqlalchemy
-  ] ++ lib.optionals (pyarrow != null) [
-    pyarrow
-  ];
+  dependencies =
+    [
+      google-api-core
+      google-auth
+      google-cloud-bigquery
+      sqlalchemy
+    ]
+    ++ lib.optionals (pyarrow != null) [
+      pyarrow
+    ];
 
   optional-dependencies = {
     bqstorage = [ google-cloud-bigquery-storage ];

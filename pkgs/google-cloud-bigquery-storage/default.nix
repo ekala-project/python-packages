@@ -30,8 +30,7 @@ buildPythonPackage rec {
   dependencies = [
     google-api-core
     protobuf
-  ]
-  ++ google-api-core.optional-dependencies.grpc;
+  ] ++ google-api-core.optional-dependencies.grpc;
 
   optional-dependencies = {
     fastavro = [ fastavro ];

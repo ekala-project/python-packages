@@ -46,8 +46,7 @@ buildPythonPackage rec {
     numpy.blas
     pillow
     glibcLocales
-  ]
-  ++ lib.optionals stdenv.cc.isClang [ llvmPackages.openmp ];
+  ] ++ lib.optionals stdenv.cc.isClang [ llvmPackages.openmp ];
 
   nativeBuildInputs = [
     gfortran

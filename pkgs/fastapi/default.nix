@@ -53,30 +53,30 @@ buildPythonPackage rec {
   ];
 
   optional-dependencies = {
-    all = [
-      httpx
-      jinja2
-      python-multipart
-      itsdangerous
-      pyyaml
-      ujson
-      orjson
-      email-validator
-      uvicorn
-    ]
-    ++ lib.optionals (lib.versionAtLeast pydantic.version "2") [
-      pydantic-settings
-      pydantic-extra-types
-    ]
-    ++ uvicorn.optional-dependencies.standard;
+    all =
+      [
+        httpx
+        jinja2
+        python-multipart
+        itsdangerous
+        pyyaml
+        ujson
+        orjson
+        email-validator
+        uvicorn
+      ]
+      ++ lib.optionals (lib.versionAtLeast pydantic.version "2") [
+        pydantic-settings
+        pydantic-extra-types
+      ]
+      ++ uvicorn.optional-dependencies.standard;
     standard = [
       httpx
       jinja2
       python-multipart
       email-validator
       uvicorn
-    ]
-    ++ uvicorn.optional-dependencies.standard;
+    ] ++ uvicorn.optional-dependencies.standard;
   };
 
   pythonImportsCheck = [ "fastapi" ];

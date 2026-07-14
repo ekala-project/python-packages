@@ -36,8 +36,7 @@ buildPythonPackage rec {
       sqlalchemy
       starlette
       uvicorn
-    ]
-    ++ sqlalchemy.optional-dependencies.asyncio;
+    ] ++ sqlalchemy.optional-dependencies.asyncio;
     uvicorn = [ uvicorn ];
   };
 

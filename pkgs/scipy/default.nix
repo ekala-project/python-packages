@@ -46,16 +46,17 @@ buildPythonPackage (finalAttrs: {
     })
   ];
 
-  postPatch = ''
-    substituteInPlace pyproject.toml \
-      --replace-fail "numpy>=2.0.0,<2.7" numpy
-  ''
-  + lib.optionalString (stdenv.hostPlatform.isDarwin) ''
-    substituteInPlace scipy/meson.build \
-      --replace-fail "r = run_command('xcrun', '-sdk', 'macosx', '--show-sdk-version', check: true)" ""
-    substituteInPlace scipy/meson.build \
-      --replace-fail "sdkVersion = r.stdout().strip()" "sdkVersion = '${stdenv.hostPlatform.darwinSdkVersion}'"
-  '';
+  postPatch =
+    ''
+      substituteInPlace pyproject.toml \
+        --replace-fail "numpy>=2.0.0,<2.7" numpy
+    ''
+    + lib.optionalString (stdenv.hostPlatform.isDarwin) ''
+      substituteInPlace scipy/meson.build \
+        --replace-fail "r = run_command('xcrun', '-sdk', 'macosx', '--show-sdk-version', check: true)" ""
+      substituteInPlace scipy/meson.build \
+        --replace-fail "sdkVersion = r.stdout().strip()" "sdkVersion = '${stdenv.hostPlatform.darwinSdkVersion}'"
+    '';
 
   build-system = [
     cython
@@ -76,16 +77,16 @@ buildPythonPackage (finalAttrs: {
 
   __darwinAllowLocalNetworking = true;
 
-  preConfigure = ''
-    export NPY_NUM_BUILD_JOBS=$NIX_BUILD_CORES
-    export XDG_CACHE_HOME=$PWD; export HOME=$(mktemp -d); mkdir scipy-data
-  ''
-  + (lib.concatStringsSep "\n" (
-    lib.mapAttrsToList (
-      d: dpath:
-      "cp ${dpath} scipy-data/${d}.dat"
-    ) finalAttrs.finalPackage.passthru.datasets
-  ));
+  preConfigure =
+    ''
+      export NPY_NUM_BUILD_JOBS=$NIX_BUILD_CORES
+      export XDG_CACHE_HOME=$PWD; export HOME=$(mktemp -d); mkdir scipy-data
+    ''
+    + (lib.concatStringsSep "\n" (
+      lib.mapAttrsToList (
+        d: dpath: "cp ${dpath} scipy-data/${d}.dat"
+      ) finalAttrs.finalPackage.passthru.datasets
+    ));
 
   mesonFlags = [
     "-Dblas=${blas.pname}"

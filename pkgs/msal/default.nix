@@ -24,8 +24,7 @@ buildPythonPackage (finalAttrs: {
     cryptography
     pyjwt
     requests
-  ]
-  ++ pyjwt.optional-dependencies.crypto;
+  ] ++ pyjwt.optional-dependencies.crypto;
 
   doCheck = false;
 

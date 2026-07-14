@@ -42,8 +42,7 @@ buildPythonPackage rec {
     protobuf
     python-dateutil
     requests
-  ]
-  ++ google-api-core.optional-dependencies.grpc;
+  ] ++ google-api-core.optional-dependencies.grpc;
 
   optional-dependencies = {
     bqstorage = [
