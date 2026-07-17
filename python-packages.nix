@@ -16,6 +16,18 @@ let
 in
 {
 
+  # The upstream patch for taskflow 4.1.0 support doesn't apply cleanly
+  # against RapidFuzz 3.14.5 since the source already has Taskflow
+  # version-finding logic. Override to remove the patch and apply a
+  # compatible sed substitution instead.
+  rapidfuzz = prev.rapidfuzz.overridePythonAttrs (old: {
+    patches = [ ];
+    postPatch = (old.postPatch or "") + ''
+      substituteInPlace CMakeLists.txt \
+        --replace-fail "find_package(Taskflow 4.0.0 QUIET)" "find_package(Taskflow 4.1.0 QUIET)"
+    '';
+  });
+
   sphinxcontrib-applehelp = fixSphinxcontrib prev.sphinxcontrib-applehelp;
   sphinxcontrib-devhelp = fixSphinxcontrib prev.sphinxcontrib-devhelp;
   sphinxcontrib-htmlhelp = fixSphinxcontrib prev.sphinxcontrib-htmlhelp;
