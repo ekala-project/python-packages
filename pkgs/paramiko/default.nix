@@ -24,13 +24,9 @@ buildPythonPackage rec {
   dependencies = [
     bcrypt
     cryptography
+    invoke
     pynacl
   ];
-
-  optional-dependencies = {
-    ed25519 = [ ];
-    invoke = [ invoke ];
-  };
 
   __darwinAllowLocalNetworking = true;
 
