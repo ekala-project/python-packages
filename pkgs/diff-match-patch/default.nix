@@ -1,0 +1,28 @@
+{
+  lib,
+  fetchPypi,
+  buildPythonPackage,
+  flit-core,
+}:
+
+buildPythonPackage rec {
+  pname = "diff-match-patch";
+  version = "20241021";
+  pyproject = true;
+
+  src = fetchPypi {
+    pname = "diff_match_patch";
+    inherit version;
+    hash = "sha256-vq5XqZ+kgIRTKTXuKWi4Zh24YYYuyCxvIfSs3W2DUHM=";
+  };
+
+  build-system = [ flit-core ];
+
+  pythonImportsCheck = [ "diff_match_patch" ];
+
+  meta = {
+    homepage = "https://github.com/diff-match-patch-python/diff-match-patch";
+    description = "Diff, Match and Patch libraries for Plain Text";
+    license = lib.licenses.asl20;
+  };
+}
