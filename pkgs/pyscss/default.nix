@@ -1,0 +1,34 @@
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  setuptools,
+  six,
+}:
+
+buildPythonPackage rec {
+  pname = "pyscss";
+  version = "1.4.0";
+  pyproject = true;
+
+  src = fetchFromGitHub {
+    repo = "pyScss";
+    owner = "Kronuz";
+    tag = "v${version}";
+    hash = "sha256-z0y4z+/JE6rZWHAvps/taDZvutyVhxxs2gMujV5rNu4=";
+  };
+
+  build-system = [ setuptools ];
+
+  dependencies = [ six ];
+
+  # Test suite is broken.
+  # See https://github.com/Kronuz/pyScss/issues/415
+  doCheck = false;
+
+  meta = {
+    description = "Scss compiler for Python";
+    homepage = "https://pyscss.readthedocs.org/en/latest/";
+    license = lib.licenses.mit;
+  };
+}
