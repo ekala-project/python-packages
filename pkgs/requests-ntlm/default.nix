@@ -1,0 +1,37 @@
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  setuptools,
+  cryptography,
+  pyspnego,
+  requests,
+}:
+
+buildPythonPackage rec {
+  pname = "requests-ntlm";
+  version = "1.3.0";
+  pyproject = true;
+
+  src = fetchPypi {
+    pname = "requests_ntlm";
+    inherit version;
+    hash = "sha256-spzCRiYj3/35uIxD4YDMtzW0AHIopUIiDogsWK5Wxmg=";
+  };
+
+  build-system = [ setuptools ];
+
+  dependencies = [
+    cryptography
+    pyspnego
+    requests
+  ];
+
+  pythonImportsCheck = [ "requests_ntlm" ];
+
+  meta = {
+    description = "HTTP NTLM authentication support for python-requests";
+    homepage = "https://github.com/requests/requests-ntlm";
+    license = lib.licenses.isc;
+  };
+}
