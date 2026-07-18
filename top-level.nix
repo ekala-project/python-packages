@@ -6,5 +6,6 @@ final: prev: {
   eradicate = with final.python3Packages; toPythonApplication eradicate;
   huey = with final.python3Packages; toPythonApplication huey;
   rnc2rng = with final.python3Packages; toPythonApplication rnc2rng;
+  scour = with final.python3Packages; toPythonApplication scour;
   wakeonlan = with final.python3Packages; toPythonApplication wakeonlan;
 }
