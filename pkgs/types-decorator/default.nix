@@ -1,0 +1,26 @@
+{
+  lib,
+  fetchPypi,
+  buildPythonPackage,
+  setuptools,
+}:
+
+buildPythonPackage rec {
+  pname = "types-decorator";
+  version = "5.2.0.20251101";
+  pyproject = true;
+
+  src = fetchPypi {
+    pname = "types_decorator";
+    inherit version;
+    hash = "sha256-Eg4r9HkuyKR2U9scs4DHqstoYqeXwUkKkQqswhVIKGw=";
+  };
+
+  build-system = [ setuptools ];
+
+  meta = {
+    description = "Typing stubs for decorator";
+    homepage = "https://github.com/python/typeshed";
+    license = lib.licenses.asl20;
+  };
+}
