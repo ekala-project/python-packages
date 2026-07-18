@@ -5,4 +5,5 @@ final: prev: {
   gpxinfo = with final.python3Packages; toPythonApplication gpxpy;
   eradicate = with final.python3Packages; toPythonApplication eradicate;
   huey = with final.python3Packages; toPythonApplication huey;
+  rnc2rng = with final.python3Packages; toPythonApplication rnc2rng;
 }
