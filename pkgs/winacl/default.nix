@@ -1,0 +1,34 @@
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+
+  # build-system
+  setuptools,
+
+  # dependencies
+  cryptography,
+}:
+
+buildPythonPackage rec {
+  pname = "winacl";
+  version = "0.1.9";
+  pyproject = true;
+
+  src = fetchPypi {
+    inherit pname version;
+    hash = "sha256-r3DC7DAXi/njyKHEjCXoeBI1/iwbMhrbRuLyrh+NSqs=";
+  };
+
+  build-system = [ setuptools ];
+
+  dependencies = [ cryptography ];
+
+  pythonImportsCheck = [ "winacl" ];
+
+  meta = {
+    description = "Python module for ACL/ACE/Security descriptor manipulation";
+    homepage = "https://github.com/skelsec/winacl";
+    license = lib.licenses.mit;
+  };
+}
