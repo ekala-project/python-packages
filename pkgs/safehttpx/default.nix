@@ -1,0 +1,34 @@
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+
+  # build-system
+  hatchling,
+
+  # dependencies
+  httpx,
+}:
+
+buildPythonPackage rec {
+  pname = "safehttpx";
+  version = "0.1.7";
+  pyproject = true;
+
+  src = fetchPypi {
+    inherit pname version;
+    hash = "sha256-2yAcCXjEHt24u0gPPu5Z3WcwT92RZGA16dmnIASanSM=";
+  };
+
+  build-system = [ hatchling ];
+
+  dependencies = [ httpx ];
+
+  pythonImportsCheck = [ "safehttpx" ];
+
+  meta = {
+    description = "SSRF-safe wrapper around httpx";
+    homepage = "https://github.com/gradio-app/safehttpx";
+    license = lib.licenses.asl20;
+  };
+}
