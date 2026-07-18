@@ -7,5 +7,6 @@ final: prev: {
   huey = with final.python3Packages; toPythonApplication huey;
   rnc2rng = with final.python3Packages; toPythonApplication rnc2rng;
   scour = with final.python3Packages; toPythonApplication scour;
+  shortuuid = with final.python3Packages; toPythonApplication shortuuid;
   wakeonlan = with final.python3Packages; toPythonApplication wakeonlan;
 }
