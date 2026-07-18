@@ -2,6 +2,7 @@
 final: prev: {
   ansi2html = with final.python3Packages; toPythonApplication ansi2html;
   ghp-import = with final.python3Packages; toPythonApplication ghp-import;
+  glad = with final.python3Packages; toPythonApplication glad;
   gpxinfo = with final.python3Packages; toPythonApplication gpxpy;
   eradicate = with final.python3Packages; toPythonApplication eradicate;
   huey = with final.python3Packages; toPythonApplication huey;
