@@ -8,5 +8,6 @@ final: prev: {
   rnc2rng = with final.python3Packages; toPythonApplication rnc2rng;
   scour = with final.python3Packages; toPythonApplication scour;
   shortuuid = with final.python3Packages; toPythonApplication shortuuid;
+  tte = with final.python3Packages; toPythonApplication terminaltexteffects;
   wakeonlan = with final.python3Packages; toPythonApplication wakeonlan;
 }
