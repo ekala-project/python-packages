@@ -1,0 +1,40 @@
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  hatchling,
+  importlib-metadata,
+  mergedeep,
+  platformdirs,
+  pyyaml,
+}:
+
+buildPythonPackage rec {
+  pname = "mkdocs-get-deps";
+  version = "0.2.0";
+  pyproject = true;
+
+  src = fetchFromGitHub {
+    owner = "mkdocs";
+    repo = "get-deps";
+    rev = "v${version}";
+    hash = "sha256-DahmSYWYhVch950InYBiCh6qz1pH2Kibf5ixwCNdsTg=";
+  };
+
+  build-system = [ hatchling ];
+
+  dependencies = [
+    importlib-metadata
+    mergedeep
+    platformdirs
+    pyyaml
+  ];
+
+  pythonImportsCheck = [ "mkdocs_get_deps" ];
+
+  meta = {
+    description = "Extra command for MkDocs that infers required PyPI packages from `plugins` in mkdocs.yml";
+    homepage = "https://github.com/mkdocs/get-deps";
+    license = lib.licenses.mit;
+  };
+}
