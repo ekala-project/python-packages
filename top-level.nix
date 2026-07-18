@@ -8,6 +8,7 @@ final: prev: {
   eradicate = with final.python3Packages; toPythonApplication eradicate;
   fastep = with final.python3Packages; toPythonApplication fastentrypoints;
   huey = with final.python3Packages; toPythonApplication huey;
+  pox = with final.python3Packages; toPythonApplication pox;
   rnc2rng = with final.python3Packages; toPythonApplication rnc2rng;
   scour = with final.python3Packages; toPythonApplication scour;
   shortuuid = with final.python3Packages; toPythonApplication shortuuid;
