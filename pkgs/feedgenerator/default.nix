@@ -1,0 +1,27 @@
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  hatchling,
+}:
+
+buildPythonPackage rec {
+  pname = "feedgenerator";
+  version = "2.2.1";
+  pyproject = true;
+
+  src = fetchPypi {
+    inherit pname version;
+    hash = "sha256-DqqVXx8Ly1uHrBla90Dwb/n/9KQO0wuKfGu+uyZNTdE=";
+  };
+
+  build-system = [ hatchling ];
+
+  pythonImportsCheck = [ "feedgenerator" ];
+
+  meta = {
+    description = "Standalone version of Django's feedgenerator module";
+    homepage = "https://github.com/getpelican/feedgenerator";
+    license = lib.licenses.bsd3;
+  };
+}
