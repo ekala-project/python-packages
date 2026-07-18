@@ -13,8 +13,6 @@
   # native dependencies
   freetype,
   libjpeg,
-  libtiff,
-  libwebp,
   libxcb,
   zlib-ng,
 
@@ -46,8 +44,6 @@ buildPythonPackage rec {
   buildInputs = [
     freetype
     libjpeg
-    libtiff
-    libwebp
     libxcb
     zlib-ng
   ];
