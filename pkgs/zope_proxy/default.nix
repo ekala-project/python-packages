@@ -3,7 +3,7 @@
   fetchPypi,
   buildPythonPackage,
   setuptools,
-  zope-interface,
+  zope_interface,
 }:
 
 buildPythonPackage rec {
@@ -19,9 +19,7 @@ buildPythonPackage rec {
 
   build-system = [ setuptools ];
 
-  dependencies = [ zope-interface ];
-
-  doCheck = false;
+  dependencies = [ zope_interface ];
 
   pythonImportsCheck = [ "zope.proxy" ];
 
