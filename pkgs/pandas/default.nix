@@ -109,13 +109,12 @@ buildPythonPackage rec {
         performance = [
         ];
         plot = [ matplotlib ];
-        postgresql =
-          [
-            sqlalchemy
-          ]
-          ++ lib.optionals (psycopg2 != null) [
-            psycopg2
-          ];
+        postgresql = [
+          sqlalchemy
+        ]
+        ++ lib.optionals (psycopg2 != null) [
+          psycopg2
+        ];
         spss = [ ];
         sql-other = [ sqlalchemy ];
         xml = [ lxml ];

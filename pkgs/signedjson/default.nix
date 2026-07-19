@@ -1,0 +1,36 @@
+{
+  lib,
+  fetchPypi,
+  buildPythonPackage,
+  setuptools-scm,
+  canonicaljson,
+  unpaddedbase64,
+  pynacl,
+}:
+
+buildPythonPackage rec {
+  pname = "signedjson";
+  version = "1.1.4";
+  pyproject = true;
+
+  src = fetchPypi {
+    inherit pname version;
+    hash = "sha256-zZHFavU/Fp7wMsYunEoyktwViGaTMxjQWS40Yts9ZJI=";
+  };
+
+  build-system = [ setuptools-scm ];
+
+  dependencies = [
+    canonicaljson
+    unpaddedbase64
+    pynacl
+  ];
+
+  pythonImportsCheck = [ "signedjson" ];
+
+  meta = {
+    description = "Sign JSON with Ed25519 signatures";
+    homepage = "https://github.com/matrix-org/python-signedjson";
+    license = lib.licenses.asl20;
+  };
+}

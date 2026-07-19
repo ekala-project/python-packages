@@ -15,7 +15,7 @@ buildPythonPackage rec {
     owner = "kozea";
     repo = "tinycss2";
     tag = "v${version}";
-    hash = "sha256-ZVmdHrqfF5fvBvHLaG2B4m1zek4wfEYArkntWzOqhfM=";
+    hash = "sha256-34qmoKVH5M0l5Is7YoreN9X3iPD0km0TLvGLbfW8KBY=";
   };
 
   build-system = [ flit-core ];
