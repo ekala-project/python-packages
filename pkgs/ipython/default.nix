@@ -43,7 +43,8 @@ buildPythonPackage rec {
     pygments
     stack-data
     traitlets
-  ] ++ lib.optionals (pythonOlder "3.12") [ typing-extensions ];
+  ]
+  ++ lib.optionals (pythonOlder "3.12") [ typing-extensions ];
 
   optional-dependencies = {
     matplotlib = [ matplotlib ];

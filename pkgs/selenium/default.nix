@@ -50,7 +50,8 @@ buildPythonPackage rec {
     typing-extensions
     urllib3
     websocket-client
-  ] ++ urllib3.optional-dependencies.socks;
+  ]
+  ++ urllib3.optional-dependencies.socks;
 
   pythonRemoveDeps = [
     "types-certifi"

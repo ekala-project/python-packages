@@ -47,7 +47,8 @@ buildPythonPackage rec {
     pydantic
     docstring-parser
     typing-extensions
-  ] ++ google-api-core.optional-dependencies.grpc;
+  ]
+  ++ google-api-core.optional-dependencies.grpc;
 
   pythonImportsCheck = [
     "google.cloud.aiplatform"

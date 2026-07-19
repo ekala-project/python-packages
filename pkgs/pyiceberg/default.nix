@@ -79,7 +79,8 @@ buildPythonPackage (finalAttrs: {
     ];
     duckdb = [
       duckdb
-    ] ++ lib.optionals (pyarrow != null) [ pyarrow ];
+    ]
+    ++ lib.optionals (pyarrow != null) [ pyarrow ];
     dynamodb = [
       boto3
     ];
@@ -100,7 +101,8 @@ buildPythonPackage (finalAttrs: {
     ];
     pandas = [
       pandas
-    ] ++ lib.optionals (pyarrow != null) [ pyarrow ];
+    ]
+    ++ lib.optionals (pyarrow != null) [ pyarrow ];
     polars = [
       polars
     ];

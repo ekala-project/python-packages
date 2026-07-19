@@ -44,7 +44,8 @@ buildPythonPackage rec {
       requests
       s3fs
       tqdm
-    ] ++ lib.optionals (pyarrow != null) [ pyarrow ];
+    ]
+    ++ lib.optionals (pyarrow != null) [ pyarrow ];
     gcs = [ gcsfs ];
     github = [ requests ];
     gs = [ gcsfs ];

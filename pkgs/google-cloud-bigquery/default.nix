@@ -42,17 +42,20 @@ buildPythonPackage rec {
     protobuf
     python-dateutil
     requests
-  ] ++ google-api-core.optional-dependencies.grpc;
+  ]
+  ++ google-api-core.optional-dependencies.grpc;
 
   optional-dependencies = {
     bqstorage = [
       google-cloud-bigquery-storage
       grpcio
-    ] ++ lib.optionals (pyarrow != null) [ pyarrow ];
+    ]
+    ++ lib.optionals (pyarrow != null) [ pyarrow ];
     pandas = [
       db-dtypes
       pandas
-    ] ++ lib.optionals (pyarrow != null) [ pyarrow ];
+    ]
+    ++ lib.optionals (pyarrow != null) [ pyarrow ];
     tqdm = [ tqdm ];
     ipython = [ ipython ];
   };

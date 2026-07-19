@@ -3,7 +3,7 @@ let
 in
 
 {
-  modules ? [ ]
+  modules ? [ ],
 }@args:
 
 let

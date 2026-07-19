@@ -48,7 +48,8 @@ buildPythonPackage rec {
       grpcio-status
       proto-plus
       protobuf
-    ] ++ google-api-core.optional-dependencies.grpc;
+    ]
+    ++ google-api-core.optional-dependencies.grpc;
     protobuf = [ protobuf ];
     tracing = [ opentelemetry-api ];
   };

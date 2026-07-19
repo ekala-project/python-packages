@@ -23,15 +23,14 @@ buildPythonPackage rec {
 
   build-system = [ setuptools ];
 
-  dependencies =
-    [
-      numpy
-      packaging
-      pandas
-    ]
-    ++ lib.optionals (pyarrow != null) [
-      pyarrow
-    ];
+  dependencies = [
+    numpy
+    packaging
+    pandas
+  ]
+  ++ lib.optionals (pyarrow != null) [
+    pyarrow
+  ];
 
   pythonImportsCheck = [ "db_dtypes" ];
 
