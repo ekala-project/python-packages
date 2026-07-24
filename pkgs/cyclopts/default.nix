@@ -8,6 +8,7 @@
   hatchling,
   pyyaml,
   rich,
+  rich-rst,
   trio,
 }:
 
@@ -32,6 +33,7 @@ buildPythonPackage (finalAttrs: {
     attrs
     docstring-parser
     rich
+    rich-rst
   ];
 
   optional-dependencies = {
