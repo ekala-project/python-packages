@@ -19,14 +19,14 @@
 
 buildPythonPackage rec {
   pname = "starlette";
-  version = "0.52.1";
+  version = "1.3.1";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "encode";
     repo = "starlette";
     tag = version;
-    hash = "sha256-XPAeRnh9a0A1/5VGZzzGQBhlBsih1VR8QmFdkxG5cQE=";
+    hash = "sha256-0eby4cDIU2bPUv+1qSTnZtfo4kkgMDIDYnZ9wp2wtoI=";
   };
 
   build-system = [ hatchling ];
