@@ -10,12 +10,12 @@
 
 buildPythonPackage rec {
   pname = "maxminddb";
-  version = "3.0.0";
+  version = "3.1.1";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-l5KxliWUXf8Ubi4xh/nkcLgjMKkS986lWBuL1a8w2os=";
+    hash = "sha256-sZqTjEgVGPGaLFNP/cs7xZWC8Pu9z5+BrJrfkSoK9oY=";
   };
 
   build-system = [
