@@ -15,12 +15,12 @@
 
 buildPythonPackage rec {
   pname = "icecream";
-  version = "2.1.10";
+  version = "2.2.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-FZABJrp9vh+DgZWDy+X/eaKUMiRgCHjYkwfkYzsy5Sg=";
+    hash = "sha256-nX8kQYfwChP0rHfRdpkOGH6cJ51srE91SOM4KRrZc0M=";
   };
 
   build-system = [ setuptools ];
