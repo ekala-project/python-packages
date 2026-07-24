@@ -7,12 +7,12 @@
 
 buildPythonPackage rec {
   pname = "wakeonlan";
-  version = "3.3.0";
+  version = "4.0.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-gOwhY+yzoJHG+mVeXjEGlozqpFQe2Qr6Y5HRAR/vcfI=";
+    hash = "sha256-HLMMSuYPhe8on099T3Azgu0ZuoQQMgbcXiseUb7J9FY=";
   };
 
   build-system = [ poetry-core ];
