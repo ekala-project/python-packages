@@ -9,12 +9,12 @@
 
 buildPythonPackage rec {
   pname = "npyscreen";
-  version = "4.10.5";
+  version = "5.0.4";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-Yi7g+aXa6UbmNbfG4PbWXh7TyeoNILidq39Y1YDlEm4=";
+    hash = "sha256-PWxyB8zNCNkmmATu7ZYLQGeOmeiRiAov2TbyPGbVwVY=";
   };
 
   build-system = [ setuptools ];
