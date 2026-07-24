@@ -1,0 +1,29 @@
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  pytest,
+  numpy,
+  setuptools-scm,
+}:
+
+buildPythonPackage rec {
+  pname = "pytest-astropy-header";
+  version = "0.2.2";
+  pyproject = true;
+
+  src = fetchPypi {
+    inherit pname version;
+    sha256 = "77891101c94b75a8ca305453b879b318ab6001b370df02be2c0b6d1bb322db10";
+  };
+
+  nativeBuildInputs = [ setuptools-scm ];
+
+  buildInputs = [ pytest ];
+  meta = {
+    description = "Plugin to add diagnostic information to the header of the test output";
+    homepage = "https://astropy.org";
+    license = lib.licenses.bsd3;
+    maintainers = [ ];
+  };
+}
