@@ -14,13 +14,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "jenkins-job-builder";
-  version = "6.4.4";
+  version = "6.5.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "jenkins_job_builder";
     inherit (finalAttrs) version;
-    hash = "sha256-7PpCDpe3KLRpt+R/Nu+qxdDxLKWVqTiCPK3j+nNaum8=";
+    hash = "sha256-9E3tWR9olpAZrloh/dxsIztz2PJJfRJrPUzMvpuLFJ0=";
   };
 
   postPatch = ''
