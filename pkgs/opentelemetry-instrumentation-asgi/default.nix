@@ -17,6 +17,8 @@ buildPythonPackage {
 
   build-system = [ hatchling ];
 
+  pythonRelaxDeps = [ "opentelemetry-semantic-conventions" ];
+
   dependencies = [
     asgiref
     opentelemetry-instrumentation
