@@ -24,14 +24,14 @@
 
 buildPythonPackage rec {
   pname = "aiobotocore";
-  version = "3.1.1";
+  version = "3.8.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "aio-libs";
     repo = "aiobotocore";
     tag = version;
-    hash = "sha256-/Yf2rt/5FH1WiD2VV2hEksM1XleEl4YRBqGQI4GVa8Q=";
+    hash = "sha256-56mKFeKHtQtAhtOkwI8VfR6oJzyqXtbNS2ebgkFlTME=";
   };
 
   pythonRelaxDeps = [ "botocore" ];
