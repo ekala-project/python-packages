@@ -15,7 +15,9 @@
   opentelemetry-sdk,
   opentelemetry-semantic-conventions,
   google-cloud-monitoring,
+  grpc-interceptor,
   mmh3,
+  opentelemetry-resourcedetector-gcp,
 }:
 
 buildPythonPackage rec {
@@ -40,7 +42,14 @@ buildPythonPackage rec {
     deprecated
     google-api-core
     google-cloud-core
+    google-cloud-monitoring
     grpc-google-iam-v1
+    grpc-interceptor
+    mmh3
+    opentelemetry-api
+    opentelemetry-resourcedetector-gcp
+    opentelemetry-sdk
+    opentelemetry-semantic-conventions
     proto-plus
     protobuf
     sqlparse
@@ -48,13 +57,6 @@ buildPythonPackage rec {
 
   optional-dependencies = {
     libcst = [ libcst ];
-    tracing = [
-      opentelemetry-api
-      opentelemetry-sdk
-      opentelemetry-semantic-conventions
-      google-cloud-monitoring
-      mmh3
-    ];
   };
 
   pythonImportsCheck = [
