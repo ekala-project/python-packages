@@ -8,6 +8,7 @@
 
   # dependencies
   filelock,
+  hf-xet,
   fsspec,
   httpx,
   packaging,
@@ -37,6 +38,7 @@ buildPythonPackage (finalAttrs: {
   dependencies = [
     filelock
     fsspec
+    hf-xet
     httpx
     packaging
     pyyaml
