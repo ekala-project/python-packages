@@ -13,6 +13,7 @@
   requests,
   setuptools,
   sniffio,
+  twine,
   tenacity,
   typing-extensions,
   websockets,
@@ -34,6 +35,7 @@ buildPythonPackage rec {
     packaging
     pkginfo
     setuptools
+    twine
   ];
 
   pythonRelaxDeps = [
