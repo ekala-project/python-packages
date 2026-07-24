@@ -13,6 +13,7 @@
   google-auth,
   google-auth-oauthlib,
   google-cloud-storage,
+  google-cloud-storage-control,
   requests,
 
 }:
@@ -41,6 +42,7 @@ buildPythonPackage (finalAttrs: {
     google-auth
     google-auth-oauthlib
     google-cloud-storage
+    google-cloud-storage-control
     requests
   ];
 
