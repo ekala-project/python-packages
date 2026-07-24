@@ -7,12 +7,12 @@
 
 buildPythonPackage rec {
   pname = "txaio";
-  version = "25.12.2";
+  version = "26.6.1";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-nyMsIeEqof9SaQ42W1oOz9QswnpuyG4bkuzoj3Y/S3g=";
+    hash = "sha256-PukAsjMck0V1MP3bzMGjIMTi16yPkHPQHD++h3YsyzU=";
   };
 
   build-system = [ hatchling ];
