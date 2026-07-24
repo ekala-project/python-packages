@@ -1,0 +1,37 @@
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  jinja2,
+  setuptools-scm,
+  selenium,
+}:
+
+buildPythonPackage rec {
+  pname = "branca";
+  version = "0.8.2";
+  pyproject = true;
+
+  src = fetchFromGitHub {
+    owner = "python-visualization";
+    repo = "branca";
+    tag = "v${version}";
+    hash = "sha256-H5hHQI4r0QavygQZzEZAEp+cjra5R9m/OoGHQPtnBg0=";
+  };
+
+  postPatch = ''
+    # We don't want flake8
+    rm setup.cfg
+  '';
+
+  build-system = [ setuptools-scm ];
+
+  dependencies = [ jinja2 ];
+  pythonImportsCheck = [ "branca" ];
+  meta = {
+    description = "Generate complex HTML+JS pages with Python";
+    homepage = "https://github.com/python-visualization/branca";
+    license = lib.licenses.mit;
+    maintainers = [ ];
+  };
+}
