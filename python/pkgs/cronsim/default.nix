@@ -1,0 +1,29 @@
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  setuptools,
+}:
+
+buildPythonPackage (finalAttrs: {
+  pname = "cronsim";
+  version = "2.7";
+  pyproject = true;
+
+  src = fetchFromGitHub {
+    owner = "cuu508";
+    repo = "cronsim";
+    tag = finalAttrs.version;
+    hash = "sha256-9TextQcZAX5Ri6cc+Qd4T+u8XjxriqoTsy/9/G8XDAM=";
+  };
+
+  build-system = [ setuptools ];
+  pythonImportsCheck = [ "cronsim" ];
+
+  meta = {
+    description = "Cron expression parser and evaluator";
+    homepage = "https://github.com/cuu508/cronsim";
+    license = lib.licenses.bsd3;
+    maintainers = [ ];
+  };
+})
