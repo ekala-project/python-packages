@@ -9,12 +9,12 @@
 
 buildPythonPackage rec {
   pname = "confuse";
-  version = "2.2.0";
+  version = "2.2.1";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-NcG1PoG+El9EG+5TUTBVnJNZF7Jq6qYSiQEM0fVcK54=";
+    hash = "sha256-jnYAwyYYUhIutfF7JLBquOVDeyHWIkhTwUIMOKxGnTw=";
   };
 
   build-system = [ poetry-core ];
