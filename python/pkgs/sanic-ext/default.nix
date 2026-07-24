@@ -1,0 +1,50 @@
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+
+  # Build system
+  setuptools,
+
+  # Dependencies
+  pyyaml,
+
+  # Test dependencies
+  sanic-testing,
+  attrs,
+  coverage,
+  msgspec,
+  pydantic,
+  pytest,
+  pytest-cov-stub,
+  pytest-asyncio,
+  tox,
+  jinja2,
+}:
+
+buildPythonPackage rec {
+  pname = "sanic-ext";
+  version = "25.12.0";
+  pyproject = true;
+
+  src = fetchFromGitHub {
+    owner = "sanic-org";
+    repo = "sanic-ext";
+    tag = "v${version}";
+    hash = "sha256-h1yN5VYFPFUZoeZeJ6+CfGE3m/5zz+/G3BbetDKtZAo=";
+  };
+
+  build-system = [ setuptools ];
+
+  dependencies = [
+    pyyaml
+  ];
+  pythonImportsCheck = [ "sanic_ext" ];
+
+  meta = {
+    description = "Common, officially supported extension plugins for the Sanic web server framework";
+    homepage = "https://github.com/sanic-org/sanic-ext/";
+    license = lib.licenses.mit;
+    maintainers = [ ];
+  };
+}
