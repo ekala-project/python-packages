@@ -1,0 +1,46 @@
+{
+  lib,
+  buildPythonPackage,
+  django,
+  fetchFromGitHub,
+  hatch-fancy-pypi-readme,
+  hatchling,
+  hatch-vcs,
+  python,
+}:
+
+buildPythonPackage rec {
+  pname = "django-simple-history";
+  version = "3.11.0";
+  pyproject = true;
+
+  src = fetchFromGitHub {
+    owner = "jazzband";
+    repo = "django-simple-history";
+    tag = version;
+    hash = "sha256-pTWorV++YSr/oIdcShrJTBUFfn5ekJ29rNn6ltDhN5Q=";
+  };
+
+  build-system = [
+    hatch-fancy-pypi-readme
+    hatchling
+    hatch-vcs
+  ];
+
+  dependencies = [ django ];
+
+  checkPhase = ''
+    runHook preCheck
+    ${python.interpreter} runtests.py
+    runHook postCheck
+  '';
+
+  pythonImportsCheck = [ "simple_history" ];
+
+  meta = {
+    description = "Module to store Django model state on every create/update/delete";
+    homepage = "https://github.com/jazzband/django-simple-history/";
+    license = lib.licenses.bsd3;
+    maintainers = [ ];
+  };
+}
