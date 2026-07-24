@@ -22,7 +22,7 @@ in
   # compatible sed substitution instead.
   rapidfuzz = prev.rapidfuzz.overridePythonAttrs (old: {
     patches = [ ];
-    postPatch = (old.postPatch or "") + ''
+    postPatch = ''
       substituteInPlace CMakeLists.txt \
         --replace-fail "find_package(Taskflow 4.0.0 QUIET)" "find_package(Taskflow 4.1.0 QUIET)"
     '';
