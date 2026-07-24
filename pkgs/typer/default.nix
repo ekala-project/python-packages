@@ -12,14 +12,14 @@
 
 buildPythonPackage rec {
   pname = "typer";
-  version = "0.24.0";
+  version = "0.27.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "fastapi";
     repo = "typer";
     tag = version;
-    hash = "sha256-ha/cT2+I9/WUjb7ZXSKqLSocZ3vq0N1fm4RvRpsXIDc=";
+    hash = "sha256-PpVl9JZAq8kyRfQfyfAtNQZj8vhTk/EodFC9KuCVdg4=";
   };
 
   env.TIANGOLO_BUILD_PACKAGE = "typer";
