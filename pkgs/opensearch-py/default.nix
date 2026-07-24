@@ -8,6 +8,7 @@
 
   # dependencies
   certifi,
+  events,
   python-dateutil,
   requests,
   six,
@@ -33,6 +34,7 @@ buildPythonPackage rec {
 
   propagatedBuildInputs = [
     certifi
+    events
     python-dateutil
     requests
     six
