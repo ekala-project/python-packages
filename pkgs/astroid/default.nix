@@ -7,14 +7,14 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "astroid";
-  version = "4.0.3";
+  version = "4.1.2";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "PyCQA";
     repo = "astroid";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-5p1xY6EWviSgmrLVOx3w7RcG/Vpx+sUtVndoxXrIFTQ=";
+    hash = "sha256-ADLAkPmLtiPx+7b9o0OLawupCtcAmT/jBdv7jqkWqBM=";
   };
 
   build-system = [ setuptools ];
