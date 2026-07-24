@@ -21,14 +21,14 @@
 
 buildPythonPackage rec {
   pname = "kubernetes";
-  version = "35.0.0";
+  version = "36.0.3";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "kubernetes-client";
     repo = "python";
     tag = "v${version}";
-    hash = "sha256-q52LqOz8aQkzWPwEy1c2jUQJ3hQ2sDVrYGkOgOc7Mm0=";
+    hash = "sha256-e5fD5H33hkyVSbNTky2R4RbuIsR/MPNj2rYONKxyGOo=";
   };
 
   build-system = [
