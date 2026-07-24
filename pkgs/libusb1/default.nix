@@ -7,12 +7,12 @@
 
 buildPythonPackage rec {
   pname = "libusb1";
-  version = "3.3.1";
+  version = "3.4.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-OVHTYPLa8ODqz4OeFdLR0vT154MCMesxiO7/7y3Re60=";
+    hash = "sha256-nPVjhQbVTyG/NlUNl+pjGJERojxNgHj2MBA6IFITX0U=";
   };
 
   build-system = [ setuptools ];
