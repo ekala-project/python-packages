@@ -1,7 +1,7 @@
 {
   core = builtins.fetchGit {
     url = "https://github.com/ekala-project/corepkgs.git";
-    rev = "7f4e2ddd8922722f92f9f13a7eba3e36d2cc0387";
+    rev = "81e84032efee5ab2863aa356fea6a5286547d23b";
   };
 
   lib = builtins.fetchGit {
