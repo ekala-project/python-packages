@@ -29,6 +29,7 @@ buildPythonPackage rec {
 
   pythonRelaxDeps = [
     "jsonschema"
+    "openapi-schema-validator"
   ];
 
   dependencies = [
