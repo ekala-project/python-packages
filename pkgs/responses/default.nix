@@ -16,14 +16,14 @@
 
 buildPythonPackage rec {
   pname = "responses";
-  version = "0.25.8";
+  version = "0.26.2";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "getsentry";
     repo = "responses";
     tag = version;
-    hash = "sha256-7vl8+7cpyJFhGDTzklQn7p5NyEFpzX9Yiz2g7fDCPGk=";
+    hash = "sha256-8+zc7UebB9pBLC5nc7QtuXQIoQ+k+NH1XvajQMGIXNg=";
   };
 
   build-system = [ setuptools ];
