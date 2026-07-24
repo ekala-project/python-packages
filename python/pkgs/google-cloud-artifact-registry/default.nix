@@ -1,0 +1,51 @@
+{
+  buildPythonPackage,
+  fetchPypi,
+  google-api-core,
+  google-auth,
+  grpc-google-iam-v1,
+  lib,
+  proto-plus,
+  protobuf,
+  pytest-asyncio,
+  setuptools,
+}:
+
+buildPythonPackage rec {
+  pname = "google-cloud-artifact-registry";
+  version = "1.22.0";
+  pyproject = true;
+
+  src = fetchPypi {
+    pname = "google_cloud_artifact_registry";
+    inherit version;
+    hash = "sha256-DoFzqXrmld/PAsgyd6D9V04aOb5AnaY0W5Rb6+V3rZQ=";
+  };
+
+  build-system = [ setuptools ];
+
+  pythonRelaxDeps = [
+    "protobuf"
+  ];
+
+  dependencies = [
+    google-api-core
+    google-auth
+    grpc-google-iam-v1
+    proto-plus
+    protobuf
+  ]
+  ++ google-api-core.optional-dependencies.grpc;
+  pythonImportsCheck = [
+    "google.cloud.artifactregistry"
+    "google.cloud.artifactregistry_v1"
+    "google.cloud.artifactregistry_v1beta2"
+  ];
+
+  meta = {
+    description = "Google Cloud Artifact Registry API client library";
+    homepage = "https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-artifact-registry";
+    license = lib.licenses.asl20;
+    maintainers = [ ];
+  };
+}
