@@ -21,7 +21,7 @@ buildPythonPackage rec {
     owner = "fsspec";
     repo = "s3fs";
     tag = version;
-    hash = "sha256-CWZHu9PXW/YZosCVtnCJ4T6eQCmrdFcP0vkoGr+RAhM=";
+    hash = "sha256-7Z8vOtWaY1goPPNb1poybI6zWweexv+sHHTj+YWRVk8=";
   };
 
   build-system = [
