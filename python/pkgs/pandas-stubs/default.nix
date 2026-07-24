@@ -30,7 +30,8 @@ buildPythonPackage rec {
     types-pytz
   ];
 
-  pythonImportsCheck = [ "pandas" ];
+  # Stubs package - doesn't provide importable modules on its own
+  pythonImportsCheck = [ ];
 
   meta = {
     description = "Type annotations for Pandas";
