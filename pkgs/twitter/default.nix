@@ -9,12 +9,12 @@
 
 buildPythonPackage rec {
   pname = "twitter";
-  version = "1.19.6";
+  version = "2.0a2";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-gN3WmuLuuIMT/u3uoxvxGf1ueVQe5bN6u5xD0jMZThA=";
+    hash = "sha256-CzjsEI184ruO48kOHVbrexkZgJ01gKTq/5gkjvTNmqc=";
   };
 
   build-system = [
