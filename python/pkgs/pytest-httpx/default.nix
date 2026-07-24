@@ -1,0 +1,42 @@
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  httpx,
+  pytest,
+  pytest-asyncio,
+  setuptools,
+  setuptools-scm,
+}:
+
+buildPythonPackage rec {
+  pname = "pytest-httpx";
+  version = "0.36.0";
+  pyproject = true;
+
+  src = fetchFromGitHub {
+    owner = "Colin-b";
+    repo = "pytest_httpx";
+    tag = "v${version}";
+    hash = "sha256-WuvfhLRKbfhVehyz/0PAUlIYbwfTYlQMRC8uTWD1T00=";
+  };
+
+  nativeBuildInputs = [
+    setuptools
+    setuptools-scm
+  ];
+
+  buildInputs = [ pytest ];
+
+  propagatedBuildInputs = [ httpx ];
+
+  pythonRelaxDeps = [ "httpx" ];
+  pythonImportsCheck = [ "pytest_httpx" ];
+
+  meta = {
+    description = "Send responses to httpx";
+    homepage = "https://github.com/Colin-b/pytest_httpx";
+    license = lib.licenses.mit;
+    maintainers = [ ];
+  };
+}
