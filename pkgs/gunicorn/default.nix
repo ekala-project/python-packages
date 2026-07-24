@@ -17,14 +17,14 @@
 
 buildPythonPackage rec {
   pname = "gunicorn";
-  version = "23.0.0";
+  version = "26.0.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "benoitc";
     repo = "gunicorn";
     tag = version;
-    hash = "sha256-Dq/mrQwo3II6DBvYfD1FHsKHaIlyHlJCZ+ZyrM4Efe0=";
+    hash = "sha256-duq5ghUuiuZL644jHgZ0qXHkcc8POHt7BX91m9F5BGE=";
   };
 
   build-system = [ setuptools ];
