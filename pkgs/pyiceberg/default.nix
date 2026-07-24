@@ -9,6 +9,8 @@
 
   # dependencies
   cachetools,
+  pyroaring,
+  strictyaml,
   click,
   fsspec,
   mmh3,
@@ -54,6 +56,8 @@ buildPythonPackage (finalAttrs: {
   # Prevents the cython build to fail silently
   env.CIBUILDWHEEL = "1";
 
+  pythonRelaxDeps = [ "rich" ];
+
   dependencies = [
     cachetools
     click
@@ -62,7 +66,9 @@ buildPythonPackage (finalAttrs: {
     pydantic
     pyparsing
     requests
+    pyroaring
     rich
+    strictyaml
     tenacity
     zstandard
   ];
