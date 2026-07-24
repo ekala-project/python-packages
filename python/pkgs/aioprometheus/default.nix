@@ -1,0 +1,44 @@
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  orjson,
+  quantile-python,
+  aiohttp,
+  aiohttp-basicauth,
+  starlette,
+  quart,
+  httpx,
+  fastapi,
+  uvicorn,
+}:
+
+buildPythonPackage rec {
+  pname = "aioprometheus";
+  version = "unstable-2023-03-14";
+  format = "setuptools";
+
+  src = fetchFromGitHub {
+    owner = "claws";
+    repo = "aioprometheus";
+    rev = "4786678b413d166c0b6e0041558d11bc1a7097b2";
+    hash = "sha256-2z68rQkMjYqkszg5Noj9owWUWQGOEp/91RGiWiyZVOY=";
+  };
+
+  propagatedBuildInputs = [
+    orjson
+    quantile-python
+  ];
+
+  optional-dependencies = {
+    aiohttp = [ aiohttp ];
+    starlette = [ starlette ];
+    quart = [ quart ];
+  };
+  meta = {
+    description = "Prometheus Python client library for asyncio-based applications";
+    homepage = "https://github.com/claws/aioprometheus";
+    license = lib.licenses.mit;
+    maintainers = [ ];
+  };
+}
