@@ -15,12 +15,12 @@
 
 buildPythonPackage rec {
   pname = "rdflib";
-  version = "7.5.0";
+  version = "7.6.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-ZjCDRDkIsYMOVnNQ1y502ZSLMQ+CeWY1jXbuvckr9ZI=";
+    hash = "sha256-bIMSiNXkpafs6F0MzemHfVEqPQ8C18BkVdANbQ6jed8=";
   };
 
   build-system = [ poetry-core ];
