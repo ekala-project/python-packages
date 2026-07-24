@@ -14,6 +14,7 @@
 
   # native libraries
   freetype,
+  pkgs,
 
   # propagates
   contourpy,
@@ -58,6 +59,7 @@ buildPythonPackage rec {
 
   buildInputs = [
     freetype
+    pkgs.qhull
   ];
 
   hardeningDisable = lib.optionals stdenv.hostPlatform.isDarwin [ "strictoverflow" ];
@@ -88,7 +90,7 @@ buildPythonPackage rec {
 
   mesonFlags = lib.mapAttrsToList lib.mesonBool {
     system-freetype = true;
-    system-qhull = false;
+    system-qhull = true;
     b_lto = false;
   };
 
