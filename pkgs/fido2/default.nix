@@ -8,12 +8,12 @@
 
 buildPythonPackage rec {
   pname = "fido2";
-  version = "2.1.1";
+  version = "2.2.1";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-8TefhFhwzH/GTH8HMjw85B6MlsNwVOeeCs1WMLP+xaw=";
+    hash = "sha256-hXh0KKlMP46vcvD/MK+6mDtVmhsbeVyTMYyBtK1AYsQ=";
   };
 
   build-system = [ poetry-core ];
