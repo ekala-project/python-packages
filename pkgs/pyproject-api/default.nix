@@ -13,13 +13,13 @@
 
 buildPythonPackage rec {
   pname = "pyproject-api";
-  version = "1.10.0";
+  version = "1.11.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "pyproject_api";
     inherit version;
-    hash = "sha256-QMby2C7r3Er+5hx3PtIIwEwZ20xKYNl/jXvj68C7szA=";
+    hash = "sha256-uIB9haKT5snxM+ZXWUb+1F8dQrItWMeAszqiQhp5lUk=";
   };
 
   build-system = [
