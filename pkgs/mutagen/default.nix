@@ -7,12 +7,12 @@
 
 buildPythonPackage rec {
   pname = "mutagen";
-  version = "1.47.0";
+  version = "1.48.1";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-cZ+t7wqXjDG0zzyVYmGzxYtpSLMgIweKIRex3gnw/Jk=";
+    hash = "sha256-j5Vjern28wXOxr0SlOGX3r4geZjj4GhZZWPHT4awoXM=";
   };
 
   build-system = [ setuptools ];
