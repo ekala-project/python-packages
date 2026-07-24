@@ -1,0 +1,44 @@
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  setuptools,
+  azure-core,
+  isodate,
+  typing-extensions,
+}:
+
+buildPythonPackage rec {
+  pname = "azure-monitor-ingestion";
+  version = "1.1.0";
+  pyproject = true;
+
+  src = fetchPypi {
+    pname = "azure_monitor_ingestion";
+    inherit version;
+    hash = "sha256-l6/ueA2a4waRKM3ncCfUzGL6gk/mTVusiArEpksKDE4=";
+  };
+
+  build-system = [ setuptools ];
+
+  dependencies = [
+    azure-core
+    isodate
+    typing-extensions
+  ];
+
+  pythonImportsCheck = [
+    "azure.monitor.ingestion"
+    "azure.monitor.ingestion.aio"
+  ];
+
+  # requires checkout from mono-repo and a mock account
+  doCheck = false;
+
+  meta = {
+    description = "Send custom logs to Azure Monitor using the Logs Ingestion API";
+    homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/monitor/azure-monitor-ingestion";
+    license = lib.licenses.mit;
+    maintainers = [ ];
+  };
+}
