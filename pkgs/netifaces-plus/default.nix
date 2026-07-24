@@ -7,13 +7,13 @@
 
 buildPythonPackage rec {
   pname = "netifaces-plus";
-  version = "0.12.4";
+  version = "0.12.5";
   pyproject = true;
 
   src = fetchPypi {
     pname = "netifaces_plus";
     inherit version;
-    hash = "sha256-75Y06DVytBZVo1Eu8+qpNsKpwrvvxmv+A9uJjhnXOJU=";
+    hash = "sha256-ZCi9fUMjVW79Sw7GsxUiGHWBL4zytpUBxv2noJ63lSg=";
   };
 
   build-system = [ setuptools ];
