@@ -4,6 +4,7 @@
   buildPythonPackage,
   fetchPypi,
   hatchling,
+  versioningit,
 }:
 
 buildPythonPackage rec {
@@ -18,16 +19,10 @@ buildPythonPackage rec {
 
   build-system = [
     hatchling
+    versioningit
   ];
 
   dependencies = [ asn1crypto ];
-
-  postPatch = ''
-    # Upstream uses versioningit to set the version
-    sed -i "/versioningit >=/d" pyproject.toml
-    sed -i '/^name =.*/a version = "${version}"' pyproject.toml
-    sed -i "/dynamic =/d" pyproject.toml
-  '';
 
   pythonImportsCheck = [ "scramp" ];
 
