@@ -4,6 +4,7 @@
   fetchPypi,
 
   # build-system
+  hatch-requirements-txt,
   hatchling,
   setuptools,
 
@@ -23,6 +24,7 @@ buildPythonPackage rec {
   };
 
   build-system = [
+    hatch-requirements-txt
     hatchling
     setuptools
   ];
