@@ -7,12 +7,12 @@
 
 buildPythonPackage rec {
   pname = "dbutils";
-  version = "3.1.1";
+  version = "3.1.2";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-reefvFeG10ltQThyL7yiQ0DPfHO11m3wUpb2Vv8Ia78=";
+    hash = "sha256-FgtXiBVPGt7dxhCA2v8VMLTfK6DUWvHDv7rHbbJBhrM=";
   };
 
   build-system = [ setuptools ];
