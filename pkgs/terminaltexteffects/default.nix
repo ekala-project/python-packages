@@ -7,12 +7,12 @@
 
 buildPythonPackage rec {
   pname = "terminaltexteffects";
-  version = "0.14.2";
+  version = "0.15.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-ITyJnOS492Q9LQVorxROEnThHkST259bBDh70XwhdxQ=";
+    hash = "sha256-9LMchr+pQ9W/Oyxey/rqDeZe1KlRAoxA+OTLVO/QZDk=";
   };
 
   build-system = [ hatchling ];
