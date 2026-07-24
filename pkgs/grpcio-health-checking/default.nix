@@ -8,13 +8,13 @@
 
 buildPythonPackage rec {
   pname = "grpcio-health-checking";
-  version = "1.80.0";
+  version = "1.83.0";
   format = "setuptools";
 
   src = fetchPypi {
     pname = "grpcio_health_checking";
     inherit version;
-    hash = "sha256-LMXwi8i4FrhlWrb1nHFFAGO6IHZtMeIaST6RLjVgyLE=";
+    hash = "sha256-rWvE1aEQOtcE0lzNgt7zAN+ieZaxhcqz5Mzu7yxoZ9Q=";
   };
 
   propagatedBuildInputs = [
