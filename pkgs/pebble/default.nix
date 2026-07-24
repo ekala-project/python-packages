@@ -7,12 +7,12 @@
 
 buildPythonPackage rec {
   pname = "pebble";
-  version = "5.2.0";
+  version = "5.2.1";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-jgpfahz90Kwb/Ep4niDStLiV3pduVH0jt94jtx7zmzQ=";
+    hash = "sha256-l0NTeqDkB1Ghy/KXko4UG9IgKiRiSnwPn8FIGKfyJ7E=";
   };
 
   build-system = [ setuptools ];
