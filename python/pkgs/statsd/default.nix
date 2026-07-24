@@ -1,0 +1,28 @@
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  setuptools,
+  mock,
+}:
+
+buildPythonPackage rec {
+  pname = "statsd";
+  version = "4.0.1";
+  pyproject = true;
+
+  src = fetchFromGitHub {
+    owner = "jsocol";
+    repo = "pystatsd";
+    tag = "v${version}";
+    hash = "sha256-g830TjFERKUguFKlZeaOhCTlaUs0wcDg4bMdRDr3smw=";
+  };
+
+  nativeBuildInputs = [ setuptools ];
+  meta = {
+    maintainers = [ ];
+    description = "Simple statsd client";
+    license = lib.licenses.mit;
+    homepage = "https://github.com/jsocol/pystatsd";
+  };
+}
