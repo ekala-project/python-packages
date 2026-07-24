@@ -10,14 +10,14 @@
 
 buildPythonPackage rec {
   pname = "humanize";
-  version = "4.15.0";
+  version = "4.16.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "python-humanize";
     repo = "humanize";
     tag = version;
-    hash = "sha256-EG0QrW4b5NK9+78B0Cs4eAuicIsN/V/77+JxyYrTReA=";
+    hash = "sha256-Ht4lK+Qd6pU4i6MUycaT3j69ldkTRtQ21QzKuLGgrLY=";
   };
 
   nativeBuildInputs = [
