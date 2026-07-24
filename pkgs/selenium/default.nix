@@ -5,6 +5,8 @@
   setuptools,
   certifi,
   trio,
+  trio-websocket,
+  trio-typing,
   typing-extensions,
   websocket-client,
   urllib3,
@@ -44,9 +46,16 @@ buildPythonPackage rec {
 
   build-system = [ setuptools ];
 
+  pythonRelaxDeps = [
+    "certifi"
+    "urllib3"
+  ];
+
   dependencies = [
     certifi
     trio
+    trio-websocket
+    trio-typing
     typing-extensions
     urllib3
     websocket-client
