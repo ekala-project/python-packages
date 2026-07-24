@@ -1,0 +1,40 @@
+{
+  lib,
+  buildPythonPackage,
+  cython,
+  fetchFromGitHub,
+  setuptools,
+  wheel,
+}:
+
+buildPythonPackage rec {
+  pname = "pyjson5";
+  version = "2.0.1";
+  pyproject = true;
+
+  src = fetchFromGitHub {
+    owner = "Kijewski";
+    repo = "pyjson5";
+    tag = "v${version}";
+    hash = "sha256-SonObL4watru9+YDiw4K7Mo5BOKWmhp1R/IZ54H9Db0=";
+    fetchSubmodules = true;
+  };
+
+  build-system = [
+    cython
+    setuptools
+    wheel
+  ];
+
+  # Module has no tests
+  doCheck = false;
+
+  pythonImportsCheck = [ "pyjson5" ];
+
+  meta = {
+    description = "JSON5 serializer and parser library";
+    homepage = "https://github.com/Kijewski/pyjson5";
+    license = lib.licenses.asl20;
+    maintainers = [ ];
+  };
+}
