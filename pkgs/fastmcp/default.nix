@@ -5,11 +5,13 @@
 
   # build-system
   hatchling,
+  uv-dynamic-versioning,
 
   # dependencies
   email-validator,
   anthropic,
   authlib,
+  griffelib,
   azure-identity,
   cyclopts,
   exceptiongroup,
@@ -19,15 +21,18 @@
   mcp,
   google-genai,
   openai,
+  openapi-pydantic,
   opentelemetry-api,
   packaging,
   platformdirs,
+  py-key-value-aio,
   pydantic,
   pyjwt,
   pyperclip,
   python-dotenv,
   pyyaml,
   rich,
+  uncalled-for,
   uvicorn,
   watchfiles,
   websockets,
@@ -48,29 +53,37 @@ buildPythonPackage (finalAttrs: {
 
   build-system = [
     hatchling
+    uv-dynamic-versioning
   ];
 
   dependencies = [
     authlib
     cyclopts
+    email-validator
     exceptiongroup
+    griffelib
     httpx
     jsonref
     jsonschema-path
     mcp
+    openapi-pydantic
     opentelemetry-api
     packaging
     platformdirs
+    py-key-value-aio
     pydantic
     pyperclip
     python-dotenv
     pyyaml
     rich
+    uncalled-for
     uvicorn
     watchfiles
     websockets
-    email-validator
-  ];
+  ]
+  ++ py-key-value-aio.optional-dependencies.filetree
+  ++ py-key-value-aio.optional-dependencies.keyring
+  ++ py-key-value-aio.optional-dependencies.memory;
 
   optional-dependencies = {
     anthropic = [ anthropic ];
