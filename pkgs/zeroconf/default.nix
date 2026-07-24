@@ -10,12 +10,12 @@
 
 buildPythonPackage rec {
   pname = "zeroconf";
-  version = "0.149.16";
+  version = "0.150.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-XmtaOxU8LMKo2eb28YnsVjj32chvw+iKbFPraGN2Gl4=";
+    hash = "sha256-pf5/6rHebvXlQeCj0H5TT9kWKbgT/CcoFZNYQQD2MWQ=";
   };
 
   build-system = [
