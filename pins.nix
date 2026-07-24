@@ -6,6 +6,6 @@
 
   lib = builtins.fetchGit {
     url = "https://github.com/jonringer/nix-lib.git";
-    rev = "c19c816e39d14a60dd368d601aa9b389b09d0bbb";
+    rev = "2c14377c3f3825e2cd5ebf43858ec4aaac5bffde";
   };
 }
