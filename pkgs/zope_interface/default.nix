@@ -7,13 +7,13 @@
 
 buildPythonPackage rec {
   pname = "zope.interface";
-  version = "8.2";
+  version = "8.5";
   pyproject = true;
 
   src = fetchPypi {
     pname = "zope_interface";
     inherit version;
-    hash = "sha256-r7IMNxpgHSYbT27bU8PEGMJJ2xqXF7C6r8mpuzm6EiQ=";
+    hash = "sha256-ejuhxYd/Dz45BrAt33k6vtK+zClIEWQUzg4d2CC2jW0=";
   };
 
   build-system = [ setuptools ];
