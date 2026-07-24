@@ -7,6 +7,7 @@
   opentelemetry-api,
   opentelemetry-exporter-otlp-proto-common,
   opentelemetry-proto,
+  opentelemetry-sdk,
 }:
 
 buildPythonPackage {
@@ -25,6 +26,7 @@ buildPythonPackage {
     opentelemetry-api
     opentelemetry-exporter-otlp-proto-common
     opentelemetry-proto
+    opentelemetry-sdk
   ];
 
   pythonImportsCheck = [ "opentelemetry.exporter.otlp.proto.grpc" ];

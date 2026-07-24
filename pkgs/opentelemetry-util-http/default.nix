@@ -2,6 +2,7 @@
   buildPythonPackage,
   hatchling,
   opentelemetry-instrumentation,
+  opentelemetry-semantic-conventions,
 }:
 
 buildPythonPackage {
@@ -12,6 +13,8 @@ buildPythonPackage {
   sourceRoot = "${opentelemetry-instrumentation.src.name}/util/opentelemetry-util-http";
 
   build-system = [ hatchling ];
+
+  dependencies = [ opentelemetry-semantic-conventions ];
 
   pythonImportsCheck = [ "opentelemetry.util.http" ];
 

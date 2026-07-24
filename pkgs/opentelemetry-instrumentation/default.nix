@@ -4,6 +4,7 @@
   fetchFromGitHub,
   hatchling,
   opentelemetry-api,
+  opentelemetry-semantic-conventions,
   setuptools,
   wrapt,
 }:
@@ -26,9 +27,12 @@ buildPythonPackage rec {
 
   dependencies = [
     opentelemetry-api
+    opentelemetry-semantic-conventions
     setuptools
     wrapt
   ];
+
+  pythonRelaxDeps = [ "wrapt" ];
 
   pythonImportsCheck = [ "opentelemetry.instrumentation" ];
 
