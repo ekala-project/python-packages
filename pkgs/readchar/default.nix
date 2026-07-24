@@ -9,14 +9,14 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "readchar";
-  version = "4.2.1";
+  version = "4.2.2";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "magmax";
     repo = "python-readchar";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-r+dKGv0a7AU+Ef94AGCCJLQolLqTTxaNmqRQYkxk15s=";
+    hash = "sha256-WCnHRD0EE+ZUDnh7ktXNZRq8w9+XzTlhveHRYaiys9Q=";
   };
 
   postPatch = ''
