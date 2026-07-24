@@ -1,0 +1,33 @@
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  setuptools,
+}:
+
+buildPythonPackage rec {
+  pname = "tag-expressions";
+  version = "2.0.1";
+  pyproject = true;
+
+  src = fetchPypi {
+    pname = "tag_expressions";
+    inherit version;
+    hash = "sha256-EbSwfAH+sL3JGW+COfDA2f7cLGyKmQMsbyyDGy13Lkg=";
+  };
+
+  postPatch = ''
+    substituteInPlace setup.py \
+      --replace-fail 'version=read_version()' 'version="${version}"'
+  '';
+
+  build-system = [ setuptools ];
+  pythonImportsCheck = [ "tagexpressions" ];
+
+  meta = {
+    description = "Package to parse logical tag expressions";
+    homepage = "https://github.com/timofurrer/tag-expressions";
+    license = lib.licenses.gpl3Plus;
+    maintainers = [ ];
+  };
+}
