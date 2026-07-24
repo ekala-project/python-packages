@@ -23,6 +23,8 @@ buildPythonPackage rec {
 
   build-system = [ setuptools ];
 
+  pythonRemoveDeps = lib.optionals (pyarrow == null) [ "pyarrow" ];
+
   dependencies = [
     numpy
     packaging
@@ -32,7 +34,8 @@ buildPythonPackage rec {
     pyarrow
   ];
 
-  pythonImportsCheck = [ "db_dtypes" ];
+  # db_dtypes unconditionally imports pyarrow at module level
+  pythonImportsCheck = lib.optionals (pyarrow != null) [ "db_dtypes" ];
 
   meta = {
     description = "Pandas Data Types for SQL systems (BigQuery, Spanner)";
