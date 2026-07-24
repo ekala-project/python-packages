@@ -12,13 +12,13 @@
 
 buildPythonPackage rec {
   pname = "google-cloud-os-login";
-  version = "2.21.0";
+  version = "2.22.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "google_cloud_os_login";
     inherit version;
-    hash = "sha256-0CEaiSDkQVHaupJiHkEELgwq9ee0KLRHctlA3b35m20=";
+    hash = "sha256-xyDUE2/5BvAF4nKqH1sNcfszq/fMGlr0oiaB7ZSdt+I=";
   };
 
   build-system = [ setuptools ];
