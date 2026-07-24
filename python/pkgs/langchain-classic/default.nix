@@ -1,0 +1,67 @@
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+
+  # build-system
+  hatchling,
+
+  # dependencies
+  langchain-core,
+  langchain-text-splitters,
+  langsmith,
+  pydantic,
+  pyyaml,
+  requests,
+  sqlalchemy,
+
+  # tests
+
+  # update
+  gitUpdater,
+}:
+
+buildPythonPackage (finalAttrs: {
+  pname = "langchain-classic";
+  version = "1.0.8";
+  pyproject = true;
+  __structuredAttrs = true;
+
+  src = fetchFromGitHub {
+    owner = "langchain-ai";
+    repo = "langchain";
+    tag = "langchain-classic==${finalAttrs.version}";
+    hash = "sha256-Xskg6bPmRv7iLjppUF11rqmHg2YJWETVT1EMhzK7Svo=";
+  };
+
+  sourceRoot = "${finalAttrs.src.name}/libs/langchain";
+
+  build-system = [ hatchling ];
+
+  dependencies = [
+    langchain-core
+    langchain-text-splitters
+    langsmith
+    pydantic
+    pyyaml
+    requests
+    sqlalchemy
+  ];
+  # Bulk updater selects wrong tag
+  passthru = {
+    skipBulkUpdate = true;
+    updateScript = gitUpdater {
+      rev-prefix = "langchain-classic==";
+      ignoredVersions = "a|b|dev|rc";
+    };
+  };
+
+  pythonImportsCheck = [ "langchain_classic" ];
+
+  meta = {
+    description = "Classic (0.x) compatibility layer for LangChain";
+    homepage = "https://github.com/langchain-ai/langchain/tree/master/libs/langchain";
+    license = lib.licenses.mit;
+    maintainers = [ ];
+  };
+})
