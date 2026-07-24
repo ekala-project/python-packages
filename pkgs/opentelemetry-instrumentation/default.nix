@@ -32,7 +32,10 @@ buildPythonPackage rec {
     wrapt
   ];
 
-  pythonRelaxDeps = [ "wrapt" ];
+  pythonRelaxDeps = [
+    "opentelemetry-semantic-conventions"
+    "wrapt"
+  ];
 
   pythonImportsCheck = [ "opentelemetry.instrumentation" ];
 
