@@ -1,0 +1,38 @@
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  pdm-backend,
+  anyio,
+  sniffio,
+  typing-extensions,
+}:
+
+buildPythonPackage rec {
+  pname = "asyncer";
+  version = "0.0.17";
+  pyproject = true;
+
+  src = fetchFromGitHub {
+    owner = "fastapi";
+    repo = "asyncer";
+    tag = version;
+    hash = "sha256-4h6s0jsAzTT6LbsvfQGkc7qNCcPgoyR9Qr/yro1ukbg=";
+  };
+
+  build-system = [ pdm-backend ];
+
+  dependencies = [
+    anyio
+    sniffio
+    typing-extensions
+  ];
+  pythonImportsCheck = [ "asyncer" ];
+
+  meta = {
+    description = "Asyncer, async and await, focused on developer experience";
+    homepage = "https://github.com/fastapi/asyncer";
+    license = lib.licenses.mit;
+    maintainers = [ ];
+  };
+}
