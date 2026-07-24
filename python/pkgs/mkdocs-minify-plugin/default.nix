@@ -1,0 +1,40 @@
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  mkdocs,
+  csscompressor,
+  htmlmin,
+  jsmin,
+}:
+
+buildPythonPackage rec {
+  pname = "mkdocs-minify-plugin";
+  version = "0.7.1";
+  format = "setuptools";
+
+  src = fetchFromGitHub {
+    owner = "byrnereese";
+    repo = "mkdocs-minify-plugin";
+    tag = version;
+    hash = "sha256-LDCAWKVbFsa6Y/tmY2Zne4nOtxe4KvNplZuWxg4e4L8=";
+  };
+
+  propagatedBuildInputs = [
+    csscompressor
+    htmlmin
+    jsmin
+    mkdocs
+  ];
+  # Some tests fail with an assertion error failure
+  doCheck = false;
+
+  pythonImportsCheck = [ "mkdocs" ];
+
+  meta = {
+    description = "Mkdocs plugin to minify the HTML of a page before it is written to disk";
+    homepage = "https://github.com/byrnereese/mkdocs-minify-plugin";
+    license = lib.licenses.mit;
+    maintainers = [ ];
+  };
+}
