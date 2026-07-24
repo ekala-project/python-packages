@@ -1,0 +1,60 @@
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+
+  # build-system
+  cmake,
+  cython,
+  ninja,
+  scikit-build-core,
+  setuptools-scm,
+
+  # dependencies
+  typing-extensions,
+
+  # tests
+  numpy,
+}:
+
+buildPythonPackage (finalAttrs: {
+  pname = "apache-tvm-ffi";
+  version = "0.1.12";
+  pyproject = true;
+  __structuredAttrs = true;
+
+  src = fetchFromGitHub {
+    owner = "apache";
+    repo = "tvm-ffi";
+    tag = "v${finalAttrs.version}";
+    fetchSubmodules = true;
+    hash = "sha256-ZFi7MKFiHK2lNoVkQbPhOc7NpIf24PLLP8SqGQiQ9Lw=";
+  };
+
+  build-system = [
+    cmake
+    cython
+    ninja
+    scikit-build-core
+    setuptools-scm
+  ];
+  dontUseCmakeConfigure = true;
+
+  dependencies = [
+    typing-extensions
+  ];
+
+  optional-dependencies = {
+    cpp = [
+      ninja
+    ];
+  };
+
+  pythonImportsCheck = [ "tvm_ffi" ];
+meta = {
+    description = "Open ABI and FFI for Machine Learning Systems";
+    homepage = "https://github.com/apache/tvm-ffi";
+    license = lib.licenses.asl20;
+    maintainers = [ ];
+  };
+})
