@@ -14,6 +14,7 @@
   meson-python,
   nukeReferences,
   pkg-config,
+  pythran,
   setuptools,
 
   # buildInputs
@@ -63,6 +64,7 @@ buildPythonPackage (finalAttrs: {
     meson-python
     nukeReferences
     pkg-config
+    pythran
     setuptools
   ];
 
@@ -90,7 +92,6 @@ buildPythonPackage (finalAttrs: {
     "-Dblas=${blas.pname}"
     "-Dlapack=${lapack.pname}"
     "--cross-file=${finalAttrs.finalPackage.passthru.crossFile}"
-    "-Duse-system-libraries=blas,lapack"
   ];
 
   hardeningDisable = lib.optionals (stdenv.hostPlatform.isAarch64 && stdenv.hostPlatform.isDarwin) [
@@ -121,7 +122,7 @@ buildPythonPackage (finalAttrs: {
     buildConfig = {
       properties = {
         numpy-include-dir = numpy.coreIncludeDir;
-        # pythran-include-dir = "${pythran}/${python.sitePackages}/pythran";
+        pythran-include-dir = "${pythran}/${python.sitePackages}/pythran";
         host-python-path = python.interpreter;
         host-python-version = python.pythonVersion;
       };
