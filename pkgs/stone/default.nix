@@ -11,12 +11,12 @@
 
 buildPythonPackage rec {
   pname = "stone";
-  version = "3.5.2";
+  version = "3.5.3";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-0RZ884QvuPcA9q82Rcixh423+RuVTH36VKiiuE09S14=";
+    hash = "sha256-0NmfFNFURS5xs+J1Lv27sXaeT+y8EpGx39GgRve2ocs=";
   };
 
   build-system = [
