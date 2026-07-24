@@ -2,7 +2,7 @@
 let
   pins = import ./pins.nix;
   lib = import pins.lib;
-  pythonOverlay = lib.packageSets.mkAutoCalledPackageDir ./pkgs;
+  pythonOverlay = lib.packageSets.mkAutoCalledPackageDir ./python/pkgs;
   pythonOverrides = import ./python-packages.nix;
   pkgs = import pins.core { modules = [ (import ./pkgs-module.nix) ]; };
   mkProjection = overlay: base: lib.fix (self: base // overlay self base);
