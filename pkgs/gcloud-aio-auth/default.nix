@@ -4,6 +4,8 @@
   fetchPypi,
   poetry-core,
   aiohttp,
+  backoff,
+  chardet,
   cryptography,
   pyjwt,
 }:
@@ -23,6 +25,8 @@ buildPythonPackage rec {
 
   dependencies = [
     aiohttp
+    backoff
+    chardet
     cryptography
     pyjwt
   ];
