@@ -2,7 +2,7 @@
   lib,
   buildPythonPackage,
   fetchPypi,
-  setuptools,
+  poetry-core,
   aiohttp,
   cryptography,
   pyjwt,
@@ -19,7 +19,7 @@ buildPythonPackage rec {
     hash = "sha256-cLjG7fhlUAMlGQU3LmgVokq4Ob8gF4ipA5ZFcOm0CR8=";
   };
 
-  build-system = [ setuptools ];
+  build-system = [ poetry-core ];
 
   dependencies = [
     aiohttp
