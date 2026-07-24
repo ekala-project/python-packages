@@ -8,12 +8,12 @@
 
 buildPythonPackage rec {
   pname = "plumbum";
-  version = "2.0.1";
+  version = "2.0.2";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-YWI/hW3LCesg3NWqcI37PNBLb0qxAiTTkwOxY7scTGE=";
+    hash = "sha256-IzdR14GcnmdD7BwkBZJ+tPpSooTHuJS9EOKBBqkwmpI=";
   };
 
   build-system = [
