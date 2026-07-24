@@ -27,6 +27,7 @@ buildPythonPackage rec {
 
   dependencies = [
     anyio
+    starlette
   ];
 
   optional-dependencies = {
