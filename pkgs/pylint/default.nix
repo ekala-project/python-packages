@@ -25,6 +25,8 @@ buildPythonPackage (finalAttrs: {
 
   build-system = [ setuptools ];
 
+  pythonRelaxDeps = [ "astroid" ];
+
   dependencies = [
     astroid
     dill
