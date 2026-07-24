@@ -1,0 +1,30 @@
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  hatchling,
+}:
+
+buildPythonPackage rec {
+  pname = "backrefs";
+  version = "7.0";
+  pyproject = true;
+
+  src = fetchFromGitHub {
+    owner = "facelessuser";
+    repo = "backrefs";
+    tag = version;
+    hash = "sha256-PCFjtCG+rDRtopeIEdW8r7vje5MnC6PigOyHzsEqgTI=";
+  };
+
+  build-system = [ hatchling ];
+
+  pythonImportsCheck = [ "backrefs" ];
+
+  meta = {
+    description = "Wrapper around re or regex that adds additional back references";
+    homepage = "https://github.com/facelessuser/backrefs";
+    changelog = "https://github.com/facelessuser/backrefs/releases/tag/${src.tag}";
+    license = lib.licenses.mit;
+  };
+}

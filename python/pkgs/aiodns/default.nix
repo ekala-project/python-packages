@@ -1,0 +1,35 @@
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  pycares,
+  setuptools,
+}:
+
+buildPythonPackage (finalAttrs: {
+  pname = "aiodns";
+  version = "4.0.4";
+  pyproject = true;
+
+  src = fetchFromGitHub {
+    owner = "saghul";
+    repo = "aiodns";
+    tag = "v${finalAttrs.version}";
+    hash = "sha256-TLiiSRhZaEbHeyrQPk8uvj10VEttRanYEgkBy7DxH4Y=";
+  };
+
+  build-system = [ setuptools ];
+
+  dependencies = [ pycares ];
+
+  # Could not contact DNS servers
+  doCheck = false;
+
+  pythonImportsCheck = [ "aiodns" ];
+
+  meta = {
+    description = "Simple DNS resolver for asyncio";
+    homepage = "https://github.com/saghul/aiodns";
+    license = lib.licenses.mit;
+  };
+})

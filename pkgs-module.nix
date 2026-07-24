@@ -1,13 +1,17 @@
+{ lib, ... }:
+
 let
-  pins = import ./pins.nix;
-  lib = import pins.lib;
-  pythonOverlay = lib.mkAutoCalledPackageDir ./pkgs;
+  nativeOverlay = lib.packageSets.mkAutoCalledPackageDir ./pkgs;
+  pythonOverlay = lib.packageSets.mkAutoCalledPackageDir ./python/pkgs;
   pythonOverrides = import ./python-packages.nix;
   pkgsOverlay = import ./top-level.nix;
 in
 {
   overlays = {
-    pkgs = [ pkgsOverlay ];
+    pkgs = [
+      nativeOverlay
+      pkgsOverlay
+    ];
     python = [
       pythonOverlay
       pythonOverrides
