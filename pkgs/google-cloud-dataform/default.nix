@@ -13,13 +13,13 @@
 
 buildPythonPackage rec {
   pname = "google-cloud-dataform";
-  version = "0.11.0";
+  version = "0.11.2";
   pyproject = true;
 
   src = fetchPypi {
     pname = "google_cloud_dataform";
     inherit version;
-    hash = "sha256-aopXGBfCJ1UvKN9PbtZ+3WtngDLuB2/Ees/YJfcvgWU=";
+    hash = "sha256-3WRoUGbNC8BoIgFIEU7C2EcJKyHd9iq+P0eCjcr+9Ug=";
   };
 
   build-system = [ setuptools ];
