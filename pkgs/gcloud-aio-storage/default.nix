@@ -2,9 +2,12 @@
   lib,
   buildPythonPackage,
   fetchPypi,
-  setuptools,
+  poetry-core,
+  aiofiles,
   aiohttp,
   gcloud-aio-auth,
+  pyasn1-modules,
+  rsa,
 }:
 
 buildPythonPackage rec {
@@ -18,11 +21,19 @@ buildPythonPackage rec {
     hash = "sha256-I2ZKNrLD/5E1A1s+m89RLgoMF7h04wWYUJjwAN5N45k=";
   };
 
-  build-system = [ setuptools ];
+  build-system = [ poetry-core ];
+
+  pythonRelaxDeps = [
+    "aiofiles"
+    "pyasn1-modules"
+  ];
 
   dependencies = [
+    aiofiles
     aiohttp
     gcloud-aio-auth
+    pyasn1-modules
+    rsa
   ];
 
   pythonImportsCheck = [ "gcloud.aio.storage" ];
