@@ -8,12 +8,12 @@
 
 buildPythonPackage rec {
   pname = "command_runner";
-  version = "1.7.5";
+  version = "1.7.6";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-Vq7OjOYnTW3gDT5IccXalqR7vYv7rhjQdUGZd8hawfU=";
+    hash = "sha256-raJ/6bZOYTxDfw61b064hoipeiNAKQOZ3/yB9kEhDMo=";
   };
 
   build-system = [ setuptools ];
