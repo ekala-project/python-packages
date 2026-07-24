@@ -25,6 +25,8 @@ buildPythonPackage rec {
 
   build-system = [ poetry-core ];
 
+  pythonRelaxDeps = [ "paramiko" ];
+
   dependencies = [
     ntc-templates
     paramiko
