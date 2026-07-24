@@ -12,13 +12,13 @@
 
 buildPythonPackage rec {
   pname = "google-cloud-orchestration-airflow";
-  version = "1.21.0";
+  version = "1.22.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "google_cloud_orchestration_airflow";
     inherit version;
-    hash = "sha256-+AwXsNQlznIXFoS2orE8nJHZ0gtA8cI/JZK54Fvfp8o=";
+    hash = "sha256-GIMZWqhhZY62xTp5TQZYufYmvY7nXTAFW0yManQwQsw=";
   };
 
   build-system = [ setuptools ];
