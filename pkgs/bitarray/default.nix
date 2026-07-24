@@ -7,12 +7,12 @@
 
 buildPythonPackage rec {
   pname = "bitarray";
-  version = "3.8.0";
+  version = "3.9.1";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-Pq442v/XfJYhroDBaTLuo/s6SvFB+3zHJNStk+/5IQ0=";
+    hash = "sha256-eW8rTw5NhN9QvSPd+ss3107sKyNmgTy48Yva5rJePTY=";
   };
 
   build-system = [ setuptools ];
