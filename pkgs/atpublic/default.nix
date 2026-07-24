@@ -7,12 +7,12 @@
 
 buildPythonPackage rec {
   pname = "atpublic";
-  version = "5.0";
+  version = "7.0.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-1ctsur8A7B004oLozny8m3S6TLcy52bCTi140a1/cj8=";
+    hash = "sha256-Rm7xDQyLvRT9AqX71ai2r2qEY3PZEQbToHwW1y2Wtj4=";
   };
 
   build-system = [ hatchling ];
