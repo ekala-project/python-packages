@@ -7,12 +7,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "pypika";
-  version = "0.50.0";
+  version = "0.51.1";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-L/ZqFTrcjYh3h5/yq9WjsFCl0q39+GWdNAIHbjheNbM=";
+    hash = "sha256-wwx8EEj78Fb9OSDForiLDCndGQqbK+6XH9F+Sr5NDr4=";
   };
 
   build-system = [ setuptools ];
