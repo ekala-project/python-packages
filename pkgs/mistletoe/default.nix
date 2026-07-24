@@ -9,12 +9,12 @@
 
 buildPythonPackage rec {
   pname = "mistletoe";
-  version = "1.5.1";
+  version = "1.6.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-xVcc5sqc/cfOkVHDrnmstBjgZ4EgAJB2FkJxl2SAMKM=";
+    hash = "sha256-kvBmxHIKJfokvyYOZBNwK7/zpbipOvMUy2zYWJcmqOE=";
   };
 
   build-system = [ setuptools ];
