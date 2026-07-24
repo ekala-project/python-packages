@@ -10,12 +10,12 @@
 
 buildPythonPackage rec {
   pname = "urwid";
-  version = "3.0.5";
+  version = "4.0.6";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-JL4n/6/baMCc2V3CG2DM/QKEMyCyXOX+7hcIs0+tWiM=";
+    hash = "sha256-/GZZ5qWnnyAPODM39kskkGvdHBliKnW1Nb8dB+kJirE=";
   };
 
   build-system = [
