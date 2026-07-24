@@ -12,13 +12,13 @@
 
 buildPythonPackage rec {
   pname = "google-analytics-admin";
-  version = "0.30.0";
+  version = "0.30.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "google_analytics_admin";
     inherit version;
-    hash = "sha256-g2c7FmpQEXgcHpBClL2FR5+W7Mf2gUL3zo2BYXdomSU=";
+    hash = "sha256-zIsVAhfb7EVwiGfZ2BIW6KEOD21DLl5qxm2iqD1BGbY=";
   };
 
   build-system = [ setuptools ];
