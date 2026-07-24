@@ -16,14 +16,14 @@
 
 buildPythonPackage rec {
   pname = "smart-open";
-  version = "7.5.0";
+  version = "8.0.1";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "RaRe-Technologies";
     repo = "smart_open";
     tag = "v${version}";
-    hash = "sha256-MKQvvz75PBUZwQ9e/vR+XGdaT+pD2agZtdHOV0Gw9Kk=";
+    hash = "sha256-Qr2GzmRDCCvR6Q/msSC8F2i8EDYmCIuQP8f593aIisI=";
   };
 
   build-system = [
