@@ -7,14 +7,14 @@
 
 buildPythonPackage rec {
   pname = "colorlog";
-  version = "6.10.1";
+  version = "6.12.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "borntyping";
     repo = "python-colorlog";
     tag = "v${version}";
-    hash = "sha256-vb7OzIVcEIfnhJGpO0DgeEdhL6NCKlrynoNMxNp8Yg4=";
+    hash = "sha256-K7gxWg1OMSwcslrBvEyRIoGKSDOrlfiLmhxl8PbL/9g=";
   };
 
   build-system = [ setuptools ];
