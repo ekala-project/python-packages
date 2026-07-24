@@ -15,13 +15,13 @@
 
 buildPythonPackage rec {
   pname = "google-ads";
-  version = "31.0.0";
+  version = "31.2.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "google_ads";
     inherit version;
-    hash = "sha256-ZlTgHoubCqKMvkyuHBhqjF4QVQAht2awswfRBtdY8jY=";
+    hash = "sha256-cJkYHBp/Ync5tcac+GRyurRi/Mt0PsdlniUvuH+hp9o=";
   };
 
   build-system = [ setuptools ];
