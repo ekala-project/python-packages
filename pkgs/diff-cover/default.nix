@@ -17,12 +17,12 @@
 
 buildPythonPackage rec {
   pname = "diff_cover";
-  version = "10.2.0";
+  version = "10.4.1";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-Yb+DAl8QUQx272pYIGgM9hubl06Pgd5wxXrJJvpjhyo=";
+    hash = "sha256-DsVmlVye59ovbMSPoW+sf5etH8TlCoh/+5z+XrHoMd8=";
   };
 
   build-system = [ poetry-core ];
