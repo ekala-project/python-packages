@@ -4,9 +4,11 @@
   fetchFromGitHub,
 
   # build-system
+  cython,
   meson-python,
   meson,
   pkg-config,
+  versioneer,
   wheel,
 
   # propagates
@@ -54,10 +56,12 @@ buildPythonPackage rec {
   '';
 
   build-system = [
+    cython
     meson-python
     meson
     numpy
     pkg-config
+    versioneer
     wheel
   ];
 
