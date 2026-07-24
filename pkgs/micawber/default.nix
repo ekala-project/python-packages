@@ -9,12 +9,12 @@
 
 buildPythonPackage rec {
   pname = "micawber";
-  version = "0.6.2";
+  version = "0.7.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-zATBml4Os2FbjNldWu/a1c3k9SphwS1FBxcn3+Ext2A=";
+    hash = "sha256-q5xZx1ac/Eh902fcTtoT45S6UhbhnQLxhxrFbQoaGUQ=";
   };
 
   build-system = [ setuptools ];
