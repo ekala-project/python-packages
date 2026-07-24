@@ -7,12 +7,12 @@
 
 buildPythonPackage rec {
   pname = "korean_lunar_calendar";
-  version = "0.3.1";
+  version = "0.4.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-6yxIUSSgYQFpJr3qbYnv35uf2/FttViVts8eW+wXuFc=";
+    hash = "sha256-vlbye8BZT9u997vgD1BKn5KaMeMRvX2buTVhtkWvrec=";
   };
 
   build-system = [ setuptools ];
