@@ -1,0 +1,27 @@
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  setuptools,
+}:
+
+buildPythonPackage rec {
+  pname = "hyperframe";
+  version = "6.1.0";
+  pyproject = true;
+
+  src = fetchPypi {
+    inherit pname version;
+    hash = "sha256-9jCQigCFSnreq9Y4K0OSOkxM1Lgh/LUn5queFTgqOwg=";
+  };
+
+  build-system = [ setuptools ];
+  pythonImportsCheck = [ "hyperframe" ];
+
+  meta = {
+    description = "HTTP/2 framing layer for Python";
+    homepage = "https://github.com/python-hyper/hyperframe/";
+    license = lib.licenses.mit;
+    maintainers = [ ];
+  };
+}
