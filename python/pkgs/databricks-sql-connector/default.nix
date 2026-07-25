@@ -1,0 +1,66 @@
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  alembic,
+  lz4,
+  numpy,
+  oauthlib,
+  openpyxl,
+  pandas,
+  poetry-core,
+  pyarrow,
+  pybreaker,
+  pyjwt,
+  sqlalchemy,
+  thrift,
+  requests,
+  urllib3,
+}:
+
+buildPythonPackage rec {
+  pname = "databricks-sql-connector";
+  version = "4.2.4";
+  pyproject = true;
+
+  src = fetchFromGitHub {
+    owner = "databricks";
+    repo = "databricks-sql-python";
+    tag = "v${version}";
+    hash = "sha256-QoauhA2Zx2UvlCuKe9mxaOFJKpglVHQmPVVS56np4A0=";
+  };
+
+  pythonRelaxDeps = [
+    "pandas"
+    "pyarrow"
+    "thrift"
+  ];
+
+  build-system = [
+    poetry-core
+  ];
+
+  dependencies = [
+    alembic
+    lz4
+    numpy
+    oauthlib
+    openpyxl
+    pandas
+    pyarrow
+    pybreaker
+    pyjwt
+    sqlalchemy
+    thrift
+    requests
+    urllib3
+  ];
+  pythonImportsCheck = [ "databricks" ];
+
+  meta = {
+    description = "Databricks SQL Connector for Python";
+    homepage = "https://docs.databricks.com/dev-tools/python-sql-connector.html";
+    license = lib.licenses.asl20;
+    maintainers = [ ];
+  };
+}
