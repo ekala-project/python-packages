@@ -39,19 +39,7 @@
   pyhamcrest,
   hypothesis,
 
-  # for passthru.tests
-  cassandra-driver,
   httpx,
-  klein,
-  magic-wormhole,
-  scrapy,
-  treq,
-  txaio,
-  txamqp,
-  txrequests,
-  txtorcon,
-  thrift,
-  nixosTests,
 }:
 
 buildPythonPackage rec {
