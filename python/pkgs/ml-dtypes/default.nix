@@ -1,0 +1,55 @@
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  fetchpatch2,
+
+  # build-system
+  setuptools,
+
+  # dependencies
+  numpy,
+}:
+
+buildPythonPackage rec {
+  pname = "ml-dtypes";
+  version = "0.5.4";
+  pyproject = true;
+
+  src = fetchFromGitHub {
+    owner = "jax-ml";
+    repo = "ml_dtypes";
+    tag = "v${version}";
+    hash = "sha256-vGCDLs7Te/3fBZmCQVp2Zm5NnP7K/KCkTod0oFVVKN4=";
+    # Since this upstream patch (https://github.com/jax-ml/ml_dtypes/commit/1bfd097e794413b0d465fa34f2eff0f3828ff521),
+    # the attempts to use the nixpkgs packaged eigen dependency have failed.
+    # Hence, we rely on the bundled eigen library.
+    fetchSubmodules = true;
+  };
+
+  patches = [
+    # Fix tests for numpy 2.4.3, which changed the way testing assertions
+    # handle behaviors with NaN equivalence on the custom numeric types.
+    (fetchpatch2 {
+      url = "https://github.com/jax-ml/ml_dtypes/commit/04c4dc8b23720d9d92f3cc849ffc387d5798db84.patch?full_index=1";
+      hash = "sha256-jqqiDYcHq58JxSqtHfXcNWFbMFhvufqafDPHmORe6F0=";
+    })
+  ];
+
+  postPatch = ''
+    substituteInPlace pyproject.toml \
+      --replace-fail "setuptools~=" "setuptools>="
+  '';
+
+  build-system = [ setuptools ];
+
+  dependencies = [ numpy ];
+  pythonImportsCheck = [ "ml_dtypes" ];
+
+  meta = {
+    description = "Stand-alone implementation of several NumPy dtype extensions used in machine learning libraries";
+    homepage = "https://github.com/jax-ml/ml_dtypes";
+    license = lib.licenses.asl20;
+    maintainers = [ ];
+  };
+}
