@@ -14,4 +14,5 @@ final: prev: {
   shortuuid = with final.python3Packages; toPythonApplication shortuuid;
   tte = with final.python3Packages; toPythonApplication terminaltexteffects;
   wakeonlan = with final.python3Packages; toPythonApplication wakeonlan;
+  yarn-berry_3 = final.yarn-berry.override { berryVersion = 3; };
 }
