@@ -1,0 +1,53 @@
+{
+  stdenv,
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+
+  # build-system
+  setuptools,
+
+  # tests
+  objgraph,
+  python,
+}:
+
+let
+  greenlet = buildPythonPackage rec {
+    pname = "greenlet";
+    version = "3.5.3";
+    pyproject = true;
+
+    src = fetchPypi {
+      inherit pname version;
+      hash = "sha256-ph78AY/T6zF+7KMaupDunn8m8iiEp5tsbscVv3G7YvE=";
+    };
+
+    build-system = [ setuptools ];
+
+    # tests in passthru, infinite recursion via objgraph/graphviz
+    doCheck = false;
+    # https://github.com/python-greenlet/greenlet/issues/395
+    env.NIX_CFLAGS_COMPILE = lib.optionalString (
+      stdenv.hostPlatform.isPower64 || stdenv.hostPlatform.isLoongArch64
+    ) "-fomit-frame-pointer";
+    unittestFlagsArray = [ "greenlet.tests" ];
+
+    postCheck = ''
+      popd
+    '';
+
+    passthru.tests.pytest = greenlet.overridePythonAttrs (_: {
+    });
+
+    meta = {
+      homepage = "https://github.com/python-greenlet/greenlet";
+      description = "Module for lightweight in-process concurrent programming";
+      license = with lib.licenses; [
+        psfl # src/greenlet/slp_platformselect.h & files in src/greenlet/platform/ directory
+        mit
+      ];
+    };
+  };
+in
+greenlet
