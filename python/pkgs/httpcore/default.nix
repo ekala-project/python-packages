@@ -1,0 +1,49 @@
+{
+  lib,
+  anyio,
+  buildPythonPackage,
+  certifi,
+  fetchFromGitHub,
+  hatchling,
+  hatch-fancy-pypi-readme,
+  h11,
+  h2,
+  socksio,
+  trio,
+}:
+
+buildPythonPackage rec {
+  pname = "httpcore";
+  version = "1.0.9";
+  pyproject = true;
+
+  src = fetchFromGitHub {
+    owner = "encode";
+    repo = "httpcore";
+    tag = version;
+    hash = "sha256-YtAbx0iXN7u8pMBXQBUydvAH6ilH+veklvxSh5EVFXo=";
+  };
+
+  build-system = [
+    hatchling
+    hatch-fancy-pypi-readme
+  ];
+
+  dependencies = [
+    certifi
+    h11
+  ];
+
+  optional-dependencies = {
+    asyncio = [ anyio ];
+    http2 = [ h2 ];
+    socks = [ socksio ];
+    trio = [ trio ];
+  };
+  meta = {
+    description = "Minimal low-level HTTP client";
+    homepage = "https://github.com/encode/httpcore";
+    license = lib.licenses.bsd3;
+    maintainers = [ ];
+  };
+}
