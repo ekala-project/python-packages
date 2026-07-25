@@ -3,7 +3,7 @@
   buildPythonPackage,
   fetchFromGitHub,
   replaceVars,
-  pkgs,
+  marisa,
   cython,
   setuptools,
 }:
@@ -22,7 +22,7 @@ buildPythonPackage rec {
 
   patches = [
     (replaceVars ./unvendor-marisa.patch {
-      marisa = lib.getDev pkgs.marisa;
+      marisa = lib.getDev marisa;
     })
   ];
 
@@ -32,7 +32,7 @@ buildPythonPackage rec {
   ];
 
   buildInputs = [
-    pkgs.marisa
+    marisa
   ];
 
   pythonImportsCheck = [ "marisa_trie" ];
