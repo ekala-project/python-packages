@@ -78,6 +78,13 @@ in
     '';
   });
 
+  opencv4 = final.toPythonModule (
+    final.pkgs.opencv4.override {
+      enablePython = true;
+      pythonPackages = final;
+    }
+  );
+
   sphinxcontrib-applehelp = fixSphinxcontrib prev.sphinxcontrib-applehelp;
   sphinxcontrib-devhelp = fixSphinxcontrib prev.sphinxcontrib-devhelp;
   sphinxcontrib-htmlhelp = fixSphinxcontrib prev.sphinxcontrib-htmlhelp;
