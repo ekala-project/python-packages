@@ -8,6 +8,7 @@ final: prev: {
   eradicate = with final.python3Packages; toPythonApplication eradicate;
   fastep = with final.python3Packages; toPythonApplication fastentrypoints;
   huey = with final.python3Packages; toPythonApplication huey;
+  libsoxr = final.soxr;
   libmpg123 = final.mpg123.override {
     libOnly = true;
     withConplay = false;
