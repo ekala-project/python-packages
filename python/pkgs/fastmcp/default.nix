@@ -8,39 +8,12 @@
   uv-dynamic-versioning,
 
   # dependencies
-  email-validator,
-  anthropic,
-  authlib,
-  griffelib,
-  azure-identity,
-  cyclopts,
-  exceptiongroup,
-  httpx,
-  jsonref,
-  jsonschema-path,
-  mcp,
-  google-genai,
-  openai,
-  openapi-pydantic,
-  opentelemetry-api,
-  packaging,
-  platformdirs,
-  py-key-value-aio,
-  pydantic,
-  pyjwt,
-  pyperclip,
-  python-dotenv,
-  pyyaml,
-  rich,
-  uncalled-for,
-  uvicorn,
-  watchfiles,
-  websockets,
+  fastmcp-slim,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "fastmcp";
-  version = "3.2.4";
+  version = "3.3.1";
   pyproject = true;
   __structuredAttrs = true;
 
@@ -48,8 +21,13 @@ buildPythonPackage (finalAttrs: {
     owner = "PrefectHQ";
     repo = "fastmcp";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-rJpxPvqAaa6/vXhG1+R9dI32cY/54e6I+F/zyBVoqBM=";
+    hash = "sha256-1W5NbWIULxFXGSozZEeITcPt1EbY6IsJLQdyevcn9BI=";
   };
+
+  postPatch = ''
+    substituteInPlace pyproject.toml \
+      --replace-fail "timeout = 5" "timeout = 50"
+  '';
 
   build-system = [
     hatchling
@@ -57,42 +35,19 @@ buildPythonPackage (finalAttrs: {
   ];
 
   dependencies = [
-    authlib
-    cyclopts
-    email-validator
-    exceptiongroup
-    griffelib
-    httpx
-    jsonref
-    jsonschema-path
-    mcp
-    openapi-pydantic
-    opentelemetry-api
-    packaging
-    platformdirs
-    py-key-value-aio
-    pydantic
-    pyperclip
-    python-dotenv
-    pyyaml
-    rich
-    uncalled-for
-    uvicorn
-    watchfiles
-    websockets
+    fastmcp-slim
   ]
-  ++ py-key-value-aio.optional-dependencies.filetree
-  ++ py-key-value-aio.optional-dependencies.keyring
-  ++ py-key-value-aio.optional-dependencies.memory;
+  ++ fastmcp-slim.optional-dependencies.client
+  ++ fastmcp-slim.optional-dependencies.server;
 
   optional-dependencies = {
-    anthropic = [ anthropic ];
-    azure = [
-      azure-identity
-      pyjwt
-    ];
-    gemini = [ google-genai ];
-    openai = [ openai ];
+    anthropic = fastmcp-slim.optional-dependencies.anthropic;
+    apps = fastmcp-slim.optional-dependencies.apps;
+    azure = fastmcp-slim.optional-dependencies.azure;
+    code-mode = fastmcp-slim.optional-dependencies.code-mode;
+    gemini = fastmcp-slim.optional-dependencies.gemini;
+    openai = fastmcp-slim.optional-dependencies.openai;
+    tasks = fastmcp-slim.optional-dependencies.tasks;
   };
 
   pythonImportsCheck = [ "fastmcp" ];
@@ -101,5 +56,6 @@ buildPythonPackage (finalAttrs: {
     description = "Fast, Pythonic way to build MCP servers and clients";
     homepage = "https://github.com/PrefectHQ/fastmcp";
     license = lib.licenses.asl20;
+    maintainers = [ ];
   };
 })
