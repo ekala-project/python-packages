@@ -1,13 +1,8 @@
 {
   lib,
   buildPythonPackage,
-  faker,
   fetchFromGitHub,
-  mock,
-  pytest-cov-stub,
-  python-memcached,
   setuptools,
-  zstd,
   stdenv,
 }:
 
