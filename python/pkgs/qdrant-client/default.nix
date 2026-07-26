@@ -1,0 +1,54 @@
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  grpcio,
+  grpcio-tools,
+  httpx,
+  numpy,
+  poetry-core,
+  portalocker,
+  pydantic,
+  urllib3,
+}:
+
+buildPythonPackage rec {
+  pname = "qdrant-client";
+  version = "1.18.0";
+  pyproject = true;
+
+  src = fetchFromGitHub {
+    owner = "qdrant";
+    repo = "qdrant-client";
+    tag = "v${version}";
+    hash = "sha256-ZBP1D67u+KZmBi614nuToauI+xhdH1PKD3g6xRfFQxk=";
+  };
+
+  build-system = [ poetry-core ];
+
+  pythonRelaxDeps = [
+    "portalocker"
+  ];
+
+  dependencies = [
+    grpcio
+    grpcio-tools
+    httpx
+    numpy
+    portalocker
+    pydantic
+    urllib3
+  ]
+  ++ httpx.optional-dependencies.http2;
+
+  pythonImportsCheck = [ "qdrant_client" ];
+
+  doCheck = false;
+
+  meta = {
+    description = "Python client for Qdrant vector search engine";
+    homepage = "https://github.com/qdrant/qdrant-client";
+    license = lib.licenses.mit;
+    maintainers = [ ];
+  };
+}
