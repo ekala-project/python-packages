@@ -1,0 +1,36 @@
+{ lib
+, buildPythonPackage
+, fetchFromGitHub
+, # build-system
+  setuptools
+,
+}:
+
+buildPythonPackage rec {
+  pname = "python-memcached";
+  version = "1.62";
+  pyproject = true;
+
+  src = fetchFromGitHub {
+    owner = "linsomniac";
+    repo = "python-memcached";
+    rev = version;
+    hash = "sha256-Qko4Qr9WofeklU0uRRrSPrT8YaBYMCy0GP+TF7YZHLI=";
+  };
+
+  postPatch = ''
+    substituteInPlace memcache.py \
+      --replace-fail '__version__ = "1.60"' '__version__ = "${version}"'
+  '';
+
+  build-system = [ setuptools ];
+
+  pythonImportsCheck = [ "memcache" ];
+
+  meta = {
+    description = "Pure python memcached client";
+    homepage = "https://github.com/linsomniac/python-memcached";
+    license = lib.licenses.psfl;
+    maintainers = [ ];
+  };
+}
