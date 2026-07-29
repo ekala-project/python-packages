@@ -1,0 +1,36 @@
+{
+  lib,
+  aiohttp,
+  buildPythonPackage,
+  fetchFromGitHub,
+  setuptools,
+}:
+
+buildPythonPackage (finalAttrs: {
+  pname = "ohme";
+  version = "1.9.1";
+  pyproject = true;
+
+  src = fetchFromGitHub {
+    owner = "dan-r";
+    repo = "ohmepy";
+    tag = "v${finalAttrs.version}";
+    hash = "sha256-MhFDwEu67Gnk9WJCrWKLs3KSk/KryC/QFEpdkZqbgT4=";
+  };
+
+  build-system = [ setuptools ];
+
+  dependencies = [ aiohttp ];
+
+  pythonImportsCheck = [ "ohme" ];
+
+  # Module has no tests
+  doCheck = false;
+
+  meta = {
+    description = "Module for interacting with the Ohme API";
+    homepage = "https://github.com/dan-r/ohmepy";
+    license = lib.licenses.mit;
+    maintainers = [ ];
+  };
+})
