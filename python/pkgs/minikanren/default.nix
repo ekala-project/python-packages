@@ -14,10 +14,6 @@
   multipledispatch,
   toolz,
   typing-extensions,
-
-  # tests
-  py,
-  pytest-html,
 }:
 
 buildPythonPackage (finalAttrs: {

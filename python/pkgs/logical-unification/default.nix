@@ -5,9 +5,6 @@
   fetchpatch,
   toolz,
   multipledispatch,
-  py,
-  pytest-html,
-  pytest-benchmark,
   setuptools,
   setuptools-scm,
 }:
