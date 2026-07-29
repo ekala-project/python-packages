@@ -1,0 +1,40 @@
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  pytestCheckHook,
+  setuptools,
+  setuptools-scm,
+  typing-extensions,
+}:
+
+buildPythonPackage (finalAttrs: {
+  pname = "nocasedict";
+  version = "2.2.0";
+  pyproject = true;
+
+  src = fetchFromGitHub {
+    owner = "pywbem";
+    repo = "nocasedict";
+    tag = finalAttrs.version;
+    hash = "sha256-e3APYlmeoby0CGoEh4g6ZK27DwWi4EZdpwsRORxly+w=";
+  };
+
+  build-system = [
+    setuptools
+    setuptools-scm
+  ];
+
+  dependencies = [ typing-extensions ];
+
+  nativeCheckInputs = [ pytestCheckHook ];
+
+  pythonImportsCheck = [ "nocasedict" ];
+
+  meta = {
+    description = "Case-insensitive ordered dictionary for Python";
+    homepage = "https://github.com/pywbem/nocasedict";
+    license = lib.licenses.lgpl21Plus;
+    maintainers = [ ];
+  };
+})
