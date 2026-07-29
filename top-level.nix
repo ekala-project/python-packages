@@ -20,4 +20,5 @@ final: prev: {
   tte = with final.python3Packages; toPythonApplication terminaltexteffects;
   wakeonlan = with final.python3Packages; toPythonApplication wakeonlan;
   yarn-berry_3 = final.yarn-berry.override { berryVersion = 3; };
+  yarn-berry_4 = final.yarn-berry.override { berryVersion = 4; };
 }
