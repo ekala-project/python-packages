@@ -1,0 +1,62 @@
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  hatch-vcs,
+  hatchling,
+  interface-meta,
+  narwhals,
+  numpy,
+  pandas,
+  scipy,
+  typing-extensions,
+  wrapt,
+  pyarrow,
+  polars,
+  sympy,
+}:
+
+buildPythonPackage rec {
+  pname = "formulaic";
+  version = "1.2.2";
+  pyproject = true;
+
+  src = fetchFromGitHub {
+    owner = "matthewwardrop";
+    repo = "formulaic";
+    tag = "v${version}";
+    hash = "sha256-C4IUuyxBbW2DUxF4at8/736ZMmVZrFRRp+RxrJfmLkY=";
+  };
+
+  # project uses a version-file that is not present in tagged releases
+  env.SETUPTOOLS_SCM_PRETEND_VERSION = version;
+
+  build-system = [
+    hatchling
+    hatch-vcs
+  ];
+
+  dependencies = [
+    narwhals
+    numpy
+    pandas
+    scipy
+    wrapt
+    typing-extensions
+    interface-meta
+  ];
+
+  optional-dependencies = {
+    arrow = [ pyarrow ];
+    polars = [ polars ];
+    calculus = [ sympy ];
+  };
+  pythonImportsCheck = [ "formulaic" ];
+
+  meta = {
+    description = "High-performance implementation of Wilkinson formulas";
+    homepage = "https://matthewwardrop.github.io/formulaic/";
+    license = lib.licenses.mit;
+    maintainers = [ ];
+  };
+}

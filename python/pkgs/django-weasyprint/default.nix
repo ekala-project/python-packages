@@ -1,0 +1,49 @@
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  setuptools,
+  django,
+  weasyprint,
+  pytestCheckHook,
+}:
+
+buildPythonPackage rec {
+  pname = "django-weasyprint";
+  version = "2.5.0";
+  pyproject = true;
+
+  src = fetchFromGitHub {
+    owner = "fdemmer";
+    repo = "django-weasyprint";
+    tag = "v${version}";
+    hash = "sha256-EwTEBIqAZGmtSXkSLZgNPCKA98IrymsUEaCHc1uQ2XE=";
+  };
+
+  build-system = [
+    setuptools
+  ];
+
+  dependencies = [
+    django
+    weasyprint
+  ];
+
+  nativeCheckInputs = [
+    pytestCheckHook
+  ];
+
+  disabledTests = [
+    # Fails with weasyprint >= 68 (tries to open /static/css/print.css in test env)
+    "test_get_pdf_download_and_options"
+  ];
+
+  pythonImportsCheck = [ "django_weasyprint" ];
+
+  meta = {
+    description = "Django class-based view generating PDF resposes using WeasyPrint";
+    homepage = "https://github.com/fdemmer/django-weasyprint";
+    license = lib.licenses.asl20;
+    maintainers = [ ];
+  };
+}

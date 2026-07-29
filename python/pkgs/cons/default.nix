@@ -3,8 +3,6 @@
   buildPythonPackage,
   fetchFromGitHub,
   logical-unification,
-  py,
-  pytest-html,
   setuptools,
   setuptools-scm,
 }:

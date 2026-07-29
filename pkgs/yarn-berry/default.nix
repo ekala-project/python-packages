@@ -1,0 +1,64 @@
+{
+  fetchFromGitHub,
+  lib,
+  nodejs,
+  stdenv,
+  yarn,
+  callPackage,
+  berryVersion ? 3,
+}:
+
+let
+  version_4 = "4.14.1";
+  version_3 = "3.8.7";
+  hash_4 = "sha256-0UnU5jRSUFMw+WowvXqYqaaN1ZbZAdLLJ6LPyuK6iCc=";
+  hash_3 = "sha256-vRrk+Fs/7dZha3h7yI5NpMfd1xezesnigpFgTRCACZo=";
+in
+
+stdenv.mkDerivation (finalAttrs: {
+  pname = "yarn-berry";
+  version = if berryVersion == 4 then version_4 else version_3;
+
+  src = fetchFromGitHub {
+    owner = "yarnpkg";
+    repo = "berry";
+    tag = "@yarnpkg/cli/${finalAttrs.version}";
+    hash = if berryVersion == 4 then hash_4 else hash_3;
+  };
+
+  buildInputs = [
+    nodejs
+  ];
+
+  nativeBuildInputs = [
+    nodejs
+    yarn
+  ];
+
+  strictDeps = true;
+
+  dontConfigure = true;
+
+  buildPhase = ''
+    runHook preBuild
+    yarn workspace @yarnpkg/cli build:cli
+    runHook postBuild
+  '';
+
+  installPhase = ''
+    runHook preInstall
+    install -Dm 755 ./packages/yarnpkg-cli/bundles/yarn.js "$out/bin/yarn"
+    runHook postInstall
+  '';
+
+  passthru = (callPackage ./fetcher { yarn-berry = finalAttrs; });
+
+  meta = {
+    homepage = "https://yarnpkg.com/";
+    description = "Fast, reliable, and secure dependency management";
+    license = lib.licenses.bsd2;
+    maintainers = [ ];
+    platforms = lib.platforms.unix;
+    mainProgram = "yarn";
+  };
+})

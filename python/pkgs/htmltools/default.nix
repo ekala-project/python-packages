@@ -1,0 +1,46 @@
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  setuptools,
+  packaging,
+  typing-extensions,
+  pytestCheckHook,
+  syrupy,
+}:
+
+buildPythonPackage rec {
+  pname = "htmltools";
+  version = "0.6.1";
+  pyproject = true;
+
+  src = fetchFromGitHub {
+    owner = "posit-dev";
+    repo = "py-htmltools";
+    tag = "v${version}";
+    hash = "sha256-psrTSy4NhhsZamB7lQDt+n6LUDiRcHD5+FFqTIIrnZc=";
+  };
+
+  build-system = [
+    setuptools
+  ];
+
+  dependencies = [
+    packaging
+    typing-extensions
+  ];
+
+  pythonImportsCheck = [ "htmltools" ];
+
+  nativeCheckInputs = [
+    pytestCheckHook
+    syrupy
+  ];
+
+  meta = {
+    description = "Tools for HTML generation and output";
+    homepage = "https://github.com/posit-dev/py-htmltools";
+    license = lib.licenses.mit;
+    maintainers = [ ];
+  };
+}

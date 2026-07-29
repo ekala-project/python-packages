@@ -1,0 +1,38 @@
+{
+  lib,
+  buildPythonPackage,
+  scikit-build-core,
+  pybind11,
+  numpy,
+  cmake,
+  ninja,
+  pathspec,
+  highs,
+}:
+buildPythonPackage {
+  pname = "highspy";
+  version = highs.version;
+  pyproject = true;
+
+  inherit (highs) src;
+
+  build-system = [
+    cmake
+    ninja
+    pathspec
+    scikit-build-core
+    pybind11
+  ];
+
+  dontUseCmakeConfigure = true;
+
+  dependencies = [ numpy ];
+
+  pythonImportsCheck = [ "highspy" ];
+  meta = {
+    description = "Linear optimization software";
+    homepage = "https://github.com/ERGO-Code/HiGHS";
+    license = lib.licenses.mit;
+    maintainers = [ ];
+  };
+}

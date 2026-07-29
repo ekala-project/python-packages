@@ -1,0 +1,40 @@
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  msgpack,
+  numpy,
+  unittestCheckHook,
+}:
+
+buildPythonPackage rec {
+  pname = "mmtf-python";
+  version = "1.1.3";
+  format = "setuptools";
+
+  src = fetchPypi {
+    inherit pname version;
+    hash = "sha256-EqAv4bcTHworjORbRvHgzdKLmBj+RJlVTCaISYfqDDI=";
+  };
+
+  propagatedBuildInputs = [
+    msgpack
+    numpy
+  ];
+
+  nativeCheckInputs = [ unittestCheckHook ];
+
+  unittestFlagsArray = [
+    "-s mmtf/tests"
+    "-p \"*_tests.py\""
+  ];
+
+  pythonImportsCheck = [ "mmtf" ];
+
+  meta = {
+    description = "Python implementation of the MMTF API, decoder and encoder";
+    homepage = "https://github.com/rcsb/mmtf-python";
+    license = lib.licenses.asl20;
+    maintainers = [ ];
+  };
+}

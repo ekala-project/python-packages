@@ -11,12 +11,6 @@
   langchain-core,
   pydantic,
 
-  # tests
-  blockbuster,
-  langchain,
-  langchain-tests,
-  pytest-asyncio,
-  gitUpdater,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -49,18 +43,12 @@ buildPythonPackage (finalAttrs: {
   passthru = {
     # python updater script sets the wrong tag
     skipBulkUpdate = true;
-    updateScript = gitUpdater {
-      rev-prefix = "langchain-anthropic==";
-      ignoredVersions = "a|b|dev|rc";
-    };
   };
 
   meta = {
     description = "Build LangChain applications with Anthropic";
     homepage = "https://github.com/langchain-ai/langchain/tree/master/libs/partners/anthropic";
     license = lib.licenses.mit;
-    maintainers = [
-      lib.maintainers.sarahec
-    ];
+    maintainers = [ ];
   };
 })

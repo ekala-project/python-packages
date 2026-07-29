@@ -1,0 +1,45 @@
+{
+  lib,
+  aiohttp,
+  buildPythonPackage,
+  fetchFromGitHub,
+  mashumaro,
+  poetry-core,
+  pytest-asyncio,
+  pytestCheckHook,
+}:
+
+buildPythonPackage (finalAttrs: {
+  pname = "huum";
+  version = "0.8.3";
+  pyproject = true;
+
+  src = fetchFromGitHub {
+    owner = "frwickst";
+    repo = "pyhuum";
+    tag = finalAttrs.version;
+    hash = "sha256-f3ijcH9eou1upzBfvXNzrswFVoegSx81JxtlYVSnS6Q=";
+  };
+
+  build-system = [ poetry-core ];
+
+  dependencies = [
+    aiohttp
+    mashumaro
+  ]
+  ++ aiohttp.optional-dependencies.speedups;
+
+  nativeCheckInputs = [
+    pytest-asyncio
+    pytestCheckHook
+  ];
+
+  pythonImportsCheck = [ "huum" ];
+
+  meta = {
+    description = "Library for Huum saunas";
+    homepage = "https://github.com/frwickst/pyhuum";
+    license = lib.licenses.mit;
+    maintainers = [ ];
+  };
+})

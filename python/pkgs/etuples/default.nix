@@ -4,8 +4,6 @@
   fetchFromGitHub,
   cons,
   multipledispatch,
-  py,
-  pytest-html,
   setuptools,
   setuptools-scm,
 }:

@@ -9,14 +9,8 @@
   tzlocal,
   hijridate,
   convertdate,
-  fasttext,
   numpy,
   langdetect,
-  parameterized,
-  gitpython,
-  parsel,
-  requests,
-  ruamel-yaml,
 }:
 
 buildPythonPackage rec {
@@ -45,10 +39,6 @@ buildPythonPackage rec {
     calendars = [
       hijridate
       convertdate
-    ];
-    fasttext = [
-      fasttext
-      numpy
     ];
     langdetect = [ langdetect ];
   };

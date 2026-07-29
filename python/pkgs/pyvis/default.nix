@@ -1,0 +1,46 @@
+{
+  lib,
+  fetchFromGitHub,
+  buildPythonPackage,
+  setuptools,
+  networkx,
+  jinja2,
+  ipython,
+  jsonpickle,
+}:
+
+buildPythonPackage rec {
+  pname = "pyvis";
+  version = "0.3.2";
+  pyproject = true;
+
+  src = fetchFromGitHub {
+    owner = "WestHealth";
+    repo = "pyvis";
+    tag = "v${version}";
+    hash = "sha256-eo9Mk2c0hrBarCrzwmkXha3Qt4Bl1qR7Lhl9EkUx96E=";
+  };
+
+  postPatch = ''
+    substituteInPlace pyvis/_version.py \
+      --replace-fail "__version__ = '0.2.0'" "__version__ = '${version}'"
+  '';
+
+  build-system = [ setuptools ];
+
+  dependencies = [
+    jinja2
+    networkx
+    ipython
+    jsonpickle
+  ];
+
+  pythonImportsCheck = [ "pyvis" ];
+
+  meta = {
+    homepage = "https://github.com/WestHealth/pyvis";
+    description = "Python package for creating and visualizing interactive network graphs";
+    license = lib.licenses.bsd3;
+    maintainers = [ ];
+  };
+}

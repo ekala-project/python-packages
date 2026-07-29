@@ -1,0 +1,41 @@
+{
+  lib,
+  aiohttp,
+  buildPythonPackage,
+  fetchFromGitHub,
+  pytestCheckHook,
+  setuptools,
+}:
+
+buildPythonPackage rec {
+  pname = "aiopvapi";
+  version = "3.3.0";
+  pyproject = true;
+
+  src = fetchFromGitHub {
+    owner = "sander76";
+    repo = "aio-powerview-api";
+    tag = "v${version}";
+    hash = "sha256-yystaH2HRsJoYh2aTpOBA7DLiC2xwpBUccHwmJ0FlaY=";
+  };
+
+  patches = [
+    # https://github.com/sander76/aio-powerview-api/pull/46
+    ./fix-tests.patch
+  ];
+
+  build-system = [ setuptools ];
+
+  dependencies = [ aiohttp ];
+
+  nativeCheckInputs = [ pytestCheckHook ];
+
+  pythonImportsCheck = [ "aiopvapi" ];
+
+  meta = {
+    description = "Python API for the PowerView API";
+    homepage = "https://github.com/sander76/aio-powerview-api";
+    license = lib.licenses.bsd3;
+    maintainers = [ ];
+  };
+}

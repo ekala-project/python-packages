@@ -1,0 +1,33 @@
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  pytestCheckHook,
+  setuptools,
+}:
+
+buildPythonPackage rec {
+  pname = "dncil";
+  version = "1.0.2";
+  pyproject = true;
+
+  src = fetchFromGitHub {
+    owner = "mandiant";
+    repo = "dncil";
+    tag = "v${version}";
+    hash = "sha256-bndkiXkIYTd071J+mgkmJmA+9J5yJ+9/oDfAypN7wYo=";
+  };
+
+  build-system = [ setuptools ];
+
+  nativeCheckInputs = [ pytestCheckHook ];
+
+  pythonImportsCheck = [ "dncil" ];
+
+  meta = {
+    description = "Module to disassemble Common Intermediate Language (CIL) instructions";
+    homepage = "https://github.com/mandiant/dncil";
+    license = lib.licenses.asl20;
+    maintainers = [ ];
+  };
+}
