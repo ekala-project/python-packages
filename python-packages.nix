@@ -16,6 +16,9 @@ let
 in
 {
 
+  # arro3 is a compound expression returning multiple sub-packages
+  inherit (prev.arro3) arro3-core arro3-compute arro3-io;
+
   # The upstream patch for taskflow 4.1.0 support doesn't apply cleanly
   # against RapidFuzz 3.14.5 since the source already has Taskflow
   # version-finding logic. Override to remove the patch and apply a
