@@ -1,0 +1,42 @@
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  setuptools,
+  asyncinotify,
+  pytest-asyncio,
+  pytest-cov-stub,
+  pytestCheckHook,
+}:
+
+buildPythonPackage rec {
+  pname = "aiousbwatcher";
+  version = "1.1.2";
+  pyproject = true;
+
+  src = fetchFromGitHub {
+    owner = "Bluetooth-Devices";
+    repo = "aiousbwatcher";
+    tag = "v${version}";
+    hash = "sha256-kCuY4+pdfnO8BuYSQjZEyGxSaCwVYXRHWYhnbzxlDzM=";
+  };
+
+  build-system = [ setuptools ];
+
+  dependencies = [ asyncinotify ];
+
+  nativeCheckInputs = [
+    pytest-asyncio
+    pytest-cov-stub
+    pytestCheckHook
+  ];
+
+  pythonImportsCheck = [ "aiousbwatcher" ];
+
+  meta = {
+    description = "Watch for USB devices to be plugged and unplugged";
+    homepage = "https://github.com/Bluetooth-Devices/aiousbwatcher";
+    license = lib.licenses.mit;
+    maintainers = [ ];
+  };
+}
