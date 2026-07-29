@@ -1,0 +1,69 @@
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+
+  # build-system
+  hatchling,
+
+  # dependencies
+  langchain-core,
+  langchain-openai,
+
+  # testing
+  langchain-tests,
+  pytestCheckHook,
+  pytest-asyncio,
+  syrupy,
+
+  # passthru
+  gitUpdater,
+}:
+
+buildPythonPackage rec {
+  pname = "langchain-deepseek";
+  version = "1.1.0";
+  pyproject = true;
+
+  src = fetchFromGitHub {
+    owner = "langchain-ai";
+    repo = "langchain";
+    tag = "langchain-deepseek==${version}";
+    hash = "sha256-IHWTArtJB/CLIk0tKirRxUPcdJiqf1NDXn5Y+HBYv/g=";
+  };
+
+  sourceRoot = "${src.name}/libs/partners/deepseek";
+
+  build-system = [
+    hatchling
+  ];
+
+  pythonRelaxDeps = [
+    # Each component release requests the exact latest core.
+    # That prevents us from updating individual components.
+    "langchain-core"
+  ];
+
+  dependencies = [
+    langchain-core
+    langchain-openai
+  ];
+
+  nativeCheckInputs = [
+    langchain-tests
+    pytestCheckHook
+    pytest-asyncio
+    syrupy
+  ];
+
+  enabledTestPaths = [ "tests/unit_tests" ];
+
+  pythonImportsCheck = [ "langchain_deepseek" ];
+
+  meta = {
+    description = "Integration package connecting DeepSeek and LangChain";
+    homepage = "https://github.com/langchain-ai/langchain/tree/master/libs/partners/deepseek";
+    license = lib.licenses.mit;
+    maintainers = [ ];
+  };
+}
