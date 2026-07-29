@@ -1,0 +1,71 @@
+{
+  lib,
+  fetchFromGitHub,
+  buildPythonPackage,
+
+  # build-system
+  setuptools,
+  setuptools-scm,
+
+  # dependencies
+  numba,
+  numpy,
+
+  # tests
+  pytestCheckHook,
+  bottleneck,
+  hypothesis,
+  pandas,
+  pytest-benchmark,
+  tabulate,
+}:
+
+buildPythonPackage rec {
+  version = "0.9.4";
+  pname = "numbagg";
+  pyproject = true;
+
+  src = fetchFromGitHub {
+    owner = "numbagg";
+    repo = "numbagg";
+    tag = "v${version}";
+    hash = "sha256-JYgjeExpL+rbiaFPO9IHsm4Qh6GTLdTWB5dO3zIIPbs=";
+  };
+
+  build-system = [
+    setuptools
+    setuptools-scm
+  ];
+
+  dependencies = [
+    numpy
+    numba
+  ];
+
+  pythonImportsCheck = [ "numbagg" ];
+
+  nativeCheckInputs = [
+    pytestCheckHook
+
+    pandas
+    bottleneck
+    hypothesis
+    tabulate
+    pytest-benchmark
+  ];
+
+  pytestFlags = [ "--benchmark-disable" ];
+
+  disabledTests = [
+    # Uses outdated pandas API as an oracle
+    "nanargmin"
+    "nanargmax"
+  ];
+
+  meta = {
+    description = "Fast N-dimensional aggregation functions with Numba";
+    homepage = "https://github.com/numbagg/numbagg";
+    license = lib.licenses.bsd3;
+    maintainers = [ ];
+  };
+}
