@@ -1,0 +1,50 @@
+{
+  lib,
+  buildPythonPackage,
+  colorama,
+  fetchFromGitHub,
+  packaging,
+  poetry-core,
+  pydantic,
+  redis,
+  structlog,
+}:
+
+buildPythonPackage rec {
+  pname = "diffsync";
+  version = "2.2.0";
+  pyproject = true;
+
+  src = fetchFromGitHub {
+    owner = "networktocode";
+    repo = "diffsync";
+    tag = "v${version}";
+    hash = "sha256-NkISo4AmyxA0pQEkzajq+hpxoMefgSOHQTy70kOjDl8=";
+  };
+
+  nativeBuildInputs = [
+    poetry-core
+  ];
+
+  pythonRelaxDeps = [
+    "packaging"
+    "structlog"
+  ];
+
+  propagatedBuildInputs = [
+    colorama
+    packaging
+    pydantic
+    redis
+    structlog
+  ];
+
+  pythonImportsCheck = [ "diffsync" ];
+
+  meta = {
+    description = "Utility library for comparing and synchronizing different datasets";
+    homepage = "https://github.com/networktocode/diffsync";
+    license = lib.licenses.asl20;
+    maintainers = [ ];
+  };
+}
