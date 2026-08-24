@@ -1,10 +1,10 @@
-{ buildPythonPackage
-, fetchPypi
-, defcon
-, fontmath
-, setuptools
-, unicodedata2
-,
+{
+  buildPythonPackage,
+  fetchPypi,
+  defcon,
+  fontmath,
+  setuptools,
+  unicodedata2,
 }:
 
 buildPythonPackage (finalAttrs: {

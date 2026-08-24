@@ -1,11 +1,11 @@
-{ lib
-, buildPythonPackage
-, fetchPypi
-, astropy
-, requests
-, setuptools
-, setuptools-scm
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  astropy,
+  requests,
+  setuptools,
+  setuptools-scm,
 }:
 
 buildPythonPackage (finalAttrs: {

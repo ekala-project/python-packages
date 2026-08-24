@@ -1,12 +1,12 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, poetry-core
-, attrs
-, cattrs
-, lsprotocol
-, websockets
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  poetry-core,
+  attrs,
+  cattrs,
+  lsprotocol,
+  websockets,
 }:
 
 buildPythonPackage (finalAttrs: {

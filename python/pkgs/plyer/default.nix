@@ -1,11 +1,11 @@
-{ stdenv
-, lib
-, buildPythonPackage
-, fetchFromGitHub
-, fetchpatch
-, keyring
-, setuptools
-,
+{
+  stdenv,
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  fetchpatch,
+  keyring,
+  setuptools,
 }:
 
 buildPythonPackage rec {

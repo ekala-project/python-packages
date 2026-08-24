@@ -1,12 +1,12 @@
-{ buildPythonPackage
-, fetchFromGitHub
-, hatch-vcs
-, hatchling
-, icalendar
-, lib
-, pyicu
-, recurring-ical-events
-,
+{
+  buildPythonPackage,
+  fetchFromGitHub,
+  hatch-vcs,
+  hatchling,
+  icalendar,
+  lib,
+  pyicu,
+  recurring-ical-events,
 }:
 
 buildPythonPackage rec {

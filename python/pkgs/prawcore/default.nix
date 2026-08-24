@@ -1,9 +1,9 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, flit-core
-, requests
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  flit-core,
+  requests,
 }:
 
 buildPythonPackage (finalAttrs: {

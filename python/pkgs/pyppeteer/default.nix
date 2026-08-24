@@ -1,15 +1,15 @@
-{ lib
-, appdirs
-, buildPythonPackage
-, certifi
-, fetchFromGitHub
-, importlib-metadata
-, poetry-core
-, pyee
-, tqdm
-, urllib3
-, websockets
-,
+{
+  lib,
+  appdirs,
+  buildPythonPackage,
+  certifi,
+  fetchFromGitHub,
+  importlib-metadata,
+  poetry-core,
+  pyee,
+  tqdm,
+  urllib3,
+  websockets,
 }:
 
 buildPythonPackage rec {

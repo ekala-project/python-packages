@@ -1,12 +1,12 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, # build-system
-  hatchling
-, hatch-fancy-pypi-readme
-, # dependencies
-  lxml
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  # build-system
+  hatchling,
+  hatch-fancy-pypi-readme,
+  # dependencies
+  lxml,
 }:
 
 buildPythonPackage (finalAttrs: {

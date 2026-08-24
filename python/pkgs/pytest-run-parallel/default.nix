@@ -1,13 +1,13 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, # build-system
-  setuptools
-, # dependencies
-  pytest
-, # optional-dependencies
-  psutil
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  # build-system
+  setuptools,
+  # dependencies
+  pytest,
+  # optional-dependencies
+  psutil,
 }:
 
 buildPythonPackage (finalAttrs: {

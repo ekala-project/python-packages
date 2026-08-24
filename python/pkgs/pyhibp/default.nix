@@ -1,9 +1,9 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitLab
-, setuptools
-, requests
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitLab,
+  setuptools,
+  requests,
 }:
 
 buildPythonPackage (finalAttrs: {

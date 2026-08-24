@@ -1,15 +1,15 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, # build-system
-  hatch-fancy-pypi-readme
-, hatchling
-, # dependencies
-  awkward-cpp
-, fsspec
-, numpy
-, packaging
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  # build-system
+  hatch-fancy-pypi-readme,
+  hatchling,
+  # dependencies
+  awkward-cpp,
+  fsspec,
+  numpy,
+  packaging,
 }:
 
 buildPythonPackage (finalAttrs: {

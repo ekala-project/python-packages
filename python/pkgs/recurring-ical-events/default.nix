@@ -1,13 +1,13 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, hatch-vcs
-, hatchling
-, icalendar
-, python-dateutil
-, tzdata
-, x-wr-timezone
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  hatch-vcs,
+  hatchling,
+  icalendar,
+  python-dateutil,
+  tzdata,
+  x-wr-timezone,
 }:
 
 buildPythonPackage rec {

@@ -1,13 +1,13 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, # build-system
-  pbr
-, setuptools
-, # dependencies
-  inflection
-, tinycss2
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  # build-system
+  pbr,
+  setuptools,
+  # dependencies
+  inflection,
+  tinycss2,
 }:
 
 buildPythonPackage rec {

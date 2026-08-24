@@ -1,14 +1,14 @@
-{ lib
-, buildPythonPackage
-, docutils
-, fetchFromGitHub
-, markdown
-, pygments
-, python-markdown-math
-, pyyaml
-, setuptools
-, textile
-,
+{
+  lib,
+  buildPythonPackage,
+  docutils,
+  fetchFromGitHub,
+  markdown,
+  pygments,
+  python-markdown-math,
+  pyyaml,
+  setuptools,
+  textile,
 }:
 
 buildPythonPackage rec {

@@ -1,15 +1,15 @@
-{ lib
-, buildPythonPackage
-, fetchPypi
-, autopage
-, cmd2
-, openstackdocstheme
-, pbr
-, prettytable
-, pyyaml
-, stevedore
-, sphinxHook
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  autopage,
+  cmd2,
+  openstackdocstheme,
+  pbr,
+  prettytable,
+  pyyaml,
+  stevedore,
+  sphinxHook,
 }:
 
 buildPythonPackage rec {

@@ -1,8 +1,8 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitLab
-, plum-py
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitLab,
+  plum-py,
 }:
 
 buildPythonPackage rec {

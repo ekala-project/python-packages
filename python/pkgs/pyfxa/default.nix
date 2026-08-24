@@ -1,13 +1,13 @@
-{ lib
-, buildPythonPackage
-, cryptography
-, fetchPypi
-, hawkauthlib
-, pybrowserid
-, pyjwt
-, requests
-, hatchling
-,
+{
+  lib,
+  buildPythonPackage,
+  cryptography,
+  fetchPypi,
+  hawkauthlib,
+  pybrowserid,
+  pyjwt,
+  requests,
+  hatchling,
 }:
 
 buildPythonPackage rec {

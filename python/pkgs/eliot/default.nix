@@ -1,16 +1,16 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, # build-system
-  setuptools
-, setuptools-scm
-, versioneer
-, # dependencies
-  boltons
-, orjson
-, pyrsistent
-, zope-interface
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  # build-system
+  setuptools,
+  setuptools-scm,
+  versioneer,
+  # dependencies
+  boltons,
+  orjson,
+  pyrsistent,
+  zope-interface,
 }:
 
 buildPythonPackage (finalAttrs: {

@@ -1,10 +1,10 @@
-{ lib
-, buildPythonPackage
-, fetchPypi
-, setuptools
-, msrest
-, mock
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  setuptools,
+  msrest,
+  mock,
 }:
 
 buildPythonPackage (finalAttrs: {

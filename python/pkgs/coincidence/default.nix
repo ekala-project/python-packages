@@ -1,9 +1,9 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, typing-extensions
-, whey
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  typing-extensions,
+  whey,
 }:
 
 buildPythonPackage rec {

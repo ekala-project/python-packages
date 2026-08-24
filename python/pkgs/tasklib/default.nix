@@ -1,10 +1,10 @@
-{ lib
-, buildPythonPackage
-, six
-, pytz
-, tzlocal
-, fetchPypi
-,
+{
+  lib,
+  buildPythonPackage,
+  six,
+  pytz,
+  tzlocal,
+  fetchPypi,
 }:
 
 buildPythonPackage rec {

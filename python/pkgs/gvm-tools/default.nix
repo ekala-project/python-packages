@@ -1,9 +1,9 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, poetry-core
-, python-gvm
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  poetry-core,
+  python-gvm,
 }:
 
 buildPythonPackage (finalAttrs: {

@@ -1,24 +1,24 @@
-{ buildPythonPackage
-, fetchPypi
-, lib
-, whey
-, sphinx
-, apeye
-, autodocsumm
-, beautifulsoup4
-, cachecontrol
-, dict2css
-, filelock
-, html5lib
-, roman
-, ruamel-yaml
-, sphinx-autodoc-typehints
-, sphinx-jinja2-compat
-, sphinx-prompt
-, sphinx-tabs
-, tabulate
-, python
-,
+{
+  buildPythonPackage,
+  fetchPypi,
+  lib,
+  whey,
+  sphinx,
+  apeye,
+  autodocsumm,
+  beautifulsoup4,
+  cachecontrol,
+  dict2css,
+  filelock,
+  html5lib,
+  roman,
+  ruamel-yaml,
+  sphinx-autodoc-typehints,
+  sphinx-jinja2-compat,
+  sphinx-prompt,
+  sphinx-tabs,
+  tabulate,
+  python,
 }:
 
 buildPythonPackage (finalAttrs: {

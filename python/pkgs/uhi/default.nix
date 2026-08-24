@@ -1,13 +1,13 @@
-{ lib
-, fetchPypi
-, buildPythonPackage
-, h5py
-, hatchling
-, hatch-vcs
-, fastjsonschema
-, numpy
-, uhi
-,
+{
+  lib,
+  fetchPypi,
+  buildPythonPackage,
+  h5py,
+  hatchling,
+  hatch-vcs,
+  fastjsonschema,
+  numpy,
+  uhi,
 }:
 
 buildPythonPackage rec {

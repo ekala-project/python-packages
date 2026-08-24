@@ -1,14 +1,14 @@
-{ lib
-, buildPythonPackage
-, fetchPypi
-, # build-system
-  flit-core
-, # dependencies
-  docutils
-, mistune
-, pygments
-, sphinx
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  # build-system
+  flit-core,
+  # dependencies
+  docutils,
+  mistune,
+  pygments,
+  sphinx,
 }:
 
 buildPythonPackage rec {

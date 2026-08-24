@@ -1,23 +1,23 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, pbr
-, setuptools
-, # direct
-  cryptography
-, dogpile-cache
-, jmespath
-, jsonpatch
-, keystoneauth1
-, munch
-, os-service-types
-, platformdirs
-, psutil
-, pyyaml
-, # docs
-  sphinxHook
-, openstackdocstheme
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  pbr,
+  setuptools,
+  # direct
+  cryptography,
+  dogpile-cache,
+  jmespath,
+  jsonpatch,
+  keystoneauth1,
+  munch,
+  os-service-types,
+  platformdirs,
+  psutil,
+  pyyaml,
+  # docs
+  sphinxHook,
+  openstackdocstheme,
 }:
 
 buildPythonPackage (finalAttrs: {

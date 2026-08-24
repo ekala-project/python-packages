@@ -1,13 +1,13 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, setuptools
-, aiohttp
-, bcrypt
-, pyopenssl
-, python-gnupg
-, requests
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  setuptools,
+  aiohttp,
+  bcrypt,
+  pyopenssl,
+  python-gnupg,
+  requests,
 }:
 
 buildPythonPackage rec {

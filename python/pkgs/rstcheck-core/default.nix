@@ -1,12 +1,12 @@
-{ lib
-, stdenv
-, buildPythonPackage
-, docutils
-, fetchFromGitHub
-, pydantic
-, setuptools
-, setuptools-scm
-,
+{
+  lib,
+  stdenv,
+  buildPythonPackage,
+  docutils,
+  fetchFromGitHub,
+  pydantic,
+  setuptools,
+  setuptools-scm,
 }:
 
 buildPythonPackage (finalAttrs: {

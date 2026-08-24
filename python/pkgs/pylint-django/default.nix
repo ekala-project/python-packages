@@ -1,10 +1,10 @@
-{ lib
-, buildPythonPackage
-, django
-, fetchFromGitHub
-, poetry-core
-, pylint-plugin-utils
-,
+{
+  lib,
+  buildPythonPackage,
+  django,
+  fetchFromGitHub,
+  poetry-core,
+  pylint-plugin-utils,
 }:
 
 buildPythonPackage (finalAttrs: {

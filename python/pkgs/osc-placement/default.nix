@@ -1,14 +1,14 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, keystoneauth1
-, openstackdocstheme
-, osc-lib
-, oslo-utils
-, pbr
-, setuptools
-, sphinxHook
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  keystoneauth1,
+  openstackdocstheme,
+  osc-lib,
+  oslo-utils,
+  pbr,
+  setuptools,
+  sphinxHook,
 }:
 
 buildPythonPackage rec {

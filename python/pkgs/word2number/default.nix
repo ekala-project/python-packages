@@ -1,10 +1,10 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, setuptools-scm
-, future
-, pythonOlder
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  setuptools-scm,
+  future,
+  pythonOlder,
 }:
 
 buildPythonPackage rec {
@@ -36,7 +36,6 @@ buildPythonPackage rec {
     "word2number"
   ];
 
-
   meta = {
     description = "Convert number words (eg. twenty one) to numeric digits (21)";
     homepage = "http://w2n.readthedocs.io/";
@@ -44,4 +43,3 @@ buildPythonPackage rec {
     maintainers = [ ];
   };
 }
-

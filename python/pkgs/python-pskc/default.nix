@@ -1,13 +1,13 @@
-{ buildPythonPackage
-, fetchFromGitHub
-, lib
-, cryptography
-, defusedxml
-, lxml
-, python-dateutil
-, setuptools
-, signxml
-,
+{
+  buildPythonPackage,
+  fetchFromGitHub,
+  lib,
+  cryptography,
+  defusedxml,
+  lxml,
+  python-dateutil,
+  setuptools,
+  signxml,
 }:
 
 buildPythonPackage rec {

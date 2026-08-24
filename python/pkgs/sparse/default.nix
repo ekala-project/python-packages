@@ -1,14 +1,14 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, # build-system
-  setuptools
-, setuptools-scm
-, # dependencies
-  numba
-, numpy
-, scipy
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  # build-system
+  setuptools,
+  setuptools-scm,
+  # dependencies
+  numba,
+  numpy,
+  scipy,
 }:
 
 buildPythonPackage (finalAttrs: {

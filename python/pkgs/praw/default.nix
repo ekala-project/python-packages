@@ -1,13 +1,13 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, fetchpatch
-, flit-core
-, mock
-, prawcore
-, update-checker
-, websocket-client
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  fetchpatch,
+  flit-core,
+  mock,
+  prawcore,
+  update-checker,
+  websocket-client,
 }:
 
 buildPythonPackage (finalAttrs: {

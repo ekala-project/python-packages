@@ -1,12 +1,12 @@
-{ lib
-, buildPythonPackage
-, fetchPypi
-, python
-, cffi
-, pkg-config
-, wayland
-, wayland-scanner
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  python,
+  cffi,
+  pkg-config,
+  wayland,
+  wayland-scanner,
 }:
 
 buildPythonPackage rec {

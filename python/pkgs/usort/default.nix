@@ -1,16 +1,16 @@
-{ lib
-, attrs
-, buildPythonPackage
-, click
-, fetchFromGitHub
-, hatch-vcs
-, hatchling
-, libcst
-, moreorless
-, stdlibs
-, toml
-, trailrunner
-,
+{
+  lib,
+  attrs,
+  buildPythonPackage,
+  click,
+  fetchFromGitHub,
+  hatch-vcs,
+  hatchling,
+  libcst,
+  moreorless,
+  stdlibs,
+  toml,
+  trailrunner,
 }:
 
 buildPythonPackage (finalAttrs: {

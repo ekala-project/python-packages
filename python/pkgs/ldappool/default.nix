@@ -1,12 +1,12 @@
-{ lib
-, buildPythonPackage
-, fetchPypi
-, setuptools
-, pbr
-, python-ldap
-, prettytable
-, six
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  setuptools,
+  pbr,
+  python-ldap,
+  prettytable,
+  six,
 }:
 
 buildPythonPackage rec {

@@ -1,11 +1,11 @@
-{ lib
-, fetchFromGitHub
-, buildPythonPackage
-, packaging
-, setuptools
-, pkgconfig
-, freetype
-,
+{
+  lib,
+  fetchFromGitHub,
+  buildPythonPackage,
+  packaging,
+  setuptools,
+  pkgconfig,
+  freetype,
 }:
 
 buildPythonPackage rec {
@@ -28,7 +28,6 @@ buildPythonPackage rec {
 
   buildInputs = [ freetype ];
 
-
   pythonImportsCheck = [ "aggdraw" ];
 
   meta = {
@@ -38,5 +37,3 @@ buildPythonPackage rec {
     maintainers = [ ];
   };
 }
-
-

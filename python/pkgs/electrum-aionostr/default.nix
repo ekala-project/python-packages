@@ -1,13 +1,13 @@
-{ lib
-, buildPythonPackage
-, fetchPypi
-, setuptools
-, aiohttp
-, aiohttp-socks
-, aiorpcx
-, cryptography
-, electrum-ecc
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  setuptools,
+  aiohttp,
+  aiohttp-socks,
+  aiorpcx,
+  cryptography,
+  electrum-ecc,
 }:
 
 buildPythonPackage rec {

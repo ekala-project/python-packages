@@ -1,9 +1,9 @@
-{ lib
-, buildPythonPackage
-, fetchPypi
-, setuptools
-, pyudev
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  setuptools,
+  pyudev,
 }:
 
 buildPythonPackage (finalAttrs: {

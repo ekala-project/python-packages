@@ -1,17 +1,17 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, setuptools
-, zope-interface
-, zope-schema
-, zope-cachedescriptors
-, pytz
-, webtest
-, beautifulsoup4
-, soupsieve
-, wsgiproxy2
-, legacy-cgi
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  setuptools,
+  zope-interface,
+  zope-schema,
+  zope-cachedescriptors,
+  pytz,
+  webtest,
+  beautifulsoup4,
+  soupsieve,
+  wsgiproxy2,
+  legacy-cgi,
 }:
 
 buildPythonPackage rec {
@@ -50,7 +50,6 @@ buildPythonPackage rec {
     legacy-cgi
   ];
 
-
   pythonImportsCheck = [
     "zope.testbrowser"
     "zope.testbrowser.browser"
@@ -66,4 +65,3 @@ buildPythonPackage rec {
     maintainers = [ ];
   };
 }
-

@@ -1,11 +1,11 @@
-{ lib
-, attrs
-, buildPythonPackage
-, domdf-python-tools
-, fetchFromGitHub
-, flit-core
-, tomli-w
-,
+{
+  lib,
+  attrs,
+  buildPythonPackage,
+  domdf-python-tools,
+  fetchFromGitHub,
+  flit-core,
+  tomli-w,
 }:
 
 buildPythonPackage rec {

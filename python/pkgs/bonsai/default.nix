@@ -1,13 +1,13 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, setuptools
-, cyrus_sasl
-, openldap
-, gevent
-, tornado
-, trio
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  setuptools,
+  cyrus_sasl,
+  openldap,
+  gevent,
+  tornado,
+  trio,
 }:
 
 buildPythonPackage rec {

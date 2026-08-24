@@ -1,11 +1,11 @@
-{ buildPythonPackage
-, dulwich
-, lib
-, fetchFromGitHub
-, pbr
-, pyyaml
-, setuptools
-,
+{
+  buildPythonPackage,
+  dulwich,
+  lib,
+  fetchFromGitHub,
+  pbr,
+  pyyaml,
+  setuptools,
 }:
 
 buildPythonPackage (finalAttrs: {

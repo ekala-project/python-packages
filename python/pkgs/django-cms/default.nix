@@ -1,15 +1,15 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, django
-, setuptools
-, django-classy-tags
-, django-formtools
-, django-treebeard
-, django-sekizai
-, djangocms-admin-style
-, django-cms
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  django,
+  setuptools,
+  django-classy-tags,
+  django-formtools,
+  django-treebeard,
+  django-sekizai,
+  djangocms-admin-style,
+  django-cms,
 }:
 
 buildPythonPackage rec {

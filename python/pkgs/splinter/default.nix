@@ -1,15 +1,15 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, setuptools
-, urllib3
-, selenium
-, cssselect
-, django
-, flask
-, lxml
-, zope-testbrowser
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  setuptools,
+  urllib3,
+  selenium,
+  cssselect,
+  django,
+  flask,
+  lxml,
+  zope-testbrowser,
 }:
 
 buildPythonPackage rec {

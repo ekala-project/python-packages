@@ -1,10 +1,10 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, setuptools
-, setuptools-scm
-, pytest
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  setuptools,
+  setuptools-scm,
+  pytest,
 }:
 
 buildPythonPackage (finalAttrs: {

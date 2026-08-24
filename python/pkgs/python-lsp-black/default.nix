@@ -1,13 +1,13 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, black
-, fetchpatch
-, # build-system
-  setuptools
-, # dependencies
-  python-lsp-server
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  black,
+  fetchpatch,
+  # build-system
+  setuptools,
+  # dependencies
+  python-lsp-server,
 }:
 
 buildPythonPackage rec {

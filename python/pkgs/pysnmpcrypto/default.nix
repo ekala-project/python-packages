@@ -1,12 +1,12 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, # build-system
-  poetry-core
-, # dependencies
-  cryptography
-, pycryptodomex
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  # build-system
+  poetry-core,
+  # dependencies
+  cryptography,
+  pycryptodomex,
 }:
 
 buildPythonPackage rec {

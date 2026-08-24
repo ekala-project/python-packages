@@ -1,13 +1,13 @@
-{ lib
-, buildPythonPackage
-, fetchPypi
-, distro
-, httplib2
-, oauthlib
-, setuptools
-, six
-, wadllib
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  distro,
+  httplib2,
+  oauthlib,
+  setuptools,
+  six,
+  wadllib,
 }:
 
 buildPythonPackage rec {

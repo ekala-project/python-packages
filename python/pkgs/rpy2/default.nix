@@ -1,11 +1,11 @@
-{ lib
-, buildPythonPackage
-, fetchPypi
-, isPyPy
-, rpy2-rinterface
-, rpy2-robjects
-, setuptools
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  isPyPy,
+  rpy2-rinterface,
+  rpy2-robjects,
+  setuptools,
 }:
 
 buildPythonPackage rec {

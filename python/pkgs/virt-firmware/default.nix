@@ -1,10 +1,10 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitLab
-, setuptools
-, cryptography
-, pefile
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitLab,
+  setuptools,
+  cryptography,
+  pefile,
 }:
 
 buildPythonPackage (finalAttrs: {

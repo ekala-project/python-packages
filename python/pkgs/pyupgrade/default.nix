@@ -1,9 +1,9 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, setuptools
-, tokenize-rt
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  setuptools,
+  tokenize-rt,
 }:
 
 buildPythonPackage (finalAttrs: {

@@ -1,12 +1,12 @@
-{ buildPythonPackage
-, charset-normalizer
-, fetchFromGitHub
-, hatchling
-, lib
-, orjson
-, urllib3-future
-, wassima
-,
+{
+  buildPythonPackage,
+  charset-normalizer,
+  fetchFromGitHub,
+  hatchling,
+  lib,
+  orjson,
+  urllib3-future,
+  wassima,
 }:
 
 buildPythonPackage (finalAttrs: {

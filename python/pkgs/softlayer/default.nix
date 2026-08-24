@@ -1,17 +1,17 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, # build-system
-  setuptools
-, # dependencies
-  click
-, prettytable
-, prompt-toolkit
-, pygments
-, requests
-, rich
-, urllib3
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  # build-system
+  setuptools,
+  # dependencies
+  click,
+  prettytable,
+  prompt-toolkit,
+  pygments,
+  requests,
+  rich,
+  urllib3,
 }:
 
 buildPythonPackage rec {

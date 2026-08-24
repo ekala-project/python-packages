@@ -1,12 +1,12 @@
-{ lib
-, fetchPypi
-, buildPythonPackage
-, pkg-config
-, meson-python
-, cython
-, # Reverse dependency
-  sage
-,
+{
+  lib,
+  fetchPypi,
+  buildPythonPackage,
+  pkg-config,
+  meson-python,
+  cython,
+  # Reverse dependency
+  sage,
 }:
 
 buildPythonPackage rec {

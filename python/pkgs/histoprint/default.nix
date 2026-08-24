@@ -1,12 +1,12 @@
-{ lib
-, fetchFromGitHub
-, buildPythonPackage
-, hatchling
-, hatch-vcs
-, click
-, numpy
-, uhi
-,
+{
+  lib,
+  fetchFromGitHub,
+  buildPythonPackage,
+  hatchling,
+  hatch-vcs,
+  click,
+  numpy,
+  uhi,
 }:
 
 buildPythonPackage rec {

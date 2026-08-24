@@ -1,13 +1,13 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, # build-system
-  setuptools
-, # dependencies
-  toolz
-, tornado
-, zict
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  # build-system
+  setuptools,
+  # dependencies
+  toolz,
+  tornado,
+  zict,
 }:
 
 buildPythonPackage (finalAttrs: {

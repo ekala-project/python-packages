@@ -1,12 +1,12 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, setuptools
-, numpy
-, cffi
-, fenics-ufl
-, fenics-basix
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  setuptools,
+  numpy,
+  cffi,
+  fenics-ufl,
+  fenics-basix,
 }:
 
 buildPythonPackage (finalAttrs: {

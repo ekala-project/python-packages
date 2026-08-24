@@ -1,18 +1,18 @@
-{ lib
-, buildPythonPackage
-, fetchPypi
-, # build-system
-  hatchling
-, # dependencies
-  decorator
-, h11
-, puremagic
-, typing-extensions
-, urllib3
-, # optional-dependencies
-  xxhash
-, pook
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  # build-system
+  hatchling,
+  # dependencies
+  decorator,
+  h11,
+  puremagic,
+  typing-extensions,
+  urllib3,
+  # optional-dependencies
+  xxhash,
+  pook,
 }:
 
 buildPythonPackage rec {

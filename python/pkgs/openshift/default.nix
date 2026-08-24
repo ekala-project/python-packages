@@ -1,12 +1,12 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, jinja2
-, kubernetes
-, ruamel-yaml
-, six
-, python-string-utils
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  jinja2,
+  kubernetes,
+  ruamel-yaml,
+  six,
+  python-string-utils,
 }:
 
 buildPythonPackage rec {

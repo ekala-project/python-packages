@@ -1,11 +1,11 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, # build-system
-  setuptools
-, # dependencies
-  baron
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  # build-system
+  setuptools,
+  # dependencies
+  baron,
 }:
 
 buildPythonPackage (finalAttrs: {

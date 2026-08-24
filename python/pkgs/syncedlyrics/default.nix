@@ -1,11 +1,11 @@
-{ lib
-, beautifulsoup4
-, buildPythonPackage
-, fetchFromGitHub
-, poetry-core
-, rapidfuzz
-, requests
-,
+{
+  lib,
+  beautifulsoup4,
+  buildPythonPackage,
+  fetchFromGitHub,
+  poetry-core,
+  rapidfuzz,
+  requests,
 }:
 
 buildPythonPackage rec {

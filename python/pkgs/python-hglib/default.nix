@@ -1,10 +1,10 @@
-{ lib
-, buildPythonPackage
-, fetchzip
-, mercurial
-, fetchpatch2
-, setuptools
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchzip,
+  mercurial,
+  fetchpatch2,
+  setuptools,
 }:
 
 buildPythonPackage rec {

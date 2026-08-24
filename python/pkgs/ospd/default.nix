@@ -1,13 +1,13 @@
-{ lib
-, stdenv
-, buildPythonPackage
-, defusedxml
-, deprecated
-, fetchFromGitHub
-, lxml
-, paramiko
-, psutil
-,
+{
+  lib,
+  stdenv,
+  buildPythonPackage,
+  defusedxml,
+  deprecated,
+  fetchFromGitHub,
+  lxml,
+  paramiko,
+  psutil,
 }:
 
 buildPythonPackage rec {

@@ -1,14 +1,14 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, # build-system
-  setuptools
-, # docs
-  sphinx-rtd-theme
-, sphinxHook
-, # dependencies
-  colorzero
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  # build-system
+  setuptools,
+  # docs
+  sphinx-rtd-theme,
+  sphinxHook,
+  # dependencies
+  colorzero,
 }:
 
 buildPythonPackage rec {

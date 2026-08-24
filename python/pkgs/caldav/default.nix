@@ -1,18 +1,18 @@
-{ lib
-, buildPythonPackage
-, dnspython
-, fetchFromGitHub
-, icalendar
-, icalendar-searcher
-, lxml
-, python
-, recurring-ical-events
-, niquests
-, hatchling
-, hatch-vcs
-, python-dateutil
-, pyyaml
-,
+{
+  lib,
+  buildPythonPackage,
+  dnspython,
+  fetchFromGitHub,
+  icalendar,
+  icalendar-searcher,
+  lxml,
+  python,
+  recurring-ical-events,
+  niquests,
+  hatchling,
+  hatch-vcs,
+  python-dateutil,
+  pyyaml,
 }:
 
 buildPythonPackage rec {

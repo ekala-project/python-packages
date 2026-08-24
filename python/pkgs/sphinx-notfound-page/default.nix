@@ -1,18 +1,18 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, flit-core
-, # documentation build dependencies
-  sphinxHook
-, sphinx-prompt
-, sphinx-rtd-theme
-, sphinx-tabs
-, sphinx-autoapi
-, sphinxemoji
-, # runtime dependencies
-  sphinx
-, setuptools
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  flit-core,
+  # documentation build dependencies
+  sphinxHook,
+  sphinx-prompt,
+  sphinx-rtd-theme,
+  sphinx-tabs,
+  sphinx-autoapi,
+  sphinxemoji,
+  # runtime dependencies
+  sphinx,
+  setuptools,
 }:
 
 buildPythonPackage rec {

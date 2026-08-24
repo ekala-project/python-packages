@@ -1,16 +1,16 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, html-text
-, jstyleson
-, lxml
-, mf2py
-, pyrdfa3
-, rdflib
-, setuptools
-, six
-, w3lib
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  html-text,
+  jstyleson,
+  lxml,
+  mf2py,
+  pyrdfa3,
+  rdflib,
+  setuptools,
+  six,
+  w3lib,
 }:
 
 buildPythonPackage (finalAttrs: {

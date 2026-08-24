@@ -1,15 +1,15 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, # build-system
-  setuptools
-, # documentation build dependencies
-  sphinxHook
-, # runtime dependencies
-  sphinx
-, pygments
-, docutils
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  # build-system
+  setuptools,
+  # documentation build dependencies
+  sphinxHook,
+  # runtime dependencies
+  sphinx,
+  pygments,
+  docutils,
 }:
 
 buildPythonPackage (finalAttrs: {

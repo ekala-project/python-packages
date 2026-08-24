@@ -1,13 +1,13 @@
-{ stdenv
-, lib
-, buildPythonPackage
-, fetchurl
-, python
-, apr
-, aprutil
-, pycxx
-, subversion
-,
+{
+  stdenv,
+  lib,
+  buildPythonPackage,
+  fetchurl,
+  python,
+  apr,
+  aprutil,
+  pycxx,
+  subversion,
 }:
 
 buildPythonPackage rec {

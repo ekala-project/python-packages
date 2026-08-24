@@ -1,11 +1,11 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, requests
-, setuptools
-, tqdm
-, websocket-client
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  requests,
+  setuptools,
+  tqdm,
+  websocket-client,
 }:
 
 buildPythonPackage rec {

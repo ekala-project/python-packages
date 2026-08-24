@@ -1,15 +1,15 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, setuptools
-, # optional dependencies
-  azure-storage-blob
-, boto3
-, dulwich
-, google-cloud-storage
-, pymongo
-, redis
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  setuptools,
+  # optional dependencies
+  azure-storage-blob,
+  boto3,
+  dulwich,
+  google-cloud-storage,
+  pymongo,
+  redis,
 }:
 
 buildPythonPackage rec {

@@ -1,12 +1,12 @@
-{ lib
-, buildPythonPackage
-, catkin-pkg
-, distro
-, distutils
-, fetchFromGitHub
-, pyyaml
-, setuptools
-,
+{
+  lib,
+  buildPythonPackage,
+  catkin-pkg,
+  distro,
+  distutils,
+  fetchFromGitHub,
+  pyyaml,
+  setuptools,
 }:
 
 buildPythonPackage rec {

@@ -1,10 +1,10 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, flit-core
-, inform
-, sly
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  flit-core,
+  inform,
+  sly,
 }:
 
 buildPythonPackage rec {

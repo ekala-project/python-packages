@@ -1,12 +1,12 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, setuptools
-, fastcore
-, numpy
-, ipython
-, python-fasthtml
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  setuptools,
+  fastcore,
+  numpy,
+  ipython,
+  python-fasthtml,
 }:
 
 buildPythonPackage (finalAttrs: {

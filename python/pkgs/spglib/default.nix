@@ -1,17 +1,17 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, pythonOlder
-, # build-system
-  cmake
-, scikit-build-core
-, numpy
-, ninja
-, pybind11
-, setuptools-scm
-, # dependencies
-  typing-extensions
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  pythonOlder,
+  # build-system
+  cmake,
+  scikit-build-core,
+  numpy,
+  ninja,
+  pybind11,
+  setuptools-scm,
+  # dependencies
+  typing-extensions,
 }:
 
 buildPythonPackage rec {

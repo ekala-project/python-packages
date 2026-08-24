@@ -1,16 +1,16 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, # build-system
-  setuptools
-, # dependencies
-  django
-, django-stubs-ext
-, typing-extensions
-, # optional-dependencies
-  mysqlclient
-, psycopg
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  # build-system
+  setuptools,
+  # dependencies
+  django,
+  django-stubs-ext,
+  typing-extensions,
+  # optional-dependencies
+  mysqlclient,
+  psycopg,
 }:
 
 buildPythonPackage (finalAttrs: {

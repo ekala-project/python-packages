@@ -1,12 +1,12 @@
-{ buildPythonPackage
-, fetchFromGitHub
-, lib
-, nix-update-script
-, setuptools
-, netaddr
-, sphinxHook
-, sphinx-rtd-theme
-,
+{
+  buildPythonPackage,
+  fetchFromGitHub,
+  lib,
+  nix-update-script,
+  setuptools,
+  netaddr,
+  sphinxHook,
+  sphinx-rtd-theme,
 }:
 
 buildPythonPackage (finalAttrs: {

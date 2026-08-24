@@ -1,10 +1,10 @@
-{ lib
-, buildPythonPackage
-, fetchPypi
-, setuptools-scm
-, fonttools
-, fontpens
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  setuptools-scm,
+  fonttools,
+  fontpens,
 }:
 
 buildPythonPackage rec {

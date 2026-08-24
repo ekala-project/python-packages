@@ -1,12 +1,12 @@
-{ lib
-, attrs
-, buildPythonPackage
-, cattrs
-, fetchFromGitHub
-, fonttools
-, hatchling
-, hatch-vcs
-,
+{
+  lib,
+  attrs,
+  buildPythonPackage,
+  cattrs,
+  fetchFromGitHub,
+  fonttools,
+  hatchling,
+  hatch-vcs,
 }:
 
 buildPythonPackage rec {

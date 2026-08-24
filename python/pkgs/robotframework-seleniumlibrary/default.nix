@@ -1,11 +1,11 @@
-{ buildPythonPackage
-, fetchFromGitHub
-, setuptools
-, click
-, robotframework
-, robotframework-pythonlibcore
-, selenium
-,
+{
+  buildPythonPackage,
+  fetchFromGitHub,
+  setuptools,
+  click,
+  robotframework,
+  robotframework-pythonlibcore,
+  selenium,
 }:
 
 buildPythonPackage (finalAttrs: {

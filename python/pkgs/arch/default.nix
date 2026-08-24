@@ -1,16 +1,16 @@
-{ lib
-, buildPythonPackage
-, python
-, fetchFromGitHub
-, cython
-, numpy
-, pandas
-, property-cached
-, scipy
-, setuptools-scm
-, statsmodels
-, meson-python
-,
+{
+  lib,
+  buildPythonPackage,
+  python,
+  fetchFromGitHub,
+  cython,
+  numpy,
+  pandas,
+  property-cached,
+  scipy,
+  setuptools-scm,
+  statsmodels,
+  meson-python,
 }:
 
 buildPythonPackage rec {

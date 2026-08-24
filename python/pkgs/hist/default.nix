@@ -1,12 +1,12 @@
-{ lib
-, fetchPypi
-, buildPythonPackage
-, boost-histogram
-, histoprint
-, hatchling
-, hatch-vcs
-, numpy
-,
+{
+  lib,
+  fetchPypi,
+  buildPythonPackage,
+  boost-histogram,
+  histoprint,
+  hatchling,
+  hatch-vcs,
+  numpy,
 }:
 
 buildPythonPackage (finalAttrs: {

@@ -1,17 +1,17 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, # build
-  hatchling
-, pytest
-, # runtime
-  jupyter-core
-, # optionals
-  jupyter-client
-, ipykernel
-, jupyter-server
-, nbformat
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  # build
+  hatchling,
+  pytest,
+  # runtime
+  jupyter-core,
+  # optionals
+  jupyter-client,
+  ipykernel,
+  jupyter-server,
+  nbformat,
 }:
 
 let

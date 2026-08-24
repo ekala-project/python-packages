@@ -1,15 +1,15 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, # build-system
-  hatch-vcs
-, hatchling
-, # dependencies
-  numpy
-, packaging
-, # tests
-  awkward
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  # build-system
+  hatch-vcs,
+  hatchling,
+  # dependencies
+  numpy,
+  packaging,
+  # tests
+  awkward,
 }:
 
 buildPythonPackage (finalAttrs: {

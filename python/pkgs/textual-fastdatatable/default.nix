@@ -1,14 +1,14 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, hatchling
-, pandas
-, pyarrow
-, pytz
-, textual
-, tzdata
-, polars
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  hatchling,
+  pandas,
+  pyarrow,
+  pytz,
+  textual,
+  tzdata,
+  polars,
 }:
 
 buildPythonPackage rec {

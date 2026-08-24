@@ -1,10 +1,10 @@
-{ lib
-, buildPythonPackage
-, colorama
-, fetchFromGitHub
-, regex
-, hatchling
-,
+{
+  lib,
+  buildPythonPackage,
+  colorama,
+  fetchFromGitHub,
+  regex,
+  hatchling,
 }:
 
 buildPythonPackage rec {

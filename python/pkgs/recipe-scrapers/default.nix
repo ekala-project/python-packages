@@ -1,14 +1,14 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, beautifulsoup4
-, extruct
-, isodate
-, language-tags
-, regex
-, requests
-, setuptools
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  beautifulsoup4,
+  extruct,
+  isodate,
+  language-tags,
+  regex,
+  requests,
+  setuptools,
 }:
 
 buildPythonPackage (finalAttrs: {

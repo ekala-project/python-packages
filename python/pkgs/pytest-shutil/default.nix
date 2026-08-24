@@ -1,14 +1,14 @@
-{ lib
-, buildPythonPackage
-, pytest-fixture-config
-, # build-time
-  setuptools
-, # runtime
-  pytest
-, execnet
-, termcolor
-, six
-,
+{
+  lib,
+  buildPythonPackage,
+  pytest-fixture-config,
+  # build-time
+  setuptools,
+  # runtime
+  pytest,
+  execnet,
+  termcolor,
+  six,
 }:
 
 buildPythonPackage {

@@ -1,10 +1,10 @@
-{ lib
-, stdenv
-, buildPythonPackage
-, fetchFromGitHub
-, hatchling
-, plumbum
-,
+{
+  lib,
+  stdenv,
+  buildPythonPackage,
+  fetchFromGitHub,
+  hatchling,
+  plumbum,
 }:
 
 buildPythonPackage rec {

@@ -1,21 +1,21 @@
-{ lib
-, buildPythonPackage
-, cached-property
-, defusedxml
-, dnspython
-, fetchFromGitHub
-, isodate
-, lxml
-, oauthlib
-, pygments
-, requests
-, requests-ntlm
-, requests-gssapi
-, requests-oauthlib
-, setuptools
-, tzdata
-, tzlocal
-,
+{
+  lib,
+  buildPythonPackage,
+  cached-property,
+  defusedxml,
+  dnspython,
+  fetchFromGitHub,
+  isodate,
+  lxml,
+  oauthlib,
+  pygments,
+  requests,
+  requests-ntlm,
+  requests-gssapi,
+  requests-oauthlib,
+  setuptools,
+  tzdata,
+  tzlocal,
 }:
 
 buildPythonPackage rec {

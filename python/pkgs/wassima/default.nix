@@ -1,8 +1,8 @@
-{ buildPythonPackage
-, fetchFromGitHub
-, hatchling
-, lib
-,
+{
+  buildPythonPackage,
+  fetchFromGitHub,
+  hatchling,
+  lib,
 }:
 
 buildPythonPackage (finalAttrs: {

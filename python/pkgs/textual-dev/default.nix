@@ -1,16 +1,16 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, # build-system
-  poetry-core
-, # dependencies
-  aiohttp
-, click
-, msgpack
-, textual
-, textual-serve
-, typing-extensions
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  # build-system
+  poetry-core,
+  # dependencies
+  aiohttp,
+  click,
+  msgpack,
+  textual,
+  textual-serve,
+  typing-extensions,
 }:
 
 buildPythonPackage rec {

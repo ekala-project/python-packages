@@ -1,14 +1,14 @@
-{ lib
-, buildPythonPackage
-, pythonAtLeast
-, fetchFromGitHub
-, setuptools
-, setuptools-scm
-, python
-, cocotb-bus
-, find-libpython
-, stdenv
-,
+{
+  lib,
+  buildPythonPackage,
+  pythonAtLeast,
+  fetchFromGitHub,
+  setuptools,
+  setuptools-scm,
+  python,
+  cocotb-bus,
+  find-libpython,
+  stdenv,
 }:
 
 buildPythonPackage rec {

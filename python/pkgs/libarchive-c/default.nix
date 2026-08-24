@@ -1,11 +1,11 @@
-{ lib
-, stdenv
-, buildPythonPackage
-, fetchFromGitHub
-, fetchpatch
-, libarchive
-, setuptools
-,
+{
+  lib,
+  stdenv,
+  buildPythonPackage,
+  fetchFromGitHub,
+  fetchpatch,
+  libarchive,
+  setuptools,
 }:
 
 buildPythonPackage (finalAttrs: {

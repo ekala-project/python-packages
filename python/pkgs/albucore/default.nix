@@ -1,14 +1,14 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, # build-system
-  hatchling
-, # dependencies
-  numkong
-, numpy
-, opencv-python
-, stringzilla
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  # build-system
+  hatchling,
+  # dependencies
+  numkong,
+  numpy,
+  opencv-python,
+  stringzilla,
 }:
 
 buildPythonPackage (finalAttrs: {

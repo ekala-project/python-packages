@@ -1,10 +1,10 @@
-{ lib
-, buildPythonPackage
-, click
-, fetchFromGitHub
-, packaging
-, setuptools
-,
+{
+  lib,
+  buildPythonPackage,
+  click,
+  fetchFromGitHub,
+  packaging,
+  setuptools,
 }:
 
 buildPythonPackage (finalAttrs: {

@@ -1,11 +1,11 @@
-{ lib
-, buildPythonPackage
-, fetchPypi
-, protobuf
-, regex
-, setuptools
-, setuptools-scm
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  protobuf,
+  regex,
+  setuptools,
+  setuptools-scm,
 }:
 
 buildPythonPackage rec {

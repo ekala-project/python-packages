@@ -1,17 +1,17 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, # build-system
-  setuptools
-, # dependencies
-  debtcollector
-, oslo-config
-, oslo-context
-, oslo-serialization
-, oslo-utils
-, pbr
-, python-dateutil
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  # build-system
+  setuptools,
+  # dependencies
+  debtcollector,
+  oslo-config,
+  oslo-context,
+  oslo-serialization,
+  oslo-utils,
+  pbr,
+  python-dateutil,
 }:
 
 buildPythonPackage rec {

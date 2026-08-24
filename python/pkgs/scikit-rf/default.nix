@@ -1,24 +1,24 @@
-{ stdenv
-, lib
-, buildPythonPackage
-, fetchFromGitHub
-, numpy
-, scipy
-, pandas
-, matplotlib
-, nbval
-, pyvisa
-, networkx
-, ipython
-, ipykernel
-, ipywidgets
-, jupyter-client
-, sphinx-rtd-theme
-, sphinx
-, nbsphinx
-, openpyxl
-, setuptools
-,
+{
+  stdenv,
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  numpy,
+  scipy,
+  pandas,
+  matplotlib,
+  nbval,
+  pyvisa,
+  networkx,
+  ipython,
+  ipykernel,
+  ipywidgets,
+  jupyter-client,
+  sphinx-rtd-theme,
+  sphinx,
+  nbsphinx,
+  openpyxl,
+  setuptools,
 }:
 
 buildPythonPackage rec {

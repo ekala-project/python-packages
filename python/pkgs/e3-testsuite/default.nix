@@ -1,9 +1,9 @@
-{ lib
-, buildPythonPackage
-, e3-core
-, fetchFromGitHub
-, setuptools
-,
+{
+  lib,
+  buildPythonPackage,
+  e3-core,
+  fetchFromGitHub,
+  setuptools,
 }:
 
 buildPythonPackage rec {

@@ -1,12 +1,12 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, setuptools
-, setuptools-scm
-, fonttools
-, runAllTests ? false
-, psautohint
-, # for passthru.tests
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  setuptools,
+  setuptools-scm,
+  fonttools,
+  runAllTests ? false,
+  psautohint, # for passthru.tests
 }:
 
 buildPythonPackage (finalAttrs: {

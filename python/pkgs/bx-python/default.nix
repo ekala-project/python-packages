@@ -1,13 +1,13 @@
-{ lib
-, fetchFromGitHub
-, buildPythonPackage
-, numpy
-, pyparsing
-, cython
-, zlib
-, setuptools
-, oldest-supported-numpy
-,
+{
+  lib,
+  fetchFromGitHub,
+  buildPythonPackage,
+  numpy,
+  pyparsing,
+  cython,
+  zlib,
+  setuptools,
+  oldest-supported-numpy,
 }:
 
 buildPythonPackage rec {

@@ -1,10 +1,10 @@
-{ lib
-, cython
-, buildPythonPackage
-, fetchFromGitHub
-, poetry-core
-, setuptools
-,
+{
+  lib,
+  cython,
+  buildPythonPackage,
+  fetchFromGitHub,
+  poetry-core,
+  setuptools,
 }:
 
 buildPythonPackage rec {

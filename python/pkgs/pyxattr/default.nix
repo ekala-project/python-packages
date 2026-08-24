@@ -1,10 +1,10 @@
-{ lib
-, attr
-, fetchPypi
-, stdenv
-, buildPythonPackage
-, setuptools
-,
+{
+  lib,
+  attr,
+  fetchPypi,
+  stdenv,
+  buildPythonPackage,
+  setuptools,
 }:
 
 buildPythonPackage (finalAttrs: {

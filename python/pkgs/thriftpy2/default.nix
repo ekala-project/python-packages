@@ -1,13 +1,13 @@
-{ lib
-, buildPythonPackage
-, cython
-, fetchFromGitHub
-, fetchpatch
-, ply
-, six
-, setuptools
-, tornado
-,
+{
+  lib,
+  buildPythonPackage,
+  cython,
+  fetchFromGitHub,
+  fetchpatch,
+  ply,
+  six,
+  setuptools,
+  tornado,
 }:
 
 buildPythonPackage rec {

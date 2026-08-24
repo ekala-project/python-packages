@@ -1,10 +1,10 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, poetry-core
-, poetry-dynamic-versioning
-, typing-extensions
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  poetry-core,
+  poetry-dynamic-versioning,
+  typing-extensions,
 }:
 
 buildPythonPackage rec {

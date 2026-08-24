@@ -1,13 +1,13 @@
-{ buildPythonPackage
-, fetchPypi
-, pkg-config
-, setuptools
-, libjpeg
-, libpng
-, libtiff
-, libwebp
-, numpy
-,
+{
+  buildPythonPackage,
+  fetchPypi,
+  pkg-config,
+  setuptools,
+  libjpeg,
+  libpng,
+  libtiff,
+  libwebp,
+  numpy,
 }:
 
 buildPythonPackage rec {

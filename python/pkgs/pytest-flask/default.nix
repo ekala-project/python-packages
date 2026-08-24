@@ -1,14 +1,14 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, # build-system
-  setuptools-scm
-, # buildInputs
-  pytest
-, # dependencies
-  flask
-, werkzeug
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  # build-system
+  setuptools-scm,
+  # buildInputs
+  pytest,
+  # dependencies
+  flask,
+  werkzeug,
 }:
 
 buildPythonPackage (finalAttrs: {

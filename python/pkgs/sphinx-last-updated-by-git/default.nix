@@ -1,11 +1,11 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, setuptools
-, sphinx
-, gitpython
-, gitMinimal
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  setuptools,
+  sphinx,
+  gitpython,
+  gitMinimal,
 }:
 buildPythonPackage (finalAttrs: {
   pname = "sphinx-last-updated-by-git";

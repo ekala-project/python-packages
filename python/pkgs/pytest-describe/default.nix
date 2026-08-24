@@ -1,11 +1,11 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, # build-system
-  uv-build
-, # dependencies
-  pytest
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  # build-system
+  uv-build,
+  # dependencies
+  pytest,
 }:
 
 let

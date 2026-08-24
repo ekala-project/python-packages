@@ -1,10 +1,10 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, hatchling
-, hanzidentifier
-, zhon
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  hatchling,
+  hanzidentifier,
+  zhon,
 }:
 
 buildPythonPackage rec {

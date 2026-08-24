@@ -41,8 +41,8 @@ buildPythonPackage rec {
     urllib3
   ]
   ++ pyjwt.optional-dependencies.crypto;
-pythonRelaxDeps = [ "cryptography" ];
-pythonImportsCheck = [ "auth0" ];
+  pythonRelaxDeps = [ "cryptography" ];
+  pythonImportsCheck = [ "auth0" ];
 
   meta = {
     description = "Auth0 Python SDK";

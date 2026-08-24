@@ -1,11 +1,11 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, setuptools
-, sybil
-, pytest
-, mpi
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  setuptools,
+  sybil,
+  pytest,
+  mpi,
 }:
 
 buildPythonPackage rec {

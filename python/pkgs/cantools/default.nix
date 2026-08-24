@@ -1,16 +1,16 @@
-{ lib
-, argparse-addons
-, bitstruct
-, buildPythonPackage
-, python-can
-, crccheck
-, diskcache
-, fetchPypi
-, matplotlib
-, setuptools
-, setuptools-scm
-, textparser
-,
+{
+  lib,
+  argparse-addons,
+  bitstruct,
+  buildPythonPackage,
+  python-can,
+  crccheck,
+  diskcache,
+  fetchPypi,
+  matplotlib,
+  setuptools,
+  setuptools-scm,
+  textparser,
 }:
 
 buildPythonPackage (finalAttrs: {

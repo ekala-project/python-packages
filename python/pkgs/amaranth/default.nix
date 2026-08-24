@@ -1,12 +1,12 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, pdm-backend
-, jschon
-, pyvcd
-, jinja2
-, git
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  pdm-backend,
+  jschon,
+  pyvcd,
+  jinja2,
+  git,
 }:
 
 buildPythonPackage rec {

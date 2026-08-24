@@ -1,11 +1,11 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, setuptools
-, click
-, icalendar
-, tzdata
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  setuptools,
+  click,
+  icalendar,
+  tzdata,
 }:
 
 buildPythonPackage rec {

@@ -1,12 +1,12 @@
-{ lib
-, arrow
-, bson
-, buildPythonPackage
-, django
-, django-picklefield
-, fetchFromGitHub
-, poetry-core
-,
+{
+  lib,
+  arrow,
+  bson,
+  buildPythonPackage,
+  django,
+  django-picklefield,
+  fetchFromGitHub,
+  poetry-core,
 }:
 
 buildPythonPackage rec {

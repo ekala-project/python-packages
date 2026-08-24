@@ -1,10 +1,10 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, hatch-fancy-pypi-readme
-, hatch-vcs
-, hatchling
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  hatch-fancy-pypi-readme,
+  hatch-vcs,
+  hatchling,
 }:
 
 buildPythonPackage rec {

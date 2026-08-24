@@ -1,12 +1,12 @@
-{ lib
-, buildPythonPackage
-, chardet
-, fetchPypi
-, lml
-, pyexcel-io
-, setuptools
-, texttable
-,
+{
+  lib,
+  buildPythonPackage,
+  chardet,
+  fetchPypi,
+  lml,
+  pyexcel-io,
+  setuptools,
+  texttable,
 }:
 
 buildPythonPackage rec {

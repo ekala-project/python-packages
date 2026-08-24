@@ -1,8 +1,8 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, pybind11
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  pybind11,
 }:
 
 buildPythonPackage rec {

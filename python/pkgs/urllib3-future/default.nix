@@ -1,18 +1,18 @@
-{ brotli
-, brotlicffi
-, buildPythonPackage
-, fetchFromGitHub
-, hatchling
-, h11
-, isPyPy
-, jh2
-, lib
-, python-socks
-, pythonOlder
-, qh3
-, wsproto
-, zstandard
-,
+{
+  brotli,
+  brotlicffi,
+  buildPythonPackage,
+  fetchFromGitHub,
+  hatchling,
+  h11,
+  isPyPy,
+  jh2,
+  lib,
+  python-socks,
+  pythonOlder,
+  qh3,
+  wsproto,
+  zstandard,
 }:
 
 buildPythonPackage rec {

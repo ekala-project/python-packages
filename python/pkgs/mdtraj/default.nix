@@ -1,20 +1,20 @@
-{ lib
-, stdenv
-, buildPythonPackage
-, fetchFromGitHub
-, fetchpatch
-, llvmPackages
-, zlib
-, cython
-, numpy
-, setuptools
-, versioneer
-, wheel
-, netcdf4
-, packaging
-, pyparsing
-, scipy
-,
+{
+  lib,
+  stdenv,
+  buildPythonPackage,
+  fetchFromGitHub,
+  fetchpatch,
+  llvmPackages,
+  zlib,
+  cython,
+  numpy,
+  setuptools,
+  versioneer,
+  wheel,
+  netcdf4,
+  packaging,
+  pyparsing,
+  scipy,
 }:
 
 buildPythonPackage rec {

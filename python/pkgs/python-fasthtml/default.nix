@@ -1,27 +1,27 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, # build-system
-  setuptools
-, # dependencies
-  beautifulsoup4
-, fastcore
-, fastlite
-, httpx
-, itsdangerous
-, oauthlib
-, python-dateutil
-, python-multipart
-, starlette
-, uvicorn
-, # optional-dependencies
-  ipython
-, lxml
-, monsterui ? null
-, # TODO: package
-  pyjwt
-, pysymbol-llm ? null
-, # TODO: package
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  # build-system
+  setuptools,
+  # dependencies
+  beautifulsoup4,
+  fastcore,
+  fastlite,
+  httpx,
+  itsdangerous,
+  oauthlib,
+  python-dateutil,
+  python-multipart,
+  starlette,
+  uvicorn,
+  # optional-dependencies
+  ipython,
+  lxml,
+  monsterui ? null,
+  # TODO: package
+  pyjwt,
+  pysymbol-llm ? null, # TODO: package
 }:
 
 buildPythonPackage (finalAttrs: {

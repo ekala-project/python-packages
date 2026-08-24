@@ -1,17 +1,17 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, # build-system
-  setuptools
-, # dependencies
-  cloudpickle
-, ipykernel
-, ipython
-, jupyter-client
-, pyxdg
-, pyzmq
-, wurlitzer
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  # build-system
+  setuptools,
+  # dependencies
+  cloudpickle,
+  ipykernel,
+  ipython,
+  jupyter-client,
+  pyxdg,
+  pyzmq,
+  wurlitzer,
 }:
 
 buildPythonPackage (finalAttrs: {

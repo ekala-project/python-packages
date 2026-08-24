@@ -1,11 +1,11 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, # build inputs
-  tqdm
-, portalocker
-, boto3
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  # build inputs
+  tqdm,
+  portalocker,
+  boto3,
 }:
 let
   pname = "iopath";

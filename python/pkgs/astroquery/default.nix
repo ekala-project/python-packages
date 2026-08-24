@@ -1,15 +1,15 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, astropy
-, requests
-, keyring
-, beautifulsoup4
-, html5lib
-, pyvo
-, astropy-helpers
-, setuptools
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  astropy,
+  requests,
+  keyring,
+  beautifulsoup4,
+  html5lib,
+  pyvo,
+  astropy-helpers,
+  setuptools,
 }:
 
 buildPythonPackage rec {

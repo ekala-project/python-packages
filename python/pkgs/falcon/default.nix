@@ -1,11 +1,11 @@
-{ lib
-, buildPythonPackage
-, isPyPy
-, fetchFromGitHub
-, # build-system
-  cython
-, setuptools
-,
+{
+  lib,
+  buildPythonPackage,
+  isPyPy,
+  fetchFromGitHub,
+  # build-system
+  cython,
+  setuptools,
 }:
 
 buildPythonPackage rec {

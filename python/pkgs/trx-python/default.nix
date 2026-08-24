@@ -1,13 +1,13 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, cython
-, setuptools
-, setuptools-scm
-, deepdiff
-, nibabel
-, numpy
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  cython,
+  setuptools,
+  setuptools-scm,
+  deepdiff,
+  nibabel,
+  numpy,
 }:
 
 buildPythonPackage rec {

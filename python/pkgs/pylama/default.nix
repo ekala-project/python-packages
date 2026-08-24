@@ -1,18 +1,18 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, replaceVars
-, git
-, eradicate
-, mccabe
-, mypy
-, pycodestyle
-, pydocstyle
-, pyflakes
-, vulture
-, setuptools_80
-, pylint
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  replaceVars,
+  git,
+  eradicate,
+  mccabe,
+  mypy,
+  pycodestyle,
+  pydocstyle,
+  pyflakes,
+  vulture,
+  setuptools_80,
+  pylint,
 }:
 
 let

@@ -1,12 +1,12 @@
-{ lib
-, fetchFromGitHub
-, buildPythonPackage
-, # build-system
-  setuptools-scm
-, # dependencies
-  numpy
-, scipy
-,
+{
+  lib,
+  fetchFromGitHub,
+  buildPythonPackage,
+  # build-system
+  setuptools-scm,
+  # dependencies
+  numpy,
+  scipy,
 }:
 
 buildPythonPackage (finalAttrs: {

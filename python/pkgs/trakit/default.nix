@@ -1,13 +1,13 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, # build dependencies
-  poetry-core
-, # dependencies
-  babelfish
-, pyyaml
-, rebulk
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  # build dependencies
+  poetry-core,
+  # dependencies
+  babelfish,
+  pyyaml,
+  rebulk,
 }:
 
 buildPythonPackage rec {

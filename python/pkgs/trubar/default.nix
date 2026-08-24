@@ -1,11 +1,11 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, setuptools
-, gitUpdater
-, libcst
-, pyyaml
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  setuptools,
+  gitUpdater,
+  libcst,
+  pyyaml,
 }:
 
 buildPythonPackage rec {

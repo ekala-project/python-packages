@@ -1,8 +1,8 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, python-lsp-server
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  python-lsp-server,
 }:
 
 buildPythonPackage rec {

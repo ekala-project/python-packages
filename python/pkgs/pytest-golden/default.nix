@@ -1,12 +1,12 @@
-{ lib
-, atomicwrites
-, buildPythonPackage
-, fetchFromGitHub
-, ruamel-yaml
-, hatchling
-, pytest
-, testfixtures
-,
+{
+  lib,
+  atomicwrites,
+  buildPythonPackage,
+  fetchFromGitHub,
+  ruamel-yaml,
+  hatchling,
+  pytest,
+  testfixtures,
 }:
 
 buildPythonPackage rec {

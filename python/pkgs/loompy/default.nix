@@ -1,14 +1,14 @@
-{ lib
-, fetchPypi
-, buildPythonPackage
-, h5py
-, numpy
-, scipy
-, numba
-, click
-, numpy-groupies
-, setuptools
-,
+{
+  lib,
+  fetchPypi,
+  buildPythonPackage,
+  h5py,
+  numpy,
+  scipy,
+  numba,
+  click,
+  numpy-groupies,
+  setuptools,
 }:
 let
   finalAttrs = {

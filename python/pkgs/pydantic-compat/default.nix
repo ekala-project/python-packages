@@ -1,12 +1,12 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, hatch-vcs
-, hatchling
-, gitMinimal
-, importlib-metadata
-, pydantic
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  hatch-vcs,
+  hatchling,
+  gitMinimal,
+  importlib-metadata,
+  pydantic,
 }:
 
 buildPythonPackage rec {

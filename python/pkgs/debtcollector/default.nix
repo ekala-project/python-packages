@@ -1,13 +1,13 @@
-{ lib
-, buildPythonPackage
-, fetchPypi
-, openstackdocstheme
-, pbr
-, six
-, setuptools
-, sphinxHook
-, wrapt
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  openstackdocstheme,
+  pbr,
+  six,
+  setuptools,
+  sphinxHook,
+  wrapt,
 }:
 
 buildPythonPackage rec {

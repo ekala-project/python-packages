@@ -1,21 +1,21 @@
-{ lib
-, buildPythonPackage
-, fetchPypi
-, # build-system
-  pbr
-, setuptools
-, # dependencies
-  debtcollector
-, iso8601
-, netaddr
-, oslo-i18n
-, packaging
-, psutil
-, pyparsing
-, pytz
-, libxcrypt-legacy
-, stdenv
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  # build-system
+  pbr,
+  setuptools,
+  # dependencies
+  debtcollector,
+  iso8601,
+  netaddr,
+  oslo-i18n,
+  packaging,
+  psutil,
+  pyparsing,
+  pytz,
+  libxcrypt-legacy,
+  stdenv,
 }:
 
 buildPythonPackage rec {

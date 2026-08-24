@@ -1,10 +1,10 @@
-{ lib
-, stdenv
-, fetchFromGitHub
-, buildPythonPackage
-, isPyPy
-, pkgs
-,
+{
+  lib,
+  stdenv,
+  fetchFromGitHub,
+  buildPythonPackage,
+  isPyPy,
+  pkgs,
 }:
 
 buildPythonPackage rec {

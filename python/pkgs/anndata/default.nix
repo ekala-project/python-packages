@@ -1,21 +1,21 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, # build-system
-  hatch-vcs
-, hatchling
-, # dependencies
-  array-api-compat
-, h5py
-, legacy-api-wrap
-, natsort
-, numpy
-, pandas
-, scipy
-, scverse-misc
-, zarr
-, pytest-xdist
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  # build-system
+  hatch-vcs,
+  hatchling,
+  # dependencies
+  array-api-compat,
+  h5py,
+  legacy-api-wrap,
+  natsort,
+  numpy,
+  pandas,
+  scipy,
+  scverse-misc,
+  zarr,
+  pytest-xdist,
 }:
 
 buildPythonPackage (finalAttrs: {

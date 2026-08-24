@@ -1,13 +1,13 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, # build-system
-  hatch-nodejs-version
-, hatchling
-, # dependencies
-  anyio
-, pycrdt
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  # build-system
+  hatch-nodejs-version,
+  hatchling,
+  # dependencies
+  anyio,
+  pycrdt,
 }:
 
 buildPythonPackage (finalAttrs: {

@@ -1,12 +1,12 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, poetry-core
-, chardet
-, cssselect
-, lxml
-, lxml-html-clean
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  poetry-core,
+  chardet,
+  cssselect,
+  lxml,
+  lxml-html-clean,
 }:
 
 buildPythonPackage rec {

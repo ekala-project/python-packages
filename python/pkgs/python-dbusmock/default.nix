@@ -1,17 +1,17 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, runCommand
-, # build-system
-  setuptools
-, setuptools-scm
-, # dependencies
-  dbus-python
-, # checks
-  doCheck ? true
-, dbus
-, bluez
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  runCommand,
+  # build-system
+  setuptools,
+  setuptools-scm,
+  # dependencies
+  dbus-python,
+  # checks
+  doCheck ? true,
+  dbus,
+  bluez,
 }:
 
 let

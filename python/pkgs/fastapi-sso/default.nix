@@ -1,13 +1,13 @@
-{ lib
-, buildPythonPackage
-, fastapi
-, fetchFromGitHub
-, httpx
-, oauthlib
-, poetry-core
-, pydantic
-, pyjwt
-,
+{
+  lib,
+  buildPythonPackage,
+  fastapi,
+  fetchFromGitHub,
+  httpx,
+  oauthlib,
+  poetry-core,
+  pydantic,
+  pyjwt,
 }:
 
 buildPythonPackage (finalAttrs: {

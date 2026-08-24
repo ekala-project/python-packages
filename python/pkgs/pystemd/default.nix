@@ -1,13 +1,13 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, setuptools
-, systemd
-, lxml
-, psutil
-, pkg-config
-, cython
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  setuptools,
+  systemd,
+  lxml,
+  psutil,
+  pkg-config,
+  cython,
 }:
 
 buildPythonPackage rec {

@@ -1,15 +1,15 @@
-{ lib
-, buildPythonPackage
-, fetchPypi
-, # build-system
-  hatchling
-, hatch-vcs
-, iso3166
-, pycountry
-, rstr
-, # optional-dependencies
-  pydantic
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  # build-system
+  hatchling,
+  hatch-vcs,
+  iso3166,
+  pycountry,
+  rstr,
+  # optional-dependencies
+  pydantic,
 }:
 
 buildPythonPackage rec {

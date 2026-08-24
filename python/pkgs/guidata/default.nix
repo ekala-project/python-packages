@@ -1,18 +1,18 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, # build-system
-  setuptools
-, # dependencies
-  distutils
-, h5py
-, numpy
-, qtpy
-, requests
-, tomli
-, # passthru.tests
-  guidata
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  # build-system
+  setuptools,
+  # dependencies
+  distutils,
+  h5py,
+  numpy,
+  qtpy,
+  requests,
+  tomli,
+  # passthru.tests
+  guidata,
 }:
 
 buildPythonPackage rec {

@@ -1,21 +1,21 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, # build-system
-  hatchling
-, uv-dynamic-versioning
-, # dependencies
-  click
-, distro
-, gevent
-, jinja2
-, packaging
-, paramiko
-, pydantic
-, python-dateutil
-, typeguard
-, types-paramiko
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  # build-system
+  hatchling,
+  uv-dynamic-versioning,
+  # dependencies
+  click,
+  distro,
+  gevent,
+  jinja2,
+  packaging,
+  paramiko,
+  pydantic,
+  python-dateutil,
+  typeguard,
+  types-paramiko,
 }:
 
 buildPythonPackage (finalAttrs: {

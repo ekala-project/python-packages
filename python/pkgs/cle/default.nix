@@ -1,16 +1,16 @@
-{ lib
-, archinfo
-, buildPythonPackage
-, cart
-, cffi
-, fetchFromGitHub
-, pefile
-, pyelftools
-, pyvex
-, setuptools
-, sortedcontainers
-, nix-update-script
-,
+{
+  lib,
+  archinfo,
+  buildPythonPackage,
+  cart,
+  cffi,
+  fetchFromGitHub,
+  pefile,
+  pyelftools,
+  pyvex,
+  setuptools,
+  sortedcontainers,
+  nix-update-script,
 }:
 
 let
@@ -62,4 +62,3 @@ buildPythonPackage rec {
     maintainers = [ ];
   };
 }
-

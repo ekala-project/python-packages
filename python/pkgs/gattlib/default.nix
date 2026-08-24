@@ -1,16 +1,16 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, fetchpatch
-, replaceVars
-, # build
-  pkg-config
-, python
-, setuptools
-, bluez
-, boost
-, glib
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  fetchpatch,
+  replaceVars,
+  # build
+  pkg-config,
+  python,
+  setuptools,
+  bluez,
+  boost,
+  glib,
 }:
 
 buildPythonPackage rec {

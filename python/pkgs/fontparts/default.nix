@@ -1,15 +1,15 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, # build-system
-  setuptools
-, setuptools-scm
-, # dependencies
-  fonttools
-, defcon
-, fontmath
-, booleanoperations
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  # build-system
+  setuptools,
+  setuptools-scm,
+  # dependencies
+  fonttools,
+  defcon,
+  fontmath,
+  booleanoperations,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -50,7 +50,6 @@ buildPythonPackage (finalAttrs: {
 
   pythonImportsCheck = [ "fontParts" ];
 
-
   meta = {
     description = "API for interacting with the parts of fonts during the font development process";
     homepage = "https://github.com/robotools/fontParts";
@@ -58,5 +57,3 @@ buildPythonPackage (finalAttrs: {
     maintainers = [ ];
   };
 })
-
-

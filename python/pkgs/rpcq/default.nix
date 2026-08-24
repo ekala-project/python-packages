@@ -1,12 +1,12 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, msgpack
-, python-rapidjson
-, pyzmq
-, ruamel-yaml
-, setuptools
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  msgpack,
+  python-rapidjson,
+  pyzmq,
+  ruamel-yaml,
+  setuptools,
 }:
 
 buildPythonPackage rec {

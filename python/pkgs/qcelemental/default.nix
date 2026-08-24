@@ -1,18 +1,18 @@
-{ stdenv
-, buildPythonPackage
-, lib
-, fetchPypi
-, poetry-core
-, setuptools
-, setuptools-scm
-, ipykernel
-, networkx
-, numpy
-, packaging
-, pint
-, pydantic
-, scipy
-,
+{
+  stdenv,
+  buildPythonPackage,
+  lib,
+  fetchPypi,
+  poetry-core,
+  setuptools,
+  setuptools-scm,
+  ipykernel,
+  networkx,
+  numpy,
+  packaging,
+  pint,
+  pydantic,
+  scipy,
 }:
 
 buildPythonPackage rec {

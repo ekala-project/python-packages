@@ -1,10 +1,10 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, fetchpatch2
-, setuptools-scm
-, flake8
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  fetchpatch2,
+  setuptools-scm,
+  flake8,
 }:
 
 buildPythonPackage rec {

@@ -1,12 +1,12 @@
-{ lib
-, buildPythonPackage
-, fetchPypi
-, jupyter-packaging
-, ipywidgets
-, numpy
-, six
-, traittypes
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  jupyter-packaging,
+  ipywidgets,
+  numpy,
+  six,
+  traittypes,
 }:
 
 buildPythonPackage rec {

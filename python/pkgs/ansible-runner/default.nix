@@ -1,15 +1,15 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, # build-system
-  setuptools
-, setuptools-scm
-, # dependencies
-  packaging
-, pexpect
-, python-daemon
-, pyyaml
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  # build-system
+  setuptools,
+  setuptools-scm,
+  # dependencies
+  packaging,
+  pexpect,
+  python-daemon,
+  pyyaml,
 }:
 
 buildPythonPackage rec {

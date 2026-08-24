@@ -1,17 +1,17 @@
-{ lib
-, fetchFromGitHub
-, fetchpatch
-, # Python bits:
-  buildPythonPackage
-, setuptools
-, docopt
-, flask
-, markdown
-, path-and-address
-, pygments
-, requests
-, tabulate
-,
+{
+  lib,
+  fetchFromGitHub,
+  fetchpatch,
+  # Python bits:
+  buildPythonPackage,
+  setuptools,
+  docopt,
+  flask,
+  markdown,
+  path-and-address,
+  pygments,
+  requests,
+  tabulate,
 }:
 
 buildPythonPackage (finalAttrs: {

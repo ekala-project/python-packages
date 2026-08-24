@@ -1,15 +1,15 @@
-{ lib
-, buildPythonPackage
-, click
-, colorama
-, deprecation-alias
-, domdf-python-tools
-, fetchPypi
-, flit-core
-, mistletoe
-, psutil
-, typing-extensions
-,
+{
+  lib,
+  buildPythonPackage,
+  click,
+  colorama,
+  deprecation-alias,
+  domdf-python-tools,
+  fetchPypi,
+  flit-core,
+  mistletoe,
+  psutil,
+  typing-extensions,
 }:
 
 buildPythonPackage rec {

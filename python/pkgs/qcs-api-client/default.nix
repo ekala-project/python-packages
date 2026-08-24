@@ -1,21 +1,21 @@
-{ lib
-, attrs
-, buildPythonPackage
-, fetchFromGitHub
-, fetchpatch
-, httpx
-, iso8601
-, poetry-core
-, pydantic
-, pydantic-settings
-, pyjwt
-, python-dateutil
-, pythonAtLeast
-, tenacity
-, retrying
-, rfc3339
-, toml
-,
+{
+  lib,
+  attrs,
+  buildPythonPackage,
+  fetchFromGitHub,
+  fetchpatch,
+  httpx,
+  iso8601,
+  poetry-core,
+  pydantic,
+  pydantic-settings,
+  pyjwt,
+  python-dateutil,
+  pythonAtLeast,
+  tenacity,
+  retrying,
+  rfc3339,
+  toml,
 }:
 
 buildPythonPackage rec {

@@ -1,14 +1,14 @@
-{ lib
-, buildPythonPackage
-, fetchPypi
-, # build
-  cython
-, setuptools-scm
-, setuptools_80
-, # propagates
-  defcon
-, fonttools
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  # build
+  cython,
+  setuptools-scm,
+  setuptools_80,
+  # propagates
+  defcon,
+  fonttools,
 }:
 
 let

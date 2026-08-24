@@ -1,19 +1,19 @@
-{ lib
-, buildPythonPackage
-, dnspython
-, fetchPypi
-, geoip2
-, ipython
-, isPyPy
-, setuptools
-, praw
-, pyenchant
-, pytz
-, sqlalchemy
-, xmltodict
-, importlib-metadata
-, packaging
-,
+{
+  lib,
+  buildPythonPackage,
+  dnspython,
+  fetchPypi,
+  geoip2,
+  ipython,
+  isPyPy,
+  setuptools,
+  praw,
+  pyenchant,
+  pytz,
+  sqlalchemy,
+  xmltodict,
+  importlib-metadata,
+  packaging,
 }:
 
 buildPythonPackage rec {

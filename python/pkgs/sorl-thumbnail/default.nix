@@ -1,10 +1,10 @@
-{ lib
-, buildPythonPackage
-, fetchPypi
-, setuptools
-, setuptools-scm
-, django
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  setuptools,
+  setuptools-scm,
+  django,
 }:
 
 buildPythonPackage rec {

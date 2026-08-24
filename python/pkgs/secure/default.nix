@@ -1,10 +1,10 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, maya
-, requests
-, setuptools
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  maya,
+  requests,
+  setuptools,
 }:
 
 buildPythonPackage rec {

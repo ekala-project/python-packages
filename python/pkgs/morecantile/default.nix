@@ -1,14 +1,14 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, # build-system
-  hatchling
-, # dependencies
-  attrs
-, click
-, pydantic
-, pyproj
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  # build-system
+  hatchling,
+  # dependencies
+  attrs,
+  click,
+  pydantic,
+  pyproj,
 }:
 
 buildPythonPackage rec {

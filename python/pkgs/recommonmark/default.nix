@@ -1,11 +1,11 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, commonmark
-, docutils
-, sphinx
-, isPy3k
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  commonmark,
+  docutils,
+  sphinx,
+  isPy3k,
 }:
 
 buildPythonPackage rec {

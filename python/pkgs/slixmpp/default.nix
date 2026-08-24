@@ -1,22 +1,22 @@
-{ lib
-, buildPythonPackage
-, aiodns
-, aiohttp
-, cargo
-, cryptography
-, defusedxml
-, emoji
-, fetchFromCodeberg
-, gnupg
-, pyasn1
-, pyasn1-modules
-, replaceVars
-, rustc
-, rustPlatform
-, setuptools
-, setuptools-rust
-, setuptools-scm
-,
+{
+  lib,
+  buildPythonPackage,
+  aiodns,
+  aiohttp,
+  cargo,
+  cryptography,
+  defusedxml,
+  emoji,
+  fetchFromCodeberg,
+  gnupg,
+  pyasn1,
+  pyasn1-modules,
+  replaceVars,
+  rustc,
+  rustPlatform,
+  setuptools,
+  setuptools-rust,
+  setuptools-scm,
 }:
 
 buildPythonPackage (finalAttrs: {

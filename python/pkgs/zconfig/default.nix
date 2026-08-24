@@ -1,12 +1,12 @@
-{ lib
-, stdenv
-, buildPythonPackage
-, docutils
-, fetchPypi
-, manuel
-, setuptools
-, zope-testrunner
-,
+{
+  lib,
+  stdenv,
+  buildPythonPackage,
+  docutils,
+  fetchPypi,
+  manuel,
+  setuptools,
+  zope-testrunner,
 }:
 
 buildPythonPackage rec {

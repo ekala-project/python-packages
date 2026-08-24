@@ -49,7 +49,7 @@ buildPythonPackage rec {
     semantic-version
     attrs
   ];
-pythonImportsCheck = [ "asdf" ];
+  pythonImportsCheck = [ "asdf" ];
 
   meta = {
     description = "Python tools to handle ASDF files";

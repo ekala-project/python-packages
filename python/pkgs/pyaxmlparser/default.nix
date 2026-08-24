@@ -1,10 +1,10 @@
-{ buildPythonPackage
-, lib
-, lxml
-, click
-, fetchFromGitHub
-, asn1crypto
-,
+{
+  buildPythonPackage,
+  lib,
+  lxml,
+  click,
+  fetchFromGitHub,
+  asn1crypto,
 }:
 
 buildPythonPackage rec {

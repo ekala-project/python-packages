@@ -19,7 +19,7 @@ buildPythonPackage rec {
   };
 
   propagatedBuildInputs = [ aiohttp ];
-pythonImportsCheck = [ "aiohttp_basicauth" ];
+  pythonImportsCheck = [ "aiohttp_basicauth" ];
 
   meta = {
     description = "HTTP basic authentication middleware for aiohttp 3.0";

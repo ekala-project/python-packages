@@ -1,10 +1,10 @@
-{ argparse-dataclass
-, buildPythonPackage
-, dpath
-, fetchFromGitHub
-, pyyaml
-, uv-build
-,
+{
+  argparse-dataclass,
+  buildPythonPackage,
+  dpath,
+  fetchFromGitHub,
+  pyyaml,
+  uv-build,
 }:
 
 buildPythonPackage rec {

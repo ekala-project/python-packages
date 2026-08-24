@@ -1,19 +1,19 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, # nativeBuildInputs
-  cmake
-, # build-system
-  pybind11
-, nanobind
-, ninja
-, scikit-build-core
-, setuptools-scm
-, # buildInputs
-  boost
-, # dependencies
-  numpy
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  # nativeBuildInputs
+  cmake,
+  # build-system
+  pybind11,
+  nanobind,
+  ninja,
+  scikit-build-core,
+  setuptools-scm,
+  # buildInputs
+  boost,
+  # dependencies
+  numpy,
 }:
 
 buildPythonPackage (finalAttrs: {

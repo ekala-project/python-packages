@@ -1,14 +1,14 @@
-{ lib
-, fetchFromGitHub
-, buildPythonPackage
-, setuptools_80
-, django
-, coreschema
-, itypes
-, uritemplate
-, requests
-, standard-cgi
-,
+{
+  lib,
+  fetchFromGitHub,
+  buildPythonPackage,
+  setuptools_80,
+  django,
+  coreschema,
+  itypes,
+  uritemplate,
+  requests,
+  standard-cgi,
 }:
 
 buildPythonPackage rec {

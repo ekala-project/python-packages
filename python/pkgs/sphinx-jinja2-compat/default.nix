@@ -1,12 +1,12 @@
-{ buildPythonPackage
-, fetchPypi
-, whey
-, whey-pth
-, jinja2
-, markupsafe
-, standard-imghdr
-, lib
-,
+{
+  buildPythonPackage,
+  fetchPypi,
+  whey,
+  whey-pth,
+  jinja2,
+  markupsafe,
+  standard-imghdr,
+  lib,
 }:
 buildPythonPackage rec {
   pname = "sphinx-jinja2-compat";

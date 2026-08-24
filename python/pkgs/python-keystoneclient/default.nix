@@ -1,12 +1,12 @@
-{ lib
-, buildPythonPackage
-, fetchPypi
-, keystoneauth1
-, oslo-config
-, oslo-serialization
-, pbr
-, setuptools
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  keystoneauth1,
+  oslo-config,
+  oslo-serialization,
+  pbr,
+  setuptools,
 }:
 
 buildPythonPackage rec {

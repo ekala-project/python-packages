@@ -1,10 +1,10 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, setuptools
-, setuptools-scm
-, pillow
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  setuptools,
+  setuptools-scm,
+  pillow,
 }:
 
 buildPythonPackage (finalAttrs: {

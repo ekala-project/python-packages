@@ -1,11 +1,11 @@
-{ lib
-, aiohttp
-, buildPythonPackage
-, fetchFromGitHub
-, pymodbus-repl
-, pyserial
-, setuptools
-,
+{
+  lib,
+  aiohttp,
+  buildPythonPackage,
+  fetchFromGitHub,
+  pymodbus-repl,
+  pyserial,
+  setuptools,
 }:
 
 buildPythonPackage (finalAttrs: {

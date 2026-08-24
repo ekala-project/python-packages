@@ -1,10 +1,10 @@
-{ buildPythonPackage
-, fetchPypi
-, setuptools
-, cryptography
-, python-dateutil
-, pbr
-,
+{
+  buildPythonPackage,
+  fetchPypi,
+  setuptools,
+  cryptography,
+  python-dateutil,
+  pbr,
 }:
 
 buildPythonPackage rec {

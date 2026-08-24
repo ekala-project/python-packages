@@ -1,13 +1,13 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, cython
-, pkg-config
-, setuptools
-, setuptools-scm
-, fuse3
-, trio
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  cython,
+  pkg-config,
+  setuptools,
+  setuptools-scm,
+  fuse3,
+  trio,
 }:
 
 buildPythonPackage rec {

@@ -1,17 +1,17 @@
-{ lib
-, bcrypt
-, buildPythonPackage
-, cheroot
-, defusedxml
-, fetchFromGitHub
-, jinja2
-, json5
-, lxml
-, passlib
-, python-pam
-, pyyaml
-, setuptools
-,
+{
+  lib,
+  bcrypt,
+  buildPythonPackage,
+  cheroot,
+  defusedxml,
+  fetchFromGitHub,
+  jinja2,
+  json5,
+  lxml,
+  passlib,
+  python-pam,
+  pyyaml,
+  setuptools,
 }:
 
 buildPythonPackage (finalAttrs: {

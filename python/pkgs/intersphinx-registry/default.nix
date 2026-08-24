@@ -1,18 +1,18 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, # build-system
-  flit-core
-, # optional-dependencies
-  platformdirs
-, requests
-, requests-cache
-, sphinx
-, mypy
-, pytest
-, pytest-xdist
-, types-requests
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  # build-system
+  flit-core,
+  # optional-dependencies
+  platformdirs,
+  requests,
+  requests-cache,
+  sphinx,
+  mypy,
+  pytest,
+  pytest-xdist,
+  types-requests,
 }:
 
 buildPythonPackage (finalAttrs: {

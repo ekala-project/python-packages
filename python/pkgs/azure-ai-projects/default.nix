@@ -1,14 +1,14 @@
-{ lib
-, buildPythonPackage
-, fetchPypi
-, setuptools
-, wheel
-, azure-core
-, azure-storage-blob
-, azure-ai-agents
-, isodate
-, typing-extensions
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  setuptools,
+  wheel,
+  azure-core,
+  azure-storage-blob,
+  azure-ai-agents,
+  isodate,
+  typing-extensions,
 }:
 
 buildPythonPackage rec {

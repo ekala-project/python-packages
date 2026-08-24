@@ -1,14 +1,14 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, # build-system
-  setuptools
-, # dependencies
-  aiohttp
-, defusedxml
-, python-didl-lite
-, voluptuous
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  # build-system
+  setuptools,
+  # dependencies
+  aiohttp,
+  defusedxml,
+  python-didl-lite,
+  voluptuous,
 }:
 
 buildPythonPackage rec {

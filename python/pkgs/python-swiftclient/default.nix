@@ -1,17 +1,17 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, pbr
-, setuptools
-, installShellFiles
-, # direct
-  python-keystoneclient
-, versionCheckHook
-, # docs
-  sphinxHook
-, openstackdocstheme
-, sphinxcontrib-apidoc
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  pbr,
+  setuptools,
+  installShellFiles,
+  # direct
+  python-keystoneclient,
+  versionCheckHook,
+  # docs
+  sphinxHook,
+  openstackdocstheme,
+  sphinxcontrib-apidoc,
 }:
 
 buildPythonPackage (finalAttrs: {

@@ -1,10 +1,10 @@
-{ lib
-, buildPythonPackage
-, charset-normalizer
-, fetchFromGitHub
-, poetry-core
-, six
-,
+{
+  lib,
+  buildPythonPackage,
+  charset-normalizer,
+  fetchFromGitHub,
+  poetry-core,
+  six,
 }:
 
 buildPythonPackage rec {

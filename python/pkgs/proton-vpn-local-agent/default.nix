@@ -1,12 +1,12 @@
-{ lib
-, stdenv
-, fetchFromGitHub
-, python
-, buildPythonPackage
-, cargo
-, pypaInstallHook
-, rustPlatform
-,
+{
+  lib,
+  stdenv,
+  fetchFromGitHub,
+  python,
+  buildPythonPackage,
+  cargo,
+  pypaInstallHook,
+  rustPlatform,
 }:
 
 buildPythonPackage rec {

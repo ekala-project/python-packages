@@ -1,15 +1,15 @@
-{ lib
-, buildPythonPackage
-, fetchPypi
-, # build-system
-  setuptools
-, setuptools-scm9
-, # dependencies
-  attrdict
-, pyyaml
-, svgwrite
-, six
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  # build-system
+  setuptools,
+  setuptools-scm9,
+  # dependencies
+  attrdict,
+  pyyaml,
+  svgwrite,
+  six,
 }:
 
 buildPythonPackage (finalAttrs: {

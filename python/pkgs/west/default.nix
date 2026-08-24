@@ -1,12 +1,12 @@
-{ lib
-, buildPythonPackage
-, setuptools
-, colorama
-, fetchPypi
-, packaging
-, pykwalify
-, pyyaml
-,
+{
+  lib,
+  buildPythonPackage,
+  setuptools,
+  colorama,
+  fetchPypi,
+  packaging,
+  pykwalify,
+  pyyaml,
 }:
 
 buildPythonPackage rec {

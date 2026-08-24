@@ -1,9 +1,9 @@
-{ buildPythonPackage
-, lib
-, fetchPypi
-, setuptools_80
-, xstatic-jquery
-,
+{
+  buildPythonPackage,
+  lib,
+  fetchPypi,
+  setuptools_80,
+  xstatic-jquery,
 }:
 
 buildPythonPackage (finalAttrs: {

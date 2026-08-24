@@ -1,21 +1,21 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, # frontend
-  nodejs
-, yarn-berry_3
-, # build-system
-  hatchling
-, hatch-build-scripts
-, hatch-jupyter-builder
-, hatch-nodejs-version
-, jupyterlab
-, # dependencies
-  ipywidgets
-, numpy
-, traitlets
-, traittypes
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  # frontend
+  nodejs,
+  yarn-berry_3,
+  # build-system
+  hatchling,
+  hatch-build-scripts,
+  hatch-jupyter-builder,
+  hatch-nodejs-version,
+  jupyterlab,
+  # dependencies
+  ipywidgets,
+  numpy,
+  traitlets,
+  traittypes,
 }:
 
 buildPythonPackage (finalAttrs: {

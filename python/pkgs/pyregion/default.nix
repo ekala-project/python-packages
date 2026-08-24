@@ -1,16 +1,16 @@
-{ buildPythonPackage
-, fetchFromGitHub
-, # needed to build
-  cython
-, extension-helpers
-, oldest-supported-numpy
-, setuptools
-, setuptools-scm
-, # needed to run
-  astropy
-, numpy
-, pyparsing
-,
+{
+  buildPythonPackage,
+  fetchFromGitHub,
+  # needed to build
+  cython,
+  extension-helpers,
+  oldest-supported-numpy,
+  setuptools,
+  setuptools-scm,
+  # needed to run
+  astropy,
+  numpy,
+  pyparsing,
 }:
 
 buildPythonPackage (finalAttrs: {

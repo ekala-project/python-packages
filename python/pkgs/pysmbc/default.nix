@@ -1,9 +1,9 @@
-{ lib
-, buildPythonPackage
-, fetchPypi
-, samba
-, pkg-config
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  samba,
+  pkg-config,
 }:
 
 buildPythonPackage rec {

@@ -1,12 +1,12 @@
-{ lib
-, attrs
-, buildPythonPackage
-, fetchFromGitHub
-, python-dateutil
-, requests
-, setuptools
-, sphinx-rtd-theme
-,
+{
+  lib,
+  attrs,
+  buildPythonPackage,
+  fetchFromGitHub,
+  python-dateutil,
+  requests,
+  setuptools,
+  sphinx-rtd-theme,
 }:
 
 buildPythonPackage (finalAttrs: {

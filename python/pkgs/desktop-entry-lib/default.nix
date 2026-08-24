@@ -1,8 +1,8 @@
-{ lib
-, buildPythonPackage
-, fetchFromCodeberg
-, setuptools
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromCodeberg,
+  setuptools,
 }:
 
 buildPythonPackage rec {

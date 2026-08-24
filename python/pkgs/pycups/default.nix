@@ -1,11 +1,11 @@
-{ stdenv
-, lib
-, buildPythonPackage
-, fetchPypi
-, cups
-, libiconv
-, setuptools
-,
+{
+  stdenv,
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  cups,
+  libiconv,
+  setuptools,
 }:
 
 buildPythonPackage (finalAttrs: {

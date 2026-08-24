@@ -1,13 +1,13 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, setuptools
-, setuptools-scm
-, coreutils
-, jinja2
-, pandas
-, pyparsing
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  setuptools,
+  setuptools-scm,
+  coreutils,
+  jinja2,
+  pandas,
+  pyparsing,
 }:
 
 buildPythonPackage rec {

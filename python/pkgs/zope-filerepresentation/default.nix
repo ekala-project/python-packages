@@ -1,10 +1,10 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, setuptools
-, zope-schema
-, zope-interface
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  setuptools,
+  zope-schema,
+  zope-interface,
 }:
 
 buildPythonPackage rec {

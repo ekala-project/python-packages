@@ -1,13 +1,13 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, # build-system
-  setuptools
-, # dependencies
-  lazy
-, requests
-, tomli
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  # build-system
+  setuptools,
+  # dependencies
+  lazy,
+  requests,
+  tomli,
 }:
 
 buildPythonPackage (finalAttrs: {

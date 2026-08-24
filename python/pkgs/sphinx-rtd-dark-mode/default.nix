@@ -1,10 +1,10 @@
-{ buildPythonPackage
-, fetchFromGitHub
-, lib
-, setuptools
-, sphinx
-, sphinx-rtd-theme
-,
+{
+  buildPythonPackage,
+  fetchFromGitHub,
+  lib,
+  setuptools,
+  sphinx,
+  sphinx-rtd-theme,
 }:
 
 buildPythonPackage rec {

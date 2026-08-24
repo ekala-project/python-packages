@@ -1,26 +1,26 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, # build-system
-  hatchling
-, # dependencies
-  typing-extensions
-, # optional-dependencies
-  fastapi
-, httpx
-, python-multipart
-, starlette
-, django
-, flask
-, werkzeug
-, sanic
-, aiohttp
-, yarl
-, quart
-, chalice
-, litestar
-, sanic-testing
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  # build-system
+  hatchling,
+  # dependencies
+  typing-extensions,
+  # optional-dependencies
+  fastapi,
+  httpx,
+  python-multipart,
+  starlette,
+  django,
+  flask,
+  werkzeug,
+  sanic,
+  aiohttp,
+  yarl,
+  quart,
+  chalice,
+  litestar,
+  sanic-testing,
 }:
 
 buildPythonPackage (finalAttrs: {

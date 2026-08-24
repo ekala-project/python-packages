@@ -1,11 +1,11 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, pkg-config
-, setuptools
-, pango
-, cython
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  pkg-config,
+  setuptools,
+  pango,
+  cython,
 }:
 
 buildPythonPackage rec {

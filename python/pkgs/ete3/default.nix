@@ -1,11 +1,11 @@
-{ lib
-, buildPythonPackage
-, fetchPypi
-, numpy
-, six
-, setuptools
-, legacy-cgi
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  numpy,
+  six,
+  setuptools,
+  legacy-cgi,
 }:
 
 buildPythonPackage rec {

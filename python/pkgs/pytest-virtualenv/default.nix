@@ -1,12 +1,12 @@
-{ lib
-, buildPythonPackage
-, importlib-metadata
-, pytest
-, pytest-fixture-config
-, pytest-shutil
-, setuptools
-, virtualenv
-,
+{
+  lib,
+  buildPythonPackage,
+  importlib-metadata,
+  pytest,
+  pytest-fixture-config,
+  pytest-shutil,
+  setuptools,
+  virtualenv,
 }:
 
 buildPythonPackage {

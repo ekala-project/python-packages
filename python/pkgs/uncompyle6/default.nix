@@ -1,11 +1,11 @@
-{ lib
-, buildPythonPackage
-, fetchPypi
-, fetchpatch
-, setuptools
-, spark-parser
-, xdis
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  fetchpatch,
+  setuptools,
+  spark-parser,
+  xdis,
 }:
 
 buildPythonPackage rec {

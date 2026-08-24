@@ -1,13 +1,13 @@
-{ lib
-, stdenv
-, bitstring
-, buildPythonPackage
-, buildPackages
-, cffi
-, fetchPypi
-, pycparser
-, setuptools
-,
+{
+  lib,
+  stdenv,
+  bitstring,
+  buildPythonPackage,
+  buildPackages,
+  cffi,
+  fetchPypi,
+  pycparser,
+  setuptools,
 }:
 
 buildPythonPackage (finalAttrs: {

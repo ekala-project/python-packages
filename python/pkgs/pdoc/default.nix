@@ -1,14 +1,14 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, setuptools
-, jinja2
-, pygments
-, markupsafe
-, nix-update-script
-, markdown2
-, pydantic
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  setuptools,
+  jinja2,
+  pygments,
+  markupsafe,
+  nix-update-script,
+  markdown2,
+  pydantic,
 }:
 
 buildPythonPackage rec {

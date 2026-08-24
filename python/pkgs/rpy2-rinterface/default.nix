@@ -1,17 +1,17 @@
-{ lib
-, buildPythonPackage
-, fetchurl
-, isPyPy
-, R
-, xz
-, bzip2
-, zlib
-, zstd
-, icu
-, libdeflate
-, setuptools
-, cffi
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchurl,
+  isPyPy,
+  R,
+  xz,
+  bzip2,
+  zlib,
+  zstd,
+  icu,
+  libdeflate,
+  setuptools,
+  cffi,
 }:
 
 buildPythonPackage rec {

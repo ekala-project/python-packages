@@ -1,12 +1,12 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, setuptools
-, certifi
-, numpy
-, sgp4
-, jplephem
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  setuptools,
+  certifi,
+  numpy,
+  sgp4,
+  jplephem,
 }:
 
 buildPythonPackage rec {

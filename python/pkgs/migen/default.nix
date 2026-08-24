@@ -1,10 +1,10 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, setuptools
-, colorama
-, unstableGitUpdater
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  setuptools,
+  colorama,
+  unstableGitUpdater,
 }:
 
 buildPythonPackage {

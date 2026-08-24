@@ -1,10 +1,10 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, setuptools
-, sphinx
-, sphinx-last-updated-by-git
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  setuptools,
+  sphinx,
+  sphinx-last-updated-by-git,
 }:
 let
   pname = "sphinx-sitemap";

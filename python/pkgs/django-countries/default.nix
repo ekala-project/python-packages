@@ -1,14 +1,14 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, # build-system
-  uv-build
-, # dependencies
-  asgiref
-, typing-extensions
-, # tests
-  django
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  # build-system
+  uv-build,
+  # dependencies
+  asgiref,
+  typing-extensions,
+  # tests
+  django,
 }:
 
 buildPythonPackage rec {

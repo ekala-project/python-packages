@@ -1,17 +1,17 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, click
-, click-default-group
-, python-dateutil
-, sqlite-fts4
-, tabulate
-, pip
-, pluggy
-, testers
-, sqlite-utils
-, setuptools
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  click,
+  click-default-group,
+  python-dateutil,
+  sqlite-fts4,
+  tabulate,
+  pip,
+  pluggy,
+  testers,
+  sqlite-utils,
+  setuptools,
 }:
 buildPythonPackage (finalAttrs: {
   pname = "sqlite-utils";

@@ -1,10 +1,10 @@
-{ buildPythonPackage
-, fetchFromGitHub
-, libmysqlclient
-, packaging
-, lib
-, setuptools
-,
+{
+  buildPythonPackage,
+  fetchFromGitHub,
+  libmysqlclient,
+  packaging,
+  lib,
+  setuptools,
 }:
 
 buildPythonPackage rec {

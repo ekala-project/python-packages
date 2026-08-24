@@ -1,8 +1,8 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, sortedcontainers
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  sortedcontainers,
 }:
 
 buildPythonPackage rec {

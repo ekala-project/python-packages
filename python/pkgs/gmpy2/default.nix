@@ -1,12 +1,12 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, isPyPy
-, setuptools
-, gmp
-, mpfr
-, libmpc
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  isPyPy,
+  setuptools,
+  gmp,
+  mpfr,
+  libmpc,
 }:
 
 buildPythonPackage (finalAttrs: {

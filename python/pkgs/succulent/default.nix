@@ -1,13 +1,13 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, flask
-, lxml
-, numpy
-, pandas
-, pyyaml
-, poetry-core
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  flask,
+  lxml,
+  numpy,
+  pandas,
+  pyyaml,
+  poetry-core,
 }:
 
 buildPythonPackage rec {

@@ -1,17 +1,17 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, setuptools
-, zope-event
-, zope-hookable
-, zope-interface
-, persistent
-, zope-configuration
-, zope-i18nmessageid
-, zope-location
-, zope-proxy
-, zope-security
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  setuptools,
+  zope-event,
+  zope-hookable,
+  zope-interface,
+  persistent,
+  zope-configuration,
+  zope-i18nmessageid,
+  zope-location,
+  zope-proxy,
+  zope-security,
 }:
 
 buildPythonPackage rec {

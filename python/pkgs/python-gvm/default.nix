@@ -1,12 +1,12 @@
-{ lib
-, buildPythonPackage
-, defusedxml
-, fetchFromGitHub
-, lxml
-, paramiko
-, poetry-core
-, typing-extensions
-,
+{
+  lib,
+  buildPythonPackage,
+  defusedxml,
+  fetchFromGitHub,
+  lxml,
+  paramiko,
+  poetry-core,
+  typing-extensions,
 }:
 
 buildPythonPackage (finalAttrs: {

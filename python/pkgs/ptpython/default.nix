@@ -1,12 +1,12 @@
-{ lib
-, buildPythonPackage
-, fetchPypi
-, appdirs
-, jedi
-, prompt-toolkit
-, pygments
-, setuptools
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  appdirs,
+  jedi,
+  prompt-toolkit,
+  pygments,
+  setuptools,
 }:
 
 buildPythonPackage rec {

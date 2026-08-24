@@ -1,10 +1,10 @@
-{ buildPythonPackage
-, fetchFromGitHub
-, lib
-, setuptools
-, dom-toml
-, whey
-,
+{
+  buildPythonPackage,
+  fetchFromGitHub,
+  lib,
+  setuptools,
+  dom-toml,
+  whey,
 }:
 
 buildPythonPackage rec {

@@ -1,12 +1,12 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, fetchpatch2
-, setuptools
-, pkg-config
-, libnl
-, net-tools
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  fetchpatch2,
+  setuptools,
+  pkg-config,
+  libnl,
+  net-tools,
 }:
 
 buildPythonPackage rec {

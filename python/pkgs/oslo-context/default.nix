@@ -1,10 +1,10 @@
-{ lib
-, buildPythonPackage
-, fetchPypi
-, pbr
-, setuptools
-, typing-extensions
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  pbr,
+  setuptools,
+  typing-extensions,
 }:
 
 buildPythonPackage rec {

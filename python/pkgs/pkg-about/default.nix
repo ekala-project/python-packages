@@ -1,12 +1,12 @@
-{ lib
-, buildPythonPackage
-, fetchPypi
-, build
-, importlib-metadata
-, setuptools
-, packaging
-, typing-extensions
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  build,
+  importlib-metadata,
+  setuptools,
+  packaging,
+  typing-extensions,
 }:
 
 buildPythonPackage rec {

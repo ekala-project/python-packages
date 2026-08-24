@@ -1,9 +1,9 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, cffi
-, setuptools
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  cffi,
+  setuptools,
 }:
 
 buildPythonPackage (finalAttrs: {

@@ -1,12 +1,12 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, impacket
-, netaddr
-, poetry-core
-, pypykatz
-, rich
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  impacket,
+  netaddr,
+  poetry-core,
+  pypykatz,
+  rich,
 }:
 
 buildPythonPackage (finalAttrs: {

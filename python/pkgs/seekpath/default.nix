@@ -1,12 +1,12 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, flit-core
-, numpy
-, scipy
-, spglib
-, glibcLocales
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  flit-core,
+  numpy,
+  scipy,
+  spglib,
+  glibcLocales,
 }:
 
 buildPythonPackage rec {

@@ -1,9 +1,9 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, rustPlatform
-, nix-update-script
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  rustPlatform,
+  nix-update-script,
 }:
 
 buildPythonPackage rec {

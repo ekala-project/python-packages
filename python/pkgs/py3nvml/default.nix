@@ -1,10 +1,10 @@
-{ lib
-, addDriverRunpath
-, buildPythonPackage
-, fetchFromGitHub
-, setuptools
-, xmltodict
-,
+{
+  lib,
+  addDriverRunpath,
+  buildPythonPackage,
+  fetchFromGitHub,
+  setuptools,
+  xmltodict,
 }:
 
 buildPythonPackage (finalAttrs: {

@@ -1,8 +1,8 @@
-{ buildPythonPackage
-, fetchFromGitHub
-, lib
-, unstableGitUpdater
-,
+{
+  buildPythonPackage,
+  fetchFromGitHub,
+  lib,
+  unstableGitUpdater,
 }:
 
 buildPythonPackage {

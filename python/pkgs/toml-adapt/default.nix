@@ -1,10 +1,10 @@
-{ lib
-, buildPythonPackage
-, click
-, fetchFromGitHub
-, poetry-core
-, toml
-,
+{
+  lib,
+  buildPythonPackage,
+  click,
+  fetchFromGitHub,
+  poetry-core,
+  toml,
 }:
 
 buildPythonPackage rec {

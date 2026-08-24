@@ -1,12 +1,12 @@
-{ lib
-, attrs
-, buildPythonPackage
-, distro
-, fetchFromGitHub
-, jsonschema
-, setuptools
-, zipfile2
-,
+{
+  lib,
+  attrs,
+  buildPythonPackage,
+  distro,
+  fetchFromGitHub,
+  jsonschema,
+  setuptools,
+  zipfile2,
 }:
 
 buildPythonPackage rec {

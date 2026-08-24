@@ -1,10 +1,10 @@
-{ lib
-, buildPythonPackage
-, fetchPypi
-, jupyter-packaging
-, setuptools
-, jupyter-server
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  jupyter-packaging,
+  setuptools,
+  jupyter-server,
 }:
 
 buildPythonPackage rec {

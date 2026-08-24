@@ -1,11 +1,11 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, # build-system
-  setuptools
-, setuptools-scm
-, pyparsing
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  # build-system
+  setuptools,
+  setuptools-scm,
+  pyparsing,
 }:
 
 buildPythonPackage (finalAttrs: {

@@ -1,10 +1,10 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, scikit-build-core
-, cmake
-, ninja
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  scikit-build-core,
+  cmake,
+  ninja,
 }:
 
 buildPythonPackage rec {

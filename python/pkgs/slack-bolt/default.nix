@@ -1,32 +1,32 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, # build-system
-  setuptools
-, # dependencies
-  slack-sdk
-, # optional-dependencies
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  # build-system
+  setuptools,
+  # dependencies
+  slack-sdk,
+  # optional-dependencies
   # async
-  aiohttp
-, websockets
-, # adapter
-  bottle
-, chalice
-, cherrypy
-, django
-, falcon
-, fastapi
-, flask
-, gunicorn
-, pyramid
-, sanic
-, sanic-testing
-, starlette
-, tornado
-, uvicorn
-, websocket-client
-, werkzeug
-,
+  aiohttp,
+  websockets,
+  # adapter
+  bottle,
+  chalice,
+  cherrypy,
+  django,
+  falcon,
+  fastapi,
+  flask,
+  gunicorn,
+  pyramid,
+  sanic,
+  sanic-testing,
+  starlette,
+  tornado,
+  uvicorn,
+  websocket-client,
+  werkzeug,
 }:
 
 buildPythonPackage (finalAttrs: {

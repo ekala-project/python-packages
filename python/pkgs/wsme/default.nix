@@ -1,12 +1,12 @@
-{ lib
-, buildPythonPackage
-, fetchPypi
-, pbr
-, setuptools
-, importlib-metadata
-, simplegeneric
-, netaddr
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  pbr,
+  setuptools,
+  importlib-metadata,
+  simplegeneric,
+  netaddr,
 }:
 
 buildPythonPackage (finalAttrs: {

@@ -1,23 +1,23 @@
-{ lib
-, awesomeversion
-, buildPythonPackage
-, cacert
-, docutils
-, dulwich
-, fetchFromGitHub
-, installShellFiles
-, jq
-, lxml
-, packaging
-, platformdirs
-, pycurl
-, pygit2
-, pythonOlder
-, setuptools
-, structlog
-, tornado
-, zstandard
-,
+{
+  lib,
+  awesomeversion,
+  buildPythonPackage,
+  cacert,
+  docutils,
+  dulwich,
+  fetchFromGitHub,
+  installShellFiles,
+  jq,
+  lxml,
+  packaging,
+  platformdirs,
+  pycurl,
+  pygit2,
+  pythonOlder,
+  setuptools,
+  structlog,
+  tornado,
+  zstandard,
 }:
 
 buildPythonPackage (finalAttrs: {

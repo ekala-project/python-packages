@@ -1,11 +1,11 @@
-{ lib
-, stdenv
-, buildPythonPackage
-, fetchFromGitLab
-, openssl
-, setuptools
-, swig
-,
+{
+  lib,
+  stdenv,
+  buildPythonPackage,
+  fetchFromGitLab,
+  openssl,
+  setuptools,
+  swig,
 }:
 
 buildPythonPackage (finalAttrs: {

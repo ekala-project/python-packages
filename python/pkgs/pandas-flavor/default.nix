@@ -1,12 +1,12 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, # build-system
-  setuptools-scm
-, # dependencies
-  pandas
-, xarray
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  # build-system
+  setuptools-scm,
+  # dependencies
+  pandas,
+  xarray,
 }:
 
 buildPythonPackage (finalAttrs: {

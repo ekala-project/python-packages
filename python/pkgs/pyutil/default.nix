@@ -1,11 +1,11 @@
-{ lib
-, buildPythonPackage
-, fetchPypi
-, isPyPy
-, setuptools
-, simplejson
-, versioneer
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  isPyPy,
+  setuptools,
+  simplejson,
+  versioneer,
 }:
 
 buildPythonPackage rec {

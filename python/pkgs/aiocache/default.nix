@@ -1,13 +1,13 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, # build-system
-  setuptools
-, # optional-dependencies
-  redis
-, aiomcache
-, msgpack
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  # build-system
+  setuptools,
+  # optional-dependencies
+  redis,
+  aiomcache,
+  msgpack,
 }:
 
 buildPythonPackage rec {

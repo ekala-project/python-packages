@@ -1,9 +1,9 @@
-{ lib
-, buildPythonPackage
-, pkgs
-, # build-system
-  setuptools
-,
+{
+  lib,
+  buildPythonPackage,
+  pkgs,
+  # build-system
+  setuptools,
 }:
 
 buildPythonPackage {

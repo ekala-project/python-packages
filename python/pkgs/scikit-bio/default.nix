@@ -1,22 +1,22 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, # build-system
-  cython
-, numpy
-, setuptools
-, # dependencies
-  array-api-compat
-, biom-format
-, decorator
-, h5py
-, natsort
-, pandas
-, patsy
-, requests
-, scipy
-, statsmodels
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  # build-system
+  cython,
+  numpy,
+  setuptools,
+  # dependencies
+  array-api-compat,
+  biom-format,
+  decorator,
+  h5py,
+  natsort,
+  pandas,
+  patsy,
+  requests,
+  scipy,
+  statsmodels,
 }:
 
 buildPythonPackage (finalAttrs: {

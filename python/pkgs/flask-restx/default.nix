@@ -1,16 +1,16 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, # build-system
-  setuptools
-, # dependencies
-  aniso8601
-, flask
-, importlib-resources
-, jsonschema
-, pytz
-, werkzeug
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  # build-system
+  setuptools,
+  # dependencies
+  aniso8601,
+  flask,
+  importlib-resources,
+  jsonschema,
+  pytz,
+  werkzeug,
 }:
 
 buildPythonPackage (finalAttrs: {

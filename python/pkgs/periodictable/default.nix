@@ -1,10 +1,10 @@
-{ lib
-, fetchFromGitHub
-, buildPythonPackage
-, setuptools
-, numpy
-, pyparsing
-,
+{
+  lib,
+  fetchFromGitHub,
+  buildPythonPackage,
+  setuptools,
+  numpy,
+  pyparsing,
 }:
 
 buildPythonPackage rec {

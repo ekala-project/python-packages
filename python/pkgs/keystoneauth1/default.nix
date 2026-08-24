@@ -1,18 +1,18 @@
-{ lib
-, buildPythonPackage
-, fetchPypi
-, betamax
-, iso8601
-, lxml
-, oauthlib
-, os-service-types
-, pyyaml
-, requests
-, requests-kerberos
-, setuptools
-, stevedore
-, typing-extensions
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  betamax,
+  iso8601,
+  lxml,
+  oauthlib,
+  os-service-types,
+  pyyaml,
+  requests,
+  requests-kerberos,
+  setuptools,
+  stevedore,
+  typing-extensions,
 }:
 
 buildPythonPackage rec {

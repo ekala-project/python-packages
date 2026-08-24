@@ -1,8 +1,8 @@
-{ buildPythonPackage
-, lib
-, fetchPypi
-, setuptools_80
-,
+{
+  buildPythonPackage,
+  lib,
+  fetchPypi,
+  setuptools_80,
 }:
 
 buildPythonPackage (finalAttrs: {

@@ -1,10 +1,10 @@
-{ lib
-, buildPythonPackage
-, fetchPypi
-, setuptools
-, pyyaml
-, zope-dottedname
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  setuptools,
+  pyyaml,
+  zope-dottedname,
 }:
 
 buildPythonPackage rec {

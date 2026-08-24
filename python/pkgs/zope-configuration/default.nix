@@ -1,11 +1,11 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, setuptools
-, zope-i18nmessageid
-, zope-interface
-, zope-schema
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  setuptools,
+  zope-i18nmessageid,
+  zope-interface,
+  zope-schema,
 }:
 
 buildPythonPackage rec {
@@ -35,7 +35,6 @@ buildPythonPackage rec {
 
   pythonImportsCheck = [ "zope.configuration" ];
 
-
   unittestFlagsArray = [ "configuration/tests" ];
 
   pythonNamespaces = [ "zope" ];
@@ -47,4 +46,3 @@ buildPythonPackage rec {
     maintainers = [ ];
   };
 }
-

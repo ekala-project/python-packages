@@ -1,14 +1,14 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, graphene
-, graphql-core
-, django
-, djangorestframework
-, promise
-, text-unidecode
-, py
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  graphene,
+  graphql-core,
+  django,
+  djangorestframework,
+  promise,
+  text-unidecode,
+  py,
 }:
 
 buildPythonPackage rec {

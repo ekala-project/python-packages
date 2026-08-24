@@ -1,9 +1,9 @@
-{ lib
-, buildPythonPackage
-, cssutils
-, cython
-, fetchPypi
-,
+{
+  lib,
+  buildPythonPackage,
+  cssutils,
+  cython,
+  fetchPypi,
 }:
 
 buildPythonPackage rec {

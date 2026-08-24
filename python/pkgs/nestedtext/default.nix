@@ -1,10 +1,10 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, flit-core
-, inform
-, nestedtext
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  flit-core,
+  inform,
+  nestedtext,
 }:
 
 buildPythonPackage (finalAttrs: {

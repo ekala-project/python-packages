@@ -1,12 +1,12 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, hatchling
-, django
-, redis
-, rq
-, prometheus-client
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  hatchling,
+  django,
+  redis,
+  rq,
+  prometheus-client,
 }:
 
 buildPythonPackage (finalAttrs: {

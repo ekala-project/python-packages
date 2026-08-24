@@ -1,15 +1,15 @@
-{ lib
-, buildPythonPackage
-, fetchPypi
-, netaddr
-, oslo-i18n
-, pbr
-, pyyaml
-, requests
-, rfc3986
-, setuptools
-, stevedore
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  netaddr,
+  oslo-i18n,
+  pbr,
+  pyyaml,
+  requests,
+  rfc3986,
+  setuptools,
+  stevedore,
 }:
 
 buildPythonPackage rec {

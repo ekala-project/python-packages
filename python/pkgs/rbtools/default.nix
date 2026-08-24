@@ -1,20 +1,20 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, isPy3k
-, setuptools
-, colorama
-, texttable
-, tqdm
-, certifi
-, housekeeping
-, puremagic
-, pydiffx
-, typing-extensions
-, importlib-metadata
-, importlib-resources
-, packaging
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  isPy3k,
+  setuptools,
+  colorama,
+  texttable,
+  tqdm,
+  certifi,
+  housekeeping,
+  puremagic,
+  pydiffx,
+  typing-extensions,
+  importlib-metadata,
+  importlib-resources,
+  packaging,
 }:
 
 buildPythonPackage rec {

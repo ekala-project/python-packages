@@ -1,14 +1,14 @@
-{ lib
-, buildPythonPackage
-, etcd
-, fetchFromGitHub
-, grpcio
-, hypothesis
-, protobuf
-, six
-, tenacity
-, setuptools
-,
+{
+  lib,
+  buildPythonPackage,
+  etcd,
+  fetchFromGitHub,
+  grpcio,
+  hypothesis,
+  protobuf,
+  six,
+  tenacity,
+  setuptools,
 }:
 
 buildPythonPackage (finalAttrs: {

@@ -1,11 +1,11 @@
-{ lib
-, attrs
-, buildPythonPackage
-, fetchFromGitHub
-, okonomiyaki
-, setuptools
-, six
-,
+{
+  lib,
+  attrs,
+  buildPythonPackage,
+  fetchFromGitHub,
+  okonomiyaki,
+  setuptools,
+  six,
 }:
 
 buildPythonPackage rec {

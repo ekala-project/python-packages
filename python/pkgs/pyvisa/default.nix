@@ -1,10 +1,10 @@
-{ lib
-, fetchFromGitHub
-, buildPythonPackage
-, setuptools-scm
-, setuptools
-, typing-extensions
-,
+{
+  lib,
+  fetchFromGitHub,
+  buildPythonPackage,
+  setuptools-scm,
+  setuptools,
+  typing-extensions,
 }:
 
 buildPythonPackage rec {

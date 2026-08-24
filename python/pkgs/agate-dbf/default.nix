@@ -1,11 +1,11 @@
-{ lib
-, fetchFromGitHub
-, buildPythonPackage
-, setuptools
-, agate
-, dbf
-, dbfread
-,
+{
+  lib,
+  fetchFromGitHub,
+  buildPythonPackage,
+  setuptools,
+  agate,
+  dbf,
+  dbfread,
 }:
 
 buildPythonPackage (finalAttrs: {

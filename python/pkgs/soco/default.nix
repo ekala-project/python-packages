@@ -1,13 +1,13 @@
-{ lib
-, appdirs
-, buildPythonPackage
-, fetchFromGitHub
-, ifaddr
-, lxml
-, requests
-, setuptools
-, xmltodict
-,
+{
+  lib,
+  appdirs,
+  buildPythonPackage,
+  fetchFromGitHub,
+  ifaddr,
+  lxml,
+  requests,
+  setuptools,
+  xmltodict,
 }:
 
 buildPythonPackage rec {

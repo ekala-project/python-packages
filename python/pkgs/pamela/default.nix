@@ -1,12 +1,12 @@
-{ lib
-, stdenv
-, buildPythonPackage
-, fetchPypi
-, pkgs
-, # build-system
-  setuptools
-, setuptools-scm
-,
+{
+  lib,
+  stdenv,
+  buildPythonPackage,
+  fetchPypi,
+  pkgs,
+  # build-system
+  setuptools,
+  setuptools-scm,
 }:
 
 buildPythonPackage (finalAttrs: {

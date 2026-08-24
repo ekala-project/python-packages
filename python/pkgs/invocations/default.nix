@@ -1,16 +1,16 @@
-{ lib
-, buildPythonPackage
-, build
-, blessed
-, fetchFromGitHub
-, invoke
-, releases
-, semantic-version
-, tabulate
-, tqdm
-, twine
-, setuptools
-,
+{
+  lib,
+  buildPythonPackage,
+  build,
+  blessed,
+  fetchFromGitHub,
+  invoke,
+  releases,
+  semantic-version,
+  tabulate,
+  tqdm,
+  twine,
+  setuptools,
 }:
 
 buildPythonPackage rec {

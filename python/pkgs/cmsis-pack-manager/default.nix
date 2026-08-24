@@ -1,12 +1,12 @@
-{ lib
-, fetchFromGitHub
-, rustPlatform
-, cffi
-, libiconv
-, buildPythonPackage
-, appdirs
-, pyyaml
-,
+{
+  lib,
+  fetchFromGitHub,
+  rustPlatform,
+  cffi,
+  libiconv,
+  buildPythonPackage,
+  appdirs,
+  pyyaml,
 }:
 
 buildPythonPackage rec {

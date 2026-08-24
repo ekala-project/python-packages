@@ -1,11 +1,11 @@
-{ lib
-, callPackage
-, stdenvNoCC
-, fetchFromGitHub
-, installShellFiles
-, python3
-, makeWrapper
-,
+{
+  lib,
+  callPackage,
+  stdenvNoCC,
+  fetchFromGitHub,
+  installShellFiles,
+  python3,
+  makeWrapper,
 }:
 
 let

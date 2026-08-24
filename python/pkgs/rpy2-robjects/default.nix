@@ -1,17 +1,17 @@
-{ lib
-, buildPythonPackage
-, fetchurl
-, fetchpatch2
-, isPyPy
-, R
-, rpy2-rinterface
-, ipython
-, jinja2
-, numpy
-, pandas
-, setuptools
-, tzlocal
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchurl,
+  fetchpatch2,
+  isPyPy,
+  R,
+  rpy2-rinterface,
+  ipython,
+  jinja2,
+  numpy,
+  pandas,
+  setuptools,
+  tzlocal,
 }:
 
 buildPythonPackage rec {

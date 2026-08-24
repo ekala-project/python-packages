@@ -1,10 +1,10 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, paramiko
-, requests
-, setuptools
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  paramiko,
+  requests,
+  setuptools,
 }:
 
 buildPythonPackage (finalAttrs: {

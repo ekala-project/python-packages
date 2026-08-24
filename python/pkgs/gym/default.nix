@@ -1,13 +1,13 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, # build-system
-  setuptools
-, # dependencies
-  cloudpickle
-, numpy
-, gym-notices
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  # build-system
+  setuptools,
+  # dependencies
+  cloudpickle,
+  numpy,
+  gym-notices,
 }:
 
 buildPythonPackage rec {

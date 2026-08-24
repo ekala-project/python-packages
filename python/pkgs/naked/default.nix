@@ -1,12 +1,12 @@
-{ buildPythonPackage
-, python
-, fetchFromGitHub
-, lib
-, requests
-, pyyaml
-, setuptools
-, wheel
-,
+{
+  buildPythonPackage,
+  python,
+  fetchFromGitHub,
+  lib,
+  requests,
+  pyyaml,
+  setuptools,
+  wheel,
 }:
 
 buildPythonPackage rec {

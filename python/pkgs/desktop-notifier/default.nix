@@ -1,11 +1,11 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, setuptools
-, bidict
-, packaging
-, typing-extensions
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  setuptools,
+  bidict,
+  packaging,
+  typing-extensions,
 }:
 
 buildPythonPackage rec {

@@ -1,12 +1,12 @@
-{ lib
-, buildPythonPackage
-, fetchPypi
-, meson-python
-, ninja
-, poppler
-, pkg-config
-, pybind11
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  meson-python,
+  ninja,
+  poppler,
+  pkg-config,
+  pybind11,
 }:
 
 buildPythonPackage rec {

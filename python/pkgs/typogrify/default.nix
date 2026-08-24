@@ -1,9 +1,9 @@
-{ lib
-, buildPythonPackage
-, fetchPypi
-, smartypants
-, hatchling
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  smartypants,
+  hatchling,
 }:
 
 buildPythonPackage rec {

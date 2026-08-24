@@ -1,12 +1,12 @@
-{ lib
-, buildPythonPackage
-, fetchPypi
-, django
-, funcy
-, redis
-, six
-, setuptools
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  django,
+  funcy,
+  redis,
+  six,
+  setuptools,
 }:
 
 buildPythonPackage rec {

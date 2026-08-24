@@ -1,13 +1,13 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, # build-system
-  pdm-backend
-, # dependencies
-  hypercorn
-, quart
-, trio
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  # build-system
+  pdm-backend,
+  # dependencies
+  hypercorn,
+  quart,
+  trio,
 }:
 
 buildPythonPackage rec {

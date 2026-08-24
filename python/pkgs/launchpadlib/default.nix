@@ -1,12 +1,12 @@
-{ lib
-, buildPythonPackage
-, fetchPypi
-, httplib2
-, lazr-restfulclient
-, lazr-uri
-, setuptools_80
-, six
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  httplib2,
+  lazr-restfulclient,
+  lazr-uri,
+  setuptools_80,
+  six,
 }:
 
 buildPythonPackage rec {

@@ -1,10 +1,10 @@
-{ buildPythonPackage
-, fetchFromGitHub
-, flask
-, flit-core
-, lib
-, sqlalchemy
-,
+{
+  buildPythonPackage,
+  fetchFromGitHub,
+  flask,
+  flit-core,
+  lib,
+  sqlalchemy,
 }:
 
 buildPythonPackage rec {

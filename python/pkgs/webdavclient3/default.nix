@@ -1,11 +1,11 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, lxml
-, python-dateutil
-, requests
-, setuptools
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  lxml,
+  python-dateutil,
+  requests,
+  setuptools,
 }:
 
 buildPythonPackage rec {

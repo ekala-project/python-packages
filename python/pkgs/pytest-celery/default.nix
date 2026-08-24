@@ -1,21 +1,21 @@
-{ lib
-, buildPythonPackage
-, debugpy
-, docker
-, fetchFromGitHub
-, kombu
-, poetry-core
-, psutil
-, pytest-docker-tools
-, pytest
-, tenacity
-, # optional dependencies
-  redis
-, python-memcached
-, boto3
-, botocore
-, urllib3
-,
+{
+  lib,
+  buildPythonPackage,
+  debugpy,
+  docker,
+  fetchFromGitHub,
+  kombu,
+  poetry-core,
+  psutil,
+  pytest-docker-tools,
+  pytest,
+  tenacity,
+  # optional dependencies
+  redis,
+  python-memcached,
+  boto3,
+  botocore,
+  urllib3,
 }:
 
 buildPythonPackage rec {

@@ -1,25 +1,25 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, # build-system
-  setuptools-scm
-, # dependencies
-  capstone
-, cmsis-pack-manager
-, colorama
-, importlib-metadata
-, importlib-resources
-, intelhex
-, intervaltree
-, lark
-, natsort
-, prettytable
-, pyelftools
-, pylink-square
-, pyusb
-, pyyaml
-, typing-extensions
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  # build-system
+  setuptools-scm,
+  # dependencies
+  capstone,
+  cmsis-pack-manager,
+  colorama,
+  importlib-metadata,
+  importlib-resources,
+  intelhex,
+  intervaltree,
+  lark,
+  natsort,
+  prettytable,
+  pyelftools,
+  pylink-square,
+  pyusb,
+  pyyaml,
+  typing-extensions,
 }:
 
 buildPythonPackage rec {

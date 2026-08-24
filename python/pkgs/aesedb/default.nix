@@ -1,13 +1,13 @@
-{ lib
-, aiowinreg
-, buildPythonPackage
-, colorama
-, fetchFromGitHub
-, pycryptodomex
-, setuptools
-, tqdm
-, unicrypto
-,
+{
+  lib,
+  aiowinreg,
+  buildPythonPackage,
+  colorama,
+  fetchFromGitHub,
+  pycryptodomex,
+  setuptools,
+  tqdm,
+  unicrypto,
 }:
 
 buildPythonPackage rec {

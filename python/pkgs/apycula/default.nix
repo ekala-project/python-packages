@@ -1,13 +1,13 @@
-{ lib
-, buildPythonPackage
-, fetchPypi
-, # build-system
-  setuptools-scm
-, # dependencies
-  fastcrc
-, msgspec
-, numpy
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  # build-system
+  setuptools-scm,
+  # dependencies
+  fastcrc,
+  msgspec,
+  numpy,
 }:
 
 buildPythonPackage (finalAttrs: {

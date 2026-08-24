@@ -1,12 +1,12 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, setuptools-scm
-, pytest
-, decopatch
-, makefun
-, six
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  setuptools-scm,
+  pytest,
+  decopatch,
+  makefun,
+  six,
 }:
 
 buildPythonPackage rec {

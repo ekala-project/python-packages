@@ -1,19 +1,19 @@
-{ lib
-, fetchFromGitHub
-, buildPythonPackage
-, python
-, pythonAtLeast
-, # build-system
-  setuptools
-, # dependencies
-  btrees
-, persistent
-, transaction
-, zc-lockfile
-, zconfig
-, zodbpickle
-, zope-interface
-,
+{
+  lib,
+  fetchFromGitHub,
+  buildPythonPackage,
+  python,
+  pythonAtLeast,
+  # build-system
+  setuptools,
+  # dependencies
+  btrees,
+  persistent,
+  transaction,
+  zc-lockfile,
+  zconfig,
+  zodbpickle,
+  zope-interface,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -55,7 +55,6 @@ buildPythonPackage (finalAttrs: {
     zope-interface
   ];
 
-
   meta = {
     description = "Zope Object Database: object database and persistence";
     homepage = "https://zodb-docs.readthedocs.io/";
@@ -64,4 +63,3 @@ buildPythonPackage (finalAttrs: {
     maintainers = [ ];
   };
 })
-

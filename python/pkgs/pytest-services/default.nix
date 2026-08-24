@@ -1,13 +1,13 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, psutil
-, pytest
-, requests
-, setuptools-scm
-, toml
-, zc-lockfile
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  psutil,
+  pytest,
+  requests,
+  setuptools-scm,
+  toml,
+  zc-lockfile,
 }:
 
 buildPythonPackage rec {

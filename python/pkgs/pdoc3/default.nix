@@ -1,10 +1,10 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, mako
-, markdown
-, setuptools-scm
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  mako,
+  markdown,
+  setuptools-scm,
 }:
 
 buildPythonPackage rec {

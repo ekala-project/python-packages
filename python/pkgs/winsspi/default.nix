@@ -1,9 +1,9 @@
-{ lib
-, buildPythonPackage
-, fetchPypi
-, setuptools
-, minikerberos
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  setuptools,
+  minikerberos,
 }:
 
 buildPythonPackage (finalAttrs: {

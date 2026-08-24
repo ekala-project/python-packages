@@ -1,12 +1,12 @@
-{ lib
-, buildPythonPackage
-, fetchPypi
-, fetchpatch2
-, setuptools
-, pylint
-, pytest
-, toml
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  fetchpatch2,
+  setuptools,
+  pylint,
+  pytest,
+  toml,
 }:
 
 buildPythonPackage rec {

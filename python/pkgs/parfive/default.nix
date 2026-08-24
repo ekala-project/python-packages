@@ -1,15 +1,15 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, # build-system
-  setuptools-scm
-, # dependencies
-  aiohttp
-, # optional dependencies
-  aioftp
-, # tests
-  tqdm
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  # build-system
+  setuptools-scm,
+  # dependencies
+  aiohttp,
+  # optional dependencies
+  aioftp,
+  # tests
+  tqdm,
 }:
 
 buildPythonPackage (finalAttrs: {

@@ -1,10 +1,10 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, setuptools
-, asn1crypto
-, oscrypto
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  setuptools,
+  asn1crypto,
+  oscrypto,
 }:
 
 buildPythonPackage (finalAttrs: {

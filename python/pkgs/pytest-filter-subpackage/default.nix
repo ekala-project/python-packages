@@ -1,11 +1,11 @@
-{ lib
-, buildPythonPackage
-, fetchPypi
-, pytest
-, pytest-cov-stub
-, pytest-doctestplus
-, setuptools-scm
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  pytest,
+  pytest-cov-stub,
+  pytest-doctestplus,
+  setuptools-scm,
 }:
 
 buildPythonPackage rec {

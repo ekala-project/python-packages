@@ -1,15 +1,15 @@
-{ lib
-, asttokens
-, black
-, buildPythonPackage
-, dirty-equals
-, executing
-, fetchFromGitHub
-, hatchling
-, pytest
-, rich
-, typing-extensions
-,
+{
+  lib,
+  asttokens,
+  black,
+  buildPythonPackage,
+  dirty-equals,
+  executing,
+  fetchFromGitHub,
+  hatchling,
+  pytest,
+  rich,
+  typing-extensions,
 }:
 
 buildPythonPackage rec {

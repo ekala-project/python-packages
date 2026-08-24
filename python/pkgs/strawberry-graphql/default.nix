@@ -1,37 +1,37 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, # build-system
-  uv-build
-, # dependencies
-  cross-web
-, graphql-core
-, python-dateutil
-, typing-extensions
-, # optional-dependencies
-  aiohttp
-, pytest-aiohttp
-, starlette
-, python-multipart
-, protobuf
-, rich
-, libcst
-, typer
-, pygments
-, uvicorn
-, django
-, asgiref
-, channels
-, flask
-, opentelemetry-api
-, opentelemetry-sdk
-, pydantic
-, sanic
-, fastapi
-, chalice
-, graphlib-backport
-, pyinstrument
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  # build-system
+  uv-build,
+  # dependencies
+  cross-web,
+  graphql-core,
+  python-dateutil,
+  typing-extensions,
+  # optional-dependencies
+  aiohttp,
+  pytest-aiohttp,
+  starlette,
+  python-multipart,
+  protobuf,
+  rich,
+  libcst,
+  typer,
+  pygments,
+  uvicorn,
+  django,
+  asgiref,
+  channels,
+  flask,
+  opentelemetry-api,
+  opentelemetry-sdk,
+  pydantic,
+  sanic,
+  fastapi,
+  chalice,
+  graphlib-backport,
+  pyinstrument,
 }:
 
 buildPythonPackage (finalAttrs: {

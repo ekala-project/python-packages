@@ -1,9 +1,9 @@
-{ lib
-, stdenv
-, buildPythonPackage
-, fetchPypi
-, flit-core
-,
+{
+  lib,
+  stdenv,
+  buildPythonPackage,
+  fetchPypi,
+  flit-core,
 }:
 
 buildPythonPackage rec {

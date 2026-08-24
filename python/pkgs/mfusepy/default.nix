@@ -1,10 +1,10 @@
-{ lib
-, stdenv
-, buildPythonPackage
-, fetchFromGitHub
-, setuptools
-, fuse3
-,
+{
+  lib,
+  stdenv,
+  buildPythonPackage,
+  fetchFromGitHub,
+  setuptools,
+  fuse3,
 }:
 
 let

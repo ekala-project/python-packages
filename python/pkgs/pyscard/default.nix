@@ -1,12 +1,12 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, pcsclite
-, pkg-config
-, setuptools
-, stdenv
-, swig
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  pcsclite,
+  pkg-config,
+  setuptools,
+  stdenv,
+  swig,
 }:
 
 buildPythonPackage rec {

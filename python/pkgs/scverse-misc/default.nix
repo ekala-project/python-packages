@@ -1,24 +1,24 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, # build-system
-  hatch-vcs
-, hatchling
-, # dependencies
-  session-info2
-, typing-extensions
-, # optional-dependencies
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  # build-system
+  hatch-vcs,
+  hatchling,
+  # dependencies
+  session-info2,
+  typing-extensions,
+  # optional-dependencies
   # datasets:
-  anndata
-, pooch
-, pyyaml
-, tqdm
-, # settings:
-  pydantic-settings
-, python-dotenv
-, # sphinx:
-  sphinx
-,
+  anndata,
+  pooch,
+  pyyaml,
+  tqdm,
+  # settings:
+  pydantic-settings,
+  python-dotenv,
+  # sphinx:
+  sphinx,
 }:
 
 buildPythonPackage (finalAttrs: {

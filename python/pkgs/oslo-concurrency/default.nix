@@ -1,16 +1,16 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, bash
-, coreutils
-, debtcollector
-, fasteners
-, oslo-config
-, oslo-i18n
-, oslo-utils
-, pbr
-, setuptools
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  bash,
+  coreutils,
+  debtcollector,
+  fasteners,
+  oslo-config,
+  oslo-i18n,
+  oslo-utils,
+  pbr,
+  setuptools,
 }:
 
 buildPythonPackage rec {

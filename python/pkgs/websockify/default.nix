@@ -1,13 +1,13 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, setuptools
-, jwcrypto
-, numpy
-, redis
-, requests
-, simplejson
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  setuptools,
+  jwcrypto,
+  numpy,
+  redis,
+  requests,
+  simplejson,
 }:
 
 buildPythonPackage (finalAttrs: {

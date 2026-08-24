@@ -1,11 +1,11 @@
-{ lib
-, python
-, buildPythonPackage
-, fetchFromGitHub
-, setuptools
-, versionCheckHook
-, which
-,
+{
+  lib,
+  python,
+  buildPythonPackage,
+  fetchFromGitHub,
+  setuptools,
+  versionCheckHook,
+  which,
 }:
 
 buildPythonPackage (finalAttrs: {

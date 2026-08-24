@@ -1,11 +1,11 @@
-{ lib
-, fetchDebianPatch
-, fetchPypi
-, buildPythonPackage
-, m2crypto
-, setuptools
-, nix-update-script
-,
+{
+  lib,
+  fetchDebianPatch,
+  fetchPypi,
+  buildPythonPackage,
+  m2crypto,
+  setuptools,
+  nix-update-script,
 }:
 
 buildPythonPackage (finalAttrs: {

@@ -1,19 +1,19 @@
-{ lib
-, buildPythonPackage
-, charset-normalizer
-, dsinternals
-, fetchPypi
-, flask
-, ldap3
-, ldapdomaindump
-, pyasn1
-, pyasn1-modules
-, pycryptodomex
-, pyopenssl
-, setuptools
-, six
-, writeText
-,
+{
+  lib,
+  buildPythonPackage,
+  charset-normalizer,
+  dsinternals,
+  fetchPypi,
+  flask,
+  ldap3,
+  ldapdomaindump,
+  pyasn1,
+  pyasn1-modules,
+  pycryptodomex,
+  pyopenssl,
+  setuptools,
+  six,
+  writeText,
 }:
 
 let

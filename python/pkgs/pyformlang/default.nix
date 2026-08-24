@@ -1,12 +1,12 @@
-{ lib
-, buildPythonPackage
-, fetchPypi
-, networkx
-, numpy
-, pydot
-, setuptools
-, wheel
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  networkx,
+  numpy,
+  pydot,
+  setuptools,
+  wheel,
 }:
 
 buildPythonPackage (finalAttrs: {

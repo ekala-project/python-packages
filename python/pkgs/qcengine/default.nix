@@ -1,16 +1,16 @@
-{ lib
-, buildPythonPackage
-, fetchPypi
-, setuptools
-, setuptools-scm
-, pyyaml
-, py-cpuinfo
-, psutil
-, qcelemental
-, pydantic
-, pydantic-settings
-, packaging
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  setuptools,
+  setuptools-scm,
+  pyyaml,
+  py-cpuinfo,
+  psutil,
+  qcelemental,
+  pydantic,
+  pydantic-settings,
+  packaging,
 }:
 
 buildPythonPackage rec {

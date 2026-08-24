@@ -1,19 +1,19 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, pkgs
-, # build-system
-  pkgconfig
-, setuptools-scm9
-, # nativeBuildInputs
-  pkg-config
-, # buildInputs
-  libtool
-, libxml2
-, libxslt
-, # dependencies
-  lxml
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  pkgs,
+  # build-system
+  pkgconfig,
+  setuptools-scm9,
+  # nativeBuildInputs
+  pkg-config,
+  # buildInputs
+  libtool,
+  libxml2,
+  libxslt,
+  # dependencies
+  lxml,
 }:
 
 buildPythonPackage (finalAttrs: {

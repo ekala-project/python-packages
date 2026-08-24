@@ -1,11 +1,11 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, requests
-, rich
-, setuptools
-, urllib3
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  requests,
+  rich,
+  setuptools,
+  urllib3,
 }:
 
 buildPythonPackage (finalAttrs: {

@@ -1,13 +1,13 @@
-{ lib
-, stdenv
-, buildPythonPackage
-, fetchPypi
-, gnureadline
-, pyperclip
-, rich-argparse
-, setuptools-scm
-, wcwidth
-,
+{
+  lib,
+  stdenv,
+  buildPythonPackage,
+  fetchPypi,
+  gnureadline,
+  pyperclip,
+  rich-argparse,
+  setuptools-scm,
+  wcwidth,
 }:
 
 buildPythonPackage rec {

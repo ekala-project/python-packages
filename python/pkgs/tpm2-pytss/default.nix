@@ -1,21 +1,21 @@
-{ lib
-, stdenv
-, buildPythonPackage
-, fetchPypi
-, fetchpatch
-, fetchpatch2
-, asn1crypto
-, cffi
-, cryptography
-, pkgconfig
-, # see nativeBuildInputs
-  pkg-config
-, # see nativeBuildInputs
-  pyyaml
-, setuptools-scm
-, tpm2-tss
-, swtpm
-,
+{
+  lib,
+  stdenv,
+  buildPythonPackage,
+  fetchPypi,
+  fetchpatch,
+  fetchpatch2,
+  asn1crypto,
+  cffi,
+  cryptography,
+  pkgconfig,
+  # see nativeBuildInputs
+  pkg-config,
+  # see nativeBuildInputs
+  pyyaml,
+  setuptools-scm,
+  tpm2-tss,
+  swtpm,
 }:
 
 let

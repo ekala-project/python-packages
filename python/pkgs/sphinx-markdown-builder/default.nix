@@ -1,14 +1,14 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, nix-update-script
-, # build system
-  setuptools
-, # deps
-  docutils
-, sphinx
-, tabulate
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  nix-update-script,
+  # build system
+  setuptools,
+  # deps
+  docutils,
+  sphinx,
+  tabulate,
 }:
 
 buildPythonPackage rec {

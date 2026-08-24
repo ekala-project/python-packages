@@ -1,9 +1,9 @@
-{ buildPythonPackage
-, django
-, fetchFromGitHub
-, lib
-, hatchling
-,
+{
+  buildPythonPackage,
+  django,
+  fetchFromGitHub,
+  lib,
+  hatchling,
 }:
 buildPythonPackage (finalAttrs: {
   pname = "django-dbbackup";

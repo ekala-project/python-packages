@@ -1,12 +1,12 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, fetchpatch
-, lxml
-, mixbox
-, python-dateutil
-, setuptools
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  fetchpatch,
+  lxml,
+  mixbox,
+  python-dateutil,
+  setuptools,
 }:
 
 buildPythonPackage rec {

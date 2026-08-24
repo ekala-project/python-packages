@@ -1,11 +1,11 @@
-{ lib
-, fetchPypi
-, buildPythonPackage
-, persistent
-, zope-interface
-, python
-, setuptools
-,
+{
+  lib,
+  fetchPypi,
+  buildPythonPackage,
+  persistent,
+  zope-interface,
+  python,
+  setuptools,
 }:
 
 buildPythonPackage rec {
@@ -25,7 +25,6 @@ buildPythonPackage rec {
     zope-interface
   ];
 
-
   pythonImportsCheck = [
     "BTrees.OOBTree"
     "BTrees.IOBTree"
@@ -40,5 +39,3 @@ buildPythonPackage rec {
     maintainers = [ ];
   };
 }
-
-

@@ -1,9 +1,9 @@
-{ lib
-, buildPythonPackage
-, ecdsa
-, fetchFromGitHub
-, setuptools
-,
+{
+  lib,
+  buildPythonPackage,
+  ecdsa,
+  fetchFromGitHub,
+  setuptools,
 }:
 
 buildPythonPackage rec {

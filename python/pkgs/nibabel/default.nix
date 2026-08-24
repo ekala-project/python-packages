@@ -1,22 +1,22 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, pythonOlder
-, # build-system
-  hatch-vcs
-, hatchling
-, # dependencies
-  numpy
-, packaging
-, # optional-dependencies
-  backports-zstd
-, indexed-gzip
-, matplotlib
-, pydicom
-, pillow
-, h5py
-, scipy
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  pythonOlder,
+  # build-system
+  hatch-vcs,
+  hatchling,
+  # dependencies
+  numpy,
+  packaging,
+  # optional-dependencies
+  backports-zstd,
+  indexed-gzip,
+  matplotlib,
+  pydicom,
+  pillow,
+  h5py,
+  scipy,
 }:
 
 buildPythonPackage (finalAttrs: {

@@ -1,16 +1,16 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, # build-system
-  hatchling
-, # dependencies
-  anyio
-, pycrdt
-, pycrdt-store
-, sqlite-anyio
-, # optional-dependencies
-  channels
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  # build-system
+  hatchling,
+  # dependencies
+  anyio,
+  pycrdt,
+  pycrdt-store,
+  sqlite-anyio,
+  # optional-dependencies
+  channels,
 }:
 
 buildPythonPackage (finalAttrs: {

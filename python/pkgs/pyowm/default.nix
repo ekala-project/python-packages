@@ -1,11 +1,11 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, geojson
-, pysocks
-, requests
-, setuptools
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  geojson,
+  pysocks,
+  requests,
+  setuptools,
 }:
 
 buildPythonPackage rec {

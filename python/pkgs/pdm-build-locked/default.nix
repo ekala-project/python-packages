@@ -1,9 +1,9 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, pdm-backend
-, build
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  pdm-backend,
+  build,
 }:
 
 buildPythonPackage rec {

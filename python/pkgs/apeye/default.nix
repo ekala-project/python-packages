@@ -1,12 +1,12 @@
-{ buildPythonPackage
-, fetchPypi
-, flit-core
-, apeye-core
-, domdf-python-tools
-, platformdirs
-, requests
-, lib
-,
+{
+  buildPythonPackage,
+  fetchPypi,
+  flit-core,
+  apeye-core,
+  domdf-python-tools,
+  platformdirs,
+  requests,
+  lib,
 }:
 buildPythonPackage rec {
   pname = "apeye";

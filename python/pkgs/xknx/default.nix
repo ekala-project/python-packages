@@ -1,10 +1,10 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, cryptography
-, ifaddr
-, setuptools
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  cryptography,
+  ifaddr,
+  setuptools,
 }:
 
 buildPythonPackage (finalAttrs: {

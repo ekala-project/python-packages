@@ -1,9 +1,9 @@
-{ lib
-, buildPythonPackage
-, cython
-, fetchPypi
-, jdk
-,
+{
+  lib,
+  buildPythonPackage,
+  cython,
+  fetchPypi,
+  jdk,
 }:
 
 buildPythonPackage rec {

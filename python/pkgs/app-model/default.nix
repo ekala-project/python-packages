@@ -1,14 +1,14 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, hatch-vcs
-, hatchling
-, in-n-out
-, psygnal
-, pydantic
-, pydantic-compat
-, typing-extensions
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  hatch-vcs,
+  hatchling,
+  in-n-out,
+  psygnal,
+  pydantic,
+  pydantic-compat,
+  typing-extensions,
 }:
 
 buildPythonPackage (finalAttrs: {

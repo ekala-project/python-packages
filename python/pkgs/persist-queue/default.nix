@@ -1,14 +1,14 @@
-{ lib
-, aiofiles
-, aiosqlite
-, buildPythonPackage
-, cbor2
-, dbutils
-, fetchFromGitHub
-, msgpack
-, pymysql
-, setuptools
-,
+{
+  lib,
+  aiofiles,
+  aiosqlite,
+  buildPythonPackage,
+  cbor2,
+  dbutils,
+  fetchFromGitHub,
+  msgpack,
+  pymysql,
+  setuptools,
 }:
 
 buildPythonPackage rec {

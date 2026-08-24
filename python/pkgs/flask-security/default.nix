@@ -1,33 +1,33 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, flit-core
-, # extras: babel
-  babel
-, flask-babel
-, # extras: common
-  argon2-cffi
-, bcrypt
-, bleach
-, flask-mail
-, # extras: fsqla
-  flask-sqlalchemy
-, sqlalchemy
-, # extras: mfa
-  cryptography
-, phonenumberslite
-, webauthn
-, qrcode
-, # propagates
-  email-validator
-, flask
-, flask-login
-, flask-principal
-, flask-wtf
-, libpass
-, markupsafe
-, wtforms
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  flit-core,
+  # extras: babel
+  babel,
+  flask-babel,
+  # extras: common
+  argon2-cffi,
+  bcrypt,
+  bleach,
+  flask-mail,
+  # extras: fsqla
+  flask-sqlalchemy,
+  sqlalchemy,
+  # extras: mfa
+  cryptography,
+  phonenumberslite,
+  webauthn,
+  qrcode,
+  # propagates
+  email-validator,
+  flask,
+  flask-login,
+  flask-principal,
+  flask-wtf,
+  libpass,
+  markupsafe,
+  wtforms,
 }:
 
 buildPythonPackage rec {

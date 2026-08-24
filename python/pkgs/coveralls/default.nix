@@ -1,13 +1,13 @@
-{ buildPythonPackage
-, lib
-, fetchFromGitHub
-, # build-system
-  poetry-core
-, # checks
-  coverage
-, docopt
-, requests
-,
+{
+  buildPythonPackage,
+  lib,
+  fetchFromGitHub,
+  # build-system
+  poetry-core,
+  # checks
+  coverage,
+  docopt,
+  requests,
 }:
 
 buildPythonPackage rec {
@@ -30,7 +30,6 @@ buildPythonPackage rec {
     requests
   ];
 
-
   meta = {
     description = "Show coverage stats online via coveralls.io";
     mainProgram = "coveralls";
@@ -38,4 +37,3 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
   };
 }
-

@@ -1,10 +1,10 @@
-{ lib
-, fetchFromGitHub
-, fetchpatch2
-, buildPythonPackage
-, setuptools
-, websockets
-,
+{
+  lib,
+  fetchFromGitHub,
+  fetchpatch2,
+  buildPythonPackage,
+  setuptools,
+  websockets,
 }:
 
 buildPythonPackage rec {

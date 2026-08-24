@@ -1,11 +1,11 @@
-{ blessed
-, buildPythonPackage
-, fetchFromGitHub
-, hatchling
-, lib
-, prettytable
-, wcwidth
-,
+{
+  blessed,
+  buildPythonPackage,
+  fetchFromGitHub,
+  hatchling,
+  lib,
+  prettytable,
+  wcwidth,
 }:
 
 buildPythonPackage (finalAttrs: {

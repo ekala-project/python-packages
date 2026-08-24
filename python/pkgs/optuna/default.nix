@@ -1,29 +1,29 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, # build-system
-  setuptools
-, # dependencies
-  alembic
-, colorlog
-, numpy
-, packaging
-, sqlalchemy
-, tqdm
-, pyyaml
-, # optional-dependencies
-  boto3
-, cmaes
-, google-cloud-storage
-, grpcio
-, matplotlib
-, pandas
-, plotly
-, protobuf
-, redis
-, scikit-learn
-, scipy
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  # build-system
+  setuptools,
+  # dependencies
+  alembic,
+  colorlog,
+  numpy,
+  packaging,
+  sqlalchemy,
+  tqdm,
+  pyyaml,
+  # optional-dependencies
+  boto3,
+  cmaes,
+  google-cloud-storage,
+  grpcio,
+  matplotlib,
+  pandas,
+  plotly,
+  protobuf,
+  redis,
+  scikit-learn,
+  scipy,
 }:
 
 buildPythonPackage (finalAttrs: {

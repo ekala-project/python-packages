@@ -1,12 +1,12 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, setuptools
-, pytz
-, requests
-, simplejson
-, stix2-patterns
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  setuptools,
+  pytz,
+  requests,
+  simplejson,
+  stix2-patterns,
 }:
 
 buildPythonPackage (finalAttrs: {

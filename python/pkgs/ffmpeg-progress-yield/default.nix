@@ -1,11 +1,11 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, uv-build
-, tqdm
-, ffmpeg
-, versionCheckHook
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  uv-build,
+  tqdm,
+  ffmpeg,
+  versionCheckHook,
 }:
 
 buildPythonPackage rec {

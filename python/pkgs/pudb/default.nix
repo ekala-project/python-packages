@@ -1,13 +1,13 @@
-{ lib
-, buildPythonPackage
-, hatchling
-, fetchPypi
-, jedi
-, packaging
-, pygments
-, urwid
-, urwid-readline
-,
+{
+  lib,
+  buildPythonPackage,
+  hatchling,
+  fetchPypi,
+  jedi,
+  packaging,
+  pygments,
+  urwid,
+  urwid-readline,
 }:
 
 buildPythonPackage rec {

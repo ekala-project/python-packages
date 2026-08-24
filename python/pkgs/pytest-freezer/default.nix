@@ -1,10 +1,10 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, flit-core
-, freezegun
-, pytest
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  flit-core,
+  freezegun,
+  pytest,
 }:
 
 buildPythonPackage rec {

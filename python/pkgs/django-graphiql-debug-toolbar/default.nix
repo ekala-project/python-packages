@@ -1,13 +1,13 @@
-{ buildPythonPackage
-, fetchFromGitHub
-, fetchpatch
-, # build-system
-  poetry-core
-, # dependencies
-  django
-, django-debug-toolbar
-, graphene-django
-,
+{
+  buildPythonPackage,
+  fetchFromGitHub,
+  fetchpatch,
+  # build-system
+  poetry-core,
+  # dependencies
+  django,
+  django-debug-toolbar,
+  graphene-django,
 }:
 
 buildPythonPackage rec {

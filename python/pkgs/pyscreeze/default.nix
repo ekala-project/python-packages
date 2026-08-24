@@ -1,8 +1,8 @@
-{ lib
-, stdenv
-, buildPythonPackage
-, fetchFromGitHub
-,
+{
+  lib,
+  stdenv,
+  buildPythonPackage,
+  fetchFromGitHub,
 }:
 buildPythonPackage {
   pname = "pyscreeze";

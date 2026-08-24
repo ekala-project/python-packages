@@ -1,10 +1,10 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, setuptools
-, uv-build
-, sqlite-utils
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  setuptools,
+  uv-build,
+  sqlite-utils,
 }:
 
 buildPythonPackage (finalAttrs: {

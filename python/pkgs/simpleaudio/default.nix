@@ -1,8 +1,8 @@
-{ alsa-lib
-, buildPythonPackage
-, fetchFromGitHub
-, lib
-,
+{
+  alsa-lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  lib,
 }:
 
 buildPythonPackage rec {

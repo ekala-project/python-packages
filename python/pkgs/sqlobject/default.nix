@@ -1,10 +1,10 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, setuptools
-, formencode
-, pydispatcher
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  setuptools,
+  formencode,
+  pydispatcher,
 }:
 
 buildPythonPackage rec {

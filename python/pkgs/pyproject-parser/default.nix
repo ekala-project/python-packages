@@ -1,23 +1,23 @@
-{ buildPythonPackage
-, fetchPypi
-, lib
-, apeye-core
-, attrs
-, click
-, consolekit
-, docutils
-, dom-toml
-, domdf-python-tools
-, hatchling
-, hatch-requirements-txt
-, license-expression
-, natsort
-, packaging
-, readme-renderer
-, sdjson
-, shippinglabel
-, typing-extensions
-,
+{
+  buildPythonPackage,
+  fetchPypi,
+  lib,
+  apeye-core,
+  attrs,
+  click,
+  consolekit,
+  docutils,
+  dom-toml,
+  domdf-python-tools,
+  hatchling,
+  hatch-requirements-txt,
+  license-expression,
+  natsort,
+  packaging,
+  readme-renderer,
+  sdjson,
+  shippinglabel,
+  typing-extensions,
 }:
 buildPythonPackage rec {
   pname = "pyproject-parser";

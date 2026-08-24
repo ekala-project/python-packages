@@ -1,10 +1,10 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, sphinx
-, matplotlib
-, flit-core
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  sphinx,
+  matplotlib,
+  flit-core,
 }:
 
 buildPythonPackage rec {

@@ -1,11 +1,11 @@
-{ lib
-, buildPythonPackage
-, casttube
-, fetchFromGitHub
-, protobuf
-, setuptools
-, zeroconf
-,
+{
+  lib,
+  buildPythonPackage,
+  casttube,
+  fetchFromGitHub,
+  protobuf,
+  setuptools,
+  zeroconf,
 }:
 
 buildPythonPackage rec {

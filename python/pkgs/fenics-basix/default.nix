@@ -1,15 +1,15 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, scikit-build-core
-, nanobind
-, cmake
-, ninja
-, pkg-config
-, blas
-, lapack
-, numpy
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  scikit-build-core,
+  nanobind,
+  cmake,
+  ninja,
+  pkg-config,
+  blas,
+  lapack,
+  numpy,
 }:
 
 buildPythonPackage (finalAttrs: {

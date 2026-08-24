@@ -1,11 +1,11 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, django
-, setuptools
-, django-cms
-, djangocms-admin-style
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  django,
+  setuptools,
+  django-cms,
+  djangocms-admin-style,
 }:
 
 buildPythonPackage rec {

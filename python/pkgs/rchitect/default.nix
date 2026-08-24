@@ -1,13 +1,13 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, cffi
-, packaging
-, R
-, setuptools
-, setuptools-scm
-, six
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  cffi,
+  packaging,
+  R,
+  setuptools,
+  setuptools-scm,
+  six,
 }:
 
 buildPythonPackage rec {

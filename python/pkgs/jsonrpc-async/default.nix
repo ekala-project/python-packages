@@ -1,10 +1,10 @@
-{ lib
-, aiohttp
-, buildPythonPackage
-, fetchFromGitHub
-, jsonrpc-base
-, setuptools
-,
+{
+  lib,
+  aiohttp,
+  buildPythonPackage,
+  fetchFromGitHub,
+  jsonrpc-base,
+  setuptools,
 }:
 
 buildPythonPackage rec {

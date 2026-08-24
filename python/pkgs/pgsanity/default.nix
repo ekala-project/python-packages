@@ -1,9 +1,9 @@
-{ lib
-, fetchPypi
-, buildPythonPackage
-, postgresql
-, uv-build
-,
+{
+  lib,
+  fetchPypi,
+  buildPythonPackage,
+  postgresql,
+  uv-build,
 }:
 
 buildPythonPackage (finalAttrs: {

@@ -1,14 +1,14 @@
-{ lib
-, buildPythonPackage
-, deepmerge
-, fetchPypi
-, setuptools-scm
-, jsonschema
-, picobox
-, pyyaml
-, sphinx-mdinclude
-, sphinxcontrib-httpdomain
-,
+{
+  lib,
+  buildPythonPackage,
+  deepmerge,
+  fetchPypi,
+  setuptools-scm,
+  jsonschema,
+  picobox,
+  pyyaml,
+  sphinx-mdinclude,
+  sphinxcontrib-httpdomain,
 }:
 
 buildPythonPackage rec {

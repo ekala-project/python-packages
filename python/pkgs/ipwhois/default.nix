@@ -1,10 +1,10 @@
-{ lib
-, buildPythonPackage
-, defusedxml
-, dnspython
-, fetchFromGitHub
-, setuptools
-,
+{
+  lib,
+  buildPythonPackage,
+  defusedxml,
+  dnspython,
+  fetchFromGitHub,
+  setuptools,
 }:
 
 buildPythonPackage rec {
@@ -30,7 +30,6 @@ buildPythonPackage rec {
 
   pythonImportsCheck = [ "ipwhois" ];
 
-
   meta = {
     description = "Library to retrieve and parse whois data";
     homepage = "https://github.com/secynic/ipwhois";
@@ -38,4 +37,3 @@ buildPythonPackage rec {
     maintainers = [ ];
   };
 }
-

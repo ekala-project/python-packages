@@ -1,13 +1,13 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, # build-system
-  setuptools
-, # optional-dependencies
-  pygments
-, wavedrom
-, latex2mathml
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  # build-system
+  setuptools,
+  # optional-dependencies
+  pygments,
+  wavedrom,
+  latex2mathml,
 }:
 
 buildPythonPackage rec {

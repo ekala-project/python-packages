@@ -1,10 +1,10 @@
-{ lib
-, buildPythonPackage
-, deprecated
-, fetchFromCodeberg
-, jaconv
-, setuptools-scm
-,
+{
+  lib,
+  buildPythonPackage,
+  deprecated,
+  fetchFromCodeberg,
+  jaconv,
+  setuptools-scm,
 }:
 
 buildPythonPackage rec {

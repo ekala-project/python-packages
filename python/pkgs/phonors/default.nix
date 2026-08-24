@@ -1,10 +1,10 @@
-{ lib
-, buildPythonPackage
-, cargo
-, fetchFromGitHub
-, rustc
-, rustPlatform
-,
+{
+  lib,
+  buildPythonPackage,
+  cargo,
+  fetchFromGitHub,
+  rustc,
+  rustPlatform,
 }:
 
 buildPythonPackage (finalAttrs: {

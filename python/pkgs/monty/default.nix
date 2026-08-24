@@ -1,29 +1,29 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, # build-system
-  setuptools
-, setuptools-scm
-, # dependencies
-  msgpack
-, ruamel-yaml
-, # optional-dependencies
-  coverage
-, pymongo
-, pytest
-, pytest-cov
-, types-requests
-, sphinx
-, sphinx-rtd-theme
-, orjson
-, pandas
-, pydantic
-, tqdm
-, invoke
-, requests
-, # tests
-  ipython
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  # build-system
+  setuptools,
+  setuptools-scm,
+  # dependencies
+  msgpack,
+  ruamel-yaml,
+  # optional-dependencies
+  coverage,
+  pymongo,
+  pytest,
+  pytest-cov,
+  types-requests,
+  sphinx,
+  sphinx-rtd-theme,
+  orjson,
+  pandas,
+  pydantic,
+  tqdm,
+  invoke,
+  requests,
+  # tests
+  ipython,
 }:
 
 buildPythonPackage rec {

@@ -1,18 +1,18 @@
-{ lib
-, buildPythonPackage
-, fetchPypi
-, hypothesis
-, pytest
-, pytest-arraydiff
-, pytest-astropy-header
-, pytest-cov
-, pytest-doctestplus
-, pytest-filter-subpackage
-, pytest-mock
-, pytest-remotedata
-, setuptools
-, setuptools-scm
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  hypothesis,
+  pytest,
+  pytest-arraydiff,
+  pytest-astropy-header,
+  pytest-cov,
+  pytest-doctestplus,
+  pytest-filter-subpackage,
+  pytest-mock,
+  pytest-remotedata,
+  setuptools,
+  setuptools-scm,
 }:
 
 buildPythonPackage rec {

@@ -1,10 +1,10 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitLab
-, hatchling
-, requests
-, urllib3
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitLab,
+  hatchling,
+  requests,
+  urllib3,
 }:
 
 buildPythonPackage rec {

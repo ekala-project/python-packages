@@ -1,10 +1,10 @@
-{ lib
-, buildPythonPackage
-, fetchPypi
-, setuptools
-, pkg-config
-, glib
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  setuptools,
+  pkg-config,
+  glib,
 }:
 
 buildPythonPackage (finalAttrs: {

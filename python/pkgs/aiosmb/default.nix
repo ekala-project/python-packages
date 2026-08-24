@@ -1,19 +1,19 @@
-{ lib
-, asyauth
-, asysocks
-, buildPythonPackage
-, colorama
-, cryptography
-, fetchPypi
-, minikerberos
-, prompt-toolkit
-, pycryptodomex
-, setuptools
-, six
-, tqdm
-, winacl
-, winsspi
-,
+{
+  lib,
+  asyauth,
+  asysocks,
+  buildPythonPackage,
+  colorama,
+  cryptography,
+  fetchPypi,
+  minikerberos,
+  prompt-toolkit,
+  pycryptodomex,
+  setuptools,
+  six,
+  tqdm,
+  winacl,
+  winsspi,
 }:
 
 buildPythonPackage rec {

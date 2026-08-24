@@ -1,10 +1,10 @@
-{ lib
-, config
-, buildPythonPackage
-, fetchFromGitHub
-, # build-system
-  meson-python
-,
+{
+  lib,
+  config,
+  buildPythonPackage,
+  fetchFromGitHub,
+  # build-system
+  meson-python,
 }:
 
 buildPythonPackage (finalAttrs: {

@@ -1,11 +1,11 @@
-{ argon2-cffi
-, bcrypt
-, buildPythonPackage
-, cryptography
-, fetchFromGitHub
-, hatchling
-, lib
-,
+{
+  argon2-cffi,
+  bcrypt,
+  buildPythonPackage,
+  cryptography,
+  fetchFromGitHub,
+  hatchling,
+  lib,
 }:
 
 buildPythonPackage rec {

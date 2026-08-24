@@ -1,13 +1,13 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, # build-system
-  setuptools
-, # dependencies
-  numpy
-, scipy
-, svgwrite
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  # build-system
+  setuptools,
+  # dependencies
+  numpy,
+  scipy,
+  svgwrite,
 }:
 
 buildPythonPackage rec {

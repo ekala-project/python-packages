@@ -1,10 +1,10 @@
-{ lib
-, fetchFromGitHub
-, buildPythonPackage
-, cython
-, setuptools
-, libstemmer
-,
+{
+  lib,
+  fetchFromGitHub,
+  buildPythonPackage,
+  cython,
+  setuptools,
+  libstemmer,
 }:
 
 buildPythonPackage rec {
@@ -49,5 +49,3 @@ buildPythonPackage rec {
     platforms = lib.platforms.unix;
   };
 }
-
-

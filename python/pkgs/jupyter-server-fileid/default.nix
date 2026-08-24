@@ -1,10 +1,10 @@
-{ buildPythonPackage
-, fetchFromGitHub
-, hatchling
-, jupyter-events
-, jupyter-server
-, click
-,
+{
+  buildPythonPackage,
+  fetchFromGitHub,
+  hatchling,
+  jupyter-events,
+  jupyter-server,
+  click,
 }:
 
 buildPythonPackage rec {

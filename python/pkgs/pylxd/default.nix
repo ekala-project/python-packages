@@ -1,15 +1,15 @@
-{ lib
-, buildPythonPackage
-, cryptography
-, fetchFromGitHub
-, python-dateutil
-, requests
-, urllib3
-, requests-toolbelt
-, requests-unixsocket
-, setuptools
-, ws4py
-,
+{
+  lib,
+  buildPythonPackage,
+  cryptography,
+  fetchFromGitHub,
+  python-dateutil,
+  requests,
+  urllib3,
+  requests-toolbelt,
+  requests-unixsocket,
+  setuptools,
+  ws4py,
 }:
 
 buildPythonPackage rec {

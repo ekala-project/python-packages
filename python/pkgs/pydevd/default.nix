@@ -1,10 +1,10 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, # build-system
-  cython
-, setuptools
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  # build-system
+  cython,
+  setuptools,
 }:
 
 buildPythonPackage (finalAttrs: {

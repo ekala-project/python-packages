@@ -1,9 +1,9 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, regex
-, setuptools-scm
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  regex,
+  setuptools-scm,
 }:
 
 buildPythonPackage (finalAttrs: {

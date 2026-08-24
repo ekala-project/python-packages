@@ -1,9 +1,9 @@
-{ buildPythonPackage
-, fetchPypi
-, whey
-, cssutils
-, lib
-,
+{
+  buildPythonPackage,
+  fetchPypi,
+  whey,
+  cssutils,
+  lib,
 }:
 buildPythonPackage rec {
   pname = "dict2css";

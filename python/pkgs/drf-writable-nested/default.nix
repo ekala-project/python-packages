@@ -1,9 +1,9 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, django
-, djangorestframework
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  django,
+  djangorestframework,
 }:
 
 buildPythonPackage (finalAttrs: {

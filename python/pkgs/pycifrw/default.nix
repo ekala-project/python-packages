@@ -1,12 +1,12 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, nix-update-script
-, numpy
-, ply
-, prettytable
-, setuptools
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  nix-update-script,
+  numpy,
+  ply,
+  prettytable,
+  setuptools,
 }:
 
 buildPythonPackage (finalAttrs: {

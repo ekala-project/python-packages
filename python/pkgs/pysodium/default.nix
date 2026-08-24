@@ -1,10 +1,10 @@
-{ lib
-, stdenv
-, buildPythonPackage
-, fetchFromGitHub
-, setuptools
-, libsodium
-,
+{
+  lib,
+  stdenv,
+  buildPythonPackage,
+  fetchFromGitHub,
+  setuptools,
+  libsodium,
 }:
 
 buildPythonPackage rec {

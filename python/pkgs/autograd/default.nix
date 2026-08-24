@@ -34,7 +34,7 @@ buildPythonPackage rec {
   build-system = [ hatchling ];
 
   dependencies = [ numpy ];
-pythonImportsCheck = [ "autograd" ];
+  pythonImportsCheck = [ "autograd" ];
 
   meta = {
     description = "Compute derivatives of NumPy code efficiently";

@@ -1,10 +1,10 @@
-{ stdenv
-, lib
-, buildPythonPackage
-, fetchFromGitHub
-, rustPlatform
-, libiconv
-,
+{
+  stdenv,
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  rustPlatform,
+  libiconv,
 }:
 
 buildPythonPackage (finalAttrs: {

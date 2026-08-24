@@ -1,16 +1,16 @@
-{ stdenv
-, fetchurl
-, fetchpatch
-, libxml2
-, gnutls
-, libxslt
-, pkg-config
-, libgcrypt
-, libtool
-, openssl
-, nss
-, lib
-,
+{
+  stdenv,
+  fetchurl,
+  fetchpatch,
+  libxml2,
+  gnutls,
+  libxslt,
+  pkg-config,
+  libgcrypt,
+  libtool,
+  openssl,
+  nss,
+  lib,
 }:
 
 stdenv.mkDerivation (finalAttrs: {

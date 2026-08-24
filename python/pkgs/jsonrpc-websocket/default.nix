@@ -1,11 +1,11 @@
-{ lib
-, aiohttp
-, async-timeout
-, buildPythonPackage
-, fetchFromGitHub
-, jsonrpc-base
-, setuptools
-,
+{
+  lib,
+  aiohttp,
+  async-timeout,
+  buildPythonPackage,
+  fetchFromGitHub,
+  jsonrpc-base,
+  setuptools,
 }:
 
 buildPythonPackage (finalAttrs: {

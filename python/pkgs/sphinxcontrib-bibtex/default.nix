@@ -1,14 +1,14 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, fetchpatch2
-, setuptools
-, docutils
-, oset
-, pybtex
-, pybtex-docutils
-, sphinx
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  fetchpatch2,
+  setuptools,
+  docutils,
+  oset,
+  pybtex,
+  pybtex-docutils,
+  sphinx,
 }:
 
 buildPythonPackage rec {

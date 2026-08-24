@@ -1,11 +1,11 @@
-{ lib
-, buildPythonPackage
-, cython
-, fetchFromGitHub
-, ply
-, pybind11
-, setuptools
-,
+{
+  lib,
+  buildPythonPackage,
+  cython,
+  fetchFromGitHub,
+  ply,
+  pybind11,
+  setuptools,
 }:
 
 buildPythonPackage rec {

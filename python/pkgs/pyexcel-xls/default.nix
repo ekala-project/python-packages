@@ -1,12 +1,12 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, pyexcel-io
-, xlrd
-, xlwt
-, pyexcel
-, setuptools
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  pyexcel-io,
+  xlrd,
+  xlwt,
+  pyexcel,
+  setuptools,
 }:
 
 buildPythonPackage rec {

@@ -1,12 +1,12 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, setuptools
-, argon2-cffi
-, construct
-, lxml
-, pycryptodomex
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  setuptools,
+  argon2-cffi,
+  construct,
+  lxml,
+  pycryptodomex,
 }:
 
 buildPythonPackage rec {

@@ -1,16 +1,16 @@
-{ lib
-, buildPythonPackage
-, fetchPypi
-, alembic
-, debtcollector
-, oslo-config
-, oslo-i18n
-, oslo-utils
-, pbr
-, setuptools
-, sqlalchemy
-, stevedore
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  alembic,
+  debtcollector,
+  oslo-config,
+  oslo-i18n,
+  oslo-utils,
+  pbr,
+  setuptools,
+  sqlalchemy,
+  stevedore,
 }:
 
 buildPythonPackage rec {

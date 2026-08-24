@@ -1,10 +1,10 @@
-{ lib
-, buildPythonPackage
-, fetchPypi
-, setuptools
-, moocore
-, numpy
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  setuptools,
+  moocore,
+  numpy,
 }:
 
 buildPythonPackage (finalAttrs: {

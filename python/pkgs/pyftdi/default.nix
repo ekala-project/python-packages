@@ -1,10 +1,10 @@
-{ lib
-, buildPythonPackage
-, fetchFromGitHub
-, pyserial
-, pyusb
-, setuptools
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchFromGitHub,
+  pyserial,
+  pyusb,
+  setuptools,
 }:
 
 buildPythonPackage (finalAttrs: {

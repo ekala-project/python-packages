@@ -1,12 +1,12 @@
-{ lib
-, buildPythonPackage
-, fetchPypi
-, python
-, setuptools
-, cffi
-, pkg-config
-, libxkbcommon
-,
+{
+  lib,
+  buildPythonPackage,
+  fetchPypi,
+  python,
+  setuptools,
+  cffi,
+  pkg-config,
+  libxkbcommon,
 }:
 
 buildPythonPackage (finalAttrs: {
