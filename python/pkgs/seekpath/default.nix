@@ -1,0 +1,47 @@
+{ lib
+, buildPythonPackage
+, fetchFromGitHub
+, flit-core
+, numpy
+, scipy
+, spglib
+, glibcLocales
+,
+}:
+
+buildPythonPackage rec {
+  pname = "seekpath";
+  version = "2.2.1";
+  pyproject = true;
+
+  src = fetchFromGitHub {
+    owner = "materialscloud-org";
+    repo = "seekpath";
+    tag = "v${version}";
+    hash = "sha256-yz9IX68AmFP8P8uzZMKa4d/pdzbOm0IcQsZMvC7MuSU=";
+  };
+
+  env.LC_ALL = "en_US.utf-8";
+
+  build-system = [ flit-core ];
+
+  dependencies = [
+    numpy
+    spglib
+  ];
+
+  optional-dependencies = {
+    bz = [ scipy ];
+  };
+
+  nativeBuildInputs = [ glibcLocales ];
+
+  pythonImportsCheck = [ "seekpath" ];
+
+  meta = {
+    description = "Module to obtain and visualize band paths in the Brillouin zone of crystal structures";
+    homepage = "https://github.com/materialscloud-org/seekpath";
+    license = lib.licenses.mit;
+    maintainers = [ ];
+  };
+}
