@@ -1,0 +1,55 @@
+{ lib
+, buildPythonPackage
+, fetchFromGitHub
+, pythonOlder
+, # build-system
+  cmake
+, scikit-build-core
+, numpy
+, ninja
+, pybind11
+, setuptools-scm
+, # dependencies
+  typing-extensions
+,
+}:
+
+buildPythonPackage rec {
+  pname = "spglib";
+  version = "2.7.0";
+  pyproject = true;
+
+  src = fetchFromGitHub {
+    owner = "spglib";
+    repo = "spglib";
+    tag = "v${version}";
+    hash = "sha256-RFvd/j/14YRIcQTpnYPx5edeF3zbHbi90jb32i3ZU/c=";
+  };
+
+  build-system = [
+    cmake
+    scikit-build-core
+    numpy
+    pybind11
+    ninja
+    setuptools-scm
+  ];
+
+  dontUseCmakeConfigure = true;
+
+  dependencies = [
+    numpy
+  ]
+  ++ lib.optionals (pythonOlder "3.13") [
+    typing-extensions
+  ];
+
+  pythonImportsCheck = [ "spglib" ];
+
+  meta = {
+    description = "Python bindings for C library for finding and handling crystal symmetries";
+    homepage = "https://spglib.github.io/spglib/";
+    license = lib.licenses.bsd3;
+    maintainers = [ ];
+  };
+}
