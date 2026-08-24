@@ -1,0 +1,41 @@
+{ lib
+, buildPythonPackage
+, fetchPypi
+, appdirs
+, jedi
+, prompt-toolkit
+, pygments
+, setuptools
+,
+}:
+
+buildPythonPackage rec {
+  pname = "ptpython";
+  version = "3.0.32";
+  pyproject = true;
+
+  src = fetchPypi {
+    inherit pname version;
+    hash = "sha256-EWUXeCNt6VxYK0JzcpTlCma6SiH6AcAJDqcIFa9Hj+A=";
+  };
+
+  build-system = [ setuptools ];
+
+  dependencies = [
+    appdirs
+    jedi
+    prompt-toolkit
+    pygments
+  ];
+
+  # no tests to run
+
+  pythonImportsCheck = [ "ptpython" ];
+
+  meta = {
+    description = "Advanced Python REPL";
+    homepage = "https://github.com/prompt-toolkit/ptpython";
+    license = lib.licenses.bsd3;
+    maintainers = [ ];
+  };
+}
