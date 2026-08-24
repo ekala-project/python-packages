@@ -2,7 +2,6 @@
   lib,
   fetchFromGitHub,
   buildPythonPackage,
-  pytest-html,
   pyyaml,
   uv-build,
 }:

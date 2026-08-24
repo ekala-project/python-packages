@@ -10,7 +10,6 @@
   mock,
   path,
   pyhamcrest,
-  pytest-html,
   colorama,
   cucumber-expressions,
   cucumber-tag-expressions,
