@@ -1,0 +1,58 @@
+{ lib
+, buildPythonPackage
+, fetchFromGitHub
+, meson-python
+, packaging
+, cython
+, numpy
+, scipy
+, h5py
+, nibabel
+, tqdm
+, trx-python
+,
+}:
+
+buildPythonPackage rec {
+  pname = "dipy";
+  version = "1.11.0";
+  pyproject = true;
+
+  src = fetchFromGitHub {
+    owner = "dipy";
+    repo = "dipy";
+    tag = version;
+    hash = "sha256-vqjd5gd9B630pv6H4MvXnlPwlEhm1o7MbwYD0J7D24o=";
+  };
+
+  build-system = [
+    cython
+    meson-python
+    numpy
+    packaging
+  ];
+
+  dependencies = [
+    numpy
+    scipy
+    h5py
+    nibabel
+    packaging
+    tqdm
+    trx-python
+  ];
+
+  #   - some tests require data download (see dipy/dipy/issues/2092);
+  #   - running the tests manually causes a multiprocessing hang;
+  #   - import weirdness when running the tests
+  pythonImportsCheck = [
+    "dipy"
+  ];
+
+  meta = {
+    homepage = "https://dipy.org/";
+    description = "Diffusion imaging toolkit for Python";
+    license = lib.licenses.bsd3;
+    maintainers = [ ];
+  };
+}
