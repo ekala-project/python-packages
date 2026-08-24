@@ -1,0 +1,36 @@
+{ lib
+, buildPythonPackage
+, fetchFromGitHub
+, setuptools
+, unstableGitUpdater
+,
+}:
+
+buildPythonPackage (finalAttrs: {
+  pname = "yapsy";
+  version = "1.12.2-unstable-2023-03-28";
+  pyproject = true;
+
+  src = fetchFromGitHub {
+    owner = "tibonihoo";
+    repo = "yapsy";
+    rev = "6b487b04affb19ab40adbbc87827668bea0abcee";
+    hash = "sha256-QKZlUAhYMCCsT/jbEHb39ESZ2+2FZYnhJnc1PgsozBA=";
+  };
+
+  sourceRoot = "${finalAttrs.src.name}/package";
+
+  build-system = [ setuptools ];
+
+  pythonImportsCheck = [ "yapsy" ];
+
+  passthru.updateScript = unstableGitUpdater {
+    tagPrefix = "release_Yapsy-";
+  };
+
+  meta = {
+    homepage = "https://yapsy.sourceforge.net/";
+    description = "Yet another plugin system";
+    license = lib.licenses.bsd2;
+  };
+})
