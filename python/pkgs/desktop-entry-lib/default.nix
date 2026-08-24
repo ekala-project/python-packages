@@ -1,0 +1,29 @@
+{ lib
+, buildPythonPackage
+, fetchFromCodeberg
+, setuptools
+,
+}:
+
+buildPythonPackage rec {
+  pname = "desktop-entry-lib";
+  version = "3.1";
+  pyproject = true;
+
+  # We could use fetchPypi, but then the tests won't run
+  src = fetchFromCodeberg {
+    owner = "JakobDev";
+    repo = "desktop-entry-lib";
+    rev = version;
+    hash = "sha256-+c+FuLv88wc4yVw3iyFFtfbocnWzTCIe2DS0SWoj+VI=";
+  };
+
+  nativeBuildInputs = [ setuptools ];
+  pythonImportsCheck = [ "desktop_entry_lib" ];
+
+  meta = {
+    description = "Allows reading and writing .desktop files according to the Desktop Entry Specification";
+    homepage = "https://codeberg.org/JakobDev/desktop-entry-lib";
+    license = lib.licenses.bsd2;
+  };
+}
