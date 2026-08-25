@@ -47,7 +47,7 @@
   litellm,
   logfire-api,
   loguru,
-  mysql-connector-python,
+  mysql-connector-python ? null,
   openai-agents,
   pandas,
   pymongo,

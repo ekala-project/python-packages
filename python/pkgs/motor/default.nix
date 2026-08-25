@@ -4,7 +4,7 @@
   fetchFromGitHub,
   hatchling,
   hatch-requirements-txt,
-  mockupdb,
+  mockupdb ? null,
   pymongo,
 }:
 

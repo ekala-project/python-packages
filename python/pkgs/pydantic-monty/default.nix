@@ -7,7 +7,7 @@
   anyio,
   dirty-equals,
   inline-snapshot,
-  pytest-examples,
+  pytest-examples ? null,
   pytest-pretty,
   typing-extensions,
 }:

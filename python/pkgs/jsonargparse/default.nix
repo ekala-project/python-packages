@@ -5,7 +5,7 @@
   docstring-parser,
   fetchFromGitHub,
   fsspec,
-  jsonnet,
+  jsonnet ? null,
   jsonschema,
   omegaconf,
   pythonAtLeast,
@@ -50,10 +50,7 @@ buildPythonPackage (finalAttrs: {
       ++ self.urls;
     argcomplete = [ argcomplete ];
     fsspec = [ fsspec ];
-    jsonnet = [
-      jsonnet
-      # jsonnet-binary
-    ];
+    jsonnet = lib.optional (jsonnet != null) jsonnet;
     jsonschema = [ jsonschema ];
     omegaconf = [ omegaconf ];
     reconplogger = [ reconplogger ];

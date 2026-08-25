@@ -4,7 +4,7 @@
   fetchFromGitHub,
   hatchling,
   pydantic,
-  pytest-examples,
+  pytest-examples ? null,
   pytz,
 }:
 

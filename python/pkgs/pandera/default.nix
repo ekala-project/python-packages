@@ -22,7 +22,7 @@
   dask,
   duckdb,
   fastapi,
-  frictionless,
+  frictionless ? null,
   geopandas,
   hypothesis,
   ibis-framework,
@@ -75,8 +75,8 @@ buildPythonPackage (finalAttrs: {
         io = [
           pyyaml
           black
-          frictionless
-        ];
+        ]
+        ++ lib.optional (frictionless != null) frictionless;
         # pyspark expression does not define optional-dependencies.connect:
         #pyspark = [ pyspark ] ++ pyspark.optional-dependencies.connect;
         # modin not in nixpkgs:

@@ -19,7 +19,7 @@
   arrow,
   colour,
   email-validator,
-  sqlalchemy-citext,
+  sqlalchemy-citext ? null,
   sqlalchemy-utils,
   # geoalchemy
   geoalchemy2,
@@ -79,13 +79,15 @@ buildPythonPackage rec {
     sqlalchemy-lite = [
       flask-sqlalchemy-lite
     ];
-    sqlalchemy-with-utils = optional-dependencies.sqlalchemy ++ [
-      arrow
-      colour
-      email-validator
-      sqlalchemy-citext
-      sqlalchemy-utils
-    ];
+    sqlalchemy-with-utils =
+      optional-dependencies.sqlalchemy
+      ++ [
+        arrow
+        colour
+        email-validator
+        sqlalchemy-utils
+      ]
+      ++ lib.optional (sqlalchemy-citext != null) sqlalchemy-citext;
     geoalchemy = optional-dependencies.sqlalchemy ++ [
       geoalchemy2
       shapely

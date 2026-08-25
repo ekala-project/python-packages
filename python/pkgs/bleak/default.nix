@@ -11,9 +11,9 @@
   # dependencies
   bumble,
   dbus-fast,
-  pyobjc-core,
-  pyobjc-framework-CoreBluetooth,
-  pyobjc-framework-libdispatch,
+  pyobjc-core ? null,
+  pyobjc-framework-CoreBluetooth ? null,
+  pyobjc-framework-libdispatch ? null,
   pytest-asyncio,
   pytest-cov-stub,
 }:

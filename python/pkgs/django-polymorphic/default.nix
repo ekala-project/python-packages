@@ -8,7 +8,7 @@
   django-test-migrations,
   pytest-cov-stub,
   pytest-django,
-  pytest-playwright,
+  pytest-playwright ? null,
 }:
 
 buildPythonPackage rec {

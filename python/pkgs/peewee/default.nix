@@ -8,7 +8,7 @@
   python,
   sqlite,
   withMysql ? false,
-  mysql-connector-python,
+  mysql-connector-python ? null,
   withPostgres ? false,
   psycopg2,
   setuptools,
@@ -37,7 +37,7 @@ buildPythonPackage rec {
     apsw
   ]
   ++ lib.optionals withPostgres [ psycopg2 ]
-  ++ lib.optionals withMysql [ mysql-connector-python ];
+  ++ lib.optionals (withMysql && mysql-connector-python != null) [ mysql-connector-python ];
   doCheck = withPostgres;
 
   checkPhase = ''

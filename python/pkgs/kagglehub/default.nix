@@ -23,7 +23,7 @@
   polars,
   # signing
   betterproto,
-  model-signing,
+  model-signing ? null,
   sigstore,
 
   # tests
@@ -72,9 +72,8 @@ buildPythonPackage (finalAttrs: {
     ];
     signing = [
       betterproto
-      model-signing
       sigstore
-    ];
+    ] ++ lib.optional (model-signing != null) model-signing;
   };
 
   pythonImportsCheck = [ "kagglehub" ];

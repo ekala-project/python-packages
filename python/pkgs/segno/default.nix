@@ -8,7 +8,7 @@
 
   # tests
   pypng,
-  pyzbar,
+  pyzbar ? null,
 }:
 
 buildPythonPackage rec {

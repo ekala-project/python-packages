@@ -1,6 +1,6 @@
 {
   buildPythonPackage,
-  datamodel-code-generator,
+  datamodel-code-generator ? null,
   fetchFromGitHub,
   lib,
   pydantic,
