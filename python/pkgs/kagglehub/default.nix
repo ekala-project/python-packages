@@ -24,7 +24,7 @@
   # signing
   betterproto,
   model-signing ? null,
-  sigstore,
+  sigstore ? null,
 
   # tests
   fastexcel,
@@ -73,7 +73,8 @@ buildPythonPackage (finalAttrs: {
     signing = [
       betterproto
       sigstore
-    ] ++ lib.optional (model-signing != null) model-signing;
+    ]
+    ++ lib.optional (model-signing != null) model-signing;
   };
 
   pythonImportsCheck = [ "kagglehub" ];
