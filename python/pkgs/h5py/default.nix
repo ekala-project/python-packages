@@ -11,11 +11,11 @@
   openssh,
 }:
 
-assert (hdf5.mpiSupport or false) -> mpi4py != null && hdf5.mpi == mpi4py.mpi;
+assert hdf5.mpiSupport -> mpi4py != null && hdf5.mpi == mpi4py.mpi;
 
 let
-  mpi = hdf5.mpi or null;
-  mpiSupport = hdf5.mpiSupport or false;
+  mpi = hdf5.mpi;
+  mpiSupport = hdf5.mpiSupport;
 in
 buildPythonPackage rec {
   version = "3.16.0";
