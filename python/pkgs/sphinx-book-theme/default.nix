@@ -4,7 +4,6 @@
   fetchPypi,
   sphinx,
   pydata-sphinx-theme,
-  jupyter-book,
 }:
 
 buildPythonPackage rec {
