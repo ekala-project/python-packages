@@ -9,7 +9,6 @@
   # dependencies
   click,
   httpx,
-  langgraph-runtime-inmem,
   langgraph-sdk,
   langgraph,
   pathspec,
@@ -41,14 +40,6 @@ buildPythonPackage (finalAttrs: {
     pathspec
     python-dotenv
   ];
-
-  optional-dependencies = {
-    "inmem" = [
-      langgraph
-      langgraph-runtime-inmem
-      python-dotenv
-    ];
-  };
 
   pythonImportsCheck = [ "langgraph_cli" ];
 
