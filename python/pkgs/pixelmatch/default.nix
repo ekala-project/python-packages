@@ -31,6 +31,6 @@ buildPythonPackage rec {
     description = "A pixel-level image comparison library";
     homepage = "https://github.com/whtsky/pixelmatch-py";
     license = lib.licenses.isc;
-    teams = [ lib.teams.geospatial ];
+    teams = [ ];
   };
 }

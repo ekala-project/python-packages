@@ -32,6 +32,6 @@ buildPythonPackage rec {
     homepage = "https://github.com/sciunto-org/python-bibtexparser";
     changelog = "https://github.com/sciunto-org/python-bibtexparser/blob/${src.tag}/CHANGELOG";
     license = lib.licenses.mit;
-    maintainers = [ lib.maintainers.amadejkastelic ];
+    maintainers = [ ];
   };
 }

@@ -41,6 +41,6 @@ buildPythonPackage rec {
     description = "Client for Open Geospatial Consortium web service interface standards";
     homepage = "https://www.osgeo.org/projects/owslib/";
     license = lib.licenses.bsd3;
-    teams = [ lib.teams.geospatial ];
+    teams = [ ];
   };
 }

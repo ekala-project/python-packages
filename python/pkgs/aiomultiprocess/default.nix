@@ -36,6 +36,6 @@ buildPythonPackage rec {
     '';
     homepage = "https://github.com/omnilib/aiomultiprocess";
     license = lib.licenses.mit;
-    maintainers = [ lib.maintainers.fab ];
+    maintainers = [ ];
   };
 }

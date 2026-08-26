@@ -24,6 +24,6 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://github.com/kjd/idna/";
     description = "Internationalized Domain Names in Applications (IDNA)";
     license = lib.licenses.bsd3;
-    maintainers = [ lib.maintainers.dotlambda ];
+    maintainers = [ ];
   };
 })

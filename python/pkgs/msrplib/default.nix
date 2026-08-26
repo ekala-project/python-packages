@@ -33,8 +33,6 @@ buildPythonPackage {
     description = "MSRP (RFC4975) client library";
     homepage = "https://github.com/AGProjects/python3-msrplib";
     license = lib.licenses.lgpl21Plus;
-    teams = [
-      lib.teams.ngi
-    ];
+    teams = [ ];
   };
 }

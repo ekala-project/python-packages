@@ -46,7 +46,7 @@ buildPythonPackage rec {
     description = "Python package for simplified libusb distribution and usage with pyOCD";
     homepage = "https://github.com/pyocd/libusb-package";
     license = lib.licenses.asl20;
-    maintainers = [ lib.maintainers.brianmcgillion ];
+    maintainers = [ ];
     platforms = lib.platforms.linux ++ lib.platforms.darwin;
   };
 }

@@ -45,6 +45,6 @@ buildPythonPackage (finalAttrs: {
     description = "WebSocket Connector for pycrdt";
     homepage = "https://github.com/jupyter-server/pycrdt-websocket";
     license = lib.licenses.mit;
-    teams = [ lib.teams.jupyter ];
+    teams = [ ];
   };
 })

@@ -38,6 +38,6 @@ buildPythonPackage rec {
     homepage = "https://github.com/Toblerity/rtree";
     license = lib.licenses.mit;
     maintainers = [ ];
-    teams = [ lib.teams.geospatial ];
+    teams = [ ];
   };
 }

@@ -30,6 +30,6 @@ buildPythonPackage (finalAttrs: {
     description = "Generates random request fields for a http request header";
     homepage = "https://github.com/MichaelTatarski/fake-http-header";
     license = licenses.mit;
-    maintainers = with maintainers; [ fab ];
+    maintainers = [ ];
   };
 })

@@ -87,8 +87,6 @@ buildPythonPackage (finalAttrs: {
     mainProgram = "hypothesis";
     homepage = "https://github.com/HypothesisWorks/hypothesis";
     license = lib.licenses.mpl20;
-    maintainers = [
-      lib.maintainers.fliegendewurst
-    ];
+    maintainers = [ ];
   };
 })

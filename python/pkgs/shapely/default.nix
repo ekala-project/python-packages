@@ -54,6 +54,6 @@ buildPythonPackage rec {
     description = "Manipulation and analysis of geometric objects";
     homepage = "https://github.com/shapely/shapely";
     license = lib.licenses.bsd3;
-    teams = [ lib.teams.geospatial ];
+    teams = [ ];
   };
 }

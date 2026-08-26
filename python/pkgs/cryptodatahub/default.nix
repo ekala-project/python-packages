@@ -64,6 +64,6 @@ buildPythonPackage (finalAttrs: {
     description = "Repository of cryptography-related data";
     homepage = "https://gitlab.com/coroner/cryptodatahub";
     license = lib.licenses.mpl20;
-    teams = with lib.teams; [ ngi ];
+    teams = [ ];
   };
 })

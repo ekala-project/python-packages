@@ -44,6 +44,6 @@ buildPythonPackage (finalAttrs: {
     description = "Document structures for collaborative editing using Yjs/pycrdt";
     homepage = "https://github.com/jupyter-server/jupyter_ydoc";
     license = lib.licenses.bsd3;
-    teams = [ lib.teams.jupyter ];
+    teams = [ ];
   };
 })

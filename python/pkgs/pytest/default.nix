@@ -97,7 +97,7 @@ buildPythonPackage rec {
   meta = {
     description = "Framework for writing tests";
     homepage = "https://docs.pytest.org";
-    teams = [ lib.teams.python ];
+    teams = [ ];
     license = lib.licenses.mit;
   };
 }

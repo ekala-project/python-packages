@@ -38,6 +38,6 @@ buildPythonPackage {
     description = "Turns CSS blocks into style attributes";
     homepage = "https://github.com/peterbe/premailer";
     license = lib.licenses.bsd3;
-    maintainers = [ lib.maintainers.linsui ];
+    maintainers = [ ];
   };
 }

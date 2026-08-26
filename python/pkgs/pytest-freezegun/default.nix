@@ -35,6 +35,6 @@ buildPythonPackage rec {
     description = "Wrap tests with fixtures in freeze_time";
     homepage = "https://github.com/ktosiek/pytest-freezegun";
     license = lib.licenses.mit;
-    maintainers = [ lib.maintainers.mic92 ];
+    maintainers = [ ];
   };
 }

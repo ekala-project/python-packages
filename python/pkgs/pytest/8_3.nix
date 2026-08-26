@@ -98,7 +98,7 @@ buildPythonPackage rec {
     description = "Framework for writing tests";
     homepage = "https://docs.pytest.org";
     changelog = "https://github.com/pytest-dev/pytest/releases/tag/${version}";
-    teams = [ lib.teams.python ];
+    teams = [ ];
     license = lib.licenses.mit;
   };
 }

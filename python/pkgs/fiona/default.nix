@@ -85,6 +85,6 @@ buildPythonPackage (finalAttrs: {
     mainProgram = "fio";
     homepage = "https://fiona.readthedocs.io/";
     license = lib.licenses.bsd3;
-    teams = [ lib.teams.geospatial ];
+    teams = [ ];
   };
 })

@@ -44,6 +44,6 @@ buildPythonPackage rec {
     description = "Command Line Interface Formulation Framework";
     homepage = "https://github.com/openstack/cliff";
     license = lib.licenses.asl20;
-    teams = [ lib.teams.openstack ];
+    teams = [ ];
   };
 }

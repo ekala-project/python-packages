@@ -34,6 +34,6 @@ buildPythonPackage rec {
     description = "Python bindings to the Rust regress crate, exposing ECMA regular expressions";
     homepage = "https://github.com/Julian/regress";
     license = lib.licenses.mit;
-    maintainers = [ lib.maintainers.matthiasbeyer ];
+    maintainers = [ ];
   };
 }

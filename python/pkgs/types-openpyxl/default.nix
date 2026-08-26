@@ -24,6 +24,6 @@ buildPythonPackage (finalAttrs: {
     description = "Typing stubs for openpyxl";
     homepage = "https://github.com/python/typeshed";
     license = lib.licenses.asl20;
-    maintainers = [ lib.maintainers.me-and ];
+    maintainers = [ ];
   };
 })

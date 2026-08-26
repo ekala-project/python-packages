@@ -51,6 +51,6 @@ buildPythonPackage (finalAttrs: {
     }";
     license = lib.licenses.mit;
     platforms = python.meta.platforms;
-    teams = [ lib.teams.python ];
+    teams = [ ];
   };
 })

@@ -30,9 +30,6 @@ buildPythonPackage (finalAttrs: {
     description = "LlamaIndex Embeddings Integration for OpenAI like";
     homepage = "https://github.com/run-llama/llama_index/tree/main/llama-index-integrations/embeddings/llama-index-embeddings-openai-like";
     license = lib.licenses.mit;
-    maintainers = with lib.maintainers; [
-      fab
-      kilyanni
-    ];
+    maintainers = [ ];
   };
 })

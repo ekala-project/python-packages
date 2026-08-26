@@ -25,6 +25,6 @@ buildPythonPackage (finalAttrs: {
     description = "Python wrapper for libvalkey";
     homepage = "https://github.com/valkey-io/libvalkey-py";
     license = lib.licenses.mit;
-    maintainers = [ lib.maintainers.dotlambda ];
+    maintainers = [ ];
   };
 })

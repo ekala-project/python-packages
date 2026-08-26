@@ -58,8 +58,6 @@ buildPythonPackage (finalAttrs: {
     description = "Build LangChain applications with mistralai";
     homepage = "https://github.com/langchain-ai/langchain/tree/master/libs/partners/mistralai";
     license = lib.licenses.mit;
-    maintainers = [
-      lib.maintainers.sarahec
-    ];
+    maintainers = [ ];
   };
 })

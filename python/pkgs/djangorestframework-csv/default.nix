@@ -36,6 +36,6 @@ buildPythonPackage rec {
     description = "CSV Tools for Django REST Framework";
     homepage = "https://github.com/mjumbewu/django-rest-framework-csv";
     license = lib.licenses.bsd2;
-    maintainers = [ lib.maintainers.onny ];
+    maintainers = [ ];
   };
 }

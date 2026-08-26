@@ -66,6 +66,6 @@ buildPythonPackage (finalAttrs: {
     description = "Security protocol parser and generator";
     homepage = "https://gitlab.com/coroner/cryptoparser";
     license = lib.licenses.mpl20;
-    teams = with lib.teams; [ ngi ];
+    teams = [ ];
   };
 })

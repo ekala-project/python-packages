@@ -53,6 +53,6 @@ buildPythonPackage {
     description = "Python bindings for FFmpeg - with complex filtering support";
     homepage = "https://github.com/kkroening/ffmpeg-python";
     license = lib.licenses.asl20;
-    maintainers = [ lib.maintainers.emily ];
+    maintainers = [ ];
   };
 }

@@ -64,9 +64,6 @@ buildPythonPackage rec {
     homepage = "https://github.com/microsoft/lsprotocol";
     changelog = "https://github.com/microsoft/lsprotocol/releases/tag/${src.tag}";
     license = lib.licenses.mit;
-    maintainers = with lib.maintainers; [
-      doronbehar
-      fab
-    ];
+    maintainers = [ ];
   };
 }

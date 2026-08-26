@@ -32,6 +32,6 @@ buildPythonPackage (finalAttrs: {
     description = "Human friendly alternative to Regular Expressions";
     homepage = "https://github.com/cucumber/cucumber-expressions/tree/main/python";
     license = lib.licenses.mit;
-    maintainers = [ lib.maintainers.dotlambda ];
+    maintainers = [ ];
   };
 })

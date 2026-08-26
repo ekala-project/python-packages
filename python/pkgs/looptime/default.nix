@@ -45,6 +45,6 @@ buildPythonPackage (finalAttrs: {
     description = "Time dilation & contraction in asyncio event loops (in tests)";
     homepage = "https://github.com/nolar/looptime";
     license = lib.licenses.mit;
-    maintainers = [ lib.maintainers.dotlambda ];
+    maintainers = [ ];
   };
 })

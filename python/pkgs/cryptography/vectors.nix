@@ -28,6 +28,6 @@ buildPythonPackage rec {
       asl20
       bsd3
     ];
-    maintainers = with lib.maintainers; [ mdaniels5757 ];
+    maintainers = [ ];
   };
 }

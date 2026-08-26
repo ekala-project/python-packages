@@ -42,6 +42,6 @@ buildPythonPackage (finalAttrs: {
     mainProgram = "reno";
     homepage = "https://docs.openstack.org/reno/latest";
     license = lib.licenses.asl20;
-    teams = [ lib.teams.openstack ];
+    teams = [ ];
   };
 })

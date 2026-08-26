@@ -36,6 +36,6 @@ buildPythonPackage (finalAttrs: {
     description = "Python 3 implementation of the Readers-writers problem";
     homepage = "https://github.com/elarivie/pyReaderWriterLock";
     license = lib.licenses.mit;
-    maintainers = [ lib.maintainers.dotlambda ];
+    maintainers = [ ];
   };
 })

@@ -47,6 +47,6 @@ buildPythonPackage rec {
     description = "Oslo Configuration API";
     homepage = "https://github.com/openstack/oslo.config";
     license = lib.licenses.asl20;
-    teams = [ lib.teams.openstack ];
+    teams = [ ];
   };
 }

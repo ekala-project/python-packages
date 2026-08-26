@@ -51,6 +51,6 @@ buildPythonPackage rec {
     description = "Make beautiful maps with Leaflet.js & Python";
     homepage = "https://github.com/python-visualization/folium";
     license = lib.licenses.mit;
-    teams = [ lib.teams.geospatial ];
+    teams = [ ];
   };
 }

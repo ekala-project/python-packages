@@ -41,6 +41,6 @@ buildPythonPackage (finalAttrs: {
     description = "Larksuite development interface SDK";
     homepage = "https://github.com/larksuite/oapi-sdk-python";
     license = lib.licenses.mit;
-    maintainers = [ lib.maintainers.knightfemale ];
+    maintainers = [ ];
   };
 })

@@ -30,6 +30,6 @@ buildPythonPackage rec {
     description = "Library for performing concurrent I/O with coroutines in Python";
     homepage = "https://github.com/dabeaz/curio";
     license = lib.licenses.bsd3;
-    maintainers = [ lib.maintainers.pbsds ];
+    maintainers = [ ];
   };
 }

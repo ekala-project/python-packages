@@ -62,6 +62,6 @@ buildPythonPackage (finalAttrs: {
     description = "Vectorized spatial vector file format I/O using GDAL/OGR";
     homepage = "https://pyogrio.readthedocs.io/";
     license = lib.licenses.mit;
-    teams = [ lib.teams.geospatial ];
+    teams = [ ];
   };
 })

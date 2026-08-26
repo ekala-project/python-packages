@@ -47,6 +47,6 @@ buildPythonPackage rec {
     description = "Modern password hashing for your software and your servers";
     homepage = "https://github.com/pyca/bcrypt/";
     license = lib.licenses.asl20;
-    maintainers = [ lib.maintainers.dotlambda ];
+    maintainers = [ ];
   };
 }

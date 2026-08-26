@@ -35,6 +35,6 @@ buildPythonPackage rec {
     description = "C parser in Python";
     homepage = "https://github.com/eliben/pycparser";
     license = lib.licenses.bsd3;
-    maintainers = [ lib.maintainers.dotlambda ];
+    maintainers = [ ];
   };
 }

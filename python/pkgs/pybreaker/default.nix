@@ -28,6 +28,6 @@ buildPythonPackage rec {
     description = "Python implementation of the Circuit Breaker pattern";
     homepage = "https://github.com/danielfm/pybreaker";
     license = lib.licenses.bsd3;
-    maintainers = [ lib.maintainers.dotlambda ];
+    maintainers = [ ];
   };
 }

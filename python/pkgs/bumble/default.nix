@@ -72,6 +72,6 @@ buildPythonPackage rec {
     description = "Bluetooth Stack for Apps, Emulation, Test and Experimentation";
     homepage = "https://github.com/google/bumble";
     license = lib.licenses.asl20;
-    maintainers = [ lib.maintainers.dotlambda ];
+    maintainers = [ ];
   };
 }

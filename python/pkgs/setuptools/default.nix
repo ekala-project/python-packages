@@ -42,6 +42,6 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://github.com/pypa/setuptools";
     license = lib.licenses.mit;
     platforms = python.meta.platforms;
-    teams = [ lib.teams.python ];
+    teams = [ ];
   };
 })

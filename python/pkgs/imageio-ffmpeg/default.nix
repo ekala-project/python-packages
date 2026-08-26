@@ -45,6 +45,6 @@ buildPythonPackage rec {
     description = "FFMPEG wrapper for Python";
     homepage = "https://github.com/imageio/imageio-ffmpeg";
     license = lib.licenses.bsd2;
-    maintainers = [ lib.maintainers.pmiddend ];
+    maintainers = [ ];
   };
 }

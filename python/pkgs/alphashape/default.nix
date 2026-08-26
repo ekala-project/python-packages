@@ -59,6 +59,6 @@ buildPythonPackage (finalAttrs: {
     description = "Toolbox for generating n-dimensional alpha shapes";
     homepage = "https://github.com/bellockk/alphashape";
     license = licenses.mit;
-    maintainers = with maintainers; [ fab ];
+    maintainers = [ ];
   };
 })

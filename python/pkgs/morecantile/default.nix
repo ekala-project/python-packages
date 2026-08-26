@@ -39,7 +39,7 @@ buildPythonPackage rec {
     homepage = "https://developmentseed.org/morecantile";
     downloadPage = "https://github.com/developmentseed/morecantile";
     license = lib.licenses.mit;
-    teams = [ lib.teams.geospatial ];
+    teams = [ ];
     mainProgram = "morecantile";
   };
 }

@@ -51,6 +51,6 @@ buildPythonPackage (finalAttrs: {
     license = lib.licenses.mit;
     mainProgram = "rvl";
     maintainers = [ ];
-    teams = [ lib.teams.redis ];
+    teams = [ ];
   };
 })

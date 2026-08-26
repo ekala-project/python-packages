@@ -41,6 +41,6 @@ buildPythonPackage (finalAttrs: {
     description = "Python 3.8+ toolbox for submitting jobs to Slurm";
     homepage = "https://github.com/facebookincubator/submitit";
     license = lib.licenses.mit;
-    maintainers = [ lib.maintainers.nickcao ];
+    maintainers = [ ];
   };
 })

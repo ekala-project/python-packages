@@ -34,6 +34,6 @@ buildPythonPackage rec {
     mainProgram = "lower-bound-checker";
     homepage = "https://github.com/googleapis/python-test-utils";
     license = lib.licenses.asl20;
-    maintainers = [ lib.maintainers.sarahec ];
+    maintainers = [ ];
   };
 }
