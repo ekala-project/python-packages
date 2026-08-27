@@ -13,7 +13,6 @@
 
   # tests
   devtools,
-  fastapi,
   httpx2,
   pytest-asyncio,
   requests,
@@ -42,14 +41,6 @@ buildPythonPackage (finalAttrs: {
   ];
   # numerous test failures on Darwin
   doCheck = !stdenv.hostPlatform.isDarwin;
-
-  # TODO: Cleanup when https://github.com/NixOS/nixpkgs/pull/538958 reaches
-  # `master`...
-  disabledTests = lib.optionals (lib.versionOlder fastapi.version "0.137") [
-    # Asserts that instrumentation works with fastapi 0.137+,
-    # fails on nixpkgs with fastapi 0.136.
-    "test_mount_inside_included_router_resolves_path"
-  ];
 
   pythonImportsCheck = [ "prometheus_fastapi_instrumentator" ];
 
