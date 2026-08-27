@@ -19,6 +19,13 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-ms+N/m33zqO0qgtQykOI++eCkDPf50qf8lbi+tO5ae0=";
   };
 
+  # Don't try to `rmtree` to "Cleanup C-source" — fails in the sandbox
+  postPatch = ''
+    substituteInPlace setup.py --replace-fail \
+      "if daqp_src_exists:" \
+      "if False:"
+  '';
+
   sourceRoot = "${finalAttrs.src.name}/interfaces/daqp-python";
 
   nativeCheckInputs = [ unittestCheckHook ];
