@@ -19,7 +19,7 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "ibind";
-  version = "0.1.22";
+  version = "0.1.24";
   pyproject = true;
 
   strictDeps = true;
@@ -29,20 +29,13 @@ buildPythonPackage (finalAttrs: {
     owner = "Voyz";
     repo = "ibind";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-hFjxkAEbhbcwseI7XwrEBtq5kzGj6XRBw3mqcxar9r0=";
+    hash = "sha256-yJ70fw1VZMn3CPChgNO3GZR5yPZshD+tgXnKvZwXmc0=";
   };
 
   # Otherwise, fails with:
   # __main__.py: error: unrecognized arguments: unpacked/ibind-0.0.2
   postUnpack = ''
     rm -r "$sourceRoot/dist"
-  '';
-
-  # ModuleNotFoundError: No module named 'test_utils'
-  # TODO: The fix is already merged upstream: remove when updating to the next release
-  postPatch = ''
-    substituteInPlace "pytest.ini" \
-      --replace-fail '[tool:pytest]' '[pytest]'
   '';
 
   build-system = [
