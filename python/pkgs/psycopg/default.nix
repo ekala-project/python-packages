@@ -113,13 +113,11 @@ buildPythonPackage rec {
   build-system = [ setuptools ];
 
   propagatedBuildInputs = [
-    psycopg-c
     typing-extensions
   ];
 
   pythonImportsCheck = [
     "psycopg"
-    "psycopg_c"
     "psycopg_pool"
   ];
 
