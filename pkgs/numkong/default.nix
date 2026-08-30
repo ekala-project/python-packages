@@ -22,7 +22,10 @@ stdenv.mkDerivation (finalAttrs: {
     hash = "sha256-JZafqqq3jDX+iim2DvyuavuvZ0wrPLIU+hcrOiT1L84=";
   };
 
-  nativeBuildInputs = [ cmake ];
+  nativeBuildInputs = [
+    cmake
+    cmake.configurePhaseHook
+  ];
 
   meta = {
     description = "Portable mixed-precision math, linear-algebra, & retrieval library with 2000+ SIMD kernels";

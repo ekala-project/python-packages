@@ -34,7 +34,10 @@ stdenv.mkDerivation (finalAttrs: {
 
   buildInputs = [ snappy ];
 
-  nativeBuildInputs = [ cmake ];
+  nativeBuildInputs = [
+    cmake
+    cmake.configurePhaseHook
+  ];
 
   buildFlags = [ "all" ];
 

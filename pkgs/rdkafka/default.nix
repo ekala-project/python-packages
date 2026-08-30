@@ -31,6 +31,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [
     cmake
+    cmake.configurePhaseHook
     ninja
     pkg-config
     # cross: build system uses uname to determine host system

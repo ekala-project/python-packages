@@ -23,7 +23,10 @@ stdenv.mkDerivation (finalAttrs: {
       "$""{CMAKE_INSTALL_INCLUDEDIR}"
   '';
 
-  nativeBuildInputs = [ cmake ];
+  nativeBuildInputs = [
+    cmake
+    cmake.configurePhaseHook
+  ];
 
   meta = {
     description = "Free LDL factorisation routine";
