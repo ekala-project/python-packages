@@ -6,8 +6,6 @@
   docutils,
   lockfile,
   packaging,
-  testscenarios,
-  testtools,
   setuptools,
 }:
 

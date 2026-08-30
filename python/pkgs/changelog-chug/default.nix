@@ -5,9 +5,6 @@
   docutils,
   semver,
   setuptools,
-  testscenarios,
-  testtools,
-  unittestCheckHook,
 }:
 
 buildPythonPackage rec {
