@@ -25,7 +25,7 @@ buildPythonPackage (finalAttrs: {
     owner = "geopandas";
     repo = "pyogrio";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-9WaJMrh3FN4hWpdGNq2TynoLqT91tLQ7iTTl/NWYQTI=";
+    hash = "sha256-QszaU+KYm3SZU4MV1McvSVrohe9YAUhUwsUkOu5ZNn0=";
   };
 
   postPatch = ''

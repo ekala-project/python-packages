@@ -31,7 +31,7 @@ buildPythonPackage rec {
     owner = "pyocd";
     repo = "pyOCD";
     tag = "v${version}";
-    hash = "sha256-VSEItt+mXiV3u3SAKQc8uGiJdT6b4nER/u6BwfaX2CM=";
+    hash = "sha256-tGeuTXQKt3ALXIEbeSNVt8j4h92FpyoY3d3M/4KTbnk=";
   };
 
   pythonRelaxDeps = [ "capstone" ];

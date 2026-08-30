@@ -27,7 +27,7 @@ buildPythonPackage (finalAttrs: {
     owner = "JeffLIrion";
     repo = "adb_shell";
     rev = "v${finalAttrs.version}";
-    hash = "sha256-pOkFUh3SEu/ch9R1lVoQn50nufQp8oI+D4/+Ybal5CA=";
+    hash = "sha256-aMPlIPhTmE6imXNMJk2Uk4VGJS6PO+JcW/Pz/3sHrmY=";
   };
 
   build-system = [ setuptools ];

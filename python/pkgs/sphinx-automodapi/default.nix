@@ -17,7 +17,7 @@ buildPythonPackage rec {
     owner = "astropy";
     repo = "sphinx-automodapi";
     tag = "v${version}";
-    hash = "sha256-L+noKcyhT3wsbgdgyd29I9yCN81BlB8Fvfyl4fKioEw=";
+    hash = "sha256-F5QAHjnLjvcdZOtpY2UIaZliRIv5rciDHWi6DQ9tUmc=";
     leaveDotGit = true;
   };
 

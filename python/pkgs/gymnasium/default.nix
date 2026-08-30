@@ -22,7 +22,7 @@ buildPythonPackage rec {
     owner = "Farama-Foundation";
     repo = "Gymnasium";
     tag = "v${version}";
-    hash = "sha256-cXcIELXPbhIvAUUYAU55GJkuD+gXwz5V1Y3J/PBqj1o=";
+    hash = "sha256-asQ/RqnmGRoVdwBkp4RIkqzGtQ7PnISt8/mRcXrNbBc=";
   };
 
   build-system = [ setuptools ];

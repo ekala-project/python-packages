@@ -17,7 +17,7 @@ buildPythonPackage (finalAttrs: {
     owner = "m2crypto";
     repo = "m2crypto";
     tag = finalAttrs.version;
-    hash = "sha256-Ya1og1x3EPbHkrY74tkdkMOJreS3x8x/1oVfwcpAEOU=";
+    hash = "sha256-/Fv9XFVDafQEg4i4E/UGYoCIGDl5c4t5H8D60TYVvao=";
   };
 
   # https://lists.sr.ht/~mcepl/m2crypto/%3CCAPhw1+Hg6+OJZoqt1O6aezxnTUFmfFTMzDwkD2bJ74jnmygqrg@mail.gmail.com%3E

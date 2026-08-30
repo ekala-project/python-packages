@@ -14,7 +14,7 @@ buildPythonPackage (finalAttrs: {
     owner = "milesgranger";
     repo = "cramjam";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-vGT57ou9nnCVCw8LR+w+5MV54EqwT2R+ww9acRQk8Lc=";
+    hash = "sha256-Sjb1YBFJ26or4RiTA1G0UmVD6tyi9hNwBrde7E/WOes=";
   };
 
   cargoDeps = rustPlatform.fetchCargoVendor {

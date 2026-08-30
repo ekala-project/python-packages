@@ -17,7 +17,7 @@ buildPythonPackage rec {
     repo = "pydata-google-auth";
     owner = "pydata";
     tag = version;
-    hash = "sha256-NxEpwCkjNWao2bnKOsDgw93N+cVqwM12VfoEu8CyWUU=";
+    hash = "sha256-vetijE+BQAt/8Dg3p2FunrzPyyNG9O2W6Y9sbWNFUnc=";
   };
 
   postPatch = ''

@@ -21,7 +21,7 @@ buildPythonPackage rec {
     owner = "ansible";
     repo = "ansible-runner";
     tag = version;
-    hash = "sha256-kKG6Jn0RRa6rglUrE8fJmXj+nbeKNUbL/GVWqT20Hfk=";
+    hash = "sha256-QKvc5T80lVt5hgIjylPpza3kJiw+epytimIsxy0oIK0=";
   };
 
   postPatch = ''

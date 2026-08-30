@@ -24,7 +24,7 @@ buildPythonPackage rec {
     owner = "Yelp";
     repo = "detect-secrets";
     tag = "v${version}";
-    hash = "sha256-pNLAZUJhjZ3b01XaltJUJ9O7Blv6/pHQrRvURe7MJ5A=";
+    hash = "sha256-Jkmx8gZIbyfjoZRbc+Hd4tDoZTZ/dhJwHfTIU9lt5jY=";
     leaveDotGit = true;
   };
 

@@ -16,7 +16,7 @@ buildPythonPackage (finalAttrs: {
     owner = "mgeier";
     repo = "sphinx-last-updated-by-git";
     rev = "8d4eef2561996319e6f785b4faa914a1e6545476";
-    hash = "sha256-30pZiqWs6Da+O8j08EIHrUoiJfJUPT6FdDiPBjmvRL8=";
+    hash = "sha256-/oZwjQXMpLW6+VvIViqu4ofoXmOT9SQV9B/Intgz7qM=";
     fetchSubmodules = true;
     leaveDotGit = true;
   };

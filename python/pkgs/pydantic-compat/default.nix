@@ -19,7 +19,7 @@ buildPythonPackage rec {
     repo = "pydantic-compat";
     tag = "v${version}";
     leaveDotGit = true;
-    hash = "sha256-YJUfWu+nyGlwpJpxYghCKzj3CasdAaqYoNVCcfo/7YE=";
+    hash = "sha256-LU+NaQd0W2nRqHmnIcSXfEgIN+TIBkkR871+40Z+WR4=";
   };
 
   build-system = [

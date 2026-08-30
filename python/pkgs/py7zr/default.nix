@@ -24,7 +24,7 @@ buildPythonPackage rec {
     owner = "miurahr";
     repo = "py7zr";
     tag = "v${version}";
-    hash = "sha256-/sorvv5/kwlY/DtxW33ytHhyrR06p6aNgGW9oH+lpUw=";
+    hash = "sha256-rD5qs0AjJXS5x4o0niyz23ROtgmJg/4uZqAbDCnFnYY=";
   };
 
   build-system = [

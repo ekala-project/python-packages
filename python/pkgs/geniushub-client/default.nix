@@ -15,7 +15,7 @@ buildPythonPackage rec {
     owner = "manzanotti";
     repo = "geniushub-client";
     tag = "v${version}";
-    hash = "sha256-0qHmTq/nOPruivU5R8r0abmMAhxy0w5zILKFPxtL2Mc=";
+    hash = "sha256-6jVLqOf9OmxynUOjEuOPI/Pvbv3NYAbWE3glwBAY4p8=";
   };
 
   postPatch = ''

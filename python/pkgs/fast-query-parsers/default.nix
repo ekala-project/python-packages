@@ -18,7 +18,7 @@ buildPythonPackage (finalAttrs: {
     owner = "litestar-org";
     repo = "fast-query-parsers";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-gxKySLbBtX/6bXuTtiFw50UhmUwZE8lDaQ5P/g09Qnk=";
+    hash = "sha256-6Tv7bWUp7l6T4TeeYtaJ6pGhFvgd8pPQf6STybOFDiE=";
   };
 
   cargoDeps = rustPlatform.fetchCargoVendor {
