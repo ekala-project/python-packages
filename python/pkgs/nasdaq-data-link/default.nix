@@ -1,17 +1,11 @@
 {
   lib,
   buildPythonPackage,
-  factory-boy,
   fetchFromGitHub,
-  httpretty,
   inflection,
-  jsondate,
-  mock,
   more-itertools,
   numpy,
   pandas,
-  parameterized,
-  pytestCheckHook,
   python-dateutil,
   requests,
   six,
@@ -37,15 +31,6 @@ buildPythonPackage rec {
     python-dateutil
     requests
     six
-  ];
-
-  nativeCheckInputs = [
-    factory-boy
-    httpretty
-    jsondate
-    mock
-    parameterized
-    pytestCheckHook
   ];
 
   pythonImportsCheck = [ "nasdaqdatalink" ];
