@@ -67,8 +67,6 @@ buildPythonPackage rec {
       --replace "prison>=0.2.1, <1.0.0" "prison"
   '';
 
-  doCheck = false;
-
   pythonImportsCheck = [ "flask_appbuilder" ];
 
   meta = {
