@@ -4,8 +4,8 @@
   fetchPypi,
 
   # build-system
-  pbr,
-  setuptools,
+  hatch-vcs,
+  hatchling,
 
   # dependencies
   testtools,
@@ -13,25 +13,20 @@
 
 buildPythonPackage rec {
   pname = "testscenarios";
-  version = "0.5.0";
+  version = "0.7.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-wlfLa5Dqfm+P7zFYEh1DBUNBLJqH3zC13ebsi5tXorY=";
+    hash = "sha256-2hhe4xbYdwIb62OV8tgM7SKpnCh2xC1UmU47rTw9r00=";
   };
 
   build-system = [
-    pbr
-    setuptools
+    hatch-vcs
+    hatchling
   ];
 
-  dependencies = [
-    pbr
-    testtools
-  ];
-
-  doCheck = false;
+  dependencies = [ testtools ];
 
   pythonImportsCheck = [ "testscenarios" ];
 
