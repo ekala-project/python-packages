@@ -1,7 +1,6 @@
 {
   lib,
   buildPythonPackage,
-  distutils,
   fetchPypi,
   setuptools,
   six,
@@ -9,23 +8,17 @@
 
 buildPythonPackage rec {
   pname = "thrift";
-  version = "0.22.0";
+  version = "0.24.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-QugnavvV9U/h02SFi2h3vF5aSl7Wn2oAW5TKSRj+FGY=";
+    hash = "sha256-nvYBxJ6YhHX/DnQdjhtF/uwjtIUU5SQ0HvwnQZHxeJw=";
   };
 
-  build-system = [
-    distutils
-    setuptools
-  ];
+  build-system = [ setuptools ];
 
   dependencies = [ six ];
-
-  # No tests. Breaks when not disabling.
-  doCheck = false;
 
   pythonImportsCheck = [ "thrift" ];
 
