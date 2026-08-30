@@ -8,7 +8,6 @@
   beautifulsoup4,
   html5lib,
   pyvo,
-  astropy-helpers,
   setuptools,
 }:
 
@@ -24,10 +23,7 @@ buildPythonPackage rec {
     hash = "sha256-BcdRBPnJfuW17p31xUhjBmP7Lv98CnmOTCO4aU0xpMM=";
   };
 
-  build-system = [
-    astropy-helpers
-    setuptools
-  ];
+  build-system = [ setuptools ];
 
   dependencies = [
     astropy
