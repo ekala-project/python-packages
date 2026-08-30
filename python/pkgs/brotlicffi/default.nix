@@ -4,8 +4,7 @@
   buildPythonPackage,
   cffi,
   isPyPy,
-  # overridden as pkgs.brotli
-  brotli,
+  pkgs,
   setuptools,
   pycparser,
 }:
@@ -24,7 +23,10 @@ buildPythonPackage rec {
 
   build-system = [ setuptools ];
 
-  buildInputs = [ brotli ];
+  buildInputs = [
+    pkgs.brotli.dev
+    pkgs.brotli.lib
+  ];
 
   propagatedNativeBuildInputs = [ cffi ];
 
