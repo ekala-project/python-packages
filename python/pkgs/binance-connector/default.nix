@@ -6,11 +6,6 @@
   requests,
   setuptools,
   websocket-client,
-  # dependencies for tests
-  pytest-cov-stub,
-  sure,
-  responses,
-  pytestCheckHook,
 }:
 
 buildPythonPackage rec {
@@ -32,17 +27,6 @@ buildPythonPackage rec {
     pycryptodome
     websocket-client
   ];
-
-  nativeCheckInputs = [
-    pytest-cov-stub
-    sure
-    responses
-    pytestCheckHook
-  ];
-
-  # pytestCheckHook attempts to run examples directory, which requires
-  # network access
-  disabledTestPaths = [ "examples/" ];
 
   pythonImportsCheck = [
     "binance.spot"
