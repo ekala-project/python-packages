@@ -2,23 +2,23 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
-  poetry-core,
+  hatchling,
   pytestCheckHook,
 }:
 
 buildPythonPackage rec {
   pname = "crc";
-  version = "7.1.0";
+  version = "8.0.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "Nicoretti";
     repo = "crc";
     tag = version;
-    hash = "sha256-Oa2VSzNT+8O/rWZurIr7RnP8m3xAEVOQLs+ObT4xIa0=";
+    hash = "sha256-yEjYME2WhYdPcdbGplBaXXfppPTpNwz6jQm5CIJrrzY=";
   };
 
-  build-system = [ poetry-core ];
+  build-system = [ hatchling ];
 
   nativeCheckInputs = [ pytestCheckHook ];
 
