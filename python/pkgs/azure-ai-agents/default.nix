@@ -11,13 +11,13 @@
 
 buildPythonPackage rec {
   pname = "azure-ai-agents";
-  version = "1.1.0";
+  version = "1.2.0b6";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_ai_agents";
     inherit version;
-    hash = "sha256-651yJigtAyBsP6s/PuCi/HHgrTjlLS9PGaksVu2VGuo=";
+    hash = "sha256-08EISMOxneyYopL4wQzuS6SqwQUNT6q/nC4kVrcn9Sg=";
   };
 
   build-system = [
