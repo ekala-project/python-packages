@@ -30,14 +30,14 @@
 
 buildPythonPackage rec {
   pname = "datasette";
-  version = "0.65.2";
+  version = "0.65.3";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "simonw";
     repo = "datasette";
     tag = version;
-    hash = "sha256-9ZMQ9xpWalkM4Ymoc/IA0ct+0r8ht1TxW5qPlVMFspE=";
+    hash = "sha256-2YID5Y8gRppYAKBk8x0oHnxTxkeXrWDKL6olX3+uutA=";
   };
 
   postPatch = ''
