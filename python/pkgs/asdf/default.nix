@@ -19,18 +19,19 @@
   semantic-version,
   setuptools,
   setuptools-scm,
+  typing-extensions,
 }:
 
 buildPythonPackage rec {
   pname = "asdf";
-  version = "5.2.0";
+  version = "5.4.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "asdf-format";
     repo = "asdf";
     tag = version;
-    hash = "sha256-StudmLkXINe/lIJneid763jBdo6jAHlnjj4PHsGFxwM=";
+    hash = "sha256-kvo53BT/jCnMj772GiwI2v0KTQcRVQqbYTRIOyS7PRM=";
   };
 
   build-system = [
@@ -48,6 +49,7 @@ buildPythonPackage rec {
     pyyaml
     semantic-version
     attrs
+    typing-extensions
   ];
   pythonImportsCheck = [ "asdf" ];
 
