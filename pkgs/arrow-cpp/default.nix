@@ -46,7 +46,7 @@
 }:
 
 let
-  version = "24.0.0";
+  version = "25.0.1";
 in
 stdenv.mkDerivation (finalAttrs: {
   pname = "arrow-cpp";
@@ -56,7 +56,7 @@ stdenv.mkDerivation (finalAttrs: {
     owner = "apache";
     repo = "arrow";
     rev = "apache-arrow-${version}";
-    hash = "sha256-qTdkzZegANNvtO7nbqXVC8hc7BexvmeFF/0l5VzRb8g=";
+    hash = "sha256-IKqdGzjFiUDdOFxTHVIMKyY5pSLT5PbNHAPd5homp1Y=";
   };
 
   sourceRoot = "${finalAttrs.src.name}/cpp";
@@ -79,8 +79,8 @@ stdenv.mkDerivation (finalAttrs: {
       ARROW_XSIMD_URL = fetchFromGitHub {
         owner = "xtensor-stack";
         repo = "xsimd";
-        tag = "14.0.0";
-        hash = "sha256-ijNoHb6xC+OHJbUB4j1PRsoHMzjrnOHVoDRe/nKguDo=";
+        tag = "14.2.0";
+        hash = "sha256-BTiN4B3//wlB3nmOoluM/7bL7J7YIBp5afih9zUP1yw=";
       };
 
       ARROW_SUBSTRAIT_URL = fetchFromGitHub {
