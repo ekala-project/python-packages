@@ -10,14 +10,14 @@
 
 buildPythonPackage rec {
   pname = "asyncer";
-  version = "0.0.17";
+  version = "0.0.18";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "fastapi";
     repo = "asyncer";
     tag = version;
-    hash = "sha256-4h6s0jsAzTT6LbsvfQGkc7qNCcPgoyR9Qr/yro1ukbg=";
+    hash = "sha256-PoIyE+Mv+Uo74R6mXv2unKU396UW3/8085zvR1jYVvQ=";
   };
 
   build-system = [ pdm-backend ];
