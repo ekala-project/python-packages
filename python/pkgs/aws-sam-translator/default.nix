@@ -17,14 +17,14 @@
 
 buildPythonPackage rec {
   pname = "aws-sam-translator";
-  version = "1.110.0";
+  version = "1.113.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "aws";
     repo = "serverless-application-model";
     tag = "v${version}";
-    hash = "sha256-Zn+6cDyDZSsV9V+zAA8BOPs4aKl0j3dF92/azGYG+OI=";
+    hash = "sha256-gEW7oOysAD9Czk8MDziyrnW5bDw4GCYpA0aZOHXnEEI=";
   };
 
   postPatch = ''
