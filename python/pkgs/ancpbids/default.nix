@@ -4,13 +4,14 @@
   fetchFromGitHub,
   pytestCheckHook,
   setuptools,
+  setuptools-scm,
   numpy,
   pandas,
 }:
 
 buildPythonPackage rec {
   pname = "ancpbids";
-  version = "0.3.1";
+  version = "0.4.10";
   pyproject = true;
 
   # `tests/data` dir missing from PyPI dist
@@ -18,10 +19,13 @@ buildPythonPackage rec {
     owner = "ANCPLabOldenburg";
     repo = "ancp-bids";
     tag = version;
-    hash = "sha256-brkhXz2b1nR/tjkZQZY5S+P0+GbESvJsANQcVWRCa9k=";
+    hash = "sha256-yAirSGClMAx5us9D9I0Dtn2xbNdXYrMclqfIdcHv5E4=";
   };
 
-  build-system = [ setuptools ];
+  build-system = [
+    setuptools
+    setuptools-scm
+  ];
 
   nativeCheckInputs = [
     numpy
