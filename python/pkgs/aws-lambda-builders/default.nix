@@ -13,14 +13,14 @@
 
 buildPythonPackage rec {
   pname = "aws-lambda-builders";
-  version = "1.61.0";
+  version = "1.67.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "awslabs";
     repo = "aws-lambda-builders";
     tag = "v${version}";
-    hash = "sha256-NdVZrc6996dlV0jSWuZH/dLQdJnXO+BQb8hk3G0oXmw=";
+    hash = "sha256-eCnjqIZxnbMawKlCSk4khfYcX3I/+bAX8ODe2kFxNsE=";
   };
 
   postPatch = ''
