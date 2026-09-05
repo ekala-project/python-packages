@@ -4,30 +4,30 @@
   fetchFromGitHub,
   # build-system
   poetry-core,
-  # checks
+  # dependencies
   coverage,
-  docopt,
   requests,
+  typer,
 }:
 
 buildPythonPackage rec {
   pname = "coveralls";
-  version = "4.0.2";
+  version = "4.1.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "TheKevJames";
     repo = "coveralls-python";
     tag = version;
-    hash = "sha256-sr3pR3t21nMZczwugFNAioSry/RxIWAzGdGG070YXGw=";
+    hash = "sha256-9gvQDGutOGf1SxfgDS0t28MjO/WPt4iv1HeqPLrfgw8=";
   };
 
   build-system = [ poetry-core ];
 
   dependencies = [
     coverage
-    docopt
     requests
+    typer
   ];
 
   meta = {
