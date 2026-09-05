@@ -6,25 +6,28 @@
   callee,
   cryptography,
   fetchFromGitHub,
+  httpx,
   mock,
+  pydantic,
+  pydantic-core,
   poetry-core,
   poetry-dynamic-versioning,
   pyjwt,
-  pyopenssl,
   requests,
+  typing-extensions,
   urllib3,
 }:
 
 buildPythonPackage rec {
   pname = "auth0-python";
-  version = "4.13.0";
+  version = "6.4.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "auth0";
     repo = "auth0-python";
     tag = version;
-    hash = "sha256-+3c4fj2lv+HFhl3bJ1p1qPq602AG4oMecqE+FMpvjhI=";
+    hash = "sha256-T3JxjDbaM/33fzywHJs9mfj3Qn7/v/yzeK9IcMAL4ys=";
   };
 
   nativeBuildInputs = [
@@ -35,9 +38,12 @@ buildPythonPackage rec {
   propagatedBuildInputs = [
     aiohttp
     cryptography
+    httpx
+    pydantic
+    pydantic-core
     pyjwt
-    pyopenssl
     requests
+    typing-extensions
     urllib3
   ]
   ++ pyjwt.optional-dependencies.crypto;
