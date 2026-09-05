@@ -4,7 +4,7 @@
   fetchFromGitHub,
   flask,
   flask-migrate,
-  flask-sqlalchemy,
+  flask-sqlalchemy-lite,
   ldap3,
   pytestCheckHook,
   setuptools,
@@ -12,14 +12,14 @@
 
 buildPythonPackage rec {
   pname = "automx2";
-  version = "2026.0";
+  version = "2026.2";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "rseichter";
     repo = "automx2";
     tag = version;
-    hash = "sha256-7tMcX4BZ6yxlYGy2/3Ffr0X7xtPgcC9YtKcoz1i32sM=";
+    hash = "sha256-MT295HIcYJSsBmGaAK6V1yH49pj2A7e2E9H4QB955yc=";
   };
 
   build-system = [ setuptools ];
@@ -27,7 +27,7 @@ buildPythonPackage rec {
   dependencies = [
     flask
     flask-migrate
-    flask-sqlalchemy
+    flask-sqlalchemy-lite
     ldap3
   ];
 
