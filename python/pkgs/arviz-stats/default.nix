@@ -19,14 +19,14 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "arviz-stats";
-  version = "1.2.0";
+  version = "1.3.1";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "arviz-devs";
     repo = "arviz-stats";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-KA36JGqgsYs5fF1AndsTBkXQ6U/duoebDQ1TOEmaCSc=";
+    hash = "sha256-DEIzHKy3s+Hm8i7I3q+y7icyVjTjUsXzojDfl8Yy8JA=";
   };
 
   build-system = [ flit-core ];
