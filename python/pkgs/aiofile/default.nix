@@ -2,23 +2,23 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
-  setuptools,
+  hatchling,
   caio,
 }:
 
 buildPythonPackage rec {
   pname = "aiofile";
-  version = "3.8.6";
+  version = "3.12.3";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "mosquito";
     repo = "aiofile";
     tag = version;
-    hash = "sha256-KBly/aeHHZh7mL8MJ9gmxbqS7PmR4sedtBY/2HCXt54=";
+    hash = "sha256-Y79LGiPsaPxQLOCmH+MGXBcPUL+XWGje0RgYljKW11U=";
   };
 
-  build-system = [ setuptools ];
+  build-system = [ hatchling ];
 
   pythonRelaxDeps = [ "caio" ];
 
