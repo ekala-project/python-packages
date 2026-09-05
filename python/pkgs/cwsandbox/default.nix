@@ -7,6 +7,7 @@
   hatchling,
 
   # dependencies
+  cryptography,
   googleapis-common-protos,
   grpcio,
   protobuf,
@@ -21,7 +22,7 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "cwsandbox";
-  version = "0.23.0";
+  version = "1.14.2";
   pyproject = true;
   __structuredAttrs = true;
 
@@ -29,7 +30,7 @@ buildPythonPackage (finalAttrs: {
     owner = "coreweave";
     repo = "cwsandbox-client";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-y9rsuAXmpMok0ZqdLhAfavglXh5Hz4VPy1UByYMM1WA=";
+    hash = "sha256-mJEizdtgekxHpRIYnQrliJwpUhl3CbuYuAM2B7mO4GQ=";
   };
 
   build-system = [
@@ -40,6 +41,7 @@ buildPythonPackage (finalAttrs: {
     "protobuf"
   ];
   dependencies = [
+    cryptography
     googleapis-common-protos
     grpcio
     protobuf
