@@ -8,14 +8,14 @@
 
 buildPythonPackage rec {
   pname = "argcomplete";
-  version = "3.6.3";
+  version = "3.7.2";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "kislyuk";
     repo = "argcomplete";
     tag = "v${version}";
-    hash = "sha256-GK78gW54cFE0yXra56wG8LnBL9CLbf0TuIgxFwA9zZY=";
+    hash = "sha256-WKIhWlftH9xgdklljAOmW4XYMbclGrCFTtsxws2FRzg=";
   };
 
   build-system = [
