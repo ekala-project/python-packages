@@ -7,14 +7,14 @@
 
 buildPythonPackage rec {
   pname = "annotated-doc";
-  version = "0.0.4";
+  version = "0.0.5";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "fastapi";
     repo = "annotated-doc";
     tag = version;
-    hash = "sha256-O7kobzzFfHelYsxTflifEcoEWsUmPzlDz3siFTAq0I0=";
+    hash = "sha256-Khgub17TKjp6GmLLyppFzcxFHcu/EBTCrnabu3Km2Yo=";
   };
 
   build-system = [ pdm-backend ];
