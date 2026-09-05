@@ -8,13 +8,13 @@
 
 buildPythonPackage rec {
   pname = "dash-bootstrap-components";
-  version = "2.0.4";
+  version = "2.0.5a2";
   pyproject = true;
 
   src = fetchPypi {
     inherit version;
     pname = "dash_bootstrap_components";
-    hash = "sha256-wyBsCSN3S7xqbdqngiuNmqUyaw08HnzXlcyXUCX+JIQ=";
+    hash = "sha256-quEneBgSbhIgTvwGkHaGB1X7rhj/Uwz/UN6CWAkrMSM=";
   };
 
   build-system = [ hatchling ];
