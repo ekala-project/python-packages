@@ -7,14 +7,14 @@
 
 buildPythonPackage rec {
   pname = "arpy";
-  version = "2.3.0";
+  version = "2.4.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "viraptor";
     repo = "arpy";
     tag = version;
-    hash = "sha256-jD1XJJhcpJymn0CwZ65U06xLKm1JjHffmx/umEO7a5s=";
+    hash = "sha256-SOJuk2JY952g6O3Tn2YA4Z3mYOnusERXmsHbfzD44kE=";
   };
 
   build-system = [ setuptools ];
