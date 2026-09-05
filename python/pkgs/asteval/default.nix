@@ -7,12 +7,12 @@
 
 buildPythonPackage rec {
   pname = "asteval";
-  version = "1.0.9";
+  version = "1.0.10";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-T3Mj1j2fv4nX4dX4u1m2wJOXDBW7WSbm5n0BlYWKojA=";
+    hash = "sha256-RqTtE8wuSimiFBj4ne3VfbcNmOuW2w+0xEHU7bL1r+0=";
   };
 
   build-system = [ setuptools-scm ];
