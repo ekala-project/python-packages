@@ -19,7 +19,7 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "apache-tvm-ffi";
-  version = "0.1.12";
+  version = "0.1.13";
   pyproject = true;
   __structuredAttrs = true;
 
@@ -28,8 +28,13 @@ buildPythonPackage (finalAttrs: {
     repo = "tvm-ffi";
     tag = "v${finalAttrs.version}";
     fetchSubmodules = true;
-    hash = "sha256-ZFi7MKFiHK2lNoVkQbPhOc7NpIf24PLLP8SqGQiQ9Lw=";
+    hash = "sha256-GerOAPpCMQpVrk0H/aQpJ2aGoYaNIQDw/Cx78AaNjFE=";
   };
+
+  postPatch = ''
+    substituteInPlace pyproject.toml \
+      --replace-fail '"cython>=3.2.8"' '"cython>=3.0.0"'
+  '';
 
   build-system = [
     cmake
