@@ -9,20 +9,15 @@
 
 buildPythonPackage rec {
   pname = "aiopvapi";
-  version = "3.3.0";
+  version = "3.4.1";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "sander76";
     repo = "aio-powerview-api";
     tag = "v${version}";
-    hash = "sha256-yystaH2HRsJoYh2aTpOBA7DLiC2xwpBUccHwmJ0FlaY=";
+    hash = "sha256-JXQTxHWMg/biWEQssk4KCIcTJ1JOG+UIRBI8xw4WfJ8=";
   };
-
-  patches = [
-    # https://github.com/sander76/aio-powerview-api/pull/46
-    ./fix-tests.patch
-  ];
 
   build-system = [ setuptools ];
 
