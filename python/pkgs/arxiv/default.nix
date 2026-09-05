@@ -9,6 +9,7 @@
 
   # dependencies
   feedparser,
+  lxml,
   requests,
 
   # tests
@@ -16,14 +17,14 @@
 }:
 buildPythonPackage rec {
   pname = "arxiv";
-  version = "3.0.0";
+  version = "4.0.1";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "lukasschwab";
     repo = "arxiv.py";
     tag = version;
-    hash = "sha256-o2Vqkr5Tlx7Iv1NEWDSU8X6hvlGUslIl4oHiRQNGdqI=";
+    hash = "sha256-nZhi0dPEiv6VLpacvcGvZhvvDkLalrs4IJvMVzb5MJI=";
   };
 
   build-system = [
@@ -33,6 +34,7 @@ buildPythonPackage rec {
 
   dependencies = [
     feedparser
+    lxml
     requests
   ];
   pythonImportsCheck = [ "arxiv" ];
