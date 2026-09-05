@@ -2,6 +2,7 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  pyasn1,
   pycryptodome,
   pytestCheckHook,
   setuptools,
@@ -9,19 +10,22 @@
 
 buildPythonPackage rec {
   pname = "aiowmi";
-  version = "0.2.3";
+  version = "1.1.3";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "cesbit";
     repo = "aiowmi";
     tag = "v${version}";
-    hash = "sha256-bKxGIUxGAW1GDa5xlv9NNWr5xLTdpK5dSsym/5y9nGQ=";
+    hash = "sha256-5pXMNufMdlB2FAQwsODA7S8PL/OhPFzFzpU9KB+Jtgc=";
   };
 
   build-system = [ setuptools ];
 
-  dependencies = [ pycryptodome ];
+  dependencies = [
+    pyasn1
+    pycryptodome
+  ];
 
   nativeCheckInputs = [ pytestCheckHook ];
 
