@@ -3,22 +3,25 @@
   buildPythonPackage,
   fetchFromGitHub,
   aiohttp,
+  setuptools,
   pytest-asyncio,
 }:
 
 buildPythonPackage rec {
   pname = "aiohttp-basicauth";
-  version = "1.1.0";
-  format = "setuptools";
+  version = "1.2.0";
+  format = "pyproject";
 
   src = fetchFromGitHub {
     owner = "romis2012";
     repo = "aiohttp-basicauth";
     tag = "v${version}";
-    hash = "sha256-DjwrMlkVVceA5kDzm0c/on0VMOxyMMA3Hu4Y2Tiu0lI=";
+    hash = "sha256-EnrICetTmQimScjaQ8/jviwwansbZtl35Z5v35rF7kU=";
   };
 
-  propagatedBuildInputs = [ aiohttp ];
+  build-system = [ setuptools ];
+
+  dependencies = [ aiohttp ];
   pythonImportsCheck = [ "aiohttp_basicauth" ];
 
   meta = {
