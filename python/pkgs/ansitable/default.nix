@@ -2,7 +2,7 @@
   lib,
   buildPythonPackage,
   fetchPypi,
-  setuptools,
+  hatchling,
   colored,
   pytestCheckHook,
   numpy,
@@ -11,15 +11,15 @@
 
 buildPythonPackage rec {
   pname = "ansitable";
-  version = "0.11.4";
+  version = "1.0.1";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-XUjXVs9/ETlbbtvYz8YJqCsP1BFajqQKQfSM+Rvm4O0=";
+    hash = "sha256-ts0OLMuhxkAkZtnmpV+5Of7BUjmAO2J8irVM8u23DMk=";
   };
 
-  build-system = [ setuptools ];
+  build-system = [ hatchling ];
 
   dependencies = [ colored ];
 
