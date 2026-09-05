@@ -16,14 +16,14 @@
 
 buildPythonPackage rec {
   pname = "astropy";
-  version = "8.0.0";
+  version = "8.0.1";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "astropy";
     repo = "astropy";
     tag = "v${version}";
-    hash = "sha256-pKptFnbhiE6DfsEZ557ugd6nrbWGg2FmEdhp78z+bUM=";
+    hash = "sha256-q6GZp7gIDilSflUnFiBXhzlIBXsCPeUa/vGop3JXbK4=";
   };
 
   env = lib.optionalAttrs stdenv.cc.isClang {
