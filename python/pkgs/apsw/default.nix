@@ -3,23 +3,34 @@
   buildPythonPackage,
   fetchurl,
   setuptools,
-  sqlite,
 }:
+
+let
+  sqliteVersion = "3530400";
+  sqliteAmalgamation = fetchurl {
+    url = "https://sqlite.org/2026/sqlite-autoconf-${sqliteVersion}.tar.gz";
+    hash = "sha256-DpSDkA6SzV3o/UjRa/kgAUWmH3/VvlQqWsgdipUW65w=";
+  };
+in
 
 buildPythonPackage rec {
   pname = "apsw";
-  version = "3.50.4.0";
+  version = "3.53.4.0";
   pyproject = true;
 
   # https://github.com/rogerbinns/apsw/issues/548
   src = fetchurl {
     url = "https://github.com/rogerbinns/apsw/releases/download/${version}/apsw-${version}.tar.gz";
-    hash = "sha256-/yn+LmgOYGcXYOWViteiADdcAzx6XdZo2Pkl+CqkA5M=";
+    hash = "sha256-zVn2szMJS6zYArXleW8Xn1/WE2T5HniAdBGbXsZtxGs=";
   };
 
-  build-system = [ setuptools ];
+  # apsw 3.53.4.0 requires SQLite 3.53 which is newer than nixpkgs sqlite;
+  # use the amalgamation so apsw statically compiles the matching SQLite
+  postPatch = ''
+    tar xf ${sqliteAmalgamation} --strip-components=1 -C . sqlite-autoconf-${sqliteVersion}/sqlite3.c sqlite-autoconf-${sqliteVersion}/sqlite3.h
+  '';
 
-  buildInputs = [ sqlite ];
+  build-system = [ setuptools ];
 
   # apsw explicitly doesn't use pytest
   # see https://github.com/rogerbinns/apsw/issues/548#issuecomment-2891633403
