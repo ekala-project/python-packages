@@ -4,7 +4,6 @@
   beartype,
   buildPythonPackage,
   hatchling,
-  hatch-mypyc,
   hatch-vcs,
   types-deprecated,
   deprecated,
@@ -20,14 +19,14 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "coredis";
-  version = "6.7.0";
+  version = "6.9.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "alisaifee";
     repo = "coredis";
     tag = finalAttrs.version;
-    hash = "sha256-1Ks8rfOaz7rZruzp1k3V7UHCtckzomvA76+QRS7RlZo=";
+    hash = "sha256-gjOJnul3en+5FWHaJceCBqKouvfDT/4mfduuqCWf5Q0=";
   };
 
   postPatch = ''
@@ -40,7 +39,6 @@ buildPythonPackage (finalAttrs: {
 
   build-system = [
     hatchling
-    hatch-mypyc
     hatch-vcs
     types-deprecated
   ];
