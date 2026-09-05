@@ -2,20 +2,20 @@
   lib,
   fetchPypi,
   buildPythonPackage,
-  setuptools,
+  hatchling,
 }:
 
 buildPythonPackage rec {
   pname = "cssselect";
-  version = "1.3.0";
+  version = "1.5.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-V/iplCTPqyiaG2qBakMHWksAlIyGtNzz707n4V96sMc=";
+    hash = "sha256-PL6C3XrL7pup5XI7X55HSYJpEvH7Mc1/kqq+1f3hWxU=";
   };
 
-  build-system = [ setuptools ];
+  build-system = [ hatchling ];
 
   pythonImportsCheck = [ "cssselect" ];
 
