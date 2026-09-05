@@ -3,6 +3,10 @@
   buildPythonPackage,
   fetchFromGitHub,
   setuptools,
+  # corepkgs rustPlatform.fetchCargoVendor bootstraps requests with
+  # `charset-normalizer.override { withMypyc = false; }`. This package does
+  # not mypyc-compile; accept the argument so that override does not fail.
+  withMypyc ? false,
 }:
 
 buildPythonPackage rec {
