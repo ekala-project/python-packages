@@ -10,14 +10,14 @@
 
 buildPythonPackage rec {
   pname = "apscheduler";
-  version = "3.11.2";
+  version = "3.11.3";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "agronholm";
     repo = "apscheduler";
     tag = version;
-    hash = "sha256-AhVlACRg0Xwy9XmFRl29of5uM2aJa5Gv2SzFuJXVCpE=";
+    hash = "sha256-a1EeDOMYH9O5tRBQigZSLp6kBPp81+6biI0s0N79Sck=";
   };
 
   postPatch = ''
