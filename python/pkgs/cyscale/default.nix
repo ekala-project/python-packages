@@ -10,16 +10,18 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "cyscale";
-  version = "0.5.0";
+  version = "0.8.0";
   pyproject = true;
 
   __structuredAttrs = true;
+
+  requiredSystemFeatures = [ "big-parallel" ];
 
   src = fetchFromGitHub {
     owner = "latent-to";
     repo = "cyscale";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-/Jhg7n28rjiNyuthX9cCbOtpyfPp0xgBaUpiZ1pBxRA=";
+    hash = "sha256-UIInrmNiW/3KkHoVO1WhxLvSHBhycjvhkmXjGUGSCQw=";
   };
 
   build-system = [ setuptools ];
