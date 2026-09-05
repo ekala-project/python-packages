@@ -8,12 +8,12 @@
 
 buildPythonPackage rec {
   pname = "ansi2html";
-  version = "1.9.2";
+  version = "1.9.4";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-NFO/h1NdN7gnsFJF+qp1bbq07D1pkl41K2MZw8lVwKU=";
+    hash = "sha256-K4XNBQeHGGvCAcFWNSEiWOm+2hRjtj8yeoI0q64qSzA=";
   };
 
   build-system = [
