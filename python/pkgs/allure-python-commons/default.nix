@@ -12,14 +12,19 @@
 
 buildPythonPackage rec {
   pname = "allure-python-commons";
-  version = "2.15.3";
+  version = "2.16.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "allure_python_commons";
     inherit version;
-    hash = "sha256-tCqW1gdvsyPJ5DZF37hMBXT2utCg4AXZJWQBXNFy1WQ=";
+    hash = "sha256-7NySuv6gdLq5a18sTrMQCCU0AYj1rs5giugOztcJs28=";
   };
+
+  postPatch = ''
+    substituteInPlace setup.py \
+      --replace-fail "setuptools_scm<10" "setuptools_scm"
+  '';
 
   build-system = [ setuptools-scm ];
 
