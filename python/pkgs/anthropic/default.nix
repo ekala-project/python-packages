@@ -11,7 +11,7 @@
   anyio,
   distro,
   docstring-parser,
-  httpx,
+  httpx2,
   jiter,
   pydantic,
   sniffio,
@@ -26,7 +26,7 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "anthropic";
-  version = "0.119.0";
+  version = "1.4.0";
   pyproject = true;
   __structuredAttrs = true;
 
@@ -34,7 +34,7 @@ buildPythonPackage (finalAttrs: {
     owner = "anthropics";
     repo = "anthropic-sdk-python";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-TQQoY4M3VdLPt7tvioGfHKVFTI6GMLrFTepTJPtdv5A=";
+    hash = "sha256-5iHawkW76aAwhjaGYCqN9Gl/PLKQqu8eNdRiTca4dvo=";
   };
 
   postPatch = ''
@@ -51,7 +51,7 @@ buildPythonPackage (finalAttrs: {
     anyio
     distro
     docstring-parser
-    httpx
+    httpx2
     jiter
     pydantic
     sniffio
