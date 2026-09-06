@@ -5,12 +5,13 @@
   setuptools,
   msrestazure,
   azure-common,
+  azure-mgmt-core,
   azure-mgmt-datalake-nspkg,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-datalake-analytics";
-  version = "0.6.0";
+  version = "1.0.0b2";
   pyproject = true;
 
   __structuredAttrs = true;
@@ -18,15 +19,16 @@ buildPythonPackage (finalAttrs: {
   src = fetchPypi {
     inherit (finalAttrs) pname version;
     extension = "zip";
-    hash = "sha256-DWTEaJpn1hOOuf+6/y7aK6zn0wuEZAFnMYPctCcU3o8=";
+    hash = "sha256-TPj9zftR4m+yB+1BFJBFNN+sYBJT2NpwHG6SZzAQv5U=";
   };
 
   build-system = [ setuptools ];
 
   dependencies = [
-    msrestazure
     azure-common
+    azure-mgmt-core
     azure-mgmt-datalake-nspkg
+    msrestazure
   ];
 
   pythonNamespaces = [ "azure.mgmt.datalake" ];
