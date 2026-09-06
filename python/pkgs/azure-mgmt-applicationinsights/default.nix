@@ -10,13 +10,13 @@
 
 buildPythonPackage rec {
   pname = "azure-mgmt-applicationinsights";
-  version = "4.1.0";
+  version = "5.0.0b2";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_mgmt_applicationinsights";
     inherit version;
-    hash = "sha256-FVMTkPEs49dnzT8ZSa82qjkHfBRclS/sTYAwPIbse2w=";
+    hash = "sha256-JffPFxZQg/yYh0wJ71VKt+ibT87VWV0U08pUlSXg5HY=";
   };
 
   build-system = [ setuptools ];
