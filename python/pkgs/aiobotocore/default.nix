@@ -4,7 +4,8 @@
   fetchFromGitHub,
 
   # build-system
-  setuptools,
+  hatchling,
+  hatch-fancy-pypi-readme,
 
   # dependencies
   aiohttp,
@@ -24,20 +25,21 @@
 
 buildPythonPackage rec {
   pname = "aiobotocore";
-  version = "3.8.0";
+  version = "3.9.1";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "aio-libs";
     repo = "aiobotocore";
     tag = version;
-    hash = "sha256-56mKFeKHtQtAhtOkwI8VfR6oJzyqXtbNS2ebgkFlTME=";
+    hash = "sha256-VlQS47FmjFHq3Q2VGa4nGPPnG7qhFgEVxovhCuh7rxI=";
   };
 
   pythonRelaxDeps = [ "botocore" ];
 
   build-system = [
-    setuptools
+    hatchling
+    hatch-fancy-pypi-readme
   ];
 
   dependencies = [
