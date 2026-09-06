@@ -10,14 +10,14 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "azure-ai-vision-imageanalysis";
-  version = "39.0.0";
+  version = "41.6.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "Azure";
     repo = "azure-sdk-for-python";
     tag = "azure-mgmt-containerservice_${finalAttrs.version}";
-    hash = "sha256-zufXc8LR4STHi/jjV0bcLsifcHIif2m+3Q/KZlsSkRw=";
+    hash = "sha256-VS+qpcoviyqxAHKM7DdbXopNK9DB2baRRB9rH0j8p4U=";
   };
 
   sourceRoot = "${finalAttrs.src.name}/sdk/vision/azure-ai-vision-imageanalysis";
