@@ -10,13 +10,13 @@
 
 buildPythonPackage rec {
   pname = "azure-mgmt-apimanagement";
-  version = "5.0.0";
+  version = "6.0.0b1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_mgmt_apimanagement";
     inherit version;
-    hash = "sha256-Crf+F+cP4xVM2ED/R9GdekYQIXAD6qfCGs81EableZk=";
+    hash = "sha256-/8ZPGH8pNwd2JLoFxwWelHYa8yyWBfyTRYCJ35duuU8=";
   };
 
   build-system = [ setuptools ];
