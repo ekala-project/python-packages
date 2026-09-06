@@ -7,15 +7,21 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "appimage";
-  version = "1.2.0";
+  version = "4.0.1";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "ssh-mitm";
     repo = "appimage";
     tag = finalAttrs.version;
-    hash = "sha256-aL0JcA6R2FUMcXykbXaSaUEz1ERs3iKh4c0cbRAClSY=";
+    hash = "sha256-O+C/phCD0i/z9MCQg6er+RDER0uAcumbhrAAyxhIX4Y=";
   };
+
+  postPatch = ''
+    substituteInPlace pyproject.toml \
+      --replace-fail '"uv_build>=0.12.7,<0.13"' '"hatchling"' \
+      --replace-fail 'build-backend = "uv_build"' 'build-backend = "hatchling.build"'
+  '';
 
   build-system = [ hatchling ];
 
