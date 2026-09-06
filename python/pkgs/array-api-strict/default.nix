@@ -10,19 +10,20 @@
 
 buildPythonPackage rec {
   pname = "array-api-strict";
-  version = "2.5";
+  version = "2.6.1";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "data-apis";
     repo = "array-api-strict";
     tag = version;
-    hash = "sha256-jDigE1bCx2JbthIPuVd3dX1tdvGqcZVOR3opJwlTme4=";
+    hash = "sha256-0ccyNbp6GheG1KtImpa/2uboAG6Q+rHdwKaqupBuoPg=";
   };
 
   postPatch = ''
     substituteInPlace pyproject.toml \
-      --replace-fail "setuptools >= 61.0,<=75" "setuptools"
+      --replace-fail "setuptools >= 61.0,<=75" "setuptools" \
+      --replace-fail "setuptools_scm>8,<10" "setuptools_scm"
   '';
 
   build-system = [
