@@ -23,7 +23,7 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "av";
-  version = "17.0.1";
+  version = "18.1.0";
   pyproject = true;
   __structuredAttrs = true;
 
@@ -31,7 +31,7 @@ buildPythonPackage (finalAttrs: {
     owner = "PyAV-Org";
     repo = "PyAV";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-IS+qSwvpNbhOazkgZh9hzzaTLxSgU7uZjGmaOIkhskc=";
+    hash = "sha256-RZdGDTIIPNptT8KKU1o4WXZfbGTPM6MpQ5wuvZzm+O4=";
   };
 
   build-system = [
@@ -63,14 +63,12 @@ buildPythonPackage (finalAttrs: {
     "av.container"
     "av._core"
     "av.datasets"
-    "av.descriptor"
     "av.dictionary"
     "av.error"
     "av.filter"
     "av.format"
     "av.frame"
     "av.logging"
-    "av.option"
     "av.packet"
     "av.plane"
     "av.stream"
