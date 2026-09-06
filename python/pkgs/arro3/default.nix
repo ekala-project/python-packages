@@ -5,19 +5,19 @@
   rustPlatform,
 }:
 let
-  version = "0.8.1";
+  version = "0.8.2";
 
   src = fetchFromGitHub {
     owner = "kylebarron";
     repo = "arro3";
     tag = "py-v${version}";
-    hash = "sha256-24aMiFHQdwZwTthPt7GILjQzbbLp3K2UcXYw3ZGWUJ4=";
+    hash = "sha256-NhK5LIoFg0AGiUNlhH5Kaal4WCiX4Z6MVTgM8vblW6I=";
   };
 
   cargoDeps = rustPlatform.fetchCargoVendor {
     inherit version src;
     pname = "arro3-vendor";
-    hash = "sha256-8pD7vfGtwknUKLQ/DARmRvvnffBqbGLY9lWJgU7VvWM=";
+    hash = "sha256-LEyQ3yWPA9QY69vqh0g6yq3MoFfQxcO3U9GvNe9z0BA=";
   };
 
   commonMeta = {
