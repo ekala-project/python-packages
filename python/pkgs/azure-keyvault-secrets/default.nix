@@ -10,13 +10,13 @@
 
 buildPythonPackage rec {
   pname = "azure-keyvault-secrets";
-  version = "4.11.0";
+  version = "4.11.2";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_keyvault_secrets";
     inherit version;
-    hash = "sha256-rBRye5FZzKNTFz7FpFTY17GSpvL15+tUD5+8+RT6DKA=";
+    hash = "sha256-wNhtsBqK400duS7Gue+S2aKu9/uxpnwJVlE9Rrhdets=";
   };
 
   nativeBuildInputs = [ setuptools ];
