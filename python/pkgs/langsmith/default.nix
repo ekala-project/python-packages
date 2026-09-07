@@ -8,11 +8,13 @@
   hatchling,
 
   # dependencies
-  httpx,
+  distro,
+  httpx2,
   orjson,
   pydantic,
   requests,
   requests-toolbelt,
+  sniffio,
   uuid-utils,
   websockets,
   xxhash,
@@ -32,14 +34,14 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "langsmith";
-  version = "0.8.18";
+  version = "0.12.2";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "langchain-ai";
     repo = "langsmith-sdk";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-YQ49pg0+RepwlEHtu8GDUpfnXQF3yFiz6ZeRcnHXSWU=";
+    hash = "sha256-iq1Yq0HdSggELgi5A2r9X56ATlAD3YNv935H3bczmkA=";
   };
 
   sourceRoot = "${finalAttrs.src.name}/python";
@@ -49,11 +51,13 @@ buildPythonPackage (finalAttrs: {
   build-system = [ hatchling ];
 
   dependencies = [
-    httpx
+    distro
+    httpx2
     orjson
     pydantic
     requests
     requests-toolbelt
+    sniffio
     uuid-utils
     websockets
     xxhash
