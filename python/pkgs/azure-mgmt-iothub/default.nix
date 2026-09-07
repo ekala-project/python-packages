@@ -10,13 +10,13 @@
 
 buildPythonPackage rec {
   pname = "azure-mgmt-iothub";
-  version = "4.0.0";
+  version = "5.0.0b4";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_mgmt_iothub";
     inherit version;
-    hash = "sha256-B/Jb1vZzdLqxfMEZL5+SGzUONWAlHxkGnmZlg1Qe1Ng=";
+    hash = "sha256-bRyfCFbJNB4yRr3hr0D+hwdxkc6QF5eO7DH0L9jsHuY=";
   };
 
   build-system = [ setuptools ];
