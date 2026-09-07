@@ -2,23 +2,26 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  setuptools,
   georss-client,
   pytestCheckHook,
 }:
 
 buildPythonPackage rec {
   pname = "georss-wa-dfes-client";
-  version = "0.4";
-  format = "setuptools";
+  version = "2026.6.0";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "exxamalte";
     repo = "python-georss-wa-dfes-client";
     rev = "v${version}";
-    hash = "sha256-s7qGTlWFdOtw0eMK7idld7HPOxO8CjODCmUi0WmRLdI=";
+    hash = "sha256-9wkGwuO8FV3ZJWq0LqdUFFwW4WQw+f826mTPFp+LMpw=";
   };
 
-  propagatedBuildInputs = [ georss-client ];
+  build-system = [ setuptools ];
+
+  dependencies = [ georss-client ];
 
   nativeCheckInputs = [ pytestCheckHook ];
 
