@@ -10,14 +10,14 @@
 
 buildPythonPackage rec {
   pname = "cattrs";
-  version = "25.3.0";
+  version = "26.2.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "python-attrs";
     repo = "cattrs";
     tag = "v${version}";
-    hash = "sha256-6oQblSanvSZOMD5ossCP7fNjyxF54SRbU1cQrW1I5Ps=";
+    hash = "sha256-YJYmPpvZ6B/0zniwLZPSIRAz0afqrQP74JfY/hgrogw=";
   };
 
   build-system = [
@@ -29,11 +29,6 @@ buildPythonPackage rec {
     attrs
     typing-extensions
   ];
-
-  postPatch = ''
-    substituteInPlace pyproject.toml \
-      --replace-fail "-l --benchmark-sort=fullname --benchmark-warmup=true --benchmark-warmup-iterations=5  --benchmark-group-by=fullname" ""
-  '';
 
   pythonImportsCheck = [ "cattr" ];
 
