@@ -2,32 +2,26 @@
   lib,
   buildPythonPackage,
   fetchPypi,
-  openstackdocstheme,
   pbr,
   six,
   setuptools,
-  sphinxHook,
   wrapt,
 }:
 
 buildPythonPackage rec {
   pname = "debtcollector";
-  version = "3.0.0";
+  version = "3.1.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-KokX0lsOHx0NNl08HG7Px6UiselxbooaSpFRJvfM6m8=";
+    hash = "sha256-J4pFYIzxbnnArhCFHYaRhca3j4ZhDfjyekUaGMH+xzI=";
   };
 
   build-system = [
-    openstackdocstheme
     pbr
     setuptools
-    sphinxHook
   ];
-
-  sphinxBuilders = [ "man" ];
 
   dependencies = [
     six
