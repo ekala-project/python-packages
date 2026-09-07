@@ -3,6 +3,7 @@
   beautifulsoup4,
   buildPythonPackage,
   fetchPypi,
+  pathvalidate,
   pillow,
   hatchling,
   requests,
@@ -12,12 +13,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "getjump";
-  version = "2.10.0";
+  version = "3.0.2";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-AX8WffzcqBYqo8DzXXbhfqOMd7U5VpWx4MTKhUXLJeQ=";
+    hash = "sha256-lQQKsTGrrIP1DpswMPXFew1mNV0AXt5pkDnOeVLuafU=";
   };
 
   pythonRelaxDeps = [
@@ -32,6 +33,7 @@ buildPythonPackage (finalAttrs: {
 
   dependencies = [
     beautifulsoup4
+    pathvalidate
     pillow
     requests
     rich
