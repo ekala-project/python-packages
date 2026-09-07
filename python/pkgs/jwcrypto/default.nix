@@ -9,12 +9,12 @@
 
 buildPythonPackage rec {
   pname = "jwcrypto";
-  version = "1.5.8";
+  version = "1.6.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-w9cRS29uZbUva32oF+uMuEI+HaMeHvE1CER8gey9zDQ=";
+    hash = "sha256-AqgrCjo2slUzCdeMZeHA4zULZA/kCR9T9m9YKxH0k3g=";
   };
 
   build-system = [ hatchling ];
