@@ -11,7 +11,7 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "geopy";
-  version = "2.4.1";
+  version = "2.5.0";
   pyproject = true;
 
   __structuredAttrs = true;
@@ -20,7 +20,7 @@ buildPythonPackage (finalAttrs: {
     owner = "geopy";
     repo = "geopy";
     tag = finalAttrs.version;
-    hash = "sha256-mlOXDEtYry1IUAZWrP2FuY/CGliUnCPYLULnLNN0n4Y=";
+    hash = "sha256-I+t8RnpC1hurL+fcwRssREzsSx9yGHEqVjzxqKX0efc=";
   };
 
   build-system = [ setuptools ];
