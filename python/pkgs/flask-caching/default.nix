@@ -1,32 +1,26 @@
 {
   lib,
-  stdenv,
   buildPythonPackage,
   fetchPypi,
+  flit-core,
   cachelib,
   flask,
-  asgiref,
-  pytest-asyncio,
-  pytest-xprocess,
 }:
 
 buildPythonPackage rec {
   pname = "flask-caching";
-  version = "2.3.1";
-  format = "setuptools";
+  version = "2.5.1";
+  pyproject = true;
 
   src = fetchPypi {
     pname = "flask_caching";
     inherit version;
-    hash = "sha256-Zdf9G07r+BD4RN595iWCVLMkgpbuQpvcs/dBvL97mMk=";
+    hash = "sha256-91tFH94/qsDieNpyJjgYE03sqMS6a7B7mzsjiZE2ja4=";
   };
 
-  postPatch = ''
-    substituteInPlace setup.py \
-      --replace "cachelib >= 0.9.0, < 0.10.0" "cachelib"
-  '';
+  build-system = [ flit-core ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     cachelib
     flask
   ];
