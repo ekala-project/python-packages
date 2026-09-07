@@ -2,7 +2,7 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
-  setuptools,
+  hatchling,
   w3lib,
   parsel,
   jmespath,
@@ -11,19 +11,19 @@
 
 buildPythonPackage rec {
   pname = "itemloaders";
-  version = "1.3.2";
+  version = "1.4.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "scrapy";
     repo = "itemloaders";
     tag = "v${version}";
-    hash = "sha256-Hs3FodJAWZGeo+kMmcto5WW433RekwVuucaJl8TKc+0=";
+    hash = "sha256-pHCvtiBtTgO2y3GUPFc0o9CcCtIMqluRXEJ2tl/tcwA=";
   };
 
-  nativeBuildInputs = [ setuptools ];
+  build-system = [ hatchling ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     w3lib
     parsel
     jmespath
