@@ -3,37 +3,34 @@
   buildPythonPackage,
   cloudpickle,
   fetchPypi,
-  future,
+  hatch-vcs,
+  hatchling,
   networkx,
   numpy,
-  py4j,
-  pymongo,
-  pyspark,
   scipy,
-  six,
   tqdm,
 }:
 
 buildPythonPackage rec {
   pname = "hyperopt";
-  version = "0.2.7";
-  format = "setuptools";
+  version = "0.3.0";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    sha256 = "1bf89ae58050bbd32c7307199046117feee245c2fd9ab6255c7308522b7ca149";
+    sha256 = "sha256-15p3Ui/v7BOiWLl6DMvfQIMrMnDeTbCCeLsHubk065o=";
   };
 
-  propagatedBuildInputs = [
+  build-system = [
+    hatchling
+    hatch-vcs
+  ];
+
+  dependencies = [
     cloudpickle
-    future
     networkx
     numpy
-    py4j
-    pymongo
-    pyspark
     scipy
-    six
     tqdm
   ];
 
@@ -44,7 +41,7 @@ buildPythonPackage rec {
     description = "Distributed Asynchronous Hyperparameter Optimization";
     mainProgram = "hyperopt-mongo-worker";
     homepage = "http://hyperopt.github.io/hyperopt/";
-    license = lib.licenses.bsd2;
+    license = lib.licenses.bsd3;
     platforms = lib.platforms.unix;
     maintainers = [ ];
   };
