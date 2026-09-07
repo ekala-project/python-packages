@@ -9,14 +9,14 @@
 
 buildPythonPackage rec {
   pname = "dynalite-devices";
-  version = "0.1.48";
+  version = "0.47";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "ziv1234";
     repo = "python-dynalite-devices";
     tag = "v${version}";
-    hash = "sha256-i88aIsRNsToSceQdwfspJg+Y5MO5zC4O6EkyhrYR27g=";
+    hash = "sha256-kJo4e5vhgWzijLUhQd9VBVk1URpg9SXhOA60dJYashM=";
   };
 
   postPatch = ''
