@@ -3,6 +3,7 @@
   buildPythonPackage,
   fetchFromGitHub,
   setuptools,
+  versioneer,
   altair,
   cryptography,
   jinja2,
@@ -25,17 +26,20 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "great-expectations";
-  version = "1.11.1";
+  version = "1.22.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "great-expectations";
     repo = "great_expectations";
     tag = finalAttrs.version;
-    hash = "sha256-8yKuEVupqbwlBGeUDu25pvGltybljkmpbkcbC+G+/VI=";
+    hash = "sha256-HTa6cr8Ij5AVvFFGDZxADtMWDEd6GTNp3T4m2XXyslY=";
   };
 
-  build-system = [ setuptools ];
+  build-system = [
+    setuptools
+    versioneer
+  ];
 
   dependencies = [
     altair
