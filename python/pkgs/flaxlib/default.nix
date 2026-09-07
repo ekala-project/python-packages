@@ -16,7 +16,7 @@
 
 buildPythonPackage rec {
   pname = "flaxlib";
-  version = "0.0.1";
+  version = "0.12.9";
   pyproject = true;
 
   src = fetchFromGitHub {
