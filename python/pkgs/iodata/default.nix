@@ -13,14 +13,14 @@
 
 buildPythonPackage rec {
   pname = "iodata";
-  version = "1.0.0a4";
+  version = "1.0.1";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "theochem";
     repo = "iodata";
     tag = "v${version}";
-    hash = "sha256-ld6V+/8lg4Du6+mHU5XuXXyMpWwyepXurerScg/bf2Q=";
+    hash = "sha256-ly5nEqgxCt5uU+UNQx/7zgrh+w1Plngarw29+Ns68ts=";
   };
 
   build-system = [
