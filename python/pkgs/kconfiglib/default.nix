@@ -6,12 +6,12 @@
 
 buildPythonPackage rec {
   pname = "kconfiglib";
-  version = "14.1.0";
+  version = "14.1.1a4";
   format = "setuptools";
 
   src = fetchPypi {
     inherit pname version;
-    sha256 = "0g690bk789hsry34y4ahvly5c8w8imca90ss4njfqf7m2qicrlmy";
+    sha256 = "sha256-16d+R4neiTfVZ6/KM8BfxYu3kyAB9dMDdJSy74UWekE=";
   };
 
   patches = [
