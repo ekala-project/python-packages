@@ -12,14 +12,14 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "frigidaire";
-  version = "0.18.49";
+  version = "0.18.53";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "bm1549";
     repo = "frigidaire";
     tag = finalAttrs.version;
-    hash = "sha256-wEiIkeF5ybb6wVVEhoIo/L4GjtTy2UAR6tSaoH+qp7Y=";
+    hash = "sha256-HwBaFIledBesjxO3sSZ7nk6DoW5Nfq8Ncmb0NUlcMDY=";
   };
 
   postPatch = ''
