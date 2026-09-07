@@ -4,21 +4,24 @@
   fetchFromGitHub,
   georss-client,
   pytestCheckHook,
+  setuptools,
 }:
 
 buildPythonPackage rec {
   pname = "georss-nrcan-earthquakes-client";
-  version = "0.4";
-  format = "setuptools";
+  version = "2026.6.0";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "exxamalte";
     repo = "python-georss-nrcan-earthquakes-client";
     rev = "v${version}";
-    hash = "sha256-FFm37+dCkdoZXgvAjYhcHOYFf0oQ37bxJb7vzbWDTro=";
+    hash = "sha256-JRU+ncPRbkA/fQ6aIOX6J09ErMpgH2Rk8AF+eWR5WXg=";
   };
 
-  propagatedBuildInputs = [ georss-client ];
+  build-system = [ setuptools ];
+
+  dependencies = [ georss-client ];
 
   nativeCheckInputs = [ pytestCheckHook ];
 
