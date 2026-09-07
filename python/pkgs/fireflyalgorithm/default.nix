@@ -9,19 +9,19 @@
 
 buildPythonPackage rec {
   pname = "fireflyalgorithm";
-  version = "0.4.6";
+  version = "0.4.7";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "firefly-cpp";
     repo = "FireflyAlgorithm";
     tag = version;
-    hash = "sha256-NMmwjKtIk8KR0YXXSXkJhiQsbjMusaLnstUWx0izCNA=";
+    hash = "sha256-Zq1XaiEqfL+SmJu55rzVDXYBF2qyziviqw6qL+dcIb0=";
   };
 
   postPatch = ''
     substituteInPlace pyproject.toml \
-      --replace-fail 'numpy = "^1.26.1"' ""
+      --replace-fail 'numpy = "^2.0.2"' ""
   '';
 
   build-system = [ poetry-core ];
