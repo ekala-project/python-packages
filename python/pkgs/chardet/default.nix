@@ -8,14 +8,14 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "chardet";
-  version = "6.0.0.post1";
+  version = "7.6.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "chardet";
     repo = "chardet";
     tag = finalAttrs.version;
-    hash = "sha256-7G998L4VRvNiGBBNAxPJB27lI2DtL1lTteowUH2NBDk=";
+    hash = "sha256-7xloMYaoAB1uwj4/5KK8PFd/mjXTgMFjS0SGW7Rrynw=";
   };
 
   build-system = [
