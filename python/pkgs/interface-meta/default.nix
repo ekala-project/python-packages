@@ -2,13 +2,13 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
-  poetry-core,
-  poetry-dynamic-versioning,
+  hatchling,
+  hatch-vcs,
 }:
 
 buildPythonPackage rec {
   pname = "interface-meta";
-  version = "1.3.0";
+  version = "2.0.1";
 
   pyproject = true;
 
@@ -16,14 +16,15 @@ buildPythonPackage rec {
     owner = "matthewwardrop";
     repo = "interface_meta";
     rev = "v${version}";
-    sha256 = "0rzh11wnab33b11391vc2ynf8ncxn22b12wn46lmgkrc5mqza8hd";
+    sha256 = "sha256-1of84/Y/efGlz33FD06M2A7b4cJCKJTKYm+tWHPJzak=";
   };
 
-  patches = [ ./0001-fix-version.patch ];
+  env.SETUPTOOLS_SCM_PRETEND_VERSION = version;
 
-  nativeBuildInputs = [ poetry-core ];
-
-  propagatedBuildInputs = [ poetry-dynamic-versioning ];
+  build-system = [
+    hatchling
+    hatch-vcs
+  ];
 
   pythonImportsCheck = [ "interface_meta" ];
   meta = {
