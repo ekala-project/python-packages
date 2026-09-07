@@ -3,6 +3,7 @@
   buildPythonPackage,
   fetchFromGitHub,
   flit-core,
+  typing-extensions,
   aiohttp,
   pytz,
   requests,
@@ -15,14 +16,14 @@
 
 buildPythonPackage rec {
   pname = "fhir-py";
-  version = "2.2.0";
+  version = "2.3.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "beda-software";
     repo = "fhir-py";
     tag = "v${version}";
-    hash = "sha256-C6ttVEYsnOzA4PFtq0wHfXrGSvpXOj0/oTuVDtx19qc=";
+    hash = "sha256-XPkWtzYtMPCcV7FbV89Qv/kfV7qu3ZT3XwcLDoJ392o=";
   };
 
   build-system = [ flit-core ];
@@ -31,6 +32,7 @@ buildPythonPackage rec {
     aiohttp
     pytz
     requests
+    typing-extensions
   ];
 
   nativeCheckInputs = [
