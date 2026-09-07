@@ -10,7 +10,7 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-redis";
-  version = "14.5.0";
+  version = "15.0.0b1";
   pyproject = true;
 
   __structuredAttrs = true;
@@ -18,7 +18,7 @@ buildPythonPackage (finalAttrs: {
   src = fetchPypi {
     inherit (finalAttrs) version;
     pname = "azure_mgmt_redis";
-    hash = "sha256-XDQ0yCSSaI4luTqvURPs/wuSt61toqT9RpVTD4KxUvo=";
+    hash = "sha256-wHwNVR5UXcc9YbkCdl2nqLIw12O2NY9C1ffhHZy7nRA=";
   };
 
   build-system = [ setuptools ];
