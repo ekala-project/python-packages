@@ -24,14 +24,14 @@
 
 buildPythonPackage rec {
   pname = "cohere";
-  version = "7.0.4";
+  version = "7.1.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "cohere-ai";
     repo = "cohere-python";
     tag = version;
-    hash = "sha256-iFqzWuWOKbJcvmGFEI0jt0fkBlZHlzmzZXZO7tIn638=";
+    hash = "sha256-7dkU2M9v7JbQU9OMUQA1yLzbCmRPuOzUmB6KBpO7EG0=";
   };
 
   build-system = [ poetry-core ];
