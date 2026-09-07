@@ -10,14 +10,14 @@
 
 buildPythonPackage rec {
   pname = "fpdf2";
-  version = "2.8.5";
+  version = "2.8.8";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "py-pdf";
     repo = "fpdf2";
     tag = version;
-    hash = "sha256-LQZ7OMfL+PFxEc7q/dSw+YJoKr+eYEaZF8XCzd7AdBI=";
+    hash = "sha256-ff0wDhKtvPrqqjGBtUjg1b0iDWoesV+6KlgDICf3xck=";
   };
 
   build-system = [ setuptools ];
