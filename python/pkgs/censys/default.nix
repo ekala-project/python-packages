@@ -4,9 +4,8 @@
   backoff,
   buildPythonPackage,
   fetchFromGitHub,
-  importlib-metadata,
+  hatchling,
   parameterized,
-  poetry-core,
   pytest-mock,
   pytest-cov-stub,
   pytestCheckHook,
@@ -20,24 +19,23 @@
 
 buildPythonPackage rec {
   pname = "censys";
-  version = "2.2.19";
+  version = "2.3.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "censys";
     repo = "censys-python";
     tag = "v${version}";
-    hash = "sha256-3eQtGCIKtjpDWfyrIEPZnA6xLMNl0cg61wh0nuwNwh4=";
+    hash = "sha256-GBFsAVecUN49vousqnB6enqRsAg1aBrjaA/Q7XXnOUE=";
   };
 
-  build-system = [ poetry-core ];
+  build-system = [ hatchling ];
 
   dependencies = [
     argcomplete
     backoff
     requests
     rich
-    importlib-metadata
   ];
 
   nativeCheckInputs = [
