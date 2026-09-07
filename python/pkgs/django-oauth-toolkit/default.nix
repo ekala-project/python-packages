@@ -19,14 +19,14 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "django-oauth-toolkit";
-  version = "3.3.0";
+  version = "3.4.1";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "jazzband";
     repo = "django-oauth-toolkit";
     tag = finalAttrs.version;
-    hash = "sha256-eRQzAFUvSgoDiP7LW/+hMrNxHuXVxY+wc/E3VU/zeXo=";
+    hash = "sha256-UsnfGOyVk5w0grG6cTgMmfo+HyrZtsER338YobLyk08=";
   };
 
   build-system = [ setuptools ];
