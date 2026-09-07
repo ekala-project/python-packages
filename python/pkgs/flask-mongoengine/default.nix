@@ -14,7 +14,7 @@
 
 buildPythonPackage rec {
   pname = "flask-mongoengine";
-  version = "1.0.0-unstable-2022-08-16";
+  version = "1.0.0";
   pyproject = true;
 
   src = fetchFromGitHub {
