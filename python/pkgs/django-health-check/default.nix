@@ -3,6 +3,7 @@
   stdenv,
   buildPythonPackage,
   celery,
+  django,
   fetchFromGitHub,
   flit-core,
   flit-scm,
@@ -21,14 +22,14 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "django-health-check";
-  version = "4.4.3";
+  version = "4.5.1";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "codingjoe";
     repo = "django-health-check";
     tag = finalAttrs.version;
-    hash = "sha256-brC/gMqxo6BsfMA+4u9alOtIH4js4EgdExT1LL0QXxU=";
+    hash = "sha256-PbimG445XclS7A4SBAZ+9W0WpoerhpqOI4A36Vyqscc=";
   };
 
   build-system = [
@@ -37,6 +38,7 @@ buildPythonPackage (finalAttrs: {
   ];
 
   dependencies = [
+    django
     dnspython
   ];
 
