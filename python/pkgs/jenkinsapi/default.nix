@@ -13,14 +13,14 @@
 
 buildPythonPackage rec {
   pname = "jenkinsapi";
-  version = "0.3.17";
+  version = "0.3.23";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "pycontribs";
     repo = "jenkinsapi";
     tag = version;
-    hash = "sha256-1dTcT84cDpP9V4tVrgW2MTYx4jQj0/tZiAuakC+orUQ=";
+    hash = "sha256-NtILbbXu4dtYda28WaFiGkICf0bOmVMKOOnnrHptxsg=";
   };
 
   build-system = [
@@ -45,7 +45,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [
     "jenkinsapi"
     "jenkinsapi.utils"
-    "jenkinsapi.utils.jenkins_launcher"
   ];
 
   meta = {
