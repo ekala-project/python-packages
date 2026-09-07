@@ -1,6 +1,7 @@
 {
   lib,
   buildPythonPackage,
+  email-validator,
   fastapi,
   fetchFromGitHub,
   httpx,
@@ -12,19 +13,20 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "fastapi-sso";
-  version = "0.21.1";
+  version = "0.22.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "tomasvotava";
     repo = "fastapi-sso";
     tag = finalAttrs.version;
-    hash = "sha256-/5YuHLDYLnVQc/34OdlRTCJAVL2z6MZV8stSV/tpte4=";
+    hash = "sha256-dEyM/K0ljzFERMOth4Z9iQWnksbh98KybJ8kNJ5N7ic=";
   };
 
   build-system = [ poetry-core ];
 
   dependencies = [
+    email-validator
     fastapi
     httpx
     oauthlib
