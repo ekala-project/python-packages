@@ -3,32 +3,37 @@
   buildPythonPackage,
   fetchFromGitHub,
   lib,
-  poetry-core,
-  pydantic,
-  python,
+  setuptools,
   rich,
-  tomli,
+  typing-extensions,
 }:
 buildPythonPackage rec {
   pname = "corallium";
-  version = "2.1.1";
+  version = "2.4.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "KyleKing";
     repo = "corallium";
     tag = version;
-    hash = "sha256-0P8qmX+1zigL4jaA4TTuqAzFkyhQUfdGmPLxkFnT0qE=";
+    hash = "sha256-BtePG2XcukAytbNyIfH3rBesx7nu7J1TLtfbzZO37Os=";
   };
 
+  postPatch = ''
+    substituteInPlace pyproject.toml \
+      --replace-fail 'requires = ["uv_build>=0.9.26,<2.0"]' 'requires = ["setuptools"]' \
+      --replace-fail 'build-backend = "uv_build"' 'build-backend = "setuptools.build_meta"' \
+      --replace-fail "'corallium>=2.0.1'," ""
+  '';
+
   build-system = [
-    poetry-core
+    setuptools
   ];
 
   dependencies = [
     beartype
-    pydantic
     rich
+    typing-extensions
   ];
 
   meta = {
