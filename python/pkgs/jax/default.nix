@@ -22,7 +22,7 @@ let
 in
 buildPythonPackage {
   pname = "jax";
-  version = "0.11.0";
+  version = "0.11.1";
   pyproject = true;
   __structuredAttrs = true;
 
