@@ -18,14 +18,14 @@
 }:
 buildPythonPackage rec {
   pname = "category-encoders";
-  version = "2.9.0";
+  version = "2.10.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "scikit-learn-contrib";
     repo = "category_encoders";
     tag = version;
-    hash = "sha256-OcQCEWxqH6b9adQk64fdnqFl5CGLb9Yyd7bSxSaGTvg=";
+    hash = "sha256-NMFMVteOW5kGVxw/S1FdMfYM/jQcpxSTQTRzn95bqGE=";
   };
 
   build-system = [
