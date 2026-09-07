@@ -12,13 +12,13 @@
 
 buildPythonPackage rec {
   pname = "gcloud-aio-storage";
-  version = "9.3.0";
+  version = "9.6.4";
   pyproject = true;
 
   src = fetchPypi {
     pname = "gcloud_aio_storage";
     inherit version;
-    hash = "sha256-I2ZKNrLD/5E1A1s+m89RLgoMF7h04wWYUJjwAN5N45k=";
+    hash = "sha256-TadB6eRfCrX1eqm6LUYDLd5LgPPrCgPeMax0Gt1CBIU=";
   };
 
   build-system = [ poetry-core ];
