@@ -10,12 +10,12 @@
 
 buildPythonPackage rec {
   pname = "icalendar";
-  version = "7.2.2";
+  version = "7.3.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-bPkEqSiIHiDIm2gudbyi65foxcpil4LtRKUZq/TKwcw=";
+    hash = "sha256-e9AByOZIIF4b3lxqW3cJZZjo0Ik9z1d1XGxZdjViATI=";
   };
 
   build-system = [
