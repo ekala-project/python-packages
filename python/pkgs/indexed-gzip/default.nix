@@ -3,23 +3,25 @@
   buildPythonPackage,
   fetchPypi,
   setuptools,
+  setuptools-scm,
   cython,
   zlib,
 }:
 
 buildPythonPackage rec {
   pname = "indexed_gzip";
-  version = "1.9.5";
+  version = "1.10.3";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-EFNmVndZ22x9+GbYaWEd7Tu4PVwOUPuwHQLBkiuYtFc=";
+    hash = "sha256-E0fztsVSLFxQ212eKAElfOqGY56HtGxmNfIgBe497SU=";
   };
 
-  nativeBuildInputs = [
+  build-system = [
     cython
     setuptools
+    setuptools-scm
   ];
 
   buildInputs = [ zlib ];
