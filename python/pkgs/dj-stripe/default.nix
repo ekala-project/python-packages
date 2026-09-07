@@ -2,7 +2,7 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
-  poetry-core,
+  hatchling,
   django,
   stripe,
   mysqlclient,
@@ -13,17 +13,17 @@
 
 buildPythonPackage rec {
   pname = "dj-stripe";
-  version = "2.9.0";
+  version = "2.11.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "dj-stripe";
     repo = "dj-stripe";
     tag = version;
-    hash = "sha256-ijTzSid5B79mAi7qUFSGL5+4PfmBStDWayzjW1iwRww=";
+    hash = "sha256-BTXqt6daGXWghURtzFuOOlNVDfe01ZFOnNoCsTrvsRQ=";
   };
 
-  build-system = [ poetry-core ];
+  build-system = [ hatchling ];
 
   dependencies = [
     django
