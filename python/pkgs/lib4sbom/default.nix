@@ -5,6 +5,7 @@
   fastjsonschema,
   fetchFromGitHub,
   jsonschema,
+  packageurl-python,
   pytestCheckHook,
   pyyaml,
   semantic-version,
@@ -14,14 +15,14 @@
 
 buildPythonPackage rec {
   pname = "lib4sbom";
-  version = "0.9.4";
+  version = "0.10.4";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "anthonyharrison";
     repo = "lib4sbom";
     tag = "v${version}";
-    hash = "sha256-oH/mUN14s9c8n7yhHV0MMXpIZhaYSfdPsyxX1kjk0+Q=";
+    hash = "sha256-P9/QcICGxJUzcsilgfNPeybavgwrPwjO5eDBuxu25BA=";
   };
 
   build-system = [ setuptools ];
@@ -30,6 +31,7 @@ buildPythonPackage rec {
     defusedxml
     fastjsonschema
     jsonschema
+    packageurl-python
     pyyaml
     semantic-version
     xmlschema
