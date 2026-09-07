@@ -12,14 +12,14 @@
 
 buildPythonPackage rec {
   pname = "hass-client";
-  version = "1.2.3";
+  version = "1.3.1";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "music-assistant";
     repo = "python-hass-client";
     tag = version;
-    hash = "sha256-uCVwxa/KTiOmaexmdeynL2LSqBhDu8Zfre+Nh9Oauiw=";
+    hash = "sha256-WpsdvwRICAllrmpuhOUEAPq2kdtcKK/XgE+0+PY+lUo=";
   };
 
   postPatch = ''
