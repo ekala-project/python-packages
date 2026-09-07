@@ -13,14 +13,14 @@
 
 buildPythonPackage rec {
   pname = "geoalchemy2";
-  version = "0.18.4";
+  version = "0.20.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "geoalchemy";
     repo = "geoalchemy2";
     tag = version;
-    hash = "sha256-kSsKud4/uL5ycPiuS+JPXJ6XH9ZgQ+kHOTC5RtG9C0I=";
+    hash = "sha256-QtikpkMEM/DdL0Mmt4PZuQc3EFla8xbI0MODecT1hGY=";
   };
 
   build-system = [
