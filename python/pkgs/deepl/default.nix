@@ -4,24 +4,22 @@
   fetchPypi,
   requests,
   poetry-core,
-  keyring,
 }:
 
 buildPythonPackage rec {
   pname = "deepl";
-  version = "1.27.0";
+  version = "1.32.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-jYOlPZWP+pY4j17NZCWp2dkxFEwWwFx6hOzrmhRUu5I=";
+    hash = "sha256-MBa/hvH1Prbl/ttFh0bGv2V5qEC1fFSi7XAbA0S8eeE=";
   };
 
   nativeBuildInputs = [ poetry-core ];
 
   propagatedBuildInputs = [
     requests
-    keyring
   ];
 
   # Requires internet access and an API key
