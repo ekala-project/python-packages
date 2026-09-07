@@ -1,6 +1,7 @@
 {
   lib,
   aiohttp,
+  anyio,
   buildPythonPackage,
   elastic-transport,
   fetchPypi,
@@ -14,17 +15,18 @@
 
 buildPythonPackage rec {
   pname = "elasticsearch";
-  version = "8.18.1";
+  version = "9.5.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-mYA18XqMH7p64msYPcp5fc+V24baan7LpW0xr8QPB8c=";
+    hash = "sha256-w3V2ugTQQgCgUBLbmbyZAkAArhW5691oOWaqig5s0cQ=";
   };
 
   build-system = [ hatchling ];
 
   dependencies = [
+    anyio
     elastic-transport
     python-dateutil
     typing-extensions
