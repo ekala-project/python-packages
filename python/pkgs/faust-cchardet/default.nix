@@ -3,15 +3,13 @@
   buildPythonPackage,
   fetchFromGitHub,
   cython,
-  pkgconfig,
-  setuptools,
-  wheel,
+  meson-python,
   python,
 }:
 
 buildPythonPackage rec {
   pname = "faust-cchardet";
-  version = "2.1.19";
+  version = "3.2.0";
   pyproject = true;
 
   src = fetchFromGitHub {
@@ -19,14 +17,12 @@ buildPythonPackage rec {
     repo = "cChardet";
     tag = "v${version}";
     fetchSubmodules = true;
-    hash = "sha256-yY6YEhXC4S47rxnkKAta4m16IVGn7gkHSt056bYOYJ4=";
+    hash = "sha256-jXMf553NsgXgjuvEMKEst8s8k6nE5868DvUPV3Udvvk=";
   };
 
-  nativeBuildInputs = [
+  build-system = [
+    meson-python
     cython
-    pkgconfig
-    setuptools
-    wheel
   ];
 
   postFixup = ''
