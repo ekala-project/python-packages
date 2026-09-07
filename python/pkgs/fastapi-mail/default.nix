@@ -21,14 +21,14 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "fastapi-mail";
-  version = "1.6.2";
+  version = "1.6.8";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "sabuhish";
     repo = "fastapi-mail";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-oWm2FvXCyz+0QRvClcJoKF17rWggAtQasa5h1pZ6N4Y=";
+    hash = "sha256-KWwR/p3CFjQCLPa+TRFVLwVn+y5pqs7ZjRnce2f5B0U=";
   };
 
   pythonRelaxDeps = [
@@ -47,6 +47,7 @@ buildPythonPackage (finalAttrs: {
     cryptography
     email-validator
     fakeredis
+    httpx
     jinja2
     pydantic
     pydantic-settings
@@ -55,7 +56,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   optional-dependencies = {
-    httpx = [ httpx ];
     redis = [ redis ];
   };
 
