@@ -13,6 +13,7 @@
   jiter,
   openai,
   pydantic,
+  regex,
   requests,
   rich,
   tenacity,
@@ -21,14 +22,14 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "instructor";
-  version = "1.15.1";
+  version = "1.16.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "jxnl";
     repo = "instructor";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-+mYVg4IuoU/GEK/L3qXUfO224eWMrRtoXTTi8RhOJk4=";
+    hash = "sha256-MNZAZ/BjYcooffcXZtIPdD8QTuKYdpkoTOEbS9/AqNs=";
   };
 
   build-system = [ hatchling ];
@@ -46,6 +47,7 @@ buildPythonPackage (finalAttrs: {
     jiter
     openai
     pydantic
+    regex
     requests
     rich
     tenacity
