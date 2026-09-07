@@ -11,14 +11,14 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "griffecli";
-  version = "2.1.0";
+  version = "2.3.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "mkdocstrings";
     repo = "griffe";
     tag = finalAttrs.version;
-    hash = "sha256-hNKL86LSE9PwIofxt2t5PrlThiX7hTgYADK2HDVhNjk=";
+    hash = "sha256-Rcp2bppNk8QUe/WbhmsCNfYmKjJrJINlU/zhuAom758=";
   };
 
   sourceRoot = "${finalAttrs.src.name}/packages/griffecli";
