@@ -14,14 +14,14 @@
 
 buildPythonPackage rec {
   pname = "django-phonenumber-field";
-  version = "8.4.0";
+  version = "8.5.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "stefanfoulis";
     repo = "django-phonenumber-field";
     tag = version;
-    hash = "sha256-k6r+yy1o7pFJx/9yxI5AbsfRPIhycAc0oXBHyV0GHec=";
+    hash = "sha256-hTrW7QeZPBsln9iHh9sV7JMQxdJ9cFcAq4ETyhxFGv0=";
   };
 
   build-system = [ setuptools-scm ];
