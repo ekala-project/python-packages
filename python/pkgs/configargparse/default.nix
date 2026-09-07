@@ -3,19 +3,23 @@
   fetchPypi,
   buildPythonPackage,
   setuptools,
+  setuptools-scm,
 }:
 
 buildPythonPackage rec {
   pname = "configargparse";
-  version = "1.7.1";
+  version = "1.7.7";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-ecLdroNqHlkUtx1Y5LmtvZ93edTmNRpje30tm2xG09k=";
+    hash = "sha256-YHvqJ2ohmRIVivoeWnFsP4+I1UL5mX39Q7vQtJKp9aY=";
   };
 
-  build-system = [ setuptools ];
+  build-system = [
+    setuptools
+    setuptools-scm
+  ];
 
   pythonImportsCheck = [ "configargparse" ];
 
