@@ -4,6 +4,7 @@
   fetchFromGitHub,
   django,
   setuptools,
+  setuptools-scm,
   django-classy-tags,
   django-formtools,
   django-treebeard,
@@ -14,17 +15,20 @@
 
 buildPythonPackage rec {
   pname = "django-cms";
-  version = "5.0.6";
+  version = "5.1.2";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "django-cms";
     repo = "django-cms";
     tag = version;
-    hash = "sha256-pYxIW/GGBIKzsQs2QJiRkScDPzSf3YXC+HkDsfAgg/w=";
+    hash = "sha256-bwIbCZI1XwN/BQq7WYBJUOsclIaLO4jtVKUpH1iyY/w=";
   };
 
-  build-system = [ setuptools ];
+  build-system = [
+    setuptools
+    setuptools-scm
+  ];
 
   dependencies = [
     django
