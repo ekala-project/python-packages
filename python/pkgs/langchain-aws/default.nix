@@ -27,7 +27,7 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "langchain-aws";
-  version = "1.6.3";
+  version = "1.7.5";
   pyproject = true;
   __structuredAttrs = true;
 
@@ -35,7 +35,7 @@ buildPythonPackage (finalAttrs: {
     owner = "langchain-ai";
     repo = "langchain-aws";
     tag = "langchain-aws==${finalAttrs.version}";
-    hash = "sha256-BSq8b5hNfBRp2PkLXSJRpGqJ5+T48x0zQUYlgzzcz7E=";
+    hash = "sha256-NEiad+vxqkks26C++GCfpGbu0Xv3Xc/9IMxHrU2JVEI=";
   };
 
   postPatch = ''
@@ -57,6 +57,8 @@ buildPythonPackage (finalAttrs: {
   pythonRelaxDeps = [
     # Boto3 spec has outstripped the version requirement
     "boto3"
+    # langchain-core>=1.6.0 required but we have 1.4.9
+    "langchain-core"
   ];
 
   optional-dependencies = {
