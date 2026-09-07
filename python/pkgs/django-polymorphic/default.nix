@@ -13,14 +13,14 @@
 
 buildPythonPackage rec {
   pname = "django-polymorphic";
-  version = "4.5.2";
+  version = "4.11.7";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "django-polymorphic";
     repo = "django-polymorphic";
     tag = "v${version}";
-    hash = "sha256-8MZrQErWWd4GiNaIEnGvj4jONGFzsi3bu5NervF4AnE=";
+    hash = "sha256-Xm+yPpi6UbHON2eSv1e8hiQLWHdMA4zYoDtAnURFMRA=";
   };
 
   build-system = [ hatchling ];
