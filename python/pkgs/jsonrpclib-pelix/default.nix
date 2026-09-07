@@ -2,21 +2,21 @@
   lib,
   fetchPypi,
   buildPythonPackage,
-  hatchling,
+  setuptools,
 }:
 
 buildPythonPackage rec {
   pname = "jsonrpclib-pelix";
-  version = "1.1.0";
+  version = "1.2.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "jsonrpclib_pelix";
     inherit version;
-    hash = "sha256-N5o8mz3UeHJ0GVh6p88Uu2/w5kMB3swP+pj3EPa/7B4=";
+    hash = "sha256-NTtmcHwPxCY+3I/Wu9Rxt67egjqD5NvxYUsMg67iDxg=";
   };
 
-  build-system = [ hatchling ];
+  build-system = [ setuptools ];
 
   pythonImportsCheck = [ "jsonrpclib" ];
 
