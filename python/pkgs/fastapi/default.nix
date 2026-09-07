@@ -28,14 +28,14 @@
 
 buildPythonPackage rec {
   pname = "fastapi";
-  version = "0.139.2";
+  version = "0.141.1";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "tiangolo";
     repo = "fastapi";
     tag = version;
-    hash = "sha256-CNcQh0AoX/6SZPC/Po7XCW4bHS1OAqacTbRRxx8rETM=";
+    hash = "sha256-5P9aDMS7gLti2CBlrucvjgl4Od1mti9ityPdqxI1RIM=";
   };
 
   build-system = [ pdm-backend ];
