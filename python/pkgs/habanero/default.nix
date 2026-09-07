@@ -3,7 +3,7 @@
   buildPythonPackage,
   fetchFromGitHub,
   hatchling,
-  httpx,
+  httpx2,
   tqdm,
   urllib3,
   vcrpy,
@@ -12,14 +12,14 @@
 
 buildPythonPackage rec {
   pname = "habanero";
-  version = "2.3.0";
+  version = "2.9.2";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "sckott";
     repo = "habanero";
     tag = "v${version}";
-    hash = "sha256-XI+UOm3xONBNVSlywfBhnsCA9RdpEwDQ4oQixn4UBKk=";
+    hash = "sha256-XRqMq0L0fedFt4hX6p4XzNeRxg8JL/xdIfuqLdpVnzo=";
   };
 
   build-system = [ hatchling ];
@@ -27,7 +27,7 @@ buildPythonPackage rec {
   pythonRelaxDeps = [ "urllib3" ];
 
   dependencies = [
-    httpx
+    httpx2
     tqdm
     urllib3
   ];
