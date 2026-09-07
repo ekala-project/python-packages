@@ -21,14 +21,14 @@
 
 buildPythonPackage rec {
   pname = "fastcan";
-  version = "0.5.0";
+  version = "0.6.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "scikit-learn-contrib";
     repo = "fastcan";
     tag = "v${version}";
-    hash = "sha256-1ncdzBMJYEwTkpLXS64g+SaEbsiYslX7zN4xbGjUsAA=";
+    hash = "sha256-SgvzmUY1GvSvbpyhwUpVwS8ZLVvtR2G1YwzS+mPo7ew=";
   };
 
   build-system = [
