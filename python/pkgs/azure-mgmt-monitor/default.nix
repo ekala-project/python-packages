@@ -10,13 +10,13 @@
 
 buildPythonPackage rec {
   pname = "azure-mgmt-monitor";
-  version = "7.0.0";
+  version = "8.0.0b3";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_mgmt_monitor";
     inherit version;
-    hash = "sha256-t19TZEHUMPaf+HOhZG5fXbyzCAoQdopZ0K3AFUFiOBY=";
+    hash = "sha256-Nk26yjMNW+OJx9+Fdcp0KTzSv+VEV2fhm0ExcNolOaI=";
   };
 
   build-system = [ setuptools ];
