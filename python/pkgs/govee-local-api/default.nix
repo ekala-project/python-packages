@@ -8,14 +8,14 @@
 
 buildPythonPackage rec {
   pname = "govee-local-api";
-  version = "2.4.0";
+  version = "3.0.1";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "Galorhallen";
     repo = "govee-local-api";
     tag = "v${version}";
-    hash = "sha256-BLM1lZ/2ZUpwP8/OpgcMdwjryEcmTBKYCeMm0FoCG8A=";
+    hash = "sha256-qc4/GNty3JuSKYhiLl5sHx3cwNiuqQXwlHdpW71ezNI=";
   };
 
   postPatch = ''
