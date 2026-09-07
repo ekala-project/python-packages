@@ -7,14 +7,14 @@
 
 buildPythonPackage rec {
   pname = "backrefs";
-  version = "7.0";
+  version = "8.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "facelessuser";
     repo = "backrefs";
     tag = version;
-    hash = "sha256-PCFjtCG+rDRtopeIEdW8r7vje5MnC6PigOyHzsEqgTI=";
+    hash = "sha256-SwZ/gam+/mK+Emm26G20SLmA4es9jZOKMxLgfNZKelM=";
   };
 
   build-system = [ hatchling ];
