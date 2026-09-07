@@ -4,7 +4,7 @@
   fetchPypi,
 
   # build-system
-  setuptools,
+  hatchling,
 
   # dependencies
   chardet,
@@ -12,15 +12,15 @@
 
 buildPythonPackage rec {
   pname = "binaryornot";
-  version = "0.4.4";
+  version = "0.6.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-NZUB38nUBjLtyfrIkOGVQtsaKHu8+lgXW2Zlg5IBgGE=";
+    hash = "sha256-zI1Xz6cddP+MKKdyZzTVOoUdAvrZ46VYH7gH+Yn3AvA=";
   };
 
-  build-system = [ setuptools ];
+  build-system = [ hatchling ];
 
   dependencies = [ chardet ];
 
