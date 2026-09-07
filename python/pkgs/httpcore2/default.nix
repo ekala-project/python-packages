@@ -28,17 +28,19 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "httpcore2";
-  version = "2.5.0";
+  version = "2.12.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "pydantic";
     repo = "httpx2";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-vIWAUjHPyafbeeUc2OvGpkiOoTj1fTniRnQiKSdkm6s=";
+    hash = "sha256-mEJHlG6skKkV90SfjTg+MHGkL7gnf3QLKLbWlTtEb9Q=";
   };
 
   postPatch = ''
+    substituteInPlace src/httpcore2/pyproject.toml \
+      --replace-fail "uv-dynamic-versioning>=0.14.0" "uv-dynamic-versioning>=0.13.0"
     pushd src/httpcore2
   '';
 
