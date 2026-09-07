@@ -19,13 +19,13 @@
 
 buildPythonPackage rec {
   pname = "google-cloud-aiplatform";
-  version = "1.158.0";
+  version = "2.1.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "google_cloud_aiplatform";
     inherit version;
-    hash = "sha256-hba+3DgjgkYX2x6oPgf6B/AGgderY8Qs3FhAZqhEc3s=";
+    hash = "sha256-lk7KFg1K9IouBLXuR2+004yEOI8jtEIOLHGzAVHWJb0=";
   };
 
   build-system = [ setuptools ];
