@@ -2,24 +2,24 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
-  poetry-core,
+  hatchling,
   xmod,
   pytestCheckHook,
 }:
 
 buildPythonPackage rec {
   pname = "dek";
-  version = "1.4.2";
+  version = "1.6.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "rec";
     repo = "dek";
     rev = "v${version}";
-    hash = "sha256-DYODdImTRCukGmGbkZ+9TQeI9DYaeRd/EHS6VND5IDs=";
+    hash = "sha256-G0m8p8nvvhQAccvkkD7WwmL3iA/zgS7CsyPwtHdoxJM=";
   };
 
-  build-system = [ poetry-core ];
+  build-system = [ hatchling ];
 
   dependencies = [ xmod ];
 
