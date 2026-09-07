@@ -1,28 +1,30 @@
 {
   lib,
+  azure-mgmt-core,
   buildPythonPackage,
   fetchPypi,
-  msrest,
-  azure-common,
-  azure-mgmt-core,
+  isodate,
+  setuptools,
+  typing-extensions,
 }:
 
 buildPythonPackage rec {
   pname = "azure-mgmt-msi";
-  version = "7.1.0";
-
-  format = "setuptools";
+  version = "8.0.0b2";
+  pyproject = true;
 
   src = fetchPypi {
     pname = "azure_mgmt_msi";
     inherit version;
-    hash = "sha256-GgGgifH2bLDUsohmA9W6QV82Dv8L5vaFc37N1Zx4Ils=";
+    hash = "sha256-9m+tyMcIw94Lhn2UFsVaTcjgUD9dPEE374vE8DlPQDs=";
   };
 
-  propagatedBuildInputs = [
-    msrest
-    azure-common
+  build-system = [ setuptools ];
+
+  dependencies = [
     azure-mgmt-core
+    isodate
+    typing-extensions
   ];
 
   pythonNamespaces = [ "azure.mgmt" ];
