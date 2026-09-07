@@ -4,7 +4,7 @@
   fetchPypi,
 
   # build-system
-  setuptools,
+  flit-core,
 
   # dependencies
   boltons,
@@ -12,15 +12,15 @@
 
 buildPythonPackage rec {
   pname = "face";
-  version = "24.0.0";
+  version = "26.0.1";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-YR4poBrFlw8Ad/nFd+dG1IwIJYi0EbM6DdVcTYcpSfY=";
+    hash = "sha256-gYPZS8JIuq6oVan4RF+XoiqZiJCOYKvdzMbiUdp3xMY=";
   };
 
-  build-system = [ setuptools ];
+  build-system = [ flit-core ];
 
   dependencies = [ boltons ];
 
