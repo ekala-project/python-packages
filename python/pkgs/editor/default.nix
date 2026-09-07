@@ -2,22 +2,22 @@
   lib,
   fetchPypi,
   buildPythonPackage,
-  poetry-core,
+  hatchling,
   runs,
   xmod,
 }:
 
 buildPythonPackage rec {
   pname = "editor";
-  version = "1.6.6";
+  version = "1.8.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-u2mJ6HJjjNEZ25pPzihM2OE8VTiGocBExrjYoWDIcfg=";
+    hash = "sha256-sH4bvLizPwXC5u08537pdWNUrahAoYqtfAU22Wf+TAs=";
   };
 
-  build-system = [ poetry-core ];
+  build-system = [ hatchling ];
 
   dependencies = [
     runs
