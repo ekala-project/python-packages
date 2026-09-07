@@ -26,14 +26,14 @@ let
 in
 buildPythonPackage.override { stdenv = stdenvTarget; } rec {
   pname = "llama-cpp-python";
-  version = "0.3.23";
+  version = "0.3.35";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "abetlen";
     repo = "llama-cpp-python";
     tag = "v${version}";
-    hash = "sha256-LqSgohfTv02RNZGMjKG0Pq2vHuIX+446uI2Q3KRmnzI=";
+    hash = "sha256-3o9YdjJ4rORVzwtu4lPZTioqiKHpWc1alhM76cCfVVM=";
     fetchSubmodules = true;
   };
 
