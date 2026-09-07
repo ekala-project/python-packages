@@ -11,13 +11,13 @@
 
 buildPythonPackage rec {
   pname = "azure-mgmt-dns";
-  version = "9.0.0";
+  version = "10.0.0b1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_mgmt_dns";
     inherit version;
-    hash = "sha256-ifjE5GepQiS5e/Ft121b1ha/Ec7+cn93ZhilfMVIbjc=";
+    hash = "sha256-4mYqKLWRN2tZbFvylNJHSw84ThOSf+8cx2jfbUe7vpQ=";
   };
 
   build-system = [ setuptools ];
