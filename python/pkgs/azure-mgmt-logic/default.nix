@@ -10,13 +10,13 @@
 
 buildPythonPackage rec {
   pname = "azure-mgmt-logic";
-  version = "10.0.0";
+  version = "10.1.0b1";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     extension = "zip";
-    hash = "sha256-s/pIZPFKqnr0HXeNkl8FHtKbYBb0Y0R2Xs0PSdDwTdY=";
+    hash = "sha256-WCuNRE7pjNmecva6IE7Oez1KiQuMSWtRBC2ktzPWQk4=";
   };
 
   build-system = [ setuptools ];
