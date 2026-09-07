@@ -2,37 +2,30 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
-  fetchpatch,
   certifi,
   setuptools,
+  sniffio,
   urllib3,
 }:
 
 buildPythonPackage rec {
   pname = "elastic-transport";
-  version = "8.17.1";
+  version = "9.4.2";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "elastic";
     repo = "elastic-transport-python";
     tag = "v${version}";
-    hash = "sha256-LWSvE88wEwMxRi6IZsMkIRP8UTRfImC9QZnuka1oiso=";
+    hash = "sha256-LoaZRmHgYE6wndBuTwDqXDh/eqqWGCticY2xX9sIKVw=";
   };
-
-  # FIXME: backport fix for pytest-asyncio 1.2.0, as updating this entire ecosystem is painful
-  patches = [
-    (fetchpatch {
-      url = "https://github.com/elastic/elastic-transport-python/commit/d749d0be54821e81979888ff34b1451354548863.patch";
-      hash = "sha256-FrabqeLn3Sr1sg/lWWYsMPd0CZS/6BZYLnaK66T93BQ=";
-    })
-  ];
 
   build-system = [ setuptools ];
 
   dependencies = [
-    urllib3
     certifi
+    sniffio
+    urllib3
   ];
 
   doCheck = false;
