@@ -8,17 +8,18 @@
   pyzmq,
   tornado,
   traitlets,
+  typing-extensions,
 }:
 
 buildPythonPackage rec {
   pname = "jupyter-client";
-  version = "8.8.0";
+  version = "8.10.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "jupyter_client";
     inherit version;
-    hash = "sha256-1VaBFBmk8tlshprzToVOPwWbfMLW0Bqc2chcJnaRvj4=";
+    hash = "sha256-n3EWKU3KVfF4W+iABX1EVE25sVZ3GNksszxYiGr7lJc=";
   };
 
   build-system = [ hatchling ];
@@ -29,6 +30,7 @@ buildPythonPackage rec {
     pyzmq
     tornado
     traitlets
+    typing-extensions
   ];
 
   pythonImportsCheck = [ "jupyter_client" ];
