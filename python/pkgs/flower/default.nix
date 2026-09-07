@@ -12,15 +12,17 @@
 
 buildPythonPackage rec {
   pname = "flower";
-  version = "2.0.1";
+  version = "2.1.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-WrcXuXlTB3DBavtItQ0qmNI8Pp/jmFHc9rxNAYRaAqA=";
+    hash = "sha256-7Oef0ZC/0ZiUfjBHDEsmptXfGGHVQwlDDdkm7VFjAv8=";
   };
 
   build-system = [ setuptools ];
+
+  pythonRelaxDeps = [ "tornado" ];
 
   dependencies = [
     celery
