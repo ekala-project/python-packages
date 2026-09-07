@@ -7,32 +7,42 @@
   setuptools,
   # Dependencies
   aiohttp,
-  requests,
-  websocket-client,
-  cryptography,
   certifi,
+  cryptography,
+  httpx,
+  httpx-sse,
+  requests,
+  rich,
+  typer,
+  typing-extensions,
+  websocket-client,
 }:
 
 buildPythonPackage rec {
   pname = "dashscope";
-  version = "1.25.9";
+  version = "1.27.4";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "dashscope";
     repo = "dashscope-sdk-python";
     tag = "v${version}";
-    hash = "sha256-VR7Auso+0al9qAE3IDFAPl5zIX0Yp9OfJchR+Q9DB1o=";
+    hash = "sha256-oLg/ghUllfsS/2Aqu6QrkBnQYxsBshZlWPHg+UZp6Yw=";
   };
 
   build-system = [ setuptools ];
 
   dependencies = [
     aiohttp
-    requests
-    websocket-client
-    cryptography
     certifi
+    cryptography
+    httpx
+    httpx-sse
+    requests
+    rich
+    typer
+    typing-extensions
+    websocket-client
   ];
 
   # Specify the version explicitly
