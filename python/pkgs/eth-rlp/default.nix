@@ -3,6 +3,7 @@
   buildPythonPackage,
   fetchFromGitHub,
   setuptools,
+  setuptools-scm,
   eth-utils,
   hexbytes,
   rlp,
@@ -10,17 +11,20 @@
 
 buildPythonPackage rec {
   pname = "eth-rlp";
-  version = "2.2.0";
+  version = "3.0.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "ethereum";
     repo = "eth-rlp";
     rev = "v${version}";
-    hash = "sha256-e8nPfxk3OnFEcPnfTy1IEUCHVId6E/ssNOUeAe331+U=";
+    hash = "sha256-0D/1PS4Q4BrypE9QFJBj6jDJNVAVhgqXJeGCk86zYRk=";
   };
 
-  build-system = [ setuptools ];
+  build-system = [
+    setuptools
+    setuptools-scm
+  ];
 
   propagatedBuildInputs = [
     hexbytes
