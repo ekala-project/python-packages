@@ -11,13 +11,13 @@
 
 buildPythonPackage rec {
   pname = "azure-mgmt-extendedlocation";
-  version = "2.0.0";
+  version = "3.0.0b1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_mgmt_extendedlocation";
     inherit version;
-    hash = "sha256-O1wdLwoh8V6bF29EAgbHAqH3f6S5ffHKQAH5kavPfNE=";
+    hash = "sha256-jO0iYpPCUwReAcdVPtRyhdh2UWK/YsP7fsFYGXX07hg=";
   };
 
   build-system = [ setuptools ];
