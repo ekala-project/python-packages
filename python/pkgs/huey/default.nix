@@ -8,12 +8,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "huey";
-  version = "3.3.0";
+  version = "3.4.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-4MKhVC5sOsuJSCHN6JXPnb9y5C3rJfVbLUQJaqMPjyQ=";
+    hash = "sha256-rJsC50HxPaQJLqGbyq/HNmnpfTFTkU0v7Sho3xRPbfo=";
   };
 
   build-system = [ setuptools ];
