@@ -13,13 +13,13 @@
 
 buildPythonPackage rec {
   pname = "azure-multiapi-storage";
-  version = "1.6.0";
+  version = "1.7.0b1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_multiapi_storage";
     inherit version;
-    hash = "sha256-iULj9O2+3dI82hms7nlgdvvNGkDkb5qhEQ/9oxTjHFU=";
+    hash = "sha256-yM6mFM2XBkar1KUxsEzKs4h/OK8jFrYlUWH/S/gpn1w=";
   };
 
   build-system = [ setuptools ];
