@@ -3,23 +3,25 @@
   fetchPypi,
   buildPythonPackage,
   setuptools,
+  versioneer,
   rnc2rng,
   lxml,
 }:
 
 buildPythonPackage rec {
   pname = "citeproc-py";
-  version = "0.10.2";
+  version = "0.11.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "citeproc_py";
     inherit version;
-    hash = "sha256-GVZv5W1vt5GBizIgS1HEIkPCpLYPnm0xLpNxv+rH04E=";
+    hash = "sha256-8vmmTNmAcGoMrF3rdXnm+KzIfOAUBSDMnzAmLSDDUwc=";
   };
 
   build-system = [
     setuptools
+    versioneer
     rnc2rng
   ];
 
