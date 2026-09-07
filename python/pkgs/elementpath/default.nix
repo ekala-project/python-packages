@@ -7,12 +7,12 @@
 
 buildPythonPackage rec {
   pname = "elementpath";
-  version = "5.1.3";
+  version = "5.1.4";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-NemMwuJjMjBaSbMuquv7conRljyI05if9cywLEaAmCA=";
+    hash = "sha256-PJEqnEExGsUkTAOIZ2cNfAsP7A5ESBNgjluEbbs0KKw=";
   };
 
   nativeBuildInputs = [ setuptools ];
