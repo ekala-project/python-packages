@@ -9,7 +9,7 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "enchant";
-  version = "2.6.9";
+  version = "2.8.21";
 
   outputs = [
     "out"
@@ -18,7 +18,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   src = fetchurl {
     url = "https://github.com/rrthomas/enchant/releases/download/v${finalAttrs.version}/enchant-${finalAttrs.version}.tar.gz";
-    hash = "sha256-2aWhDcmzikOzoPoix27W67fgnrU1r/YpVK/NvUDv/2s=";
+    hash = "sha256-3Sp2JpfEYxSKj1mGcIml6/LdFEnYafk3ZLdsErz4rMA=";
   };
 
   strictDeps = true;
@@ -33,6 +33,12 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   enableParallelBuilding = true;
+
+  # With all spell providers disabled, lib/enchant-2 is never created,
+  # but the providers Makefile install-data-hook tries to cd into it.
+  preInstall = ''
+    mkdir -p $out/lib/enchant-2
+  '';
 
   configureFlags = [
     "--enable-relocatable"
