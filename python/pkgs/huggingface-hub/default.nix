@@ -23,17 +23,19 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "huggingface-hub";
-  version = "1.10.2";
+  version = "1.30.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "huggingface";
     repo = "huggingface_hub";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-Q9N0QnxV8oJcxUsJzv4wX8Z6FkNdEfUH5BEVoZolsRY=";
+    hash = "sha256-43yZ9wOmCaGw8wcuD0j91kKYwzgf9xqSTabYJaA+tDg=";
   };
 
   build-system = [ setuptools ];
+
+  pythonRelaxDeps = [ "hf-xet" ];
 
   dependencies = [
     filelock
