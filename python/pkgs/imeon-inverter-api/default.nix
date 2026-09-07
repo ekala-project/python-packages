@@ -2,23 +2,29 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
-  pdm-pep517,
+  setuptools,
   aiohttp,
 }:
 
 buildPythonPackage rec {
   pname = "imeon-inverter-api";
-  version = "0.4.0";
+  version = "0.4.3";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "Imeon-Inverters-for-Home-Assistant";
     repo = "inverter-api";
     tag = version;
-    hash = "sha256-8tecWWDYFq+kAqWM9vKhM15LKnEVqaDBkH6jh0xwIsE=";
+    hash = "sha256-8W14q9Q+DcAHI1EiAmkodX6FfMYlD+nuiiY6NyOXI/o=";
   };
 
-  build-system = [ pdm-pep517 ];
+  postPatch = ''
+    substituteInPlace pyproject.toml \
+      --replace-fail 'requires = ["pdm-backend"]' 'requires = ["setuptools"]' \
+      --replace-fail 'build-backend = "pdm.backend"' 'build-backend = "setuptools.build_meta"'
+  '';
+
+  build-system = [ setuptools ];
 
   pythonRemoveDeps = [
     # https://github.com/Imeon-Inverters-for-Home-Assistant/inverter-api/pull/1
