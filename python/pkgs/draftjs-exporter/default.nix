@@ -6,19 +6,28 @@
   lib,
   lxml,
   python,
+  setuptools,
 }:
 
 buildPythonPackage rec {
   pname = "draftjs-exporter";
-  version = "5.1.0";
-  format = "setuptools";
+  version = "7.0.0";
+  pyproject = true;
 
   src = fetchFromGitHub {
     repo = "draftjs_exporter";
     owner = "springload";
     tag = "v${version}";
-    sha256 = "sha256-AR8CK75UdtEThE68WSE6DFSqryI509GTW1fBl1SL29w=";
+    sha256 = "sha256-vOSsT7YOMzBFkYre2GYSTlNUNwd70RsO7fJ6FWahNXM=";
   };
+
+  postPatch = ''
+    substituteInPlace pyproject.toml \
+      --replace-fail 'requires = ["uv_build>=0.11.26,<0.12.0"]' 'requires = ["setuptools"]' \
+      --replace-fail 'build-backend = "uv_build"' 'build-backend = "setuptools.build_meta"'
+  '';
+
+  build-system = [ setuptools ];
 
   optional-dependencies = {
     lxml = [ lxml ];
