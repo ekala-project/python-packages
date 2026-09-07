@@ -15,11 +15,12 @@
   traitlets,
   typing-extensions,
   matplotlib,
+  psutil,
 }:
 
 buildPythonPackage rec {
   pname = "ipython";
-  version = "9.9.0";
+  version = "9.17.1";
   outputs = [
     "out"
     "man"
@@ -28,7 +29,7 @@ buildPythonPackage rec {
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-SPvtGy3l4scXfu+hRKun/LgtrFFPCbV+KsnaNN21QiA=";
+    hash = "sha256-iRm+jCfyCm9EIxRQKAY/Zje0KgPOV2ZbsSAV7h8HNSk=";
   };
 
   build-system = [ setuptools ];
@@ -40,6 +41,7 @@ buildPythonPackage rec {
     matplotlib-inline
     pexpect
     prompt-toolkit
+    psutil
     pygments
     stack-data
     traitlets
