@@ -2,21 +2,21 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
-  setuptools,
+  flit-core,
   conda-package-streaming,
 }:
 buildPythonPackage rec {
   pname = "conda-package-handling";
-  version = "2.4.0";
+  version = "2.6.0";
   src = fetchFromGitHub {
     owner = "conda";
     repo = "conda-package-handling";
     tag = version;
-    hash = "sha256-AvuxHl3gUH7zIyMhZGeXqpMy0rJ99wj1/SrdTvlaX9A=";
+    hash = "sha256-VxnmG3ik6GJa/LiHqmyMVF/uBpx8JMCHBs7DVhC4gtU=";
   };
 
   pyproject = true;
-  build-system = [ setuptools ];
+  build-system = [ flit-core ];
   dependencies = [ conda-package-streaming ];
 
   pythonImportsCheck = [ "conda_package_handling" ];
