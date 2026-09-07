@@ -11,12 +11,12 @@
 
 buildPythonPackage rec {
   pname = "azure-mgmt-synapse";
-  version = "2.0.0";
+  version = "2.1.0b7";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-vsa9+utVtP3RWfIFXoh1v1CnILsPzoCoFukqI1m4mMg=";
+    hash = "sha256-9diBVPWUofEa1LJytaDOU2FKB7nFDpayWgmnq3lx6dY=";
     extension = "zip";
   };
 
