@@ -7,14 +7,14 @@
 
 buildPythonPackage rec {
   pname = "dynaconf";
-  version = "3.2.13";
+  version = "3.3.5";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "dynaconf";
     repo = "dynaconf";
     tag = version;
-    hash = "sha256-3qUGLEQ0x/WTF/M/SEts6v9w1yGYSB6LYEcxKQcbqSk=";
+    hash = "sha256-rIATIZLcvb8UtUFGjOSdNd0Wlb4CceDp9B1OdlnIlYc=";
   };
 
   build-system = [ setuptools ];
