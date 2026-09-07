@@ -7,7 +7,7 @@
 
 stdenv.mkDerivation {
   pname = "h3";
-  version = "4.4.1";
+  version = "4.5.0";
 
   src = fetchFromGitHub {
     owner = "uber";
