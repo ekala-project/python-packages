@@ -11,13 +11,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-policyinsights";
-  version = "1.0.1";
+  version = "1.1.0b6";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_mgmt_policyinsights";
     inherit (finalAttrs) version;
-    hash = "sha256-rsmIKwVcRrWUxDjJf1Cj4YczEooRUwRpzgl6fFmaDl0=";
+    hash = "sha256-Dp3LGzQ84guvaHSLXgyiJ9mIk5D6dnq2Pjp/MiDjzc0=";
   };
 
   build-system = [ setuptools ];
