@@ -14,15 +14,21 @@
 
 buildPythonPackage rec {
   pname = "cdcs";
-  version = "0.2.6";
+  version = "0.2.7";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "usnistgov";
     repo = "pycdcs";
     tag = "v${version}";
-    hash = "sha256-P6fFL9yqnVbeUNBejnTcFowcf9xZP6XwheHwNUZKKlM=";
+    hash = "sha256-UpPoTdcDDCmombeScFgjsFX+//Yfnn+ClDwYsZh0dxI=";
   };
+
+  postPatch = ''
+    substituteInPlace pyproject.toml \
+      --replace-fail 'requires = ["uv_build>=0.11.26,<0.12"]' 'requires = ["setuptools"]' \
+      --replace-fail 'build-backend = "uv_build"' 'build-backend = "setuptools.build_meta"'
+  '';
 
   build-system = [ setuptools ];
 
