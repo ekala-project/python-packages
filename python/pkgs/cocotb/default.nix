@@ -8,12 +8,13 @@
   python,
   cocotb-bus,
   find-libpython,
+  pytest,
   stdenv,
 }:
 
 buildPythonPackage rec {
   pname = "cocotb";
-  version = "2.0.1";
+  version = "2.1.0";
   format = "setuptools";
 
   # RuntimeError: cocotb 2.0.1 only supports a maximum Python version of 3.13.
@@ -26,13 +27,16 @@ buildPythonPackage rec {
     owner = "cocotb";
     repo = "cocotb";
     tag = "v${version}";
-    hash = "sha256-LXQNqFlvP+WBaDGWPs5+BXBtW2dhDu+v+7lR/AMG21M=";
+    hash = "sha256-MND6d+5ymlGT597kt6rWN9ylmoGvexIylzsgjY0NRe8=";
   };
 
   nativeBuildInputs = [ setuptools-scm ];
 
   buildInputs = [ setuptools ];
-  propagatedBuildInputs = [ find-libpython ];
+  propagatedBuildInputs = [
+    find-libpython
+    pytest
+  ];
 
   postPatch = ''
     patchShebangs bin/*.py
