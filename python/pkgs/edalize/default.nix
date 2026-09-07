@@ -12,14 +12,14 @@
 
 buildPythonPackage rec {
   pname = "edalize";
-  version = "0.6.1";
+  version = "0.6.7";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "olofk";
     repo = "edalize";
     tag = "v${version}";
-    hash = "sha256-5c3Szq0tXQdlyzFTFCla44qB/O6RK8vezVOaFOv8sw4=";
+    hash = "sha256-o+cwcW1A+EfIGNu3/Ufnr7D2we4U6i0SLg21CTBYaZ4=";
   };
 
   postPatch = ''
