@@ -13,13 +13,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "c-blosc2";
-  version = "2.23.1";
+  version = "3.3.3";
 
   src = fetchFromGitHub {
     owner = "Blosc";
     repo = "c-blosc2";
     rev = "v${finalAttrs.version}";
-    sha256 = "sha256-iyEB1Hnvo42tMHyB4pDfXru5doFwNiFuxq21Tr3zLIg=";
+    sha256 = "sha256-swy2z5joU1H1eAovecDP1MmARZfAxuWxMfYtj5MNBG4=";
   };
 
   # https://github.com/NixOS/nixpkgs/issues/144170
@@ -48,6 +48,8 @@ stdenv.mkDerivation (finalAttrs: {
     "-DPREFER_EXTERNAL_LZ4=ON"
     "-DPREFER_EXTERNAL_ZLIB=ON"
     "-DPREFER_EXTERNAL_ZSTD=ON"
+
+    "-DBLOSC_ENABLE_ZFP=OFF"
 
     "-DBUILD_EXAMPLES=OFF"
     "-DBUILD_BENCHMARKS=OFF"
