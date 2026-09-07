@@ -13,14 +13,14 @@
 
 buildPythonPackage rec {
   pname = "blackrenderer";
-  version = "0.6.0";
+  version = "0.8.2";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "BlackFoundryCom";
     repo = "black-renderer";
     tag = "v${version}";
-    hash = "sha256-b2W0M32Y4HUyxObjvh0yMUBe5gfcSDXnw1GfhW7hoZk=";
+    hash = "sha256-6mC+JSg0u2hwi7SDFHBoUYCu8sYisWSCOuaTtc0FXi4=";
   };
 
   build-system = [
