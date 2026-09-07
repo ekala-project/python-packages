@@ -9,12 +9,12 @@
 
 buildPythonPackage rec {
   pname = "keke";
-  version = "0.2.0";
+  version = "0.3.0b3";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-H0U6DgZOHKtkPnF/xSNqBGPnD4BViP0JBKpehKKTTzs=";
+    hash = "sha256-rkMfcJvhH4XTOyCwfK70fM8dZ4nDB59urfi+FhsSPQo=";
   };
 
   installCheckPhase = ''
