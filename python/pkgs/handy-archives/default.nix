@@ -9,12 +9,12 @@
 
 buildPythonPackage rec {
   pname = "handy_archives";
-  version = "0.2.0";
+  version = "0.3.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-+6IRAf2eKdXjtygjJhqq4GuTUGhvDSBneG1k3Oc+s/Y=";
+    hash = "sha256-Ko0SXNnEJDO5eDhINPSh3xhKnjuraL9EDfGEttrhL/M=";
   };
 
   build-system = [ flit-core ];
