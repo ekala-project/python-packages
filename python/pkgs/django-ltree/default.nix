@@ -2,24 +2,24 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
-  setuptools,
+  hatchling,
   django,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "django-ltree";
-  version = "0.6.0";
+  version = "0.8.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "mariocesar";
     repo = "django-ltree";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-XN2znH9bNU8jaY2HC8qmSR6VqShcEFGAtNtb/5aLgic=";
+    hash = "sha256-SStxvxPpdIuEWNkly1sOwF9Chpc/IE4zawIotKbwZSw=";
   };
 
   build-system = [
-    setuptools
+    hatchling
   ];
 
   dependencies = [
