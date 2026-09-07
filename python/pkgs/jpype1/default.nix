@@ -2,7 +2,9 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
-  setuptools,
+  cmake,
+  ninja,
+  scikit-build-core,
   ant,
   openjdk,
   packaging,
@@ -11,22 +13,26 @@
 
 buildPythonPackage rec {
   pname = "jpype1";
-  version = "1.6.0";
+  version = "1.7.1";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "originell";
     repo = "jpype";
     tag = "v${version}";
-    hash = "sha256-CDiVQugxLgmUwAG0e0ryamWvrjUaJxJrU0YSFIIWS1I=";
+    hash = "sha256-6QKX43XyyBCwOxunQz8lFV1Svh/IXjLtpElbWEx37QQ=";
   };
 
-  build-system = [ setuptools ];
+  build-system = [ scikit-build-core ];
 
   nativeBuildInputs = [
+    cmake
+    ninja
     ant
     openjdk
   ];
+
+  dontUseCmakeConfigure = true;
 
   preBuild = ''
     ant -f native/build.xml jar
