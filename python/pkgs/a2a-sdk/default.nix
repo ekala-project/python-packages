@@ -12,6 +12,7 @@
   hatchling,
   httpx-sse,
   httpx,
+  json-rpc,
   opentelemetry-api,
   opentelemetry-sdk,
   protobuf,
@@ -33,14 +34,14 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "a2a-sdk";
-  version = "0.3.26";
+  version = "1.1.3";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "a2aproject";
     repo = "a2a-python";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-OQVNoKCx/7t3LeLgcVCVJUDnrWnugbM6EReE0713CM4=";
+    hash = "sha256-2GeASVY9mBttimRWFMwWi38ld+aUtQrOpjvatTRmRjY=";
   };
 
   build-system = [
@@ -48,10 +49,16 @@ buildPythonPackage (finalAttrs: {
     uv-dynamic-versioning
   ];
 
+  postPatch = ''
+    substituteInPlace pyproject.toml \
+      --replace-fail "protobuf>=5.29.5,<7" "protobuf>=5.29.5"
+  '';
+
   dependencies = [
     google-api-core
     httpx
     httpx-sse
+    json-rpc
     protobuf
     pydantic
   ];
