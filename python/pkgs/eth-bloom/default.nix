@@ -3,22 +3,26 @@
   buildPythonPackage,
   fetchFromGitHub,
   setuptools,
+  setuptools-scm,
   eth-hash,
 }:
 
 buildPythonPackage rec {
   pname = "eth-bloom";
-  version = "3.1.0";
+  version = "4.0.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "ethereum";
     repo = "eth-bloom";
     tag = "v${version}";
-    hash = "sha256-WrBLFICPyb+1bIitHZ172A1p1VYqLR75YfJ5/IBqDr8=";
+    hash = "sha256-zz0os8+Du5nFSQqOIS42X1h3j4MGgLsRUvvjVTTfKG4=";
   };
 
-  build-system = [ setuptools ];
+  build-system = [
+    setuptools
+    setuptools-scm
+  ];
 
   dependencies = [ eth-hash ];
 
