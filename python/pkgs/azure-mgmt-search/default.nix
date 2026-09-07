@@ -10,13 +10,13 @@
 
 buildPythonPackage rec {
   pname = "azure-mgmt-search";
-  version = "9.2.0";
+  version = "10.0.0b1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_mgmt_search";
     inherit version;
-    hash = "sha256-oNoOwzLR9D0PastjuM/YAIWwdeka/PgS+MdprZ/crYQ=";
+    hash = "sha256-mtiAjukojtK5hqYfmzTNz142ul6R6qPbfQ5mQpvtsaQ=";
   };
 
   build-system = [ setuptools ];
