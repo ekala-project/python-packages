@@ -3,6 +3,7 @@
   fetchFromGitHub,
   buildPythonPackage,
   setuptools,
+  setuptools-scm,
   # dependencies
   eth-typing,
   eth-utils,
@@ -13,17 +14,20 @@
 
 buildPythonPackage rec {
   pname = "eth-keys";
-  version = "0.7.0";
+  version = "0.8.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "ethereum";
     repo = "eth-keys";
     tag = "v${version}";
-    hash = "sha256-H/s/D4f4tqP/WTil9uLmFw2Do9sEjMWwEreQEooeszQ=";
+    hash = "sha256-mREmzckOddTUB6E/UIMNP+u520hDxAqLNQdbxqoisfI=";
   };
 
-  build-system = [ setuptools ];
+  build-system = [
+    setuptools
+    setuptools-scm
+  ];
 
   dependencies = [
     eth-typing
