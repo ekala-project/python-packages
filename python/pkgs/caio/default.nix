@@ -7,22 +7,15 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "caio";
-  version = "0.10.1";
+  version = "0.12.4";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "mosquito";
     repo = "caio";
     tag = finalAttrs.version;
-    hash = "sha256-IeyksrYpLMc9PJjpYeaOgLx26CeVMoR/3r2RX66ucDs=";
+    hash = "sha256-iXrShoaMK39z47y0p0jwQQbQw3iz4cIS49cy6+G8x0k=";
   };
-
-  postPatch = ''
-    substituteInPlace caio/version.py \
-      --replace-fail 'version_info = (0, 9, 25)' 'version_info = (${
-        lib.replaceString "." ", " finalAttrs.version
-      })'
-  '';
 
   build-system = [ setuptools ];
 
