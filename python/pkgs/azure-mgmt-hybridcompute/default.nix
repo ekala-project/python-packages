@@ -11,7 +11,7 @@
 
 buildPythonPackage rec {
   pname = "azure-mgmt-hybridcompute";
-  version = "9.1.0b2";
+  version = "10.0.0";
   format = "wheel";
 
   src = fetchPypi {
@@ -20,7 +20,7 @@ buildPythonPackage rec {
     format = "wheel";
     python = "py3";
     dist = "py3";
-    hash = "sha256-bKv4A6PjN6fMpyso0JqewADcKGOK1wXlULtkZpzrilY=";
+    hash = "sha256-XRCJM+DHVPOvhpOq4J6JjbPPkTBOuQ/9C9DxcTWCIWs=";
   };
 
   propagatedBuildInputs = [
