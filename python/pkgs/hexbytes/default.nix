@@ -3,6 +3,7 @@
   buildPythonPackage,
   fetchFromGitHub,
   setuptools,
+  setuptools-scm,
   eth-utils,
   hypothesis,
   pydantic,
@@ -10,17 +11,20 @@
 
 buildPythonPackage rec {
   pname = "hexbytes";
-  version = "1.3.1";
+  version = "2.0.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "ethereum";
     repo = "hexbytes";
     tag = "v${version}";
-    hash = "sha256-xYXxlyVGdsksxZJtSpz1V3pj4NL7IzX0gaQeCoiHr8g=";
+    hash = "sha256-R0Ucrq/E+g5IaiGTNllslwQOQxgNcSGLcyt6+t14uPM=";
   };
 
-  build-system = [ setuptools ];
+  build-system = [
+    setuptools
+    setuptools-scm
+  ];
   pythonImportsCheck = [ "hexbytes" ];
 
   meta = {
