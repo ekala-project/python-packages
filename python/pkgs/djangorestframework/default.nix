@@ -26,14 +26,14 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "djangorestframework";
-  version = "3.17.1";
+  version = "3.18.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "encode";
     repo = "django-rest-framework";
     tag = finalAttrs.version;
-    hash = "sha256-hDAtICtVFeEXRgR5Shb0IdVlLkpf/TBDWw+2cOLJTfw=";
+    hash = "sha256-uepGCXZjXCZLCrQjcg06SSa3idiXwPenip5YvyVMl1A=";
   };
 
   build-system = [ setuptools ];
