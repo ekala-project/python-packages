@@ -3,22 +3,28 @@
   aiohttp,
   buildPythonPackage,
   fetchFromGitHub,
-  poetry-core,
+  setuptools,
 }:
 
 buildPythonPackage rec {
   pname = "electrickiwi-api";
-  version = "0.9.14";
+  version = "0.10.1";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "mikey0000";
     repo = "EK-API";
     tag = "v${version}";
-    hash = "sha256-UXweOz5olwx3ZI2M7eI1n729tqfLiWszV2zTWbrA9CM=";
+    hash = "sha256-3wT33oEbvfEdsNXqzFLPsn+ZfA/Qr3EwgZPfuZfm7XY=";
   };
 
-  build-system = [ poetry-core ];
+  postPatch = ''
+    substituteInPlace pyproject.toml \
+      --replace-fail 'requires = ["uv_build>=0.8.0,<0.9.0"]' 'requires = ["setuptools"]' \
+      --replace-fail 'build-backend = "uv_build"' 'build-backend = "setuptools.build_meta"'
+  '';
+
+  build-system = [ setuptools ];
 
   dependencies = [ aiohttp ];
 
