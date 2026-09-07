@@ -15,14 +15,14 @@
 
 buildPythonPackage rec {
   pname = "dipy";
-  version = "1.11.0";
+  version = "1.12.1";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "dipy";
     repo = "dipy";
     tag = version;
-    hash = "sha256-vqjd5gd9B630pv6H4MvXnlPwlEhm1o7MbwYD0J7D24o=";
+    hash = "sha256-4DQswr46du49h5v+mvhkjH4s3WFDJ2LwmURsoM9ICz8=";
   };
 
   build-system = [
@@ -31,6 +31,8 @@ buildPythonPackage rec {
     numpy
     packaging
   ];
+
+  pythonRelaxDeps = [ "trx-python" ];
 
   dependencies = [
     numpy
