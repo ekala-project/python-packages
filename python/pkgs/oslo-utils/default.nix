@@ -14,19 +14,20 @@
   psutil,
   pyparsing,
   pytz,
+  pyyaml,
   libxcrypt-legacy,
   stdenv,
 }:
 
 buildPythonPackage rec {
   pname = "oslo-utils";
-  version = "10.0.1";
+  version = "10.2.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "oslo_utils";
     inherit version;
-    hash = "sha256-Ib/Cm7TBzZr7TvdB+445Ro+lSF5gcX9PkPOtPc6KHyI=";
+    hash = "sha256-uoOd6iwetBXj7hUcTMaI9S4oP1m8H3fMhnchkKizQlk=";
   };
 
   postPatch =
@@ -56,6 +57,7 @@ buildPythonPackage rec {
     psutil
     pyparsing
     pytz
+    pyyaml
   ];
 
   # disabled tests:
