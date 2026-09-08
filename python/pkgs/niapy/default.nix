@@ -6,24 +6,30 @@
   numpy,
   openpyxl,
   pandas,
-  poetry-core,
+  setuptools,
   pytestCheckHook,
   pytest-xdist,
 }:
 
 buildPythonPackage rec {
   pname = "niapy";
-  version = "2.6.1";
+  version = "2.7.1";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "NiaOrg";
     repo = "NiaPy";
     tag = "v${version}";
-    hash = "sha256-5Cxxug/FyucU+MkWXMtH43AembfZ/kj5r8nId5664z8=";
+    hash = "sha256-g3B/jknzMIYP8VJayPktnYwq2WVA2KaCRS/ZzVwc88Q=";
   };
 
-  build-system = [ poetry-core ];
+  postPatch = ''
+    substituteInPlace pyproject.toml \
+      --replace-fail 'requires = ["uv_build>=0.9.17,<0.10.0"]' 'requires = ["setuptools"]' \
+      --replace-fail 'build-backend = "uv_build"' 'build-backend = "setuptools.build_meta"'
+  '';
+
+  build-system = [ setuptools ];
 
   dependencies = [
     matplotlib
