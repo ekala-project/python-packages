@@ -15,29 +15,18 @@
 
 buildPythonPackage rec {
   pname = "pip-tools";
-  version = "7.5.3";
+  version = "7.6.1";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "jazzband";
     repo = "pip-tools";
     tag = "v${version}";
-    hash = "sha256-MkYGD/ropw+MLLrk4gRZZguOv5extzNNXwTy6NQnCu0=";
+    hash = "sha256-gh1oe4Ghz492LofyT2ZLRBuQ9DKn+tYVc2EpkWJ4bfc=";
   };
 
   patches = [
     ./fix-setup-py-bad-syntax-detection.patch
-
-    (fetchpatch {
-      name = "pip-26-compat.patch";
-      url = "https://github.com/jazzband/pip-tools/commit/cbe3c692f8977270e7ae6061c8159450a73c13fe.patch";
-      excludes = [
-        "changelog.d/2379.feature.md"
-        "pyproject.toml"
-        "tox.ini"
-      ];
-      hash = "sha256-wDma1FBnWnrRln0o7HaizMIkoQey6VdQzGh+q84cHxE=";
-    })
   ];
 
   build-system = [ setuptools-scm ];
