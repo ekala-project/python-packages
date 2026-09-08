@@ -2,7 +2,7 @@
   buildPythonPackage,
   fetchFromGitHub,
   lib,
-  uv-build,
+  hatchling,
   httpx,
   pydantic,
   yarl,
@@ -15,19 +15,19 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "postgrest";
-  version = "2.29.0";
+  version = "2.31.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "supabase";
     repo = "supabase-py";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-LaSlAYFvx/HHdfmc9J+KScVQ9JFGS98Yfihzn8F7t3g=";
+    hash = "sha256-cdsxB42X9nJeDElOI20jaWRKOrpNYwY2sB4vty8yYUM=";
   };
 
   sourceRoot = "${finalAttrs.src.name}/src/postgrest";
 
-  build-system = [ uv-build ];
+  build-system = [ hatchling ];
 
   dependencies = [
     httpx
@@ -40,7 +40,8 @@ buildPythonPackage (finalAttrs: {
 
   postPatch = ''
     substituteInPlace pyproject.toml \
-      --replace-fail 'uv_build>=0.8.3,<0.9.0' 'uv_build>=0.8.3'
+      --replace-fail 'requires = ["uv_build>=0.8.3,<0.9.0"]' 'requires = ["hatchling"]' \
+      --replace-fail 'build-backend = "uv_build"' 'build-backend = "hatchling.build"'
   '';
   pythonImportsCheck = [ "postgrest" ];
   meta = {
