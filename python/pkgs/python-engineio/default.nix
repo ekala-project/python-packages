@@ -8,13 +8,13 @@
 
 buildPythonPackage rec {
   pname = "python-engineio";
-  version = "4.13.3";
+  version = "4.14.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "python_engineio";
     inherit version;
-    hash = "sha256-Vyt3g+NB/tIe28fOopfM03ja15Jl/d6WqkZkQgp8Bsk=";
+    hash = "sha256-6qHjhrr5wseVnu9/nZFlxeqRDFs5L1MW540p7Qc8tD0=";
   };
 
   build-system = [ setuptools ];
