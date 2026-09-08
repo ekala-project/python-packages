@@ -8,12 +8,12 @@
 
 buildPythonPackage rec {
   pname = "shtab";
-  version = "1.8.1";
+  version = "1.12.1";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-Ptr4V7oWSg17tk6VjquNZ1bVruOUnH82p+d5vxzjuJc=";
+    hash = "sha256-BjczhyOo/AjtHC/YJthDIimSRknCbjJHu0jFPWDKO/k=";
   };
 
   build-system = [
