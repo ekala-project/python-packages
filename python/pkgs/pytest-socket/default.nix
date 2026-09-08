@@ -2,23 +2,29 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
-  uv-build,
+  hatchling,
   pytest,
 }:
 
 buildPythonPackage rec {
   pname = "pytest-socket";
-  version = "0.8.0";
+  version = "0.8.1";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "miketheman";
     repo = "pytest-socket";
     tag = version;
-    hash = "sha256-UFUh0FhIEakAY1NZQD6hFY7wnnPs2NjjsfionIg0jRs=";
+    hash = "sha256-Z8aCucbYR6kIgrtZlITPjElwBiIW7DhAk5oTnuiEwWQ=";
   };
 
-  nativeBuildInputs = [ uv-build ];
+  postPatch = ''
+    substituteInPlace pyproject.toml \
+      --replace-fail 'requires = ["uv_build>=0.7.20,<0.13.0"]' 'requires = ["hatchling"]' \
+      --replace-fail 'build-backend = "uv_build"' 'build-backend = "hatchling.build"'
+  '';
+
+  build-system = [ hatchling ];
 
   buildInputs = [ pytest ];
 
