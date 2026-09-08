@@ -10,13 +10,13 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "qpdf";
-  version = "12.3.2";
+  version = "12.4.1";
 
   src = fetchFromGitHub {
     owner = "qpdf";
     repo = "qpdf";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-qHc9v3VYrxbOhpsPbaaO7foumI2AdeFN9Z9Zbs4XtKg=";
+    hash = "sha256-OGFSr/fdfOz6nCLbYfNNTgd5vuehADyFUh4o28Q3j3U=";
   };
 
   outputs = [
@@ -46,6 +46,10 @@ stdenv.mkDerivation (finalAttrs: {
     patchShebangs qtest/bin/qtest-driver
     patchShebangs run-qtest
     substituteInPlace CMakeLists.txt --replace "run-qtest" "run-qtest --top $src --code $src --bin $out"
+
+    # completion test requires a functional bash completion environment
+    # which is not available in the Nix build sandbox
+    rm qpdf/qtest/completion.test
   '';
 
   doCheck = true;
