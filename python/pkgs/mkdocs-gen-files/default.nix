@@ -8,15 +8,20 @@
 
 buildPythonPackage rec {
   pname = "mkdocs-gen-files";
-  version = "0.6.0";
+  version = "0.6.1";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "oprypin";
     repo = "mkdocs-gen-files";
     tag = "v${version}";
-    hash = "sha256-9mOLRZZugaGCWR/Ms9z8CTvDp8QgAiGcKqiB/LGTApk=";
+    hash = "sha256-2TMQHn6eP+RMjtJ4o/6G8k1TEIlGgr7U/Fim14MJELg=";
   };
+
+  postPatch = ''
+    substituteInPlace pyproject.toml \
+      --replace-fail '"properdocs >=' '#"properdocs >='
+  '';
 
   build-system = [
     hatchling
