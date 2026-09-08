@@ -34,15 +34,17 @@
 
 buildPythonPackage rec {
   pname = "snowflake-connector-python";
-  version = "4.3.0";
+  version = "4.7.3";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "snowflakedb";
     repo = "snowflake-connector-python";
     tag = "v${version}";
-    hash = "sha256-bJK6U5lomcPMGeKEmv+9m+uM5+3GJKKUA3dEwP/ynVo=";
+    hash = "sha256-Th2fMBia+367o1QM0odt9rC/j9ta56b58VO+VNP9MEc=";
   };
+
+  env.SNOWFLAKE_NO_BOTO = "true";
 
   build-system = [
     cython
