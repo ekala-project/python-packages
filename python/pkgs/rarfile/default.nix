@@ -7,12 +7,12 @@
 
 buildPythonPackage rec {
   pname = "rarfile";
-  version = "4.4";
+  version = "4.5";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-t9KdZxIjzcgOi5kt8hLRUq2I5slh1EJsP7L+/o3Yb98=";
+    hash = "sha256-dCXQr6GA8AktuQOrsVJqEws2hYmAqtkLNpT0jkFCAVU=";
   };
 
   build-system = [ setuptools ];
