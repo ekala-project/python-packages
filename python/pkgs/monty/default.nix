@@ -7,6 +7,7 @@
   setuptools-scm,
   # dependencies
   msgpack,
+  numpy,
   ruamel-yaml,
   # optional-dependencies
   coverage,
@@ -28,14 +29,14 @@
 
 buildPythonPackage rec {
   pname = "monty";
-  version = "2025.3.3";
+  version = "2026.7.16";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "materialsvirtuallab";
     repo = "monty";
     tag = "v${version}";
-    hash = "sha256-3UoACKJtPm2BrkJP8z7BFrh3baRyL/S3VwCG3K8AQn0=";
+    hash = "sha256-x5FNw7E3rtrgCWVhMsBpnO+uwu+mB3ELNFdd33+uFds=";
   };
 
   build-system = [
@@ -45,6 +46,7 @@ buildPythonPackage rec {
 
   dependencies = [
     msgpack
+    numpy
     ruamel-yaml
   ];
 
