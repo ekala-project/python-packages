@@ -10,14 +10,14 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "python-backoff";
-  version = "2.3.1";
+  version = "3.0.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "python-backoff";
     repo = "backoff";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-Os20Gz+uWaEdUPPF9/tT7LNxbmN0W/tuzVZa3H+ZG2A=";
+    hash = "sha256-y/L27SVOktR1FemVrCgrY1s28t8OxZ7rKqOB7zz8TC8=";
   };
 
   build-system = [ hatchling ];
