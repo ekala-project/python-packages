@@ -8,15 +8,20 @@
 
 buildPythonPackage rec {
   pname = "mkdocs-literate-nav";
-  version = "0.6.2";
+  version = "0.6.3";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "oprypin";
     repo = "mkdocs-literate-nav";
     tag = "v${version}";
-    hash = "sha256-WP8VqiD/Kqswh1TWhSBsNfxn3gxKlRlg6RvGayAdQto=";
+    hash = "sha256-YsWZhMGmOaZjJpQSPddW3TlBCieefQ42Tne85fdP1t0=";
   };
+
+  postPatch = ''
+    substituteInPlace pyproject.toml \
+      --replace-fail '"properdocs >=' '#"properdocs >='
+  '';
 
   build-system = [
     hatchling
