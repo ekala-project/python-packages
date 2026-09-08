@@ -17,13 +17,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "python-socks";
-  version = "2.8.1";
+  version = "3.0.0";
   pyproject = true;
   src = fetchFromGitHub {
     owner = "romis2012";
     repo = "python-socks";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-Eu4xeBZbZvAGfFArMiUlUQQa4yywKWj+azv+OHiKJfU=";
+    hash = "sha256-Pp5059O2k4Bd/+s5ZrOUR6d/+t5T5xeMTqTQ2f4N3RM=";
   };
 
   build-system = [ setuptools ];
