@@ -7,14 +7,14 @@
 
 buildPythonPackage rec {
   pname = "mmh3";
-  version = "5.2.1";
+  version = "5.3.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "hajimes";
     repo = "mmh3";
     tag = "v${version}";
-    hash = "sha256-5a9r2nEuMeVPAEPy7NkG/RNeSsKtKSy2IjEbhBWTaDc=";
+    hash = "sha256-RvVsPOB104XovIGP2Fz2l8IIYHbkZYPX8PnA/jSbxCI=";
   };
 
   build-system = [ setuptools ];
