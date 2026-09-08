@@ -3,27 +3,38 @@
   fetchFromGitHub,
   buildPythonPackage,
   pyyaml,
-  six,
-  pytest,
-  pyaml,
+  setuptools,
 }:
 
 buildPythonPackage rec {
   pname = "python-frontmatter";
-  version = "1.1.0";
-  format = "setuptools";
+  version = "1.3.0";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "eyeseast";
     repo = "python-frontmatter";
     tag = "v${version}";
-    sha256 = "sha256-Sr0RbNVk87Zu01U7nkuPUSnl1bm6G72EZDP/eDn099s=";
+    sha256 = "sha256-b/ruWPPiKvDzMjcVhxiBtnAaMNWnWvy1v8GZxGeibyY=";
   };
 
-  propagatedBuildInputs = [
+  postPatch = ''
+    substituteInPlace pyproject.toml \
+      --replace-fail 'requires = ["uv_build>=0.11.15,<0.12"]' 'requires = ["setuptools"]' \
+      --replace-fail 'build-backend = "uv_build"' 'build-backend = "setuptools.build_meta"'
+
+    # uv_build had module-name = "frontmatter"; tell setuptools where to find it
+    cat >> pyproject.toml <<'EOF'
+
+[tool.setuptools.packages.find]
+include = ["frontmatter*"]
+EOF
+  '';
+
+  build-system = [ setuptools ];
+
+  dependencies = [
     pyyaml
-    pyaml # yes, it's needed
-    six
   ];
 
   # tries to import test.test, which conflicts with module
