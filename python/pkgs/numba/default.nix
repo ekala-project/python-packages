@@ -13,7 +13,7 @@
 }:
 
 buildPythonPackage (finalAttrs: {
-  version = "0.66.0";
+  version = "0.67.0";
   pname = "numba";
   pyproject = true;
 
@@ -29,18 +29,12 @@ buildPythonPackage (finalAttrs: {
     postFetch = ''
       sed -i 's/git_refnames = "[^"]*"/git_refnames = " (tag: ${finalAttrs.src.tag})"/' $out/numba/_version.py
     '';
-    hash = "sha256-qkljZWvd+1mwPm4okQBW8w0qCTQnEigM6QkZHN2iwyk=";
+    hash = "sha256-xQFJSO9kcRwyNx/G/ALQXZWE6+4wL1Dz+5kIDXK5Eow=";
   };
 
-  patches = [
-    ./numpy2.5.patch
-  ];
-
   postPatch = ''
-    substituteInPlace setup.py \
-      --replace-fail 'max_numpy_run_version = "2.5"' 'max_numpy_run_version = "2.6"'
     substituteInPlace numba/__init__.py \
-      --replace-fail "(2, 4)" "(2, 6)"
+      --replace-fail "(2, 5)" "(2, 6)"
   '';
 
   build-system = [
