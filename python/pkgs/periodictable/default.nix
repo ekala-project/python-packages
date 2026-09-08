@@ -9,14 +9,14 @@
 
 buildPythonPackage rec {
   pname = "periodictable";
-  version = "2.0.2";
+  version = "2.1.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "python-periodictable";
     repo = "periodictable";
     tag = "v${version}";
-    hash = "sha256-nI6hiLnqmVXT06pPkHCBEMTxZhfnZJqSImW3V9mJ4+8=";
+    hash = "sha256-5Ydsntz/VnRwktnBEMfO23Malpv5u1ycBiATsxBODdc=";
   };
 
   build-system = [ setuptools ];
