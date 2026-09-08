@@ -28,14 +28,14 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "optuna";
-  version = "4.9.0";
+  version = "5.0.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "optuna";
     repo = "optuna";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-BoRy5LSzMl9w5KS9BW1uHUTcEj1ZyYp4nWykPgq6ckI=";
+    hash = "sha256-0x1xbljBPW8tZNS+XkLls9IuxAjEBPENsKc5ybKDpgY=";
   };
 
   build-system = [
