@@ -4,25 +4,30 @@
   fetchPypi,
   setuptools,
   setuptools-scm,
-  six,
 }:
 
 buildPythonPackage rec {
   pname = "pyvcd";
-  version = "0.4.1";
+  version = "0.5.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-3GJ16Vp5SbgjYIarLm0Dr+3nNEEkPsUQnJ6okHfz1pY=";
+    hash = "sha256-luPHuUCeY/WOtLXCKwF/nzQS3b38c0zsLh361cKag98=";
   };
+
+  postPatch = ''
+    substituteInPlace pyproject.toml \
+      --replace-fail 'requires = ["uv_build>=0.9.13,<1.0"]' 'requires = ["setuptools", "setuptools-scm"]' \
+      --replace-fail 'build-backend = "uv_build"' 'build-backend = "setuptools.build_meta"'
+  '';
 
   build-system = [
     setuptools
     setuptools-scm
   ];
 
-  dependencies = [ six ];
+  dependencies = [ ];
 
   pythonImportsCheck = [ "vcd" ];
 
