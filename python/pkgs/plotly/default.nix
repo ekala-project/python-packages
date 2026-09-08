@@ -16,23 +16,15 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "plotly";
-  version = "6.7.0";
+  version = "7.0.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "plotly";
     repo = "plotly.py";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-gykhl1aBgKCkJVv507UJk4xdYaruV/aU+JLYmvyFYbY=";
+    hash = "sha256-UzKH0eVBCaR015bFeDCPBXiMI1/R/EAl7tf5uwRqw2w=";
   };
-
-  patches = [
-    ./numpy-2.4-in1d.patch
-  ];
-
-  postPatch = ''
-    rm plotly/conftest.py
-  '';
 
   env.SKIP_NPM = true;
 
