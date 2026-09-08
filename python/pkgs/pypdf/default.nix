@@ -14,7 +14,7 @@
 
 buildPythonPackage rec {
   pname = "pypdf";
-  version = "6.14.2";
+  version = "6.18.0";
   pyproject = true;
 
   src = fetchFromGitHub {
@@ -22,7 +22,7 @@ buildPythonPackage rec {
     repo = "pypdf";
     tag = version;
     fetchSubmodules = true;
-    hash = "sha256-h7JuQTTUZ5tWoAhixjp+grDVA3JQ8PbHcMBzIyCMOJU=";
+    hash = "sha256-If4wdvBABg+ixRaw3oHpisObsmTdbLQlrQEJt+NDrI0=";
   };
 
   postPatch = ''
