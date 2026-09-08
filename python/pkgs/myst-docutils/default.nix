@@ -20,17 +20,19 @@
 
 buildPythonPackage rec {
   pname = "myst-docutils";
-  version = "5.0.0";
+  version = "5.1.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "executablebooks";
     repo = "MyST-Parser";
     tag = "v${version}";
-    hash = "sha256-0lGejdGVVvZar3sPBbvThXzJML7PcR5+shyDHTTtVEY=";
+    hash = "sha256-fZ0ZrzGKQhH3h2BHaAz6gpiMLmgvkLOl4Gu2qROKQ8U=";
   };
 
   build-system = [ flit-core ];
+
+  pythonRelaxDeps = [ "docutils" ];
 
   dependencies = [
     docutils
