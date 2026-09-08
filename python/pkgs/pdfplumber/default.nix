@@ -11,14 +11,14 @@
 
 buildPythonPackage rec {
   pname = "pdfplumber";
-  version = "0.11.9";
+  version = "0.11.10";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "jsvine";
     repo = "pdfplumber";
     tag = "v${version}";
-    hash = "sha256-vOtr+9qRpd+VXUpVL2whflbA7Gchd4yuA47FBl5BYfE=";
+    hash = "sha256-0fdH8SKU8ude43x7tsWxeGFQeSCYrTGTELG6SimloLQ=";
   };
 
   build-system = [ setuptools ];
@@ -28,7 +28,7 @@ buildPythonPackage rec {
     pillow
     pypdfium2
   ];
-  pythonRelaxDeps = [ "pdfminer.six" ];
+  pythonRelaxDeps = [ "pdfminer.six" "pypdfium2" ];
   pythonImportsCheck = [ "pdfplumber" ];
 
   meta = {
