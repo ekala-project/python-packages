@@ -8,12 +8,12 @@
 
 buildPythonPackage rec {
   pname = "screed";
-  version = "1.1.3";
+  version = "1.2.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-N+gWl8fbqVoFNVTltahq/zKXBeHPXfxee42lht7gcrg=";
+    hash = "sha256-Dk5q4fPDy0CXa7vCvn4ZGCFhZmbl94QGxAziy/0jqtc=";
   };
 
   build-system = [
@@ -23,7 +23,7 @@ buildPythonPackage rec {
 
   postPatch = ''
     substituteInPlace pyproject.toml \
-      --replace-fail '"setuptools_scm[toml] >= 4, <6",' '"setuptools_scm[toml] >= 4",' \
+      --replace-fail '"setuptools_scm[toml] >= 9, <10",' '"setuptools_scm[toml] >= 9",' \
       --replace-fail '"setuptools_scm_git_archive",' ""
   '';
 
