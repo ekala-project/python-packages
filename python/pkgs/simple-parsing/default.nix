@@ -26,14 +26,14 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "simple-parsing";
-  version = "0.1.8";
+  version = "0.1.9";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "lebrice";
     repo = "SimpleParsing";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-Nsr+I+BoVxockRGQAjG+ushRQ4CtWgkHrg5aVorSrvw=";
+    hash = "sha256-tSQgyxJ0INGQkmqRmzVgKwBd/JXr3OTecdNSfc9Nf94=";
   };
 
   build-system = [
