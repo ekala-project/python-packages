@@ -15,14 +15,14 @@
 
 buildPythonPackage rec {
   pname = "openapi-spec-validator";
-  version = "0.8.4";
+  version = "0.9.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "python-openapi";
     repo = "openapi-spec-validator";
     tag = version;
-    hash = "sha256-KY9mDnF/R2UO8WZ0WyBzpZQsVBxzxnTK6zyqvUb+hVw=";
+    hash = "sha256-ykcoSXXlhxmUpXx86mc8GT3UolmH/sjBpa5lEViwJrk=";
   };
 
   build-system = [ poetry-core ];
