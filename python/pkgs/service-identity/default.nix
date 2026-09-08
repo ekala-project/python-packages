@@ -17,14 +17,14 @@
 
 buildPythonPackage rec {
   pname = "service-identity";
-  version = "24.2.0";
+  version = "26.1.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "pyca";
     repo = "service-identity";
     tag = version;
-    hash = "sha256-onxCUWqGVeenLqB5lpUpj3jjxTM61ogXCQOGnDnClT4=";
+    hash = "sha256-ujH0RdsdvbNbQVhlRfLnKSj3LbLE4RVwlaEsMNZmuLA=";
   };
 
   build-system = [
