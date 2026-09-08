@@ -1,12 +1,13 @@
 {
   lib,
   buildPythonPackage,
+  cmake,
   cython,
-  distutils,
   fetchFromGitHub,
   greenlet,
   ipython,
   jinja2,
+  ninja,
   pkg-config,
   pkgconfig,
   pkgs,
@@ -14,31 +15,34 @@
   pytest-textual-snapshot,
   pythonOlder,
   rich,
-  setuptools,
+  scikit-build-core,
   stdenv,
   textual,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "memray";
-  version = "1.19.3";
+  version = "1.20.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "bloomberg";
     repo = "memray";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-A9XbVpuW/MlMNdFq5bbpg90GFh5c1aEWQOvGAOXyUgc=";
+    hash = "sha256-vllaJazm4sdQaJKd3FxiLl5JO8yWKvQnW2Lajhld37c=";
   };
 
+  dontUseCmakeConfigure = true;
+
   build-system = [
-    distutils
-    setuptools
+    cmake
+    cython
+    ninja
+    scikit-build-core
   ];
   nativeBuildInputs = [ pkg-config ];
 
   buildInputs = [
-    cython
     pkgs.libunwind
     pkgs.lz4
   ]
