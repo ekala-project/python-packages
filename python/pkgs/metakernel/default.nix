@@ -2,7 +2,7 @@
   lib,
   buildPythonPackage,
   fetchPypi,
-  hatchling,
+  poetry-core,
   ipykernel,
   jedi,
   jupyter-core,
@@ -11,15 +11,15 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "metakernel";
-  version = "0.32.0";
+  version = "1.0.7";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-AxmEtMBinBKchhYtJ72N8mTWmTv5Ya7HMP23H6zv3bw=";
+    hash = "sha256-SZoOOZ41Pg+0p04QXqKtKu2JoVBTopn1+pPAJ9chdDo=";
   };
 
-  build-system = [ hatchling ];
+  build-system = [ poetry-core ];
 
   dependencies = [
     ipykernel
