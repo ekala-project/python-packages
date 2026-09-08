@@ -7,12 +7,12 @@
 
 buildPythonPackage rec {
   pname = "pika";
-  version = "1.4.2";
+  version = "1.4.4";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-SNH1Apfna+T8eY/VIy1NUy16R1jlH3wK5sQAS5gIoms=";
+    hash = "sha256-jPyLM6XLFuczvWDP/KlzLA0ddh7NgKifNO198s041tY=";
   };
 
   build-system = [ setuptools ];
