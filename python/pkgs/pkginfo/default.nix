@@ -7,12 +7,12 @@
 
 buildPythonPackage rec {
   pname = "pkginfo";
-  version = "1.12.1.2";
+  version = "1.13";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-XNlXgkrDbxQCYJZOujxr5kQqg1m4xI9K35AhDzOgS3s=";
+    hash = "sha256-T3BHHGQ/cf6EoGIwwOM8XFsSozsv0hv/FN2u9al0rbE=";
   };
 
   build-system = [ setuptools ];
