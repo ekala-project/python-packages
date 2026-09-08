@@ -2,22 +2,22 @@
   lib,
   fetchPypi,
   buildPythonPackage,
-  setuptools,
+  hatchling,
   attrs,
   arpeggio,
 }:
 
 buildPythonPackage rec {
   pname = "parver";
-  version = "0.5";
+  version = "1.0.1";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-uf3h5ruc6fB+COnEvqjYglxeeOGKAFLQLgK/lRfrR3c=";
+    hash = "sha256-pY8SOrGijG93Oo8RMlicocXUMKLFsmEeD8b7Nm3xJiI=";
   };
 
-  build-system = [ setuptools ];
+  build-system = [ hatchling ];
 
   dependencies = [
     attrs
