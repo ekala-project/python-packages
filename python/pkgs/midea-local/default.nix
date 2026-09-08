@@ -12,18 +12,19 @@
   ifaddr,
   pycryptodome,
   platformdirs,
+  typing-extensions,
 }:
 
 buildPythonPackage rec {
   pname = "midea-local";
-  version = "6.8.0";
+  version = "11.0.1";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "midea-lan";
     repo = "midea-local";
     tag = "v${version}";
-    hash = "sha256-tJxSAjugFWvlpmLE7A7+wqsxM8RlgPQGE0fH7cdwxxI=";
+    hash = "sha256-9Yx3i/zZvVqZrlsbLxkWWFAITFnwOAaaiBoFfjaYbKw=";
   };
 
   build-system = [ setuptools ];
@@ -38,6 +39,7 @@ buildPythonPackage rec {
     ifaddr
     pycryptodome
     platformdirs
+    typing-extensions
   ];
 
   meta = {
