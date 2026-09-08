@@ -40,19 +40,19 @@
 
 buildPythonPackage rec {
   pname = "pandas";
-  version = "2.3.3";
+  version = "3.0.5";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "pandas-dev";
     repo = "pandas";
     tag = "v${version}";
-    hash = "sha256-jY1uM9HmJzoFk26ilbtzJnxAsQhmXS19r73JcFeFWRQ=";
+    hash = "sha256-6Oo6086DAmgONadGyNLg9RvtibsSlR0EJmjoKTbRtM0=";
   };
 
   postPatch = ''
     substituteInPlace pyproject.toml \
-      --replace-fail "numpy>=2.0" numpy
+      --replace-fail "numpy>=2.0.0,!=2.5.0" numpy
   '';
 
   build-system = [
