@@ -10,14 +10,14 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "nocasedict";
-  version = "2.2.0";
+  version = "2.2.1";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "pywbem";
     repo = "nocasedict";
     tag = finalAttrs.version;
-    hash = "sha256-e3APYlmeoby0CGoEh4g6ZK27DwWi4EZdpwsRORxly+w=";
+    hash = "sha256-zrFmADdfa3QL4o7Idkp3tDHIihQfQj8zxtiox/qeP9g=";
   };
 
   build-system = [
