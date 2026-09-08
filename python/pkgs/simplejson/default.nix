@@ -6,14 +6,14 @@
 
 buildPythonPackage rec {
   pname = "simplejson";
-  version = "4.1.1";
+  version = "4.1.2";
   format = "setuptools";
 
   src = fetchFromGitHub {
     owner = "simplejson";
     repo = "simplejson";
     tag = "v${version}";
-    hash = "sha256-t7DU6NquHUy6WntmburFcYckUFXPcL15wh49zLc4eXo=";
+    hash = "sha256-fiuz78r0z2ZM2vVIPxhMwnJGiZGURwr1yGSe/uLgeCs=";
   };
 
   pythonImportsCheck = [ "simplejson" ];
