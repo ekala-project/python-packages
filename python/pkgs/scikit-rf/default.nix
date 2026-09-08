@@ -19,18 +19,19 @@
   nbsphinx,
   openpyxl,
   setuptools,
+  typing-extensions,
 }:
 
 buildPythonPackage rec {
   pname = "scikit-rf";
-  version = "1.9.0";
+  version = "2.1.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "scikit-rf";
     repo = "scikit-rf";
     tag = "v${version}";
-    hash = "sha256-iOKTQOOJTsj6YIQaJVWFcp9HdUEj43aytpo7VzItxr8=";
+    hash = "sha256-S+vp+Pkt2tExS0UNrOAxM3thc32OjPivXmwoe+UhrEg=";
   };
 
   build-system = [ setuptools ];
@@ -39,6 +40,7 @@ buildPythonPackage rec {
     numpy
     scipy
     pandas
+    typing-extensions
   ];
 
   pythonRemoveDeps = [ "pre-commit" ];
