@@ -5,20 +5,22 @@
   setuptools,
   argon2-cffi,
   construct,
+  importlib-metadata,
   lxml,
   pycryptodomex,
+  pyotp,
 }:
 
 buildPythonPackage rec {
   pname = "pykeepass";
-  version = "4.1.1.post1";
+  version = "4.2.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "libkeepass";
     repo = "pykeepass";
     tag = "v${version}";
-    hash = "sha256-DeEz3zrUK3cXIvMK/32Zn3FPiNsenhpAb17Zgel826s=";
+    hash = "sha256-MGlkpnWTBO7m3u1v8yZiKMtXnEv+rsy6+J1mJILdx0I=";
   };
 
   build-system = [ setuptools ];
@@ -26,8 +28,10 @@ buildPythonPackage rec {
   dependencies = [
     argon2-cffi
     construct
+    importlib-metadata
     lxml
     pycryptodomex
+    pyotp
   ];
 
   propagatedNativeBuildInputs = [ argon2-cffi ];
