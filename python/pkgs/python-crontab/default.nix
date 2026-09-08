@@ -12,13 +12,13 @@
 
 buildPythonPackage rec {
   pname = "python-crontab";
-  version = "3.3.0";
+  version = "3.4.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "python_crontab";
     inherit version;
-    hash = "sha256-AHyK7mjd3z4E7E3OD6wSS5O9aL50cPyV0qlhehXeKRs=";
+    hash = "sha256-0rWtkfemQdd0Zht/O6UiWP1oJzhiyIcT9MwJK6YU5wc=";
   };
 
   build-system = [ setuptools ];
