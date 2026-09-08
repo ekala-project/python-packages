@@ -1,5 +1,6 @@
 {
   lib,
+  abseil-cpp,
   fetchFromGitHub,
   stdenv,
   cmake,
@@ -7,19 +8,21 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "sentencepiece";
-  version = "0.2.1";
+  version = "0.2.2";
 
   src = fetchFromGitHub {
     owner = "google";
     repo = "sentencepiece";
     tag = "v${finalAttrs.version}";
-    sha256 = "sha256-q0JgMxoD9PLqr6zKmOdrK2A+9RXVDub6xy7NOapS+vs=";
+    sha256 = "sha256-yjTLC5qnREOOpMo0UdDWZpuGdJH6bPhCKyJoetZD3lA=";
   };
 
   nativeBuildInputs = [
     cmake
     cmake.configurePhaseHook
   ];
+
+  buildInputs = [ abseil-cpp ];
 
   outputs = [
     "bin"
@@ -32,11 +35,16 @@ stdenv.mkDerivation (finalAttrs: {
     substituteInPlace CMakeLists.txt \
       --replace '\$'{exec_prefix}/'$'{CMAKE_INSTALL_LIBDIR} '$'{CMAKE_INSTALL_FULL_LIBDIR} \
       --replace '\$'{prefix}/'$'{CMAKE_INSTALL_INCLUDEDIR} '$'{CMAKE_INSTALL_FULL_INCLUDEDIR}
+
+    # Make third_party writable so cmake can create the absl symlink
+    chmod +w third_party
   '';
 
-  # On Darwin, non-static build segfaults on python module import.
-  # See: https://github.com/NixOS/nixpkgs/issues/466092
-  cmakeFlags = lib.optionals stdenv.hostPlatform.isDarwin [
+  cmakeFlags = [
+    "-DSPM_ABSL_PROVIDER=package"
+  ] ++ lib.optionals stdenv.hostPlatform.isDarwin [
+    # On Darwin, non-static build segfaults on python module import.
+    # See: https://github.com/NixOS/nixpkgs/issues/466092
     "-DSPM_ENABLE_SHARED=OFF"
   ];
 
