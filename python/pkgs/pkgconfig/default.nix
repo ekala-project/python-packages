@@ -8,7 +8,7 @@
 
 buildPythonPackage rec {
   pname = "pkgconfig";
-  version = "1.5.5";
+  version = "1.6.0";
   pyproject = true;
 
   inherit (pkg-config)
@@ -23,14 +23,14 @@ buildPythonPackage rec {
     owner = "matze";
     repo = "pkgconfig";
     rev = "v${version}";
-    hash = "sha256-uuLUGRNLCR3NS9g6OPCI+qG7tPWsLhI3OE5WmSI3vm8=";
+    hash = "sha256-Glla/tg83Vd2VWvUnCPrcncS73vMhqaGpo+AviR8jnY=";
   };
 
   postPatch = ''
-    substituteInPlace pkgconfig/pkgconfig.py \
+    substituteInPlace src/pkgconfig/pkgconfig.py \
       --replace "pkg_config_exe = os.environ.get('PKG_CONFIG', None) or 'pkg-config'" "pkg_config_exe = '${pkg-config}/bin/${pkg-config.targetPrefix}pkg-config'"
 
-    substituteInPlace data/fake-openssl.pc \
+    substituteInPlace tests/data/fake-openssl.pc \
       --replace "Requires: libssl libcrypto" ""
   '';
 
