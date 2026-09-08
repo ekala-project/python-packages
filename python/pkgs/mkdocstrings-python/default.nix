@@ -3,6 +3,7 @@
   buildPythonPackage,
   fetchFromGitHub,
   griffe,
+  griffelib,
   mkdocs-autorefs,
   mkdocstrings,
   pdm-backend,
@@ -10,20 +11,21 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "mkdocstrings-python";
-  version = "2.0.2";
+  version = "2.0.8";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "mkdocstrings";
     repo = "python";
     tag = finalAttrs.version;
-    hash = "sha256-MCR304sOqlS4azZOoNa4klITDdr+bD8N6wEZBuHhZms=";
+    hash = "sha256-k2SxIrwN1f1TNg7zu8Q/UUZOYNpIljTnVbfNOp+GbSg=";
   };
 
   build-system = [ pdm-backend ];
 
   dependencies = [
     griffe
+    griffelib
     mkdocs-autorefs
     mkdocstrings
   ];
