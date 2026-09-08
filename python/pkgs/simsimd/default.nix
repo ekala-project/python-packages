@@ -10,14 +10,14 @@
 
 buildPythonPackage rec {
   pname = "simsimd";
-  version = "6.5.16";
+  version = "7.8.2";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "ashvardanian";
     repo = "SimSIMD";
     tag = "v${version}";
-    hash = "sha256-J4lxmsIgzBhG2MSu2LPDY/5IKTNWEG0fDX1EI4NgLB0=";
+    hash = "sha256-Wn1qpPKdbWUJ5Gy4hnX9XcEneFvgrijGuI+v1F9+9EE=";
   };
 
   build-system = [
@@ -25,7 +25,7 @@ buildPythonPackage rec {
   ];
 
   pythonImportsCheck = [
-    "simsimd"
+    "numkong"
   ];
   meta = {
     description = "Portable mixed-precision BLAS-like vector math library for x86 and ARM";
