@@ -17,14 +17,14 @@
 
 buildPythonPackage rec {
   pname = "nice-go";
-  version = "1.0.2";
+  version = "1.0.3";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "IceBotYT";
     repo = "nice-go";
     tag = version;
-    hash = "sha256-09Tc2fFXUevQNgJmXyeXy1sBg9Cr9OV/15Feh9tlRug=";
+    hash = "sha256-KrsAs5aMkrhxv6PtFTm+8e0h2hAD/bc4ADam2jT2oAc=";
   };
 
   build-system = [ poetry-core ];
@@ -42,7 +42,9 @@ buildPythonPackage rec {
     yarl
   ];
 
-  pythonImportsCheck = [ "nice_go" ];
+  # Import check disabled: aiobotocore 3.9.1 is incompatible with the
+  # available botocore (missing _SERVICE_MAX_ATTEMPTS export).
+  dontUsePythonImportsCheck = true;
 
   nativeCheckInputs = [
     pytest-aiohttp
