@@ -9,13 +9,13 @@
 
 buildPythonPackage rec {
   pname = "sigstore-protobuf-specs";
-  version = "0.5.0";
+  version = "0.5.2";
   pyproject = true;
 
   src = fetchPypi {
     pname = "sigstore_protobuf_specs";
     inherit version;
-    hash = "sha256-zvnrMrLGwlHeNuIoWkCq8glIJ+rhifXngE10jMw9W4E=";
+    hash = "sha256-oJYdfjYe38YdCp+ylVcG0T2p3rkoWCpZ2q40sIR3XJM=";
   };
 
   nativeBuildInputs = [ flit-core ];
