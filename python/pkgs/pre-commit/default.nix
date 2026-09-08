@@ -17,14 +17,14 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "pre-commit";
-  version = "4.6.1";
+  version = "4.6.2";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "pre-commit";
     repo = "pre-commit";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-28VtAJ+wRBk7Vl2C3siTzMQWtZmDHsUYevLU9zzcjZE=";
+    hash = "sha256-aCEN9dVz/3lB2gy7U+6dVj3jSM7cmVsstOp+LHvYRsU=";
   };
 
   build-system = [
