@@ -4,24 +4,22 @@
   buildPythonPackage,
   setuptools,
   beautifulsoup4,
-  lxml,
 }:
 
 buildPythonPackage rec {
   pname = "micawber";
-  version = "0.7.0";
+  version = "0.8.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-q5xZx1ac/Eh902fcTtoT45S6UhbhnQLxhxrFbQoaGUQ=";
+    hash = "sha256-3u2qkRfFbH2AAwrFVm/cW1Kz62qfryuqaUCIltkJDSg=";
   };
 
   build-system = [ setuptools ];
 
   dependencies = [
     beautifulsoup4
-    lxml
   ];
 
   pythonImportsCheck = [ "micawber" ];
