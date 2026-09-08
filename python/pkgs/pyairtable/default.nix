@@ -7,24 +7,19 @@
   inflection,
   pydantic,
   requests,
+  typing-extensions,
   urllib3,
   click,
-
-  pytest,
-  pytest-cov-stub,
-  mock,
-  requests-mock,
-  tox,
 }:
 
 buildPythonPackage rec {
   pname = "pyairtable";
-  version = "3.4.0";
+  version = "3.4.2";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-umABkxSJSMEACenkRJSRkJp9qLqUvIv6r4ZGsO6MA8o=";
+    hash = "sha256-apF01DgAlmZgVH4H0Ac2s6D973W1CHt27oug6AnAQu4=";
   };
 
   build-system = [
@@ -32,10 +27,10 @@ buildPythonPackage rec {
   ];
 
   dependencies = [
-    setuptools
     inflection
     pydantic
     requests
+    typing-extensions
     urllib3
     click
   ];
