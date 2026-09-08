@@ -8,7 +8,7 @@
 
 buildPythonPackage rec {
   pname = "mysqlclient";
-  version = "2.2.7";
+  version = "2.2.8";
   format = "setuptools";
 
   nativeBuildInputs = [ pkg-config ];
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   # Tests need a MySQL database
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-JK4itZQW1fzOfpnJ03VINQtFZbqsgvleFJysbOQWOEU=";
+    hash = "sha256-jtIMVhWpFdpFG7MIx9AwZkik/ZooCbqVyZJpAAYwYZk=";
   };
 
   meta = {
