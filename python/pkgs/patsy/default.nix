@@ -9,14 +9,14 @@
 
 buildPythonPackage rec {
   pname = "patsy";
-  version = "1.0.2";
+  version = "1.0.3";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "pydata";
     repo = "patsy";
     tag = "v${version}";
-    hash = "sha256-queErA3RdYBxIgOh3f2EfKPixpNfmevxLfNtjzcCCaI=";
+    hash = "sha256-tR+mNSLAOmumJNmVwnHvKefAOeYWMhhBjRh40bAQWkw=";
   };
 
   build-system = [ setuptools ];
