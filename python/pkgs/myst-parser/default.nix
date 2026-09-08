@@ -25,7 +25,7 @@
 }:
 buildPythonPackage (finalAttrs: {
   pname = "myst-parser";
-  version = "5.1.0-unstable-2026-07-12";
+  version = "5.1.0";
   pyproject = true;
 
   disabled = pythonOlder "3.11";
