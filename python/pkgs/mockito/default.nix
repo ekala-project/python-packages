@@ -2,20 +2,24 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  hatch-vcs,
   hatchling,
 }:
 
 buildPythonPackage rec {
   pname = "mockito";
-  version = "1.5.5";
+  version = "2.0.4";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-SYJuOQHcgm0CBOk7Ftzhxh3enTqU6tycIJqw4TAoM5M=";
+    hash = "sha256-00HyKMW1zPPEc3UfbG8J2Ng8XaSYRqbuMetgtlYH4O8=";
   };
 
-  build-system = [ hatchling ];
+  build-system = [
+    hatch-vcs
+    hatchling
+  ];
 
   pythonImportsCheck = [ "mockito" ];
 
