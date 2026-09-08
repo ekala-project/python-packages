@@ -12,7 +12,7 @@
 
 buildPythonPackage rec {
   pname = "pydata-sphinx-theme";
-  version = "0.16.1";
+  version = "0.21.0";
 
   format = "wheel";
 
@@ -22,7 +22,7 @@ buildPythonPackage rec {
     dist = "py3";
     python = "py3";
     pname = "pydata_sphinx_theme";
-    hash = "sha256-IlMx6KxLMmgsGPysWlem9xfE5jLOpd0OJHtVFV+uzN4=";
+    hash = "sha256-02p1S/lYCwF4nvqKAYafLXyH+mxUPsvK+xS2vdQ2T5A=";
   };
 
   propagatedBuildInputs = [
