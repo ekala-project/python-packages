@@ -1,44 +1,34 @@
 {
   lib,
   fetchFromGitHub,
-  meson,
-  ninja,
   buildPythonPackage,
   pkg-config,
   cairo,
-  python,
+  meson-python,
 }:
 
 buildPythonPackage rec {
   pname = "pycairo";
-  version = "1.29.0";
-
-  pyproject = false;
+  version = "1.29.1";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "pygobject";
     repo = "pycairo";
     tag = "v${version}";
-    hash = "sha256-ErWxSQFYpqTZ9TPrcEUjVTa0LU619nm04TWTshGgttQ=";
+    hash = "sha256-fx/C3raSOU+E5vb/Awu3lz5cMpsXaOrl/8rlCR4jp/o=";
   };
 
-  nativeBuildInputs = [
-    meson
-    ninja
-    pkg-config
-  ];
+  nativeBuildInputs = [ pkg-config ];
 
   buildInputs = [ cairo ];
   # Cairo tries to load system fonts by default.
   # It's surfaced as a Cairo "out of memory" error in tests.
   __impureHostDeps = [ "/System/Library/Fonts" ];
 
-  mesonFlags = [
-    # This is only used for figuring out what version of Python is in
-    # use, and related stuff like figuring out what the install prefix
-    # should be, but it does need to be able to execute Python code.
-    "-Dpython=${python.pythonOnBuildForHost.interpreter}"
-  ];
+  build-system = [ meson-python ];
+
+  pythonImportsCheck = [ "cairo" ];
 
   meta = {
     description = "Python 3 bindings for cairo";
