@@ -5,34 +5,30 @@
   pytest,
   jupyter-client,
   ipykernel,
-  holoviews,
   nbformat,
   nbconvert,
+  param,
   pyflakes,
-  requests,
-  beautifulsoup4,
 }:
 
 buildPythonPackage rec {
   pname = "nbsmoke";
-  version = "0.6.0";
+  version = "0.6.1a1";
   format = "setuptools";
 
   src = fetchPypi {
     inherit pname version;
-    sha256 = "8b55333e2face27bc7ff80c266c468ca5633947cb0697727348020dd445b0874";
+    sha256 = "sha256-mIdr4mppQqKGBdlLwLECCvKgwYmGMY1zjq/gzV0urRQ=";
   };
 
   propagatedBuildInputs = [
     pytest
-    holoviews
     jupyter-client
     ipykernel
     nbformat
     nbconvert
+    param
     pyflakes
-    requests
-    beautifulsoup4
   ];
 
   # tests not included with pypi release
