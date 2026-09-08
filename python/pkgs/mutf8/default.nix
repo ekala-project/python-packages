@@ -3,19 +3,22 @@
   buildPythonPackage,
   fetchFromGitHub,
   pytest,
+  setuptools,
 }:
 
 buildPythonPackage rec {
   pname = "mutf8";
-  version = "1.0.6";
-  format = "setuptools";
+  version = "1.1.1";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "TkTech";
     repo = "mutf8";
     rev = "v${version}";
-    hash = "sha256-4Ojn3t0EbOVdrYEiY8JegJuvW9sz8jt9tKFwOluiGQo=";
+    hash = "sha256-Vtfdik+g2jnadslfthGXJWJidzR1BJibod10Wla6lSg=";
   };
+
+  build-system = [ setuptools ];
 
   nativeCheckInputs = [ pytest ];
 
