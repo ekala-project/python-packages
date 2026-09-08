@@ -4,19 +4,19 @@
   fetchFromGitHub,
   hatch-vcs,
   hatchling,
-  httpx,
+  httpx2,
 }:
 
 buildPythonPackage rec {
   pname = "pylast";
-  version = "7.0.2";
+  version = "7.1.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "pylast";
     repo = "pylast";
     tag = version;
-    hash = "sha256-NA49V9s4k0l0icoiKVjxTAdhC+MuNgbbeImAjzGB8Xo=";
+    hash = "sha256-Vo916wcaEkrKftBoe+6P7DpYsyILoAcZLt3rpIGKu/c=";
   };
 
   build-system = [
@@ -24,7 +24,7 @@ buildPythonPackage rec {
     hatchling
   ];
 
-  dependencies = [ httpx ];
+  dependencies = [ httpx2 ];
 
   pythonImportsCheck = [ "pylast" ];
 
