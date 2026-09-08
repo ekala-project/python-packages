@@ -24,14 +24,14 @@ let
 in
 buildPythonPackage rec {
   pname = "python-dbusmock";
-  version = "0.37.2";
+  version = "0.38.1";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "martinpitt";
     repo = "python-dbusmock";
     tag = version;
-    hash = "sha256-Q149NcbpbIgXCd7WujALC9I9vAM/tZh+enTJh0d84Kg=";
+    hash = "sha256-nOsTgeZC0qvPOwx0woZZDxDxZm1ODG/bwltBhRCT8vY=";
   };
 
   build-system = [
