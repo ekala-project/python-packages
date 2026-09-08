@@ -13,14 +13,14 @@
 
 buildPythonPackage rec {
   pname = "marqo";
-  version = "3.12.0";
+  version = "3.18.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "marqo-ai";
     repo = "py-marqo";
     tag = version;
-    hash = "sha256-phO7aR7kQJHw5qxrpMI5DtOaXlaHMsKfaC3UquyD/Rw=";
+    hash = "sha256-vzeIl3egT3HOV0GacfEGaAgBxQ/c/4b9kxxTd2uNNfQ=";
   };
 
   build-system = [ setuptools ];
