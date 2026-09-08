@@ -24,17 +24,17 @@
 
 buildPythonPackage rec {
   pname = "pyocd";
-  version = "0.42.0";
+  version = "0.45.1";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "pyocd";
     repo = "pyOCD";
     tag = "v${version}";
-    hash = "sha256-tGeuTXQKt3ALXIEbeSNVt8j4h92FpyoY3d3M/4KTbnk=";
+    hash = "sha256-4a9XfdRfd6Co33eCoW6rBA0okS2lvUoQfNwr4KnAjM8=";
   };
 
-  pythonRelaxDeps = [ "capstone" ];
+  pythonRelaxDeps = [ "capstone" "pylink-square" ];
   pythonRemoveDeps = [ "libusb-package" ];
 
   build-system = [ setuptools-scm ];
