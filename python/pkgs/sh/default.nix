@@ -2,20 +2,20 @@
   lib,
   fetchPypi,
   buildPythonPackage,
-  poetry-core,
+  hatchling,
 }:
 
 buildPythonPackage rec {
   pname = "sh";
-  version = "2.2.2";
+  version = "2.4.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-ZTInp8QaKE7FMCFz+8BE7oF8e61ebk2NVXQbmuuetls=";
+    hash = "sha256-olCu9oUJ7ZNBnJodkLBkfNXL4mEHupTTcX71ttWV/9k=";
   };
 
-  build-system = [ poetry-core ];
+  build-system = [ hatchling ];
 
   doCheck = false;
 
