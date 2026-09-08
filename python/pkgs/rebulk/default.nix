@@ -8,13 +8,19 @@
 
 buildPythonPackage rec {
   pname = "rebulk";
-  version = "3.2.0";
+  version = "6.0.1";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-DTC/gPygD6nGlxhaxHXarJveX2Rs4zOMn/XV3B69/rw=";
+    hash = "sha256-1t8MjIluFgCHxpgfN3DtUT7Jc6n0BmueSwYU6wi6DOE=";
   };
+
+  postPatch = ''
+    substituteInPlace pyproject.toml \
+      --replace-fail 'requires = ["uv_build>=0.11,<0.12"]' 'requires = ["setuptools"]' \
+      --replace-fail 'build-backend = "uv_build"' 'build-backend = "setuptools.build_meta"'
+  '';
 
   build-system = [ setuptools ];
 
