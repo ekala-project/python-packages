@@ -2,25 +2,25 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
-  flit-core,
+  hatchling,
   requests,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "prawcore";
-  version = "2.4.0";
+  version = "4.0.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "praw-dev";
     repo = "prawcore";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-tECZRx6VgyiJDKHvj4Rf1sknFqUhz3sDFEsAMOeB7/g=";
+    hash = "sha256-1ZWr3AQcnF0+16nQjkqmpOXvAd2o+fXUc33FlWzYGM8=";
   };
 
-  nativeBuildInputs = [ flit-core ];
+  build-system = [ hatchling ];
 
-  propagatedBuildInputs = [ requests ];
+  dependencies = [ requests ];
 
   pythonImportsCheck = [ "prawcore" ];
 
