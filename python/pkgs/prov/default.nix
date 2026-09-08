@@ -12,12 +12,12 @@
 
 buildPythonPackage rec {
   pname = "prov";
-  version = "2.5.1";
+  version = "3.1.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-vhOaMyhpOjEiqNJv7IJ+U+M+Ctz7Kp56jJXRprjERrw=";
+    hash = "sha256-4+y/Y0XkaxlYsoa9GwkMW6/6lCAV7PBLRKjMY4MPipI=";
   };
 
   build-system = [ setuptools ];
