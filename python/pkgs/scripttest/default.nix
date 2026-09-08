@@ -4,20 +4,20 @@
   fetchPypi,
 
   # build-system
-  setuptools,
+  flit-core,
 }:
 
 buildPythonPackage rec {
   pname = "scripttest";
-  version = "2.0.post1";
+  version = "3.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-pgZ/H+rfSy7T5ZSwsy5BWJZA5/o5dHZapj1QhSDAv9w=";
+    hash = "sha256-1A6IWdcbHUkY4dkYxme84FkoKG8svQnPt6bMHz8witA=";
   };
 
-  build-system = [ setuptools ];
+  build-system = [ flit-core ];
 
   pythonImportsCheck = [ "scripttest" ];
 
