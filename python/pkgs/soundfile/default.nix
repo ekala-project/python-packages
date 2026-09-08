@@ -8,17 +8,18 @@
   cffi,
   isPyPy,
   stdenv,
+  typing-extensions,
 }:
 
 buildPythonPackage rec {
   pname = "soundfile";
-  version = "0.13.1";
+  version = "0.14.0";
   pyproject = true;
   disabled = isPyPy;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-ssaNqx4wKXMXCApbQ99X4wJYTEnilC3v3eCszMU/Dls=";
+    hash = "sha256-uhwaLWGLylxAZkfIO4nwfMiBD6UGpQYippk7oTDB3hE=";
   };
 
   postPatch = ''
@@ -33,6 +34,7 @@ buildPythonPackage rec {
   dependencies = [
     numpy
     cffi
+    typing-extensions
   ];
 
   pythonImportsCheck = [ "soundfile" ];
