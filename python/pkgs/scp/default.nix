@@ -8,12 +8,12 @@
 
 buildPythonPackage rec {
   pname = "scp";
-  version = "0.16.0";
+  version = "0.16.1";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-F2OkuKxCTqDDBPWLlaSkpR1QOoNO13tOifGjKzDL5mI=";
+    hash = "sha256-PysmC/m9TCtoV/aXodfo7cJvpWkoK3cCfoSd/h5IWAo=";
   };
 
   build-system = [ setuptools ];
