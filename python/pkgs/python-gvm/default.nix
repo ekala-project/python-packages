@@ -1,35 +1,31 @@
 {
   lib,
   buildPythonPackage,
-  defusedxml,
   fetchFromGitHub,
+  hatchling,
+  httpx,
   lxml,
   paramiko,
-  poetry-core,
-  typing-extensions,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "python-gvm";
-  version = "26.11.1";
+  version = "27.8.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "greenbone";
     repo = "python-gvm";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-NTUDFZnDavHhl5AELMNj8AkwwVtY+96cMB9uhm4veQg=";
+    hash = "sha256-nyIaX9L9vdFZuoL8I77JroyWJNvLDIsFj4TRmUppUSs=";
   };
 
-  build-system = [ poetry-core ];
-
-  pythonRelaxDeps = [ "defusedxml" ];
+  build-system = [ hatchling ];
 
   dependencies = [
-    defusedxml
+    httpx
     lxml
     paramiko
-    typing-extensions
   ];
 
   pythonImportsCheck = [ "gvm" ];
