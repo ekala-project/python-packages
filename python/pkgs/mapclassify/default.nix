@@ -14,14 +14,14 @@
 
 buildPythonPackage rec {
   pname = "mapclassify";
-  version = "2.10.0";
+  version = "2.11.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "pysal";
     repo = "mapclassify";
     tag = "v${version}";
-    hash = "sha256-OQpDrxa0zRPDAdyS6KP5enb/JZwbYoXTV8kUijV3tNM=";
+    hash = "sha256-QmGSMkCBAzpWLmDcSjwa8DibAA0JsNHjgjmb8zBuXno=";
   };
 
   build-system = [ setuptools-scm ];
