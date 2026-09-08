@@ -9,17 +9,18 @@
 
   # dependencies
   pytest,
+  python-dotenv,
 }:
 
 buildPythonPackage rec {
   pname = "pytest-env";
-  version = "1.2.0";
+  version = "1.7.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "pytest_env";
     inherit version;
-    hash = "sha256-R14uvoYmzuAfSR8wSnSxITd0I5fWx4TqS8JY8GkjK4A=";
+    hash = "sha256-DB3BEB+406s2Eej41le6BsPAwWf8hckEV+WyfyUI9D4=";
   };
 
   build-system = [
@@ -27,7 +28,10 @@ buildPythonPackage rec {
     hatch-vcs
   ];
 
-  dependencies = [ pytest ];
+  dependencies = [
+    pytest
+    python-dotenv
+  ];
 
   pythonImportsCheck = [ "pytest_env" ];
 
