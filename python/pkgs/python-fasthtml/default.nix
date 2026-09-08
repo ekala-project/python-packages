@@ -8,7 +8,7 @@
   beautifulsoup4,
   fastcore,
   fastlite,
-  httpx,
+  httpx2,
   itsdangerous,
   oauthlib,
   python-dateutil,
@@ -26,14 +26,14 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "python-fasthtml";
-  version = "0.13.3";
+  version = "0.14.13";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "AnswerDotAI";
     repo = "fasthtml";
     tag = finalAttrs.version;
-    hash = "sha256-PS5HGegC6pG/bJAGrKDsRYguBnNS9EDrZIjWvjErO4M=";
+    hash = "sha256-MqxBS+SjQS8A5L/4WV0mk+PdF76At7nmxDbIzluHkLU=";
   };
 
   build-system = [
@@ -44,7 +44,7 @@ buildPythonPackage (finalAttrs: {
     beautifulsoup4
     fastcore
     fastlite
-    httpx
+    httpx2
     itsdangerous
     oauthlib
     python-dateutil
