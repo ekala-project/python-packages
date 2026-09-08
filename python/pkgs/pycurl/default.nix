@@ -4,7 +4,6 @@
   buildPythonPackage,
   isPyPy,
   fetchFromGitHub,
-  fetchpatch2,
   curl,
   openssl,
   bottle,
@@ -17,7 +16,7 @@
 
 buildPythonPackage rec {
   pname = "pycurl";
-  version = "7.46.0";
+  version = "7.47.0";
   pyproject = true;
 
   disabled = isPyPy; # https://github.com/pycurl/pycurl/issues/208
@@ -26,16 +25,8 @@ buildPythonPackage rec {
     owner = "pycurl";
     repo = "pycurl";
     tag = "REL_${lib.replaceStrings [ "." ] [ "_" ] version}";
-    hash = "sha256-F40bJ7TYFK2dVkDJGGxl7XV46fKmjwvUYYulcwGL6hk=";
+    hash = "sha256-5mZvNVJS1WwBj4joNflSicllgTPL2SwstwO/n2vylJ0=";
   };
-
-  patches = [
-    (fetchpatch2 {
-      name = "pycurl-curl-8.21.0-ws-support.patch";
-      url = "https://github.com/pycurl/pycurl/commit/c78fd8aba82e2f8037275063138eaa7706c111af.diff?full_index=1";
-      hash = "sha256-EBXgGiaMtXTsgJOOrzzZFJ7Q/ofAlc4zuipoEpfdFqU=";
-    })
-  ];
 
   preConfigure = ''
     substituteInPlace setup.py \
