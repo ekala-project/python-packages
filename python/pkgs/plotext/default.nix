@@ -7,12 +7,12 @@
 
 buildPythonPackage rec {
   pname = "plotext";
-  version = "5.3.2";
+  version = "6.1.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-UtHpMuZ8F3vzV6Pw/mzhTRqW9/fVZ517RVuSnfUXBo4=";
+    hash = "sha256-a3Kc5jdsXBwhUv6F4ESdzFSHnQkjs8bI0WcBCCRcb4Q=";
   };
 
   build-system = [ setuptools ];
