@@ -10,13 +10,13 @@
 
 buildPythonPackage rec {
   pname = "readme-renderer";
-  version = "45.0";
+  version = "46.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "readme_renderer";
     inherit version;
-    hash = "sha256-AwqPrHSQT4+6Ea0btpZOP3boltx+XnHxavGQyQVmltE=";
+    hash = "sha256-rz6WSRT2MQoz/2e3KkvdlAvtjXw73s0tFPQO3yhL/pA=";
   };
 
   build-system = [ setuptools ];
