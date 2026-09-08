@@ -7,12 +7,12 @@
 
 buildPythonPackage rec {
   pname = "pygtrie";
-  version = "2.5.0";
+  version = "2.6.1";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-IDUUrYJutAPasdLi3dA04NFTS75NvgITuwWT9mvrpOI=";
+    hash = "sha256-GTRhMSYHC07FGjzvzwyUzrsBOQQ7REwPAkhsrr0NgBE=";
   };
 
   build-system = [ setuptools ];
