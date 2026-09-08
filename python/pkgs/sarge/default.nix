@@ -2,18 +2,21 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  setuptools,
 }:
 
 buildPythonPackage rec {
   pname = "sarge";
-  version = "0.1.7.post1";
-  format = "setuptools";
+  version = "0.1.8";
+  pyproject = true;
+
+  build-system = [ setuptools ];
 
   src = fetchFromGitHub {
     owner = "vsajip";
     repo = "sarge";
     rev = version;
-    hash = "sha256-bT1DbcQi+SbeRBsL7ILuQbSnAj3BBB4+FNl+Zek5xU4=";
+    hash = "sha256-//iAmcocP0VESkWgWR2k0D9/E7lgp5QKZ3CdzE54qmM=";
   };
 
   pythonImportsCheck = [ "sarge" ];
