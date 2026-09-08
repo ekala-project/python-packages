@@ -20,17 +20,21 @@
 
 buildPythonPackage rec {
   pname = "mixpanel";
-  version = "5.0.0";
+  version = "5.4.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "mixpanel";
     repo = "mixpanel-python";
     tag = "v${version}";
-    hash = "sha256-Q8Kn2dyID1hYjKmEv0e+R/y5dsp/JEkqCdNqQHJsOrI=";
+    hash = "sha256-0O/VPE9i/ka/pDnSA4jmKriT/jR2l6wqUjLmIesytww=";
   };
 
   build-system = [ setuptools ];
+
+  pythonRelaxDeps = [ "pydantic" ];
+
+  pythonRemoveDeps = [ "json-logic" ];
 
   dependencies = [
     asgiref
