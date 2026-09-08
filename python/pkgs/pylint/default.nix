@@ -13,14 +13,14 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "pylint";
-  version = "4.0.6";
+  version = "4.0.8";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "pylint-dev";
     repo = "pylint";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-vg33n+MHCQTYeiMYmKJ7wORLx7Z/wv4t8v3u7k1keh4=";
+    hash = "sha256-bCvI5iU3c95v8NzveNdPLH+CYd0lelqLL1Ed7F1t6WY=";
   };
 
   build-system = [ setuptools ];
