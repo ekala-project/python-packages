@@ -13,13 +13,13 @@
 
 buildPythonPackage rec {
   pname = "requests-cache";
-  version = "1.3.2";
+  version = "1.3.3";
   pyproject = true;
 
   src = fetchPypi {
     pname = "requests_cache";
     inherit version;
-    hash = "sha256-vcNoCTH5ih3qUJ0znqa0XOpSaUW0eyUM5j/9J0TuCxQ=";
+    hash = "sha256-ebctWsUUOZLRg2rXj02OZWZgYd1E4iBUjKqzcjCJgms=";
   };
 
   build-system = [ hatchling ];
