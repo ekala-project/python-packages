@@ -8,12 +8,12 @@
 
 buildPythonPackage rec {
   pname = "pytest_check";
-  version = "2.8.0";
+  version = "2.9.1";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-xC4I3dQa2cOHvRbvpmSt5d7016pcYHsFup4l9aq6cMI=";
+    hash = "sha256-LYyfH+XM6wtBxIDhRU6V6e1qOlNL8sfj4PORZ7Ec+Is=";
   };
 
   build-system = [ hatchling ];
