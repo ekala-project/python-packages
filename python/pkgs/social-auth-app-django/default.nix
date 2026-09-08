@@ -10,17 +10,19 @@
 
 buildPythonPackage rec {
   pname = "social-auth-app-django";
-  version = "5.9.0";
+  version = "6.0.1";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "python-social-auth";
     repo = "social-app-django";
     tag = version;
-    hash = "sha256-kyiN7HblqN66Slrub2IphCXBBy6UKxd7PbVHkjuHzkI=";
+    hash = "sha256-5aZQcGPX93XITzJCgL+s5Jxep+qqVbYGvzMXDRpZXdY=";
   };
 
   build-system = [ setuptools ];
+
+  pythonRelaxDeps = [ "social-auth-core" ];
 
   dependencies = [
     django
