@@ -2,22 +2,28 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
-  poetry-core,
+  setuptools,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "pybrowsers";
-  version = "1.3.2";
+  version = "1.4.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "roniemartinez";
     repo = "browsers";
     tag = finalAttrs.version;
-    hash = "sha256-MpTCeu2rxIx6JByosL2C3hayrMIfKD/2kZT3AJpjKZw=";
+    hash = "sha256-oYuPT/IQ3ev+YhqPwkPwa6oyiB+IYb7C9uVuQa0AW+A=";
   };
 
-  build-system = [ poetry-core ];
+  postPatch = ''
+    substituteInPlace pyproject.toml \
+      --replace-fail 'requires = ["uv_build>=0.10.11,<0.12.0"]' 'requires = ["setuptools"]' \
+      --replace-fail 'build-backend = "uv_build"' 'build-backend = "setuptools.build_meta"'
+  '';
+
+  build-system = [ setuptools ];
 
   # Tests want to interact with actual browsers
   doCheck = false;
