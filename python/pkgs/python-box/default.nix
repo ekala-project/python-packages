@@ -13,14 +13,14 @@
 
 buildPythonPackage rec {
   pname = "python-box";
-  version = "7.3.2";
+  version = "7.4.1";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "cdgriffith";
     repo = "Box";
     tag = version;
-    hash = "sha256-aVPjIoizqC0OcG5ziy/lvp/JsFSUvcLUqJ03mKViKFs=";
+    hash = "sha256-tzkTiuH9zBUFYXda6iv4Ohh72WBVcW/BykMS5W7BPPo=";
   };
 
   build-system = [
