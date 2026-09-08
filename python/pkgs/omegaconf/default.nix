@@ -15,14 +15,14 @@ let
 in
 buildPythonPackage rec {
   pname = "omegaconf";
-  version = "2.3.0";
+  version = "2.3.1";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "omry";
     repo = "omegaconf";
     tag = "v${version}";
-    hash = "sha256-Qxa4uIiX5TAyQ5rFkizdev60S4iVAJ08ES6FpNqf8zI=";
+    hash = "sha256-HvK6bNInPIkfdpNh8DifH7Wxt8m9uR+Y/qL3voIUw6w=";
   };
 
   patches = [
