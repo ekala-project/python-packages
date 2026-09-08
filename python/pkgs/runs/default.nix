@@ -2,21 +2,27 @@
   lib,
   fetchPypi,
   buildPythonPackage,
-  poetry-core,
+  setuptools,
   xmod,
 }:
 
 buildPythonPackage rec {
   pname = "runs";
-  version = "1.2.2";
+  version = "1.3.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-ncGBXiiVz7Okgxexc7nx6sm6VUmzaoR7XMYMO/guzvE=";
+    hash = "sha256-zKMEtjHb7+xZjHv7z7UNb+rObTqWhzS2f9QtPHKPWgU=";
   };
 
-  build-system = [ poetry-core ];
+  postPatch = ''
+    substituteInPlace pyproject.toml \
+      --replace-fail 'requires = ["uv_build>=0.9.0,<0.10.0"]' 'requires = ["setuptools"]' \
+      --replace-fail 'build-backend = "uv_build"' 'build-backend = "setuptools.build_meta"'
+  '';
+
+  build-system = [ setuptools ];
 
   dependencies = [ xmod ];
 
