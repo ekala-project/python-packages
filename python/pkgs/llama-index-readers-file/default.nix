@@ -13,17 +13,16 @@
 
 buildPythonPackage rec {
   pname = "llama-index-readers-file";
-  version = "0.6.0";
+  version = "0.7.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "llama_index_readers_file";
     inherit version;
-    hash = "sha256-/zZtb/XstxGSdayFkxDYtnLYtrMmGvrgL0CE/OkHa9A=";
+    hash = "sha256-Mo4/5dptphcuPXG2C1x2wWdnB7IgyPxH7fqnlfmu/RY=";
   };
 
   pythonRelaxDeps = [
-    "pymupdf"
     "pypdf"
     "striprtf"
     "pandas"
@@ -35,10 +34,13 @@ buildPythonPackage rec {
     beautifulsoup4
     defusedxml
     llama-index-core
-    pymupdf
     pypdf
     striprtf
   ];
+
+  optional-dependencies = {
+    pymupdf = [ pymupdf ];
+  };
 
   # Tests are only available in the mono repo
   doCheck = false;
