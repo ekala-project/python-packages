@@ -16,15 +16,18 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "nbdev";
-  version = "3.0.15";
+  version = "3.3.16";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-CSpEJr8IYUFa54VGdPy0p8erNh5qKrGBTsfNYvE3uIo=";
+    hash = "sha256-ptwnNtI9g+Ntsxj5Rgawppck9lKsVSNYWeqgJX8Ue8U=";
   };
 
-  pythonRelaxDeps = [ "ipywidgets" ];
+  pythonRelaxDeps = [
+    "ghapi"
+    "ipywidgets"
+  ];
 
   build-system = [
     build
