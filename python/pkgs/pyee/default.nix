@@ -10,12 +10,12 @@
 
 buildPythonPackage rec {
   pname = "pyee";
-  version = "13.0.1";
+  version = "14.0.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-C5MffBRTVmftTH4NUxcWNocV6GC5iHcPx+uFeNH2f8g=";
+    hash = "sha256-dt0PQxTs0n8C3HNYnep/04U/m2F22O+bEihgZX42At4=";
   };
 
   postPatch = ''
