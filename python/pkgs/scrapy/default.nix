@@ -1,7 +1,9 @@
 {
   lib,
   stdenv,
+  backports-zstd,
   botocore,
+  brotli,
   buildPythonPackage,
   cryptography,
   cssselect,
@@ -40,14 +42,14 @@
 
 buildPythonPackage rec {
   pname = "scrapy";
-  version = "2.17.0";
+  version = "2.18.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "scrapy";
     repo = "scrapy";
     tag = version;
-    hash = "sha256-4FAZJZc8qsMn93XPNYnnbqecA29DWwh5VNNlCsnib7A=";
+    hash = "sha256-c6rQ1ktpdHfwcA5zOGg/g9j614IWs0mlguZY1r3haLc=";
   };
 
   pythonRelaxDeps = [
@@ -64,6 +66,8 @@ buildPythonPackage rec {
   ];
 
   dependencies = [
+    backports-zstd
+    brotli
     cryptography
     cssselect
     defusedxml
