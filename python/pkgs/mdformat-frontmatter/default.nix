@@ -4,7 +4,7 @@
   fetchFromGitHub,
 
   # build-system
-  flit-core,
+  hatchling,
 
   # dependencies
   mdformat,
@@ -17,17 +17,17 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "mdformat-frontmatter";
-  version = "2.0.10";
+  version = "2.1.2";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "butler54";
     repo = "mdformat-frontmatter";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-snW9L9vnRHjNchhWZ5sIrn1r4piEYJeKQwib/4rarOo=";
+    hash = "sha256-AnSEaEbXm4n7FLwM/z/bv1k9EGSc02qF9lWehRSf3V4=";
   };
 
-  build-system = [ flit-core ];
+  build-system = [ hatchling ];
 
   dependencies = [
     mdformat
