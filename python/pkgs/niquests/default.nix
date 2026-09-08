@@ -11,14 +11,14 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "niquests";
-  version = "3.21.0";
+  version = "3.21.1";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "jawah";
     repo = "niquests";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-oKxs1ivKzoCIqFnh81MwCbLfjH5JTKj/orTZNe7uiC4=";
+    hash = "sha256-HhV7gG++e6AG6oQQvedJBB+c9OcPSyDGr8hFUoqm2h0=";
   };
 
   build-system = [ hatchling ];
@@ -38,12 +38,18 @@ buildPythonPackage (finalAttrs: {
       ;
     full = [
       orjson
-    ];
+    ]
+    ++ urllib3-future.optional-dependencies.zstd
+    ++ urllib3-future.optional-dependencies.brotli
+    ++ urllib3-future.optional-dependencies.ws
+    ++ urllib3-future.optional-dependencies.socks;
     http3 = urllib3-future.optional-dependencies.qh3;
     ocsp = urllib3-future.optional-dependencies.qh3;
     speedups = [
       orjson
-    ];
+    ]
+    ++ urllib3-future.optional-dependencies.zstd
+    ++ urllib3-future.optional-dependencies.brotli;
   };
 
   pythonImportsCheck = [ "niquests" ];
