@@ -12,14 +12,14 @@
 
 buildPythonPackage rec {
   pname = "notion-client";
-  version = "2.7.0";
+  version = "3.1.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "ramnes";
     repo = "notion-sdk-py";
     tag = version;
-    hash = "sha256-15IPycaLk8r0/bUphL+IDypBMhgdX1tAUS50VD3p/00=";
+    hash = "sha256-TdBynMSx8VWzJY9j/AeKLivVzpSoCWavn6bW9p804Jw=";
   };
 
   build-system = [ setuptools ];
