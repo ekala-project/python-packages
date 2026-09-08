@@ -16,14 +16,14 @@
 
 buildPythonPackage rec {
   pname = "peewee";
-  version = "3.19.0";
+  version = "4.5.1";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "coleifer";
     repo = "peewee";
     tag = version;
-    hash = "sha256-EO8gS5fMZ1GgJV2YMjy15XQGZa72fZF7dgG7RZUE9dA=";
+    hash = "sha256-VT0WBsTs+mSMeJGwDEFQQrtYLsU3q9UlqxOoZiNYSr0=";
   };
 
   build-system = [ setuptools ];
