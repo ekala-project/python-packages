@@ -2,22 +2,22 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
-  poetry-core,
+  hatchling,
 }:
 
 buildPythonPackage rec {
   pname = "logging-journald";
-  version = "0.6.7";
+  version = "0.6.12";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "mosquito";
     repo = "logging-journald";
     tag = version;
-    hash = "sha256-RQ9opkAOZfhYuqOXJ2Mtnig8soL+lCveYH2YdXL1AGM=";
+    hash = "sha256-kR/ter0hr9t+f1yFG9dhE/CZz92ve64nBAMnvLosG9E=";
   };
 
-  nativeBuildInputs = [ poetry-core ];
+  build-system = [ hatchling ];
 
   # Circular dependency with aiomisc
   doCheck = false;
