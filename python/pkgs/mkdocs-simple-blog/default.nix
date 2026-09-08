@@ -1,6 +1,7 @@
 {
   lib,
   buildPythonPackage,
+  babel,
   fetchFromGitHub,
   mkdocs,
   poetry-core,
@@ -9,19 +10,20 @@
 }:
 buildPythonPackage rec {
   pname = "mkdocs-simple-blog";
-  version = "0.4.1";
+  version = "0.6.1";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "FernandoCelmer";
     repo = "mkdocs-simple-blog";
     tag = "v${version}";
-    hash = "sha256-lp0+mJYyP7Qz/gJCI7+tKh9fZArWs2u1ZusnVUax7A4=";
+    hash = "sha256-B+vTDwyhP80bCWNn58sUl+411NKUERWpQGESvj8NEEE=";
   };
 
   build-system = [ poetry-core ];
 
   dependencies = [
+    babel
     mkdocs
   ];
 
