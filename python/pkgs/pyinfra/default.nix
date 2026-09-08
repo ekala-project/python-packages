@@ -20,7 +20,7 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "pyinfra";
-  version = "3.9.2";
+  version = "3.10.0";
   pyproject = true;
   __structuredAttrs = true;
 
@@ -28,7 +28,7 @@ buildPythonPackage (finalAttrs: {
     owner = "pyinfra-dev";
     repo = "pyinfra";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-5qgPfBtPqysEtNCLFAgGAxlVK/CRH9VYmiC/98VWomI=";
+    hash = "sha256-b1z6ZHt/fbDplJXZMx3/Ao/I9f4KHJcG1hmnWCLJJwY=";
   };
 
   build-system = [
