@@ -22,14 +22,14 @@
 
 buildPythonPackage rec {
   pname = "social-auth-core";
-  version = "4.9.1";
+  version = "5.1.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "python-social-auth";
     repo = "social-core";
     tag = version;
-    hash = "sha256-HIRqueDoT5MiK5wYto1/MhZOJVBGUdsHma/klOyVHtM=";
+    hash = "sha256-1cpVyKi/MLaABzWZiCW5yNEq49Md0NCZ+0zWUvbjlss=";
   };
 
   nativeBuildInputs = [ setuptools ];
