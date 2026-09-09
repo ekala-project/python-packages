@@ -4,32 +4,34 @@
   fetchPypi,
 
   # build-system
-  setuptools-scm,
+  flit-core,
 
   # dependencies
+  jaraco-collections,
+  jaraco-context,
   jaraco-functools,
   python-dateutil,
+  typing-extensions,
 }:
 
 buildPythonPackage rec {
   pname = "tempora";
-  version = "5.8.1";
+  version = "5.12.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-q7XZ7HkMxeT5Qxd4Apuj49m6m9UMswba2CSCSys2Lc0=";
+    hash = "sha256-tJt4zH7AslK/vXTO8BhxIbGOT1oMV+O5w9j8FQkK87Q=";
   };
 
-  postPatch = ''
-    sed -i "/coherent\.licensed/d" pyproject.toml
-  '';
-
-  build-system = [ setuptools-scm ];
+  build-system = [ flit-core ];
 
   dependencies = [
+    jaraco-collections
+    jaraco-context
     jaraco-functools
     python-dateutil
+    typing-extensions
   ];
 
   pythonImportsCheck = [
@@ -43,6 +45,6 @@ buildPythonPackage rec {
     homepage = "https://github.com/jaraco/tempora";
     description = "Objects and routines pertaining to date and time";
     mainProgram = "calc-prorate";
-    license = lib.licenses.mit;
+    license = lib.licenses.asl20;
   };
 }
