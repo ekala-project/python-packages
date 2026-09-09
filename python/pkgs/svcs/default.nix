@@ -5,6 +5,7 @@
   fetchFromGitHub,
 
   attrs,
+  typing-extensions,
   hatch-fancy-pypi-readme,
   hatch-vcs,
   hatchling,
@@ -21,14 +22,14 @@
 
 buildPythonPackage rec {
   pname = "svcs";
-  version = "25.1.0";
+  version = "26.2.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "hynek";
     repo = "svcs";
     tag = version;
-    hash = "sha256-dDPmOKGifAGmAH3TD0NzJvR8lUB5qDWbxIwzHtNeF+4=";
+    hash = "sha256-GgfuCZ1LvcPD3p9/YSrUUXZHS86GTMjLwmXivYmwgCQ=";
   };
 
   build-system = [
@@ -39,6 +40,7 @@ buildPythonPackage rec {
 
   dependencies = [
     attrs
+    typing-extensions
   ];
   disabledTests = lib.optionals stdenv.hostPlatform.isDarwin [
     "test_aclose_registry_ok"
