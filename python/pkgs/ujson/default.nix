@@ -7,12 +7,12 @@
 
 buildPythonPackage rec {
   pname = "ujson";
-  version = "5.13.0";
+  version = "6.0.0";
   format = "setuptools";
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-1i49diU4TAgIKrrYGgd69Yf97ydhuxTDgi9CNLjQfXU=";
+    hash = "sha256-gOIzk/63B1guCtSVw5ekR3tkbQgJTS32T3MW+fr9iq4=";
   };
 
   nativeBuildInputs = [ setuptools-scm ];
