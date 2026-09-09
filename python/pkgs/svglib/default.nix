@@ -2,6 +2,7 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  hatchling,
   cssselect2,
   lxml,
   pillow,
@@ -11,15 +12,17 @@
 
 buildPythonPackage rec {
   pname = "svglib";
-  version = "1.5.1";
-  format = "setuptools";
+  version = "2.2.0";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-Oudl06lAnuYMD7TSTC3raoBheqknBU9bzX/JjwaV5Yc=";
+    hash = "sha256-veXF+bDgkfHiELiq/doHpJvY6/IcDpDWc4OmZcg1l6w=";
   };
 
-  propagatedBuildInputs = [
+  build-system = [ hatchling ];
+
+  dependencies = [
     cssselect2
     lxml
     pillow
