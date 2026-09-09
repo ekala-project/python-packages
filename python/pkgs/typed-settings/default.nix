@@ -19,13 +19,13 @@
 }:
 buildPythonPackage rec {
   pname = "typed-settings";
-  version = "25.3.0";
+  version = "26.0.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "typed_settings";
     inherit version;
-    hash = "sha256-hl61LDGE9GdwVkWh5Y251xngi515V0SKKtjLvCLtIaY=";
+    hash = "sha256-iNDaM+RAoEGfGU4kuS7M5MEufBZbW5Zpf+QUDIPThuo=";
   };
 
   build-system = [ hatchling ];
