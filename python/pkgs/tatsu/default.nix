@@ -9,14 +9,14 @@
 
 buildPythonPackage rec {
   pname = "tatsu";
-  version = "5.16.0";
+  version = "5.24.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "neogeny";
     repo = "TatSu";
     tag = "v${version}";
-    hash = "sha256-YFNoA81J8x4OO7lLUjeN/NzQfCTEeosaWZg9UKy8C50=";
+    hash = "sha256-FJBtZ8OP/Tv4KUvJBwuyP1HCco9XW4Z9ODpPFn2tKss=";
   };
 
   nativeBuildInputs = [ hatchling ];
