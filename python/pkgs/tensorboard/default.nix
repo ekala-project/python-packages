@@ -1,9 +1,7 @@
 {
   lib,
-  fetchpatch,
   fetchPypi,
   buildPythonPackage,
-  python,
 
   # dependencies
   absl-py,
@@ -21,7 +19,7 @@
 
 buildPythonPackage rec {
   pname = "tensorboard";
-  version = "2.20.0";
+  version = "2.21.0";
   format = "wheel";
 
   # tensorflow/tensorboard is built from a downloaded wheel, because
@@ -31,7 +29,7 @@ buildPythonPackage rec {
     format = "wheel";
     dist = "py3";
     python = "py3";
-    hash = "sha256-ncn5eMuEwHI6z5o0XZbBhPApPRjxZruNWe4Jjmz6q6Y=";
+    hash = "sha256-cnkxbctr1bw5HWI96oQVMSmc3hiHMQ6BM7w0qZbTIlU=";
   };
 
   pythonRelaxDeps = [
@@ -56,26 +54,6 @@ buildPythonPackage rec {
     # https://github.com/tensorflow/tensorboard/issues/6964
     standard-imghdr
   ];
-
-  postInstall =
-    let
-      patch = fetchpatch {
-        name = "remove-runtime-pkg_resources-dependency.patch";
-        url = "https://github.com/tensorflow/tensorboard/commit/29f809f4737489912612635d9079a61f8e570bb8.patch";
-        excludes = [
-          "tensorboard/BUILD"
-          "tensorboard/data/BUILD"
-          "tensorboard/default_test.py"
-          "tensorboard/version_test.py"
-        ];
-        hash = "sha256-+jaXI4fVQP4mOg6y94KPMMCg3XuHV/gBUDNsp3ogS6c=";
-      };
-    in
-    ''
-      pushd $out/${python.sitePackages}
-      patch -p1 < ${patch}
-      popd
-    '';
 
   pythonImportsCheck = [
     "tensorboard"
