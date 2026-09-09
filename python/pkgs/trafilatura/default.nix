@@ -18,7 +18,7 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "trafilatura";
-  version = "2.1.0";
+  version = "2.2.0";
   pyproject = true;
   __structuredAttrs = true;
 
@@ -26,7 +26,7 @@ buildPythonPackage (finalAttrs: {
     owner = "adbar";
     repo = "trafilatura";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-hSeJH+8JX8QC3zHMZ3+M2H0C3xI+BCvLnSo/Ih1wUQw=";
+    hash = "sha256-U6sqUuPQZiv7VMCJ5lLJ3qqdEBq60J82nHHlGdCOyX4=";
   };
 
   build-system = [ setuptools ];
