@@ -8,18 +8,19 @@
   deepdiff,
   nibabel,
   numpy,
+  typer,
 }:
 
 buildPythonPackage rec {
   pname = "trx-python";
-  version = "0.3";
+  version = "0.5.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "tee-ar-ex";
     repo = "trx-python";
     tag = version;
-    hash = "sha256-gKPgP3GJ7QY0Piylk5L0HxnscRCREP1Hm5HZufL2h5g=";
+    hash = "sha256-2rWFjnvOIMT++tk9Dcf3j/rsfGf+uQjueeR0pKMZqZM=";
   };
 
   build-system = [
@@ -32,6 +33,7 @@ buildPythonPackage rec {
     deepdiff
     nibabel
     numpy
+    typer
   ];
 
   pythonImportsCheck = [ "trx" ];
