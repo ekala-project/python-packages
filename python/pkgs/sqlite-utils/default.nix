@@ -15,7 +15,7 @@
 }:
 buildPythonPackage (finalAttrs: {
   pname = "sqlite-utils";
-  version = "4.1.1";
+  version = "4.2.1";
   pyproject = true;
   __structuredAttrs = true;
 
@@ -25,7 +25,7 @@ buildPythonPackage (finalAttrs: {
     owner = "simonw";
     repo = "sqlite-utils";
     tag = finalAttrs.version;
-    hash = "sha256-igf4d+5iyC+gYb9TL2JCNzTmTrCgRdR9gscTcfslDng=";
+    hash = "sha256-PuAQ1dk999St3Wt4tGBgFUuPehv7ZTf4T7dAC+r1Pis=";
   };
 
   dependencies = [
