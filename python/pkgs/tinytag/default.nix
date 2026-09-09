@@ -10,12 +10,12 @@
 
 buildPythonPackage rec {
   pname = "tinytag";
-  version = "2.2.1";
+  version = "2.3.2";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-5tBmEOvnzWb9B74tO5SVkUqzJlSl5HZXu4zUTCSEUjw=";
+    hash = "sha256-Ah1xHNvb+EDTtnuXbLNNrcWNL8/UkOt075YCs3uZFBQ=";
   };
 
   build-system = [
