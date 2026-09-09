@@ -9,15 +9,23 @@
 
 buildPythonPackage rec {
   pname = "ulid-transform";
-  version = "1.5.2";
+  version = "2.2.9";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "bdraco";
     repo = "ulid-transform";
     tag = "v${version}";
-    hash = "sha256-S9+vP0frNvA4wWZMyLPYq6L/5PmLcyFNdN8NY+IrlzQ=";
+    hash = "sha256-j4nDvTR7qNpzYor6Pgfp+KNux7FRKdSc7jmuWj94WMM=";
   };
+
+  postPatch = ''
+    substituteInPlace build_ext.py \
+      --replace-fail "from distutils.command.build_ext import build_ext" \
+                     "from setuptools.command.build_ext import build_ext" \
+      --replace-fail "from distutils.core import Extension, setup" \
+                     "from setuptools import Extension, setup"
+  '';
 
   build-system = [
     cython
