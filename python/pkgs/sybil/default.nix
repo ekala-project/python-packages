@@ -2,20 +2,20 @@
   lib,
   fetchPypi,
   buildPythonPackage,
-  setuptools,
+  hatchling,
 }:
 
 buildPythonPackage rec {
   pname = "sybil";
-  version = "9.3.0";
+  version = "10.1.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-hH0dF7ioV8S7P4RxtKV7iv+pOaYPv1B+cKpyrXkJfAU=";
+    hash = "sha256-BiJJyIhqCrGeRdHDr9VjHsgG56lc9RU8llYPXkd1bL0=";
   };
 
-  build-system = [ setuptools ];
+  build-system = [ hatchling ];
 
   pythonImportsCheck = [ "sybil" ];
 
