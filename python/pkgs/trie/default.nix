@@ -3,6 +3,7 @@
   buildPythonPackage,
   fetchFromGitHub,
   setuptools,
+  setuptools-scm,
   eth-hash,
   eth-utils,
   hexbytes,
@@ -12,17 +13,17 @@
 
 buildPythonPackage rec {
   pname = "trie";
-  version = "3.1.0";
+  version = "4.0.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "ethereum";
     repo = "py-trie";
     tag = "v${version}";
-    hash = "sha256-QDywlAyFbQGgkATVifdixlnob4Tmsvr/VZ1rafzWKrU=";
+    hash = "sha256-njjIvBYavpMKr1DsBeWzHQzeP+3ACwpItUySxMcTlNY=";
   };
 
-  build-system = [ setuptools ];
+  build-system = [ setuptools setuptools-scm ];
 
   dependencies = [
     eth-hash
