@@ -4,6 +4,7 @@
   cython,
   fetchFromGitHub,
   fetchpatch,
+  ijson,
   ply,
   six,
   setuptools,
@@ -12,27 +13,24 @@
 
 buildPythonPackage rec {
   pname = "thriftpy2";
-  version = "0.5.3";
+  version = "0.7.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "Thriftpy";
     repo = "thriftpy2";
     tag = "v${version}";
-    hash = "sha256-idUKqpyRj8lq9Aq6vEEeYEawzRPOdNsySnkgfhwPtMc=";
+    hash = "sha256-vbNCPYWO/D+7/UJU/0ATdLzZ4lIPOKeBZ1sgWCdxx/c=";
   };
 
   patches = [
-    (fetchpatch {
-      url = "https://github.com/Thriftpy/thriftpy2/commit/0127d259eb4b96acb060cd158ca709f0597b148c.patch";
-      sha256 = "sha256-UBcbd8NTkPyko1s9jTjKlQ7HprwtyOZS0m66u1CPH3A=";
-    })
   ];
   build-system = [ setuptools ];
 
   nativeBuildInputs = [ cython ];
 
   dependencies = [
+    ijson
     ply
     six
     tornado
