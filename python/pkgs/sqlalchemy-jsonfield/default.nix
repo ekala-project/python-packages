@@ -12,21 +12,23 @@
 
 buildPythonPackage rec {
   pname = "sqlalchemy-jsonfield";
-  version = "1.0.2";
-  format = "setuptools";
+  version = "1.0.3";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "penguinolog";
     repo = "sqlalchemy_jsonfield";
     tag = version;
-    hash = "sha256-4zLXB3UQh6pgQ80KrxkLeC5yiv1R8t2+JmSukmGXr7I=";
+    hash = "sha256-htzWMItAQ1MdOcWHe9le5UofXi5plNpBqOAkgbPxCYI=";
   };
 
-  nativeBuildInputs = [ setuptools-scm ];
-
-  propagatedBuildInputs = [
-    sqlalchemy
+  build-system = [
     setuptools
+    setuptools-scm
+  ];
+
+  dependencies = [
+    sqlalchemy
   ];
   pythonImportsCheck = [ "sqlalchemy_jsonfield" ];
 
