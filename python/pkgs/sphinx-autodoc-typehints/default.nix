@@ -9,14 +9,14 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "sphinx-autodoc-typehints";
-  version = "3.12.1";
+  version = "3.13.6";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "tox-dev";
     repo = "sphinx-autodoc-typehints";
     tag = finalAttrs.version;
-    hash = "sha256-RgRyYZcMJ2bgTxvf339ZEn2f1/BczlSSSv8tbDMn9fs=";
+    hash = "sha256-zUtQfEoKgPEKw/1vHpg9GsfTWs0UU6X8oma0+doIhNI=";
   };
 
   build-system = [
