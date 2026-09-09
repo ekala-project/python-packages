@@ -13,14 +13,14 @@
 
 buildPythonPackage rec {
   pname = "sse-starlette";
-  version = "3.2.0";
+  version = "3.4.11";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "sysid";
     repo = "sse-starlette";
     tag = "v${version}";
-    hash = "sha256-SqYLwbl+AyeqgYIwAd/Z39BSPXaYSXMnM6DAGUv3vQ8=";
+    hash = "sha256-fdI/SxJgUDEyB1UJd9PLS6/TxvXZLlTAQFnr1UIBQRU=";
   };
 
   build-system = [ setuptools ];
