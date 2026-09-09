@@ -2,24 +2,32 @@
   lib,
   buildPythonPackage,
   fetchPypi,
-  requests,
+  setuptools,
 }:
 
 buildPythonPackage rec {
   pname = "update-checker";
-  version = "0.18.0";
-  format = "setuptools";
+  version = "1.0.0";
+  pyproject = true;
 
   src = fetchPypi {
     pname = "update_checker";
     inherit version;
-    sha256 = "6a2d45bb4ac585884a6b03f9eade9161cedd9e8111545141e9aa9058932acb13";
+    sha256 = "sha256-v8rGZBRXKoKpjqjIYzvxzl0QJ1DjuTRpuJswqoRc0dc=";
   };
 
-  propagatedBuildInputs = [ requests ];
+  postPatch = ''
+    substituteInPlace pyproject.toml \
+      --replace-fail 'requires = ["uv_build>=0.8.0,<1.0"]' 'requires = ["setuptools"]' \
+      --replace-fail 'build-backend = "uv_build"' 'build-backend = "setuptools.build_meta"'
+  '';
+
+  build-system = [ setuptools ];
 
   # requires network
   doCheck = false;
+
+  pythonImportsCheck = [ "update_checker" ];
 
   meta = {
     description = "Python module that will check for package updates";
