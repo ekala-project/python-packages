@@ -21,14 +21,14 @@
 
 buildPythonPackage rec {
   pname = "trino-python-client";
-  version = "0.338.0";
+  version = "0.339.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     repo = "trino-python-client";
     owner = "trinodb";
     tag = version;
-    hash = "sha256-kWbqzdeOkzjhcaQOS4bCUnXFILpurtVE3N3KLoqSeds=";
+    hash = "sha256-gdxSxCbFBuOGJuS5j8bJHf4IA0B/umFRiDGNU4ezZkU=";
   };
 
   build-system = [ setuptools ];
