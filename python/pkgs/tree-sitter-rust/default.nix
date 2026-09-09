@@ -8,14 +8,14 @@
 
 buildPythonPackage rec {
   pname = "tree-sitter-rust";
-  version = "0.24.0";
+  version = "0.24.2";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "tree-sitter";
     repo = "tree-sitter-rust";
     tag = "v${version}";
-    hash = "sha256-y3sJURlSTM7LRRN5WGIAeslsdRZU522Tfcu6dnXH/XQ=";
+    hash = "sha256-Ls6tB6IxXDQDWwx0BJ7RgbheelC4MH8z97E7wwhkDcY=";
   };
 
   build-system = [
