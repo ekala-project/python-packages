@@ -19,7 +19,7 @@ let
   hashes = {
     "311-x86_64-linux" = "sha256-iudEUatcyKDNnlGSat8E9N/b2K1awxrHHxyqe9+ygo0=";
     "312-x86_64-linux" = "sha256-ZMgDlVjVYHtzkDlI/OBYclcx30EMXBls9Ys/xiIjlbU=";
-    "313-x86_64-linux" = "sha256-jqU6hR6oaq09mcFKeQyFRo1jJL4Ux6whHx8CZej6twc=";
+    "313-x86_64-linux" = "sha256-87A/UsiYJ2QTPd0EXAVYJgjSrZARs6IP+DJoBGdpfW0=";
     "314-x86_64-linux" = "sha256-fJEIrmwprckLcsome6K1dzhsXkEOovjofqvOXr2tMn4=";
     "311-aarch64-linux" = "sha256-NDUvi6bl77pf6xiRfWjaGpK7/4DmTD/QbT0a9LNDgho=";
     "312-aarch64-linux" = "sha256-Os4Azy5F3F1k/joQwsvvYTQ5FWg4CKEKPggSM1ZqcjE=";
@@ -33,7 +33,7 @@ let
 in
 buildPythonPackage (finalAttrs: {
   pname = "tensorstore";
-  version = "0.1.84";
+  version = "0.1.85";
   format = "wheel";
   __structuredAttrs = true;
 
