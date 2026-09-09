@@ -18,19 +18,19 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "tuf";
-  version = "6.0.0";
+  version = "7.0.1";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "theupdateframework";
     repo = "python-tuf";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-CPbZOpUYi7MWKLMj7kwTsmEkxLCf4wU7IOCcbzMkPlU=";
+    hash = "sha256-/Dg/n00p6udprGbW4el1285dYsr0tEz+KC3RXc28xv0=";
   };
 
   postPatch = ''
     substituteInPlace pyproject.toml \
-      --replace-fail "hatchling==1.27.0" "hatchling"
+      --replace-fail "hatchling==1.32.0" "hatchling"
   '';
 
   build-system = [
