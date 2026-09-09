@@ -8,13 +8,13 @@
 
 buildPythonPackage rec {
   pname = "types-cffi";
-  version = "1.16.0.20241221";
+  version = "2.1.0.20260827";
   pyproject = true;
 
   src = fetchPypi {
     pname = "types_cffi";
     inherit version;
-    hash = "sha256-HJZklhj0thRfWCMay5duC0SL5rhH96tzPavmLfv/ZZE=";
+    hash = "sha256-U9FgR3GtT/CaGpDW9pgKs2vrtsOUdtzFu/SJb6UQ1zY=";
   };
 
   build-system = [ setuptools ];
