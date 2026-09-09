@@ -11,12 +11,12 @@
 
 buildPythonPackage rec {
   pname = "stone";
-  version = "3.5.3";
+  version = "3.5.4";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-0NmfFNFURS5xs+J1Lv27sXaeT+y8EpGx39GgRve2ocs=";
+    hash = "sha256-T09DmeanZGkXcW19wG+BTTL5TzD7UdYbXHYOj207pTs=";
   };
 
   build-system = [
@@ -32,7 +32,8 @@ buildPythonPackage rec {
 
   postPatch = ''
     substituteInPlace pyproject.toml \
-      --replace-fail "setuptools-scm>=8,<9" "setuptools-scm>=8"
+      --replace-fail "setuptools>=83.0.0" setuptools \
+      --replace-fail "setuptools-scm>=10.2.1,<11" setuptools-scm
   '';
 
   pythonImportsCheck = [ "stone" ];
