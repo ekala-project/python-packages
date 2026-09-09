@@ -2,25 +2,25 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
-  poetry-core,
+  hatchling,
   pytest-cov-stub,
   pyyaml,
 }:
 
 buildPythonPackage rec {
   pname = "tinydb";
-  version = "4.8.2";
+  version = "4.9.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "msiemens";
     repo = "tinydb";
     tag = "v${version}";
-    hash = "sha256-N/45XB7ZuZiq25v6DQx4K9NRVnBbUHPeiKKbxQ9YB3E=";
+    hash = "sha256-7YKqbBf+WrSVDZdPb6dT/22f5uggXy8uQ3lkxvWD5AI=";
   };
 
   build-system = [
-    poetry-core
+    hatchling
   ];
   pythonImportsCheck = [ "tinydb" ];
 
