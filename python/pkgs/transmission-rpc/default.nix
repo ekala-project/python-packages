@@ -9,14 +9,14 @@
 
 buildPythonPackage rec {
   pname = "transmission-rpc";
-  version = "7.0.11";
+  version = "7.0.12";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "Trim21";
     repo = "transmission-rpc";
     tag = "v${version}";
-    hash = "sha256-t07TuLLHfbxvWh+7854OMigfGC8jHzvpd4QO3v0M15I=";
+    hash = "sha256-BxbaBUzu/KPn/4AoRmIEBI+v3+mjJAXF9lzm0wNb25c=";
   };
 
   build-system = [ setuptools ];
