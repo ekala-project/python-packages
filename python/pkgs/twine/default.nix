@@ -18,12 +18,12 @@
 
 buildPythonPackage rec {
   pname = "twine";
-  version = "6.2.0";
+  version = "7.0.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-5e0NL9cMmVl3Dc5RyPOciUXFdOGBc6e4GALatRtLdc8=";
+    hash = "sha256-hc2ynFGO/vhnNgrkrNSw39YchlSiL8oI5vhTnwUCIXc=";
   };
 
   build-system = [
