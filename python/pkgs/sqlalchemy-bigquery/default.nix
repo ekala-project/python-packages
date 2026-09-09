@@ -14,13 +14,13 @@
 
 buildPythonPackage rec {
   pname = "sqlalchemy-bigquery";
-  version = "1.17.1";
+  version = "1.17.2";
   pyproject = true;
 
   src = fetchPypi {
     pname = "sqlalchemy_bigquery";
     inherit version;
-    hash = "sha256-aAH+N+pDYs/zF4Yqrq6iHQf2iW6zHDtPvd/crvQKhP0=";
+    hash = "sha256-MveJPBZUbVzF3JOft8909RUFdmoWQi8h3S5+eOqOyEk=";
   };
 
   build-system = [ setuptools ];
