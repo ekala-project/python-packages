@@ -2,30 +2,22 @@
   lib,
   authlib,
   buildPythonPackage,
-  deprecation,
-  fastapi,
   fetchFromGitHub,
-  flask,
+  grpcio,
   grpcio-health-checking,
   grpcio-tools,
-  grpcio,
-  h5py,
   httpx,
-  litestar,
-  numpy,
-  pandas,
-  polars,
+  packaging,
+  protobuf,
   pydantic,
   pythonOlder,
-  requests,
-  stdenv,
   setuptools-scm,
   validators,
 }:
 
 buildPythonPackage rec {
   pname = "weaviate-client";
-  version = "4.22.0";
+  version = "4.23.1";
   pyproject = true;
 
   disabled = pythonOlder "3.12";
@@ -34,7 +26,7 @@ buildPythonPackage rec {
     owner = "weaviate";
     repo = "weaviate-python-client";
     tag = "v${version}";
-    hash = "sha256-dAN4R71BQsYJkxdwnDvLEkw1rfJvxRX6IUVsh3+WWEE=";
+    hash = "sha256-9vnGApuYJTzTeOufB0/3ONPaMMfgq2t4NxpmqyYDIhg=";
   };
 
   pythonRelaxDeps = [
@@ -49,22 +41,16 @@ buildPythonPackage rec {
 
   dependencies = [
     authlib
-    deprecation
-    fastapi
-    flask
     grpcio
     grpcio-health-checking
     grpcio-tools
-    h5py
     httpx
-    litestar
-    numpy
-    pandas
-    polars
+    packaging
+    protobuf
     pydantic
-    requests
     validators
   ];
+
   pythonImportsCheck = [ "weaviate" ];
 
   meta = {
