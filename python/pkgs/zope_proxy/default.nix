@@ -8,13 +8,13 @@
 
 buildPythonPackage rec {
   pname = "zope.proxy";
-  version = "7.2";
+  version = "7.3";
   pyproject = true;
 
   src = fetchPypi {
     pname = "zope_proxy";
     inherit version;
-    hash = "sha256-pE6jTO1DPcpmW16MMA6D5A0q5oIWaPV67zjBFZPlb1g=";
+    hash = "sha256-osAP+E1Ba1AIu83XM364AK3ovAgzEui14OzX0MDRHPY=";
   };
 
   build-system = [ setuptools ];
