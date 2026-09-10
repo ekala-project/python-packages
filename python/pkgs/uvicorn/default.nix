@@ -15,14 +15,14 @@
 
 buildPythonPackage rec {
   pname = "uvicorn";
-  version = "0.51.0";
+  version = "0.52.4";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "encode";
     repo = "uvicorn";
     tag = version;
-    hash = "sha256-VX5X2BY8eZc93r3zfJFhtz1vuXHvaqWB5rTj7zddSzU=";
+    hash = "sha256-XDhfyL2+L2Dfa01brCgqKibdtkGOI0Xv4Mx0foqHT3A=";
   };
 
   build-system = [ hatchling ];
