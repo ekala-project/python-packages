@@ -11,16 +11,17 @@
   distlib,
   filelock,
   platformdirs,
+  python-discovery,
 }:
 
 buildPythonPackage rec {
   pname = "virtualenv";
-  version = "20.36.1";
+  version = "21.7.9";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-i++1yBhCxkH47mWEgeQmQcaLXqs1IdjgktGDIJAkZro=";
+    hash = "sha256-p+Qtgdd53siv19xL5xZA+5WeqGG8z6WYDLStn5LjBnU=";
   };
 
   build-system = [
@@ -32,6 +33,7 @@ buildPythonPackage rec {
     distlib
     filelock
     platformdirs
+    python-discovery
   ];
 
   doCheck = false;
