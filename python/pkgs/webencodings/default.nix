@@ -2,24 +2,29 @@
   buildPythonPackage,
   lib,
   fetchPypi,
+  flit-core,
+  pytestCheckHook,
 }:
 
 buildPythonPackage rec {
   pname = "webencodings";
-  version = "0.5.1";
-  format = "setuptools";
+  version = "0.6.1";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    sha256 = "b36a1c245f2d304965eb4e0a82848379241dc04b865afcc4aab16748587e1923";
+    sha256 = "sha256-Vl+a0DHHAtrkBOJ6CZ4+CRhqOrG5Ug8G0hVQK2Uf2RA=";
   };
-  checkPhase = ''
-    py.test webencodings/tests.py
-  '';
+
+  build-system = [ flit-core ];
+
+  nativeCheckInputs = [ pytestCheckHook ];
+
+  pythonImportsCheck = [ "webencodings" ];
 
   meta = {
     description = "Character encoding aliases for legacy web content";
-    homepage = "https://github.com/SimonSapin/python-webencodings";
+    homepage = "https://github.com/CourtBouillon/webencodings";
     license = lib.licenses.bsd3;
   };
 }
