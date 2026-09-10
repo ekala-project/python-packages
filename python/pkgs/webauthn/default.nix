@@ -6,29 +6,35 @@
   asn1crypto,
   cbor2,
   cryptography,
+  pyasn1,
+  pyasn1-modules,
   pyopenssl,
 }:
 
 buildPythonPackage rec {
   pname = "webauthn";
-  version = "2.7.0";
+  version = "3.0.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "duo-labs";
     repo = "py_webauthn";
     tag = "v${version}";
-    hash = "sha256-aZDptKJPFU6Oo4vKkIWkqkJ5ogDe5x3v7PAQRixWFe4=";
+    hash = "sha256-rT/B95ILb2cI/HH01IC5b4319zdKnrf4ZLUIpAeC3fM=";
   };
 
   build-system = [ setuptools ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     asn1crypto
     cbor2
     cryptography
+    pyasn1
+    pyasn1-modules
     pyopenssl
   ];
+
+  pythonRelaxDeps = [ "cbor2" ];
   pythonImportsCheck = [ "webauthn" ];
 
   meta = {
