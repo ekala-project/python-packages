@@ -10,14 +10,14 @@
 
 buildPythonPackage rec {
   pname = "uv-dynamic-versioning";
-  version = "0.13.0";
+  version = "0.14.1";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "ninoseki";
     repo = "uv-dynamic-versioning";
     tag = "v${version}";
-    hash = "sha256-PP8nDQD3T/0MIYX5TNUinDEuGt57+AzYFwMeGiRQ2Yg=";
+    hash = "sha256-j9Fv4ryqV3nHYmI1zA/5f6pEYWK55ZBj8/FxT5bicEg=";
   };
 
   build-system = [ hatchling ];
