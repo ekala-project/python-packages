@@ -8,13 +8,13 @@
 
 buildPythonPackage rec {
   pname = "zope.i18nmessageid";
-  version = "8.2";
+  version = "8.3";
   pyproject = true;
 
   src = fetchPypi {
     pname = "zope_i18nmessageid";
     inherit version;
-    hash = "sha256-hSBPskQPa9CqxS9qRinrRPj+Vp3NnKpYKgo53xijCBc=";
+    hash = "sha256-f3JDoRT9sGoql9z2sWx7H5kWiCel5+4J680hDHZ0Xe4=";
   };
 
   build-system = [ setuptools ];
