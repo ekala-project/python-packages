@@ -2,20 +2,20 @@
   lib,
   fetchPypi,
   buildPythonPackage,
-  poetry-core,
+  hatchling,
 }:
 
 buildPythonPackage rec {
   pname = "xmod";
-  version = "1.8.1";
+  version = "1.10.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-OMdkhrnWcsVG1X2ANd8L639KmwiLw/st5UMa6CFEQ3c=";
+    hash = "sha256-tAsqVNVmhLAeuWJ4krDBeZGOjvC9TX87rHo/26Ec1uY=";
   };
 
-  build-system = [ poetry-core ];
+  build-system = [ hatchling ];
 
   pythonImportsCheck = [ "xmod" ];
 
