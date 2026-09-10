@@ -2,22 +2,22 @@
   lib,
   fetchPypi,
   buildPythonPackage,
-  poetry-core,
+  flit-core,
   jsonpatch,
   jsonschema,
 }:
 
 buildPythonPackage rec {
   pname = "warlock";
-  version = "2.0.1";
+  version = "2.1.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-mau/lSWyp38s3oltOp8YpbRZDbBj22XgggdpTS4BN/w=";
+    hash = "sha256-gjGboBc0Hn/NyB78K+ndL4I3oNoHxxR2tUJWUbMXsck=";
   };
 
-  build-system = [ poetry-core ];
+  build-system = [ flit-core ];
 
   dependencies = [
     jsonpatch
