@@ -24,14 +24,14 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "zarr";
-  version = "3.2.1";
+  version = "3.3.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "zarr-developers";
     repo = "zarr-python";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-WExQT/Je+esq0dv9HtPxGt7ioJgIwW8cGNuPwM+ANEc=";
+    hash = "sha256-BeT0nv9eC6hmG9hpGkm4nMprB/upTC3GwTy/YEJW0nk=";
   };
 
   build-system = [
