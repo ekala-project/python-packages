@@ -8,14 +8,14 @@
 
 buildPythonPackage rec {
   pname = "xmlschema";
-  version = "4.3.1";
+  version = "4.3.2";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "sissaschool";
     repo = "xmlschema";
     tag = "v${version}";
-    hash = "sha256-O34MHsP4BC5fALHDzXJBWGtcRifdL3dJNwW721QN4vA=";
+    hash = "sha256-OEQUq98n9dUKR8tWokboDhozBCczYCUlqI2qUGaTHtw=";
   };
 
   build-system = [ setuptools ];
