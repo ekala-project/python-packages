@@ -11,15 +11,19 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "yaxmldiff";
-  version = "0.2.0";
+  version = "0.3.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "latk";
     repo = "yaxmldiff.py";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-AOXnK1d+b/ae50ofBfgxiDS6Dj6TIeHMrE9ME95Yj1Q=";
+    hash = "sha256-bLqb/a0z7jajo2XUdvAJckLKyUC6KDByvd3yKVlps5c=";
   };
+
+  postPatch = ''
+    sed -i '/cappa/d' pyproject.toml
+  '';
 
   build-system = [
     hatchling
