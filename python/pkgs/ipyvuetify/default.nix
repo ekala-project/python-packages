@@ -27,7 +27,10 @@ buildPythonPackage rec {
 
   build-system = [ setuptools ];
 
-  dependencies = [ ipyvue ];
+  dependencies = [
+    ipyvue
+    setuptools
+  ];
 
   doCheck = false; # no tests on PyPi/GitHub
   pythonImportsCheck = [ "ipyvuetify" ];

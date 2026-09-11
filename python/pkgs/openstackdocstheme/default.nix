@@ -27,6 +27,7 @@ buildPythonPackage rec {
   dependencies = [
     dulwich
     pbr
+    setuptools
     sphinx
   ];
 
