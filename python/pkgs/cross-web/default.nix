@@ -37,7 +37,7 @@ buildPythonPackage (finalAttrs: {
 
   postPatch = ''
     substituteInPlace pyproject.toml \
-      --replace-fail 'version = "0.0.0"' 'version = "${finalAttrs.version}"'
+      --replace-fail 'version = "0.6.0"' 'version = "${finalAttrs.version}"'
   '';
 
   build-system = [ hatchling ];
