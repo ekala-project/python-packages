@@ -4,6 +4,7 @@
   colorama,
   fetchFromGitHub,
   hatchling,
+  setuptools,
   lib,
   numpy,
   pytest-repeat,
@@ -22,7 +23,10 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-WMH2wUqzA196FSe2TpfslQVW0PGwk7lGMRSKyfCG9rg=";
   };
 
-  build-system = [ hatchling ];
+  build-system = [
+    hatchling
+    setuptools
+  ];
 
   dependencies = [
     colorama
