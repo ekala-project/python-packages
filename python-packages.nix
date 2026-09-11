@@ -26,6 +26,8 @@ in
   rapidfuzz = prev.rapidfuzz.overridePythonAttrs (old: {
     patches = [ ];
     postPatch = ''
+      substituteInPlace pyproject.toml \
+        --replace-fail "Cython >=3.1.6, <3.3.0" "Cython >=3.1.6"
       substituteInPlace CMakeLists.txt \
         --replace-fail "find_package(Taskflow 4.0.0 QUIET)" "find_package(Taskflow 4.1.0 QUIET)"
     '';
