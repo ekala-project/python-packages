@@ -4,7 +4,6 @@
   fetchFromGitHub,
   setuptools,
   loguru,
-  pytest-asyncio,
   typing-extensions,
 }:
 
@@ -19,12 +18,6 @@ buildPythonPackage rec {
     tag = "v${version}";
     hash = "sha256-lzLzYI5jShfIwQqvfA8UtPjGawXE80ww7jb/gPzpeDo=";
   };
-
-  postPatch = ''
-    sed -i pytest.ini \
-      -e '/--cov/d' \
-      -e '/--mypy/d'
-  '';
 
   build-system = [ setuptools ];
 

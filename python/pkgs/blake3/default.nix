@@ -22,7 +22,7 @@ buildPythonPackage rec {
   };
 
   postPatch = ''
-    ln -s '${./Cargo.lock}' Cargo.lock
+    ln -sf '${./Cargo.lock}' Cargo.lock
   '';
 
   cargoDeps = rustPlatform.importCargoLock {
