@@ -5,6 +5,7 @@
   setuptools,
   wheel,
   azure-core,
+  azure-identity,
   azure-storage-blob,
   azure-ai-agents,
   isodate,
@@ -29,6 +30,7 @@ buildPythonPackage rec {
 
   dependencies = [
     azure-core
+    azure-identity
     azure-storage-blob
     azure-ai-agents
     isodate

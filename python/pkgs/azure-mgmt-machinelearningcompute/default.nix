@@ -3,6 +3,7 @@
   buildPythonPackage,
   fetchPypi,
   setuptools,
+  azure-mgmt-core,
   msrest,
   msrestazure,
   azure-common,
@@ -25,6 +26,7 @@ buildPythonPackage (finalAttrs: {
   build-system = [ setuptools ];
 
   dependencies = [
+    azure-mgmt-core
     msrest
     msrestazure
     azure-common
