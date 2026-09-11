@@ -38,14 +38,14 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "dash";
-  version = "3.4.0";
+  version = "4.4.1";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "plotly";
     repo = "dash";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-8LR0iNc8lJBKzbJuvZ8jzta1G3TbQ9yIBSXFvvyeqmI=";
+    hash = "sha256-uZbWX2i9ecD82Hd2aIGTsXUsj1ecJGTAb94ggCndbjk=";
   };
 
   nativeBuildInputs = [
@@ -55,7 +55,7 @@ buildPythonPackage (finalAttrs: {
 
   yarnOfflineCache = fetchYarnDeps {
     yarnLock = "${finalAttrs.src}/@plotly/dash-jupyterlab/yarn.lock";
-    hash = "sha256-Nvm9BS55q/HW9ArpHD01F5Rmx8PLS3yqaz1yDK8Sg68=";
+    hash = "sha256-0dw4c8yHMNReai3QimHFEKlx01OfdW4zXGAl2Q5JB5c=";
   };
 
   # as of writing this yarnConfigHook has no parameter that changes in which directory it will be run
