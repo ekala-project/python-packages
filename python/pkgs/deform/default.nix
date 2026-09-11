@@ -28,6 +28,10 @@ buildPythonPackage rec {
 
   build-system = [ setuptools ];
 
+  postPatch = ''
+    substituteInPlace pyproject.toml --replace-fail 'setuptools<81.0.0' 'setuptools'
+  '';
+
   dependencies = [
     chameleon
     colander
