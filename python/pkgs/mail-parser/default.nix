@@ -20,6 +20,11 @@ buildPythonPackage (finalAttrs: {
 
   build-system = [ hatchling ];
 
+  postPatch = ''
+    substituteInPlace pyproject.toml \
+      --replace-fail "hatchling>=1.27,<1.32" hatchling
+  '';
+
   optional-dependencies = {
     outlook = [ extract-msg ];
   };
