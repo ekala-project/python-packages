@@ -4,7 +4,7 @@
   fetchFromGitHub,
 
   # build-system
-  setuptools,
+  hatchling,
 
   # dependencies
   aiohttp,
@@ -32,7 +32,7 @@ buildPythonPackage (finalAttrs: {
   };
 
   build-system = [
-    setuptools
+    hatchling
   ];
 
   dependencies = [

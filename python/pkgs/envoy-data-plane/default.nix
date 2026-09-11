@@ -4,7 +4,7 @@
   fetchPypi,
 
   # build-system
-  poetry-core,
+  hatchling,
 
   # dependencies
   betterproto,
@@ -25,7 +25,7 @@ buildPythonPackage (finalAttrs: {
   };
 
   build-system = [
-    poetry-core
+    hatchling
   ];
 
   pythonRelaxDeps = [

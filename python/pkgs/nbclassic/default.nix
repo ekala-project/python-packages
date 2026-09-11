@@ -2,6 +2,7 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  hatchling,
   babel,
   ipykernel,
   ipython-genutils,
@@ -22,6 +23,7 @@ buildPythonPackage rec {
   };
 
   build-system = [
+    hatchling
     babel
     jupyter-packaging
     jupyter-server

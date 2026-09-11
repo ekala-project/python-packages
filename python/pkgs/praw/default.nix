@@ -3,7 +3,7 @@
   buildPythonPackage,
   fetchFromGitHub,
   fetchpatch,
-  flit-core,
+  hatchling,
   mock,
   prawcore,
   update-checker,
@@ -31,7 +31,7 @@ buildPythonPackage (finalAttrs: {
     })
   ];
 
-  build-system = [ flit-core ];
+  build-system = [ hatchling ];
 
   dependencies = [
     mock

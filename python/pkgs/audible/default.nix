@@ -4,7 +4,7 @@
   buildPythonPackage,
 
   # build-system
-  poetry-core,
+  hatchling,
 
   # dependencies
   beautifulsoup4,
@@ -30,9 +30,9 @@ buildPythonPackage rec {
     hash = "sha256-ILGhjuPIxpRxu/dVDmz531FUgMWosk4P+onPJltuPIs=";
   };
 
-  nativeBuildInputs = [ poetry-core ];
+  build-system = [ hatchling ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     pillow
     beautifulsoup4
     httpx

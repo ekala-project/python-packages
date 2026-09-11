@@ -2,7 +2,10 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
-  setuptools,
+
+  # build-system
+  poetry-core,
+
   certifi,
   python-dateutil,
   six,
@@ -22,7 +25,7 @@ buildPythonPackage rec {
     hash = "sha256-VYj1r69pgKgNCXzxRqvwlj5w+y3IIu21bsZJAe/7zf8=";
   };
 
-  build-system = [ setuptools ];
+  build-system = [ poetry-core ];
 
   dependencies = [
     certifi

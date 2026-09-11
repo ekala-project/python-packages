@@ -2,7 +2,7 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
-  setuptools,
+  hatchling,
   pyjwt,
   aiohttp,
   protobuf,
@@ -24,7 +24,7 @@ buildPythonPackage rec {
 
   pypaBuildFlags = [ "livekit-api" ];
 
-  build-system = [ setuptools ];
+  build-system = [ hatchling ];
 
   dependencies = [
     pyjwt

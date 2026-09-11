@@ -3,8 +3,7 @@
   buildPythonPackage,
   fetchPypi,
   # build-system
-  setuptools,
-  setuptools-scm,
+  hatchling,
 }:
 
 buildPythonPackage rec {
@@ -17,9 +16,8 @@ buildPythonPackage rec {
     hash = "sha256-zhHCeex1vfgj0MOGEkoVKKXns2+l3U0mSZInk58Rf4g=";
   };
 
-  nativeBuildInputs = [
-    setuptools
-    setuptools-scm
+  build-system = [
+    hatchling
   ];
 
   pythonImportsCheck = [ "pyavm" ];
