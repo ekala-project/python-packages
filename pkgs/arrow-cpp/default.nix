@@ -198,8 +198,6 @@ stdenv.mkDerivation (finalAttrs: {
     (lib.cmakeBool "ARROW_USE_SIMD" false)
   ];
 
-  __structuredAttrs = true;
-
   passthru = {
     inherit
       enableFlight
