@@ -3,6 +3,8 @@
   fetchPypi,
   buildPythonPackage,
   setuptools,
+  # dependencies
+  bitarray,
 }:
 
 buildPythonPackage rec {
@@ -16,6 +18,8 @@ buildPythonPackage rec {
   };
 
   build-system = [ setuptools ];
+
+  dependencies = [ bitarray ];
 
   pythonImportsCheck = [ "bitstring" ];
 

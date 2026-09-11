@@ -9,6 +9,7 @@
 
   # dependencies
   pycryptodome,
+  pydantic,
   requests,
   urllib3,
   websocket-client,
@@ -48,6 +49,7 @@ buildPythonPackage (finalAttrs: {
   ];
   dependencies = [
     pycryptodome
+    pydantic
     requests
     urllib3
     websocket-client

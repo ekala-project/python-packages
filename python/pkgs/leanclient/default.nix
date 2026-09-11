@@ -10,6 +10,7 @@
   orjson,
   psutil,
   tqdm,
+  watchfiles,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -30,6 +31,7 @@ buildPythonPackage (finalAttrs: {
     orjson
     psutil
     tqdm
+    watchfiles
   ];
 
   # Tests require a real Lean toolchain

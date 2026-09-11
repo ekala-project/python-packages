@@ -12,6 +12,7 @@
   natsort,
   numpy,
   pandas,
+  pydantic,
   scipy,
   scverse-misc,
   zarr,
@@ -43,6 +44,7 @@ buildPythonPackage (finalAttrs: {
     natsort
     numpy
     pandas
+    pydantic
     scipy
     scverse-misc
     zarr

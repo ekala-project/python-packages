@@ -10,6 +10,7 @@
   # dependencies
   anyio,
   httpx,
+  httpx2,
   httpx-sse,
   jsonschema,
   pydantic,
@@ -60,6 +61,7 @@ buildPythonPackage (finalAttrs: {
   dependencies = [
     anyio
     httpx
+    httpx2
     httpx-sse
     jsonschema
     pydantic

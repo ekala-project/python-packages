@@ -4,6 +4,7 @@
   buildPythonPackage,
   fetchPypi,
   gnureadline,
+  prompt-toolkit,
   pyperclip,
   rich-argparse,
   setuptools-scm,
@@ -23,6 +24,7 @@ buildPythonPackage rec {
   build-system = [ setuptools-scm ];
 
   dependencies = [
+    prompt-toolkit
     pyperclip
     rich-argparse
     wcwidth
