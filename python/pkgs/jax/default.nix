@@ -37,6 +37,8 @@ buildPythonPackage {
 
   env.JAX_RELEASE = "1";
 
+  pythonRelaxDeps = [ "jaxlib" ];
+
   dependencies = [
     jaxlib
     ml-dtypes

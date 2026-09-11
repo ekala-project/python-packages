@@ -25,6 +25,8 @@ buildPythonPackage rec {
     setuptools-scm
   ];
 
+  pythonRelaxDeps = [ "chardet" ];
+
   propagatedBuildInputs = [ chardet ];
   meta = {
     homepage = "https://github.com/thombashi/mbstrdecoder";

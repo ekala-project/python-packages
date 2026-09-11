@@ -30,6 +30,16 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-uSP8c5gid5TBenBaNVdlteHatkctAafz6yFHuIYKiTY=";
   };
 
+  # bdist_wheel spawns a subprocess that does "from distutils.util import byte_compile"
+  # which fails on Python 3.13+ (distutils removed from stdlib). Disable byte-compilation.
+  postPatch = ''
+    cat >> setup.cfg <<CFG
+    [install]
+    compile = 0
+    optimize = 0
+    CFG
+  '';
+
   build-system = [
     distutils
     setuptools

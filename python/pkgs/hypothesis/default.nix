@@ -2,6 +2,7 @@
   lib,
   buildPythonPackage,
   isPyPy,
+  python,
   fetchFromGitHub,
   attrs,
   doCheck ? true,
@@ -48,6 +49,16 @@ buildPythonPackage (finalAttrs: {
   # I wonder how upstream of "hypothesis" builds documentation.
   postPatch = ''
     sed -i -e '/sphinx_selective_exclude.eager_only/ d' docs/conf.py
+  '';
+
+  # Maturin's include glob resolution is broken with python-source = "src":
+  # it resolves "src/_hypothesis_globals.py" relative to src/ instead of
+  # the project root, resulting in src/src/... which doesn't exist.
+  # Manually install the missing top-level modules.
+  postInstall = ''
+    cp src/_hypothesis_globals.py $out/${python.sitePackages}/
+    cp src/_hypothesis_ftz_detector.py $out/${python.sitePackages}/
+    cp src/_hypothesis_pytestplugin.py $out/${python.sitePackages}/
   '';
 
   nativeBuildInputs = [

@@ -51,6 +51,14 @@ buildPythonPackage (finalAttrs: {
 
     substituteInPlace Makefile \
       --replace-fail "cythonize: .install-cython" "cythonize:"
+
+    # Fix Cython 3.3.0 crash on Final[set[int]] annotation
+    substituteInPlace aiohttp/_websocket/reader_c.py \
+      --replace-fail "ALLOWED_CLOSE_CODES: Final[set[int]] = " "ALLOWED_CLOSE_CODES = "
+
+    # Fix Cython 3.3.0 'start_pos' redeclared error
+    substituteInPlace aiohttp/_websocket/reader_c.py \
+      --replace-fail "start_pos: int = 0" "start_pos = 0"
   '';
 
   build-system = [

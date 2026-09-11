@@ -3,10 +3,10 @@
   buildPythonPackage,
   fetchFromGitHub,
   filelock,
+  flit-core,
   msgpack,
   redis,
   requests,
-  uv-build,
 }:
 
 buildPythonPackage rec {
@@ -22,10 +22,15 @@ buildPythonPackage rec {
 
   postPatch = ''
     substituteInPlace pyproject.toml \
-      --replace-fail "uv_build>=0.9.6,<0.10.0" uv_build
+      --replace-fail 'requires = ["uv_build>=0.9.6,<0.10.0"]' 'requires = ["flit_core>=3.2,<4"]' \
+      --replace-fail 'build-backend = "uv_build"' 'build-backend = "flit_core.buildapi"'
+
+    # flit-core derives module name from project name (CacheControl) but the
+    # actual module directory is lowercase "cachecontrol"
+    echo -e '\n[tool.flit.module]\nname = "cachecontrol"' >> pyproject.toml
   '';
 
-  build-system = [ uv-build ];
+  build-system = [ flit-core ];
 
   dependencies = [
     msgpack

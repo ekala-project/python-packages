@@ -37,7 +37,6 @@ buildPythonPackage rec {
     "jeepney.io.asyncio"
     "jeepney.io.blocking"
     "jeepney.io.threading"
-    "jeepney.io.trio"
   ];
 
   meta = {

@@ -2,8 +2,8 @@
   buildPythonPackage,
   fetchFromGitHub,
   lib,
+  pkgs,
   setuptools,
-  zstd,
 }:
 
 buildPythonPackage rec {
@@ -24,14 +24,16 @@ buildPythonPackage rec {
 
   postPatch = ''
     substituteInPlace setup.py \
-      --replace-fail 'ROOT_PATH / "src" / "c" / "zstd"' 'Path("${zstd.src}")'
+      --replace-fail \
+        'f.write((ROOT_PATH / "src" / "c" / "zstd" / "LICENSE").read_text())' \
+        'f.write("Using system zstd\n")'
   '';
 
   build-system = [ setuptools ];
 
   pypaBuildFlags = [ "--config-setting=--build-option=--system-zstd" ];
 
-  buildInputs = [ zstd ];
+  buildInputs = [ pkgs.zstd ];
 
   pythonImportsCheck = [ "backports.zstd" ];
 

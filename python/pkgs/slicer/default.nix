@@ -3,6 +3,7 @@
   buildPythonPackage,
   dos2unix,
   fetchPypi,
+  setuptools,
 }:
 
 buildPythonPackage rec {
@@ -20,6 +21,8 @@ buildPythonPackage rec {
   '';
 
   nativeBuildInputs = [ dos2unix ];
+
+  build-system = [ setuptools ];
   meta = {
     description = "Wraps tensor-like objects and provides a uniform slicing interface via __getitem__";
     homepage = "https://github.com/interpretml/slicer";

@@ -18,17 +18,17 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-kf2c4auQrZDGW8bM0SxOPFsR8IE4b0coevTxKWGtHp8=";
   };
 
-  patches = [
-    ../setuptools/reproducible-wheel.patch
-  ];
-
   # Drop dependency on coherent.license, which in turn requires coherent.build
   postPatch = ''
     sed -i "/coherent.licensed/d" pyproject.toml
 
-    # Substitute version for reproducible builds
-    substituteInPlace setuptools/version.py \
-      --replace-fail '@version@' '${finalAttrs.version}'
+    # Hardcode version for reproducible builds (v80 doesn't have the noqa comment
+    # that the shared reproducible-wheel.patch expects)
+    cat > setuptools/version.py <<EOF
+    # Hardcoded for reproducible builds
+    # This avoids runtime metadata queries that can vary between builds
+    __version__ = '${finalAttrs.version}'
+    EOF
   '';
 
   preBuild = lib.optionalString (!stdenv.hostPlatform.isWindows) ''

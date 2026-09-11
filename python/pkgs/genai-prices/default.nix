@@ -4,7 +4,7 @@
   fetchFromGitHub,
 
   # build-system
-  uv-build,
+  hatchling,
 
   # dependencies
   httpx2,
@@ -25,8 +25,14 @@ buildPythonPackage (finalAttrs: {
 
   sourceRoot = "${finalAttrs.src.name}/packages/python";
 
+  postPatch = ''
+    substituteInPlace pyproject.toml \
+      --replace-fail 'requires = ["uv_build>=0.8.10"]' 'requires = ["hatchling"]' \
+      --replace-fail 'build-backend = "uv_build"' 'build-backend = "hatchling.build"'
+  '';
+
   build-system = [
-    uv-build
+    hatchling
   ];
 
   dependencies = [

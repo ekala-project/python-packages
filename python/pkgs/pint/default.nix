@@ -4,6 +4,7 @@
   buildPythonPackage,
   hatchling,
   hatch-vcs,
+  typing-extensions,
 }:
 
 buildPythonPackage rec {
@@ -19,6 +20,10 @@ buildPythonPackage rec {
   build-system = [
     hatchling
     hatch-vcs
+  ];
+
+  dependencies = [
+    typing-extensions
   ];
 
   pythonRemoveDeps = [

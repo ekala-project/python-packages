@@ -28,6 +28,10 @@ buildPythonPackage (finalAttrs: {
   postPatch = ''
     substituteInPlace pyproject.toml \
       --replace-fail "Cython>=3,<3.3.0" Cython
+
+    # Fix Cython 3.3.0 'buf' redeclared error
+    substituteInPlace src/dbus_fast/_private/marshaller.py \
+      --replace-fail "buf: bytearray = self._buf" "buf = self._buf"
   '';
 
   # The project can build both an optimized cython version and an unoptimized

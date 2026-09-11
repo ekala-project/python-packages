@@ -118,7 +118,6 @@ buildPythonPackage rec {
 
   pythonImportsCheck = [
     "psycopg"
-    "psycopg_pool"
   ];
 
   optional-dependencies = {

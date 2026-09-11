@@ -40,8 +40,8 @@ buildPythonPackage (finalAttrs: {
   ];
 
   buildInputs = [
-    libxml2
-    libxslt
+    libxml2.dev
+    libxslt.dev
     zlib
   ];
 

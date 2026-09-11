@@ -2,7 +2,7 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
-  uv-build,
+  setuptools,
   pytest-cov-stub,
   multidict,
   syrupy,
@@ -20,11 +20,12 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-NY8SVEN9i8OcT8YS8887/TgLuIYAsS26me2BqGW0ubs=";
   };
 
-  build-system = [ uv-build ];
-  # nixpkgs is only at uv_build 0.10.0
+  build-system = [ setuptools ];
+
   postPatch = ''
     substituteInPlace pyproject.toml \
-      --replace-fail 'uv_build>=0.10.11,<0.11.0' 'uv_build'
+      --replace-fail 'requires = ["uv_build>=0.10.11,<0.11.0"]' 'requires = ["setuptools"]' \
+      --replace-fail 'build-backend = "uv_build"' 'build-backend = "setuptools.build_meta"'
   '';
 
   pythonImportsCheck = [ "latex2mathml" ];

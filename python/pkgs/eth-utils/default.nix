@@ -10,6 +10,7 @@
   # dependencies
   eth-hash,
   eth-typing,
+  pydantic,
   cytoolz,
   toolz,
 }:
@@ -31,6 +32,7 @@ buildPythonPackage (finalAttrs: {
   dependencies = [
     eth-hash
     eth-typing
+    pydantic
   ]
   ++ lib.optional (!isPyPy) cytoolz
   ++ lib.optional isPyPy toolz;

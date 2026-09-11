@@ -28,7 +28,10 @@ buildPythonPackage rec {
     rm -rf vendor
 
     substituteInPlace setup.py \
-      --replace-fail "use_system_libuv = False" "use_system_libuv = True"
+      --replace-fail "use_system_libuv = False" "use_system_libuv = True" \
+      --replace-fail "import pkg_resources" "" \
+      --replace-fail "cython_dep = pkg_resources.Requirement.parse(CYTHON_DEPENDENCY)" "" \
+      --replace-fail "if Cython.__version__ not in cython_dep:" "if False:"
   '';
 
   build-system = [

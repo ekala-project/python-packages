@@ -6,7 +6,7 @@
   fetchFromGitHub,
 
   # build-system
-  uv-build,
+  setuptools,
 
   # dependencies
   bumble,
@@ -32,7 +32,8 @@ buildPythonPackage (finalAttrs: {
 
   postPatch = ''
     substituteInPlace pyproject.toml \
-      --replace-fail "uv_build>=0.10.9,<0.11.0" "uv_build" \
+      --replace-fail 'requires = ["uv_build>=0.10.9,<0.11.0"]' 'requires = ["setuptools"]' \
+      --replace-fail 'build-backend = "uv_build"' 'build-backend = "setuptools.build_meta"' \
       --replace-fail "ignore:Couldn't import C tracer:coverage.exceptions.CoverageWarning" ""
   ''
   # bleak checks BlueZ's version with a call to `bluetoothctl --version`
@@ -43,7 +44,7 @@ buildPythonPackage (finalAttrs: {
         '"${lib.getExe' bluez "bluetoothctl"}"'
   '';
 
-  build-system = [ uv-build ];
+  build-system = [ setuptools ];
 
   dependencies = [
   ]

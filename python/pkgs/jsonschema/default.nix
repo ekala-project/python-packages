@@ -18,6 +18,7 @@
   jsonpointer,
   rfc3339-validator,
   rfc3986-validator,
+  rfc3987-syntax,
   uri-template,
   webcolors,
 }:
@@ -66,7 +67,7 @@ buildPythonPackage rec {
       isoduration
       jsonpointer
       rfc3339-validator
-      rfc3986-validator
+      rfc3987-syntax
       uri-template
       webcolors
     ];

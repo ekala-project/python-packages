@@ -24,7 +24,7 @@
   pyvis,
   pyyaml,
   requests,
-  spacy,
+  setuptools,
   sqlalchemy,
   tenacity,
   tinytag,
@@ -55,6 +55,7 @@ buildPythonPackage (finalAttrs: {
   '';
 
   pythonRelaxDeps = [
+    "nltk"
     "setuptools"
     "tenacity"
   ];
@@ -82,7 +83,7 @@ buildPythonPackage (finalAttrs: {
     pyvis
     pyyaml
     requests
-    spacy
+    setuptools
     sqlalchemy
     tenacity
     tinytag
