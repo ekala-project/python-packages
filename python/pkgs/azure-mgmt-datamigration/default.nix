@@ -11,13 +11,13 @@
 
 buildPythonPackage rec {
   pname = "azure-mgmt-datamigration";
-  version = "10.1.0";
+  version = "11.0.0b1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_mgmt_datamigration";
     inherit version;
-    hash = "sha256-wo748WK5RaTLUAZASjA3QcJG8DMSSeYB0V6h/c6VxUo=";
+    hash = "sha256-m0NOmFDxtl+4my5ztq55XBxbRhMWinKomG5zl5odxLo=";
   };
 
   build-system = [ setuptools ];
