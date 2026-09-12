@@ -20,10 +20,6 @@ buildPythonPackage rec {
 
   build-system = [ hatchling ];
 
-  postPatch = ''
-    substituteInPlace pyproject.toml --replace-fail 'hatchling<1.30.0' 'hatchling'
-  '';
-
   dependencies = [
     requests
   ];

@@ -25,10 +25,6 @@ buildPythonPackage (finalAttrs: {
 
   build-system = [ setuptools ];
 
-  postPatch = ''
-    substituteInPlace pyproject.toml --replace-fail 'setuptools<80' 'setuptools'
-  '';
-
   buildInputs = [
     gmp
     mpfr

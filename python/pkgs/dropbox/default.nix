@@ -3,7 +3,6 @@
   fetchPypi,
   buildPythonPackage,
   setuptools,
-  setuptools-scm,
   requests,
   stone,
 }:
@@ -18,14 +17,7 @@ buildPythonPackage rec {
     hash = "sha256-FQ6oaYFy5LTbVM0r3hnc6iuEi3dsIfum5RE0iRHwh3A=";
   };
 
-  build-system = [
-    setuptools
-    setuptools-scm
-  ];
-
-  postPatch = ''
-    substituteInPlace pyproject.toml --replace-fail 'setuptools-scm<9' 'setuptools-scm'
-  '';
+  build-system = [ setuptools ];
 
   dependencies = [
     requests

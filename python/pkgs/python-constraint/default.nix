@@ -25,10 +25,6 @@ buildPythonPackage rec {
     cython
   ];
 
-  postPatch = ''
-    substituteInPlace pyproject.toml --replace-fail 'setuptools>=84.0.0' 'setuptools'
-  '';
-
   meta = {
     description = "Constraint Solving Problem resolver for Python";
     homepage = "https://labix.org/doc/constraint/";

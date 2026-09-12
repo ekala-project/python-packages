@@ -23,11 +23,6 @@ buildPythonPackage rec {
 
   build-system = [ hatchling ];
 
-  postPatch = ''
-    substituteInPlace pyproject.toml \
-      --replace-fail "hatchling>=1.26,<1.30" hatchling
-  '';
-
   dependencies = [ typing-extensions ];
 
   pythonImportsCheck = [ "langchain_protocol" ];

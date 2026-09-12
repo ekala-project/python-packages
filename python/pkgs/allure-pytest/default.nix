@@ -23,10 +23,6 @@ buildPythonPackage rec {
 
   build-system = [ setuptools-scm ];
 
-  postPatch = ''
-    substituteInPlace pyproject.toml --replace-fail 'setuptools_scm<10' 'setuptools_scm'
-  '';
-
   buildInputs = [ pytest ];
 
   dependencies = [ allure-python-commons ];
