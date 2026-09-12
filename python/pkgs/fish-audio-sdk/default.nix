@@ -2,10 +2,7 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
-
-  # build-system
-  pdm-backend,
-
+  hatchling,
   httpx,
   httpx-ws,
   ormsgpack,
@@ -28,7 +25,7 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-Ht3lVuJE1wv+Ky/q5quhO8C4mkw6EO4LkO/wSevRUhg=";
   };
 
-  build-system = [ pdm-backend ];
+  build-system = [ hatchling ];
 
   dependencies = [
     httpx

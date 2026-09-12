@@ -2,7 +2,7 @@
   lib,
   buildPythonPackage,
   fetchPypi,
-  hatchling,
+  setuptools,
   genshi,
   lxml,
 }:
@@ -17,7 +17,7 @@ buildPythonPackage rec {
     hash = "sha256-e6CvclFrRfXR5fL2ZG1LZxTTsTRouLsDicCwvXtySGE=";
   };
 
-  build-system = [ hatchling ];
+  build-system = [ setuptools ];
 
   dependencies = [
     genshi

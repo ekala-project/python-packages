@@ -5,8 +5,8 @@
   colorama,
   fetchFromGitHub,
   git,
-  hatchling,
   jsonschema,
+  pdm-backend,
   pytest-gitconfig,
 }:
 
@@ -22,7 +22,7 @@ buildPythonPackage rec {
     hash = "sha256-AMMTAqsJfj2MltTgAxfvjUTVzi+ZFmx+J9pzhMp28Z4=";
   };
 
-  build-system = [ hatchling ];
+  build-system = [ pdm-backend ];
 
   dependencies = [ colorama ];
   optional-dependencies = {

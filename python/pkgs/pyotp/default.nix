@@ -2,7 +2,7 @@
   lib,
   buildPythonPackage,
   fetchPypi,
-  hatchling,
+  setuptools,
 }:
 
 buildPythonPackage rec {
@@ -15,7 +15,7 @@ buildPythonPackage rec {
     hash = "sha256-NGtmQuDb3eO0/1qTC2ZMqCq/oRY1btSMxCx9ZZDTb2M=";
   };
 
-  build-system = [ hatchling ];
+  build-system = [ setuptools ];
 
   pythonImportsCheck = [ "pyotp" ];
 

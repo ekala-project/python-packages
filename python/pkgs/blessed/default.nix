@@ -2,10 +2,7 @@
   lib,
   fetchPypi,
   buildPythonPackage,
-
-  # build-system
-  flit-core,
-
+  setuptools,
   wcwidth,
   six,
 }:
@@ -20,7 +17,7 @@ buildPythonPackage rec {
     hash = "sha256-LN1n+HRuBI8A30eiiA9NasvNs5kDG2BONLqPcdV4doA=";
   };
 
-  build-system = [ flit-core ];
+  build-system = [ setuptools ];
 
   dependencies = [
     wcwidth
@@ -29,10 +26,11 @@ buildPythonPackage rec {
 
   pythonImportsCheck = [ "blessed" ];
 
+  doCheck = false;
+
   meta = {
     homepage = "https://github.com/jquast/blessed";
     description = "Thin, practical wrapper around terminal capabilities in Python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

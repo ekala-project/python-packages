@@ -4,7 +4,8 @@
   fetchPypi,
 
   # build-system
-  hatchling,
+  setuptools,
+  setuptools-scm,
 }:
 
 buildPythonPackage rec {
@@ -18,7 +19,8 @@ buildPythonPackage rec {
   };
 
   build-system = [
-    hatchling
+    setuptools
+    setuptools-scm
   ];
 
   pythonImportsCheck = [ "html5tagger" ];

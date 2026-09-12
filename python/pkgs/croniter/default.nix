@@ -2,7 +2,7 @@
   lib,
   buildPythonPackage,
   fetchPypi,
-  hatchling,
+  setuptools,
   python-dateutil,
   pytz,
 }:
@@ -17,7 +17,7 @@ buildPythonPackage rec {
     hash = "sha256-N8UEsxOVYRSpg+ziwrB3kLHxCU/p2BzJRzkhR0glVXc=";
   };
 
-  build-system = [ hatchling ];
+  build-system = [ setuptools ];
 
   dependencies = [
     python-dateutil

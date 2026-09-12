@@ -3,11 +3,8 @@
   buildPythonPackage,
   fetchFromGitHub,
   graphviz,
-  meson,
-
-  # build-system
-  meson-python,
-
+  hatchling,
+  hatch-vcs,
   packaging,
   pip-requirements-parser,
   pytest-mock,
@@ -28,9 +25,10 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-EDpKJBDb3CkTMfiLyYMakbm5riIHsf+49yM99uQDPT8=";
   };
 
-  nativeBuildInputs = [ meson ];
-
-  build-system = [ meson-python ];
+  build-system = [
+    hatchling
+    hatch-vcs
+  ];
 
   dependencies = [ packaging ];
 

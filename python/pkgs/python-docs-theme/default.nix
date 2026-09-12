@@ -2,7 +2,7 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
-  hatchling,
+  flit-core,
   pythonOlder,
   sphinx,
 }:
@@ -21,7 +21,7 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-wfHon11V7fvK+PMWBY+MpxiPOyqIecRAu+rM4uONMzA=";
   };
 
-  build-system = [ hatchling ];
+  build-system = [ flit-core ];
 
   dependencies = [ sphinx ];
 

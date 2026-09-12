@@ -5,7 +5,7 @@
   pythonAtLeast,
 
   # build-system
-  pdm-backend,
+  hatchling,
 
   # dependencies
   aiohttp,
@@ -40,7 +40,7 @@ buildPythonPackage rec {
 
   sourceRoot = "${src.name}/libs/community";
 
-  build-system = [ pdm-backend ];
+  build-system = [ hatchling ];
 
   # Only needed for mixed python 3.12/3.13 builds
   pythonRelaxDeps = [

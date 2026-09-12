@@ -2,7 +2,7 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
-  hatchling,
+  setuptools,
   pytestCheckHook,
 }:
 
@@ -18,7 +18,7 @@ buildPythonPackage rec {
     hash = "sha256-T9K290seKhQLqW36EfA9kn3WveKCmyjN4Mx2j50qIEk=";
   };
 
-  build-system = [ hatchling ];
+  build-system = [ setuptools ];
 
   pythonImportsCheck = [ "language_tags" ];
 

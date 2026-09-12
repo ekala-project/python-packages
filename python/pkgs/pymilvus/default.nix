@@ -4,7 +4,9 @@
   fetchFromGitHub,
 
   # build-system
-  hatchling,
+  gitpython,
+  setuptools,
+  setuptools-scm,
 
   # dependencies
   cachetools,
@@ -14,7 +16,6 @@
   pandas,
   protobuf,
   python-dotenv,
-  setuptools,
 
   # optional-dependencies
   azure-storage-blob,
@@ -37,7 +38,9 @@ buildPythonPackage (finalAttrs: {
   };
 
   build-system = [
-    hatchling
+    gitpython
+    setuptools
+    setuptools-scm
   ];
 
   pythonRelaxDeps = [
