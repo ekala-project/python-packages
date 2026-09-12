@@ -17,6 +17,8 @@ buildPythonPackage rec {
 
   build-system = [ setuptools ];
 
+  dependencies = [ setuptools ];
+
   pythonImportsCheck = [ "pbr" ];
 
   meta = {

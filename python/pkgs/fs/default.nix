@@ -3,6 +3,7 @@
   fetchPypi,
   buildPythonPackage,
   setuptools,
+  setuptools_80,
   six,
   appdirs,
   pytz,
@@ -21,12 +22,13 @@ buildPythonPackage rec {
   build-system = [ setuptools ];
 
   postPatch = ''
-    # Remove pkg_resources.declare_namespace call that fails on Python 3.13
-    substituteInPlace fs/__init__.py \
+    # Remove pkg_resources.declare_namespace calls (unnecessary with implicit namespaces)
+    substituteInPlace fs/__init__.py fs/opener/__init__.py \
       --replace-fail '__import__("pkg_resources").declare_namespace(__name__)  # type: ignore' ""
   '';
 
   dependencies = [
+    setuptools_80 # provides pkg_resources, used by fs.opener.registry
     six
     appdirs
     pytz
