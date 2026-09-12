@@ -28,11 +28,15 @@ buildPythonPackage rec {
   '';
 
   dependencies = [
-    setuptools_80 # provides pkg_resources, used by fs.opener.registry
+    setuptools_80 # provides pkg_resources, removed from setuptools 84
     six
     appdirs
     pytz
   ];
+
+  # fs declares setuptools as a dep (for pkg_resources), but we provide setuptools_80
+  pythonRelaxDeps = [ "setuptools" ];
+  pythonRemoveDeps = [ "setuptools" ];
 
   pythonImportsCheck = [ "fs" ];
 
