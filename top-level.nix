@@ -13,6 +13,7 @@ final: prev: {
     libOnly = true;
     withConplay = false;
   };
+  poetry = with final.python3Packages; toPythonApplication poetry;
   pox = with final.python3Packages; toPythonApplication pox;
   rnc2rng = with final.python3Packages; toPythonApplication rnc2rng;
   scour = with final.python3Packages; toPythonApplication scour;
