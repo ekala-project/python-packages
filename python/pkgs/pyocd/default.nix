@@ -34,7 +34,10 @@ buildPythonPackage rec {
     hash = "sha256-4a9XfdRfd6Co33eCoW6rBA0okS2lvUoQfNwr4KnAjM8=";
   };
 
-  pythonRelaxDeps = [ "capstone" "pylink-square" ];
+  pythonRelaxDeps = [
+    "capstone"
+    "pylink-square"
+  ];
   pythonRemoveDeps = [ "libusb-package" ];
 
   build-system = [ setuptools-scm ];

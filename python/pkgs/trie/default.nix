@@ -23,7 +23,10 @@ buildPythonPackage rec {
     hash = "sha256-njjIvBYavpMKr1DsBeWzHQzeP+3ACwpItUySxMcTlNY=";
   };
 
-  build-system = [ setuptools setuptools-scm ];
+  build-system = [
+    setuptools
+    setuptools-scm
+  ];
 
   dependencies = [
     eth-hash

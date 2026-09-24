@@ -42,7 +42,8 @@ stdenv.mkDerivation (finalAttrs: {
 
   cmakeFlags = [
     "-DSPM_ABSL_PROVIDER=package"
-  ] ++ lib.optionals stdenv.hostPlatform.isDarwin [
+  ]
+  ++ lib.optionals stdenv.hostPlatform.isDarwin [
     # On Darwin, non-static build segfaults on python module import.
     # See: https://github.com/NixOS/nixpkgs/issues/466092
     "-DSPM_ENABLE_SHARED=OFF"

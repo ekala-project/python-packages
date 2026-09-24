@@ -19,7 +19,10 @@ buildPythonPackage rec {
     hash = "sha256-a13KBXZyId83EukBTc3zu1GgllsqMRS0gpYfZ29+bjQ=";
   };
 
-  build-system = [ setuptools setuptools-scm ];
+  build-system = [
+    setuptools
+    setuptools-scm
+  ];
 
   propagatedBuildInputs = [ eth-utils ];
   pythonImportsCheck = [ "rlp" ];

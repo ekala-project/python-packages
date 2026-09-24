@@ -19,16 +19,16 @@ buildPythonPackage rec {
   };
 
   postPatch = ''
-    substituteInPlace pyproject.toml \
-      --replace-fail 'requires = ["uv_build>=0.11.15,<0.12"]' 'requires = ["setuptools"]' \
-      --replace-fail 'build-backend = "uv_build"' 'build-backend = "setuptools.build_meta"'
+        substituteInPlace pyproject.toml \
+          --replace-fail 'requires = ["uv_build>=0.11.15,<0.12"]' 'requires = ["setuptools"]' \
+          --replace-fail 'build-backend = "uv_build"' 'build-backend = "setuptools.build_meta"'
 
-    # uv_build had module-name = "frontmatter"; tell setuptools where to find it
-    cat >> pyproject.toml <<'EOF'
+        # uv_build had module-name = "frontmatter"; tell setuptools where to find it
+        cat >> pyproject.toml <<'EOF'
 
-[tool.setuptools.packages.find]
-include = ["frontmatter*"]
-EOF
+    [tool.setuptools.packages.find]
+    include = ["frontmatter*"]
+    EOF
   '';
 
   build-system = [ setuptools ];

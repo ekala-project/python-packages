@@ -20,17 +20,17 @@ buildPythonPackage (finalAttrs: {
   };
 
   postPatch = ''
-    substituteInPlace pyproject.toml \
-      --replace-fail 'requires = ["uv_build>=0.9.10,<0.10.0"]' 'requires = ["hatchling"]' \
-      --replace-fail 'build-backend = "uv_build"' 'build-backend = "hatchling.build"'
+        substituteInPlace pyproject.toml \
+          --replace-fail 'requires = ["uv_build>=0.9.10,<0.10.0"]' 'requires = ["hatchling"]' \
+          --replace-fail 'build-backend = "uv_build"' 'build-backend = "hatchling.build"'
 
-    # hatchling can't auto-discover the package since the source uses a src
-    # layout with "workflows" and "llama_agents" directories
-    cat >> pyproject.toml <<'EOF'
+        # hatchling can't auto-discover the package since the source uses a src
+        # layout with "workflows" and "llama_agents" directories
+        cat >> pyproject.toml <<'EOF'
 
-[tool.hatch.build.targets.wheel]
-packages = ["src/workflows", "src/llama_agents"]
-EOF
+    [tool.hatch.build.targets.wheel]
+    packages = ["src/workflows", "src/llama_agents"]
+    EOF
   '';
 
   build-system = [ hatchling ];

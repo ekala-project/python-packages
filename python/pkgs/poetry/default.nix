@@ -40,33 +40,32 @@ buildPythonPackage rec {
 
   build-system = [ poetry-core ];
 
-  dependencies =
-    [
-      build
-      cachecontrol
-      cleo
-      dulwich
-      fastjsonschema
-      findpython
-      installer
-      keyring
-      packaging
-      pbs-installer
-      pkginfo
-      platformdirs
-      poetry-core
-      pyproject-hooks
-      requests
-      requests-toolbelt
-      shellingham
-      tomlkit
-      trove-classifiers
-      virtualenv
-    ]
-    ++ lib.optionals stdenv.hostPlatform.isDarwin [ xattr ]
-    ++ cachecontrol.optional-dependencies.filecache
-    ++ pbs-installer.optional-dependencies.download
-    ++ pbs-installer.optional-dependencies.install;
+  dependencies = [
+    build
+    cachecontrol
+    cleo
+    dulwich
+    fastjsonschema
+    findpython
+    installer
+    keyring
+    packaging
+    pbs-installer
+    pkginfo
+    platformdirs
+    poetry-core
+    pyproject-hooks
+    requests
+    requests-toolbelt
+    shellingham
+    tomlkit
+    trove-classifiers
+    virtualenv
+  ]
+  ++ lib.optionals stdenv.hostPlatform.isDarwin [ xattr ]
+  ++ cachecontrol.optional-dependencies.filecache
+  ++ pbs-installer.optional-dependencies.download
+  ++ pbs-installer.optional-dependencies.install;
 
   pythonRelaxDeps = [ "installer" ];
 

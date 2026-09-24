@@ -28,7 +28,10 @@ buildPythonPackage rec {
     pillow
     pypdfium2
   ];
-  pythonRelaxDeps = [ "pdfminer.six" "pypdfium2" ];
+  pythonRelaxDeps = [
+    "pdfminer.six"
+    "pypdfium2"
+  ];
   pythonImportsCheck = [ "pdfplumber" ];
 
   meta = {
