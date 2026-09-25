@@ -4,7 +4,7 @@
   buildPythonPackage,
   fetchFromGitHub,
   setuptools,
-  fuse3,
+  fuse,
 }:
 
 let
@@ -25,7 +25,7 @@ buildPythonPackage {
   # If fuse library path cannot be found, use fuse library path in nixpkgs
   postPatch = lib.optionalString stdenv.hostPlatform.isLinux ''
     substituteInPlace mfusepy.py \
-      --replace-fail "_libfuse_path = find_library('fuse3')" '_libfuse_path = "${lib.getLib fuse3}/lib/libfuse3.so.4"'
+      --replace-fail "_libfuse_path = find_library('fuse3')" '_libfuse_path = "${lib.getLib fuse}/lib/libfuse3.so.4"'
   '';
 
   build-system = [ setuptools ];
@@ -37,6 +37,5 @@ buildPythonPackage {
     description = "Ctypes bindings for the high-level API in libfuse 2 and 3";
     homepage = "https://github.com/mxmlnkn/mfusepy";
     license = lib.licenses.isc;
-    maintainers = [ ];
   };
 }

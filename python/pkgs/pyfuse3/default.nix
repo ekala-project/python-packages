@@ -6,7 +6,7 @@
   pkg-config,
   setuptools,
   setuptools-scm,
-  fuse3,
+  fuse,
   trio,
 }:
 
@@ -37,7 +37,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ pkg-config ];
 
-  buildInputs = [ fuse3 ];
+  buildInputs = [ fuse ];
 
   dependencies = [ trio ];
 
@@ -50,7 +50,6 @@ buildPythonPackage rec {
     description = "Python 3 bindings for libfuse 3 with async I/O support";
     homepage = "https://github.com/libfuse/pyfuse3";
     license = lib.licenses.lgpl2Plus;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 }

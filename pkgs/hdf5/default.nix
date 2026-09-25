@@ -19,7 +19,7 @@
   enableShared ? !stdenv.hostPlatform.isStatic,
   enableStatic ? stdenv.hostPlatform.isStatic,
   javaSupport ? false,
-  jdk,
+  java,
   apiVersion ? null,
   threadsafe ? false,
 }:
@@ -81,7 +81,7 @@ stdenv.mkDerivation rec {
   ++ optional fortranSupport fortran;
 
   buildInputs =
-    optional fortranSupport fortran ++ optional szipSupport libaec ++ optional javaSupport jdk;
+    optional fortranSupport fortran ++ optional szipSupport libaec ++ optional javaSupport java;
 
   propagatedBuildInputs = optional zlibSupport zlib ++ optional mpiSupport mpi;
 
@@ -133,6 +133,5 @@ stdenv.mkDerivation rec {
     license = lib.licenses.bsd3;
     homepage = "https://www.hdfgroup.org/HDF5/";
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

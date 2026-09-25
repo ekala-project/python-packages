@@ -25,7 +25,7 @@ buildPythonPackage rec {
 
   postPatch = ''
     substituteInPlace tabula/backend.py \
-      --replace-fail '"java"' '"${lib.getExe pkgs.openjdk}"'
+      --replace-fail '"java"' '"${lib.getExe pkgs.java}"'
   '';
 
   build-system = [
@@ -33,7 +33,7 @@ buildPythonPackage rec {
     setuptools-scm
   ];
 
-  buildInputs = [ pkgs.openjdk ];
+  buildInputs = [ pkgs.java ];
 
   dependencies = [
     distro
@@ -48,6 +48,5 @@ buildPythonPackage rec {
     description = "Module to extract table from PDF into pandas DataFrame";
     homepage = "https://github.com/chezou/tabula-py";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -3,7 +3,7 @@
   antlr4-python3-runtime,
   buildPythonPackage,
   fetchFromGitHub,
-  jdk,
+  java,
   pkgs,
   pyyaml,
   replaceVars,
@@ -44,7 +44,7 @@ buildPythonPackage rec {
 
   build-system = [ setuptools_80 ];
 
-  nativeBuildInputs = [ jdk ];
+  nativeBuildInputs = [ java ];
 
   dependencies = [
     antlr4-python3-runtime
@@ -57,6 +57,5 @@ buildPythonPackage rec {
     description = "Framework for configuring complex applications";
     homepage = "https://github.com/omry/omegaconf";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

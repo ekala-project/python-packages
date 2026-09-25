@@ -3,7 +3,7 @@
   buildPythonPackage,
   cython,
   fetchPypi,
-  jdk,
+  java,
 }:
 
 buildPythonPackage rec {
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   };
 
   nativeBuildInputs = [
-    jdk
+    java
     cython
   ];
 
@@ -27,6 +27,5 @@ buildPythonPackage rec {
     description = "Python module to access Java classes as Python classes using the Java Native Interface (JNI)";
     homepage = "https://github.com/kivy/pyjnius";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

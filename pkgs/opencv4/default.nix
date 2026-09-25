@@ -46,7 +46,7 @@
   enableGtk3 ? false,
   enableVtk ? false,
   enableFfmpeg ? true,
-  ffmpeg-headless,
+  ffmpeg,
   elfutils,
   libunwind,
   zstd,
@@ -313,7 +313,7 @@ stdenv.mkDerivation {
     openjpeg
   ]
   ++ optionals enableFfmpeg [
-    ffmpeg-headless
+    ffmpeg.headless
   ]
   ++ optionals enableEigen [
     eigen
@@ -435,7 +435,6 @@ stdenv.mkDerivation {
     description = "Open Computer Vision Library with more than 500 algorithms";
     homepage = "https://opencv.org/";
     license = if enableUnfree then lib.licenses.unfree else lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

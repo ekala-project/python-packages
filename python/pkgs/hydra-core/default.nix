@@ -12,7 +12,7 @@
   pkgs,
 
   # nativeBuildInputs
-  jdk,
+  java,
 
   # dependencies
   antlr4-python3-runtime,
@@ -55,7 +55,7 @@ buildPythonPackage (finalAttrs: {
     setuptools
   ];
 
-  nativeBuildInputs = [ jdk ];
+  nativeBuildInputs = [ java ];
 
   pythonRelaxDeps = [
     "antlr4-python3-runtime"
@@ -76,6 +76,5 @@ buildPythonPackage (finalAttrs: {
     description = "Framework for configuring complex applications";
     homepage = "https://hydra.cc";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

@@ -1,7 +1,7 @@
 {
   buildPythonPackage,
   fetchFromGitHub,
-  libmysqlclient,
+  mariadb-connector-c,
   packaging,
   lib,
   setuptools,
@@ -22,10 +22,10 @@ buildPythonPackage rec {
   build-system = [ setuptools ];
 
   nativeBuildInputs = [
-    libmysqlclient # for mariadb_config
+    mariadb-connector-c # for mariadb_config
   ];
 
-  buildInputs = [ libmysqlclient ];
+  buildInputs = [ mariadb-connector-c ];
 
   dependencies = [
     packaging # do not rely on pythonImportsCheck when removing, it pulls in build-system dependencies
@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "MariaDB Connector/Python";
     homepage = "https://github.com/mariadb-corporation/mariadb-connector-python";
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
   };
 }

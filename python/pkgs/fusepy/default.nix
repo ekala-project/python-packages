@@ -26,7 +26,7 @@ buildPythonPackage (finalAttrs: {
 
   build-system = [ setuptools ];
 
-  dependencies = [ pkgs.fuse3 ];
+  dependencies = [ pkgs.fuse ];
 
   # No tests included
   doCheck = false;

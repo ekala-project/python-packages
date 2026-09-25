@@ -6,7 +6,7 @@
   ninja,
   scikit-build-core,
   ant,
-  openjdk,
+  java,
   packaging,
   pyinstaller,
 }:
@@ -29,7 +29,7 @@ buildPythonPackage rec {
     cmake
     ninja
     ant
-    openjdk
+    java
   ];
 
   dontUseCmakeConfigure = true;

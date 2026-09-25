@@ -2,7 +2,7 @@
   lib,
   buildPythonPackage,
   fetchPypi,
-  libmysqlclient,
+  mariadb-connector-c,
   pkg-config,
 }:
 
@@ -13,7 +13,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ pkg-config ];
 
-  buildInputs = [ libmysqlclient ];
+  buildInputs = [ mariadb-connector-c ];
 
   # Tests need a MySQL database
   src = fetchPypi {

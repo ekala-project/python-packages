@@ -5,7 +5,7 @@
   fetchFromGitHub,
   uv-build,
   go,
-  ffmpeg-headless,
+  ffmpeg,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -29,7 +29,7 @@ buildPythonPackage (finalAttrs: {
     substituteInPlace ffmpy/ffmpy.py \
       --replace-fail \
         'executable: str = "ffmpeg",' \
-        'executable: str = "${lib.getExe ffmpeg-headless}",'
+        'executable: str = "${lib.getExe ffmpeg.headless}",'
   ''
   # The tests test a mock that does not behave like ffmpeg. If we default to the nix-store ffmpeg they fail.
   + ''
@@ -51,6 +51,5 @@ buildPythonPackage (finalAttrs: {
     description = "Simple python interface for FFmpeg/FFprobe";
     homepage = "https://github.com/Ch00k/ffmpy";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

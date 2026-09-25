@@ -11,7 +11,7 @@
   pkg-config,
 
   # buildInputs
-  ffmpeg-headless,
+  ffmpeg,
 
   # dependencies
 
@@ -41,7 +41,7 @@ buildPythonPackage (finalAttrs: {
 
   nativeBuildInputs = [ pkg-config ];
 
-  buildInputs = [ ffmpeg-headless ];
+  buildInputs = [ ffmpeg.headless ];
 
   preCheck =
     let
@@ -82,6 +82,5 @@ buildPythonPackage (finalAttrs: {
     mainProgram = "pyav";
     homepage = "https://github.com/PyAV-Org/PyAV";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 })

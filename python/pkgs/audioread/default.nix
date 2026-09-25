@@ -5,7 +5,7 @@
   poetry-core,
   standard-aifc,
   standard-sunau,
-  ffmpeg-headless,
+  ffmpeg,
 }:
 
 buildPythonPackage (finalAttrs: {
