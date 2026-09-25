@@ -6,7 +6,10 @@ let
   pythonOverlay = lib.packageSets.mkAutoCalledPackageDir ./python/pkgs;
   pythonOverrides = import ./python-packages.nix;
   pkgsOverlay = import ./top-level.nix;
-  pkgs = import pins.core { modules = [ (import ./pkgs-module.nix) ]; };
+  pkgs = import pins.core {
+    modules = [ (import ./pkgs-module.nix) ];
+    config.allowAliases = false;
+  };
   mkProjection = overlay: base: lib.fix (self: base // overlay self base);
 
   # Python packages from overlay
