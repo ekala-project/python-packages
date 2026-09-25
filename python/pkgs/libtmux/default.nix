@@ -8,7 +8,6 @@
   procps,
   pytest-rerunfailures,
   pytest-xdist,
-  tmux,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -52,6 +51,5 @@ buildPythonPackage (finalAttrs: {
     description = "Typed scripting library / ORM / API wrapper for tmux";
     homepage = "https://libtmux.git-pull.com/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

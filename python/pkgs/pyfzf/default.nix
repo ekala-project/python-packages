@@ -2,7 +2,6 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
-  fzf,
 }:
 
 buildPythonPackage rec {
@@ -17,8 +16,6 @@ buildPythonPackage rec {
     hash = "sha256-w+ZjQGFd/lR2TiTHc2uQSJXORmzJJZXsr9BO4PIw/Co=";
   };
 
-  propagatedBuildInputs = [ fzf ];
-
   pythonImportsCheck = [ "pyfzf" ];
 
   # Module has no tests
@@ -27,6 +24,5 @@ buildPythonPackage rec {
     description = "Wrapper for fzf";
     homepage = "https://github.com/nk412/pyfzf";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

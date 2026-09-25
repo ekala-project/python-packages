@@ -31,7 +31,6 @@
   filelock,
   pytest-xdist,
   pytestCheckHook,
-  nixosTests,
 }:
 
 buildPythonPackage rec {
@@ -148,6 +147,5 @@ buildPythonPackage rec {
     downloadPage = "https://github.com/python/mypy";
     license = lib.licenses.mit;
     mainProgram = "mypy";
-    maintainers = [ ];
   };
 }

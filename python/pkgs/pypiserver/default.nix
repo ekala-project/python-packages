@@ -1,7 +1,6 @@
 {
   lib,
   buildPythonPackage,
-  distutils,
   fetchFromGitHub,
   passlib,
   pip,
@@ -36,7 +35,7 @@ buildPythonPackage rec {
   ];
 
   dependencies = [
-    distutils
+    setuptools
     pip
   ]
   ++ lib.optionals (pythonOlder "3.12") [ importlib-resources ];
@@ -54,7 +53,6 @@ buildPythonPackage rec {
       mit
       zlib
     ];
-    maintainers = [ ];
     mainProgram = "pypi-server";
   };
 }

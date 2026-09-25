@@ -8,7 +8,6 @@
   twisted,
   autobahn,
   treq,
-  nixosTests,
   pytestCheckHook,
 }:
 
@@ -50,6 +49,5 @@ buildPythonPackage (finalAttrs: {
     description = "Securely transfer data between computers";
     homepage = "https://github.com/magic-wormhole/magic-wormhole-mailbox-server";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

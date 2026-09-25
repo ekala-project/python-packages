@@ -5,7 +5,6 @@
   # build-system
   setuptools,
   # dependencies
-  distutils,
   h5py,
   numpy,
   qtpy,
@@ -32,7 +31,6 @@ buildPythonPackage rec {
   ];
 
   dependencies = [
-    distutils
     h5py
     numpy
     qtpy
@@ -46,6 +44,5 @@ buildPythonPackage rec {
     description = "Python library generating graphical user interfaces for easy dataset editing and display";
     homepage = "https://github.com/PlotPyStack/guidata";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

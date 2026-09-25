@@ -20,7 +20,6 @@
   tomli,
   twisted,
   setuptools,
-  distutils,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -38,7 +37,6 @@ buildPythonPackage (finalAttrs: {
   pythonRelaxDeps = [ "geomet" ];
 
   build-system = [
-    distutils
     setuptools
     cython
     tomli
@@ -66,6 +64,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python client driver for Apache Cassandra";
     homepage = "https://github.com/apache/cassandra-python-driver";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

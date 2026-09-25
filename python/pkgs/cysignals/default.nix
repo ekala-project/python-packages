@@ -5,9 +5,6 @@
   cython,
   meson-python,
   ninja,
-
-  # Reverse dependency
-  sage,
 }:
 
 buildPythonPackage rec {
@@ -42,7 +39,6 @@ buildPythonPackage rec {
     description = "Interrupt and signal handling for Cython";
     mainProgram = "cysignals-CSI";
     homepage = "https://github.com/sagemath/cysignals/";
-    teams = [ ];
     license = lib.licenses.lgpl3Plus;
   };
 }

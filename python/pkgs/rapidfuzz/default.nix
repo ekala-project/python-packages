@@ -4,14 +4,11 @@
   buildPythonPackage,
   fetchFromGitHub,
   fetchpatch,
-  clang-tools,
   cmake,
   cython,
   ninja,
   scikit-build-core,
   numpy,
-  rapidfuzz-cpp,
-  taskflow,
 }:
 
 buildPythonPackage rec {
@@ -45,17 +42,9 @@ buildPythonPackage rec {
     cython
     ninja
     scikit-build-core
-  ]
-  ++ lib.optionals stdenv.cc.isClang [
-    clang-tools # provides wrapped clang-scan-deps
   ];
 
   dontUseCmakeConfigure = true;
-
-  buildInputs = [
-    rapidfuzz-cpp
-    taskflow
-  ];
 
   env.RAPIDFUZZ_BUILD_EXTENSION = 1;
 
@@ -77,6 +66,5 @@ buildPythonPackage rec {
     description = "Rapid fuzzy string matching";
     homepage = "https://github.com/maxbachmann/RapidFuzz";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

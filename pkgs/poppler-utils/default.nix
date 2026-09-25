@@ -3,7 +3,6 @@
   stdenv,
   fetchurl,
   cairo,
-  clang-tools,
   cmake,
   boost,
   curl,
@@ -47,9 +46,6 @@ stdenv.mkDerivation (finalAttrs: {
     pkg-config
     python3
     glib # for glib-mkenums
-  ]
-  ++ lib.optionals stdenv.cc.isClang [
-    clang-tools
   ];
 
   buildInputs = [
@@ -99,7 +95,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.all;
-    maintainers = [ ];
     pkgConfigModules = [
       "poppler"
       "poppler-cpp"

@@ -5,7 +5,6 @@
   fetchFromGitHub,
   replaceVars,
   gdb,
-  lldb,
   setuptools,
 }:
 
@@ -26,17 +25,11 @@ buildPythonPackage rec {
     hash = "sha256-7XM476tfL6QLCHB1kwlbN/dmlgnjuTE+ulQ9yOHfgEE=";
   };
 
-  patches =
-    lib.optionals stdenv.hostPlatform.isLinux [
-      (replaceVars ./hardcode-gdb.patch {
-        inherit gdb;
-      })
-    ]
-    ++ lib.optionals stdenv.hostPlatform.isDarwin [
-      (replaceVars ./hardcode-lldb.patch {
-        inherit lldb;
-      })
-    ];
+  patches = lib.optionals stdenv.hostPlatform.isLinux [
+    (replaceVars ./hardcode-gdb.patch {
+      inherit gdb;
+    })
+  ];
 
   preBuild = ''
     (

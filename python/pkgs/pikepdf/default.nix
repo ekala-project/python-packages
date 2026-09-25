@@ -2,7 +2,6 @@
   lib,
   stdenv,
   buildPythonPackage,
-  clang-tools,
   cmake,
   fetchFromGitHub,
   jbig2dec,
@@ -46,9 +45,6 @@ buildPythonPackage (finalAttrs: {
     nanobind
     ninja
     scikit-build-core
-  ]
-  ++ lib.optionals stdenv.cc.isClang [
-    clang-tools
   ];
 
   dontUseCmakeConfigure = true;
@@ -66,6 +62,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://github.com/pikepdf/pikepdf";
     description = "Read and write PDFs with Python, powered by qpdf";
     license = lib.licenses.mpl20;
-    maintainers = [ ];
   };
 })

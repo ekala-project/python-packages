@@ -5,7 +5,6 @@
   setuptools,
   six,
   pythonAtLeast,
-  distutils,
 }:
 
 buildPythonPackage rec {
@@ -28,7 +27,7 @@ buildPythonPackage rec {
     six
   ]
   ++ lib.optionals (pythonAtLeast "3.12") [
-    distutils
+    setuptools
   ];
 
   pythonImportsCheck = [ "dockerpycreds" ];
@@ -40,6 +39,5 @@ buildPythonPackage rec {
     description = "Python bindings for the docker credentials store API";
     homepage = "https://github.com/shin-/dockerpy-creds";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

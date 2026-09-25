@@ -6,7 +6,6 @@
   cython,
   ninja,
   scikit-build-core,
-  rapidfuzz-cpp,
   rapidfuzz,
 }:
 
@@ -28,8 +27,6 @@ buildPythonPackage rec {
     ninja
     scikit-build-core
   ];
-
-  buildInputs = [ rapidfuzz-cpp ];
 
   dependencies = [ rapidfuzz ];
 

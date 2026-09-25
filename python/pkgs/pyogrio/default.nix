@@ -2,7 +2,6 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
-  gdal,
 
   # build-system
   cython,
@@ -41,12 +40,6 @@ buildPythonPackage (finalAttrs: {
     versioneer
   ];
 
-  nativeBuildInputs = [
-    gdal # for gdal-config
-  ];
-
-  buildInputs = [ gdal ];
-
   dependencies = [
     certifi
     numpy
@@ -62,6 +55,5 @@ buildPythonPackage (finalAttrs: {
     description = "Vectorized spatial vector file format I/O using GDAL/OGR";
     homepage = "https://pyogrio.readthedocs.io/";
     license = lib.licenses.mit;
-    teams = [ ];
   };
 })

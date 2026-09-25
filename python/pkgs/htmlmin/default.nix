@@ -3,7 +3,6 @@
   buildPythonPackage,
   fetchPypi,
   setuptools,
-  standard-cgi,
 }:
 
 buildPythonPackage rec {
@@ -20,10 +19,6 @@ buildPythonPackage rec {
     setuptools
   ];
 
-  dependencies = [
-    standard-cgi
-  ];
-
   # pypi tarball does not contain tests
 
   meta = {
@@ -31,6 +26,5 @@ buildPythonPackage rec {
     mainProgram = "htmlmin";
     homepage = "https://github.com/mankyd/htmlmin";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

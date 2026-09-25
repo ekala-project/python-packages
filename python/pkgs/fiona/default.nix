@@ -5,7 +5,6 @@
 
   # build-system
   cython,
-  gdal,
   setuptools,
 
   # dependencies
@@ -51,11 +50,8 @@ buildPythonPackage (finalAttrs: {
 
   build-system = [
     cython
-    gdal # for gdal-config
     setuptools
   ];
-
-  buildInputs = [ gdal ];
 
   dependencies = [
     attrs
@@ -85,6 +81,5 @@ buildPythonPackage (finalAttrs: {
     mainProgram = "fio";
     homepage = "https://fiona.readthedocs.io/";
     license = lib.licenses.bsd3;
-    teams = [ ];
   };
 })

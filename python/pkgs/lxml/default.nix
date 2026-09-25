@@ -13,7 +13,6 @@
   libxml2,
   libxslt,
   zlib,
-  xcodebuild,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -31,8 +30,7 @@ buildPythonPackage (finalAttrs: {
   build-system = [
     cython
     setuptools
-  ]
-  ++ lib.optionals stdenv.hostPlatform.isDarwin [ xcodebuild ];
+  ];
 
   # required for build time dependency check
   nativeBuildInputs = [
@@ -61,6 +59,5 @@ buildPythonPackage (finalAttrs: {
     description = "Pythonic binding for the libxml2 and libxslt libraries";
     homepage = "https://lxml.de";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

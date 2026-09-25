@@ -5,7 +5,6 @@
   setuptools,
   six,
   twisted,
-  nixosTests,
 }:
 
 buildPythonPackage rec {
@@ -30,12 +29,9 @@ buildPythonPackage rec {
 
   pythonImportsCheck = [ "txredisapi" ];
 
-  passthru.tests.unit-tests = nixosTests.txredisapi;
-
   meta = {
     homepage = "https://github.com/IlyaSkriblovsky/txredisapi";
     description = "Non-blocking redis client for python";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

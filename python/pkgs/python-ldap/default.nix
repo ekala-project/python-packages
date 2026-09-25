@@ -4,7 +4,6 @@
   fetchFromGitHub,
 
   # build-system
-  distutils,
   setuptools,
 
   # native dependencies
@@ -38,7 +37,6 @@ buildPythonPackage (finalAttrs: {
   '';
 
   build-system = [
-    distutils
     setuptools
   ];
 
@@ -56,6 +54,5 @@ buildPythonPackage (finalAttrs: {
     downloadPage = "https://github.com/python-ldap/python-ldap";
     homepage = "https://www.python-ldap.org/";
     license = lib.licenses.psfl;
-    maintainers = [ ];
   };
 })

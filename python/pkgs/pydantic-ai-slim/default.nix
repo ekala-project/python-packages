@@ -2,9 +2,6 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
-  nix-update,
-  writeShellApplication,
-
   # build-system
   hatchling,
   uv-dynamic-versioning,
@@ -55,22 +52,9 @@ buildPythonPackage (finalAttrs: {
 
   doCheck = false;
 
-  passthru.updateScript = lib.getExe (writeShellApplication {
-    name = "pydantic-ai-updater";
-    runtimeInputs = [
-      nix-update
-    ];
-    text = ''
-      nix-update --build --commit python3Packages.genai-prices
-      nix-update --build --commit python3Packages.pydantic-graph
-      nix-update --build python3Packages.pydantic-ai-slim
-    '';
-  });
-
   meta = {
     description = "GenAI Agent Framework, the Pydantic way";
     homepage = "https://github.com/pydantic/pydantic-ai";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

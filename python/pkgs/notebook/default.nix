@@ -6,9 +6,8 @@
 
   # nativeBuildInputs
   nodejs,
+  setuptools,
   yarn-berry_3,
-  distutils,
-
   # build-system
   hatch-jupyter-builder,
   hatchling,
@@ -43,7 +42,7 @@ buildPythonPackage rec {
     yarn-berry_3.yarnBerryConfigHook
   ]
   ++ lib.optionals (stdenv.hostPlatform.isLinux && stdenv.hostPlatform.isAarch64) [
-    distutils
+    setuptools
   ];
 
   missingHashes = ./missing-hashes.json;
@@ -76,7 +75,6 @@ buildPythonPackage rec {
     description = "Web-based notebook environment for interactive computing";
     homepage = "https://github.com/jupyter/notebook";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     mainProgram = "jupyter-notebook";
   };
 }

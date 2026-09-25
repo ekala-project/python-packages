@@ -6,8 +6,6 @@
   # build-system
   setuptools,
 
-  # dependencies
-  distutils,
 }:
 
 buildPythonPackage rec {
@@ -24,7 +22,7 @@ buildPythonPackage rec {
 
   build-system = [ setuptools ];
 
-  dependencies = [ distutils ];
+  dependencies = [ setuptools ];
 
   pythonImportsCheck = [ "GPUtil" ];
 
@@ -32,6 +30,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/anderskm/gputil";
     license = lib.licenses.mit;
     description = "Getting GPU status from NVIDA GPUs using nvidia-smi";
-    maintainers = [ ];
   };
 }

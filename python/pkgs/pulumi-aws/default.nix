@@ -3,7 +3,6 @@
   buildPythonPackage,
   fetchFromGitHub,
   parver,
-  pulumi,
   semver,
   setuptools,
 }:
@@ -35,7 +34,6 @@ buildPythonPackage rec {
 
   dependencies = [
     parver
-    pulumi
     semver
   ];
 
@@ -48,6 +46,5 @@ buildPythonPackage rec {
     description = "Pulumi python amazon web services provider";
     homepage = "https://github.com/pulumi/pulumi-aws";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

@@ -3,7 +3,6 @@
   buildPythonPackage,
   catkin-pkg,
   distro,
-  distutils,
   fetchFromGitHub,
   pyyaml,
   setuptools,
@@ -28,7 +27,7 @@ buildPythonPackage rec {
   dependencies = [
     catkin-pkg
     distro
-    distutils
+    setuptools
     pyyaml
   ];
 
@@ -38,6 +37,5 @@ buildPythonPackage rec {
     description = "ROS package library for Python";
     homepage = "http://wiki.ros.org/rospkg";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

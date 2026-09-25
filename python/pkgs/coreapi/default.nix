@@ -8,7 +8,6 @@
   itypes,
   uritemplate,
   requests,
-  standard-cgi,
 }:
 
 buildPythonPackage rec {
@@ -31,13 +30,11 @@ buildPythonPackage rec {
     itypes
     uritemplate
     requests
-    standard-cgi
   ];
 
   meta = {
     description = "Python client library for Core API";
     homepage = "https://github.com/core-api/python-client";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }
