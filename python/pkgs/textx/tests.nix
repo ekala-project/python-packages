@@ -50,7 +50,7 @@ buildPythonPackage {
   ];
 
   meta = {
-    inherit (textx.meta) license maintainers;
+    inherit (textx.meta) license;
     description = "passthru.tests for textx";
     homepage = textx.homepage + "tree/${textx.version}/" + "tests/";
   };

@@ -41,6 +41,5 @@ buildPythonPackage {
     description = "Pytest plugin for pook";
     homepage = "https://git.sr.ht/~sara/pytest-pook";
     license = lib.licenses.lgpl3Only;
-    maintainers = pook.meta.maintainers;
   };
 }

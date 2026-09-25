@@ -48,7 +48,6 @@ let
       mainProgram = "textx";
       homepage = "https://github.com/textx/textx/";
       license = lib.licenses.mit;
-      maintainers = [ ];
     };
   };
 
@@ -69,7 +68,7 @@ let
     ];
 
     meta = {
-      inherit (textx.meta) license maintainers;
+      inherit (textx.meta) license;
       description = "Sample textX language for testing";
       homepage = textx.meta.homepage + "tree/${version}/" + pathToSourceRoot;
     };
@@ -92,7 +91,7 @@ let
     ];
 
     meta = {
-      inherit (textx.meta) license maintainers;
+      inherit (textx.meta) license;
       description = "Sample textX language for testing";
       homepage = textx.meta.homepage + "tree/${version}/" + pathToSourceRoot;
     };
@@ -112,7 +111,7 @@ let
     dependencies = [ textx ];
 
     meta = {
-      inherit (textx.meta) license maintainers;
+      inherit (textx.meta) license;
       description = "Sample textX language for testing";
       homepage = textx.meta.homepage + "tree/${version}/" + pathToSourceRoot;
     };
@@ -132,7 +131,7 @@ let
     dependencies = [ textx ];
 
     meta = {
-      inherit (textx.meta) license maintainers;
+      inherit (textx.meta) license;
       description = "Sample textX language for testing";
       homepage = textx.meta.homepage + "tree/${version}/" + pathToSourceRoot;
     };
@@ -152,7 +151,7 @@ let
     dependencies = [ textx ];
 
     meta = {
-      inherit (textx.meta) license maintainers;
+      inherit (textx.meta) license;
       description = "Sample textX sub-command for testing";
       homepage = textx.meta.homepage + "tree/${version}/" + pathToSourceRoot;
     };

@@ -30,8 +30,6 @@ buildPythonPackage rec {
       description
       homepage
       license
-      changelog
       ;
-    maintainers = [ ];
   };
 }

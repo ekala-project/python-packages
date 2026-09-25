@@ -50,9 +50,8 @@ buildPythonPackage (finalAttrs: {
   pytestFlags = [ "-pno:cacheprovider" ];
 
   meta = {
-    inherit (hydra-core.meta) changelog license;
+    inherit (hydra-core.meta) license;
     description = "Hydra launcher supporting parallel execution based on Joblib.Parallel";
     homepage = "https://hydra.cc/docs/plugins/joblib_launcher";
-    maintainers = [ ];
   };
 })

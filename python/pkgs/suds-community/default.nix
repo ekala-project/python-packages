@@ -9,6 +9,6 @@ mkPythonMetaPackage {
   dependencies = [ suds ];
   optional-dependencies = suds.optional-dependencies or { };
   meta = {
-    inherit (suds.meta) changelog description homepage;
+    inherit (suds.meta) description homepage;
   };
 }

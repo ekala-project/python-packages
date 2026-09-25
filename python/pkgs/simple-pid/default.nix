@@ -26,12 +26,11 @@ buildPythonPackage (finalAttrs: {
     "simple_pid"
   ];
 
-  doCheck = !stdenv.isDarwin;
+  doCheck = !stdenv.hostPlatform.isDarwin;
 
   meta = {
     description = "A simple and easy to use PID controller in Python";
     homepage = "https://github.com/m-lundberg/simple-pid";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })
