@@ -23,6 +23,5 @@ buildPythonPackage rec {
     description = "Enhancements to Python's distutils";
     homepage = "https://launchpad.net/python-distutils-extra";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
   };
 }

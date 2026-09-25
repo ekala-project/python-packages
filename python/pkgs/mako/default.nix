@@ -46,6 +46,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://www.makotemplates.org/";
     license = lib.licenses.mit;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

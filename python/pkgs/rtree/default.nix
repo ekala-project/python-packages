@@ -37,7 +37,5 @@ buildPythonPackage rec {
     description = "R-Tree spatial index for Python GIS";
     homepage = "https://github.com/Toblerity/rtree";
     license = lib.licenses.mit;
-    maintainers = [ ];
-    teams = [ ];
   };
 }

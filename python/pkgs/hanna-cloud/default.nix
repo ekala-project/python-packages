@@ -35,6 +35,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python client for the HannaCloud API";
     homepage = "https://github.com/bestycame/hanna_cloud";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

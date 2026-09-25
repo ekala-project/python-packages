@@ -57,7 +57,6 @@ buildPythonPackage rec {
     description = "Python bindings for Subversion";
     homepage = "https://pysvn.sourceforge.io/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     # g++: command not found
     broken = stdenv.hostPlatform.isDarwin;
   };

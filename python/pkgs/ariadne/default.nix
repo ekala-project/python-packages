@@ -61,6 +61,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python library for implementing GraphQL servers using schema-first approach";
     homepage = "https://ariadnegraphql.org";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

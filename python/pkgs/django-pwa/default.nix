@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "Django app to include a manifest.json and Service Worker instance to enable progressive web app behavior";
     homepage = "https://github.com/silviolleite/django-pwa";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

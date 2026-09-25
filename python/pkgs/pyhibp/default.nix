@@ -29,6 +29,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python interface to Troy Hunt's 'Have I Been Pwned?' public API";
     homepage = "https://gitlab.com/kitsunix/pyHIBP/pyHIBP";
     license = lib.licenses.agpl3Plus;
-    maintainers = [ ];
   };
 })

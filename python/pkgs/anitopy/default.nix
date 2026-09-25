@@ -21,6 +21,5 @@ buildPythonPackage rec {
     description = "Python library for parsing anime video filenames";
     homepage = "https://github.com/igorcmoura/anitopy";
     license = lib.licenses.mpl20;
-    maintainers = [ ];
   };
 }

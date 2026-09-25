@@ -36,6 +36,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://github.com/sdague/arwn-client";
     license = lib.licenses.asl20;
     mainProgram = "arwn-client";
-    maintainers = [ ];
   };
 })

@@ -63,6 +63,5 @@ buildPythonPackage rec {
     description = "Declarative User Interfaces for Python";
     homepage = "https://github.com/nucleic/enaml";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

@@ -42,6 +42,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python support for higher level Datagram";
     homepage = "https://github.com/jsbronder/asyncio-dgram";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

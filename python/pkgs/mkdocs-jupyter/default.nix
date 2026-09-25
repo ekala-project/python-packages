@@ -58,6 +58,5 @@ buildPythonPackage rec {
     description = "Use Jupyter Notebook in mkdocs";
     homepage = "https://github.com/danielfrg/mkdocs-jupyter";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

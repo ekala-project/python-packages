@@ -47,6 +47,5 @@ buildPythonPackage (finalAttrs: {
     description = "Azure plugin for dvc";
     homepage = "https://pypi.org/project/dvc-azure/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

@@ -21,7 +21,6 @@ buildPythonPackage rec {
   meta = {
     description = "Python dependency injection framework, inspired by Guice";
     homepage = "https://github.com/alecthomas/injector";
-    maintainers = [ ];
     license = lib.licenses.bsd3;
   };
 }

@@ -23,6 +23,5 @@ buildPythonPackage rec {
     mainProgram = "pytail";
     homepage = "https://github.com/six8/pytailer";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

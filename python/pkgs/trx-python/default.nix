@@ -42,6 +42,5 @@ buildPythonPackage rec {
     description = "Python implementation of the TRX file format";
     homepage = "https://github.com/tee-ar-ex/trx-python";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

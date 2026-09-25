@@ -36,6 +36,5 @@ buildPythonPackage (finalAttrs: {
     mainProgram = "cart";
     homepage = "https://github.com/CybercentreCanada/cart";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

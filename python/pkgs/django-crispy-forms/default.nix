@@ -32,6 +32,5 @@ buildPythonPackage (finalAttrs: {
     description = "Best way to have DRY Django forms";
     homepage = "https://django-crispy-forms.readthedocs.io/en/latest/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

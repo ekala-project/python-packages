@@ -53,6 +53,5 @@ buildPythonPackage rec {
     description = "Backend data caching and persistence daemon for Graphite";
     homepage = "https://github.com/graphite-project/carbon";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

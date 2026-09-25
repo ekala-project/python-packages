@@ -33,6 +33,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python SDK for CloudEvents";
     homepage = "https://github.com/cloudevents/sdk-python";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

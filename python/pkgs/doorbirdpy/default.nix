@@ -41,6 +41,5 @@ buildPythonPackage rec {
     description = "Python wrapper for the DoorBird LAN API";
     homepage = "https://gitlab.com/klikini/doorbirdpy";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

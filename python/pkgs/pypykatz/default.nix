@@ -41,7 +41,6 @@ buildPythonPackage rec {
     description = "Mimikatz implementation in Python";
     homepage = "https://github.com/skelsec/pypykatz";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "pypykatz";
   };
 }

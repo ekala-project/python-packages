@@ -42,6 +42,5 @@ buildPythonPackage rec {
     description = "APScheduler support for Flask";
     homepage = "https://github.com/viniciuschiele/flask-apscheduler";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

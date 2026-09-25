@@ -51,7 +51,6 @@ buildPythonPackage rec {
     description = "Python ORM with support for various database implementation";
     homepage = "http://peewee-orm.com";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "pwiz.py";
   };
 }

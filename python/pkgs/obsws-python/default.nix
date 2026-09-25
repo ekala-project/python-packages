@@ -31,6 +31,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python SDK for OBS Studio WebSocket v5.0";
     homepage = "https://github.com/aatikturk/obsws-python";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 })

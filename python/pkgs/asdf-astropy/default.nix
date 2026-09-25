@@ -64,6 +64,5 @@ buildPythonPackage (finalAttrs: {
     description = "Extension library for ASDF to provide support for Astropy";
     homepage = "https://github.com/astropy/asdf-astropy";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

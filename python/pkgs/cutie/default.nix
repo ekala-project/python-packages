@@ -53,6 +53,5 @@ buildPythonPackage (finalAttrs: {
     description = "Command line User Tools for Input Easification";
     homepage = "https://github.com/kamik423/cutie";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

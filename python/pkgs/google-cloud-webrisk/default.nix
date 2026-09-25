@@ -53,6 +53,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python Client for Web Risk";
     homepage = "https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-webrisk";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

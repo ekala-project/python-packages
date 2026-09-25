@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Python function for condensing JSON using replacement strings";
     homepage = "https://github.com/simonw/condense-json";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

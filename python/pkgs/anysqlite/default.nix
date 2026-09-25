@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Sqlite3 for asyncio and trio";
     homepage = "https://github.com/karpetrosyan/anysqlite";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

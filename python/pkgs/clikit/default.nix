@@ -43,6 +43,5 @@ buildPythonPackage rec {
     description = "Group of utilities to build beautiful and testable command line interfaces";
     homepage = "https://github.com/sdispater/clikit";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

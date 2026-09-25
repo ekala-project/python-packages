@@ -45,6 +45,5 @@ buildPythonPackage rec {
     # Contradictory license specifications
     # https://github.com/jmrivas86/django-json-widget/issues/93
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -54,6 +54,5 @@ buildPythonPackage rec {
     description = "Python interface to the QDLDL";
     homepage = "https://github.com/osqp/qdldl-python";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

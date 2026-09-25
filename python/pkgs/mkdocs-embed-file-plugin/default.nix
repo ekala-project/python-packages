@@ -58,7 +58,6 @@ buildPythonPackage (finalAttrs: {
       agpl3Only
       agpl3Plus
     ];
-    maintainers = [ ];
     mainProgram = "mkdocs-embed-file-plugin";
   };
 })

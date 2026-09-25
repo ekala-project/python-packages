@@ -43,6 +43,5 @@ buildPythonPackage (finalAttrs: {
     description = "Automatic documentation from sources for MkDocs";
     homepage = "https://github.com/mkdocstrings/mkdocstrings";
     license = lib.licenses.isc;
-    maintainers = [ ];
   };
 })

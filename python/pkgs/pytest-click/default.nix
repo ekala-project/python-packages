@@ -26,6 +26,5 @@ buildPythonPackage rec {
     description = "Pytest plugin for click";
     homepage = "https://github.com/Stranger6667/pytest-click";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

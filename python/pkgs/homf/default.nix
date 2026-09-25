@@ -48,6 +48,5 @@ buildPythonPackage (finalAttrs: {
     mainProgram = "homf";
     homepage = "https://github.com/duckinator/homf";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

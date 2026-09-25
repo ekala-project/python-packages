@@ -43,6 +43,5 @@ buildPythonPackage rec {
     description = "Captcha implemention for flask";
     homepage = "https://github.com/Tethik/flask-session-captcha";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -46,6 +46,5 @@ buildPythonPackage rec {
     description = "Code formatter for CWL";
     homepage = "https://github.com/rabix/cwl-format";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

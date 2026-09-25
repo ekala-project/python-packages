@@ -30,6 +30,5 @@ buildPythonPackage (finalAttrs: {
     description = "Human friendly data format";
     homepage = "https://nestedtext.org";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

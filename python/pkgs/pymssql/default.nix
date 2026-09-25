@@ -45,6 +45,5 @@ buildPythonPackage (finalAttrs: {
     description = "Simple database interface for Python that builds on top of FreeTDS to provide a Python DB-API (PEP-249) interface to Microsoft SQL Server";
     homepage = "https://github.com/pymssql/pymssql";
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
   };
 })

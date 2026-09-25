@@ -34,7 +34,6 @@ buildPythonPackage (finalAttrs: {
     description = "CommonMark compliant Markdown formatter";
     homepage = "https://mdformat.rtfd.io/";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "mdformat";
   };
 })

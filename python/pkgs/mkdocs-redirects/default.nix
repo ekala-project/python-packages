@@ -27,6 +27,5 @@ buildPythonPackage rec {
     description = "Open source plugin for Mkdocs page redirects";
     homepage = "https://github.com/mkdocs/mkdocs-redirects";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

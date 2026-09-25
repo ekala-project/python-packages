@@ -43,6 +43,5 @@ buildPythonPackage rec {
     homepage = "https://libnacl.readthedocs.io/";
     license = lib.licenses.asl20;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

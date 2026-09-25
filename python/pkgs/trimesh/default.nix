@@ -67,6 +67,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://trimesh.org/";
     license = lib.licenses.mit;
     mainProgram = "trimesh";
-    maintainers = [ ];
   };
 })

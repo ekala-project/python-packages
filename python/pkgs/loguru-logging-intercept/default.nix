@@ -27,7 +27,6 @@ buildPythonPackage (finalAttrs: {
   meta = {
     description = "Code to integrate Loguru with Python's standard logging module";
     homepage = "https://github.com/MatthewScholefield/loguru-logging-intercept";
-    maintainers = [ ];
     license = lib.licenses.mit;
   };
 })

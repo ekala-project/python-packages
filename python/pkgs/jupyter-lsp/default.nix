@@ -28,6 +28,5 @@ buildPythonPackage rec {
     homepage = "https://jupyterlab-lsp.readthedocs.io/en/latest/";
     license = lib.licenses.bsd3;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 }

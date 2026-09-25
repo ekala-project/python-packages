@@ -53,6 +53,5 @@ buildPythonPackage rec {
     mainProgram = "docformatter";
     homepage = "https://github.com/myint/docformatter";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

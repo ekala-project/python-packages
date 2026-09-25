@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Python package for describing statistical models";
     homepage = "https://github.com/pydata/patsy";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

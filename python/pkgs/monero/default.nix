@@ -49,6 +49,5 @@ buildPythonPackage rec {
     description = "Comprehensive Python module for handling Monero";
     homepage = "https://github.com/monero-ecosystem/monero-python";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

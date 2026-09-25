@@ -36,6 +36,5 @@ buildPythonPackage (finalAttrs: {
     description = "Sphinx-doc extensions for sophisticated C developer";
     homepage = "https://github.com/return42/linuxdoc";
     license = lib.licenses.agpl3Plus;
-    maintainers = [ ];
   };
 })

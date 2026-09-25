@@ -63,6 +63,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python interface to Graphviz graph drawing package";
     homepage = "https://github.com/pygraphviz/pygraphviz";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

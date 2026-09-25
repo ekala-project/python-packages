@@ -32,6 +32,5 @@ buildPythonPackage (finalAttrs: {
     description = "CORS support for Falcon";
     homepage = "https://github.com/lwcolton/falcon-cors";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

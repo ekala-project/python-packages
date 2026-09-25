@@ -33,6 +33,5 @@ buildPythonPackage rec {
     description = "Baidu AI Platform SDK for Python";
     homepage = "https://github.com/Baidu-AIP/python-sdk";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

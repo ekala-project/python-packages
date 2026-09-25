@@ -34,6 +34,5 @@ buildPythonPackage (finalAttrs: {
     description = "Simplify the writing of REST APIs, and extend them with additional protocols";
     homepage = "https://pythonhosted.org/WSME/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

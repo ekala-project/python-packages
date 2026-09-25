@@ -51,6 +51,5 @@ buildPythonPackage rec {
     description = "Compiling gettext i18n messages during project bundling";
     homepage = "https://github.com/codingjoe/flit-gettext";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

@@ -32,6 +32,5 @@ buildPythonPackage (finalAttrs: {
     description = "High-level abstractions for Django forms";
     homepage = "https://github.com/jazzband/django-formtools";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

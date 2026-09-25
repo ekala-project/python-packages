@@ -53,6 +53,5 @@ buildPythonPackage (finalAttrs: {
     description = "GenAI Agent Framework, the Pydantic way";
     homepage = "https://github.com/pydantic/pydantic-ai";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

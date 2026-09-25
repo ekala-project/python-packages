@@ -33,6 +33,5 @@ buildPythonPackage rec {
     description = "Python library for mocking HTTPX";
     homepage = "https://lundberg.github.io/respx/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

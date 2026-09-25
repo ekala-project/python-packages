@@ -43,6 +43,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python package for scraping recipes data";
     homepage = "https://github.com/hhursev/recipe-scrapers";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

@@ -37,6 +37,5 @@ buildPythonPackage rec {
     mainProgram = "anthemav_monitor";
     homepage = "https://github.com/nugget/python-anthemav";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

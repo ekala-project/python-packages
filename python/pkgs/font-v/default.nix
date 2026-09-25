@@ -54,6 +54,5 @@ buildPythonPackage (finalAttrs: {
     mainProgram = "font-v";
     homepage = "https://github.com/source-foundry/font-v";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

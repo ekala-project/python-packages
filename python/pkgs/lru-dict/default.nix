@@ -29,6 +29,5 @@ buildPythonPackage (finalAttrs: {
     description = "Fast and memory efficient LRU cache for Python";
     homepage = "https://github.com/amitdev/lru-dict";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

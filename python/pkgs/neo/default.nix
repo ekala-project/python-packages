@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "Package for representing electrophysiology data";
     homepage = "https://neuralensemble.org/neo/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

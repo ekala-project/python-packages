@@ -68,6 +68,5 @@ buildPythonPackage rec {
     description = "Simplify interfacing with the Cohere API";
     homepage = "https://docs.cohere.com/docs";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

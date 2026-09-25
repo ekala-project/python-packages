@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "Cache-based rate-limiting for Django";
     homepage = "https://github.com/jsocol/django-ratelimit";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

@@ -37,7 +37,6 @@ buildPythonPackage rec {
   meta = {
     description = "Wrapper for libsodium providing high level crypto primitives";
     homepage = "https://github.com/stef/pysodium";
-    maintainers = [ ];
     license = lib.licenses.bsd2;
   };
 }

@@ -25,6 +25,5 @@ buildPythonPackage rec {
     description = "Module to parse podcasts";
     homepage = "http://gpodder.org/podcastparser/";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

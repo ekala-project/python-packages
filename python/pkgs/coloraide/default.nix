@@ -41,6 +41,5 @@ buildPythonPackage {
     description = "Library to aid in using colors";
     homepage = "https://github.com/facelessuser/coloraide";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

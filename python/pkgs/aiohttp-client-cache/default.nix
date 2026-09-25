@@ -82,6 +82,5 @@ buildPythonPackage rec {
     description = "Async persistent cache for aiohttp requests";
     homepage = "https://github.com/requests-cache/aiohttp-client-cache";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

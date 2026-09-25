@@ -31,6 +31,5 @@ buildPythonPackage (finalAttrs: {
     description = "Async Python package for the Nanoleaf API";
     homepage = "https://github.com/loebi-ch/aionanoleaf2";
     license = lib.licenses.lgpl3Plus;
-    maintainers = [ ];
   };
 })

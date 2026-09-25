@@ -80,6 +80,5 @@ buildPythonPackage rec {
     description = "Get data from the Azure DevOps API";
     homepage = "https://github.com/timmo001/aioazuredevops";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

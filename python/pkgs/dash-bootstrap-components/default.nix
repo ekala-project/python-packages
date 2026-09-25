@@ -30,6 +30,5 @@ buildPythonPackage rec {
     description = "Bootstrap components for Plotly Dash";
     homepage = "https://github.com/facultyai/dash-bootstrap-components";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

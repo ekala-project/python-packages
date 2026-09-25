@@ -30,6 +30,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python implementation of the Varlink protocol";
     homepage = "https://varlink.org/python";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

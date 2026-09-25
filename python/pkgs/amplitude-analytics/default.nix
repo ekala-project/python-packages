@@ -25,6 +25,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://github.com/amplitude/Amplitude-Python";
     downloadPage = "https://github.com/amplitude/Amplitude-Python/releases";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

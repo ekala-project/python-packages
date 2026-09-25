@@ -36,6 +36,5 @@ buildPythonPackage (finalAttrs: {
     description = "LlamaIndex LLMS Integration for OpenAI like";
     homepage = "https://github.com/run-llama/llama_index/tree/main/llama-index-integrations/llms/llama-index-llms-openai-like";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

@@ -86,6 +86,5 @@ buildPythonPackage (finalAttrs: {
     description = "Developer-friendly, serverless vector database for AI applications";
     homepage = "https://github.com/lancedb/lancedb";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

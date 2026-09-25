@@ -31,6 +31,5 @@ buildPythonPackage (finalAttrs: {
     description = "Module to control AirZone devices";
     homepage = "https://github.com/Noltari/aioairzone";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

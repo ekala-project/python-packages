@@ -43,6 +43,5 @@ buildPythonPackage (finalAttrs: {
     description = "A generic entrypoint for ADBC drivers";
     homepage = "https://pypi.org/project/adbc-driver-manager";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

@@ -30,6 +30,5 @@ buildPythonPackage rec {
     description = "Wrappers for class callables";
     homepage = "https://github.com/youknowone/wirerope";
     license = lib.licenses.bsd2WithViews;
-    maintainers = [ ];
   };
 }

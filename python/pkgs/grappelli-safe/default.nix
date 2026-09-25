@@ -38,6 +38,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/stephenmcd/grappelli-safe";
     downloadPage = "http://pypi.org/pypi/grappelli_safe/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

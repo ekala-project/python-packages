@@ -53,6 +53,5 @@ buildPythonPackage rec {
     description = "UI pattern libraries for Django templates";
     homepage = "https://github.com/torchbox/django-pattern-library/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

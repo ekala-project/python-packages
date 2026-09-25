@@ -26,6 +26,5 @@ buildPythonPackage rec {
     description = "Flexible Python 2/3 Kconfig implementation and library";
     homepage = "https://github.com/ulfalizer/Kconfiglib";
     license = lib.licenses.isc;
-    maintainers = [ ];
   };
 }

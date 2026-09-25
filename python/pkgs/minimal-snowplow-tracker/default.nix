@@ -30,6 +30,5 @@ buildPythonPackage rec {
     description = "Minimal snowplow event tracker";
     homepage = "https://github.com/dbt-labs/snowplow-python-tracker";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

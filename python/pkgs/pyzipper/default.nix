@@ -28,6 +28,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python zipfile extensions";
     homepage = "https://github.com/danifus/pyzipper";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

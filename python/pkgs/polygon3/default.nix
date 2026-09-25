@@ -26,6 +26,5 @@ buildPythonPackage {
     description = "Polygon is a python package that handles polygonal shapes in 2D";
     homepage = "https://github.com/jraedler/Polygon3";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

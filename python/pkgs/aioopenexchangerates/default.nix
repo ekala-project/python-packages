@@ -45,6 +45,5 @@ buildPythonPackage (finalAttrs: {
     description = "Library for the Openexchangerates API";
     homepage = "https://github.com/MartinHjelmare/aioopenexchangerates";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

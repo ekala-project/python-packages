@@ -37,6 +37,5 @@ buildPythonPackage rec {
     '';
     homepage = "https://github.com/radude/mdx_truly_sane_lists";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

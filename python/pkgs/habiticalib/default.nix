@@ -65,6 +65,5 @@ buildPythonPackage rec {
     description = "Library for the Habitica API";
     homepage = "https://github.com/tr4nt0r/habiticalib";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -43,6 +43,5 @@ buildPythonPackage rec {
     description = "Live training loss plot in Jupyter for Keras, PyTorch, and others";
     homepage = "https://github.com/stared/livelossplot";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -88,6 +88,5 @@ buildPythonPackage (finalAttrs: {
     description = "Collection of eclectic utils";
     homepage = "https://github.com/google/etils";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

@@ -40,6 +40,5 @@ buildPythonPackage rec {
     description = "Enumerates low index subgroups of a finitely presented group";
     homepage = "https://github.com/3-manifolds/low_index";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
   };
 }

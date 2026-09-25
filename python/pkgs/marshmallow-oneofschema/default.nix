@@ -27,6 +27,5 @@ buildPythonPackage rec {
     description = "Marshmallow library extension that allows schema (de)multiplexing";
     homepage = "https://github.com/marshmallow-code/marshmallow-oneofschema";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

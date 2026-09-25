@@ -120,6 +120,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://strawberry.rocks";
     license = lib.licenses.mit;
     mainProgram = "strawberry";
-    maintainers = [ ];
   };
 })

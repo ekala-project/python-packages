@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "JSON-RPC client library for asyncio";
     homepage = "https://github.com/emlove/jsonrpc-async";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

@@ -51,6 +51,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/daleroberts/hdmedians";
     description = "High-dimensional medians";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

@@ -41,6 +41,5 @@ buildPythonPackage rec {
     description = "Collection of utilities for doing lightweight data wrangling";
     homepage = "https://github.com/microsoft/datashaper/tree/main/python/datashaper";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

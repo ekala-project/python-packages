@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "Module to discover devices that respond on port 30303";
     homepage = "https://github.com/bdraco/discovery30303";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

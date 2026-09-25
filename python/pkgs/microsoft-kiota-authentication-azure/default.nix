@@ -44,6 +44,5 @@ buildPythonPackage (finalAttrs: {
     description = "Kiota Azure authentication provider";
     homepage = "https://github.com/microsoft/kiota-python/tree/main/packages/authentication/azure";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

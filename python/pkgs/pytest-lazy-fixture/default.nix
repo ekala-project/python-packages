@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Helps to use fixtures in pytest.mark.parametrize";
     homepage = "https://github.com/tvorog/pytest-lazy-fixture";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

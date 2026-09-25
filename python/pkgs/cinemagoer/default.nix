@@ -45,6 +45,5 @@ buildPythonPackage {
     downloadPage = "https://github.com/cinemagoer/cinemagoer/";
     homepage = "https://cinemagoer.github.io/";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
   };
 }

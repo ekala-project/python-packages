@@ -51,6 +51,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python wrapper around the Deezer API";
     homepage = "https://github.com/browniebroke/deezer-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

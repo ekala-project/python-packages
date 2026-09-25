@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Web framework for building APIs with Django and Python type hints";
     homepage = "https://django-ninja.dev";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

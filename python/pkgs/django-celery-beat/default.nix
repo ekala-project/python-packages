@@ -85,6 +85,5 @@ buildPythonPackage (finalAttrs: {
     description = "Celery Periodic Tasks backed by the Django ORM";
     homepage = "https://github.com/celery/django-celery-beat";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

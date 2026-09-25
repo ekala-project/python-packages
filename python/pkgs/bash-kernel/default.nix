@@ -50,6 +50,5 @@ buildPythonPackage rec {
     description = "Bash Kernel for Jupyter";
     homepage = "https://github.com/takluyver/bash_kernel";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

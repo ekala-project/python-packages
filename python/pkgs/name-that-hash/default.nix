@@ -38,6 +38,5 @@ buildPythonPackage rec {
     description = "Module and CLI for the identification of hashes";
     homepage = "https://github.com/HashPals/Name-That-Hash";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
   };
 }

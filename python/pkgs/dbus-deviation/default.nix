@@ -31,6 +31,5 @@ buildPythonPackage rec {
     homepage = "https://tecnocode.co.uk/dbus-deviation/";
     description = "Project for parsing D-Bus introspection XML and processing it in various ways";
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
   };
 }

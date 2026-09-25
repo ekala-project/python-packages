@@ -66,6 +66,5 @@ buildPythonPackage rec {
     description = "Complete Two-Factor Authentication for Django";
     homepage = "https://github.com/jazzband/django-two-factor-auth";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

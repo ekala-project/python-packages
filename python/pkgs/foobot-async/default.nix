@@ -44,6 +44,5 @@ buildPythonPackage rec {
     description = "API Client for Foobot Air Quality Monitoring devices";
     homepage = "https://github.com/reefab/foobot_async";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

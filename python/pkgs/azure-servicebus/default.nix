@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "Microsoft Azure Service Bus Client Library";
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/servicebus/azure-servicebus";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

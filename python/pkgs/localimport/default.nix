@@ -20,6 +20,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://github.com/NiklasRosenstein/py-localimport";
     description = "Isolated import of Python modules";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

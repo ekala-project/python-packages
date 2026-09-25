@@ -49,6 +49,5 @@ buildPythonPackage rec {
     description = "Socket mock framework for all kinds of sockets including web-clients";
     homepage = "https://github.com/mindflayer/python-mocket";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

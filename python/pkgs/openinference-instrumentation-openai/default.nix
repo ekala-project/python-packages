@@ -78,6 +78,5 @@ buildPythonPackage (finalAttrs: {
     description = "OpenInference OpenAI SDK Instrumentation";
     homepage = "https://github.com/Arize-ai/openinference";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

@@ -64,6 +64,5 @@ buildPythonPackage rec {
     description = "Cache tools with async power";
     homepage = "https://github.com/Krukov/cashews/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

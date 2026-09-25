@@ -25,7 +25,6 @@ buildPythonPackage rec {
     description = "Collection of internationalizing tools";
     homepage = "https://babel.pocoo.org/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     mainProgram = "pybabel";
   };
 }

@@ -37,6 +37,5 @@ buildPythonPackage rec {
     homepage = "https://data-apis.org/array-api-strict";
     description = "Strict, minimal implementation of the Python array API";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

@@ -29,6 +29,5 @@ buildPythonPackage rec {
     mainProgram = "sshtunnel";
     homepage = "https://github.com/pahaz/sshtunnel";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

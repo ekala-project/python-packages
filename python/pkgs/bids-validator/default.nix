@@ -37,6 +37,5 @@ buildPythonPackage rec {
     description = "Validator for the Brain Imaging Data Structure";
     homepage = "https://github.com/bids-standard/bids-validator";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

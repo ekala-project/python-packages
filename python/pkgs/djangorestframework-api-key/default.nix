@@ -56,6 +56,5 @@ buildPythonPackage (finalAttrs: {
     description = "API key permissions for Django REST Framework";
     homepage = "https://github.com/florimondmanca/djangorestframework-api-key";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

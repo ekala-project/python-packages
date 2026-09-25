@@ -94,6 +94,5 @@ buildPythonPackage rec {
     description = "Shared common utilities for dbt-core and adapter implementations use";
     homepage = "https://github.com/dbt-labs/dbt-common";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

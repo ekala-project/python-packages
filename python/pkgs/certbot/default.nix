@@ -48,6 +48,5 @@ buildPythonPackage (finalAttrs: {
     platforms = lib.platforms.unix;
     mainProgram = "certbot";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

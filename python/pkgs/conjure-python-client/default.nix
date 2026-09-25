@@ -48,6 +48,5 @@ buildPythonPackage rec {
     description = "Python client and JSON encoders for use with generated Conjure clients";
     homepage = "https://github.com/palantir/conjure-python-client";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

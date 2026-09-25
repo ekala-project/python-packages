@@ -68,6 +68,5 @@ buildPythonPackage rec {
     description = "Open library for the analysis of molecular dynamics trajectories";
     homepage = "https://github.com/mdtraj/mdtraj";
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
   };
 }

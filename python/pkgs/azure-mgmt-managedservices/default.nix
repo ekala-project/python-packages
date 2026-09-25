@@ -41,6 +41,5 @@ buildPythonPackage (finalAttrs: {
     description = "Microsoft Azure Managed Services Client Library for Python";
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/managedservices/azure-mgmt-managedservices";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

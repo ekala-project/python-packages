@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "Mdformat plugin for ensuring that wiki-style links are preserved during formatting";
     homepage = "https://github.com/tmr232/mdformat-wikilink";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

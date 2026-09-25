@@ -46,6 +46,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python API for the Frigidaire devices";
     homepage = "https://github.com/bm1549/frigidaire";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

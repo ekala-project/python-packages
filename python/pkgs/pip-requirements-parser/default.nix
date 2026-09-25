@@ -45,6 +45,5 @@ buildPythonPackage (finalAttrs: {
     description = "Module to parse pip requirements";
     homepage = "https://github.com/nexB/pip-requirements-parser";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

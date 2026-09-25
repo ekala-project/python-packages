@@ -65,6 +65,5 @@ buildPythonPackage rec {
     description = "Parser for ‘pyproject.toml’";
     homepage = "https://github.com/repo-helper/pyproject-parser";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

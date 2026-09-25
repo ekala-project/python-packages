@@ -61,6 +61,5 @@ buildPythonPackage (finalAttrs: {
     description = "Neural network library for JAX";
     homepage = "https://github.com/google/flax";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

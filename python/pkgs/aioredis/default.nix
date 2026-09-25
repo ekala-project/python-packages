@@ -42,6 +42,5 @@ buildPythonPackage rec {
     description = "Asyncio (PEP 3156) Redis client library";
     homepage = "https://github.com/aio-libs-abandoned/aioredis-py";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

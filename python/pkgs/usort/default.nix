@@ -46,7 +46,6 @@ buildPythonPackage (finalAttrs: {
     description = "Safe, minimal import sorting for Python projects";
     homepage = "https://github.com/facebook/usort";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "usort";
   };
 })

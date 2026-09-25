@@ -37,6 +37,5 @@ buildPythonPackage (finalAttrs: {
     description = "Module to interact with Windows Active Directory";
     homepage = "https://github.com/p0dalirius/pydsinternals";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
   };
 })

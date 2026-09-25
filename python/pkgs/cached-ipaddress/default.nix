@@ -43,6 +43,5 @@ buildPythonPackage (finalAttrs: {
     description = "Cache construction of ipaddress objects";
     homepage = "https://github.com/bdraco/cached-ipaddress";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

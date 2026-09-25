@@ -32,6 +32,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://github.com/selwin/python-user-agents";
     license = lib.licenses.mit;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

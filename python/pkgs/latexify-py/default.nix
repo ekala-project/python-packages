@@ -40,6 +40,5 @@ buildPythonPackage rec {
     description = "Generates LaTeX math description from Python functions";
     homepage = "https://github.com/google/latexify_py";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

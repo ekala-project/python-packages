@@ -51,6 +51,5 @@ buildPythonPackage (finalAttrs: {
     description = "Reference implementation and backport of background workers and tasks in Django";
     homepage = "https://github.com/RealOrangeOne/django-tasks";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

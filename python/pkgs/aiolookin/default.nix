@@ -41,6 +41,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python client for interacting with LOOKin devices";
     homepage = "https://github.com/ANMalko/aiolookin";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

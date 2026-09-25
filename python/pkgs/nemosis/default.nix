@@ -44,6 +44,5 @@ buildPythonPackage (finalAttrs: {
     description = "Downloader of historical data published by the Australian Energy Market Operator";
     homepage = "https://github.com/UNSW-CEEM/NEMOSIS";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 })

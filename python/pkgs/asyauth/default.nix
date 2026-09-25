@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "Unified authentication library";
     homepage = "https://github.com/skelsec/asyauth";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

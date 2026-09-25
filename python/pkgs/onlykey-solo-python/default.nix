@@ -53,7 +53,6 @@ buildPythonPackage rec {
     homepage = "https://github.com/trustcrypto/onlykey-solo-python";
     description = "Python library for OnlyKey with Solo FIDO2";
     mainProgram = "solo";
-    maintainers = [ ];
     license = lib.licenses.asl20;
   };
 }

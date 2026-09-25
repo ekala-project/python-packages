@@ -48,6 +48,5 @@ buildPythonPackage (finalAttrs: {
     description = "ROOT I/O in pure Python and Numpy";
     homepage = "https://github.com/scikit-hep/uproot5";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

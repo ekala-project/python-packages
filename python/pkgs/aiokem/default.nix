@@ -46,6 +46,5 @@ buildPythonPackage rec {
     description = "Async API for Kohler Energy Management";
     homepage = "https://github.com/kohlerlibs/aiokem";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

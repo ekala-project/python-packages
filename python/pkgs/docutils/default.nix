@@ -50,7 +50,6 @@ let
         psfl
         gpl3Plus
       ];
-      maintainers = [ ];
       mainProgram = "docutils";
     };
   };

@@ -32,6 +32,5 @@ buildPythonPackage (finalAttrs: {
     description = "Caido Proxy API schemas (GraphQL and OpenAPI)";
     homepage = "https://pypi.org/project/caido-schema-proxy";
     license = lib.licenses.cc-by-40;
-    maintainers = [ ];
   };
 })

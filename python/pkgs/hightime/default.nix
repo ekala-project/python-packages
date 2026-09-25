@@ -39,6 +39,5 @@ buildPythonPackage (finalAttrs: {
     description = "Hightime Python API";
     homepage = "https://github.com/ni/hightime";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

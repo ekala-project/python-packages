@@ -37,6 +37,5 @@ buildPythonPackage rec {
     description = "Static typing compatibility layer for older versions of NumPy";
     homepage = "https://pypi.org/project/numpy-typing-compat/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

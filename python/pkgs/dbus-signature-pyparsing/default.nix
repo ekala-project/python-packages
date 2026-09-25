@@ -24,6 +24,5 @@ buildPythonPackage rec {
     description = "Parser for a D-Bus Signature";
     homepage = "https://github.com/stratis-storage/dbus-signature-pyparsing";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

@@ -43,6 +43,5 @@ buildPythonPackage rec {
     description = "Miscellaneous utilities for BiocPy, mostly to mimic base functionality in R";
     homepage = "https://github.com/BiocPy/BiocUtils";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

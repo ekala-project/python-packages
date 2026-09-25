@@ -43,6 +43,5 @@ buildPythonPackage rec {
     description = "Python bindings for the reference Brotli encoder/decoder";
     homepage = "https://github.com/python-hyper/brotlipy/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -44,6 +44,5 @@ buildPythonPackage rec {
     description = "Django class-based view generating PDF resposes using WeasyPrint";
     homepage = "https://github.com/fdemmer/django-weasyprint";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

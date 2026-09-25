@@ -98,6 +98,5 @@ buildPythonPackage (finalAttrs: {
     description = "Hierarchical datasets for Python";
     homepage = "https://www.pytables.org/";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 })

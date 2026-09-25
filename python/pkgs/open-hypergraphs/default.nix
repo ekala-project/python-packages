@@ -48,6 +48,5 @@ buildPythonPackage rec {
     description = "Implementation of open hypergraphs for string diagrams";
     homepage = "https://github.com/statusfailed/open-hypergraphs";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

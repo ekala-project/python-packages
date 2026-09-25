@@ -29,6 +29,5 @@ buildPythonPackage (finalAttrs: {
     description = "Alibaba Cloud Darabonba Time SDK Library for Python";
     homepage = "https://github.com/aliyun/darabonba-time";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

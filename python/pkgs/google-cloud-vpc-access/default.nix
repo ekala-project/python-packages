@@ -52,6 +52,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python Client for Virtual Private Cloud";
     homepage = "https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-vpc-access";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

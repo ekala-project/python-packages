@@ -37,6 +37,5 @@ buildPythonPackage (finalAttrs: {
     description = "Type annotations and runtime checking for JAX arrays and PyTrees";
     homepage = "https://github.com/patrick-kidger/jaxtyping";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

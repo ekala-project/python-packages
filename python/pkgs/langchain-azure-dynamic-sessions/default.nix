@@ -78,6 +78,5 @@ buildPythonPackage rec {
     description = "Integration package connecting Azure Container Apps dynamic sessions and LangChain";
     homepage = "https://github.com/langchain-ai/langchain/tree/master/libs/partners/azure-dynamic-sessions";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

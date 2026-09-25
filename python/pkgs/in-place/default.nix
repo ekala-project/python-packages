@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "In-place file processing";
     homepage = "https://github.com/jwodder/inplace";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

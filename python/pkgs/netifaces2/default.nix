@@ -38,6 +38,5 @@ buildPythonPackage {
     homepage = "https://github.com/SamuelYvon/netifaces-2";
     license = lib.licenses.mit;
     platforms = with lib.platforms; unix ++ windows;
-    maintainers = [ ];
   };
 }

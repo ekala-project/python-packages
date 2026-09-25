@@ -58,6 +58,5 @@ buildPythonPackage (finalAttrs: {
     description = "Aliyun Gateway OSS Library for Python";
     homepage = "https://pypi.org/project/alibabacloud-gateway-oss/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

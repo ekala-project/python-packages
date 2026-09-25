@@ -37,6 +37,5 @@ buildPythonPackage rec {
     description = "DVC's data management subsystem";
     homepage = "https://github.com/iterative/sqltrie";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

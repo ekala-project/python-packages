@@ -55,6 +55,5 @@ buildPythonPackage (finalAttrs: {
     mainProgram = "ddgs";
     homepage = "https://github.com/deedy5/ddgs";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

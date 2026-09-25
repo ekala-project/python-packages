@@ -68,7 +68,6 @@ buildPythonPackage rec {
     description = "Triton Python client";
     homepage = "https://github.com/triton-inference-server/client";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 }

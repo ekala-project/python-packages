@@ -33,6 +33,5 @@ buildPythonPackage rec {
     description = "Sphinx extension to generate unique OpenGraph metadata";
     homepage = "https://github.com/wpilibsuite/sphinxext-opengraph";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

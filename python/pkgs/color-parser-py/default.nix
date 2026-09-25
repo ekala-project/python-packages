@@ -39,6 +39,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python bindings for color parsing and conversion";
     homepage = "https://github.com/rusiaaman/color-parser-py";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

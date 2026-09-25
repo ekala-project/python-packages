@@ -52,6 +52,5 @@ buildPythonPackage (finalAttrs: {
     description = "Sphinx extension for designing beautiful, view size responsive web components";
     homepage = "https://github.com/executablebooks/sphinx-design";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

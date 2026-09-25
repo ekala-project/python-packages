@@ -38,6 +38,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/rougier/freetype-py";
     description = "FreeType (high-level Python API)";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

@@ -26,6 +26,5 @@ buildPythonPackage rec {
     description = "Preparing inputs to and reading outputs from Stan";
     homepage = "https://github.com/WardBrian/stanio";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

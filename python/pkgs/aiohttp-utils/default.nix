@@ -60,6 +60,5 @@ buildPythonPackage (finalAttrs: {
     description = "Handy utilities for building aiohttp.web applications";
     homepage = "https://github.com/sloria/aiohttp-utils";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

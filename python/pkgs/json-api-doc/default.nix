@@ -33,6 +33,5 @@ buildPythonPackage rec {
     description = "JSON API parser returning a simple Python dictionary";
     homepage = "https://github.com/julien-duponchelle/json-api-doc";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

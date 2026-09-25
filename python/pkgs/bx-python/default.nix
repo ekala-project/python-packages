@@ -57,7 +57,6 @@ buildPythonPackage rec {
     description = "Tools for manipulating biological data, particularly multiple sequence alignments";
     homepage = "https://github.com/bxlab/bx-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = [ "x86_64-linux" ];
   };
 }

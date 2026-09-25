@@ -25,6 +25,5 @@ buildPythonPackage rec {
     description = "Hotfix for the PyArrow security vulnerability CVE-2023-47248";
     homepage = "https://github.com/pitrou/pyarrow-hotfix";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

@@ -35,6 +35,5 @@ buildPythonPackage (finalAttrs: {
     description = "Format 'GitHub Markdown Alerts', which use blockquotes to render admonitions";
     homepage = "https://github.com/KyleKing/mdformat-gfm-alerts";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

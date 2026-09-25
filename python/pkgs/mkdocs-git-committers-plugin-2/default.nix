@@ -43,6 +43,5 @@ buildPythonPackage rec {
     description = "MkDocs plugin for displaying a list of contributors on each page";
     homepage = "https://github.com/ojacques/mkdocs-git-committers-plugin-2";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

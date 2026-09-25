@@ -32,6 +32,5 @@ buildPythonPackage (finalAttrs: {
     description = "Aliyun Gateway SPI Library for Python";
     homepage = "https://pypi.org/project/alibabacloud-gateway-spi/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

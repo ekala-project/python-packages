@@ -289,6 +289,5 @@ buildPythonPackage (finalAttrs: {
     description = "Productivity-centric Python Big Data Framework";
     homepage = "https://github.com/ibis-project/ibis";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

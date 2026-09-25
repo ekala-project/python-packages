@@ -41,6 +41,5 @@ buildPythonPackage rec {
     description = "Typing Stubs for SciPy";
     homepage = "https://github.com/scipy/scipy-stubs";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "SOCKS proxy connector for aiohttp";
     homepage = "https://github.com/romis2012/aiohttp-socks";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

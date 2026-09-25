@@ -42,6 +42,5 @@ buildPythonPackage rec {
     description = "FastText + Bloom embeddings for compact, full-coverage vectors with spaCy";
     homepage = "https://github.com/explosion/floret";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -44,6 +44,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/zopefoundation/zope.lifecycleevent";
     description = "Object life-cycle events";
     license = lib.licenses.zpl21;
-    maintainers = [ ];
   };
 }

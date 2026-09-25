@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Python server implementation of the JSON RPC 2.0 protocol";
     homepage = "https://github.com/python-lsp/python-lsp-jsonrpc";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

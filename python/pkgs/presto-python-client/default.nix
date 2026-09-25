@@ -37,6 +37,5 @@ buildPythonPackage rec {
     description = "Client for Presto (https://prestodb.io), a distributed SQL engine for interactive and batch big data processing";
     homepage = "https://github.com/prestodb/presto-python-client";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

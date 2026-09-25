@@ -53,6 +53,5 @@ buildPythonPackage (finalAttrs: {
     description = "Iceberg-rust powered core for pyiceberg";
     homepage = "https://github.com/apache/iceberg-rust/tree/main/bindings/python";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

@@ -37,6 +37,5 @@ buildPythonPackage (finalAttrs: {
     description = "Small library to notify Uptime Kuma that the service is up";
     homepage = "https://github.com/PerchunPak/apykuma";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

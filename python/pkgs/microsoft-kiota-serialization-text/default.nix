@@ -40,6 +40,5 @@ buildPythonPackage rec {
     description = "Text serialization implementation for Kiota generated clients in Python";
     homepage = "https://github.com/microsoft/kiota-python/tree/main/packages/serialization/text";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

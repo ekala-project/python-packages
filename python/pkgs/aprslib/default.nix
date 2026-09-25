@@ -38,6 +38,5 @@ buildPythonPackage (finalAttrs: {
     description = "Module for accessing APRS-IS and parsing APRS packets";
     homepage = "https://github.com/rossengeorgiev/aprs-python";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
   };
 })

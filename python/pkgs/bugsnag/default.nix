@@ -59,6 +59,5 @@ buildPythonPackage rec {
     description = "Automatic error monitoring for Python applications";
     homepage = "https://github.com/bugsnag/bugsnag-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

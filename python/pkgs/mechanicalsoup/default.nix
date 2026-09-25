@@ -62,6 +62,5 @@ buildPythonPackage rec {
     description = "Python library for automating interaction with websites";
     homepage = "https://github.com/hickford/MechanicalSoup";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

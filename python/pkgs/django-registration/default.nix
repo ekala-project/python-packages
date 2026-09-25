@@ -46,6 +46,5 @@ buildPythonPackage rec {
     homepage = "https://django-registration.readthedocs.io/en/${version}/";
     downloadPage = "https://github.com/ubernostrum/django-registration";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Read & write entry_points.txt files";
     homepage = "https://github.com/jwodder/entry-points-txt";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

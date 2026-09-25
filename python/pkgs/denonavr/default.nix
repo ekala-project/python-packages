@@ -51,6 +51,5 @@ buildPythonPackage (finalAttrs: {
     description = "Automation Library for Denon AVR receivers";
     homepage = "https://github.com/ol-iver/denonavr";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

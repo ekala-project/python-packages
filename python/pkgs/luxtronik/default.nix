@@ -25,6 +25,5 @@ buildPythonPackage rec {
     description = "Python library to interact with Luxtronik heatpump controllers";
     homepage = "https://github.com/Bouni/python-luxtronik";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

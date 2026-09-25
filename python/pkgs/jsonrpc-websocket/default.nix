@@ -34,6 +34,5 @@ buildPythonPackage (finalAttrs: {
     description = "JSON-RPC websocket client library for asyncio";
     homepage = "https://github.com/emlove/jsonrpc-websocket";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

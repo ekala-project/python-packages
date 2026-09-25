@@ -56,6 +56,5 @@ buildPythonPackage rec {
     description = "Zope Security Framework";
     homepage = "https://github.com/zopefoundation/zope.security";
     license = lib.licenses.zpl21;
-    maintainers = [ ];
   };
 }

@@ -70,6 +70,5 @@ buildPythonPackage (finalAttrs: {
     description = "Miscellaneous utility code used by scverse packages";
     homepage = "https://github.com/scverse/scverse-misc";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

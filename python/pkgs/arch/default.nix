@@ -50,6 +50,5 @@ buildPythonPackage rec {
     description = "Autoregressive Conditional Heteroskedasticity (ARCH) and other tools for financial econometrics";
     homepage = "https://github.com/bashtage/arch";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -44,6 +44,5 @@ buildPythonPackage rec {
     description = "Cloud Trace API client library";
     homepage = "https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-trace";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

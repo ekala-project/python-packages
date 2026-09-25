@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "Mocking framework for Python, influenced by JMock";
     homepage = "https://github.com/mwilliamson/funk";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

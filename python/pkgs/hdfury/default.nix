@@ -31,6 +31,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python client for HDFury devices";
     homepage = "https://github.com/glenndehaan/python-hdfury";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

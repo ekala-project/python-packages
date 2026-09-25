@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Library for building Grafana dashboards";
     homepage = "https://github.com/weaveworks/grafanalib/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Python module for re-launching the current process as super-user";
     homepage = "https://github.com/barneygale/elevate";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

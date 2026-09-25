@@ -27,7 +27,6 @@ buildPythonPackage rec {
     description = "Print awesomely in terminals";
     homepage = "https://pypi.org/project/huepy/";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 }

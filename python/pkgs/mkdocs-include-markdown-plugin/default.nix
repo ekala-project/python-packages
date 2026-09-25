@@ -42,6 +42,5 @@ buildPythonPackage rec {
     description = "Mkdocs Markdown includer plugin";
     homepage = "https://pypi.org/project/mkdocs-include-markdown-plugin/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

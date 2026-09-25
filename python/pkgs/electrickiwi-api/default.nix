@@ -37,6 +37,5 @@ buildPythonPackage rec {
     description = "Python library for interfacing with the Electric Kiwi power company API";
     homepage = "https://github.com/mikey0000/EK-API";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 }

@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Pure python memcached client";
     homepage = "https://github.com/linsomniac/python-memcached";
     license = lib.licenses.psfl;
-    maintainers = [ ];
   };
 }

@@ -26,6 +26,5 @@ buildPythonPackage rec {
     description = "Module for the OpenRGB SDK";
     homepage = "https://openrgb-python.readthedocs.io/";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 }

@@ -31,6 +31,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/portugueslab/arrayqueues";
     description = "Multiprocessing queues for numpy arrays using shared memory";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

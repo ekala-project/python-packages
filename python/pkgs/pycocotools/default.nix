@@ -33,6 +33,5 @@ buildPythonPackage rec {
     description = "Official APIs for the MS-COCO dataset";
     homepage = "https://github.com/cocodataset/cocoapi/tree/master/PythonAPI";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

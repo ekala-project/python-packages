@@ -37,7 +37,6 @@ buildPythonPackage rec {
     description = "Webpush Data encryption library for Python";
     homepage = "https://github.com/web-push-libs/pywebpush";
     license = lib.licenses.mpl20;
-    maintainers = [ ];
     mainProgram = "pywebpush";
   };
 }

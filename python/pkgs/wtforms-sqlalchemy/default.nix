@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "WTForms integration for SQLAlchemy";
     homepage = "https://github.com/wtforms/wtforms-sqlalchemy";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

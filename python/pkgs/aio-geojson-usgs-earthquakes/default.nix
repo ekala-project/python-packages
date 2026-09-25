@@ -45,6 +45,5 @@ buildPythonPackage (finalAttrs: {
     description = "Module for accessing the U.S. Geological Survey Earthquake Hazards Program feeds";
     homepage = "https://github.com/exxamalte/python-aio-geojson-usgs-earthquakes";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

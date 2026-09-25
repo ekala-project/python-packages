@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "Python library to seek within compressed gzip files";
     homepage = "https://github.com/pauldmccarthy/indexed_gzip";
     license = lib.licenses.zlib;
-    maintainers = [ ];
   };
 }

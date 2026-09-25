@@ -30,6 +30,5 @@ buildPythonPackage (finalAttrs: {
     description = "Add inline tabbed content to your Sphinx documentation";
     homepage = "https://github.com/pradyunsg/sphinx-inline-tabs";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

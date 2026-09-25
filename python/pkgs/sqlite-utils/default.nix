@@ -47,6 +47,5 @@ buildPythonPackage (finalAttrs: {
     mainProgram = "sqlite-utils";
     homepage = "https://github.com/simonw/sqlite-utils";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

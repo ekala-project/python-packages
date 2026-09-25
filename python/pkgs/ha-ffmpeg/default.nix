@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "Library for Home Assistant to handle ffmpeg";
     homepage = "https://github.com/home-assistant-libs/ha-ffmpeg/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

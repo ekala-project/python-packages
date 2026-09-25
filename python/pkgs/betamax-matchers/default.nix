@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Group of experimental matchers for Betamax";
     homepage = "https://github.com/sigmavirus24/betamax_matchers";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

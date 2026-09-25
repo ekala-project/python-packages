@@ -45,6 +45,5 @@ buildPythonPackage rec {
     description = "Translates Django models using a registration approach";
     homepage = "https://github.com/deschler/django-modeltranslation";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

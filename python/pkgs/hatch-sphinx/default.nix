@@ -55,6 +55,5 @@ buildPythonPackage rec {
     description = "Hatchling build plugin for Sphinx documentation";
     homepage = "https://github.com/llimeht/hatch-sphinx";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

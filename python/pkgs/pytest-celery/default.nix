@@ -81,6 +81,5 @@ buildPythonPackage rec {
     description = "Pytest plugin to enable celery.contrib.pytest";
     homepage = "https://github.com/celery/pytest-celery";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

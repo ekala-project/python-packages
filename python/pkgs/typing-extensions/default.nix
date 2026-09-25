@@ -24,6 +24,5 @@ buildPythonPackage rec {
     description = "Backported and Experimental Type Hints for Python";
     homepage = "https://github.com/python/typing";
     license = lib.licenses.psfl;
-    maintainers = [ ];
   };
 }

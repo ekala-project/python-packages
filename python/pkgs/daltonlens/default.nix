@@ -51,6 +51,5 @@ buildPythonPackage rec {
     description = "R&D companion package for the desktop application DaltonLens";
     homepage = "https://github.com/DaltonLens/DaltonLens-Python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

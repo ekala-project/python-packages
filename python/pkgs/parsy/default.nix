@@ -24,6 +24,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://github.com/python-parsy/parsy";
     description = "Easy-to-use parser combinators, for parsing in pure Python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

@@ -54,6 +54,5 @@ buildPythonPackage (finalAttrs: {
     description = "MLFlow plugin for SageMaker";
     homepage = "https://github.com/aws/sagemaker-mlflow";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

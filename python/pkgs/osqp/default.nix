@@ -89,6 +89,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://osqp.org/";
     downloadPage = "https://github.com/oxfordcontrol/osqp-python/releases";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

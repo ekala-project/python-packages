@@ -43,6 +43,5 @@ buildPythonPackage (finalAttrs: {
     description = "JAX library based around a simple idea: represent parameterised functions as PyTrees";
     homepage = "https://github.com/patrick-kidger/equinox";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

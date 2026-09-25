@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "Python bindings for the Plex API";
     homepage = "https://github.com/pkkid/python-plexapi";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

@@ -26,6 +26,5 @@ buildPythonPackage rec {
     description = "Python library for interacting with Rainforest EAGLE devices";
     homepage = "https://github.com/hastarin/eagle100";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

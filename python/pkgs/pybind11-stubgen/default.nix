@@ -30,6 +30,5 @@ buildPythonPackage (finalAttrs: {
     description = "Generates stubs for python modules";
     homepage = "https://github.com/sizmailov/pybind11-stubgen";
     license = lib.licenses.bsd3Lbnl;
-    maintainers = [ ];
   };
 })

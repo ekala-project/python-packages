@@ -40,6 +40,5 @@ buildPythonPackage rec {
     description = "Distributed Python deployment and communication";
     homepage = "https://execnet.readthedocs.io/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

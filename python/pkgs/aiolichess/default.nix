@@ -31,6 +31,5 @@ buildPythonPackage (finalAttrs: {
     description = "Async Python client for the Lichess REST API";
     homepage = "https://github.com/aryanhasgithub/aiolichess";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 })

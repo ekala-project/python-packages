@@ -40,6 +40,5 @@ buildPythonPackage (finalAttrs: {
     description = "Simple GIT URL parser";
     homepage = "https://github.com/coala/git-url-parse";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

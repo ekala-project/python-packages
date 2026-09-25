@@ -81,7 +81,6 @@ buildPythonPackage rec {
     description = "Generate block-diagram image from spec-text file (similar to Graphviz)";
     homepage = "http://blockdiag.com/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "blockdiag";
     platforms = lib.platforms.unix;
   };

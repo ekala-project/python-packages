@@ -55,6 +55,5 @@ buildPythonPackage rec {
     description = "Serialize Python data to HDF5";
     homepage = "https://github.com/telegraphic/hickle";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

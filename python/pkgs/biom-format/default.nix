@@ -69,6 +69,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "http://biom-format.org/";
     downloadPage = "https://github.com/biocore/biom-format";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

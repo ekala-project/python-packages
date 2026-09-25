@@ -27,6 +27,5 @@ buildPythonPackage rec {
     description = "LCN panel for Home Assistant";
     homepage = "https://github.com/alengwenus/lcn-frontend";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

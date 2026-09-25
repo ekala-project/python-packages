@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "This is the Microsoft Azure Service Fabric Cluster Management Client Library";
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/servicefabricmanagedclusters/azure-mgmt-servicefabricmanagedclusters";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

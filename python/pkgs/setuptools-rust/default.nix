@@ -54,6 +54,5 @@ buildPythonPackage rec {
     description = "Setuptools plugin for Rust support";
     homepage = "https://github.com/PyO3/setuptools-rust";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

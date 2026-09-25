@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Footnote format addition for mdformat";
     homepage = "https://github.com/executablebooks/mdformat-footnote";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

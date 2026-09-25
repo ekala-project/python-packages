@@ -45,6 +45,5 @@ buildPythonPackage rec {
     description = "Official low-level client for Elasticsearch";
     homepage = "https://github.com/elasticsearch/elasticsearch-py";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

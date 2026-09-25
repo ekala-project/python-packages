@@ -33,6 +33,5 @@ buildPythonPackage rec {
     description = "Up to date simple useragent faker with real world database";
     homepage = "https://github.com/hellysmile/fake-useragent";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

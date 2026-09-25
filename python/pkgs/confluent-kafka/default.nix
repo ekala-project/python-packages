@@ -82,6 +82,5 @@ buildPythonPackage rec {
     description = "Confluent's Apache Kafka client for Python";
     homepage = "https://github.com/confluentinc/confluent-kafka-python";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

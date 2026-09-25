@@ -46,6 +46,5 @@ buildPythonPackage (finalAttrs: {
     description = "Tools to enumerate and find Bluetooth Adapters";
     homepage = "https://github.com/Bluetooth-Devices/bluetooth-adapters";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

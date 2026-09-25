@@ -48,6 +48,5 @@ buildPythonPackage rec {
     mainProgram = "sphinx-autobuild";
     homepage = "https://github.com/sphinx-doc/sphinx-autobuild";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -32,6 +32,5 @@ buildPythonPackage {
       bsd3
       lgpl21Plus
     ];
-    maintainers = [ ];
   };
 }

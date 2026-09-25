@@ -69,6 +69,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/google/crc32c";
     description = "CRC32C implementation with support for CPU-specific acceleration instructions";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

@@ -31,6 +31,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python library for Homevolt EMS devices";
     homepage = "https://github.com/Danielhiversen/pyHomevolt";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 })

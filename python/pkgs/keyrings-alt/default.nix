@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Alternate keyring implementations";
     homepage = "https://github.com/jaraco/keyrings.alt";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

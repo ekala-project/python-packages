@@ -51,6 +51,5 @@ buildPythonPackage (finalAttrs: {
     mainProgram = "anyconfig_cli";
     homepage = "https://github.com/ssato/python-anyconfig";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

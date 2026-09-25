@@ -35,6 +35,5 @@ buildPythonPackage (finalAttrs: {
     description = "Template Text Parser Templates collections";
     homepage = "https://github.com/dmulyalin/ttp_templates";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

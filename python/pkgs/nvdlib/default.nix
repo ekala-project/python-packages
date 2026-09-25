@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Module to interact with the National Vulnerability CVE/CPE API";
     homepage = "https://github.com/Vehemont/nvdlib/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

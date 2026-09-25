@@ -32,6 +32,5 @@ buildPythonPackage (finalAttrs: {
     description = "Markdown parser with high extensibility";
     homepage = "https://github.com/frostming/marko";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

@@ -27,7 +27,6 @@ buildPythonPackage (finalAttrs: {
     description = "Python SWF Parser";
     homepage = "https://github.com/facundobatista/yaswfp";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     mainProgram = "swfparser";
   };
 })

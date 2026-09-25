@@ -61,7 +61,6 @@ buildPythonPackage rec {
     description = "Simple and extensible IRC bot";
     homepage = "https://sopel.chat";
     license = lib.licenses.efl20;
-    maintainers = [ ];
     mainProgram = "sopel";
   };
 }

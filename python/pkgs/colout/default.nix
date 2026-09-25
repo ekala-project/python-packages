@@ -36,6 +36,5 @@ buildPythonPackage rec {
     mainProgram = "colout";
     homepage = "https://github.com/nojhan/colout";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 }

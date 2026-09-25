@@ -23,7 +23,6 @@ let
   commonMeta = {
     homepage = "https://github.com/kylebarron/arro3";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 
   buildArro3Package =

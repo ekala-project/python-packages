@@ -41,6 +41,5 @@ buildPythonPackage rec {
     description = "Structured Configuration Library";
     homepage = "https://github.com/zopefoundation/ZConfig";
     license = lib.licenses.zpl21;
-    maintainers = [ ];
   };
 }

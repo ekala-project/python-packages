@@ -33,6 +33,5 @@ buildPythonPackage rec {
     description = "Aliyun Tea Library for Python";
     homepage = "https://pypi.org/project/alibabacloud-tea/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

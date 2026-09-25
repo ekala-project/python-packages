@@ -25,6 +25,5 @@ buildPythonPackage rec {
     description = "Command-line utility and library that helps with TCP port managment";
     mainProgram = "port-for";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Python SuperDictionaries (with attributes) and SuperLists";
     homepage = "https://github.com/fralau/super-collections";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

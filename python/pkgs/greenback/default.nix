@@ -41,6 +41,5 @@ buildPythonPackage rec {
     description = "Use anyio and asyncio from synchronous code";
     homepage = "https://github.com/oremanj/greenback";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

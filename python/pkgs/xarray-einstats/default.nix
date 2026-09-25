@@ -41,6 +41,5 @@ buildPythonPackage (finalAttrs: {
     description = "Stats, linear algebra and einops for xarray";
     homepage = "https://github.com/arviz-devs/xarray-einstats";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

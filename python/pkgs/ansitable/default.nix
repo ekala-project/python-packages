@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Quick and easy display of tabular data and matrices with optional ANSI color and borders";
     homepage = "https://pypi.org/project/ansitable/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

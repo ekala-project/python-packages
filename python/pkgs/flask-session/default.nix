@@ -40,6 +40,5 @@ buildPythonPackage rec {
     description = "Flask extension that adds support for server-side sessions";
     homepage = "https://github.com/pallets-eco/flask-session";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

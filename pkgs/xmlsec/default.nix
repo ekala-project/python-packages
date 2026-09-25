@@ -74,6 +74,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.aleksey.com/xmlsec/";
     license = lib.licenses.mit;
     mainProgram = "xmlsec1";
-    maintainers = [ ];
   };
 })

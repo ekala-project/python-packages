@@ -37,7 +37,6 @@ buildPythonPackage (finalAttrs: {
     description = "Module for controlling the IKEA Dirigera Smart Home Hub";
     homepage = "https://github.com/Leggin/dirigera";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "generate-token";
   };
 })

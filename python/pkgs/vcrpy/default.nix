@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "Automatically mock your HTTP interactions to simplify and speed up testing";
     homepage = "https://github.com/kevin1024/vcrpy";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

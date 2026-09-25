@@ -30,6 +30,5 @@ buildPythonPackage rec {
     description = "Python Fit file parser";
     license = lib.licenses.gpl2Only;
     homepage = "https://github.com/tcgoetz/fit";
-    maintainers = [ ];
   };
 }

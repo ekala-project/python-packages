@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "Async OUI lookups";
     homepage = "https://github.com/Bluetooth-Devices/aiooui";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

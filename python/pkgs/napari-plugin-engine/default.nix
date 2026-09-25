@@ -32,6 +32,5 @@ buildPythonPackage (finalAttrs: {
     description = "First generation napari plugin engine";
     homepage = "https://github.com/napari/napari-plugin-engine";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

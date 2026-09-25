@@ -59,6 +59,5 @@ buildPythonPackage (finalAttrs: {
     description = "Standalone, host-agnostic Python library for KNX telegram persistence";
     homepage = "https://github.com/XKNX/knx-telegram-store";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

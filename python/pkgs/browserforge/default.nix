@@ -43,6 +43,5 @@ buildPythonPackage (finalAttrs: {
     description = "Intelligent browser header & fingerprint generator";
     homepage = "https://github.com/daijro/browserforge";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

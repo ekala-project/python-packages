@@ -63,7 +63,6 @@ buildPythonPackage (finalAttrs: {
     description = "Small and easy workflow system";
     homepage = "https://github.com/explosion/weasel/";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "weasel";
   };
 })

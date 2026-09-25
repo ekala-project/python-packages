@@ -44,6 +44,5 @@ buildPythonPackage (finalAttrs: {
     description = "Retrieval of Spanish Electricity hourly prices (PVPC)";
     homepage = "https://github.com/chiro79/esios-api";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

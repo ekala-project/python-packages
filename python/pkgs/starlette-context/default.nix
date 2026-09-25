@@ -29,6 +29,5 @@ buildPythonPackage (finalAttrs: {
     description = "Middleware for Starlette that allows you to store and access the context data of a request";
     homepage = "https://github.com/tomwojcik/starlette-context";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

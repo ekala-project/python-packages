@@ -42,6 +42,5 @@ buildPythonPackage rec {
     description = "Python package to read all kinds and all versions of Matlab mat files";
     homepage = "https://gitlab.com/obob/pymatreader/";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

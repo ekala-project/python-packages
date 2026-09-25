@@ -27,6 +27,5 @@ buildPythonPackage rec {
     description = "Light effects (pulse, colorloop ...) for LIFX lights running on aiolifx";
     homepage = "https://github.com/amelchio/aiolifx_effects";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -43,6 +43,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python library for Hypontech Cloud API for solar inverter monitoring";
     homepage = "https://github.com/jcisio/hyponcloud";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

@@ -41,6 +41,5 @@ buildPythonPackage (finalAttrs: {
     description = "Suite of analysis utilities and command line tools for container images";
     homepage = "https://github.com/nexB/container-inspector";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

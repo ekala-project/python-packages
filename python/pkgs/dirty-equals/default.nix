@@ -34,7 +34,6 @@ let
       description = "Module for doing dirty (but extremely useful) things with equals";
       homepage = "https://github.com/samuelcolvin/dirty-equals";
       license = lib.licenses.mit;
-      maintainers = [ ];
     };
   };
 in

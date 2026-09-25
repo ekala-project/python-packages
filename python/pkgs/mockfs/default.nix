@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Simple mock filesystem for use in unit tests";
     homepage = "https://github.com/mockfs/mockfs";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

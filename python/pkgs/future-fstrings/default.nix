@@ -23,6 +23,5 @@ buildPythonPackage rec {
     description = "Backport of fstrings to python<3.6";
     mainProgram = "future-fstrings-show";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -42,6 +42,5 @@ buildPythonPackage rec {
     description = "Compatibility layer for pydantic v1/v2";
     homepage = "https://github.com/pyapp-kit/pydantic-compat";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

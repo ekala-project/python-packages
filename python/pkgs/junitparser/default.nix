@@ -25,6 +25,5 @@ buildPythonPackage rec {
     mainProgram = "junitparser";
     license = lib.licenses.asl20;
     homepage = "https://github.com/weiwei/junitparser";
-    maintainers = [ ];
   };
 }

@@ -48,6 +48,5 @@ buildPythonPackage rec {
     description = "Google Cloud DNS API client library";
     homepage = "https://cloud.google.com/dns";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

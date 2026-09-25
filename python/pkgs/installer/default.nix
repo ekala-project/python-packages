@@ -29,6 +29,5 @@ buildPythonPackage rec {
     description = "Low-level library for installing a Python package from a wheel distribution";
     homepage = "https://github.com/pypa/installer";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -55,7 +55,6 @@ buildPythonPackage (finalAttrs: {
     description = "Module to access information from the Meteo-France API";
     homepage = "https://github.com/hacf-fr/meteofrance-api";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "meteofrance-api";
   };
 })

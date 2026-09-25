@@ -62,6 +62,5 @@ buildPythonPackage (finalAttrs: {
     description = "Dissect module implementing various utility functions for the other Dissect modules";
     homepage = "https://github.com/fox-it/dissect.volume";
     license = lib.licenses.agpl3Only;
-    maintainers = [ ];
   };
 })

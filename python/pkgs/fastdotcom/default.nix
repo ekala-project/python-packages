@@ -33,6 +33,5 @@ buildPythonPackage rec {
     description = "Python API for testing internet speed on Fast.com";
     homepage = "https://github.com/nkgilley/fast.com";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

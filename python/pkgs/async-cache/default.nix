@@ -28,6 +28,5 @@ buildPythonPackage (finalAttrs: {
     description = "Caching solution for asyncio";
     homepage = "https://github.com/iamsinghrajat/async-cache";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

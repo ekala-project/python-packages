@@ -52,6 +52,5 @@ buildPythonPackage (finalAttrs: {
     description = "Allows using docker containers for functional and integration testing";
     homepage = "https://github.com/testcontainers/testcontainers-python";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

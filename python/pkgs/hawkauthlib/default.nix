@@ -40,6 +40,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/mozilla-services/hawkauthlib";
     description = "Hawk Access Authentication protocol";
     license = lib.licenses.mpl20;
-    maintainers = [ ];
   };
 }

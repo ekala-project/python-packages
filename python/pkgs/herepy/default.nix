@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Library that provides a Python interface to the HERE APIs";
     homepage = "https://github.com/abdullahselek/HerePy";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

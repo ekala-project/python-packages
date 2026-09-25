@@ -33,6 +33,5 @@ buildPythonPackage rec {
     description = "Module to handle JSON/MessagePack";
     homepage = "https://github.com/jcrist/msgspec";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

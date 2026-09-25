@@ -44,6 +44,5 @@ buildPythonPackage rec {
     description = "Standalone API to collect data from the Imeon Energy Inverters that uses HTTP POST/GET";
     homepage = "https://github.com/Imeon-Inverters-for-Home-Assistant/inverter-api";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

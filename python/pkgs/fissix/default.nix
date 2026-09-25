@@ -40,6 +40,5 @@ buildPythonPackage {
     homepage = "https://github.com/amyreese/fissix";
     sourceProvenance = [ lib.sourceTypes.fromSource ];
     license = lib.licenses.psfl;
-    maintainers = [ ];
   };
 }

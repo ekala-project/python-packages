@@ -60,6 +60,5 @@ buildPythonPackage rec {
     description = "Datetimes for Humans";
     homepage = "https://github.com/timofurrer/maya";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

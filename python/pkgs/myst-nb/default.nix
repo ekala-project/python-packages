@@ -52,6 +52,5 @@ buildPythonPackage rec {
     description = "Jupyter Notebook Sphinx reader built on top of the MyST markdown parser";
     homepage = "https://github.com/executablebooks/MyST-NB";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

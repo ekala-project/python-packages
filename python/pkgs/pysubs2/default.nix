@@ -26,6 +26,5 @@ buildPythonPackage rec {
     description = "Python library for editing subtitle files";
     mainProgram = "pysubs2";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

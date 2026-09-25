@@ -41,6 +41,5 @@ buildPythonPackage rec {
     description = "Compact representation of a placeholder for an image";
     homepage = "https://github.com/woltapp/blurhash-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

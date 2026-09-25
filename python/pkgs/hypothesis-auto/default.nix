@@ -44,6 +44,5 @@ buildPythonPackage rec {
     description = "Enables fully automatic tests for type annotated functions";
     homepage = "https://github.com/timothycrosley/hypothesis-auto/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -37,6 +37,5 @@ buildPythonPackage (finalAttrs: {
     description = "Checks the syntax of Postgresql SQL files";
     mainProgram = "pgsanity";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

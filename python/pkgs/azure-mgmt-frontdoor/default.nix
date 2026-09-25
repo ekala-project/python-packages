@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "Microsoft Azure Front Door Service Client Library for Python";
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/network/azure-mgmt-frontdoor";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

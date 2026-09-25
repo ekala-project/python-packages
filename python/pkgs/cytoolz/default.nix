@@ -37,6 +37,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://github.com/pytoolz/cytoolz/";
     description = "Cython implementation of Toolz: High performance functional utilities";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

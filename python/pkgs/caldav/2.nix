@@ -80,6 +80,5 @@ buildPythonPackage rec {
     description = "CalDAV (RFC4791) client library";
     homepage = "https://github.com/python-caldav/caldav";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

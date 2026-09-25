@@ -46,6 +46,5 @@ buildPythonPackage (finalAttrs: {
     description = "Feature flags for Django projects";
     homepage = "https://github.com/cfpb/django-flags";
     license = lib.licenses.cc0;
-    maintainers = [ ];
   };
 })

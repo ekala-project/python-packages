@@ -47,6 +47,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/kornia/kornia-rs";
     description = "Python bindings to Low-level Computer Vision library in Rust";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

@@ -29,6 +29,5 @@ buildPythonPackage rec {
     description = "Module for interacting with FiveM servers";
     homepage = "https://github.com/Sander0542/fivem-api";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

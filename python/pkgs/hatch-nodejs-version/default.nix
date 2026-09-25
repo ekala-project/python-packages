@@ -24,6 +24,5 @@ buildPythonPackage rec {
     description = "Plugins for dealing with NodeJS versions";
     homepage = "https://github.com/agoose77/hatch-nodejs-version";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

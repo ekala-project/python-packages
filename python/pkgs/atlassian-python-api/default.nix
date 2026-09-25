@@ -47,6 +47,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python Atlassian REST API Wrapper";
     homepage = "https://github.com/atlassian-api/atlassian-python-api";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

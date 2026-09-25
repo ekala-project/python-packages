@@ -34,6 +34,5 @@ buildPythonPackage (finalAttrs: {
     description = "LlamaIndex Embeddings Integration for OpenAI";
     homepage = "https://github.com/run-llama/llama_index/tree/main/llama-index-integrations/readers/llama-index-readers-s3";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

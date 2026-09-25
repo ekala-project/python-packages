@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Library to solve automatic numerical differentiation problems in one or more variables";
     homepage = "https://github.com/pbrod/numdifftools";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

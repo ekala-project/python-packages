@@ -58,6 +58,5 @@ buildPythonPackage rec {
     description = "Module for social authentication/registration mechanisms";
     homepage = "https://github.com/python-social-auth/social-core";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

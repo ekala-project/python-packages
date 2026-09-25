@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Package to parse logical tag expressions";
     homepage = "https://github.com/timofurrer/tag-expressions";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
   };
 }

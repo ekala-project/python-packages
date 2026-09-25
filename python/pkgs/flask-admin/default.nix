@@ -125,6 +125,5 @@ buildPythonPackage rec {
     description = "Admin interface framework for Flask";
     homepage = "https://github.com/flask-admin/flask-admin/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

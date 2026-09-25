@@ -30,6 +30,5 @@ buildPythonPackage (finalAttrs: {
     description = "Wrapper for The Movie Database API v3";
     homepage = "https://github.com/celiao/tmdbsimple";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
   };
 })

@@ -30,6 +30,5 @@ buildPythonPackage (finalAttrs: {
     description = "Compatibility layer for NumPy to support the Python array API";
     homepage = "https://data-apis.org/array-api-compat";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

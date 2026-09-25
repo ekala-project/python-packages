@@ -41,6 +41,5 @@ buildPythonPackage rec {
     description = "AMQP 0.9 client designed for asyncio and humans";
     homepage = "https://github.com/mosquito/aio-pika";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

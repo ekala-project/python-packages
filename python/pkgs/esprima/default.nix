@@ -23,6 +23,5 @@ buildPythonPackage rec {
     mainProgram = "esprima";
     homepage = "https://github.com/Kronuz/esprima-python";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

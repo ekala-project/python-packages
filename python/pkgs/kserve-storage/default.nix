@@ -66,6 +66,5 @@ buildPythonPackage rec {
     description = "KServe Storage Handler. This module is responsible to download the models from the provided source";
     homepage = "https://pypi.org/project/kserve-storage";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

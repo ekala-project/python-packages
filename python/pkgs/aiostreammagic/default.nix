@@ -39,6 +39,5 @@ buildPythonPackage (finalAttrs: {
     description = "Module for interfacing with Cambridge Audio/Stream Magic compatible streamers";
     homepage = "https://github.com/noahhusby/aiostreammagic";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

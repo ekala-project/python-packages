@@ -43,6 +43,5 @@ buildPythonPackage rec {
     description = "Module to resolve mDNS with aiohttp";
     homepage = "https://github.com/aio-libs/aiohttp-asyncmdnsresolver";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

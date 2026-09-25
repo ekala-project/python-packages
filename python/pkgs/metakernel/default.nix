@@ -37,6 +37,5 @@ buildPythonPackage (finalAttrs: {
     description = "Jupyter/IPython Kernel Tools";
     homepage = "https://github.com/Calysto/metakernel";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

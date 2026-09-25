@@ -54,6 +54,5 @@ buildPythonPackage rec {
     '';
     homepage = "https://github.com/liberfa/pyerfa";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

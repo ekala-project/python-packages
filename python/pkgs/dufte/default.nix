@@ -42,6 +42,5 @@ buildPythonPackage rec {
     description = "Clean matplotlib plots";
     homepage = "https://github.com/nschloe/dufte";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
   };
 }

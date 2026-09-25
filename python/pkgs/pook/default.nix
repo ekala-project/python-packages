@@ -37,6 +37,5 @@ buildPythonPackage rec {
     description = "HTTP traffic mocking and testing";
     homepage = "https://github.com/h2non/pook";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

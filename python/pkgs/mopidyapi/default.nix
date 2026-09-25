@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "Module for interacting with Mopidy via its JSON RPC API";
     homepage = "https://github.com/AsbjornOlling/mopidyapi";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 }

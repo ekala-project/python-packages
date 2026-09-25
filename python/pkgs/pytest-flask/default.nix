@@ -38,6 +38,5 @@ buildPythonPackage (finalAttrs: {
     description = "Set of pytest fixtures to test Flask applications";
     homepage = "https://pytest-flask.readthedocs.io/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

@@ -47,6 +47,5 @@ buildPythonPackage (finalAttrs: {
     description = "Parsing MHC nomenclature in the wild";
     homepage = "https://github.com/pirl-unc/mhcgnomes";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

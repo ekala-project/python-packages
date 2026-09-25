@@ -33,6 +33,5 @@ buildPythonPackage (finalAttrs: {
     description = "Bash grammar for tree-sitter";
     homepage = "https://github.com/tree-sitter/tree-sitter-bash";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

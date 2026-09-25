@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Correlation vector implementation in python";
     homepage = "https://github.com/OpenXbox/ms_cv";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

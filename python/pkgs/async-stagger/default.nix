@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "Happy Eyeballs connection algorithm and underlying scheduling logic in asyncio";
     homepage = "https://github.com/twisteroidambassador/async_stagger";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

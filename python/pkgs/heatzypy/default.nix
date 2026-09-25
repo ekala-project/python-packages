@@ -35,6 +35,5 @@ buildPythonPackage (finalAttrs: {
     description = "Module to interact with Heatzy devices";
     homepage = "https://github.com/Cyr-ius/heatzypy";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
   };
 })

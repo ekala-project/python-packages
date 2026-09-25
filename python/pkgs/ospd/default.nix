@@ -36,7 +36,6 @@ buildPythonPackage rec {
     description = "Framework for vulnerability scanners which support OSP";
     homepage = "https://github.com/greenbone/ospd";
     license = lib.licenses.agpl3Plus;
-    maintainers = [ ];
     broken = stdenv.hostPlatform.isDarwin;
   };
 }

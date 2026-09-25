@@ -44,7 +44,6 @@ buildPythonPackage rec {
     description = "Reproducible experimental protocols for multimedia (audio, video, text) database";
     homepage = "https://github.com/pyannote/pyannote-database";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "pyannote-database";
   };
 }

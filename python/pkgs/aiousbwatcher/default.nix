@@ -37,6 +37,5 @@ buildPythonPackage rec {
     description = "Watch for USB devices to be plugged and unplugged";
     homepage = "https://github.com/Bluetooth-Devices/aiousbwatcher";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

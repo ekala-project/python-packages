@@ -52,6 +52,5 @@ buildPythonPackage (finalAttrs: {
     description = "ArviZ modular plotting";
     homepage = "https://github.com/arviz-devs/arviz-plots";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

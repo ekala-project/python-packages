@@ -44,6 +44,5 @@ buildPythonPackage rec {
     description = "YAML grammar for tree-sitter";
     homepage = "https://github.com/tree-sitter-grammars/tree-sitter-yaml";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

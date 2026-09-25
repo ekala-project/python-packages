@@ -46,6 +46,5 @@ buildPythonPackage rec {
     mainProgram = "iodata-convert";
     homepage = "https://github.com/theochem/iodata";
     license = lib.licenses.lgpl3Only;
-    maintainers = [ ];
   };
 }

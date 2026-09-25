@@ -38,6 +38,5 @@ buildPythonPackage (finalAttrs: {
     mainProgram = "ansi2image";
     homepage = "https://github.com/helviojunior/ansi2image";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 })

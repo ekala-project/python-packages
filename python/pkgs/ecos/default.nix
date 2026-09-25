@@ -41,6 +41,5 @@ buildPythonPackage rec {
     description = "Python interface for ECOS";
     homepage = "https://github.com/embotech/ecos-python";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 }

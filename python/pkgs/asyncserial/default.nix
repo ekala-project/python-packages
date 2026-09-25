@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "asyncio support for pyserial";
     homepage = "https://github.com/m-labs/asyncserial";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Use requests to talk HTTP via a UNIX domain socket";
     homepage = "https://gitlab.com/thelabnyc/requests-unixsocket2";
     license = lib.licenses.bsd0;
-    maintainers = [ ];
   };
 }

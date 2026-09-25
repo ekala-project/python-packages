@@ -24,6 +24,5 @@ buildPythonPackage rec {
     mainProgram = "future_typing";
     homepage = "https://github.com/PrettyWood/future-typing";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

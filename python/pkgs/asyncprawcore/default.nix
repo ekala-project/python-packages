@@ -54,6 +54,5 @@ buildPythonPackage (finalAttrs: {
     description = "Low-level asynchronous communication layer for Async PRAW";
     homepage = "https://asyncpraw.readthedocs.io/";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 })

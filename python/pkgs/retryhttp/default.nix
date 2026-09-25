@@ -44,6 +44,5 @@ buildPythonPackage rec {
     description = "Retry potentially transient HTTP errors in Python";
     homepage = "https://github.com/austind/retryhttp";
     license = lib.licenses.apsl20;
-    maintainers = [ ];
   };
 }

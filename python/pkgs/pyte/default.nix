@@ -30,6 +30,5 @@ buildPythonPackage rec {
     description = "Simple VTXXX-compatible linux terminal emulator";
     homepage = "https://github.com/selectel/pyte";
     license = lib.licenses.lgpl3;
-    maintainers = [ ];
   };
 }

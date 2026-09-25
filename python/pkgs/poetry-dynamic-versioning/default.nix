@@ -39,6 +39,5 @@ buildPythonPackage rec {
     mainProgram = "poetry-dynamic-versioning";
     homepage = "https://github.com/mtkennerly/poetry-dynamic-versioning";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

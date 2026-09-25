@@ -27,6 +27,5 @@ buildPythonPackage rec {
     description = "Conversion of ints and rationals to any base";
     homepage = "https://github.com/mulkieran/justbases";
     license = lib.licenses.lgpl2Plus;
-    maintainers = [ ];
   };
 }

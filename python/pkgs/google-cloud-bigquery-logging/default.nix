@@ -52,6 +52,5 @@ buildPythonPackage (finalAttrs: {
     description = "Bigquery logging client library";
     homepage = "https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-bigquery-logging";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

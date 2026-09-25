@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "Python MQTT v5.0 async client";
     homepage = "https://github.com/wialon/gmqtt";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

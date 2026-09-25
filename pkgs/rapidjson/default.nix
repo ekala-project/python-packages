@@ -66,6 +66,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://rapidjson.org/";
     license = lib.licenses.mit;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

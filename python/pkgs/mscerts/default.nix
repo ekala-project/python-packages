@@ -30,6 +30,5 @@ buildPythonPackage (finalAttrs: {
     description = "Makes the Microsoft Trusted Root Program's Certificate Trust Lists available in Python";
     homepage = "https://github.com/ralphje/mscerts";
     license = lib.licenses.mpl20;
-    maintainers = [ ];
   };
 })

@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Python library for controlling Leviton Decora Smart Wi-Fi devices";
     homepage = "https://github.com/tlyakhov/python-decora_wifi";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -67,6 +67,5 @@ buildPythonPackage rec {
     description = "Plyer is a platform-independent api to use features commonly found on various platforms";
     homepage = "https://github.com/kivy/plyer";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

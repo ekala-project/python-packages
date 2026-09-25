@@ -46,6 +46,5 @@ buildPythonPackage rec {
     mainProgram = "inscript.py";
     homepage = "https://github.com/weblyzard/inscriptis";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

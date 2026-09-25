@@ -33,6 +33,5 @@ buildPythonPackage rec {
     description = "Pytimeparse based project with the aim of optimizing functionality and providing stable support";
     homepage = "https://github.com/onegreyonewhite/pytimeparse2";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

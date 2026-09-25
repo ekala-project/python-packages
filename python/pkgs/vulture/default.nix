@@ -25,7 +25,6 @@ buildPythonPackage rec {
     description = "Finds unused code in Python programs";
     homepage = "https://github.com/jendrikseipp/vulture";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "vulture";
   };
 }

@@ -59,6 +59,5 @@ buildPythonPackage rec {
     mainProgram = "glean_parser";
     homepage = "https://github.com/mozilla/glean_parser";
     license = lib.licenses.mpl20;
-    maintainers = [ ];
   };
 }

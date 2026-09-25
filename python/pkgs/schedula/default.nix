@@ -65,7 +65,6 @@ buildPythonPackage rec {
     description = "Smart function scheduler for dynamic flow-based programming";
     homepage = "https://github.com/vinci1it2000/schedula";
     license = lib.licenses.eupl11;
-    maintainers = [ ];
     # at least some tests fail on Darwin
     platforms = lib.platforms.linux;
   };

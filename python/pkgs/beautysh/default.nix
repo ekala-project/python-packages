@@ -43,7 +43,6 @@ buildPythonPackage (finalAttrs: {
     description = "Tool for beautifying Bash scripts";
     homepage = "https://github.com/lovesegfault/beautysh";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "beautysh";
   };
 })

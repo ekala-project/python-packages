@@ -77,6 +77,5 @@ buildPythonPackage (finalAttrs: {
     description = "Module for sending emails and attachments";
     homepage = "https://github.com/sabuhish/fastapi-mail";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

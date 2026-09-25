@@ -25,6 +25,5 @@ buildPythonPackage rec {
     description = "ALSA wrappers for Python";
     homepage = "https://github.com/larsimmisch/pyalsaaudio";
     license = lib.licenses.psfl;
-    maintainers = [ ];
   };
 }

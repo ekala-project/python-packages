@@ -35,6 +35,5 @@ buildPythonPackage (finalAttrs: {
     description = "Case-insensitive ordered dictionary for Python";
     homepage = "https://github.com/pywbem/nocasedict";
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
   };
 })

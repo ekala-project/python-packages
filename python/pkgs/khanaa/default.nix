@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "Tool to make spelling Thai more convenient";
     homepage = "https://github.com/cakimpei/khanaa";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

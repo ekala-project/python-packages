@@ -68,6 +68,5 @@ buildPythonPackage rec {
     description = "Ahead of Time compiler for numeric kernels";
     homepage = "https://github.com/serge-sans-paille/pythran";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

@@ -51,6 +51,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python framework for seismological observatories";
     homepage = "https://www.obspy.org";
     license = lib.licenses.lgpl3Only;
-    maintainers = [ ];
   };
 })

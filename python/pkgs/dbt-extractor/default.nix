@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "Tool that processes the most common jinja value templates in dbt model files";
     homepage = "https://github.com/dbt-labs/dbt-extractor";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

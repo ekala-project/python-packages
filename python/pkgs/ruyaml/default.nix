@@ -33,6 +33,5 @@ buildPythonPackage rec {
     description = "YAML 1.2 loader/dumper package for Python";
     homepage = "https://ruyaml.readthedocs.io/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

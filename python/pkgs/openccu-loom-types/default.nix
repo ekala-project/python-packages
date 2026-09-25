@@ -37,6 +37,5 @@ buildPythonPackage (finalAttrs: {
     description = "Generated Pydantic / enum types for the openccu-loom REST + WebSocket contract";
     homepage = "https://github.com/SukramJ/openccu-loom-types";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

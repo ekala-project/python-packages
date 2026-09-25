@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "Library for serializing and deserializing Sigstore messages";
     homepage = "https://github.com/sigstore/protobuf-specs/tree/main/gen/pb-python";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

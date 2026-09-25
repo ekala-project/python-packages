@@ -45,6 +45,5 @@ buildPythonPackage rec {
     description = "Asyncio Duke Energy";
     homepage = "https://github.com/hunterjm/aiodukeenergy";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

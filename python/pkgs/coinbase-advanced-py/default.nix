@@ -61,6 +61,5 @@ buildPythonPackage rec {
     description = "Coinbase Advanced API Python SDK";
     homepage = "https://github.com/coinbase/coinbase-advanced-py";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

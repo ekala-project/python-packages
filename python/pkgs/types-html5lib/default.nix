@@ -30,6 +30,5 @@ buildPythonPackage rec {
     description = "Typing stubs for html5lib";
     homepage = "https://pypi.org/project/types-html5lib/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

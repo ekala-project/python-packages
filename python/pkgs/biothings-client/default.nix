@@ -47,6 +47,5 @@ buildPythonPackage (finalAttrs: {
     description = "Wrapper to access Biothings.api-based backend services";
     homepage = "https://github.com/biothings/biothings_client.py";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

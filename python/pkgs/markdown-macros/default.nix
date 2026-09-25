@@ -41,6 +41,5 @@ buildPythonPackage rec {
     description = "Extension for python-markdown that makes writing trac-like macros easy";
     homepage = "https://github.com/wnielson/markdown-macros";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

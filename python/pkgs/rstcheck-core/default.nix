@@ -39,6 +39,5 @@ buildPythonPackage (finalAttrs: {
     description = "Library for checking syntax of reStructuredText";
     homepage = "https://github.com/rstcheck/rstcheck-core";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

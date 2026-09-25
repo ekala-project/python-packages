@@ -41,6 +41,5 @@ buildPythonPackage rec {
     description = "Microsoft Azure App Configuration Management Client Library for Python";
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/appconfiguration/azure-mgmt-appconfiguration";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

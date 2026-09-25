@@ -42,6 +42,5 @@ buildPythonPackage rec {
     description = "Push and pull from a Git server using Mercurial";
     homepage = "https://hg-git.github.io/";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
   };
 }

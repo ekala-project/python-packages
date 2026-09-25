@@ -100,6 +100,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python SDK for the Agent2Agent (A2A) Protocol";
     homepage = "https://github.com/a2aproject/a2a-python";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

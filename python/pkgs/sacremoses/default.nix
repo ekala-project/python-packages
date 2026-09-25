@@ -39,6 +39,5 @@ buildPythonPackage (finalAttrs: {
     mainProgram = "sacremoses";
     license = lib.licenses.lgpl21Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

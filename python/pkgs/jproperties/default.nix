@@ -38,7 +38,6 @@ buildPythonPackage rec {
     description = "Java Property file parser and writer for Python";
     homepage = "https://github.com/Tblue/python-jproperties";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     mainProgram = "propconv";
   };
 }

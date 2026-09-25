@@ -20,7 +20,6 @@ buildPythonPackage rec {
   meta = {
     homepage = "https://github.com/vi3k6i5/flashtext";
     description = "Python package to replace keywords in sentences or extract keywords from sentences";
-    maintainers = [ ];
     license = lib.licenses.mit;
   };
 }

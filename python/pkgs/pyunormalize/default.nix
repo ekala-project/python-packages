@@ -24,6 +24,5 @@ buildPythonPackage rec {
     description = "Unicode normalization forms (NFC, NFKC, NFD, NFKD) independent of the Python core Unicode database";
     homepage = "https://github.com/mlodewijck/pyunormalize";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

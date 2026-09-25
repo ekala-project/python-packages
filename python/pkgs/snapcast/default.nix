@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Control Snapcast, a multi-room synchronous audio solution";
     homepage = "https://github.com/happyleavesaoc/python-snapcast/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

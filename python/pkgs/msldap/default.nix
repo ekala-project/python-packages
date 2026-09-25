@@ -46,6 +46,5 @@ buildPythonPackage rec {
     description = "Python LDAP library for auditing MS AD";
     homepage = "https://github.com/skelsec/msldap";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -24,6 +24,5 @@ buildPythonPackage rec {
     description = "Chain I/O streams together into a single stream";
     homepage = "https://github.com/rrthomas/chainstream";
     license = lib.licenses.cc-by-sa-40;
-    maintainers = [ ];
   };
 }

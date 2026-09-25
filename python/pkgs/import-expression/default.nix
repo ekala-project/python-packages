@@ -32,7 +32,6 @@ buildPythonPackage rec {
       mit
       psfl
     ];
-    maintainers = [ ];
     mainProgram = "import-expression";
   };
 }

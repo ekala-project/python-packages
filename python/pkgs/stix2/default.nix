@@ -36,6 +36,5 @@ buildPythonPackage (finalAttrs: {
     description = "Produce and consume STIX 2 JSON content";
     homepage = "https://stix2.readthedocs.io/en/latest/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

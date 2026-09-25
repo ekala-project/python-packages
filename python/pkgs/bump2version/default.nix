@@ -43,6 +43,5 @@ buildPythonPackage rec {
     '';
     homepage = "https://github.com/c4urself/bump2version";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

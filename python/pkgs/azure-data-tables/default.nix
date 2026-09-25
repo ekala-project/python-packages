@@ -38,6 +38,5 @@ buildPythonPackage rec {
     description = "NoSQL data storage service that can be accessed from anywhere";
     homepage = "https://github.com/Azure/azure-sdk-for-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

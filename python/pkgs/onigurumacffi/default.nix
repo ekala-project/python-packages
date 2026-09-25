@@ -26,6 +26,5 @@ buildPythonPackage rec {
     description = "Python cffi bindings for the oniguruma regex engine";
     homepage = "https://github.com/asottile/onigurumacffi";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

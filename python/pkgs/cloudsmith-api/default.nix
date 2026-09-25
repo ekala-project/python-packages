@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Cloudsmith API Client";
     homepage = "https://github.com/cloudsmith-io/cloudsmith-api";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

@@ -29,6 +29,5 @@ buildPythonPackage (finalAttrs: {
     description = "Darabonba Encode Util Library for Alibaba Cloud Python SDK";
     homepage = "https://github.com/aliyun/darabonba-crypto-util";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

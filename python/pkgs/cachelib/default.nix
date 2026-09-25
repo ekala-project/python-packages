@@ -26,6 +26,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/pallets/cachelib";
     description = "Collection of cache libraries in the same API interface";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

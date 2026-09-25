@@ -29,7 +29,6 @@ buildPythonPackage rec {
     description = "Miscellaneous path functions";
     homepage = "https://github.com/jaraco/jaraco.path";
     license = lib.licenses.mit;
-    maintainers = [ ];
     broken = stdenv.hostPlatform.isDarwin; # pyobjc is missing
   };
 }

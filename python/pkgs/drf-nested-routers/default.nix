@@ -28,6 +28,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/alanjds/drf-nested-routers";
     description = "Provides routers and fields to create nested resources in the Django Rest Framework";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

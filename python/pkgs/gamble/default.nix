@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Collection of gambling classes/tools";
     homepage = "https://github.com/jpetrucciani/gamble";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

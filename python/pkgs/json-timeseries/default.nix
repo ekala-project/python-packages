@@ -36,7 +36,6 @@ buildPythonPackage (finalAttrs: {
   meta = {
     description = "JSON Time Series (JTS) spec Python library";
     homepage = "https://github.com/slaxor505/json-timeseries-py";
-    maintainers = [ ];
     license = lib.licenses.mit;
   };
 })

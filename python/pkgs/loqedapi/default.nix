@@ -35,6 +35,5 @@ buildPythonPackage (finalAttrs: {
     description = "Module to interact with the Loqed Smart Door Lock API";
     homepage = "https://github.com/cpolhout/loqedAPI";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 })

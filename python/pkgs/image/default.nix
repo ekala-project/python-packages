@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Django application for image and video processing";
     homepage = "https://github.com/francescortiz/image";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

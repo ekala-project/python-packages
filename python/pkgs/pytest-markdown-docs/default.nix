@@ -41,6 +41,5 @@ buildPythonPackage (finalAttrs: {
     description = "Run pytest on markdown code fence blocks";
     homepage = "https://github.com/modal-com/pytest-markdown-docs";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

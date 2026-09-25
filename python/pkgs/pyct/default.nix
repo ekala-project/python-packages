@@ -49,6 +49,5 @@ buildPythonPackage (finalAttrs: {
     mainProgram = "pyct";
     homepage = "https://github.com/pyviz/pyct";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

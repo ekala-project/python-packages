@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Decorator-decorator";
     homepage = "https://github.com/rec/dek";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

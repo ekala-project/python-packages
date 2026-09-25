@@ -52,6 +52,5 @@ buildPythonPackage (finalAttrs: {
     description = "native Python binding for Apache OpenDAL";
     homepage = "https://github.com/apache/opendal/blob/main/bindings/python";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

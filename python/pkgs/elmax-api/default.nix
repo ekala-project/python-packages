@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "Python library for interacting with the Elmax cloud";
     homepage = "https://github.com/albertogeniola/elmax-api";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

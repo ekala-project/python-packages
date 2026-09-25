@@ -33,6 +33,5 @@ buildPythonPackage (finalAttrs: {
     description = "Typing stubs for Deprecated";
     homepage = "https://pypi.org/project/types-Deprecated/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

@@ -69,6 +69,5 @@ buildPythonPackage (finalAttrs: {
     description = "High performance Python graph library implemented in Rust";
     homepage = "https://github.com/Qiskit/rustworkx";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

@@ -79,7 +79,6 @@ buildPythonPackage rec {
     description = "Find the latest release version of an arbitrary project";
     homepage = "https://github.com/dvershinin/lastversion";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     mainProgram = "lastversion";
   };
 }

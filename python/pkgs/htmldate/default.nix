@@ -53,7 +53,6 @@ buildPythonPackage rec {
     description = "Module for the extraction of original and updated publication dates from URLs and web pages";
     homepage = "https://htmldate.readthedocs.io";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "htmldate";
   };
 }

@@ -41,6 +41,5 @@ buildPythonPackage rec {
     description = "Cron string parser and iteration for the datetime object with a cron like format";
     homepage = "https://github.com/Sonic0/cron-converter";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

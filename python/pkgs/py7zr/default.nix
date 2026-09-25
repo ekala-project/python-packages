@@ -57,6 +57,5 @@ buildPythonPackage rec {
     description = "7zip in Python 3 with ZStandard, PPMd, LZMA2, LZMA1, Delta, BCJ, BZip2";
     homepage = "https://github.com/miurahr/py7zr";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
   };
 }

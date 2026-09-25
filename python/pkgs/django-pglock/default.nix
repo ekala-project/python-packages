@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Postgres advisory locks, table locks, and blocking lock management";
     homepage = "https://github.com/AmbitionEng/django-pglock";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

@@ -53,6 +53,5 @@ buildPythonPackage rec {
     description = "Client library to use the IBM Watson Services";
     homepage = "https://github.com/watson-developer-cloud/python-sdk";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

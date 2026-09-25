@@ -35,6 +35,5 @@ buildPythonPackage (finalAttrs: {
     description = "Advanced search language for Django";
     homepage = "https://github.com/ivelum/djangoql";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

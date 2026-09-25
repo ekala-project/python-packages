@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "Microsoft Azure API Management Client Library for Python";
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/botservice/azure-mgmt-botservice";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

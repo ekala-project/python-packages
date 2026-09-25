@@ -48,6 +48,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/uilibs/mficlient";
     license = lib.licenses.mit;
     mainProgram = "mfi";
-    maintainers = [ ];
   };
 }

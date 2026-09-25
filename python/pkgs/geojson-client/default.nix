@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "Python module for convenient access to GeoJSON feeds";
     homepage = "https://github.com/exxamalte/python-geojson-client";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

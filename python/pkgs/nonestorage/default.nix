@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Simple library that provides local storage folder detect";
     homepage = "https://github.com/nonebot/nonestorage";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

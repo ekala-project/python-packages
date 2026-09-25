@@ -28,6 +28,5 @@ buildPythonPackage (finalAttrs: {
     description = "Simple Python library for human readable file sizes (or anything sized in bytes)";
     homepage = "https://pypi.org/project/hurry.filesize/";
     license = lib.licenses.zpl21;
-    maintainers = [ ];
   };
 })

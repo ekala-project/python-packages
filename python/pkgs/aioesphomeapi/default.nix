@@ -88,6 +88,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python Client for ESPHome native API";
     homepage = "https://github.com/esphome/aioesphomeapi";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

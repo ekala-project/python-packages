@@ -38,6 +38,5 @@ buildPythonPackage rec {
     description = "Pure effects for Python";
     homepage = "https://effect.readthedocs.io/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

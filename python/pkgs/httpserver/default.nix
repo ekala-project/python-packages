@@ -40,7 +40,6 @@ buildPythonPackage rec {
     description = "Asyncio implementation of an HTTP server";
     homepage = "https://github.com/thomwiggers/httpserver";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     mainProgram = "httpserver";
   };
 }

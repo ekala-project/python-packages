@@ -27,7 +27,6 @@ buildPythonPackage (finalAttrs: {
 
   meta = {
     description = "Simple beanstalkd client library for Python";
-    maintainers = [ ];
     license = lib.licenses.asl20;
     homepage = "https://github.com/bosondata/beanstalkc";
   };

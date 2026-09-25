@@ -39,6 +39,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/apache/buildstream-plugins";
     platforms = lib.platforms.linux;
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

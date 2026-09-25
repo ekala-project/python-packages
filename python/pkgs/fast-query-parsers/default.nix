@@ -42,6 +42,5 @@ buildPythonPackage (finalAttrs: {
     description = "Ultra-fast query string and url-encoded form-data parsers";
     homepage = "https://github.com/litestar-org/fast-query-parsers";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

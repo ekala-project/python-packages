@@ -42,6 +42,5 @@ buildPythonPackage rec {
     description = "Python wrapper around the Rust kurbo library for 2D curve manipulation";
     homepage = "https://github.com/simoncozens/kurbopy";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

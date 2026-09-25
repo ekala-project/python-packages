@@ -53,6 +53,5 @@ buildPythonPackage rec {
     description = "Discord API Wrapper for Userbots/Selfbots written in Python";
     homepage = "https://pypi.org/project/discum/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

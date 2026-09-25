@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Down-to-earth approach to colors";
     homepage = "https://github.com/getcuia/ochre";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -80,6 +80,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://weasyprint.org/";
     license = lib.licenses.bsd3;
     mainProgram = "weasyprint";
-    maintainers = [ ];
   };
 })

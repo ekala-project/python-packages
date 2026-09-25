@@ -33,6 +33,5 @@ buildPythonPackage rec {
     description = "PPMd compression/decompression library";
     homepage = "https://codeberg.org/miurahr/pyppmd";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
   };
 }

@@ -37,6 +37,5 @@ buildPythonPackage rec {
     description = "Library to make reading, writing and modifying both binary and ascii STL files easy";
     homepage = "https://github.com/WoLpH/numpy-stl/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

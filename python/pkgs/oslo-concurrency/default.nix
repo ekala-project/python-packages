@@ -56,6 +56,5 @@ buildPythonPackage rec {
     mainProgram = "lockutils-wrapper";
     homepage = "https://github.com/openstack/oslo.concurrency";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

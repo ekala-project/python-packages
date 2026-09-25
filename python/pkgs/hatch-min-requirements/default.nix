@@ -41,6 +41,5 @@ buildPythonPackage (finalAttrs: {
     description = "Hatchling plugin to create optional-dependencies pinned to minimum versions";
     homepage = "https://github.com/tlambert03/hatch-min-requirements";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

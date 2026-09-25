@@ -55,7 +55,6 @@ buildPythonPackage rec {
   meta = {
     description = "Generation of Swagger/OpenAPI schemas for Django REST Framework";
     homepage = "https://github.com/axnsan12/drf-yasg";
-    maintainers = [ ];
     license = lib.licenses.bsd3;
   };
 }

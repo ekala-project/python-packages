@@ -31,6 +31,5 @@ buildPythonPackage (finalAttrs: {
     mainProgram = "dehinter";
     homepage = "https://github.com/source-foundry/dehinter";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

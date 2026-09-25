@@ -41,6 +41,5 @@ buildPythonPackage (finalAttrs: {
     description = "Requests authentication module for HTTP Signature";
     homepage = "https://github.com/pyauth/http-message-signatures";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

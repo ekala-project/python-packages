@@ -62,6 +62,5 @@ buildPythonPackage rec {
     description = "Implementation of the parquet format";
     homepage = "https://github.com/dask/fastparquet";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

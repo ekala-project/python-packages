@@ -34,7 +34,6 @@ buildPythonPackage (finalAttrs: {
     description = "Module to manage the binary drivers for different browsers";
     homepage = "https://github.com/SergeyPirogov/webdriver_manager/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

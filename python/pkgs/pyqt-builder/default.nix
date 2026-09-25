@@ -37,6 +37,5 @@ buildPythonPackage rec {
     description = "PEP 517 compliant build system for PyQt";
     homepage = "https://github.com/Python-PyQt/PyQt-builder";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 }

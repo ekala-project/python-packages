@@ -52,6 +52,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://github.com/pythongssapi/python-gssapi";
     description = "Python GSSAPI Wrapper";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

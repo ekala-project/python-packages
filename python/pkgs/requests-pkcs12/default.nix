@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "PKCS#12 support for the Python requests library";
     homepage = "https://github.com/m-click/requests_pkcs12";
     license = lib.licenses.isc;
-    maintainers = [ ];
   };
 }

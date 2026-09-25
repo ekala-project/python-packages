@@ -26,6 +26,5 @@ buildPythonPackage rec {
     description = "Encode and decode data as emojis";
     homepage = "https://pypi.org/project/ecoji/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

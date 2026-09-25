@@ -48,6 +48,5 @@ buildPythonPackage rec {
     description = "Create and update inline snapshots in Python tests";
     homepage = "https://github.com/15r10nk/inline-snapshot/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

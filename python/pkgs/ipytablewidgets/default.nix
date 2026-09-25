@@ -54,6 +54,5 @@ buildPythonPackage rec {
     description = "Traitlets and widgets to efficiently data tables (e.g. Pandas DataFrame) using the jupyter notebook";
     homepage = "https://github.com/progressivis/ipytablewidgets";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

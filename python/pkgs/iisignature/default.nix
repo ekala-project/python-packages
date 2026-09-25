@@ -33,6 +33,5 @@ buildPythonPackage rec {
     description = "Iterated integral signature calculations";
     homepage = "https://pypi.org/project/iisignature";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

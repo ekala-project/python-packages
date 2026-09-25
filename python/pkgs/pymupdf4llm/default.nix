@@ -33,6 +33,5 @@ buildPythonPackage (finalAttrs: {
     description = "PyMuPDF Utilities for LLM/RAG - converts PDF pages to Markdown format for Retrieval-Augmented Generation";
     homepage = "https://github.com/pymupdf/RAG";
     license = lib.licenses.agpl3Only;
-    maintainers = [ ];
   };
 })

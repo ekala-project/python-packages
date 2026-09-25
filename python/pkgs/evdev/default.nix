@@ -31,7 +31,6 @@ buildPythonPackage (finalAttrs: {
     description = "Provides bindings to the generic input event interface in Linux";
     homepage = "https://python-evdev.readthedocs.io/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

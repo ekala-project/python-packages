@@ -45,6 +45,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python module to create MQTT entities that are automatically discovered by Home Assistant";
     homepage = "https://github.com/unixorn/ha-mqtt-discoverable";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

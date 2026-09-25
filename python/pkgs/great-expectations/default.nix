@@ -76,6 +76,5 @@ buildPythonPackage (finalAttrs: {
     description = "Library for writing unit tests for data validation";
     homepage = "https://docs.greatexpectations.io";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

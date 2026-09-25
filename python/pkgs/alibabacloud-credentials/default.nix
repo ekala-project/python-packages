@@ -40,6 +40,5 @@ buildPythonPackage (finalAttrs: {
     description = "Aliyun Credentials Library for Python";
     homepage = "https://github.com/aliyun/credentials-python";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

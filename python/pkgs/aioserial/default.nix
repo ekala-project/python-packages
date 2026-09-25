@@ -26,6 +26,5 @@ buildPythonPackage rec {
     description = "Python module for async serial communication";
     homepage = "https://github.com/changyuheng/aioserial";
     license = lib.licenses.mpl20;
-    maintainers = [ ];
   };
 }

@@ -42,6 +42,5 @@ buildPythonPackage rec {
     description = "Setuptools extension to build and package CMake projects";
     homepage = "https://github.com/diegoferigo/cmake-build-extension";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

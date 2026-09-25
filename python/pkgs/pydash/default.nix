@@ -30,6 +30,5 @@ buildPythonPackage rec {
     description = "Python utility libraries for doing stuff in a functional way";
     homepage = "https://pydash.readthedocs.io";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

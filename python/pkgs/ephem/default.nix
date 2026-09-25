@@ -25,6 +25,5 @@ buildPythonPackage rec {
     description = "Compute positions of the planets and stars";
     homepage = "https://github.com/brandon-rhodes/pyephem";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

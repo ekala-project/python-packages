@@ -45,6 +45,5 @@ buildPythonPackage rec {
     description = "Utility library for comparing and synchronizing different datasets";
     homepage = "https://github.com/networktocode/diffsync";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

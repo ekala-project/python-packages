@@ -26,6 +26,5 @@ buildPythonPackage rec {
     description = "Library to control the Lagute LW-12 WiFi LED controller";
     homepage = "https://github.com/jaypikay/python-lw12";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

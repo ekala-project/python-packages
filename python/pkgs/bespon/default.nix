@@ -24,6 +24,5 @@ buildPythonPackage rec {
     description = "Encodes and decodes data in the BespON format";
     homepage = "https://github.com/gpoore/bespon_py";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

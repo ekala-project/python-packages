@@ -41,6 +41,5 @@ buildPythonPackage rec {
     description = "Python bindings for jq, the flexible JSON processor";
     homepage = "https://github.com/mwilliamson/jq.py";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

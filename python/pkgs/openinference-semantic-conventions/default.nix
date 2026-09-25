@@ -32,6 +32,5 @@ buildPythonPackage (finalAttrs: {
     description = "OpenTelemetry Semantic Conventions for AI Observability";
     homepage = "https://github.com/Arize-ai/openinference";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

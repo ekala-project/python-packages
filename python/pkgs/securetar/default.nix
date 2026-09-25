@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Module to handle tarfile backups";
     homepage = "https://github.com/home-assistant-libs/securetar";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

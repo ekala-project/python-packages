@@ -35,7 +35,6 @@ buildPythonPackage rec {
     description = "Django authentication backend that authenticates against an LDAP service";
     homepage = "https://github.com/django-auth-ldap/django-auth-ldap";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     platforms = lib.platforms.linux ++ lib.platforms.darwin;
   };
 }

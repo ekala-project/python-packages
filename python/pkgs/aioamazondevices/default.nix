@@ -48,6 +48,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python library to control Amazon devices";
     homepage = "https://github.com/chemelli74/aioamazondevices";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

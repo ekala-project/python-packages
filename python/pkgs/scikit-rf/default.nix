@@ -71,6 +71,5 @@ buildPythonPackage rec {
     description = "Python library for RF/Microwave engineering";
     homepage = "https://scikit-rf.org/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

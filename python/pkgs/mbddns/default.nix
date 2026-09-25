@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Mythic Beasts Dynamic DNS updater";
     homepage = "https://github.com/thinkl33t/mb-ddns";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

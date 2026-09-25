@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "Ollama Python library";
     homepage = "https://github.com/ollama/ollama-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

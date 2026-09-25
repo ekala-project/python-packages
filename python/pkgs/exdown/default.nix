@@ -27,6 +27,5 @@ buildPythonPackage rec {
     description = "Extract code blocks from markdown";
     homepage = "https://github.com/nschloe/exdown";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

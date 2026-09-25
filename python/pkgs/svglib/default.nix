@@ -36,6 +36,5 @@ buildPythonPackage rec {
     mainProgram = "svg2pdf";
     homepage = "https://github.com/deeplook/svglib";
     license = lib.licenses.lgpl3Only;
-    maintainers = [ ];
   };
 }

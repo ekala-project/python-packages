@@ -57,6 +57,5 @@ buildPythonPackage rec {
     description = "Websocket Client Library";
     homepage = "https://github.com/wildfoundry/dataplicity-lomond";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

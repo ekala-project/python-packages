@@ -98,6 +98,5 @@ buildPythonPackage rec {
     downloadPage = "https://codeberg.org/allauth/django-allauth";
     homepage = "https://allauth.org";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

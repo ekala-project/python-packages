@@ -23,6 +23,5 @@ buildPythonPackage (finalAttrs: {
     description = "Easier logging and tracing for Python classes";
     homepage = "https://github.com/mzipay/Autologging";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

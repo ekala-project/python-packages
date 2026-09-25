@@ -30,6 +30,5 @@ buildPythonPackage rec {
     description = "Package to generate parametrized pytests from external files";
     homepage = "https://github.com/chrisjsewell/pytest-param-files";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

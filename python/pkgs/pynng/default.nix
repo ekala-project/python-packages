@@ -77,7 +77,6 @@ buildPythonPackage {
     description = "Python bindings for Nanomsg Next Generation";
     homepage = "https://github.com/codypiersall/pynng";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 }

@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Python bindings for the scrypt key derivation function";
     homepage = "https://github.com/holgern/py-scrypt";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

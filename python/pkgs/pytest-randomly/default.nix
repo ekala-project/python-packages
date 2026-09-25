@@ -33,6 +33,5 @@ buildPythonPackage rec {
     description = "Pytest plugin to randomly order tests and control random.seed";
     homepage = "https://github.com/pytest-dev/pytest-randomly";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -46,6 +46,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python API for accessing BleBox smart home devices";
     homepage = "https://github.com/blebox/blebox_uniapi";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

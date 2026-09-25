@@ -38,7 +38,6 @@ let
   baseMeta = {
     homepage = "https://github.com/psycopg/psycopg";
     license = lib.licenses.lgpl3Plus;
-    maintainers = [ ];
   };
 
   psycopg-c = buildPythonPackage {

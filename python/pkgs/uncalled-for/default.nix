@@ -29,6 +29,5 @@ buildPythonPackage (finalAttrs: {
     description = "Async dependency injection for Python functions";
     homepage = "https://github.com/chrisguidry/uncalled-for";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

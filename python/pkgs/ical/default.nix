@@ -49,6 +49,5 @@ buildPythonPackage (finalAttrs: {
     description = "Library for handling iCalendar";
     homepage = "https://github.com/allenporter/ical";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

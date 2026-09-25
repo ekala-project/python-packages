@@ -52,6 +52,5 @@ buildPythonPackage rec {
     mainProgram = "jupyter-nbextensions_configurator";
     homepage = "https://github.com/jupyter-contrib/jupyter_nbextensions_configurator";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

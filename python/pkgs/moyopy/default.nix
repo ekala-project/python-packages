@@ -75,6 +75,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python interface of moyo, a fast and robust crystal symmetry finder";
     homepage = "https://spglib.github.io/moyo/python/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

@@ -39,6 +39,5 @@ buildPythonPackage (finalAttrs: {
     description = "Scales for Python";
     homepage = "https://github.com/has2k1/mizani";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

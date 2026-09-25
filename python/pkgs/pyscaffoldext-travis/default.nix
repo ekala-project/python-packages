@@ -56,6 +56,5 @@ buildPythonPackage rec {
     description = "Travis CI configurations for PyScaffold";
     homepage = "https://pypi.org/project/pyscaffoldext-travis/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

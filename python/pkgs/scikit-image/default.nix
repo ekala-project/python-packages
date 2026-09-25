@@ -82,6 +82,5 @@ buildPythonPackage rec {
     description = "Image processing routines for SciPy";
     homepage = "https://scikit-image.org";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

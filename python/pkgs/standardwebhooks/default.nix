@@ -37,6 +37,5 @@ buildPythonPackage (finalAttrs: {
     description = "Standard Webhooks";
     homepage = "https://pypi.org/project/standardwebhooks/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

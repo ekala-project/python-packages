@@ -49,6 +49,5 @@ buildPythonPackage (finalAttrs: {
     description = "Fast 1D and 2D histogram functions in Python";
     homepage = "https://github.com/astrofrog/fast-histogram";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 })

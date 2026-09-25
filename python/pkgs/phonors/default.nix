@@ -40,6 +40,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python module implemented in Rust for Phonopy";
     homepage = "https://github.com/phonopy/phonors";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

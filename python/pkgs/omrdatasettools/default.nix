@@ -68,6 +68,5 @@ buildPythonPackage rec {
     description = "Collection of datasets used for Optical Music Recognition";
     homepage = "https://github.com/apacha/OMR-Datasets";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -43,7 +43,6 @@ buildPythonPackage rec {
     description = "Module for local communication with LIFX devices over a LAN";
     homepage = "https://github.com/aiolifx/aiolifx";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "aiolifx";
   };
 }

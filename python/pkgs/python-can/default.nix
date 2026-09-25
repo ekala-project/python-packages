@@ -54,6 +54,5 @@ buildPythonPackage rec {
     description = "CAN support for Python";
     homepage = "https://python-can.readthedocs.io";
     license = lib.licenses.lgpl3Only;
-    maintainers = [ ];
   };
 }

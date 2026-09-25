@@ -37,6 +37,5 @@ buildPythonPackage rec {
     description = "Transaction management";
     homepage = "https://transaction.readthedocs.io/";
     license = lib.licenses.zpl21;
-    maintainers = [ ];
   };
 }

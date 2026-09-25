@@ -43,6 +43,5 @@ buildPythonPackage (finalAttrs: {
     description = "Module to convert strings from snake case to camel case or camel case to snake case";
     homepage = "https://github.com/sanders41/camel-converter";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

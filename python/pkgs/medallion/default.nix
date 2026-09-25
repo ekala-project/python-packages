@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "Minimal implementation of a TAXII 2.1 Server in Python";
     homepage = "https://medallion.readthedocs.io/en/latest/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

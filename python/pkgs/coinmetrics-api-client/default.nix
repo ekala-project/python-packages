@@ -60,7 +60,6 @@ buildPythonPackage rec {
     description = "Coin Metrics API v4 client library";
     homepage = "https://coinmetrics.github.io/api-client-python/site/index.html";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "coinmetrics";
   };
 }

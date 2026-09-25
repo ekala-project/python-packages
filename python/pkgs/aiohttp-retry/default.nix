@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Retry client for aiohttp";
     homepage = "https://github.com/inyutin/aiohttp_retry";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -40,6 +40,5 @@ buildPythonPackage rec {
     description = "Unittest-based test runner with Ant/JUnit like XML reporting";
     homepage = "https://github.com/xmlrunner/unittest-xml-reporting";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

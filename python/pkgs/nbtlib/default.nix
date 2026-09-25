@@ -35,6 +35,5 @@ buildPythonPackage rec {
     mainProgram = "nbt";
     homepage = "https://github.com/vberlier/nbtlib";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

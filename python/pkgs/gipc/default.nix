@@ -60,6 +60,5 @@ buildPythonPackage rec {
     '';
     homepage = "http://gehrcke.de/gipc";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

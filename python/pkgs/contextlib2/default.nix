@@ -25,6 +25,5 @@ buildPythonPackage {
     description = "Backports and enhancements for the contextlib module";
     homepage = "https://contextlib2.readthedocs.org/";
     license = lib.licenses.psfl;
-    maintainers = [ ];
   };
 }

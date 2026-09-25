@@ -25,6 +25,5 @@ buildPythonPackage (finalAttrs: {
     description = "Module to create curses-based interactive selection list in the terminal";
     homepage = "https://github.com/wong2/pick";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

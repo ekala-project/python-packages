@@ -36,7 +36,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Advanced disassembly library";
     homepage = "http://www.capstone-engine.org";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     mainProgram = "cstool";
     platforms = lib.platforms.unix;
   };

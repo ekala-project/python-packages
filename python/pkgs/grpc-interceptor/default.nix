@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Simplified gRPC interceptors";
     homepage = "https://github.com/d5h-foss/grpc-interceptor";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

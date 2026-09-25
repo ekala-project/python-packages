@@ -63,6 +63,5 @@ buildPythonPackage rec {
     mainProgram = "bumps";
     homepage = "https://bumps.readthedocs.io/";
     license = lib.licenses.publicDomain;
-    maintainers = [ ];
   };
 }

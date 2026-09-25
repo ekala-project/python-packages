@@ -25,6 +25,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python 3 library for accenting (and analyzing the accentuation of) Ancient Greek words";
     homepage = "https://github.com/jtauber/greek-accentuation";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

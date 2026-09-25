@@ -42,6 +42,5 @@ buildPythonPackage rec {
     description = "Collection of useful non-standard Python functions";
     homepage = "https://github.com/frnmst/fpyutils";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
   };
 }

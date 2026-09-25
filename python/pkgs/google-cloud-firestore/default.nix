@@ -59,6 +59,5 @@ buildPythonPackage (finalAttrs: {
     description = "Google Cloud Firestore API client library";
     homepage = "https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-firestore";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

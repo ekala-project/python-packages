@@ -45,6 +45,5 @@ buildPythonPackage (finalAttrs: {
     description = "Generates Pydantic v2 models from JSON Schema definitions";
     homepage = "https://github.com/richard-gyiko/json-schema-to-pydantic";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

@@ -48,6 +48,5 @@ buildPythonPackage rec {
     description = "Python API client interface to CMS DIALS service";
     homepage = "https://github.com/cms-DQM/dials-py";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 }

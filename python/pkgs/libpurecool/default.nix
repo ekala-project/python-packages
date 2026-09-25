@@ -47,6 +47,5 @@ buildPythonPackage rec {
     description = "Python library for Dyson devices";
     homepage = "http://libpurecool.readthedocs.io";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

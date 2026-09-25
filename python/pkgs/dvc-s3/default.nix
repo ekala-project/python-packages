@@ -50,6 +50,5 @@ buildPythonPackage (finalAttrs: {
     description = "S3 plugin for dvc";
     homepage = "https://pypi.org/project/dvc-s3";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

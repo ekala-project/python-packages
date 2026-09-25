@@ -41,6 +41,5 @@ buildPythonPackage rec {
     description = "Bytecode decompiler for Python versions 3.8 and below";
     homepage = "https://github.com/rocky/python-uncompyle6";
     license = lib.licenses.gpl3;
-    maintainers = [ ];
   };
 }

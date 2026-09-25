@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Accurate Hijri-Gregorian date converter based on the Umm al-Qura calendar";
     homepage = "https://github.com/dralshehri/hijridate";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -37,6 +37,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python API for interacting with currencylayer";
     homepage = "https://github.com/home-assistant-ecosystem/aiocurrencylayer";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

@@ -36,6 +36,5 @@ buildPythonPackage {
     description = "Django application to retrieve user's IP address";
     homepage = "https://github.com/stefanw/django-crossdomainmedia";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

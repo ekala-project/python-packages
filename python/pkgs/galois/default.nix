@@ -47,6 +47,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/mhostetter/galois";
     downloadPage = "https://github.com/mhostetter/galois/releases/tag/v${version}";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

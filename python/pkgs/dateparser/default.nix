@@ -49,6 +49,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/scrapinghub/dateparser";
     license = lib.licenses.bsd3;
     mainProgram = "dateparser-download";
-    maintainers = [ ];
   };
 }

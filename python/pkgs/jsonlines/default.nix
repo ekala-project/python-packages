@@ -24,6 +24,5 @@ buildPythonPackage rec {
     description = "Python library to simplify working with jsonlines and ndjson data";
     homepage = "https://github.com/wbolster/jsonlines";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

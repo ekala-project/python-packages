@@ -33,6 +33,5 @@ buildPythonPackage rec {
     mainProgram = "pymorphy";
     homepage = "https://github.com/kmike/pymorphy2";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

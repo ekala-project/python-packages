@@ -24,6 +24,5 @@ buildPythonPackage rec {
     description = "Modified FileResponse that returns `Content-Range` headers with the HTTP response, so browsers (read Safari 9+) that request the file, can stream the response properly";
     homepage = "https://github.com/wearespindle/django-ranged-fileresponse";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

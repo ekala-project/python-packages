@@ -103,6 +103,5 @@ buildPythonPackage (finalAttrs: {
     description = "Library for the llama-stack-client API";
     homepage = "https://github.com/llamastack/llama-stack-client-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

@@ -47,6 +47,5 @@ buildPythonPackage rec {
     description = "";
     homepage = "https://github.com/Jc2k/aiojellyfin";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

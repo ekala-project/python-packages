@@ -39,6 +39,5 @@ buildPythonPackage (finalAttrs: {
     description = "Library for exploratory analysis of Bayesian models";
     homepage = "https://arviz-devs.github.io/arviz/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

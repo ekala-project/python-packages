@@ -31,6 +31,5 @@ buildPythonPackage (finalAttrs: {
     description = "Opinionated helpers for creating py.test fixtures for Docker integration and smoke testing environments";
     homepage = "https://github.com/Jc2k/pytest-docker-tools";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

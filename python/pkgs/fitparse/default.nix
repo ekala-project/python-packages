@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Python library to parse ANT/Garmin .FIT files";
     homepage = "https://pythonhosted.org/fitparse/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

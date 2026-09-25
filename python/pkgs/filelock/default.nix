@@ -27,6 +27,5 @@ buildPythonPackage (finalAttrs: {
     description = "Platform independent file lock for Python";
     homepage = "https://github.com/benediktschmitt/py-filelock";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

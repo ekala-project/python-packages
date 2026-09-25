@@ -45,6 +45,5 @@ buildPythonPackage (finalAttrs: {
     description = "Unofficial package to access Cookidoo";
     homepage = "https://github.com/miaucl/cookidoo-api";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

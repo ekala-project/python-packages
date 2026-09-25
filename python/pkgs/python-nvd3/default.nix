@@ -29,7 +29,6 @@ buildPythonPackage rec {
     description = "Python Wrapper for NVD3";
     homepage = "https://github.com/areski/python-nvd3";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "nvd3";
   };
 }

@@ -49,7 +49,6 @@ buildPythonPackage (finalAttrs: {
     description = "Python client for DICOMweb RESTful services";
     homepage = "https://dicomweb-client.readthedocs.io";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "dicomweb_client";
   };
 })

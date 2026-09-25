@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "Sphinx utility that make it easy to translate and to apply translation";
     homepage = "https://github.com/sphinx-doc/sphinx-intl";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

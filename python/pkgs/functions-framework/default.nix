@@ -66,6 +66,5 @@ buildPythonPackage (finalAttrs: {
     description = "FaaS (Function as a service) framework for writing portable Python functions";
     homepage = "https://github.com/GoogleCloudPlatform/functions-framework-python";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

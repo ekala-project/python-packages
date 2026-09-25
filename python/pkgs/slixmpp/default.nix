@@ -76,6 +76,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python library for XMPP";
     homepage = "https://slixmpp.readthedocs.io/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

@@ -38,6 +38,5 @@ buildPythonPackage rec {
     description = "Microsoft Azure Red Hat Openshift Management Client Library for Python";
     homepage = "https://github.com/Azure/azure-sdk-for-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

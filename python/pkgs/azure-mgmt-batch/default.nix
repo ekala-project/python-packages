@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "This is the Microsoft Azure Batch Management Client Library";
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/batch/azure-mgmt-batch";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -40,6 +40,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/Dr-Blank/lrclibapi";
     description = "Python wrapper for downloading synced lyrics from the lrclib.net api";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

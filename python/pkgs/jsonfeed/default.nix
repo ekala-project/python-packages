@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Module to process json feed";
     homepage = "https://pypi.org/project/jsonfeed/";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

@@ -50,6 +50,5 @@ buildPythonPackage rec {
     description = "Rust library used internally by flax";
     homepage = "https://github.com/google/flax/tree/main/flaxlib";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

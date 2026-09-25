@@ -48,6 +48,5 @@ buildPythonPackage rec {
     description = "New kind of Progress Bar, with real-time throughput, ETA, and very cool animations";
     homepage = "https://github.com/rsalmei/alive-progress";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

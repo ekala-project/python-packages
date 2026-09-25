@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "Allure integrations for Python test frameworks";
     homepage = "https://github.com/allure-framework/allure-python";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

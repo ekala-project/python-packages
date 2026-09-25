@@ -51,7 +51,6 @@ buildPythonPackage rec {
     homepage = "https://huggingface.co/docs/evaluate/index";
     description = "Easily evaluate machine learning models and datasets";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "evaluate-cli";
   };
 }

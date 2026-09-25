@@ -36,6 +36,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://akamhy.github.io/waybackpy/";
     description = "Wayback Machine API interface & a command-line tool";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

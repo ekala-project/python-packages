@@ -33,6 +33,5 @@ buildPythonPackage rec {
     mainProgram = "shamir";
     homepage = "https://github.com/trezor/python-shamir-mnemonic";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -34,6 +34,5 @@ buildPythonPackage (finalAttrs: {
     description = "Library for extracting encapsulated HTML and plain text content from the RTF bodies";
     homepage = "https://github.com/seamustuohy/RTFDE";
     license = lib.licenses.lgpl3Only;
-    maintainers = [ ];
   };
 })

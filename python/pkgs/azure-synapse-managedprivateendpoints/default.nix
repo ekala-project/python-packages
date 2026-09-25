@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Microsoft Azure Synapse Managed Private Endpoints Client Library";
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/synapse/azure-synapse-managedprivateendpoints";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

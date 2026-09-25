@@ -48,6 +48,5 @@ buildPythonPackage rec {
     description = "Communication with Lektrico's chargers";
     homepage = "https://github.com/Lektrico/lektricowifi";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -36,6 +36,5 @@ buildPythonPackage (finalAttrs: {
     description = "Import mail from POP3, IMAP, local email mailboxes or directly from Postfix or Exim4 into your Django application automatically";
     homepage = "https://github.com/coddingtonbear/django-mailbox";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

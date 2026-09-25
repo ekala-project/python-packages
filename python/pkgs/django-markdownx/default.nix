@@ -37,6 +37,5 @@ buildPythonPackage rec {
     description = "Comprehensive Markdown plugin built for Django";
     homepage = "https://github.com/neutronX/django-markdownx/";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

@@ -29,6 +29,5 @@ buildPythonPackage rec {
     description = "Implementation of object interfaces, a mechanism for labeling objects as conforming to a given API or contract";
     homepage = "https://github.com/zopefoundation/zope.interface";
     license = lib.licenses.zpl21;
-    maintainers = [ ];
   };
 }

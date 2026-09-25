@@ -18,6 +18,5 @@ buildPythonPackage rec {
     description = "Distribution-building parts of Flit. See flit package for more information";
     homepage = "https://github.com/pypa/flit";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

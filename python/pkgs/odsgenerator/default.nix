@@ -41,6 +41,5 @@ buildPythonPackage (finalAttrs: {
     description = "odsgenerator generates an ODF .ods file from json or yaml file";
     homepage = "https://github.com/jdum/odsgenerator";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

@@ -29,6 +29,5 @@ buildPythonPackage rec {
     description = "Library for terminal string styling";
     homepage = "https://github.com/timofurrer/colorful";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

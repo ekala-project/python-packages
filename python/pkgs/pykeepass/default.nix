@@ -42,6 +42,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/libkeepass/pykeepass";
     description = "Python library to interact with keepass databases (supports KDBX3 and KDBX4)";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 }

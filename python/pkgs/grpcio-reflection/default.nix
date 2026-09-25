@@ -42,6 +42,5 @@ buildPythonPackage rec {
     description = "Standard Protobuf Reflection Service for gRPC";
     homepage = "https://pypi.org/project/grpcio-reflection";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

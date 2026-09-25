@@ -25,6 +25,5 @@ buildPythonPackage rec {
     description = "Library for for mapping, describing, and resetting USB devices";
     homepage = "https://github.com/Bluetooth-Devices/usb-devices";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

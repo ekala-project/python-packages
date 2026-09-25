@@ -52,6 +52,5 @@ buildPythonPackage rec {
     description = "Sphinx extension to create a custom 404 page with absolute URLs hardcoded";
     homepage = "https://github.com/readthedocs/sphinx-notfound-page";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

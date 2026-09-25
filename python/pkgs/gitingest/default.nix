@@ -101,7 +101,6 @@ buildPythonPackage rec {
     description = "Replace 'hub' with 'ingest' in any github url to get a prompt-friendly extract of a codebase";
     homepage = "https://github.com/coderamp-labs/gitingest";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "gitingest";
   };
 }

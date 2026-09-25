@@ -41,6 +41,5 @@ buildPythonPackage rec {
     description = "Services plugin for pytest testing framework";
     homepage = "https://github.com/pytest-dev/pytest-services";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

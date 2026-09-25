@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Python S-expression emulation using tuple-like objects";
     homepage = "https://github.com/pythological/etuples";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

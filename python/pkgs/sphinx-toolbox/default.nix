@@ -68,6 +68,5 @@ buildPythonPackage (finalAttrs: {
     description = "Box of handy tools for Sphinx";
     homepage = "https://github.com/sphinx-toolbox/sphinx-toolbox";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

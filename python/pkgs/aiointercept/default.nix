@@ -67,6 +67,5 @@ buildPythonPackage (finalAttrs: {
     description = "Aiohttp mock library that routes requests through a real test server";
     homepage = "https://github.com/Polandia94/aiointercept";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

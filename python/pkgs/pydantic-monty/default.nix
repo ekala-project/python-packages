@@ -48,6 +48,5 @@ buildPythonPackage (finalAttrs: {
     description = "Minimal, secure Python interpreter written in Rust for use by AI";
     homepage = "https://github.com/pydantic/monty";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

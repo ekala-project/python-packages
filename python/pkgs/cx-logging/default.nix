@@ -41,6 +41,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python and C interfaces for logging";
     homepage = "https://github.com/anthony-tuininga/cx_Logging";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

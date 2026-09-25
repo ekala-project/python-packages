@@ -55,6 +55,5 @@ buildPythonPackage {
     description = "Benchmark multiple object trackers (MOT) in Python";
     homepage = "https://github.com/cheind/py-motmetrics";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

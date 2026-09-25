@@ -41,6 +41,5 @@ buildPythonPackage rec {
     description = "Simple library for extracting all kind of bank account transaction export files, mostly for beanhub-import to ingest and generate transactions";
     homepage = "https://github.com/LaunchPlatform/beanhub-extract/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

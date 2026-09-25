@@ -29,6 +29,5 @@ buildPythonPackage rec {
     description = "Python package to retrieve FAA airport status";
     homepage = "https://github.com/ntilley905/faadelays";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

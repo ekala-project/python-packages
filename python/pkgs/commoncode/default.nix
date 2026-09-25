@@ -67,6 +67,5 @@ buildPythonPackage (finalAttrs: {
     description = "Set of common utilities, originally split from ScanCode";
     homepage = "https://github.com/nexB/commoncode";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

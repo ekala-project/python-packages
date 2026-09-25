@@ -69,6 +69,5 @@ buildPythonPackage (finalAttrs: {
     description = "Type hints for numpy";
     homepage = "https://github.com/ramonhagenaars/nptyping";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

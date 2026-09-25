@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "Python bindings to wayland using cffi";
     mainProgram = "pywayland-scanner";
     license = lib.licenses.ncsa;
-    maintainers = [ ];
   };
 }

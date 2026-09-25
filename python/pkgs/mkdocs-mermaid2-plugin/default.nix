@@ -42,6 +42,5 @@ buildPythonPackage rec {
     description = "MkDocs plugin for including mermaid graphs in markdown sources";
     homepage = "https://github.com/fralau/mkdocs-mermaid2-plugin";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

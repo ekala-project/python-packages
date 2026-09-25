@@ -35,7 +35,6 @@ buildPythonPackage rec {
     description = "Free python grammar checker";
     homepage = "https://github.com/jxmorris12/language_tool_python";
     license = lib.licenses.gpl3;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 }

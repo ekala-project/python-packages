@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "This is the Microsoft Azure Service Fabric Management Client Library";
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/servicefabric/azure-mgmt-servicefabric";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

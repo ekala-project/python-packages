@@ -29,6 +29,5 @@ buildPythonPackage rec {
     description = "Block jupyter cell execution while interacting with widgets";
     homepage = "https://github.com/Kirill888/jupyter-ui-poll";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

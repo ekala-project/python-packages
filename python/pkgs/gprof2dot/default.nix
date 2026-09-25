@@ -35,6 +35,5 @@ buildPythonPackage rec {
     mainProgram = "gprof2dot";
     homepage = "https://github.com/jrfonseca/gprof2dot";
     license = lib.licenses.lgpl3Plus;
-    maintainers = [ ];
   };
 }

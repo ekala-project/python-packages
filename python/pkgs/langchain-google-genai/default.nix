@@ -66,6 +66,5 @@ buildPythonPackage (finalAttrs: {
     description = "LangChain integrations for Google Gemini";
     homepage = "https://github.com/langchain-ai/langchain-google/tree/main/libs/genai";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

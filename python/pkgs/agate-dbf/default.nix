@@ -31,6 +31,5 @@ buildPythonPackage (finalAttrs: {
     description = "Adds read support for dbf files to agate";
     homepage = "https://github.com/wireservice/agate-dbf";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

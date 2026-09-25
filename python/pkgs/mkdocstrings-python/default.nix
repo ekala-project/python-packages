@@ -34,6 +34,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python handler for mkdocstrings";
     homepage = "https://github.com/mkdocstrings/python";
     license = lib.licenses.isc;
-    maintainers = [ ];
   };
 })

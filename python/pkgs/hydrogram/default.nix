@@ -55,6 +55,5 @@ buildPythonPackage rec {
     description = "Asynchronous Telegram MTProto API framework for fluid user and bot interactions";
     homepage = "https://github.com/hydrogram/hydrogram";
     license = lib.licenses.lgpl3Plus;
-    maintainers = [ ];
   };
 }

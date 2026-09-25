@@ -53,6 +53,5 @@ buildPythonPackage {
 
   meta = libclang.meta // {
     description = "Python bindings for the C language family frontend for LLVM";
-    maintainers = [ ];
   };
 }

@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "JSON streaming writer";
     homepage = "https://github.com/dcbaker/jsonstreams";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

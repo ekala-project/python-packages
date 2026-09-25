@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Dynalite panel for Home Assistant";
     homepage = "https://github.com/ziv1234/dynalitepanel";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

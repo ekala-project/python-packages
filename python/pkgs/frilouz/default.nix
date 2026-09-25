@@ -35,6 +35,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/QuantStack/frilouz";
     description = "Python AST parser adapter with partial error recovery";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

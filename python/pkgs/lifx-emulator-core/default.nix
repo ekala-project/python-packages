@@ -45,6 +45,5 @@ buildPythonPackage (finalAttrs: {
     description = "Core Python library for emulating LIFX devices using the LAN protocol";
     homepage = "https://github.com/Djelibeybi/lifx-emulator/tree/main/packages/lifx-emulator-core";
     license = lib.licenses.upl;
-    maintainers = [ ];
   };
 })

@@ -44,6 +44,5 @@ buildPythonPackage rec {
     description = "Minimal implementation of the Polynomial Commitments API for EIP-4844 and EIP-7594";
     homepage = "https://github.com/ethereum/c-kzg-4844";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

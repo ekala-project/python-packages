@@ -38,6 +38,5 @@ buildPythonPackage rec {
     description = "Companion library for musiccast devices intended for the Home Assistant integration";
     homepage = "https://github.com/vigonotion/aiomusiccast";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

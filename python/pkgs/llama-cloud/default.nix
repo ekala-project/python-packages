@@ -54,6 +54,5 @@ buildPythonPackage (finalAttrs: {
     description = "LlamaIndex Python Client";
     homepage = "https://pypi.org/project/llama-cloud/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

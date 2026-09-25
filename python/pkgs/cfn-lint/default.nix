@@ -58,6 +58,5 @@ buildPythonPackage rec {
     mainProgram = "cfn-lint";
     homepage = "https://github.com/aws-cloudformation/cfn-lint";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

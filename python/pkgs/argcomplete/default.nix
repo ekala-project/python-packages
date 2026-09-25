@@ -33,6 +33,5 @@ buildPythonPackage rec {
     homepage = "https://kislyuk.github.io/argcomplete/";
     downloadPage = "https://github.com/kislyuk/argcomplete";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

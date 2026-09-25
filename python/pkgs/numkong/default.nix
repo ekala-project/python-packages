@@ -22,6 +22,5 @@ buildPythonPackage {
       homepage
       license
       ;
-    maintainers = [ ];
   };
 }

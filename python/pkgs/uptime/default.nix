@@ -26,6 +26,5 @@ buildPythonPackage rec {
     description = "Cross-platform way to retrieve system uptime and boot time";
     homepage = "https://github.com/Cairnarvon/uptime";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

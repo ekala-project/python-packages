@@ -65,7 +65,6 @@ buildPythonPackage rec {
     description = "GraphQL client in Python";
     homepage = "https://github.com/graphql-python/gql";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "gql-cli";
   };
 }

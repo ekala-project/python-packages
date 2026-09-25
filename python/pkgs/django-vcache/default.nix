@@ -52,6 +52,5 @@ buildPythonPackage (finalAttrs: {
       lib.replaceString "." "" finalAttrs.version
     }";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

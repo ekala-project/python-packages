@@ -34,6 +34,5 @@ buildPythonPackage (finalAttrs: {
     mainProgram = "apcaccess";
     homepage = "https://github.com/flyte/apcaccess";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

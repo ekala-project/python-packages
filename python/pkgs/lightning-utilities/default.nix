@@ -45,6 +45,5 @@ buildPythonPackage (finalAttrs: {
     description = "Common Python utilities and GitHub Actions in Lightning Ecosystem";
     homepage = "https://github.com/Lightning-AI/utilities";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

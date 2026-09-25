@@ -41,7 +41,6 @@ buildPythonPackage (finalAttrs: {
   meta = {
     description = "Feature flipper for Django";
     homepage = "https://waffle.readthedocs.io/en/stable/";
-    maintainers = [ ];
     license = lib.licenses.bsd3;
   };
 })

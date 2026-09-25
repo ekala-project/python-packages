@@ -30,6 +30,5 @@ buildPythonPackage rec {
     description = "Hatch plugin to create a commit and tag when bumping version";
     homepage = "https://github.com/frankie567/hatch-regex-commit";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

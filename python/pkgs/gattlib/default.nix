@@ -60,6 +60,5 @@ buildPythonPackage rec {
     description = "Python library to use the GATT Protocol for Bluetooth LE devices";
     homepage = "https://github.com/oscaracena/pygattlib";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

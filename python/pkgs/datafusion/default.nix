@@ -57,6 +57,5 @@ buildPythonPackage (finalAttrs: {
     description = "Extensible query execution framework";
     homepage = "https://arrow.apache.org/datafusion/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

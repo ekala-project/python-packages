@@ -33,6 +33,5 @@ buildPythonPackage rec {
     description = "Similar to namedtuple, but instances are mutable";
     homepage = "https://gitlab.com/ericvsmith/namedlist";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

@@ -40,6 +40,5 @@ buildPythonPackage rec {
     description = "Microsoft Azure Key Vault Certificates Client Library for Python";
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/keyvault/azure-keyvault-certificates";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

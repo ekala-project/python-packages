@@ -62,6 +62,5 @@ buildPythonPackage rec {
     description = "Statistical library designed to fill the void in Python's time series analysis capabilities, including the equivalent of R's auto.arima function";
     homepage = "https://github.com/alkaline-ml/pmdarima";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "OMEMO Double Ratchet";
     homepage = "https://dev.gajim.org/gajim/omemo-dr/";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 }

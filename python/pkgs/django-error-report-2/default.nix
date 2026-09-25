@@ -32,6 +32,5 @@ buildPythonPackage (finalAttrs: {
     description = "Log/View Django server errors";
     homepage = "https://github.com/matmair/django-error-report-2";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

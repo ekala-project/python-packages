@@ -32,6 +32,5 @@ buildPythonPackage (finalAttrs: {
     description = "Pytest plugin to display test execution output like a SPECIFICATION";
     homepage = "https://github.com/pchomik/pytest-spec";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
   };
 })

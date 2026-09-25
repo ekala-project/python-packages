@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Python interface for Free Mobile SMS API";
     homepage = "https://github.com/bfontaine/freesms";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

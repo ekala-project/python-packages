@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Creates C++ bindings for Python modules";
     homepage = "https://riverbankcomputing.com/";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 }

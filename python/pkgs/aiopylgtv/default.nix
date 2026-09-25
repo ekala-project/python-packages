@@ -37,6 +37,5 @@ buildPythonPackage (finalAttrs: {
     mainProgram = "aiopylgtvcommand";
     homepage = "https://github.com/bendavid/aiopylgtv";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

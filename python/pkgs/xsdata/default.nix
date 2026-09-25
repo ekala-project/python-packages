@@ -55,6 +55,5 @@ buildPythonPackage rec {
     mainProgram = "xsdata";
     homepage = "https://github.com/tefra/xsdata";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -26,6 +26,5 @@ buildPythonPackage rec {
     description = "Parse & rewrite git urls (supports GitHub, Bitbucket, Assembla ...)";
     homepage = "https://github.com/nephila/giturlparse";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

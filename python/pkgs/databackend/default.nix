@@ -29,6 +29,5 @@ buildPythonPackage rec {
     description = "Module to register a subclass, without needing to import the subclass itself";
     homepage = "https://github.com/machow/databackend";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

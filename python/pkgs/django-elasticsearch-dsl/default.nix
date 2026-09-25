@@ -37,6 +37,5 @@ buildPythonPackage (finalAttrs: {
     description = "Wrapper around elasticsearch-dsl-py for Django models";
     homepage = "https://github.com/sabricot/django-elasticsearch-dsl";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 })

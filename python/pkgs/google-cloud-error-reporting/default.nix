@@ -72,6 +72,5 @@ buildPythonPackage rec {
     description = "Stackdriver Error Reporting API client library";
     homepage = "https://github.com/googleapis/python-error-reporting";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

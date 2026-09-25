@@ -45,6 +45,5 @@ buildPythonPackage (finalAttrs: {
     description = "Library to control Comelit Simplehome";
     homepage = "https://github.com/chemelli74/aiocomelit";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

@@ -46,6 +46,5 @@ buildPythonPackage (finalAttrs: {
     description = "Library to retrieve data from air-Q devices";
     homepage = "https://github.com/CorantGmbH/aioairq";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

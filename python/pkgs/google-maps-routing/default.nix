@@ -56,6 +56,5 @@ buildPythonPackage rec {
     description = "Google Maps Routing API client library";
     homepage = "https://github.com/googleapis/google-cloud-python/tree/main/packages/google-maps-routing";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

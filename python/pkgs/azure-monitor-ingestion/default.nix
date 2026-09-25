@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "Send custom logs to Azure Monitor using the Logs Ingestion API";
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/monitor/azure-monitor-ingestion";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

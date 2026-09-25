@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Python library for interfacing with Motion Blinds";
     homepage = "https://github.com/starkillerOG/motion-blinds";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

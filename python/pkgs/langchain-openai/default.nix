@@ -58,6 +58,5 @@ buildPythonPackage (finalAttrs: {
     description = "Integration package connecting OpenAI and LangChain";
     homepage = "https://github.com/langchain-ai/langchain/tree/master/libs/partners/openai";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

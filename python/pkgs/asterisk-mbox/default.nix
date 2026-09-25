@@ -40,6 +40,5 @@ buildPythonPackage rec {
     description = "Client side of a client/server to interact with Asterisk voicemail mailboxes";
     homepage = "https://github.com/PhracturedBlue/asterisk_mbox";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 }

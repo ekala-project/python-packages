@@ -56,6 +56,5 @@ buildPythonPackage rec {
     description = "Country-specific Django helpers";
     homepage = "https://github.com/django/django-localflavor";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

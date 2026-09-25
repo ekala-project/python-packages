@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Python module to communicate with opengarage.io";
     homepage = "https://github.com/Danielhiversen/pyOpenGarage";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

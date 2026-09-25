@@ -38,6 +38,5 @@ buildPythonPackage rec {
     description = "Bindings for the Zulip message API";
     homepage = "https://github.com/zulip/python-zulip-api";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

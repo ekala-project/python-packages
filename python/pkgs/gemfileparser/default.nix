@@ -29,7 +29,6 @@ buildPythonPackage rec {
       gpl3Plus
       mit
     ];
-    maintainers = [ ];
     mainProgram = "parsegemfile";
   };
 }

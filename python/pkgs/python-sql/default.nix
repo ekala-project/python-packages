@@ -26,6 +26,5 @@ buildPythonPackage rec {
     description = "Library to write SQL queries in a pythonic way";
     homepage = "https://foss.heptapod.net/tryton/python-sql";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

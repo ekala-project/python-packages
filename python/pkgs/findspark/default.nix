@@ -30,6 +30,5 @@ buildPythonPackage rec {
     description = "Find pyspark to make it importable";
     homepage = "https://github.com/minrk/findspark";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

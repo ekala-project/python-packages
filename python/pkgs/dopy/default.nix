@@ -31,6 +31,5 @@ buildPythonPackage {
     description = "Digital Ocean API python wrapper";
     homepage = "https://github.com/Wiredcraft/dopy";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

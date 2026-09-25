@@ -55,6 +55,5 @@ buildPythonPackage rec {
     description = "Framework for simple dataclass-based configurations based on Pyrallis";
     homepage = "https://github.com/dlwh/draccus";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

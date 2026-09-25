@@ -33,6 +33,5 @@ buildPythonPackage rec {
     mainProgram = "lpc_checksum";
     homepage = "https://pypi.org/project/lpc-checksum/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

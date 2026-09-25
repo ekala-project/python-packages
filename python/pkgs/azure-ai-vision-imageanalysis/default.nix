@@ -38,6 +38,5 @@ buildPythonPackage (finalAttrs: {
     description = "Azure Image Analysis client library for Python";
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/vision/azure-ai-vision-imageanalysis";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

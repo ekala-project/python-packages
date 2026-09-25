@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Python library to interact with iotty CloudApi";
     homepage = "https://github.com/pburgio/iottyCloud";
     license = lib.licenses.agpl3Only;
-    maintainers = [ ];
   };
 }

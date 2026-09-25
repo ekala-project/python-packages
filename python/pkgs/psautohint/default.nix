@@ -41,6 +41,5 @@ buildPythonPackage (finalAttrs: {
     description = "Script to normalize the XML and other data inside of a UFO";
     homepage = "https://github.com/adobe-type-tools/psautohint";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

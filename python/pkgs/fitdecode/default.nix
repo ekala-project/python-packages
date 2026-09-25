@@ -30,6 +30,5 @@ buildPythonPackage rec {
     description = "FIT file parsing and decoding library written in Python3";
     license = lib.licenses.mit;
     homepage = "https://github.com/polyvertex/fitdecode";
-    maintainers = [ ];
   };
 }

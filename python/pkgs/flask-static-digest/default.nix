@@ -43,6 +43,5 @@ buildPythonPackage (finalAttrs: {
     description = "Flask extension for md5 tagging and compressing static files";
     homepage = "https://github.com/nickjj/flask-static-digest";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

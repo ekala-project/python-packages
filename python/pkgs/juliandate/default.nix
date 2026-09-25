@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Conversions between Julian Dates and Julian/Gregorian calendar dates";
     homepage = "https://github.com/seanredmond/juliandate";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 }

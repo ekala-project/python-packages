@@ -37,7 +37,6 @@ buildPythonPackage rec {
     description = "SNI proxy with TCP multiplexer";
     homepage = "https://github.com/nabucasa/snitun";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 }

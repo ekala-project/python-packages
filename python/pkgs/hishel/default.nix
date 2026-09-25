@@ -56,6 +56,5 @@ buildPythonPackage rec {
     description = "HTTP Cache implementation for HTTPX and HTTP Core";
     homepage = "https://github.com/karpetrosyan/hishel";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

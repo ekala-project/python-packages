@@ -29,6 +29,5 @@ buildPythonPackage rec {
     description = "Python API for controlling Broadlink IR controllers";
     homepage = "https://github.com/mjg59/python-broadlink";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

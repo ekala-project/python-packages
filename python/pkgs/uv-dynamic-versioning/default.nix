@@ -37,6 +37,5 @@ buildPythonPackage rec {
     description = "Dynamic versioning based on VCS tags for uv/hatch project";
     homepage = "https://github.com/ninoseki/uv-dynamic-versioning";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

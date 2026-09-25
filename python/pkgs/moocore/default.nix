@@ -58,6 +58,5 @@ buildPythonPackage (finalAttrs: {
     description = "Core Mathematical Functions for Multi-Objective Optimization";
     homepage = "https://github.com/multi-objective/moocore/tree/main/python";
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
   };
 })

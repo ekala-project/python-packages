@@ -38,6 +38,5 @@ buildPythonPackage rec {
     '';
     homepage = "http://jlafon.io/pynamodb.html";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

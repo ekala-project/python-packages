@@ -33,6 +33,5 @@ buildPythonPackage rec {
     description = "Library that allows your Python tests to travel through time";
     homepage = "https://github.com/spulec/freezegun";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

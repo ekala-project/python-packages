@@ -46,6 +46,5 @@ buildPythonPackage {
     mainProgram = "sacrebleu";
     homepage = "https://github.com/mjpost/sacrebleu";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

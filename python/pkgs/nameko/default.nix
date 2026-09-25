@@ -60,6 +60,5 @@ buildPythonPackage rec {
     mainProgram = "nameko";
     homepage = "https://www.nameko.io/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

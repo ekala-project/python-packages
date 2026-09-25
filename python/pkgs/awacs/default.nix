@@ -30,6 +30,5 @@ buildPythonPackage rec {
     description = "AWS Access Policy Language creation library";
     homepage = "https://github.com/cloudtools/awacs";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

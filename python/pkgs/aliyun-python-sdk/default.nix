@@ -33,7 +33,6 @@ let
         description = "Module of Aliyun Python SDK (${serviceName})";
         homepage = "https://github.com/aliyun/aliyun-python-sdk";
         license = lib.licenses.asl20;
-        maintainers = [ ];
       };
     });
 
@@ -61,7 +60,6 @@ let
         description = "Module of Aliyun Python SDK (${serviceName})";
         homepage = "https://github.com/aliyun/aliyun-python-sdk";
         license = lib.licenses.asl20;
-        maintainers = [ ];
       };
     });
 in

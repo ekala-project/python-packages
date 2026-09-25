@@ -41,6 +41,5 @@ buildPythonPackage rec {
     description = "Microsoft Azure Event Hubs Client Library for Python";
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/master/sdk/eventhub/azure-eventhub";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

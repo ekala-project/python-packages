@@ -45,6 +45,5 @@ buildPythonPackage (finalAttrs: {
     mainProgram = "extruct";
     homepage = "https://github.com/scrapinghub/extruct";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

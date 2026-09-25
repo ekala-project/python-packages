@@ -42,6 +42,5 @@ buildPythonPackage (finalAttrs: {
     description = "Dependency injection microframework for Python";
     homepage = "https://github.com/ets-labs/python-dependency-injector";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

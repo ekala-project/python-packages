@@ -32,7 +32,6 @@ buildPythonPackage (finalAttrs: {
     description = "KNX Library Written in Python";
     homepage = "https://github.com/XKNX/xknx";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

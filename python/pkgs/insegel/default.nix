@@ -26,6 +26,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/autophagy/insegel";
     description = "Monochrome 2 column Sphinx theme";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

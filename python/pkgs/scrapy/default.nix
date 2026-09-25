@@ -105,6 +105,5 @@ buildPythonPackage rec {
     '';
     homepage = "https://scrapy.org/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

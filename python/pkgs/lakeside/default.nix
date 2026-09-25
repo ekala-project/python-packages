@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "Library for controlling LED bulbs from Eufy";
     homepage = "https://github.com/nkgilley/python-lakeside";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

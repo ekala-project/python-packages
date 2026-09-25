@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "Unified interface for cryptographic libraries";
     homepage = "https://github.com/skelsec/unicrypto";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Python client library for Google Maps API Web Services";
     homepage = "https://github.com/googlemaps/google-maps-services-python";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

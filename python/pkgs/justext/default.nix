@@ -29,6 +29,5 @@ buildPythonPackage rec {
     description = "Heuristic based boilerplate removal tool";
     homepage = "https://github.com/miso-belica/jusText";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

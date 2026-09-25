@@ -43,7 +43,6 @@ buildPythonPackage rec {
       bioinformatics.
     '';
     homepage = "https://biopython.org/wiki/Documentation";
-    maintainers = [ ];
     license = lib.licenses.bsd3;
   };
 }

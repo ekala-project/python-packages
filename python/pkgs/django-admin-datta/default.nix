@@ -26,6 +26,5 @@ buildPythonPackage rec {
     description = "Modern template for Django that covers Admin Section";
     homepage = "https://appseed.us/product/datta-able/django";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

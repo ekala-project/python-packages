@@ -26,6 +26,5 @@ buildPythonPackage rec {
     description = "User-friendly view of FreeRTOS kernel objects in GDB";
     homepage = "https://github.com/espressif/freertos-gdb";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

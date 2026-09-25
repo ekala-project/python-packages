@@ -37,7 +37,6 @@ buildPythonPackage (finalAttrs: {
     description = "Module to format click help output nicely with rich";
     homepage = "https://github.com/ewels/rich-click";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "rich-click";
   };
 })

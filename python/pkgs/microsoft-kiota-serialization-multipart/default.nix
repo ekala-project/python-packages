@@ -37,6 +37,5 @@ buildPythonPackage rec {
     description = "Multipart serialization implementation for Kiota clients in Python";
     homepage = "https://github.com/microsoft/kiota-python/tree/main/packages/serialization/multipart";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

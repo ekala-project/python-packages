@@ -54,6 +54,5 @@ buildPythonPackage rec {
     mainProgram = "gtts-cli";
     homepage = "https://gtts.readthedocs.io";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

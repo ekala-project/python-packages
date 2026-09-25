@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "Module for caching";
     homepage = "https://github.com/jneen/python-cache";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -37,6 +37,5 @@ buildPythonPackage rec {
     description = "Python library for accessing a PostgreSQL database";
     homepage = "https://aiopg.readthedocs.io/";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

@@ -50,6 +50,5 @@ buildPythonPackage rec {
     description = "Declarative idempotent rule-based Beancount transaction import engine in Python";
     homepage = "https://github.com/LaunchPlatform/beanhub-import/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "Python module to interact with Garmin Connect";
     homepage = "https://github.com/cyberjunky/python-garminconnect-aio";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

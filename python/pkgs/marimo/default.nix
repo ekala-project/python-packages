@@ -72,6 +72,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/marimo-team/marimo";
     license = lib.licenses.asl20;
     mainProgram = "marimo";
-    maintainers = [ ];
   };
 }

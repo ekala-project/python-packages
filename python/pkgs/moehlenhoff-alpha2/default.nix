@@ -43,6 +43,5 @@ buildPythonPackage rec {
     description = "Python client for the Moehlenhoff Alpha2 underfloor heating system";
     homepage = "https://github.com/j-a-n/python-moehlenhoff-alpha2";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 }

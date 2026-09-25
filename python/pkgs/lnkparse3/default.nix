@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Windows Shortcut file (LNK) parser";
     homepage = "https://github.com/Matmaus/LnkParse3";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

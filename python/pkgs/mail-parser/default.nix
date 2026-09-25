@@ -31,6 +31,5 @@ buildPythonPackage (finalAttrs: {
     mainProgram = "mail-parser";
     homepage = "https://github.com/SpamScope/mail-parser";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

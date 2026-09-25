@@ -55,6 +55,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/BlackFoundryCom/black-renderer";
     license = lib.licenses.asl20;
     mainProgram = "blackrenderer";
-    maintainers = [ ];
   };
 }

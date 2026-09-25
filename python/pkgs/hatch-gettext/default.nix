@@ -36,6 +36,5 @@ buildPythonPackage (finalAttrs: {
     description = "Hatch build hook plugin for GNU gettext";
     homepage = "https://github.com/damonlynch/hatch-gettext";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
   };
 })

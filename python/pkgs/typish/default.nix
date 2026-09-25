@@ -31,6 +31,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python module for checking types of objects";
     homepage = "https://github.com/ramonhagenaars/typish";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

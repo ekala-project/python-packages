@@ -57,6 +57,5 @@ buildPythonPackage rec {
     description = "Periodic table, physical constants and molecule parsing for quantum chemistry";
     homepage = "https://github.com/MolSSI/QCElemental";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

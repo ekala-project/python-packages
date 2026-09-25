@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "Unified interface to many cloud providers";
     homepage = "https://libcloud.apache.org/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

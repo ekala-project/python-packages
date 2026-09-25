@@ -56,6 +56,5 @@ buildPythonPackage rec {
     description = "Python tool for generating badges for your projects";
     homepage = "https://github.com/jongracecox/anybadge";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -47,6 +47,5 @@ buildPythonPackage (finalAttrs: {
     description = "OpenTelemetry Instrumentation for AI Observability";
     homepage = "https://github.com/Arize-ai/openinference";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

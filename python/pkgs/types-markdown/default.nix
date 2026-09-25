@@ -24,6 +24,5 @@ buildPythonPackage (finalAttrs: {
     description = "Typing stubs for Markdown";
     homepage = "https://pypi.org/project/types-Markdown/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

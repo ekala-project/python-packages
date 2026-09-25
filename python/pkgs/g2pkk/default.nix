@@ -36,6 +36,5 @@ buildPythonPackage (finalAttrs: {
     description = "Cross-platform g2p for Korean";
     homepage = "https://github.com/harmlessman/g2pkk";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

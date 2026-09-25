@@ -57,6 +57,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://nipy.org/nibabel";
     description = "Access a multitude of neuroimaging data formats";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

@@ -39,6 +39,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python bindings to client functionality of libssh specific to Ansible use case";
     homepage = "https://github.com/ansible/pylibssh";
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
   };
 })

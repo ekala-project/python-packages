@@ -30,6 +30,5 @@ buildPythonPackage (finalAttrs: {
     description = "Case conversion library for Python";
     homepage = "https://github.com/chrisdoherty4/python-case-converter";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

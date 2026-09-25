@@ -75,6 +75,5 @@ buildPythonPackage (finalAttrs: {
     description = "Grammar of Graphics scales for bqplot and other Jupyter widgets libraries";
     homepage = "https://github.com/bqplot/bqscales";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

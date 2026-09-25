@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Python API for Airtouch 4 controllers";
     homepage = "https://github.com/LonePurpleWolf/airtouch4pyapi";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

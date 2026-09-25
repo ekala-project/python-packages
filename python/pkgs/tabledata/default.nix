@@ -28,7 +28,6 @@ buildPythonPackage rec {
   meta = {
     homepage = "https://github.com/thombashi/tabledata";
     description = "Library to represent tabular data";
-    maintainers = [ ];
     license = lib.licenses.mit;
   };
 }

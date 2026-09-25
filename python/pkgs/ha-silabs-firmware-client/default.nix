@@ -50,6 +50,5 @@ buildPythonPackage rec {
     description = "Home Assistant client for firmwares released with silabs-firmware-builder";
     homepage = "https://github.com/home-assistant-libs/ha-silabs-firmware-client";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

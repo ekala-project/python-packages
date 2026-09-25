@@ -46,6 +46,5 @@ buildPythonPackage {
     description = "Python library for the custom Selenium ChromeDriver that passes all bot mitigation systems";
     homepage = "https://github.com/ultrafunkamsterdam/undetected-chromedriver";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 }

@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "XDG Base Directory Specification for Python";
     homepage = "https://github.com/srstevenson/xdg";
     license = lib.licenses.isc;
-    maintainers = [ ];
   };
 }

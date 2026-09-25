@@ -91,6 +91,5 @@ buildPythonPackage rec {
     mainProgram = "datasette";
     homepage = "https://datasette.io/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

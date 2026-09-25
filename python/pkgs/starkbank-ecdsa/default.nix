@@ -24,6 +24,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python ECDSA library";
     homepage = "https://github.com/starkbank/ecdsa-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

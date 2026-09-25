@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Generic test automation framework";
     homepage = "https://robotframework.org/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

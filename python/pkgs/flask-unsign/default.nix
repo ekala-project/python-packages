@@ -43,7 +43,6 @@ buildPythonPackage rec {
     description = "Command line tool to fetch, decode, brute-force and craft session cookies of Flask applications";
     homepage = "https://github.com/Paradoxis/Flask-Unsign";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "flask-unsign";
   };
 }

@@ -53,6 +53,5 @@ buildPythonPackage (finalAttrs: {
     description = "Official Python library for the Fish Audio API";
     homepage = "https://github.com/fishaudio/fish-audio-python";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

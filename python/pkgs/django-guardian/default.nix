@@ -30,6 +30,5 @@ buildPythonPackage (finalAttrs: {
     description = "Per object permissions for Django";
     homepage = "https://github.com/django-guardian/django-guardian";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 })

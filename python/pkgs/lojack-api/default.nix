@@ -37,6 +37,5 @@ buildPythonPackage (finalAttrs: {
     description = "Async Python client library for the Spireon LoJack API";
     homepage = "https://github.com/devinslick/lojack_api";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

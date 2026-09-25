@@ -30,6 +30,5 @@ buildPythonPackage rec {
     mainProgram = "click-odoo";
     homepage = "https://github.com/acsone/click-odoo";
     license = lib.licenses.lgpl3Only;
-    maintainers = [ ];
   };
 }

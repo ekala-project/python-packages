@@ -68,6 +68,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python library to define and validate data types in Docling";
     homepage = "https://github.com/docling-project/docling-core";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

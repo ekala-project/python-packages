@@ -44,6 +44,5 @@ buildPythonPackage (finalAttrs: {
     description = "Fast protobuf serialization for Aliyun Log using PyO3 and quick-protobuf";
     homepage = "https://pypi.org/project/aliyun-log-fastpb";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

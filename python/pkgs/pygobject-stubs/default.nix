@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "PEP 561 Typing Stubs for PyGObject";
     homepage = "https://github.com/pygobject/pygobject-stubs";
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
   };
 }

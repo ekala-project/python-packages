@@ -46,6 +46,5 @@ buildPythonPackage {
     '';
     homepage = "https://github.com/scikit-build/ninja-python-distributions";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

@@ -20,6 +20,5 @@ buildPythonPackage rec {
     description = "Python library to handle Null values and sentinels like (but not) None, False and True";
     homepage = "https://pypi.org/project/nulltype/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

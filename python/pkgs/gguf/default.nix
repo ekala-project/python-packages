@@ -42,6 +42,5 @@ buildPythonPackage (finalAttrs: {
     description = "Module for writing binary files in the GGUF format";
     homepage = "https://ggml.ai/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

@@ -45,6 +45,5 @@ buildPythonPackage (finalAttrs: {
     description = "Mdformat plugin to ensure frontmatter is respected";
     homepage = "https://github.com/butler54/mdformat-frontmatter";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

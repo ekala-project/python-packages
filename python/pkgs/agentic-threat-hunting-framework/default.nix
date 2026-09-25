@@ -52,6 +52,5 @@ buildPythonPackage (finalAttrs: {
     description = "Framework for agentic threat hunting";
     homepage = "https://github.com/Nebulock-Inc/agentic-threat-hunting-framework";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

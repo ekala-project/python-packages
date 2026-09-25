@@ -42,6 +42,5 @@ buildPythonPackage rec {
     mainProgram = "zope-testrunner";
     homepage = "https://github.com/zopefoundation/zope.testrunner";
     license = lib.licenses.zpl21;
-    maintainers = [ ];
   };
 }

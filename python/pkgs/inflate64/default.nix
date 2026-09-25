@@ -33,7 +33,6 @@ buildPythonPackage rec {
     description = "Compress and decompress with Enhanced Deflate compression algorithm";
     homepage = "https://codeberg.org/miurahr/inflate64";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
   };
 
 }

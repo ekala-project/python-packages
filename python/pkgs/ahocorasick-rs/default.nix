@@ -50,7 +50,6 @@ buildPythonPackage rec {
     description = "Fast Aho-Corasick algorithm for Python";
     homepage = "https://github.com/G-Research/ahocorasick_rs/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 
 }

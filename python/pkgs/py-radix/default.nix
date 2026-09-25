@@ -22,6 +22,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python radix tree implementation for IPv4 and IPv6 prefix matching";
     homepage = "https://github.com/mjschultz/py-radix";
     license = lib.licenses.bsdOriginal;
-    maintainers = [ ];
   };
 })

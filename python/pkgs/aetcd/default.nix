@@ -59,6 +59,5 @@ buildPythonPackage rec {
     description = "Python asyncio-based client for etcd";
     homepage = "https://github.com/martyanov/aetcd";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

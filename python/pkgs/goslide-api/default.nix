@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "Python API to utilise the Slide Open Cloud and Local API";
     homepage = "https://github.com/ualex73/goslide-api";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

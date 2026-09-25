@@ -33,6 +33,5 @@ buildPythonPackage (finalAttrs: {
     description = "Signatures for entire Python programs";
     homepage = "https://github.com/mkdocstrings/griffe";
     license = lib.licenses.isc;
-    maintainers = [ ];
   };
 })

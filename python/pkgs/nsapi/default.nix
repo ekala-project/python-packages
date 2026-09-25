@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Python module to query routes of the Dutch railways";
     homepage = "https://github.com/aquatix/ns-api/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

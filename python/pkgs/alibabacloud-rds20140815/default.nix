@@ -40,6 +40,5 @@ buildPythonPackage (finalAttrs: {
     description = "Alibaba Cloud rds (20140815) SDK Library for Python";
     homepage = "https://pypi.org/project/alibabacloud-rds20140815/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

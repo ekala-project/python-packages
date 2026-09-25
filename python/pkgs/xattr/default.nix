@@ -37,6 +37,5 @@ buildPythonPackage (finalAttrs: {
     mainProgram = "xattr";
     homepage = "https://github.com/xattr/xattr";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

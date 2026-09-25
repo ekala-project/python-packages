@@ -28,6 +28,5 @@ buildPythonPackage (finalAttrs: {
     description = "Async Python API client for Cielo Home devices";
     homepage = "https://github.com/cielo-connect/cielo-connect-api";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

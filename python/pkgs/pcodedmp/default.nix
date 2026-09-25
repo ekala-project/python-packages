@@ -32,6 +32,5 @@ buildPythonPackage rec {
     mainProgram = "pcodedmp";
     homepage = "https://github.com/bontchev/pcodedmp";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 }

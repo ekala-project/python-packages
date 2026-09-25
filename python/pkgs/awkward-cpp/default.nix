@@ -46,6 +46,5 @@ buildPythonPackage (finalAttrs: {
     description = "CPU kernels and compiled extensions for Awkward Array";
     homepage = "https://github.com/scikit-hep/awkward";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

@@ -75,6 +75,5 @@ buildPythonPackage rec {
     description = "Object-oriented JSON Schema implementation for Python";
     homepage = "https://github.com/marksparkza/jschon";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

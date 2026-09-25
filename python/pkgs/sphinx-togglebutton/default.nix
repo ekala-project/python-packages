@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Toggle page content and collapse admonitions in Sphinx";
     homepage = "https://github.com/executablebooks/sphinx-togglebutton";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

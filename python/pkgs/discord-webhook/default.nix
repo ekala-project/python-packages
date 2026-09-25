@@ -40,6 +40,5 @@ buildPythonPackage rec {
     description = "Execute discord webhooks";
     homepage = "https://github.com/lovvskillz/python-discord-webhook";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

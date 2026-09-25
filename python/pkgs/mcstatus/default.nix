@@ -59,7 +59,6 @@ buildPythonPackage (finalAttrs: {
     description = "Python library for checking the status of Minecraft servers";
     homepage = "https://github.com/py-mine/mcstatus";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "mcstatus";
   };
 })

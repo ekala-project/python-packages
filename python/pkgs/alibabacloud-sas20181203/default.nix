@@ -36,6 +36,5 @@ buildPythonPackage (finalAttrs: {
     description = "Alibaba Cloud Threat Detection (20181203) SDK Library for Python";
     homepage = "https://pypi.org/project/alibabacloud-sas20181203/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

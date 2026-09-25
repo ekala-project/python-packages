@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Python pagination module";
     homepage = "https://github.com/Pylons/paginate";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -49,6 +49,5 @@ buildPythonPackage rec {
     description = "Meta-package containing dependencies for testing";
     homepage = "https://github.com/astropy/pytest-astropy";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

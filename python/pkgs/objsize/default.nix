@@ -25,6 +25,5 @@ buildPythonPackage rec {
     description = "Traversal over objects subtree and calculate the total size";
     homepage = "https://github.com/liran-funaro/objsize";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

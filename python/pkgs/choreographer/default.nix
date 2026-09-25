@@ -47,6 +47,5 @@ buildPythonPackage (finalAttrs: {
     description = "Devtools Protocol implementation for chrome";
     homepage = "https://github.com/plotly/choreographer";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

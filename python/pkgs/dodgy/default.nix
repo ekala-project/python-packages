@@ -35,6 +35,5 @@ buildPythonPackage rec {
     mainProgram = "dodgy";
     homepage = "https://github.com/prospector-dev/dodgy";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

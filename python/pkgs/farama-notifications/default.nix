@@ -26,6 +26,5 @@ buildPythonPackage (finalAttrs: {
     description = "Allows for providing notifications on import to all Farama Packages";
     homepage = "https://github.com/Farama-Foundation/Farama-Notifications";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

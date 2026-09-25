@@ -49,6 +49,5 @@ buildPythonPackage (finalAttrs: {
     description = "Google Cloud Datastore API client library";
     homepage = "https://cloud.google.com/datastore";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

@@ -27,6 +27,5 @@ buildPythonPackage (finalAttrs: {
     description = "Rlock like in threading module but for asyncio";
     homepage = "https://gitlab.com/heckad/asyncio_rlock";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

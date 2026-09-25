@@ -37,6 +37,5 @@ buildPythonPackage rec {
     homepage = "https://netaddr.readthedocs.io/";
     downloadPage = "https://github.com/netaddr/netaddr/releases";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

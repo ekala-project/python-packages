@@ -52,6 +52,5 @@ buildPythonPackage (finalAttrs: {
     description = "API Client library for Google Cloud Network Connectivity Center";
     homepage = "https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-network-connectivity";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

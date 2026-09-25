@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Take a number of bytes and return a human-readable string";
     homepage = "https://github.com/Stonesjtu/calmsize";
     license = lib.licenses.zpl21;
-    maintainers = [ ];
   };
 }

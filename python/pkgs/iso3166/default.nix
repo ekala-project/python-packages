@@ -21,6 +21,5 @@ buildPythonPackage rec {
     description = "Self-contained ISO 3166-1 country definitions";
     homepage = "https://github.com/deactivated/python-iso3166";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

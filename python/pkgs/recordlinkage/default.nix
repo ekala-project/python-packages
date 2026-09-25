@@ -54,6 +54,5 @@ buildPythonPackage rec {
     description = "Library to link records in or between data sources";
     homepage = "https://recordlinkage.readthedocs.io/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

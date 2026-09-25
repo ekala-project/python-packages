@@ -41,6 +41,5 @@ buildPythonPackage rec {
     description = "Strictly RFC 4510 conforming LDAP V3 client library (bleeding edge)";
     homepage = "https://pypi.org/project/ldap3-bleeding-edge/";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 }

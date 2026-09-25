@@ -51,6 +51,5 @@ buildPythonPackage rec {
     description = "Fork of pubnub";
     homepage = "https://github.com/bdraco/freenub";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

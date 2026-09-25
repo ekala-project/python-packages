@@ -46,6 +46,5 @@ buildPythonPackage rec {
     description = "Google Cloud RuntimeConfig API client library";
     homepage = "https://github.com/googleapis/python-runtimeconfig";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

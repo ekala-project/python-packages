@@ -61,6 +61,5 @@ buildPythonPackage (finalAttrs: {
     description = "Library with base interfaces for LangGraph checkpoint savers";
     homepage = "https://github.com/langchain-ai/langgraph/tree/main/libs/checkpoint";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

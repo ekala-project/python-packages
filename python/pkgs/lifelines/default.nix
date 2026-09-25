@@ -67,6 +67,5 @@ buildPythonPackage rec {
     description = "Survival analysis in Python";
     homepage = "https://lifelines.readthedocs.io";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

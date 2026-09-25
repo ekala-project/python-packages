@@ -47,6 +47,5 @@ buildPythonPackage (finalAttrs: {
     description = "Turn entire websites into LLM-ready markdown or structured data. Scrape, crawl and extract with a single API";
     homepage = "https://firecrawl.dev";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

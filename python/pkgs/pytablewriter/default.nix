@@ -81,6 +81,5 @@ buildPythonPackage rec {
     description = "Library to write a table in various formats";
     homepage = "https://github.com/thombashi/pytablewriter";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -57,6 +57,5 @@ buildPythonPackage rec {
     description = "Kafka integration with asyncio";
     homepage = "https://aiokafka.readthedocs.org";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

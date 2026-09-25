@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "Allows processing of multiple Celery task requests together";
     homepage = "https://github.com/clokep/celery-batches";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

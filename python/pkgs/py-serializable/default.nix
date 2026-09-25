@@ -30,6 +30,5 @@ buildPythonPackage rec {
     description = "Library to aid with serialisation and deserialisation to/from JSON and XML";
     homepage = "https://github.com/madpah/serializable";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

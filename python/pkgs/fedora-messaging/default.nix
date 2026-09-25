@@ -78,6 +78,5 @@ buildPythonPackage rec {
     description = "Library for sending AMQP messages with JSON schema in Fedora infrastructure";
     homepage = "https://github.com/fedora-infra/fedora-messaging";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
   };
 }

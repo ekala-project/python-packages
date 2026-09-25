@@ -56,7 +56,6 @@ buildPythonPackage rec {
   meta = {
     homepage = "https://github.com/visgl/deck.gl/tree/master/bindings/pydeck";
     description = "Large-scale interactive data visualization in Python";
-    maintainers = [ ];
     license = lib.licenses.asl20;
   };
 }

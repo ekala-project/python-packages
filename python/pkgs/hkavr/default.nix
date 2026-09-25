@@ -26,6 +26,5 @@ buildPythonPackage rec {
     description = "Library for interacting with Harman Kardon AVR controllers";
     homepage = "https://github.com/Devqon/hkavr";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -29,6 +29,5 @@ buildPythonPackage (finalAttrs: {
     mainProgram = "aioblescan";
     homepage = "https://github.com/frawau/aioblescan";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

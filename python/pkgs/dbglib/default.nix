@@ -18,6 +18,5 @@ buildPythonPackage rec {
   meta = {
     homepage = "https://github.com/savioxavier/dbglib/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

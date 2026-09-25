@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Common platform enumeration for python";
     homepage = "https://github.com/nilp0inter/cpe";
     license = lib.licenses.lgpl3Plus;
-    maintainers = [ ];
   };
 }

@@ -38,6 +38,5 @@ buildPythonPackage rec {
     description = "Full featured redis cache backend for Django";
     homepage = "https://github.com/jazzband/django-redis";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

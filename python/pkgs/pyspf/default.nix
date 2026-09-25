@@ -23,7 +23,6 @@ buildPythonPackage rec {
   meta = {
     homepage = "http://bmsi.com/python/milter.html";
     description = "Python API for Sendmail Milters (SPF)";
-    maintainers = [ ];
     license = lib.licenses.gpl2;
   };
 }

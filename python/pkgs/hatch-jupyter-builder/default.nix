@@ -27,6 +27,5 @@ buildPythonPackage (finalAttrs: {
     mainProgram = "hatch-jupyter-builder";
     homepage = "https://github.com/jupyterlab/hatch-jupyter-builder";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

@@ -30,6 +30,5 @@ buildPythonPackage (finalAttrs: {
     description = "Utilities for refactoring imports in python-like syntax";
     homepage = "https://github.com/asottile/classify-imports";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

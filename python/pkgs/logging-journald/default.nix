@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Logging handler for writing logs to the journald";
     homepage = "https://github.com/mosquito/logging-journald";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

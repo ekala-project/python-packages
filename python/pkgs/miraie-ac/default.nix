@@ -39,6 +39,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/rkzofficial/miraie-ac";
     description = "Python library for controlling Panasonic Miraie ACs";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

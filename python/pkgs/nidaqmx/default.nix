@@ -67,6 +67,5 @@ buildPythonPackage rec {
     description = "API for interacting with the NI-DAQmx driver";
     homepage = "https://github.com/ni/nidaqmx-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

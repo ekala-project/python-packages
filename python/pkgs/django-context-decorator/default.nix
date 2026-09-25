@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Django @context decorator";
     homepage = "https://github.com/rixx/django-context-decorator";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

@@ -41,6 +41,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python library for API rate limiting";
     homepage = "https://github.com/laurentS/slowapi";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

@@ -61,6 +61,5 @@ buildPythonPackage (finalAttrs: {
     description = "Client for the Home Connect API";
     homepage = "https://github.com/MartinHjelmare/aiohomeconnect";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

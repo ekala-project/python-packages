@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Python library to control EAGLE-200";
     homepage = "https://github.com/home-assistant-libs/aioeagle";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

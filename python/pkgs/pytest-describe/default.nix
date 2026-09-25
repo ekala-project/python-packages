@@ -36,6 +36,5 @@ buildPythonPackage {
     description = "Describe-style plugin for the pytest framework";
     homepage = "https://github.com/pytest-dev/pytest-describe";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

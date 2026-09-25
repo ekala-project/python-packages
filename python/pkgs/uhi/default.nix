@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "Universal Histogram Interface";
     homepage = "https://uhi.readthedocs.io/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

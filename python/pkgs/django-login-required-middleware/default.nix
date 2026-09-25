@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "Requires login to all requests through middleware in Django";
     homepage = "https://github.com/CleitonDeLima/django-login-required-middleware";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

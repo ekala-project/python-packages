@@ -46,6 +46,5 @@ buildPythonPackage rec {
     description = "Conveniently store reference to request user on thread/db level";
     homepage = "https://github.com/zsoldosp/django-currentuser";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

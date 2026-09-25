@@ -78,6 +78,5 @@ buildPythonPackage (finalAttrs: {
     description = "New version checker for software";
     homepage = "https://github.com/lilydjwg/nvchecker";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

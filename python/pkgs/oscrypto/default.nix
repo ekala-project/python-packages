@@ -46,6 +46,5 @@ buildPythonPackage rec {
     description = "Encryption library for Python";
     homepage = "https://github.com/wbond/oscrypto";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

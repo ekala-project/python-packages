@@ -45,6 +45,5 @@ buildPythonPackage rec {
     description = "Python Matrix Client-Server SDK";
     homepage = "https://github.com/matrix-org/matrix-python-sdk";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

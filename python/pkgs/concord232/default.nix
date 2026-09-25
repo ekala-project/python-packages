@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "GE Concord 4 RS232 Serial Interface Library and Server";
     homepage = "https://github.com/JasonCarter80/concord232";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

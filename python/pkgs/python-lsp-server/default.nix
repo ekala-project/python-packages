@@ -98,7 +98,6 @@ buildPythonPackage rec {
     description = "Python implementation of the Language Server Protocol";
     homepage = "https://github.com/python-lsp/python-lsp-server";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "pylsp";
   };
 }

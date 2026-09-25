@@ -30,6 +30,5 @@ buildPythonPackage rec {
     description = "Additional components for streamlit";
     homepage = "https://pypi.org/project/extra-streamlit-components/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

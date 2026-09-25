@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Python WMI Queries";
     homepage = "https://github.com/cesbit/aiowmi";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 }

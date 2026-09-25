@@ -113,6 +113,5 @@ buildPythonPackage (finalAttrs: {
     mainProgram = "dask";
     homepage = "https://dask.org/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

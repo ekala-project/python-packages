@@ -84,6 +84,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/pallets-eco/flask-security";
     description = "Quickly add security features to your Flask application";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

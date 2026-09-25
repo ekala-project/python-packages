@@ -61,6 +61,5 @@ buildPythonPackage rec {
     mainProgram = "quart";
     homepage = "https://github.com/pallets/quart/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

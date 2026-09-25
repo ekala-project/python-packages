@@ -23,6 +23,5 @@ buildPythonPackage rec {
     description = "Discover and control ANEL NET-PwrCtrl devices";
     homepage = "https://github.com/mweinelt/anel-pwrctrl";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

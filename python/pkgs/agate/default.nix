@@ -49,6 +49,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python data analysis library that is optimized for humans instead of machines";
     homepage = "https://github.com/wireservice/agate";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

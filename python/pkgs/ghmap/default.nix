@@ -43,6 +43,5 @@ buildPythonPackage (finalAttrs: {
     description = "A Python tool for mapping GitHub events to contributor activities";
     homepage = "https://github.com/sgl-umons/ghmap";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

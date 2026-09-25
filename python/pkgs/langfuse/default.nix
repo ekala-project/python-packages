@@ -47,6 +47,5 @@ buildPythonPackage (finalAttrs: {
     description = "Instrument your LLM app with decorators or low-level SDK and get detailed tracing/observability";
     homepage = "https://github.com/langfuse/langfuse-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

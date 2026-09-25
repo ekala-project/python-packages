@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Remote Python Call (RPyC), a transparent and symmetric RPC library";
     homepage = "https://rpyc.readthedocs.org";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

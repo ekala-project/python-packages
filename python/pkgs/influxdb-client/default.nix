@@ -56,6 +56,5 @@ buildPythonPackage rec {
     description = "InfluxDB client library";
     homepage = "https://github.com/influxdata/influxdb-client-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

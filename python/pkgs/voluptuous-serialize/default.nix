@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Convert Voluptuous schemas to dictionaries so they can be serialized";
     homepage = "https://github.com/home-assistant-libs/voluptuous-serialize";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

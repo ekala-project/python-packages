@@ -31,7 +31,6 @@ buildPythonPackage rec {
     homepage = "https://github.com/stephenmcd/filebrowser-safe";
     downloadPage = "https://pypi.org/project/filebrowser_safe/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

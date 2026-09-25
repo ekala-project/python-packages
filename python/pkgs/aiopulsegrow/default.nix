@@ -41,6 +41,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python async api client for Pulse Grow";
     homepage = "https://github.com/pvizeli/aiopulsegrow";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

@@ -45,6 +45,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://github.com/openai/openai-agents-python";
     description = "Lightweight, powerful framework for multi-agent workflows";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

@@ -27,6 +27,5 @@ buildPythonPackage rec {
     description = "Endpoint-util module of alibabaCloud Python SDK";
     homepage = "https://pypi.org/project/alibabacloud-endpoint-util/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

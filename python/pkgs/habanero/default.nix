@@ -46,6 +46,5 @@ buildPythonPackage rec {
     description = "Python interface to Library Genesis";
     homepage = "https://habanero.readthedocs.io/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

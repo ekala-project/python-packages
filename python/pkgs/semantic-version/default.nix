@@ -20,6 +20,5 @@ buildPythonPackage rec {
     description = "Library implementing the 'SemVer' scheme";
     homepage = "https://github.com/rbarrois/python-semanticversion/";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

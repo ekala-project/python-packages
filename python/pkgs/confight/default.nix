@@ -29,6 +29,5 @@ buildPythonPackage rec {
     mainProgram = "confight";
     homepage = "https://github.com/avature/confight";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

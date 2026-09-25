@@ -73,6 +73,5 @@ buildPythonPackage rec {
     description = "Unified approach to explain the output of any machine learning model";
     homepage = "https://github.com/slundberg/shap";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

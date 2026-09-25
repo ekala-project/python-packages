@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Short UUIDField for Django. Good for use in urls & file names";
     homepage = "https://github.com/benrobster/django-shortuuidfield";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

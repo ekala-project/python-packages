@@ -64,6 +64,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://google.github.io/tensorstore";
     license = lib.licenses.asl20;
     sourceProvenance = [ lib.sourceTypes.binaryNativeCode ];
-    maintainers = [ ];
   };
 })

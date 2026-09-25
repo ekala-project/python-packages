@@ -158,7 +158,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://www.postgresql.org";
     license = lib.licenses.postgresql;
     pkgConfigModules = [ "libpq" ];
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

@@ -29,6 +29,5 @@ buildPythonPackage (finalAttrs: {
     description = "Library to interact with LightWaveRF 2nd Gen lights and switches";
     homepage = "https://github.com/bigbadblunt/lightwave2";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

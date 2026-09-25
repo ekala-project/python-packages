@@ -49,6 +49,5 @@ buildPythonPackage rec {
     description = "Store data created during your `pytest` tests execution, and retrieve it at the end of the session, e.g. for applicative benchmarking purposes";
     homepage = "https://github.com/smarie/python-pytest-harvest";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

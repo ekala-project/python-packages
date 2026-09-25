@@ -40,6 +40,5 @@ buildPythonPackage rec {
     description = "This is the Microsoft Azure EventGrid Management Client Library";
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/eventgrid/azure-mgmt-eventgrid";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

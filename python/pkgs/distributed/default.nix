@@ -70,6 +70,5 @@ buildPythonPackage (finalAttrs: {
     description = "Distributed computation in Python";
     homepage = "https://distributed.readthedocs.io/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

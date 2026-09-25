@@ -37,6 +37,5 @@ buildPythonPackage rec {
     mainProgram = "ulid";
     homepage = "https://github.com/mdomke/python-ulid";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

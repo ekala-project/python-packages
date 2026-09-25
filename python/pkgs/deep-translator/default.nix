@@ -40,6 +40,5 @@ buildPythonPackage rec {
     description = "Python tool to translate between different languages by using multiple translators";
     homepage = "https://deep-translator.readthedocs.io";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

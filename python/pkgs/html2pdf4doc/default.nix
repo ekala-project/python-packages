@@ -45,6 +45,5 @@ buildPythonPackage rec {
     description = "Print HTML to PDF in the Browser – Python Package for HTML2PDF.js";
     homepage = "https://github.com/mettta/html2pdf4doc_python";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

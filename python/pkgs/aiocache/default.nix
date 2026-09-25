@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "Asyncio cache supporting multiple backends (memory, redis, memcached, etc.)";
     homepage = "https://github.com/aio-libs/aiocache";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

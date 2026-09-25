@@ -25,6 +25,5 @@ buildPythonPackage (finalAttrs: {
     description = "Convert DB API 2.0 named/numeric parameter styles to the style a driver supports";
     homepage = "https://github.com/cpburnz/python-sql-parameters";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

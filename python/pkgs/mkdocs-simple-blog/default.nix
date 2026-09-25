@@ -38,6 +38,5 @@ buildPythonPackage rec {
     description = "Simple blog generator plugin for MkDocs";
     homepage = "https://fernandocelmer.github.io/mkdocs-simple-blog/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

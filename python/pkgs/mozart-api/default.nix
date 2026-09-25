@@ -51,6 +51,5 @@ buildPythonPackage (finalAttrs: {
     description = "REST API for the Bang & Olufsen Mozart platform";
     homepage = "https://github.com/bang-olufsen/mozart-open-api";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

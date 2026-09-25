@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Dark stylesheet for Python and Qt applications";
     homepage = "https://github.com/ColinDuquesnoy/QDarkStyleSheet";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -38,6 +38,5 @@ buildPythonPackage rec {
     description = "PKCS#11 wrapper for Python";
     homepage = "https://github.com/LudovicRousseau/PyKCS11";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
   };
 }

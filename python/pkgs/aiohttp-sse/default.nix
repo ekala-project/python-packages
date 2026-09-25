@@ -55,6 +55,5 @@ buildPythonPackage rec {
     description = "Server-sent events support for aiohttp";
     homepage = "https://github.com/aio-libs/aiohttp-sse";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

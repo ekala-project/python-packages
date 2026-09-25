@@ -48,6 +48,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/mill1000/midea-msmart";
     license = lib.licenses.mit;
     mainProgram = "msmart-ng";
-    maintainers = [ ];
   };
 }

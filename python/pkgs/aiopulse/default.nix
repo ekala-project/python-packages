@@ -39,6 +39,5 @@ buildPythonPackage rec {
     '';
     homepage = "https://github.com/atmurray/aiopulse";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

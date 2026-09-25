@@ -27,6 +27,5 @@ buildPythonPackage rec {
     description = "Expands the functools lru_cache to classes";
     homepage = "https://github.com/youknowone/methodtools";
     license = lib.licenses.bsd2WithViews;
-    maintainers = [ ];
   };
 }

@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "Handy tools for working with URLs and APIs";
     homepage = "https://github.com/domdfcoding/apeye";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
   };
 }

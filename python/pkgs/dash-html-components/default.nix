@@ -22,6 +22,5 @@ buildPythonPackage rec {
     description = "HTML components for Dash";
     homepage = "https://dash.plot.ly/dash-html-components";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -38,7 +38,6 @@ buildPythonPackage rec {
     description = "Module to get LRC format (synchronized) lyrics";
     homepage = "https://github.com/rtcq/syncedlyrics";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "syncedlyrics";
   };
 }

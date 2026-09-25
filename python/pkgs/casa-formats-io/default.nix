@@ -40,6 +40,5 @@ buildPythonPackage rec {
     description = "Dask-based reader for CASA data";
     homepage = "https://casa-formats-io.readthedocs.io/";
     license = lib.licenses.lgpl2Only;
-    maintainers = [ ];
   };
 }

@@ -38,6 +38,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python module to poll Intergas boilers via a Lan2RF gateway";
     homepage = "https://github.com/zxdavb/incomfort-client";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

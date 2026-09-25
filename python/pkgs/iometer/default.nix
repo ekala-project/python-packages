@@ -47,6 +47,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python client for interacting with IOmeter devices over HTTP";
     homepage = "https://github.com/iometer-gmbh/iometer.py";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

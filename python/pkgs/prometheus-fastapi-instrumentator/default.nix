@@ -51,7 +51,6 @@ buildPythonPackage (finalAttrs: {
       isc
       bsd3
     ];
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

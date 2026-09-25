@@ -30,6 +30,5 @@ buildPythonPackage (finalAttrs: {
     description = "Dead-simple way to watch a directory";
     homepage = "https://github.com/Ceasar/easywatch";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

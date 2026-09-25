@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Module with some convenient utilities";
     homepage = "https://github.com/WoLpH/python-utils";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

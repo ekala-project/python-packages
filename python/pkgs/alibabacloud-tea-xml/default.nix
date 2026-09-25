@@ -30,6 +30,5 @@ buildPythonPackage (finalAttrs: {
     description = "Aliyun Tea XML Library for Python";
     homepage = "https://pypi.org/project/alibabacloud-tea-xml/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

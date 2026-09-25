@@ -56,6 +56,5 @@ buildPythonPackage rec {
     '';
     homepage = "https://github.com/home-assistant-ecosystem/python-connect-box";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

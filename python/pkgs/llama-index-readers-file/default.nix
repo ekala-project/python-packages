@@ -51,6 +51,5 @@ buildPythonPackage rec {
     description = "LlamaIndex Readers Integration for files";
     homepage = "https://github.com/run-llama/llama_index/tree/main/llama-index-integrations/readers/llama-index-readers-file";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

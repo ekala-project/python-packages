@@ -45,6 +45,5 @@ buildPythonPackage rec {
     description = "Repeat ICalendar events by RRULE, RDATE and EXDATE";
     homepage = "https://github.com/niccokunzmann/python-recurring-ical-events";
     license = lib.licenses.lgpl3Plus;
-    maintainers = [ ];
   };
 }

@@ -30,6 +30,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python library for integration with Braintree";
     homepage = "https://github.com/braintree/braintree_python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

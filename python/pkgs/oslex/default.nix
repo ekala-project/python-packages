@@ -34,6 +34,5 @@ buildPythonPackage (finalAttrs: {
     description = "OS-independent wrapper for shlex and mslex";
     homepage = "https://github.com/petamas/oslex";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

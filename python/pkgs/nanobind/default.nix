@@ -55,6 +55,5 @@ buildPythonPackage (finalAttrs: {
       smaller binaries, and have better runtime performance.
     '';
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

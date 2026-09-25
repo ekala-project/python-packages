@@ -69,6 +69,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/cocotb/cocotb";
     license = lib.licenses.bsd3;
     broken = stdenv.hostPlatform.isDarwin;
-    maintainers = [ ];
   };
 }

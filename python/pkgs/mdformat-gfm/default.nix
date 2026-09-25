@@ -47,6 +47,5 @@ buildPythonPackage (finalAttrs: {
     description = "Mdformat plugin for GitHub Flavored Markdown compatibility";
     homepage = "https://github.com/hukkin/mdformat-gfm";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

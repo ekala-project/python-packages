@@ -31,6 +31,5 @@ buildPythonPackage (finalAttrs: {
     description = "Pure-python universal errors-and-erasures Reed-Solomon Codec";
     homepage = "https://github.com/tomerfiliba/reedsolomon";
     license = lib.licenses.publicDomain;
-    maintainers = [ ];
   };
 })

@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "Wrap legacy APIs in python projects";
     homepage = "https://github.com/flying-sheep/legacy-api-wrap";
     license = lib.licenses.mpl20;
-    maintainers = [ ];
   };
 }

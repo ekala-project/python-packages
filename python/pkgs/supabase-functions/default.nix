@@ -45,7 +45,6 @@ buildPythonPackage (finalAttrs: {
   meta = {
     description = "Client library for Supabase Functions";
     homepage = "https://github.com/supabase/supabase-py";
-    maintainers = [ ];
     license = lib.licenses.mit;
   };
 })

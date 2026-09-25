@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "MySQL connection support for Flask";
     homepage = "https://github.com/alexferl/flask-mysqldb";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

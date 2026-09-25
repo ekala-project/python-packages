@@ -27,6 +27,5 @@ buildPythonPackage rec {
     description = "Sphinx extension which renders CMake documentation";
     homepage = "https://github.com/scikit-build/moderncmakedomain";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

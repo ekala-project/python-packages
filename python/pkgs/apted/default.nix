@@ -26,6 +26,5 @@ buildPythonPackage {
     description = "APTED algorithm for the Tree Edit Distance";
     homepage = "https://github.com/JoaoFelipe/apted";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

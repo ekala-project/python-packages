@@ -61,6 +61,5 @@ buildPythonPackage (finalAttrs: {
     description = "HomeKit Accessory Protocol implementation";
     homepage = "https://github.com/ikalchev/HAP-python";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

@@ -32,6 +32,5 @@ buildPythonPackage (finalAttrs: {
     description = "Async Python library for communicating with EARN-E P1 energy meters via UDP";
     homepage = "https://github.com/Miggets7/earn-e-p1";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

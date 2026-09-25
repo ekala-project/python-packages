@@ -25,7 +25,6 @@ buildPythonPackage rec {
     description = "Python wrapper for libc's dlinfo and dyld_find on Mac";
     homepage = "https://github.com/fphammerle/python-dlinfo";
     license = lib.licenses.mit;
-    maintainers = [ ];
     broken = stdenv.hostPlatform.isDarwin;
   };
 }

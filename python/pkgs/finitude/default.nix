@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "Python module to get data from ABCD bus (RS-485) used by Carrier Infinity and Bryant Evolution HVAC systems";
     homepage = "https://github.com/dulitz/finitude";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

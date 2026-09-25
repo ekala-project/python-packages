@@ -25,6 +25,5 @@ buildPythonPackage rec {
     description = "Disk and file backed persistent cache";
     homepage = "https://github.com/grantjenks/python-diskcache";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

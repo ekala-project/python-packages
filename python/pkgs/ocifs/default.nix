@@ -37,6 +37,5 @@ buildPythonPackage rec {
     description = "Oracle Cloud Infrastructure Object Storage fsspec implementation";
     homepage = "https://ocifs.readthedocs.io";
     license = lib.licenses.upl;
-    maintainers = [ ];
   };
 }

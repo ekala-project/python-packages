@@ -29,6 +29,5 @@ buildPythonPackage rec {
     description = "Simply returns either notebook filename or the full path to the notebook";
     homepage = "https://github.com/msm1089/ipynbname";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

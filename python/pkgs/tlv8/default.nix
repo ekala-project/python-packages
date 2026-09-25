@@ -23,6 +23,5 @@ buildPythonPackage rec {
     description = "Type-Length-Value8 (TLV8) for Python";
     homepage = "https://github.com/jlusiardi/tlv8_python";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

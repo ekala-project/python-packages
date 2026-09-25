@@ -40,6 +40,5 @@ buildPythonPackage rec {
     description = "Python API for sending notifications to Android/Fire TVs";
     homepage = "https://github.com/engrbm87/notifications_android_tv";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

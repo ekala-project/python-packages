@@ -30,6 +30,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/python-rapidjson/python-rapidjson";
     description = "Python wrapper around rapidjson";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

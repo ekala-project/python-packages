@@ -57,6 +57,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python module for the Honeywell Lyric Platform";
     homepage = "https://github.com/timmo001/aiolyric";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

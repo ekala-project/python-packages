@@ -26,6 +26,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/iTaybb/pySmartDL";
     description = "Smart Download Manager for Python";
     license = lib.licenses.unlicense;
-    maintainers = [ ];
   };
 }

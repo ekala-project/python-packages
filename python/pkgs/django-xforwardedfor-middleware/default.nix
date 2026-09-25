@@ -32,6 +32,5 @@ buildPythonPackage (finalAttrs: {
     description = "Use the X-Forwarded-For header to get the real ip of a request";
     homepage = "https://github.com/allo-/django-xforwardedfor-middleware";
     license = lib.licenses.publicDomain;
-    maintainers = [ ];
   };
 })

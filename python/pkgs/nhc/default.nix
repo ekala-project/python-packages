@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "SDK for Niko Home Control";
     homepage = "https://github.com/vandeurenglenn/nhc";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

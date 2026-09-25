@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "Flake8 extension for checking quotes in python";
     homepage = "https://github.com/zheller/flake8-quotes/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

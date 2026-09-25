@@ -39,6 +39,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/doronz88/DeveloperDiskImage";
     license = lib.licenses.gpl3Plus;
     mainProgram = "developer_disk_image";
-    maintainers = [ ];
   };
 }

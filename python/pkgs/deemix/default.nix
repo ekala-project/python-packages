@@ -39,6 +39,5 @@ buildPythonPackage rec {
     mainProgram = "deemix";
     homepage = "https://gitlab.com/RemixDev/deemix-py";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
   };
 }

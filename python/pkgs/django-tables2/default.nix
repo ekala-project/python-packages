@@ -59,6 +59,5 @@ buildPythonPackage rec {
     description = "Django app for creating HTML tables";
     homepage = "https://github.com/jieter/django-tables2";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

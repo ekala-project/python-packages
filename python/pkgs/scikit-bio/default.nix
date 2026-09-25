@@ -61,6 +61,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "http://scikit-bio.org/";
     downloadPage = "https://github.com/scikit-bio/scikit-bio";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

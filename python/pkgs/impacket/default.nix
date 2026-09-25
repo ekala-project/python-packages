@@ -74,6 +74,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/SecureAuthCorp/impacket";
     # Modified Apache Software License, Version 1.1
     license = lib.licenses.free;
-    maintainers = [ ];
   };
 }

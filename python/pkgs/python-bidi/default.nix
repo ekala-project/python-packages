@@ -41,6 +41,5 @@ buildPythonPackage rec {
       lgpl3Only
       gpl3Only
     ];
-    maintainers = [ ];
   };
 }

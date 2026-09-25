@@ -43,6 +43,5 @@ buildPythonPackage (finalAttrs: {
     description = "Webhdfs plugin for dvc";
     homepage = "https://pypi.org/project/dvc-webhdfs/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

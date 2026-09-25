@@ -56,6 +56,5 @@ buildPythonPackage rec {
       mit
       bsd2
     ]; # BSD due to reuses of PyNE code
-    maintainers = [ ];
   };
 }

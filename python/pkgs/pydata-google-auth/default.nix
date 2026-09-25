@@ -44,6 +44,5 @@ buildPythonPackage rec {
     description = "Helpers for authenticating to Google APIs";
     homepage = "https://github.com/pydata/pydata-google-auth";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

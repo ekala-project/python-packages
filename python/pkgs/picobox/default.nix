@@ -30,6 +30,5 @@ buildPythonPackage rec {
     description = "Opinionated dependency injection framework";
     homepage = "https://github.com/ikalnytskyi/picobox";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

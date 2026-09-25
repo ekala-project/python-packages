@@ -33,6 +33,5 @@ buildPythonPackage rec {
       mit # or
       asl20
     ];
-    maintainers = [ ];
   };
 }

@@ -39,6 +39,5 @@ buildPythonPackage rec {
     mainProgram = "wordcloud_cli";
     homepage = "https://github.com/amueller/word_cloud";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

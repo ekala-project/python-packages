@@ -25,6 +25,5 @@ buildPythonPackage rec {
     description = "Bringing the elegance of C# EventHandler to Python";
     homepage = "https://events.readthedocs.org";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

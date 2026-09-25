@@ -25,6 +25,5 @@ buildPythonPackage rec {
     description = "Jupyter notebook extension that enables highlighting every instance of the current word in the notebook";
     homepage = "https://github.com/jcb91/jupyter_highlight_selected_word";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

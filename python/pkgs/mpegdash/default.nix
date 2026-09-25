@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "MPEG-DASH MPD(Media Presentation Description) Parser";
     homepage = "https://github.com/sangwonl/python-mpegdash";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

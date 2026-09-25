@@ -52,6 +52,5 @@ buildPythonPackage rec {
     description = "Django Google Analytics brings the power of server side/non-js Google Analytics to your Django projects";
     homepage = "https://github.com/praekeltfoundation/django-google-analytics/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

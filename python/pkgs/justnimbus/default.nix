@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Library for the JustNimbus API";
     homepage = "https://github.com/kvanzuijlen/justnimbus";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

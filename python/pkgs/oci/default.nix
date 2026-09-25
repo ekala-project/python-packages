@@ -59,6 +59,5 @@ buildPythonPackage rec {
       asl20 # or
       upl
     ];
-    maintainers = [ ];
   };
 }

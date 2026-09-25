@@ -45,6 +45,5 @@ buildPythonPackage (finalAttrs: {
     description = "Asynchronous library to retrieve details of your Aquacell water softener device";
     homepage = "https://github.com/Jordi1990/aioaquacell";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

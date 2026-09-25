@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Small and simple HTML table parser not requiring any external dependency";
     homepage = "https://github.com/schmijos/html-table-parser-python3";
     license = lib.licenses.agpl3Only;
-    maintainers = [ ];
   };
 }

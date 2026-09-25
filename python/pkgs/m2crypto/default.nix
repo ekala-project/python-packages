@@ -52,6 +52,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python crypto and SSL toolkit";
     homepage = "https://gitlab.com/m2crypto/m2crypto";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

@@ -31,6 +31,5 @@ buildPythonPackage (finalAttrs: {
     description = "Flexible and powerful tensor operations for readable and reliable code";
     homepage = "https://github.com/arogozhnikov/einops";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

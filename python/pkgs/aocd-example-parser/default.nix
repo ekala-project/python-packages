@@ -25,6 +25,5 @@ buildPythonPackage {
     description = "Default implementation of an example parser plugin for advent-of-code-data";
     homepage = "https://github.com/wimglenn/aocd-example-parser";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

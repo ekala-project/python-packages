@@ -51,6 +51,5 @@ buildPythonPackage rec {
     description = "Python client for the Syncthing REST API";
     homepage = "https://github.com/zhulik/aiosyncthing";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

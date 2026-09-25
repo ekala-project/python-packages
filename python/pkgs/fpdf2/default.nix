@@ -31,6 +31,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/py-pdf/fpdf2";
     description = "Simple PDF generation for Python";
     license = lib.licenses.lgpl3Only;
-    maintainers = [ ];
   };
 }

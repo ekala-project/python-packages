@@ -43,6 +43,5 @@ buildPythonPackage (finalAttrs: {
     mainProgram = "black-macchiato";
     homepage = "https://github.com/wbolster/black-macchiato";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

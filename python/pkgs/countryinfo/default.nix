@@ -37,6 +37,5 @@ buildPythonPackage (finalAttrs: {
     description = "Data about countries, ISO info and states/provinces within them";
     homepage = "https://github.com/porimol/countryinfo";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

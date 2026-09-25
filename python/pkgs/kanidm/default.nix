@@ -66,6 +66,5 @@ buildPythonPackage rec {
     description = "Kanidm client library";
     homepage = "https://github.com/kanidm/kanidm/tree/master/pykanidm";
     license = lib.licenses.mpl20;
-    maintainers = [ ];
   };
 }

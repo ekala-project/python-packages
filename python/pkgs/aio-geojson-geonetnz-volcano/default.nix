@@ -51,6 +51,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python module for accessing the GeoNet NZ Volcanic GeoJSON feeds";
     homepage = "https://github.com/exxamalte/python-aio-geojson-geonetnz-volcano";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

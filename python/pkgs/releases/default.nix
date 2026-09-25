@@ -33,6 +33,5 @@ buildPythonPackage rec {
     description = "Sphinx extension for changelog manipulation";
     homepage = "https://github.com/bitprophet/releases";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

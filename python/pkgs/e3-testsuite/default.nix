@@ -28,7 +28,6 @@ buildPythonPackage rec {
     description = "Generic testsuite framework in Python";
     homepage = "https://github.com/AdaCore/e3-testsuite/";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 }

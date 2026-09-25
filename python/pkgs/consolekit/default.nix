@@ -43,6 +43,5 @@ buildPythonPackage rec {
     description = "Additional utilities for click";
     homepage = "https://github.com/domdfcoding/consolekit";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

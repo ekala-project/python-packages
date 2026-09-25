@@ -27,6 +27,5 @@ buildPythonPackage (finalAttrs: {
     description = "Pure Python Elliptic Curve Library";
     homepage = "https://github.com/ubinity/ECPy";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

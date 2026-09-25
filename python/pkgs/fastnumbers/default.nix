@@ -48,6 +48,5 @@ buildPythonPackage rec {
     description = "Python module for number conversion";
     homepage = "https://github.com/SethMMorton/fastnumbers";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

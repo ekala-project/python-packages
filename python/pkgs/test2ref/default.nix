@@ -39,6 +39,5 @@ buildPythonPackage (finalAttrs: {
     description = "Testing Against Learned Reference Data";
     homepage = "https://github.com/nbiotcloud/test2ref";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

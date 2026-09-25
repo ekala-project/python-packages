@@ -31,6 +31,5 @@ buildPythonPackage (finalAttrs: {
     description = "Module to interact with Cisco Mobility Express APIs to fetch connected devices";
     homepage = "https://github.com/fbradyirl/ciscomobilityexpress";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

@@ -48,6 +48,5 @@ buildPythonPackage rec {
     description = "Remap, mask, renumber, unique, and in-place transposition of 3D labeled images and point clouds";
     homepage = "https://github.com/seung-lab/fastremap";
     license = lib.licenses.lgpl3Only;
-    maintainers = [ ];
   };
 }

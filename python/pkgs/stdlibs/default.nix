@@ -27,6 +27,5 @@ buildPythonPackage rec {
     description = "Overview of the Python stdlib";
     homepage = "https://github.com/omnilib/stdlibs";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

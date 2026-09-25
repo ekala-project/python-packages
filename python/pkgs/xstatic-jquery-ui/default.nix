@@ -31,6 +31,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://jqueryui.com/";
     description = "jquery-ui packaged static files for python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

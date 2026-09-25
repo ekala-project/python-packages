@@ -57,7 +57,6 @@ let
       mainProgram = "pylama";
       homepage = "https://github.com/klen/pylama";
       license = lib.licenses.mit;
-      maintainers = [ ];
     };
   };
 in

@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Collection of objects that implement fast font, glyph, etc. math";
     homepage = "https://github.com/robotools/fontMath/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

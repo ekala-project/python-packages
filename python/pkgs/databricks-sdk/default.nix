@@ -54,6 +54,5 @@ buildPythonPackage (finalAttrs: {
     description = "Databricks SDK for Python";
     homepage = "https://github.com/databricks/databricks-sdk-py";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

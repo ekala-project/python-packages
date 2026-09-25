@@ -28,7 +28,6 @@ buildPythonPackage rec {
     description = "Module for creating, editing, and reading folder tree diagrams";
     homepage = "https://github.com/earnestt1234/seedir";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "seedir";
   };
 }

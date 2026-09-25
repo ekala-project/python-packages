@@ -35,6 +35,5 @@ buildPythonPackage (finalAttrs: {
     mainProgram = "python-barcode";
     homepage = "https://github.com/WhyNotHugo/python-barcode";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

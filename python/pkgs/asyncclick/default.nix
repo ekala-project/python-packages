@@ -47,6 +47,5 @@ buildPythonPackage rec {
     description = "Python composable command line utility";
     homepage = "https://github.com/python-trio/asyncclick";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

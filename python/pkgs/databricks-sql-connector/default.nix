@@ -61,6 +61,5 @@ buildPythonPackage rec {
     description = "Databricks SQL Connector for Python";
     homepage = "https://docs.databricks.com/dev-tools/python-sql-connector.html";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

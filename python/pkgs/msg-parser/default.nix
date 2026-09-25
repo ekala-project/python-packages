@@ -31,6 +31,5 @@ buildPythonPackage {
     mainProgram = "msg_parser";
     homepage = "https://github.com/vikramarsid/msg_parser";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

@@ -46,6 +46,5 @@ buildPythonPackage rec {
     description = "API wrapper for communication with ASUSWRT-powered routers using HTTP protocol";
     homepage = "https://github.com/Vaskivskyi/asusrouter";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

@@ -44,6 +44,5 @@ buildPythonPackage (finalAttrs: {
     description = "Helper functions and classes for the Datastar library";
     homepage = "https://github.com/starfederation/datastar-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

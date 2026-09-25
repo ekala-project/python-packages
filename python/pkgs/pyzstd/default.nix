@@ -59,6 +59,5 @@ buildPythonPackage rec {
     description = "Python bindings to Zstandard (zstd) compression library";
     homepage = "https://pyzstd.readthedocs.io";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

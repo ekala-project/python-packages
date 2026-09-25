@@ -40,6 +40,5 @@ buildPythonPackage rec {
     description = "Lightweight Python client for LocalStack";
     homepage = "https://github.com/localstack/localstack-python-client";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

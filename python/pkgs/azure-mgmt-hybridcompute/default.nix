@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "Microsoft Azure Hybrid Compute Management Client Library for Python";
     homepage = "https://github.com/Azure/azure-sdk-for-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

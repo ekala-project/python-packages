@@ -33,7 +33,6 @@ buildPythonPackage (finalAttrs: {
     description = "Easy interface to query the EC2 metadata API, with caching";
     homepage = "https://pypi.org/project/ec2-metadata/";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "imds";
   };
 })

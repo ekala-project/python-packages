@@ -29,6 +29,5 @@ buildPythonPackage rec {
     mainProgram = "dw";
     homepage = "https://github.com/deepjyoti30/downloader-cli";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

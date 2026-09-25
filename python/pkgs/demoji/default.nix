@@ -33,6 +33,5 @@ buildPythonPackage rec {
     description = "Module to find/replace/remove emojis in text strings";
     homepage = "https://github.com/bsolomon1124/demoji";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

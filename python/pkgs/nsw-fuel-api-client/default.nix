@@ -50,6 +50,5 @@ buildPythonPackage rec {
     description = "API Client for NSW Government Fuel Check application";
     homepage = "https://github.com/nickw444/nsw-fuel-api-client";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -68,6 +68,5 @@ buildPythonPackage rec {
     mainProgram = "certomancer";
     homepage = "https://github.com/MatthiasValvekens/certomancer";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

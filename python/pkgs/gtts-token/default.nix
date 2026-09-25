@@ -23,6 +23,5 @@ buildPythonPackage rec {
     description = "Calculates a token to run the Google Translate text to speech";
     homepage = "https://github.com/boudewijn26/gTTS-token";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -44,6 +44,5 @@ buildPythonPackage rec {
     description = "Library for composing asynchronous and event-based programs";
     homepage = "https://github.com/ReactiveX/RxPY";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

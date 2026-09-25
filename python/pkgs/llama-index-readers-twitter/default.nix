@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "LlamaIndex Readers Integration for Twitter";
     homepage = "https://github.com/run-llama/llama_index/tree/main/llama-index-integrations/readers/llama-index-readers-twitter";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

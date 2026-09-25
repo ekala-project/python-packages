@@ -57,7 +57,6 @@ buildPythonPackage rec {
     description = "Manage multiple versions of your MkDocs-powered documentation via Git";
     homepage = "https://github.com/jimporter/mike";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     mainProgram = "mike";
   };
 }

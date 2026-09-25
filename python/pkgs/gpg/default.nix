@@ -54,6 +54,5 @@ buildPythonPackage rec {
     description = "Python bindings to the GPGME API of the GnuPG cryptography library";
     homepage = "https://dev.gnupg.org/source/gpgmepy/";
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
   };
 }

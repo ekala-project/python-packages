@@ -41,6 +41,5 @@ buildPythonPackage rec {
     description = "A standalone implementation of PEP 735 Dependency Groups";
     homepage = "https://github.com/pypa/dependency-groups";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

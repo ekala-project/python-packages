@@ -30,6 +30,5 @@ buildPythonPackage rec {
     description = "Python bindings generated from the GTFS Realtime protocol buffer spec";
     homepage = "https://github.com/MobilityData/gtfs-realtime-bindings";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

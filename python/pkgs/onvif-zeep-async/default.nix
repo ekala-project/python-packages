@@ -45,7 +45,6 @@ buildPythonPackage (finalAttrs: {
     description = "ONVIF Client Implementation in Python";
     homepage = "https://github.com/hunterjm/python-onvif-zeep-async";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "onvif-cli";
   };
 })

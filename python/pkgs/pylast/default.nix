@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Python interface to last.fm (and compatibles)";
     homepage = "https://github.com/pylast/pylast";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

@@ -24,6 +24,5 @@ buildPythonPackage rec {
     description = "Simple, safe single expression evaluator library";
     homepage = "https://github.com/danthedeckie/simpleeval";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -60,6 +60,5 @@ buildPythonPackage (finalAttrs: {
     description = "Collection of Faraday agent parameters types";
     homepage = "https://github.com/infobyte/faraday_agent_parameters_types";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
   };
 })

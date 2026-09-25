@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Nexus Python SDK";
     homepage = "https://temporal.io/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -36,6 +36,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python SDK for the GA4GH Task Execution API";
     homepage = "https://github.com/ohsu-comp-bio/py-tes";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

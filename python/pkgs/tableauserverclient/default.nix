@@ -46,6 +46,5 @@ buildPythonPackage rec {
     description = "Module for working with the Tableau Server REST API";
     homepage = "https://github.com/tableau/server-client-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

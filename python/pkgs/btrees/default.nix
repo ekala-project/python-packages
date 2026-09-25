@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "Scalable persistent components";
     homepage = "http://packages.python.org/BTrees";
     license = lib.licenses.zpl21;
-    maintainers = [ ];
   };
 }

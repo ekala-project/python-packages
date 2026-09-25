@@ -31,6 +31,5 @@ buildPythonPackage (finalAttrs: {
     description = "Module for interacting with the Ohme API";
     homepage = "https://github.com/dan-r/ohmepy";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

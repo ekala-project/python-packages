@@ -40,6 +40,5 @@ buildPythonPackage rec {
     description = "Translation toolset";
     homepage = "https://github.com/wichert/lingua";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

@@ -61,6 +61,5 @@ buildPythonPackage rec {
     description = "PyScaffold extension which uses Markdown instead of reStructuredText";
     homepage = "https://pypi.org/project/pyscaffoldext-markdown/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -50,7 +50,6 @@ buildPythonPackage rec {
     description = "Python port of R's Comprehensive Dynamic Time Warp algorithms package";
     homepage = "https://github.com/DynamicTimeWarping/dtw-python";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     mainProgram = "dtw";
   };
 }

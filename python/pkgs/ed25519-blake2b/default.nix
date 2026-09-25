@@ -24,6 +24,5 @@ buildPythonPackage rec {
     mainProgram = "edsig";
     homepage = "https://github.com/Matoking/python-ed25519-blake2b";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

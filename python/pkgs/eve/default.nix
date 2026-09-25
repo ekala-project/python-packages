@@ -46,6 +46,5 @@ buildPythonPackage rec {
     description = "Open source Python REST API framework designed for human beings";
     homepage = "https://python-eve.org/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

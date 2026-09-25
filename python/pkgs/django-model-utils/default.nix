@@ -31,6 +31,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/jazzband/django-model-utils";
     description = "Django model mixins and utilities";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

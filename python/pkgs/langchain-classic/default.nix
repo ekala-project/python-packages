@@ -62,6 +62,5 @@ buildPythonPackage (finalAttrs: {
     description = "Classic (0.x) compatibility layer for LangChain";
     homepage = "https://github.com/langchain-ai/langchain/tree/master/libs/langchain";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

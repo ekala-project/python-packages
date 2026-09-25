@@ -44,7 +44,6 @@ buildPythonPackage rec {
     description = "Python binding for calamine";
     homepage = "https://github.com/dimastbk/python-calamine";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "python-calamine";
   };
 }

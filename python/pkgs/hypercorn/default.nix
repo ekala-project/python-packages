@@ -50,6 +50,5 @@ buildPythonPackage rec {
     description = "ASGI web server inspired by Gunicorn";
     mainProgram = "hypercorn";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

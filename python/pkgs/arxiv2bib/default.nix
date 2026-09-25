@@ -40,6 +40,5 @@ buildPythonPackage (finalAttrs: {
     mainProgram = "arxiv2bib";
     homepage = "http://nathangrigg.github.io/arxiv2bib/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

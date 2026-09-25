@@ -39,6 +39,5 @@ buildPythonPackage (finalAttrs: {
     description = "Library for converting bluetooth data and packets";
     homepage = "https://github.com/Bluetooth-Devices/bluetooth-data-tools";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

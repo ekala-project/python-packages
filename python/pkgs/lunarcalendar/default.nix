@@ -37,6 +37,5 @@ buildPythonPackage {
     description = "Lunar-Solar Converter, containing a number of lunar and solar festivals in China";
     mainProgram = "lunar-find";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

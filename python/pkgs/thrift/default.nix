@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Python bindings for the Apache Thrift RPC system";
     homepage = "https://thrift.apache.org/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

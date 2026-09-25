@@ -58,6 +58,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python package to talk to Philips Hue";
     homepage = "https://github.com/home-assistant-libs/aiohue";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

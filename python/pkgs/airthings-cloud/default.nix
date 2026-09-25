@@ -31,6 +31,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python module for Airthings";
     homepage = "https://github.com/Danielhiversen/pyAirthings";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

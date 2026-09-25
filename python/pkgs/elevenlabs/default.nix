@@ -48,6 +48,5 @@ buildPythonPackage (finalAttrs: {
     description = "Official Python API for ElevenLabs Text to Speech";
     homepage = "https://github.com/elevenlabs/elevenlabs-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

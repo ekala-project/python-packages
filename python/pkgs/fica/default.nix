@@ -45,6 +45,5 @@ buildPythonPackage (finalAttrs: {
     description = "Library for managing and documenting user configurations";
     homepage = "https://github.com/chrispyles/fica";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

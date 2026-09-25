@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Integrate SQLAlchemy with Flask";
     homepage = "https://github.com/pallets-eco/flask-sqlalchemy-lite";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

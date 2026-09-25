@@ -79,7 +79,6 @@ buildPythonPackage (finalAttrs: {
     description = "Industrial-strength Natural Language Processing (NLP)";
     homepage = "https://github.com/explosion/spaCy";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "spacy";
   };
 })

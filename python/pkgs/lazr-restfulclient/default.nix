@@ -41,6 +41,5 @@ buildPythonPackage rec {
     description = "Programmable client library that takes advantage of the commonalities among";
     homepage = "https://pypi.org/project/lazr.restfulclient";
     license = lib.licenses.lgpl3Plus;
-    maintainers = [ ];
   };
 }

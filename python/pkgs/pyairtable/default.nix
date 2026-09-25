@@ -41,6 +41,5 @@ buildPythonPackage rec {
     homepage = "https://pyairtable.readthedocs.io/";
     license = lib.licenses.mit;
     mainProgram = "pyairtable";
-    maintainers = [ ];
   };
 }

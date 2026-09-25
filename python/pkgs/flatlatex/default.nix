@@ -40,6 +40,5 @@ buildPythonPackage rec {
     description = "LaTeX math converter to unicode text";
     homepage = "https://github.com/jb-leger/flatlatex";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

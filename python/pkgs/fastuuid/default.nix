@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "CPython bindings to Rust's UUID library";
     homepage = "https://github.com/fastuuid/fastuuid";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

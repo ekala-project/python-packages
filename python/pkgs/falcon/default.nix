@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Ultra-reliable, fast ASGI+WSGI framework for building data plane APIs at scale";
     homepage = "https://falconframework.org/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

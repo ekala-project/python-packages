@@ -50,6 +50,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "http://uxlfoundation.github.io/oneDNN";
     license = lib.licenses.asl20;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

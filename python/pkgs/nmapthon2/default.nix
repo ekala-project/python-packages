@@ -27,6 +27,5 @@ buildPythonPackage rec {
     description = "Python library to automate nmap";
     homepage = "https://github.com/cblopez/nmapthon2";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

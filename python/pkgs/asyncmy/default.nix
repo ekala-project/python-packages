@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "Python module to interact with MySQL/mariaDB";
     homepage = "https://github.com/long2ice/asyncmy";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

@@ -35,7 +35,6 @@ buildPythonPackage (finalAttrs: {
     mainProgram = "aafigure";
     homepage = "https://launchpad.net/aafigure/";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

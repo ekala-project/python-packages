@@ -41,6 +41,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python library to interface with Hayward/Goldline AquaLogic/ProLogic pool controllers";
     homepage = "https://github.com/swilson/aqualogic";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

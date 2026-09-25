@@ -30,6 +30,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/quadprog/quadprog";
     description = "Quadratic Programming Solver";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
   };
 }

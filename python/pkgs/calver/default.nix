@@ -33,7 +33,6 @@ let
       description = "Setuptools extension for CalVer package versions";
       homepage = "https://github.com/di/calver";
       license = lib.licenses.asl20;
-      maintainers = [ ];
     };
   };
 in

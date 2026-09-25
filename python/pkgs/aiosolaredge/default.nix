@@ -43,6 +43,5 @@ buildPythonPackage rec {
     description = "Asyncio SolarEdge API client";
     homepage = "https://github.com/bdraco/aiosolaredge";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

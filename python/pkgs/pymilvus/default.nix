@@ -77,6 +77,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python SDK for Milvus";
     homepage = "https://github.com/milvus-io/pymilvus";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

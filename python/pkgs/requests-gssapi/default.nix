@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "GSSAPI authentication handler for python-requests";
     homepage = "https://github.com/pythongssapi/requests-gssapi";
     license = lib.licenses.isc;
-    maintainers = [ ];
   };
 }

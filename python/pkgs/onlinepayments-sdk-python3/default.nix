@@ -52,6 +52,5 @@ buildPythonPackage (finalAttrs: {
     description = "SDK to communicate with the Online Payments platform using the Online Payments Server API";
     homepage = "https://github.com/wl-online-payments-direct/sdk-python3";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

@@ -27,6 +27,5 @@ buildPythonPackage {
     homepage = "https://qwertyquerty.github.io/pypresence/html/index.html";
     description = "Discord RPC client written in Python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

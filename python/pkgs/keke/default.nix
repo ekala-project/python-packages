@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "Easy profiling in chrome trace format";
     homepage = "https://pypi.org/project/keke/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

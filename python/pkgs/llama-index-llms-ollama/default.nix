@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "LlamaIndex LLMS Integration for ollama";
     homepage = "https://github.com/run-llama/llama_index/tree/main/llama-index-integrations/llms/llama-index-llms-ollama";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

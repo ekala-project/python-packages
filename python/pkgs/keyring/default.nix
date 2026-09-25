@@ -66,7 +66,6 @@ buildPythonPackage rec {
     homepage = "https://github.com/jaraco/keyring";
     license = lib.licenses.mit;
     mainProgram = "keyring";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

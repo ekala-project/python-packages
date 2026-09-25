@@ -40,6 +40,5 @@ buildPythonPackage rec {
     description = "Compute derivatives of NumPy code efficiently";
     homepage = "https://github.com/HIPS/autograd";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -29,6 +29,5 @@ buildPythonPackage rec {
     mainProgram = "snakeviz";
     homepage = "https://jiffyclub.github.io/snakeviz";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

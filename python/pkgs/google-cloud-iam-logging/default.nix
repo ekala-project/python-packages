@@ -52,6 +52,5 @@ buildPythonPackage (finalAttrs: {
     description = "IAM Service Logging client library";
     homepage = "https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-iam-logging";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

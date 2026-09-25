@@ -36,6 +36,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/rossengeorgiev/gevent-eventemitter";
     license = lib.licenses.mit;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 }

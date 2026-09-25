@@ -25,6 +25,5 @@ buildPythonPackage (finalAttrs: {
     description = "Reader for Garmin’s TCX file format";
     homepage = "https://github.com/alenrajsp/tcxreader";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

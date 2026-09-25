@@ -24,6 +24,5 @@ buildPythonPackage rec {
     description = "Plugin to add diagnostic information to the header of the test output";
     homepage = "https://astropy.org";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

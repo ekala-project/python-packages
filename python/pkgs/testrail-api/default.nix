@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Python wrapper of the TestRail API";
     homepage = "https://github.com/tolstislon/testrail-api";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

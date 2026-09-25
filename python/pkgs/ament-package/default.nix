@@ -33,6 +33,5 @@ buildPythonPackage (finalAttrs: {
     description = "Parser for the manifest files in the ament buildsystem";
     homepage = "https://github.com/ament/ament_package";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

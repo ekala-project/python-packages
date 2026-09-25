@@ -38,6 +38,5 @@ buildPythonPackage rec {
     description = "Fast kasa crypt";
     homepage = "https://github.com/bdraco/kasa-crypt";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

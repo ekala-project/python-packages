@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "Guess additional information from track titles";
     homepage = "https://github.com/ratoaq2/trakit";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

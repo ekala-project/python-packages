@@ -75,6 +75,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://optuna.org/";
     license = lib.licenses.mit;
     mainProgram = "optuna";
-    maintainers = [ ];
   };
 })

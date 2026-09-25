@@ -62,6 +62,5 @@ buildPythonPackage rec {
     mainProgram = "jupyter-events";
     homepage = "https://github.com/jupyter/jupyter_events";
     license = lib.licenses.bsd3;
-    teams = [ ];
   };
 }

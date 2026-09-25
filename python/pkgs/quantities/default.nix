@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Quantities is designed to handle arithmetic and conversions of physical quantities";
     homepage = "https://python-quantities.readthedocs.io/";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

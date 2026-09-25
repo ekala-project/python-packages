@@ -58,6 +58,5 @@ buildPythonPackage rec {
     description = "Control various Nice access control products";
     homepage = "https://github.com/IceBotYT/nice-go";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

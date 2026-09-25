@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Asynchronous parser taking incremental bites out of your byte input stream";
     homepage = "https://github.com/jgosmann/bite-parser";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

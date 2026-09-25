@@ -40,6 +40,5 @@ buildPythonPackage rec {
     description = "Library for retrieving information about catkin packages";
     homepage = "http://wiki.ros.org/catkin_pkg";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

@@ -42,6 +42,5 @@ buildPythonPackage (finalAttrs: {
     description = "Module to implement generic application schema";
     homepage = "https://github.com/pyapp-kit/app-model";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

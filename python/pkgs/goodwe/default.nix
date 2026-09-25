@@ -32,6 +32,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python library for connecting to GoodWe inverter";
     homepage = "https://github.com/marcelblijleven/goodwe";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

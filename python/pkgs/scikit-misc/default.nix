@@ -57,6 +57,5 @@ buildPythonPackage rec {
     description = "Miscellaneous tools for scientific computing";
     homepage = "https://github.com/has2k1/scikit-misc";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

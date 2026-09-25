@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "Microsoft App Configuration Data Library for Python";
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/master/sdk/appconfiguration/azure-appconfiguration";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

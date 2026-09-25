@@ -30,6 +30,5 @@ buildPythonPackage rec {
     description = "Asynchronous Python HTTP for Humans";
     homepage = "https://github.com/tardyp/txrequests";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

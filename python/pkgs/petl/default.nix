@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Python package for extracting, transforming and loading tables of data";
     license = lib.licenses.mit;
     mainProgram = "petl";
-    maintainers = [ ];
   };
 }

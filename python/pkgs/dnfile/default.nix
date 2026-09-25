@@ -32,6 +32,5 @@ buildPythonPackage (finalAttrs: {
     description = "Module to parse .NET executable files";
     homepage = "https://github.com/malwarefrank/dnfile";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

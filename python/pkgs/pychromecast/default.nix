@@ -42,7 +42,6 @@ buildPythonPackage rec {
     description = "Library for Python to communicate with the Google Chromecast";
     homepage = "https://github.com/home-assistant-libs/pychromecast";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

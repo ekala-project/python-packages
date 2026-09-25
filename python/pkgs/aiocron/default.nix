@@ -47,6 +47,5 @@ buildPythonPackage rec {
     description = "Crontabs for asyncio";
     homepage = "https://github.com/gawel/aiocron/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

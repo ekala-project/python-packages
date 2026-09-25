@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Django components that know how to render themselves";
     homepage = "https://github.com/tbrlpld/laces";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

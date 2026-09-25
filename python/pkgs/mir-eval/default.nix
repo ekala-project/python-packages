@@ -55,6 +55,5 @@ buildPythonPackage rec {
     description = "Common metrics for common audio/music processing tasks";
     homepage = "https://github.com/craffel/mir_eval";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

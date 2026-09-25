@@ -56,6 +56,5 @@ buildPythonPackage rec {
     description = "Strict, predictable, and typed datetimes";
     homepage = "https://github.com/ariebovenberg/whenever";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

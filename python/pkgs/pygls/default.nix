@@ -42,6 +42,5 @@ buildPythonPackage (finalAttrs: {
     description = "Pythonic generic implementation of the Language Server Protocol";
     homepage = "https://github.com/openlawlibrary/pygls";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

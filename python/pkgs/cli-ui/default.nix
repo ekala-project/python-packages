@@ -38,6 +38,5 @@ buildPythonPackage rec {
     description = "Build Nice User Interfaces In The Terminal";
     homepage = "https://github.com/your-tools/python-cli-ui";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

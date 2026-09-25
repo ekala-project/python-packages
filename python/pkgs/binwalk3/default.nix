@@ -27,6 +27,5 @@ buildPythonPackage (finalAttrs: {
     description = "Binwalk v3 with v2-compatible Python API";
     homepage = "https://pypi.org/project/binwalk3/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

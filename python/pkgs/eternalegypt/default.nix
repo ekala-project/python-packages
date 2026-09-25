@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Python API for Netgear LTE modems";
     homepage = "https://github.com/amelchio/eternalegypt";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

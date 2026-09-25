@@ -46,6 +46,5 @@ buildPythonPackage rec {
     description = "Unofficial python library for interacting with the Ayla IoT API";
     homepage = "https://github.com/rewardone/ayla-iot-unofficial";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

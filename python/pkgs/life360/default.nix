@@ -31,6 +31,5 @@ buildPythonPackage (finalAttrs: {
     description = "Module to interact with Life360";
     homepage = "https://github.com/pnbruckner/life360";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

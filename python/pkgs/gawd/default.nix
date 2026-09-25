@@ -34,6 +34,5 @@ buildPythonPackage (finalAttrs: {
     mainProgram = "gawd";
     homepage = "https://github.com/sgl-umons/gawd";
     license = lib.licenses.lgpl3Only;
-    maintainers = [ ];
   };
 })

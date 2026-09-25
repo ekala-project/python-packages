@@ -30,6 +30,5 @@ buildPythonPackage rec {
     description = "Python module implementing the Hydrus API";
     homepage = "https://gitlab.com/cryzed/hydrus-api";
     license = lib.licenses.agpl3Plus;
-    maintainers = [ ];
   };
 }

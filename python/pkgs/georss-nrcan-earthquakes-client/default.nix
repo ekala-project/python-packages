@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Python library for accessing Natural Resources Canada Earthquakes feed";
     homepage = "https://github.com/exxamalte/python-georss-nrcan-earthquakes-client";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

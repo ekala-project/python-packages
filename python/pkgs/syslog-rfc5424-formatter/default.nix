@@ -29,6 +29,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python logging formatter for emitting RFC5424 Syslog messages";
     homepage = "https://github.com/easypost/syslog-rfc5424-formatter";
     license = lib.licenses.isc;
-    maintainers = [ ];
   };
 })

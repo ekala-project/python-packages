@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Context manager that prints a status line at the bottom of a terminal window";
     homepage = "https://github.com/evalf/bottombar";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

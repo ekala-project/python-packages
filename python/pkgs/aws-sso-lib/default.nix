@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Library to make AWS SSO easier";
     homepage = "https://pypi.org/project/aws-sso-lib/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

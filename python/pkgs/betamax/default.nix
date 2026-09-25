@@ -39,6 +39,5 @@ buildPythonPackage (finalAttrs: {
     description = "VCR imitation for requests";
     homepage = "https://betamax.readthedocs.org/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

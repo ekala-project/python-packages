@@ -38,6 +38,5 @@ buildPythonPackage rec {
     description = "Generated Python protobuf stubs for Google Home internal API";
     homepage = "https://github.com/KapJI/ghome-foyer-api";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -26,6 +26,5 @@ buildPythonPackage rec {
     description = "Goal Zero Yeti REST Api Library";
     homepage = "https://github.com/tkdrob/goalzero";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

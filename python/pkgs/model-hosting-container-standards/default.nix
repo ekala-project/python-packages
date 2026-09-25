@@ -54,6 +54,5 @@ buildPythonPackage (finalAttrs: {
     description = "Standardized Python framework for seamless integration between ML frameworks (TensorRT-LLM, vLLM) and Amazon SageMaker hosting";
     homepage = "https://github.com/aws/model-hosting-container-standards/tree/main/python";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

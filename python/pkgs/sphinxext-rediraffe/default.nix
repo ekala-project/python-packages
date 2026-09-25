@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Sphinx extension to redirect files";
     homepage = "https://github.com/wpilibsuite/sphinxext-rediraffe";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

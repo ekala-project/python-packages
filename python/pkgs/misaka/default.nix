@@ -26,6 +26,5 @@ buildPythonPackage rec {
     mainProgram = "misaka";
     homepage = "https://misaka.61924.nl";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

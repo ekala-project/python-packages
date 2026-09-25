@@ -32,6 +32,5 @@ buildPythonPackage rec {
     mainProgram = "durus";
     homepage = "https://github.com/nascheme/durus";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

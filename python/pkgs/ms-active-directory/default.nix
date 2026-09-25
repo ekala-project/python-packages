@@ -43,6 +43,5 @@ buildPythonPackage rec {
     description = "Python module for integrating with Microsoft Active Directory domains";
     homepage = "https://github.com/zorn96/ms_active_directory/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

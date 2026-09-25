@@ -43,6 +43,5 @@ buildPythonPackage rec {
     description = "Library for generating and processing BeanHub's custom forms";
     homepage = "https://github.com/LaunchPlatform/beanhub-forms/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

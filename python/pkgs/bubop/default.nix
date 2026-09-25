@@ -46,6 +46,5 @@ buildPythonPackage rec {
     description = "Bergercookie's Useful Bits Of Python; helper libraries for Bergercookie's programs";
     homepage = "https://github.com/bergercookie/bubop";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

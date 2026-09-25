@@ -26,7 +26,6 @@ buildPythonPackage rec {
     description = "Implementation of multicast DNS service discovery";
     homepage = "https://github.com/jstasiak/python-zeroconf";
     license = lib.licenses.lgpl21Only;
-    maintainers = [ ];
     mainProgram = "aiozeroconf";
   };
 }

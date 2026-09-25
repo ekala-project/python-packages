@@ -32,6 +32,5 @@ buildPythonPackage rec {
     mainProgram = "anonip";
     homepage = "https://github.com/DigitaleGesellschaft/Anonip";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

@@ -38,6 +38,5 @@ buildPythonPackage (finalAttrs: {
     description = "Pytest Snapshot Test Utility";
     homepage = "https://github.com/syrupy-project/syrupy";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

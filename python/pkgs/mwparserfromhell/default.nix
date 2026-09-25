@@ -37,6 +37,5 @@ buildPythonPackage (finalAttrs: {
     description = "Parser for MediaWiki wikicode";
     homepage = "https://mwparserfromhell.readthedocs.io/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

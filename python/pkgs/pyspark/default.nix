@@ -87,6 +87,5 @@ buildPythonPackage (finalAttrs: {
       binaryBytecode
     ];
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

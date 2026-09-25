@@ -28,6 +28,5 @@ buildPythonPackage (finalAttrs: {
     description = "Low-level communication layer for PRAW";
     homepage = "https://praw.readthedocs.org/";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 })

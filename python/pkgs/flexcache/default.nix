@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "Robust and extensible package to cache on disk the result of expensive calculations";
     homepage = "https://github.com/hgrecco/flexcache";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

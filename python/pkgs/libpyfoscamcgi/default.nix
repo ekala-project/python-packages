@@ -33,6 +33,5 @@ buildPythonPackage rec {
     description = "Python Library for Foscam IP Cameras";
     homepage = "https://github.com/Foscam-wangzhengyu/libfoscamcgi";
     license = lib.licenses.lgpl3Plus;
-    maintainers = [ ];
   };
 }

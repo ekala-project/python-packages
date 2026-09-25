@@ -36,6 +36,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://github.com/prefectlabs/burner-redis";
     downloadPage = "https://github.com/prefectlabs/burner-redis/releases";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

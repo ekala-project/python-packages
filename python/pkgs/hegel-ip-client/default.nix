@@ -28,6 +28,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python client library for Hegel amplifiers";
     homepage = "https://github.com/boazca/hegel-ip-client";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

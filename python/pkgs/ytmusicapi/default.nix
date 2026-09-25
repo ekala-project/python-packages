@@ -28,7 +28,6 @@ buildPythonPackage rec {
     description = "Python API for YouTube Music";
     homepage = "https://github.com/sigma67/ytmusicapi";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "ytmusicapi";
   };
 }

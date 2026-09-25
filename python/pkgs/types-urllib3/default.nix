@@ -28,6 +28,5 @@ buildPythonPackage (finalAttrs: {
     description = "Typing stubs for urllib3";
     homepage = "https://github.com/python/typeshed";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

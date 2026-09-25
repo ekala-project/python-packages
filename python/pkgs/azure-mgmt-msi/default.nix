@@ -38,6 +38,5 @@ buildPythonPackage rec {
     description = "This is the Microsoft Azure MSI Management Client Library";
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/resources/azure-mgmt-msi";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

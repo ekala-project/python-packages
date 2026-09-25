@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "Load compute kernels from the Huggingface Hub";
     homepage = "https://github.com/huggingface/kernels";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

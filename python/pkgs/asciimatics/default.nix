@@ -40,6 +40,5 @@ buildPythonPackage rec {
     description = "Module to create full-screen text UIs (from interactive forms to ASCII animations)";
     homepage = "https://github.com/peterbrittain/asciimatics";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

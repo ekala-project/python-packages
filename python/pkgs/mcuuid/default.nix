@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Getting Minecraft player information from Mojang API";
     homepage = "https://github.com/clerie/mcuuid";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

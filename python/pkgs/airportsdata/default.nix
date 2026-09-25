@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Extensive database of location and timezone data for nearly every operational airport";
     homepage = "https://github.com/mborsetti/airportsdata/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

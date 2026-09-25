@@ -39,6 +39,5 @@ buildPythonPackage (finalAttrs: {
     description = "Library for creating background jobs and processing them";
     homepage = "https://github.com/nvie/rq/";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 })

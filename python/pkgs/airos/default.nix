@@ -46,6 +46,5 @@ buildPythonPackage (finalAttrs: {
     description = "Ubiquity airOS module(s) for Python 3";
     homepage = "https://github.com/CoMPaTech/python-airos";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

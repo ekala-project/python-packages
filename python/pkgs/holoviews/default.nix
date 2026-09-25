@@ -90,6 +90,5 @@ buildPythonPackage rec {
     mainProgram = "holoviews";
     homepage = "https://www.holoviews.org/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

@@ -88,6 +88,5 @@ buildPythonPackage (finalAttrs: {
     description = "LM Studio Python SDK";
     homepage = "https://github.com/lmstudio-ai/lmstudio-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

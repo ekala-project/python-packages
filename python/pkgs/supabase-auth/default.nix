@@ -46,6 +46,5 @@ buildPythonPackage (finalAttrs: {
     description = "Client library for Supabase Auth";
     homepage = "https://github.com/supabase/supabase-py/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

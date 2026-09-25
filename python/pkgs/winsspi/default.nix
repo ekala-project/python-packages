@@ -30,6 +30,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python module for ACL/ACE/Security descriptor manipulation";
     homepage = "https://github.com/skelsec/winsspi";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

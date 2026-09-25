@@ -66,6 +66,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://github.com/psf/black";
     license = lib.licenses.mit;
     mainProgram = "black";
-    maintainers = [ ];
   };
 })

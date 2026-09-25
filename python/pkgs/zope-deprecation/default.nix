@@ -40,6 +40,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/zopefoundation/zope.deprecation";
     description = "Zope Deprecation Infrastructure";
     license = lib.licenses.zpl21;
-    maintainers = [ ];
   };
 }

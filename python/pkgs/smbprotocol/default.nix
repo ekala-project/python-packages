@@ -43,6 +43,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python SMBv2 and v3 Client";
     homepage = "https://github.com/jborean93/smbprotocol";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

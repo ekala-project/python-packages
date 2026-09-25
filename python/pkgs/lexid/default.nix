@@ -30,6 +30,5 @@ buildPythonPackage rec {
     mainProgram = "lexid_incr";
     homepage = "https://pypi.org/project/lexid/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -33,6 +33,5 @@ buildPythonPackage rec {
     mainProgram = "imgdiff";
     homepage = "https://github.com/mgedmin/imgdiff";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -30,6 +30,5 @@ buildPythonPackage {
     description = "Module for parsing raw output of ifconfig";
     homepage = "https://github.com/KnightWhoSayNi/ifconfig-parser";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

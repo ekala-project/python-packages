@@ -37,6 +37,5 @@ buildPythonPackage rec {
     description = "Google Cloud OS Config API client library";
     homepage = "https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-os-config";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

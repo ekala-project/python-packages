@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "RLock implementation for CPython";
     homepage = "https://github.com/scoder/fastrlock";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Async Python library for interacting with Bosch Alarm Panels supporting the 'Mode 2' API";
     homepage = "https://github.com/mag1024/bosch-alarm-mode2";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

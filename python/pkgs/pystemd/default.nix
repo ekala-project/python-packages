@@ -48,6 +48,5 @@ buildPythonPackage rec {
     '';
     homepage = "https://github.com/facebookincubator/pystemd";
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
   };
 }

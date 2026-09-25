@@ -43,6 +43,5 @@ buildPythonPackage (finalAttrs: {
     description = "API to interact with Homelink cloud for MQTT-enabled smart home platforms";
     homepage = "https://github.com/Gentex-Corporation/homelink-integration-api";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

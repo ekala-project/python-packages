@@ -45,6 +45,5 @@ buildPythonPackage (finalAttrs: {
     description = "An async Python wrapper for the Chess.com API";
     homepage = "https://github.com/Stupidoodle/chess-com-api";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

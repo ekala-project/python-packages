@@ -27,6 +27,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://github.com/knorrie/python-btrfs";
     license = lib.licenses.lgpl3Plus;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 })

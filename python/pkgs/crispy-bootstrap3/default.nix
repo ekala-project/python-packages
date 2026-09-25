@@ -43,6 +43,5 @@ buildPythonPackage rec {
     description = "Bootstrap 3 template pack for django-crispy-forms";
     homepage = "https://github.com/django-crispy-forms/crispy-bootstrap3";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

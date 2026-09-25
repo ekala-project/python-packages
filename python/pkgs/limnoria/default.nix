@@ -59,6 +59,5 @@ buildPythonPackage (finalAttrs: {
     description = "Modified version of Supybot, an IRC bot";
     homepage = "https://github.com/ProgVal/Limnoria";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

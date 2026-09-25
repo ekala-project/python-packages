@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "Library for Nasdaq Data Link's RESTful API";
     homepage = "https://github.com/Nasdaq/data-link-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

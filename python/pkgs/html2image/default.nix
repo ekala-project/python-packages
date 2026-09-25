@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Package acting as a wrapper around the headless mode of existing web browsers to generate images from URLs and from HTML+CSS strings or files";
     homepage = "https://github.com/vgalin/html2image";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

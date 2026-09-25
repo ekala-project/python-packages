@@ -50,6 +50,5 @@ buildPythonPackage (finalAttrs: {
     description = "FastAPI compatible middleware to authenticate Github OIDC Tokens";
     homepage = "https://github.com/atopile/fastapi-github-oidc";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

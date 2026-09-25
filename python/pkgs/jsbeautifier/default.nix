@@ -28,6 +28,5 @@ buildPythonPackage (finalAttrs: {
     mainProgram = "js-beautify";
     homepage = "http://jsbeautifier.org";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

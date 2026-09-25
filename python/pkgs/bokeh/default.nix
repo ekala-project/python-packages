@@ -70,6 +70,5 @@ buildPythonPackage rec {
     mainProgram = "bokeh";
     homepage = "https://github.com/bokeh/bokeh";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

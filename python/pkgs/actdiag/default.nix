@@ -41,7 +41,6 @@ buildPythonPackage rec {
     description = "Generate activity-diagram image from spec-text file (similar to Graphviz)";
     homepage = "http://blockdiag.com/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "actdiag";
     platforms = lib.platforms.unix;
   };

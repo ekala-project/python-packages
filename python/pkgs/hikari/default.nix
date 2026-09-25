@@ -72,6 +72,5 @@ buildPythonPackage (finalAttrs: {
     description = "Discord API wrapper for Python written with asyncio";
     homepage = "https://www.hikari-py.dev/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Python library for accessing generic GeoRSS feeds";
     homepage = "https://github.com/exxamalte/python-georss-generic-client";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

@@ -37,6 +37,5 @@ buildPythonPackage rec {
     description = "Utilities based on Pythons iterators and generators";
     homepage = "https://github.com/MSeifert04/iteration_utilities";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

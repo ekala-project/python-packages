@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Material inspired stylesheet for PySide2, PySide6, PyQt5 and PyQt6";
     homepage = "https://github.com/dunderlab/qt-material";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

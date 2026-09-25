@@ -27,6 +27,5 @@ buildPythonPackage rec {
     description = "Pytest plugin to abort hanging tests";
     homepage = "https://github.com/pytest-dev/pytest-timeout/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

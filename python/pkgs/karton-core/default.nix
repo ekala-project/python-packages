@@ -42,6 +42,5 @@ buildPythonPackage (finalAttrs: {
     description = "Distributed malware processing framework";
     homepage = "https://karton-core.readthedocs.io/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

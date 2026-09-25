@@ -45,6 +45,5 @@ buildPythonPackage rec {
     description = "Common, officially supported extension plugins for the Sanic web server framework";
     homepage = "https://github.com/sanic-org/sanic-ext/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

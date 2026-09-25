@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "Dataclasses serializer for Django REST framework";
     homepage = "https://github.com/oxan/djangorestframework-dataclasses";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

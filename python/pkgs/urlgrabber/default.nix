@@ -26,6 +26,5 @@ buildPythonPackage rec {
     license = lib.licenses.lgpl2Plus;
     description = "Python module for downloading files";
     mainProgram = "urlgrabber";
-    maintainers = [ ];
   };
 }

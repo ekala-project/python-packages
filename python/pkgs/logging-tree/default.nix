@@ -28,6 +28,5 @@ buildPythonPackage (finalAttrs: {
     description = "Debug Python logging problems by printing out the tree of handlers you have defined";
     homepage = "https://github.com/brandon-rhodes/logging_tree";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 })

@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Extensible periodic table of the elements";
     homepage = "https://github.com/pkienzle/periodictable";
     license = lib.licenses.publicDomain;
-    maintainers = [ ];
   };
 }

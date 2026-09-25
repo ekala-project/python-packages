@@ -124,6 +124,5 @@ buildPythonPackage (finalAttrs: {
     description = "GitHub SDK for Python";
     homepage = "https://github.com/yanyongyu/githubkit";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

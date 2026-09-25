@@ -54,6 +54,5 @@ buildPythonPackage rec {
     description = "IPython Kernel for Jupyter";
     homepage = "https://ipython.org/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

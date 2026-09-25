@@ -46,6 +46,5 @@ buildPythonPackage rec {
     description = "Google Cloud Dataproc API client library";
     homepage = "https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-dataproc";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

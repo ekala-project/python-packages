@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "Brings event-driven capabilities to Django with a channel system";
     homepage = "https://github.com/django/channels";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

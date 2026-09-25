@@ -47,6 +47,5 @@ buildPythonPackage (finalAttrs: {
     description = "Extensions for using Rich with Django";
     homepage = "https://github.com/adamchainz/django-rich";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

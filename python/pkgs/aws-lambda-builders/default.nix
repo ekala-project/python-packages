@@ -78,6 +78,5 @@ buildPythonPackage rec {
       AWS Lambda functions for several runtimes & frameworks.
     '';
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

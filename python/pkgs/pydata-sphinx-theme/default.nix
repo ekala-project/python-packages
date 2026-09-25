@@ -40,6 +40,5 @@ buildPythonPackage rec {
     description = "Bootstrap-based Sphinx theme from the PyData community";
     homepage = "https://github.com/pydata/pydata-sphinx-theme";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

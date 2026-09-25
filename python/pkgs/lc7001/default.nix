@@ -33,6 +33,5 @@ buildPythonPackage rec {
     description = "Python module for interacting with Legrand LC7001";
     homepage = "https://github.com/rtyle/lc7001";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

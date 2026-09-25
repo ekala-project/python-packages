@@ -33,6 +33,5 @@ buildPythonPackage rec {
     description = "Python library for working with the Domeneshop API";
     homepage = "https://api.domeneshop.no/docs/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

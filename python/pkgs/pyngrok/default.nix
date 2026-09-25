@@ -26,6 +26,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python wrapper for ngrok";
     homepage = "https://github.com/alexdlaird/pyngrok";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

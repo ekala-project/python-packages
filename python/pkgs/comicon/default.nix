@@ -52,6 +52,5 @@ buildPythonPackage rec {
     description = "Lightweight comic converter library between CBZ, PDF, and EPUB";
     homepage = "https://github.com/potatoeggy/comicon";
     license = lib.licenses.agpl3Only;
-    maintainers = [ ];
   };
 }

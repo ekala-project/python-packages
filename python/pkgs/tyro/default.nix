@@ -65,6 +65,5 @@ buildPythonPackage (finalAttrs: {
     description = "CLI interfaces & config objects, from types";
     homepage = "https://github.com/brentyi/tyro";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

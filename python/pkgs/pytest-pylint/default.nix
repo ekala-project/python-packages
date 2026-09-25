@@ -50,6 +50,5 @@ buildPythonPackage rec {
     description = "Pytest plugin to check source code with pylint";
     homepage = "https://github.com/carsongee/pytest-pylint";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -29,6 +29,5 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     description = "Extract swagger specs from your flask project";
     mainProgram = "flaskswagger";
-    maintainers = [ ];
   };
 }

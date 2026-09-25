@@ -56,6 +56,5 @@ buildPythonPackage rec {
     description = "Renderer for the harmony response format to be used with gpt-oss";
     homepage = "https://github.com/openai/harmony";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

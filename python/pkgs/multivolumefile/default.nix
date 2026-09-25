@@ -40,6 +40,5 @@ buildPythonPackage rec {
     description = "Library to provide a file-object wrapping multiple files as virtually like as a single file";
     homepage = "https://codeberg.org/miurahr/multivolume";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
   };
 }

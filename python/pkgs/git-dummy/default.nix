@@ -51,7 +51,6 @@ buildPythonPackage (finalAttrs: {
     description = "Generate dummy Git repositories populated with the desired number of commits, branches, and structure";
     homepage = "https://github.com/initialcommit-com/git-dummy";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
     mainProgram = "git-dummy";
   };
 })

@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Identification and conversion functions for Chinese text processing";
     homepage = "https://github.com/tsroten/dragonmapper";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

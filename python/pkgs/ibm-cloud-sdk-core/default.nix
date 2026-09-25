@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "Client library for the IBM Cloud services";
     homepage = "https://github.com/IBM/python-sdk-core";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

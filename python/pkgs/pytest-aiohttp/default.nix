@@ -35,6 +35,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://github.com/aio-libs/pytest-aiohttp/";
     description = "Pytest plugin for aiohttp support";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

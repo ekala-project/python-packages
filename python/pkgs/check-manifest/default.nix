@@ -33,7 +33,6 @@ buildPythonPackage rec {
     description = "Check MANIFEST.in in a Python source package for completeness";
     homepage = "https://github.com/mgedmin/check-manifest";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "check-manifest";
   };
 }

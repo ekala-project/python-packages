@@ -38,6 +38,5 @@ buildPythonPackage rec {
     mainProgram = "nkdfu";
     homepage = "https://github.com/Nitrokey/nkdfu";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
   };
 }

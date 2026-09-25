@@ -43,6 +43,5 @@ buildPythonPackage rec {
     homepage = "https://ancpbids.readthedocs.io";
     description = "Read/write/validate/query BIDS datasets";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

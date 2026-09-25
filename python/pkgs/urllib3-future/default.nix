@@ -60,6 +60,5 @@ buildPythonPackage rec {
     description = "Powerful HTTP 1.1, 2, and 3 client with both sync and async interfaces";
     homepage = "https://github.com/jawah/urllib3.future";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

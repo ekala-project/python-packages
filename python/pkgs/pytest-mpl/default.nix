@@ -45,6 +45,5 @@ buildPythonPackage (finalAttrs: {
     description = "Pytest plugin to help with testing figures output from Matplotlib";
     homepage = "https://github.com/matplotlib/pytest-mpl";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

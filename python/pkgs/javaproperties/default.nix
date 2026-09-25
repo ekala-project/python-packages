@@ -23,6 +23,5 @@ buildPythonPackage rec {
     description = "Python library for reading and writing Java .properties files";
     homepage = "https://github.com/jwodder/javaproperties";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "Client library for the GoCardless Pro API";
     homepage = "https://github.com/gocardless/gocardless-pro-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -30,6 +30,5 @@ buildPythonPackage rec {
     description = "Library to control iGlo based RGB lights";
     homepage = "https://github.com/jesserockz/python-iglo";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

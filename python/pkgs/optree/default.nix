@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Optimized PyTree Utilities";
     homepage = "https://github.com/metaopt/optree";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

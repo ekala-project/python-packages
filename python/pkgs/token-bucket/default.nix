@@ -26,6 +26,5 @@ buildPythonPackage (finalAttrs: {
     description = "Token Bucket Implementation for Python Web Apps";
     homepage = "https://github.com/falconry/token-bucket";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

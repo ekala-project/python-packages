@@ -158,6 +158,5 @@ buildPythonPackage rec {
     mainProgram = "litellm";
     homepage = "https://github.com/BerriAI/litellm";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

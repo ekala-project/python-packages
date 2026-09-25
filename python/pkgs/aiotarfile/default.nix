@@ -56,6 +56,5 @@ buildPythonPackage rec {
     description = "Stream-based, asynchronous tarball processing";
     homepage = "https://github.com/rhelmot/aiotarfile";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

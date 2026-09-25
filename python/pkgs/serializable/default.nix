@@ -33,6 +33,5 @@ buildPythonPackage {
     description = "Base class with serialization methods for user-defined Python objects";
     homepage = "https://github.com/iskandr/serializable";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

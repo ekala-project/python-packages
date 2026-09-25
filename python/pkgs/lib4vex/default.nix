@@ -37,6 +37,5 @@ buildPythonPackage rec {
     description = "Library to ingest and generate VEX documents";
     homepage = "https://github.com/anthonyharrison/lib4vex";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

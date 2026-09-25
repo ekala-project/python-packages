@@ -33,6 +33,5 @@ buildPythonPackage (finalAttrs: {
     description = "Library for AQI calculation";
     homepage = "https://github.com/atmotube/aqipy";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

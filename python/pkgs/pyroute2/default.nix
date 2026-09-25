@@ -36,7 +36,6 @@ buildPythonPackage (finalAttrs: {
       asl20 # or
       gpl2Plus
     ];
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

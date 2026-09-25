@@ -40,7 +40,6 @@ buildPythonPackage rec {
     description = "Modern pure Python C++ header parser";
     homepage = "https://github.com/robotpy/cxxheaderparser";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

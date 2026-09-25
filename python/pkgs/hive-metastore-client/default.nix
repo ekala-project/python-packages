@@ -46,6 +46,5 @@ buildPythonPackage rec {
     description = "Client for connecting and running DDLs on hive metastore";
     homepage = "https://github.com/quintoandar/hive-metastore-client";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

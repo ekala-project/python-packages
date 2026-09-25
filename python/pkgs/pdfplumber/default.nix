@@ -39,6 +39,5 @@ buildPythonPackage rec {
     mainProgram = "pdfplumber";
     homepage = "https://github.com/jsvine/pdfplumber";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

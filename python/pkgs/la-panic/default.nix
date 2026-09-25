@@ -40,6 +40,5 @@ buildPythonPackage rec {
     homepage = "https://gitlab.com/yanivhasbanidev/la_panic";
     license = lib.licenses.gpl3Plus;
     mainProgram = "la_panic";
-    maintainers = [ ];
   };
 }

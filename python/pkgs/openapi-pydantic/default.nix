@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Pydantic OpenAPI schema implementation";
     homepage = "https://github.com/mike-oakley/openapi-pydantic";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

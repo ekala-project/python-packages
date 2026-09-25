@@ -56,6 +56,5 @@ buildPythonPackage (finalAttrs: {
     description = "Expose the browser's Canvas API to IPython";
     homepage = "https://ipycanvas.readthedocs.io";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

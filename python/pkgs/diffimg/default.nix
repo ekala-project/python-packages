@@ -40,6 +40,5 @@ buildPythonPackage {
     description = "Differentiate images in python - get a ratio or percentage difference, and generate a diff image";
     homepage = "https://github.com/nicolashahn/diffimg";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

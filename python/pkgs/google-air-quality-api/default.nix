@@ -58,6 +58,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python client library for the Google Air Quality API";
     homepage = "https://github.com/Thomas55555/python-google-air-quality-api";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

@@ -45,6 +45,5 @@ buildPythonPackage rec {
     mainProgram = "kinparse";
     homepage = "https://github.com/xesscorp/kinparse";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

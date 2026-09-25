@@ -29,6 +29,5 @@ buildPythonPackage rec {
     description = "Tools to ease creating larger test libraries for Robot Framework using Python";
     homepage = "https://github.com/robotframework/PythonLibCore";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

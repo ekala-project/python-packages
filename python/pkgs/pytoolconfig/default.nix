@@ -58,6 +58,5 @@ buildPythonPackage rec {
     description = "Python tool configuration";
     homepage = "https://github.com/bagel897/pytoolconfig";
     license = lib.licenses.lgpl3Plus;
-    maintainers = [ ];
   };
 }

@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Python API for the PowerView API";
     homepage = "https://github.com/sander76/aio-powerview-api";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

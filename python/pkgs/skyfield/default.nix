@@ -41,6 +41,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/skyfielders/python-skyfield";
     description = "Elegant astronomy for Python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

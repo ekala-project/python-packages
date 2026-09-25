@@ -52,6 +52,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python client for the GOV.UK Notify API";
     homepage = "https://github.com/alphagov/notifications-python-client";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

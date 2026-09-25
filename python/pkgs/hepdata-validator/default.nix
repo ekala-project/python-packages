@@ -63,6 +63,5 @@ buildPythonPackage (finalAttrs: {
     description = "JSON schema and validation code for HEPData submissions";
     homepage = "https://github.com/HEPData/hepdata-validator";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
   };
 })

@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Select additional dependencies for pyproject.toml from the environment";
     homepage = "https://github.com/jupyter-book/hatch-deps-selector";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

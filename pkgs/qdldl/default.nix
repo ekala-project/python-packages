@@ -32,7 +32,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Free LDL factorisation routine";
     homepage = "https://github.com/osqp/qdldl";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     platforms = lib.platforms.unix ++ lib.platforms.windows;
   };
 })

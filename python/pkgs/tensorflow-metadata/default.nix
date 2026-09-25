@@ -61,6 +61,5 @@ buildPythonPackage (finalAttrs: {
     description = "Standard representations for metadata that are useful when training machine learning models with TensorFlow";
     homepage = "https://github.com/tensorflow/metadata";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

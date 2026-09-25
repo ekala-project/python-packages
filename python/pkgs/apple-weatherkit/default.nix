@@ -38,6 +38,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python library for Apple WeatherKit";
     homepage = "https://github.com/tjhorner/python-weatherkit";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

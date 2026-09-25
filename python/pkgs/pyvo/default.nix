@@ -34,6 +34,5 @@ buildPythonPackage (finalAttrs: {
     description = "Astropy affiliated package for accessing Virtual Observatory data and services";
     homepage = "https://github.com/astropy/pyvo";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

@@ -34,6 +34,5 @@ buildPythonPackage (finalAttrs: {
     description = "Fast, safe and non-recursive implementation of Bittorrent bencoding";
     homepage = "https://github.com/acatton/flatbencode";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

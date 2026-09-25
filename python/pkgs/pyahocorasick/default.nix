@@ -29,6 +29,5 @@ buildPythonPackage rec {
     '';
     homepage = "https://github.com/WojciechMula/pyahocorasick";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

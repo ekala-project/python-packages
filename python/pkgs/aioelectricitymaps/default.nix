@@ -55,6 +55,5 @@ buildPythonPackage rec {
     description = "Module for interacting with Electricity maps";
     homepage = "https://github.com/jpbede/aioelectricitymaps";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

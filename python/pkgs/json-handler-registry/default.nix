@@ -34,6 +34,5 @@ buildPythonPackage (finalAttrs: {
     description = "Registry for JSON handlers";
     homepage = "https://bitbucket.org/massultidev/json-handler-registry";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

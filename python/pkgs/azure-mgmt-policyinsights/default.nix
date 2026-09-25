@@ -38,6 +38,5 @@ buildPythonPackage (finalAttrs: {
     description = "Microsoft Azure Policy Insights Client Library";
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/policyinsights/azure-mgmt-policyinsights";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

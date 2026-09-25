@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Module to interact with the KIWI.KI API";
     homepage = "https://github.com/c7h/kiwiki_client";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 }

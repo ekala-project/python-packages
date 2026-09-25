@@ -34,6 +34,5 @@ buildPythonPackage {
     description = "Data-processing and flow-control engine for event-driven programs";
     homepage = "https://github.com/twisted/tubes";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

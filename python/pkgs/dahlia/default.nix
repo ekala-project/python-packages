@@ -27,7 +27,6 @@ buildPythonPackage (finalAttrs: {
     description = "Simple text formatting package, inspired by the game Minecraft";
     license = lib.licenses.mit;
     homepage = "https://github.com/dahlia-lib/dahlia";
-    maintainers = [ ];
     mainProgram = "dahlia";
   };
 })

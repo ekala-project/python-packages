@@ -43,6 +43,5 @@ buildPythonPackage rec {
     description = "Python Amber Electric API interface";
     homepage = "https://github.com/madpilot/amberelectric.py";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

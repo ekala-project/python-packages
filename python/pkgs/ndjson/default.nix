@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "Module supports ndjson";
     homepage = "https://github.com/rhgrant10/ndjson";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 }

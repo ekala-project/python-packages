@@ -49,6 +49,5 @@ buildPythonPackage rec {
     description = "Django OpenID Connect library";
     homepage = "https://github.com/mozilla/mozilla-django-oidc";
     license = lib.licenses.mpl20;
-    maintainers = [ ];
   };
 }

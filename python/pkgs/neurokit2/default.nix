@@ -104,6 +104,5 @@ buildPythonPackage rec {
     description = "Python Toolbox for Neurophysiological Signal Processing";
     homepage = "https://github.com/neuropsychology/NeuroKit";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

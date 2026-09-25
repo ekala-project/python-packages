@@ -62,6 +62,5 @@ buildPythonPackage (finalAttrs: {
     downloadPage = "https://github.com/fenics/basix";
     description = "Finite element definition and tabulation runtime library";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

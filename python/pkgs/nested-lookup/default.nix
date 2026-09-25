@@ -26,6 +26,5 @@ buildPythonPackage rec {
     description = "Python functions for working with deeply nested documents (lists and dicts)";
     homepage = "https://github.com/russellballestrini/nested-lookup";
     license = lib.licenses.publicDomain;
-    maintainers = [ ];
   };
 }

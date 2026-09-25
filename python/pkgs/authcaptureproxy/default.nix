@@ -62,6 +62,5 @@ buildPythonPackage rec {
     mainProgram = "auth_capture_proxy";
     homepage = "https://github.com/alandtse/auth_capture_proxy";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

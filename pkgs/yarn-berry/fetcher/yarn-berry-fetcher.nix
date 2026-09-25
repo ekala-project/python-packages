@@ -43,6 +43,5 @@ rustPlatform.buildRustPackage (finalAttrs: {
     homepage = "https://cyberchaos.dev/yuka/yarn-berry-fetcher";
     license = lib.licenses.mit;
     mainProgram = "yarn-berry-fetcher";
-    maintainers = [ ];
   };
 })

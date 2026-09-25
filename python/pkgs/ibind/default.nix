@@ -70,6 +70,5 @@ buildPythonPackage (finalAttrs: {
     description = "REST and WebSocket client library for Interactive Brokers Client Portal Web API";
     homepage = "https://github.com/Voyz/ibind";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

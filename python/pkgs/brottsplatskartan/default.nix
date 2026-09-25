@@ -37,6 +37,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python API wrapper for brottsplatskartan.se";
     homepage = "https://github.com/chrillux/brottsplatskartan";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

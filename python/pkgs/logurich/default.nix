@@ -49,6 +49,5 @@ buildPythonPackage (finalAttrs: {
     description = "Logger that combine loguru and rich";
     homepage = "https://github.com/PakitoSec/logurich";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

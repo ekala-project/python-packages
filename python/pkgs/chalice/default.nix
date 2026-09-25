@@ -54,6 +54,5 @@ buildPythonPackage (finalAttrs: {
     mainProgram = "chalice";
     homepage = "https://github.com/aws/chalice";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

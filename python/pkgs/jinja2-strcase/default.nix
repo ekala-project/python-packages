@@ -35,6 +35,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/marchmiel/jinja2-strcase";
     description = "Library for converting string case in Jinja2 templates";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

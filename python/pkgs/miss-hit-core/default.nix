@@ -55,6 +55,5 @@ buildPythonPackage rec {
     description = "Code formatting and code metrics for programs written in the MATLAB/Simulink and Octave languages";
     homepage = "https://misshit.org/";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
   };
 }

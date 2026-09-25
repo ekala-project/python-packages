@@ -46,7 +46,6 @@ buildPythonPackage rec {
     description = "LIN Description File parser written in Python";
     homepage = "https://github.com/c4deszes/ldfparser";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "ldfparser";
   };
 }

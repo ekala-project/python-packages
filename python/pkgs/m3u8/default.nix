@@ -43,6 +43,5 @@ buildPythonPackage rec {
     description = "Python m3u8 parser";
     homepage = "https://github.com/globocom/m3u8";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

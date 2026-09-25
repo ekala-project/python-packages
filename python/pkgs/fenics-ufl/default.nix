@@ -43,6 +43,5 @@ buildPythonPackage (finalAttrs: {
     downloadPage = "https://github.com/fenics/ufl";
     description = "Unified Form Language";
     license = lib.licenses.lgpl3Plus;
-    maintainers = [ ];
   };
 })

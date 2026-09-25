@@ -33,6 +33,5 @@ buildPythonPackage rec {
     description = "Ease multi-version support for scikit-learn compatible library";
     homepage = "https://github.com/sklearn-compat/sklearn-compat";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

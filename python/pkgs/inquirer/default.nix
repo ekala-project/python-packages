@@ -41,6 +41,5 @@ buildPythonPackage rec {
     description = "Collection of common interactive command line user interfaces, based on Inquirer.js";
     homepage = "https://github.com/magmax/python-inquirer";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -46,6 +46,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/gpiozero/gpiozero";
     license = lib.licenses.bsd3;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 }

@@ -26,6 +26,5 @@ buildPythonPackage (finalAttrs: {
     description = "Converts a Python dictionary or other native data type into a valid XML string";
     homepage = "https://pypi.org/project/dicttoxml2/";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
   };
 })

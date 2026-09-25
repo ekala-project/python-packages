@@ -84,6 +84,5 @@ buildPythonPackage rec {
     description = "BLAS-like linear algebra library";
     homepage = "https://github.com/explosion/cython-blis";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

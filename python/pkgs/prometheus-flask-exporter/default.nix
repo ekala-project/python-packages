@@ -29,6 +29,5 @@ buildPythonPackage rec {
     description = "Prometheus exporter for Flask applications";
     homepage = "https://github.com/rycus86/prometheus_flask_exporter";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

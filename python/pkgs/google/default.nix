@@ -27,6 +27,5 @@ buildPythonPackage rec {
     mainProgram = "google";
     homepage = "https://pypi.org/project/google/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

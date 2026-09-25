@@ -21,6 +21,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/FedericoCeratto/dashing";
     description = "Terminal dashboards for Python";
     license = lib.licenses.gpl3;
-    maintainers = [ ];
   };
 }

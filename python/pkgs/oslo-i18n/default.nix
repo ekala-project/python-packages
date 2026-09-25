@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Oslo i18n library";
     homepage = "https://github.com/openstack/oslo.i18n";
     license = lib.licenses.asl20;
-    teams = [ ];
   };
 }

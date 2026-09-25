@@ -31,6 +31,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python wrapper for the OASA Telematics API";
     homepage = "https://github.com/panosmz/oasatelematics";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 })

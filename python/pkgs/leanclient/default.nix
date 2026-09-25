@@ -43,6 +43,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python client for the Lean theorem prover LSP";
     homepage = "https://github.com/oOo0oOo/leanclient";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

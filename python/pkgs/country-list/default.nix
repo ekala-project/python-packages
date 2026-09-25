@@ -43,6 +43,5 @@ buildPythonPackage rec {
     description = "List of all countries with names and ISO 3166-1 codes in all languages";
     homepage = "https://github.com/bulv1ne/country_list";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

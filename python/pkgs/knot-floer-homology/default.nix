@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "Python wrapper for Zoltán Szabó's HFK Calculator";
     homepage = "https://github.com/3-manifolds/knot_floer_homology";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
   };
 }

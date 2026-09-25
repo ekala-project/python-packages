@@ -65,6 +65,5 @@ buildPythonPackage rec {
     description = "Calendar app for Django";
     homepage = "https://github.com/llazzaro/django-scheduler";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

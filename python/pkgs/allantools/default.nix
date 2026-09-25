@@ -47,6 +47,5 @@ buildPythonPackage rec {
     description = "Allan deviation and related time & frequency statistics library in Python";
     homepage = "https://github.com/aewallin/allantools";
     license = lib.licenses.lgpl3Plus;
-    maintainers = [ ];
   };
 }

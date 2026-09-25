@@ -33,6 +33,5 @@ buildPythonPackage rec {
     description = "Mdformat plugin for admonitions";
     homepage = "https://github.com/KyleKing/mdformat-admon";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

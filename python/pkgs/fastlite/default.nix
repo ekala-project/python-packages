@@ -43,6 +43,5 @@ buildPythonPackage (finalAttrs: {
     description = "A bit of extra usability for sqlite";
     homepage = "https://github.com/AnswerDotAI/fastlite";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

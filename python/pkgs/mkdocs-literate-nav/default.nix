@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "MkDocs plugin to specify the navigation in Markdown instead of YAML";
     homepage = "https://github.com/oprypin/mkdocs-literate-nav";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

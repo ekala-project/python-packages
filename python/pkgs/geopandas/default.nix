@@ -72,6 +72,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python geospatial data analysis framework";
     homepage = "https://geopandas.org";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

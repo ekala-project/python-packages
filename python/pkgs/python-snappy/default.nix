@@ -33,6 +33,5 @@ buildPythonPackage rec {
     description = "Python library for the snappy compression library from Google";
     homepage = "https://github.com/intake/python-snappy";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

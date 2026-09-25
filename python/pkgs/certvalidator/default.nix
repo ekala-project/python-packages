@@ -32,6 +32,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://github.com/wbond/certvalidator";
     description = "Validates X.509 certificates and paths";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

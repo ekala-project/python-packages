@@ -28,7 +28,6 @@ buildPythonPackage (finalAttrs: {
     description = "Streamlined singularity python client (spython) for singularity";
     homepage = "https://github.com/singularityhub/singularity-cli";
     license = lib.licenses.mpl20;
-    maintainers = [ ];
     mainProgram = "spython";
   };
 })

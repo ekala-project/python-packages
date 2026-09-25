@@ -49,7 +49,6 @@ buildPythonPackage (finalAttrs: {
     description = "Push Notifications that work with just about every platform";
     homepage = "https://appriseit.com/";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     mainProgram = "apprise";
   };
 })

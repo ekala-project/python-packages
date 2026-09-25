@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "Email client configuration made easy";
     homepage = "https://rseichter.github.io/automx2/";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
   };
 }

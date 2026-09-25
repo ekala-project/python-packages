@@ -46,6 +46,5 @@ buildPythonPackage rec {
     description = "Pytest plugin for testing mypy types, stubs, and plugins";
     homepage = "https://github.com/TypedDjango/pytest-mypy-plugins";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

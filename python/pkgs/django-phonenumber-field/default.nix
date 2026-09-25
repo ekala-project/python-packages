@@ -52,6 +52,5 @@ buildPythonPackage rec {
     description = "Django model and form field for normalised phone numbers using python-phonenumbers";
     homepage = "https://github.com/stefanfoulis/django-phonenumber-field/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

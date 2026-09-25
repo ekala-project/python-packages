@@ -26,6 +26,5 @@ buildPythonPackage rec {
     description = "Versioning It with your Version In Git";
     homepage = "https://github.com/jwodder/versioningit";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

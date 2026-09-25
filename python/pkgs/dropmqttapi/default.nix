@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Python MQTT API for DROP water management products";
     homepage = "https://github.com/ChandlerSystems/dropmqttapi";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

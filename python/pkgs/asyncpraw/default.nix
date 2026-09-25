@@ -66,6 +66,5 @@ buildPythonPackage (finalAttrs: {
     description = "Asynchronous Python Reddit API Wrapper";
     homepage = "https://asyncpraw.readthedocs.io/";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 })

@@ -43,6 +43,5 @@ buildPythonPackage rec {
     homepage = "https://opendev.org/openstack/osprofiler/";
     license = lib.licenses.asl20;
     mainProgram = "osprofiler";
-    maintainers = [ ];
   };
 }

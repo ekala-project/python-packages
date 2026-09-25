@@ -44,6 +44,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python client for the etcd API v3";
     homepage = "https://github.com/kragniz/python-etcd3";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

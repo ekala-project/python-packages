@@ -89,6 +89,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python client library for Mistral AI platform";
     homepage = "https://github.com/mistralai/client-python";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

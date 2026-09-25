@@ -39,7 +39,6 @@ buildPythonPackage rec {
     description = "PostgreSQL Languages AST and statements prettifier";
     homepage = "https://github.com/lelit/pglast";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     mainProgram = "pgpp";
   };
 }

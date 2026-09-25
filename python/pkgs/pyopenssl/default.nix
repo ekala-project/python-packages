@@ -47,6 +47,5 @@ buildPythonPackage rec {
     description = "Python wrapper around the OpenSSL library";
     homepage = "https://github.com/pyca/pyopenssl";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

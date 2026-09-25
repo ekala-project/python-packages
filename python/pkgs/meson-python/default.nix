@@ -53,7 +53,5 @@ buildPythonPackage rec {
     description = "Meson Python build backend (PEP 517)";
     homepage = "https://github.com/mesonbuild/meson-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
-    teams = [ ];
   };
 }

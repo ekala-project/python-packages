@@ -50,6 +50,5 @@ buildPythonPackage rec {
     description = "Stand-alone implementation of several NumPy dtype extensions used in machine learning libraries";
     homepage = "https://github.com/jax-ml/ml_dtypes";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

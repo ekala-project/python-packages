@@ -80,6 +80,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://thrift.apache.org/";
     license = lib.licenses.asl20;
     platforms = lib.platforms.linux ++ lib.platforms.darwin;
-    maintainers = [ ];
   };
 })

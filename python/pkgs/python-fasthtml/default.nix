@@ -71,6 +71,5 @@ buildPythonPackage (finalAttrs: {
     description = "The fastest way to create an HTML app";
     homepage = "https://github.com/AnswerDotAI/fasthtml";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

@@ -53,6 +53,5 @@ buildPythonPackage rec {
     description = "Micro framework for building nature-inspired algorithms";
     homepage = "https://niapy.org/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

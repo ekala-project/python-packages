@@ -47,6 +47,5 @@ buildPythonPackage rec {
     description = "Library for interacting with the PowUnity BikeTrax GPS tracker";
     homepage = "https://github.com/basilfx/aiobiketrax";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

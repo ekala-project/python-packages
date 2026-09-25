@@ -30,6 +30,5 @@ buildPythonPackage (finalAttrs: {
     description = "S-expressions for Numpy";
     license = lib.licenses.mit;
     homepage = "https://github.com/mapbox/snuggs";
-    maintainers = [ ];
   };
 })

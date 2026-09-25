@@ -45,6 +45,5 @@ buildPythonPackage rec {
     description = "Django SAML2 Service Provider based on pySAML2";
     homepage = "https://github.com/IdentityPython/djangosaml2";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

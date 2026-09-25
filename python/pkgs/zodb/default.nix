@@ -60,6 +60,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://zodb-docs.readthedocs.io/";
     downloadPage = "https://github.com/zopefoundation/ZODB";
     license = lib.licenses.zpl21;
-    maintainers = [ ];
   };
 })

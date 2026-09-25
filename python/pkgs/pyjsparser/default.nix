@@ -25,7 +25,6 @@ let
       description = "Fast javascript parser (based on esprima.js)";
       homepage = "https://github.com/PiotrDabkowski/pyjsparser";
       license = lib.licenses.mit;
-      maintainers = [ ];
     };
   };
 in

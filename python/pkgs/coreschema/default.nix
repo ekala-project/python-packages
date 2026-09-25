@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Python client library for Core Schema";
     homepage = "https://github.com/ivegotasthma/python-coreschema";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

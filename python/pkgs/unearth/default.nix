@@ -36,6 +36,5 @@ buildPythonPackage rec {
     mainProgram = "unearth";
     homepage = "https://github.com/frostming/unearth";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

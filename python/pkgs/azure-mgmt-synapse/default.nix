@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Microsoft Azure Synapse Management Client Library";
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/synapse/azure-mgmt-synapse";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

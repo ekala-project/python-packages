@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "MkDocs plugin to programmatically generate documentation pages during the build";
     homepage = "https://oprypin.github.io/mkdocs-gen-files/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

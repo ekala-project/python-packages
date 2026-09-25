@@ -41,6 +41,5 @@ buildPythonPackage rec {
     description = "Search, filter and sort iCalendar components";
     homepage = "https://github.com/python-caldav/icalendar-searcher";
     license = lib.licenses.agpl3Only;
-    maintainers = [ ];
   };
 }

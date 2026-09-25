@@ -36,6 +36,5 @@ buildPythonPackage {
     description = "Utility package to create lazy modules, deferring associated imports until attribute access";
     homepage = "https://github.com/bachorp/lazy-imports";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

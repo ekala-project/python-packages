@@ -41,6 +41,5 @@ buildPythonPackage rec {
     description = "Extension to use emoji codes in your Sphinx documentation";
     homepage = "https://github.com/sphinx-contrib/emojicodes";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

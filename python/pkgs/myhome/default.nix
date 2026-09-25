@@ -37,6 +37,5 @@ buildPythonPackage rec {
     description = "Python library for interacting with MyHomeSERVER1";
     homepage = "https://github.com/speijnik/myhome";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

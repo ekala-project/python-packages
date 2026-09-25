@@ -53,6 +53,5 @@ buildPythonPackage rec {
     description = "Library to convert Draft.js ContentState to HTML";
     homepage = "https://github.com/springload/draftjs_exporter";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

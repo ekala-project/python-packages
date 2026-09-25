@@ -48,6 +48,5 @@ buildPythonPackage rec {
     mainProgram = "convert-json";
     homepage = "https://github.com/openstack/oslo.log";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

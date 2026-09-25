@@ -48,6 +48,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/althonos/gb-io.py";
     description = "Python interface to gb-io, a fast GenBank parser written in Rust";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -51,6 +51,5 @@ buildPythonPackage rec {
     description = "Annotated YAML that supports secrets for Python";
     homepage = "https://github.com/home-assistant-libs/annotatedyaml";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

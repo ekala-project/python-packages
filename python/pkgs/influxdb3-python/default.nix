@@ -65,6 +65,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python module that provides a simple and convenient way to interact with InfluxDB 3.0";
     homepage = "https://github.com/InfluxCommunity/influxdb3-python";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

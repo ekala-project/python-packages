@@ -68,6 +68,5 @@ buildPythonPackage (finalAttrs: {
     description = "OpenInference Claude Agent SDK Instrumentation";
     homepage = "https://github.com/Arize-ai/openinference";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

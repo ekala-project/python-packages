@@ -40,6 +40,5 @@ buildPythonPackage rec {
     description = "Python package that provides support for ISO-TP (ISO-15765) protocol";
     homepage = "https://github.com/pylessard/python-can-isotp";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

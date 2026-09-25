@@ -48,6 +48,5 @@ buildPythonPackage rec {
     description = "Asyncio-based RTSP library";
     homepage = "https://github.com/marss/aiortsp";
     license = lib.licenses.lgpl3Plus;
-    maintainers = [ ];
   };
 }

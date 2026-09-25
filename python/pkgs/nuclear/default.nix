@@ -53,6 +53,5 @@ buildPythonPackage rec {
     homepage = "https://igrek51.github.io/nuclear/";
     description = "Binding glue for CLI Python applications";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

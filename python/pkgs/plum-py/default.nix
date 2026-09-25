@@ -27,6 +27,5 @@ buildPythonPackage rec {
     description = "Classes and utilities for packing/unpacking bytes";
     homepage = "https://plum-py.readthedocs.io/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

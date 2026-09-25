@@ -25,6 +25,5 @@ buildPythonPackage rec {
     description = "Decorator for caching properties in classes";
     homepage = "https://github.com/althonos/property-cached";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

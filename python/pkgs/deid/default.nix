@@ -31,7 +31,6 @@ let
       description = "Supplementary data for deid package";
       homepage = "https://github.com/pydicom/deid-data";
       license = lib.licenses.mit;
-      maintainers = [ ];
     };
   };
 in
@@ -70,6 +69,5 @@ buildPythonPackage rec {
     mainProgram = "deid";
     homepage = "https://pydicom.github.io/deid";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

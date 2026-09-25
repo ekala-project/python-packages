@@ -98,7 +98,6 @@ buildPythonPackage (finalAttrs: {
     description = "Modern, extensible Python project manager";
     homepage = "https://hatch.pypa.io/latest/";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "hatch";
   };
 })

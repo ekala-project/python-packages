@@ -46,6 +46,5 @@ buildPythonPackage rec {
     description = "Module for dependency injection and result processing";
     homepage = "https://github.com/pyapp-kit/in-n-out";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

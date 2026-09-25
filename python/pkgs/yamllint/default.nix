@@ -32,7 +32,6 @@ buildPythonPackage rec {
     description = "Linter for YAML files";
     homepage = "https://github.com/adrienverge/yamllint";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     mainProgram = "yamllint";
   };
 }

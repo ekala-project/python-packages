@@ -49,6 +49,5 @@ buildPythonPackage rec {
     description = "Simple API for encoding and decoding dataclasses to and from JSON";
     homepage = "https://github.com/lidatong/dataclasses-json";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -144,6 +144,5 @@ buildPythonPackage rec {
       lib.replaceStrings [ "." ] [ "-" ] version
     }";
     license = lib.licenses.mpl20;
-    maintainers = [ ];
   };
 }

@@ -37,6 +37,5 @@ buildPythonPackage rec {
     description = "Library for variable type checker/validator/converter at a run time";
     homepage = "https://github.com/thombashi/typepy";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

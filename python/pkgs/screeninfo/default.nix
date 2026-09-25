@@ -38,6 +38,5 @@ buildPythonPackage rec {
     description = "Fetch location and size of physical screens";
     homepage = "https://github.com/rr-/screeninfo";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -70,6 +70,5 @@ buildPythonPackage rec {
     description = "TLS-capable transport using OpenSSL for asyncio";
     homepage = "https://github.com/horazont/aioopenssl";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Trait types for NumPy, SciPy, XArray, and Pandas";
     homepage = "https://github.com/jupyter-widgets/traittypes";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

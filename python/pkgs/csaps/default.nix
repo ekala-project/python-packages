@@ -45,6 +45,5 @@ buildPythonPackage rec {
     description = "Cubic spline approximation (smoothing)";
     homepage = "https://github.com/espdev/csaps";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

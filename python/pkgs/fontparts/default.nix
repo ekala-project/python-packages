@@ -54,6 +54,5 @@ buildPythonPackage (finalAttrs: {
     description = "API for interacting with the parts of fonts during the font development process";
     homepage = "https://github.com/robotools/fontParts";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

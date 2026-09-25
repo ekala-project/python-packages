@@ -47,6 +47,5 @@ buildPythonPackage rec {
     description = "Python implementation of the MikroTik RouterOS API";
     homepage = "https://librouteros.readthedocs.io/";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
   };
 }

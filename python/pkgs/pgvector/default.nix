@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Pgvector support for Python";
     homepage = "https://github.com/pgvector/pgvector-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

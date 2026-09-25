@@ -28,6 +28,5 @@ buildPythonPackage (finalAttrs: {
     description = "ARCFOUR (RC4) cipher implementation";
     homepage = "https://github.com/manicmaniac/arc4";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

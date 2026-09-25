@@ -74,6 +74,5 @@ buildPythonPackage (finalAttrs: {
     mainProgram = "datasets-cli";
     homepage = "https://github.com/huggingface/datasets";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

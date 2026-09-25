@@ -35,6 +35,5 @@ buildPythonPackage {
     description = "Better error messages in pytest assertions using icdiff";
     homepage = "https://github.com/hjwp/pytest-icdiff";
     license = lib.licenses.unlicense;
-    maintainers = [ ];
   };
 }

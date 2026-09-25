@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Flake8 plugin for a smart line length validation";
     homepage = "https://github.com/orsinium-labs/flake8-length";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

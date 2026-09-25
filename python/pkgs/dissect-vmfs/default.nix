@@ -50,6 +50,5 @@ buildPythonPackage rec {
     description = "Dissect module implementing a parser for the VMFS file system";
     homepage = "https://github.com/fox-it/dissect.vmfs";
     license = lib.licenses.agpl3Only;
-    maintainers = [ ];
   };
 }

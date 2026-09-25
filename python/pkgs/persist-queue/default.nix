@@ -44,6 +44,5 @@ buildPythonPackage rec {
     description = "Thread-safe disk based persistent queue in Python";
     homepage = "https://github.com/peter-wangxu/persist-queue";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

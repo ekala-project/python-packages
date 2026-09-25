@@ -51,6 +51,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python Client SDK for Unstructured API";
     homepage = "https://github.com/Unstructured-IO/unstructured-python-client";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

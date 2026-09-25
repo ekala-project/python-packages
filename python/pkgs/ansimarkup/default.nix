@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "XML-like markup for producing colored terminal text";
     homepage = "https://github.com/gvalkov/python-ansimarkup";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

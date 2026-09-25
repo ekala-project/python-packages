@@ -40,6 +40,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python tools for working with the BIDS schema";
     homepage = "https://github.com/bids-standard/bids-specification/tree/master/tools/schemacode";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

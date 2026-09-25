@@ -41,6 +41,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python toolbox for optimization on Riemannian manifolds with support for automatic differentiation";
     homepage = "https://www.pymanopt.org/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

@@ -50,6 +50,5 @@ buildPythonPackage rec {
     description = "Set of adapter protocols and base functionality that supports integration with dbt-core";
     homepage = "https://github.com/dbt-labs/dbt-adapters";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

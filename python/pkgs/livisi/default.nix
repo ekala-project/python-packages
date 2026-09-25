@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "Connection library for the abandoned Livisi Smart Home system";
     homepage = "https://github.com/planbnet/livisi";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

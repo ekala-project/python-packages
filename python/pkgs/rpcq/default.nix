@@ -41,6 +41,5 @@ buildPythonPackage rec {
     description = "RPC framework and message specification for rigetti Quantum Cloud services";
     homepage = "https://github.com/rigetti/rpcq";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

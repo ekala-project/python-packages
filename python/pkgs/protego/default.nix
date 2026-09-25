@@ -24,6 +24,5 @@ buildPythonPackage (finalAttrs: {
     description = "Module to parse robots.txt files with support for modern conventions";
     homepage = "https://github.com/scrapy/protego";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

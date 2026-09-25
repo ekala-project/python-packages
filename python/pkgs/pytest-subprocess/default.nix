@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Plugin to fake subprocess for pytest";
     homepage = "https://github.com/aklajnert/pytest-subprocess";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

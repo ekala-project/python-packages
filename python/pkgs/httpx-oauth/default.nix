@@ -47,6 +47,5 @@ buildPythonPackage rec {
     description = "Async OAuth client using HTTPX";
     homepage = "https://github.com/frankie567/httpx-oauth";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

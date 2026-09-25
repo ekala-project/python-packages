@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Kraken.com cryptocurrency exchange API";
     homepage = "https://github.com/veox/python3-krakenex";
     license = lib.licenses.lgpl3Plus;
-    maintainers = [ ];
   };
 }

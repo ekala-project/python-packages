@@ -63,6 +63,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://github.com/hbldh/bleak";
     license = lib.licenses.mit;
     platforms = lib.platforms.linux ++ lib.platforms.darwin;
-    maintainers = [ ];
   };
 })

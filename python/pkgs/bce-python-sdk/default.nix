@@ -46,6 +46,5 @@ buildPythonPackage {
     description = "Baidu Cloud Engine SDK for python";
     homepage = "https://github.com/baidubce/bce-sdk-python";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

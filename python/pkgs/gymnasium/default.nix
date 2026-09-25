@@ -42,6 +42,5 @@ buildPythonPackage rec {
     description = "Standard API for reinforcement learning and a diverse set of reference environments";
     homepage = "https://github.com/Farama-Foundation/Gymnasium";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

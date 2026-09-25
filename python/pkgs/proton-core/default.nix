@@ -38,6 +38,5 @@ buildPythonPackage rec {
     description = "Core logic used by the other Proton components";
     homepage = "https://github.com/ProtonVPN/python-proton-core";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 }

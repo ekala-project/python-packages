@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "Module for working with apcaccess";
     homepage = "https://github.com/yuxincs/aioapcaccess";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

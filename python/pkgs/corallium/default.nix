@@ -40,6 +40,5 @@ buildPythonPackage rec {
     description = "Shared functionality for calcipy-ecosystem";
     homepage = "https://corallium.kyleking.me";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

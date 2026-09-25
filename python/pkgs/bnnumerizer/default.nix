@@ -28,6 +28,5 @@ buildPythonPackage (finalAttrs: {
     description = "Bangla Number text to String Converter";
     homepage = "https://github.com/banglakit/number-to-bengali-word";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

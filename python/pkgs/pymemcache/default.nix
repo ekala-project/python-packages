@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Python memcached client";
     homepage = "https://pymemcache.readthedocs.io/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

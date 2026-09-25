@@ -41,6 +41,5 @@ buildPythonPackage rec {
     description = "Async library for discovering and fetching data from Altruist sensors";
     homepage = "https://github.com/LoSk-p/altruistclient";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

@@ -34,7 +34,6 @@ buildPythonPackage rec {
   meta = {
     homepage = "https://github.com/paul-gauthier/grep-ast";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     description = "Python implementation of the ast-grep tool";
     mainProgram = "grep-ast";
   };

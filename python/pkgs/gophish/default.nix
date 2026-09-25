@@ -53,6 +53,5 @@ buildPythonPackage rec {
     description = "Module to interact with Gophish";
     homepage = "https://github.com/gophish/api-client-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

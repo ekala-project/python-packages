@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Async single threaded connector to Splunk HEC using an asyncio session";
     homepage = "https://github.com/Bre77/hass_splunk";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

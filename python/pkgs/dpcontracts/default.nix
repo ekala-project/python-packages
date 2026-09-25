@@ -43,6 +43,5 @@ buildPythonPackage {
     description = "Provides a collection of decorators that makes it easy to write software using contracts";
     homepage = "https://github.com/deadpixi/contracts";
     license = lib.licenses.lgpl3Only;
-    maintainers = [ ];
   };
 }

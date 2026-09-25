@@ -45,6 +45,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://github.com/devpi/devpi";
     description = "Utilities jointly used by devpi-server and devpi-client";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

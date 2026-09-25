@@ -21,6 +21,5 @@ buildPythonPackage rec {
     description = "Python module to work with PKCE";
     homepage = "https://github.com/RomeoDespres/pkce";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

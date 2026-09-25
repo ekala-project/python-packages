@@ -41,6 +41,5 @@ buildPythonPackage rec {
     description = "Sphinx spelling extension";
     homepage = "https://github.com/sphinx-contrib/spelling";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

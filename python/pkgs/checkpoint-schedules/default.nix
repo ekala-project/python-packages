@@ -36,6 +36,5 @@ buildPythonPackage (finalAttrs: {
     downloadPage = "https://github.com/firedrakeproject/checkpoint_schedules";
     description = "Schedules for incremental checkpointing of adjoint simulations";
     license = lib.licenses.lgpl3Only;
-    maintainers = [ ];
   };
 })

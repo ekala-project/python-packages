@@ -47,6 +47,5 @@ buildPythonPackage rec {
     # Contradictory license definition
     # https://github.com/cbrunet/python-poppler/issues/90
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
   };
 }

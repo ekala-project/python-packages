@@ -55,6 +55,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python Client for Cloud Workstations";
     homepage = "https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-workstations";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

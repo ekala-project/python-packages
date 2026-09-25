@@ -33,6 +33,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://redbaron.readthedocs.io/en/latest";
     downloadPage = "https://github.com/PyCQA/redbaron";
     license = lib.licenses.lgpl3Plus;
-    maintainers = [ ];
   };
 })

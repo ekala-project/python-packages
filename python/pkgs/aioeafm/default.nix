@@ -47,6 +47,5 @@ buildPythonPackage rec {
     description = "Python client for access the Real Time flood monitoring API";
     homepage = "https://github.com/Jc2k/aioeafm";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

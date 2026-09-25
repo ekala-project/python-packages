@@ -24,6 +24,5 @@ buildPythonPackage rec {
     mainProgram = "autoflake";
     homepage = "https://github.com/myint/autoflake";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

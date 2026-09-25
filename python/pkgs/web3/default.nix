@@ -63,6 +63,5 @@ buildPythonPackage rec {
     description = "Python interface for interacting with the Ethereum blockchain and ecosystem";
     homepage = "https://web3py.readthedocs.io/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -42,6 +42,5 @@ buildPythonPackage rec {
     description = "Common engine for all modules. It is useful for make integration with your homemade frameworks";
     homepage = "https://github.com/allure-framework/allure-python";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

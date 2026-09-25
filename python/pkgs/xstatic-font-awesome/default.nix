@@ -25,6 +25,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/python-xstatic/font-awesome";
     description = "Font Awesome packaged for python";
     license = lib.licenses.ofl;
-    maintainers = [ ];
   };
 }

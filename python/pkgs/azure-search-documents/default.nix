@@ -45,6 +45,5 @@ buildPythonPackage rec {
     description = "Microsoft Azure Cognitive Search Client Library for Python";
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/search/azure-search-documents";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

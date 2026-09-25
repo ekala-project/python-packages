@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "Minimal duration parser written in python";
     homepage = "https://github.com/adriansahlman/duration-parser";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

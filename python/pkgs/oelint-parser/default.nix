@@ -45,6 +45,5 @@ buildPythonPackage (finalAttrs: {
     description = "Alternative parser for bitbake recipes";
     homepage = "https://github.com/priv-kweihmann/oelint-parser";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 })

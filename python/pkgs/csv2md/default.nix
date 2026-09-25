@@ -25,7 +25,6 @@ buildPythonPackage (finalAttrs: {
     description = "Command line tool for converting CSV files into Markdown tables";
     homepage = "https://github.com/lzakharov/csv2md";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "csv2md";
   };
 })

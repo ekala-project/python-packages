@@ -65,6 +65,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Fast and lightweight key/value database library by Google";
     license = lib.licenses.bsd3;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

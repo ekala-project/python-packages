@@ -58,6 +58,5 @@ buildPythonPackage rec {
     description = "Sane and flexible OpenAPI 3 schema generation for Django REST framework";
     homepage = "https://github.com/tfranzel/drf-spectacular";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

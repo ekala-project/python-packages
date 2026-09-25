@@ -29,6 +29,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/saltstack/pytest-helpers-namespace";
     description = "PyTest Helpers Namespace";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

@@ -47,6 +47,5 @@ buildPythonPackage (finalAttrs: {
     description = "Module to access the FYTA API";
     homepage = "https://github.com/dontinelli/fyta_cli";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 })

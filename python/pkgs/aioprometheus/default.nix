@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "Prometheus Python client library for asyncio-based applications";
     homepage = "https://github.com/claws/aioprometheus";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

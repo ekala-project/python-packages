@@ -87,6 +87,5 @@ buildPythonPackage rec {
     description = "Python SDK for the Okta Management API";
     homepage = "https://github.com/okta/okta-sdk-python";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

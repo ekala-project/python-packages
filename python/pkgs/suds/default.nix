@@ -27,6 +27,5 @@ buildPythonPackage rec {
     description = "Lightweight SOAP python client for consuming Web Services";
     homepage = "https://github.com/suds-community/suds";
     license = lib.licenses.lgpl3Plus;
-    maintainers = [ ];
   };
 }

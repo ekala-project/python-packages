@@ -52,6 +52,5 @@ buildPythonPackage rec {
     description = "Support and convert several CAN (Controller Area Network) database formats";
     homepage = "https://github.com/ebroecker/canmatrix";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

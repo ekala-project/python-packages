@@ -30,6 +30,5 @@ buildPythonPackage rec {
     description = "Standard library nntplib redistribution";
     homepage = "https://github.com/youknowone/python-deadlib";
     license = lib.licenses.psfl;
-    maintainers = [ ];
   };
 }

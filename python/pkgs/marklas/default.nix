@@ -42,6 +42,5 @@ buildPythonPackage (finalAttrs: {
     description = "Bidirectional converter between GitHub Flavored Markdown and Atlassian Document Format";
     homepage = "https://github.com/byExist/marklas";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

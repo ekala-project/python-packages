@@ -44,7 +44,6 @@ buildPythonPackage rec {
       mit # or
       gpl2Plus
     ];
-    maintainers = [ ];
     mainProgram = "git-filter-repo";
   };
 

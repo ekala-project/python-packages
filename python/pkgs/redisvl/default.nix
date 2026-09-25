@@ -50,7 +50,5 @@ buildPythonPackage (finalAttrs: {
     homepage = " https://redisvl.com";
     license = lib.licenses.mit;
     mainProgram = "rvl";
-    maintainers = [ ];
-    teams = [ ];
   };
 })

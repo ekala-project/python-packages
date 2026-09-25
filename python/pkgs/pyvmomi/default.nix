@@ -46,6 +46,5 @@ buildPythonPackage rec {
     description = "Python SDK for the VMware vSphere API that allows you to manage ESX, ESXi, and vCenter";
     homepage = "https://github.com/vmware/pyvmomi";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

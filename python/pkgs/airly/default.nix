@@ -47,6 +47,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python module for getting air quality data from Airly sensors";
     homepage = "https://github.com/ak-ambi/python-airly";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

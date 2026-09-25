@@ -51,6 +51,5 @@ buildPythonPackage (finalAttrs: {
     longDescription = "A python wrapper around the rust scale-codec crate for fast scale-decoding of Bittensor data structures.";
     homepage = "https://github.com/latent-to/bt-decode";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

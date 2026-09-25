@@ -59,6 +59,5 @@ buildPythonPackage rec {
     description = "Asynchronous SQL hydrator";
     homepage = "https://github.com/ahopkins/mayim";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

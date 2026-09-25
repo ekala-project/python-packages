@@ -43,6 +43,5 @@ buildPythonPackage rec {
     description = "Zope Configuration Markup Language (ZCML)";
     homepage = "https://github.com/zopefoundation/zope.configuration";
     license = lib.licenses.zpl21;
-    maintainers = [ ];
   };
 }

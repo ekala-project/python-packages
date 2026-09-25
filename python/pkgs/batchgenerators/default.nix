@@ -58,6 +58,5 @@ buildPythonPackage rec {
     description = "2D and 3D image data augmentation for deep learning";
     homepage = "https://github.com/MIC-DKFZ/batchgenerators";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

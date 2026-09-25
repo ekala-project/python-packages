@@ -51,6 +51,5 @@ buildPythonPackage (finalAttrs: {
     description = "Built-in support for quaternions in numpy";
     homepage = "https://github.com/moble/quaternion";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

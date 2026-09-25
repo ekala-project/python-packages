@@ -43,6 +43,5 @@ buildPythonPackage rec {
     mainProgram = "mobiunpack";
     homepage = "https://github.com/iscc/mobi";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 }

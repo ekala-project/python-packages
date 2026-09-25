@@ -41,6 +41,5 @@ buildPythonPackage rec {
     description = "This python module helps converting arbitrary Python objects into JSON strings and back";
     homepage = "https://github.com/DLR-RM/python-jsonconversion";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

@@ -29,6 +29,5 @@ buildPythonPackage rec {
     description = "Python 2/3 implementation of XMPP";
     homepage = "https://github.com/xmpppy/xmpppy";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 }

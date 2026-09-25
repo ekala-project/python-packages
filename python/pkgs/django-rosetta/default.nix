@@ -37,6 +37,5 @@ buildPythonPackage rec {
     description = "Rosetta is a Django application that facilitates the translation process of your Django projects";
     homepage = "https://github.com/mbi/django-rosetta";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

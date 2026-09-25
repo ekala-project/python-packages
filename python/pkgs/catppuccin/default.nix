@@ -45,7 +45,6 @@ buildPythonPackage (finalAttrs: {
   meta = {
     description = "Soothing pastel theme for Python";
     homepage = "https://github.com/catppuccin/python";
-    maintainers = [ ];
     license = lib.licenses.mit;
   };
 })

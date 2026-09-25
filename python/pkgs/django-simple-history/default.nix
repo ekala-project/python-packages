@@ -41,6 +41,5 @@ buildPythonPackage rec {
     description = "Module to store Django model state on every create/update/delete";
     homepage = "https://github.com/jazzband/django-simple-history/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

@@ -56,6 +56,5 @@ buildPythonPackage rec {
     description = "Python DB API 2.0 (PEP 249) client for Amazon Athena";
     homepage = "https://github.com/laughingman7743/PyAthena/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

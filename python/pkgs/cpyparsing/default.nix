@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Cython PyParsing implementation";
     homepage = "https://github.com/evhub/cpyparsing";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

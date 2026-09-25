@@ -33,6 +33,5 @@ buildPythonPackage rec {
     homepage = "https://numpy.org/numpy-financial/";
     description = "Collection of elementary financial functions";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

@@ -45,7 +45,6 @@ buildPythonPackage rec {
   meta = {
     description = "Utilities for implementing a modified pre-order traversal tree in Django";
     homepage = "https://github.com/django-mptt/django-mptt";
-    maintainers = [ ];
     license = lib.licenses.mit;
   };
 }

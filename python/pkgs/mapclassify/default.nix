@@ -40,6 +40,5 @@ buildPythonPackage rec {
     description = "Classification Schemes for Choropleth Maps";
     homepage = "https://pysal.org/mapclassify/";
     license = lib.licenses.bsd3;
-    teams = [ ];
   };
 }

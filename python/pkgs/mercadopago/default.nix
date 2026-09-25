@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "This library provides developers with a simple set of bindings to help you integrate Mercado Pago API to a website and start receiving payments";
     homepage = "https://www.mercadopago.com";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

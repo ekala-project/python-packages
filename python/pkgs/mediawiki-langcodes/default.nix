@@ -31,6 +31,5 @@ buildPythonPackage (finalAttrs: {
     description = "Convert MediaWiki language names and language codes";
     homepage = "https://github.com/xxyzz/mediawiki_langcodes";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
   };
 })

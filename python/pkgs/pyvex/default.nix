@@ -61,6 +61,5 @@ buildPythonPackage (finalAttrs: {
       gpl3Plus
       lgpl3Plus
     ];
-    maintainers = [ ];
   };
 })

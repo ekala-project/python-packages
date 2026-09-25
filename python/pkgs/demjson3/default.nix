@@ -29,6 +29,5 @@ buildPythonPackage (finalAttrs: {
     mainProgram = "jsonlint";
     homepage = "https://github.com/nielstron/demjson3/";
     license = lib.licenses.lgpl3Plus;
-    maintainers = [ ];
   };
 })

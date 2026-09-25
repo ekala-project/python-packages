@@ -38,6 +38,5 @@ buildPythonPackage {
     '';
     homepage = "https://github.com/dmgass/baseline";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

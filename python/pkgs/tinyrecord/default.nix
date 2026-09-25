@@ -27,6 +27,5 @@ buildPythonPackage (finalAttrs: {
     description = "Transaction support for TinyDB";
     homepage = "https://github.com/eugene-eeo/tinyrecord";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

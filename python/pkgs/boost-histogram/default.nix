@@ -52,6 +52,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python bindings for the C++14 Boost::Histogram library";
     homepage = "https://github.com/scikit-hep/boost-histogram";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

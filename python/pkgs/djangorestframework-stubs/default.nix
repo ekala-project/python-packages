@@ -51,6 +51,5 @@ buildPythonPackage rec {
     description = "PEP-484 stubs for Django REST Framework";
     homepage = "https://github.com/typeddjango/djangorestframework-stubs";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Module to disassemble Common Intermediate Language (CIL) instructions";
     homepage = "https://github.com/mandiant/dncil";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

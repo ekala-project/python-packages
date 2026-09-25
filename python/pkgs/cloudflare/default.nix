@@ -49,7 +49,6 @@ buildPythonPackage rec {
   meta = {
     description = "Official Python library for the Cloudflare API";
     homepage = "https://github.com/cloudflare/cloudflare-python";
-    maintainers = [ ];
     license = lib.licenses.asl20;
   };
 }

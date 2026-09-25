@@ -59,6 +59,5 @@ buildPythonPackage rec {
     description = "Converting Jupyter Notebooks";
     homepage = "https://github.com/jupyter/nbconvert";
     license = lib.licenses.bsd3;
-    teams = [ ];
   };
 }

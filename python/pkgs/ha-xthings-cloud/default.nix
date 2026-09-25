@@ -32,6 +32,5 @@ buildPythonPackage (finalAttrs: {
     description = "Async Python client for Xthings Cloud API";
     homepage = "https://github.com/XthingsJacobs/ha-xthings-cloud";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

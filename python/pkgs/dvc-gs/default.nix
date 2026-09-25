@@ -40,6 +40,5 @@ buildPythonPackage (finalAttrs: {
     description = "gs plugin for dvc";
     homepage = "https://pypi.org/project/dvc-gs/version";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

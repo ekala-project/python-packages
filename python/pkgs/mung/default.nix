@@ -39,6 +39,5 @@ buildPythonPackage {
     description = "Music Notation Graph: a data model for optical music recognition";
     homepage = "https://github.com/OMR-Research/mung";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

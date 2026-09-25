@@ -49,6 +49,5 @@ buildPythonPackage rec {
     description = "Python client library for Google's large language model PaLM API";
     homepage = "https://github.com/google/generative-ai-python";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

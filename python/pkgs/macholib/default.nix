@@ -48,6 +48,5 @@ buildPythonPackage rec {
     description = "Analyze and edit Mach-O headers, the executable format used by Mac OS X";
     homepage = "https://github.com/ronaldoussoren/macholib";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

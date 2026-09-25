@@ -28,6 +28,5 @@ buildPythonPackage {
     description = "Pre-packaged testbenching tools and reusable bus interfaces for cocotb";
     homepage = "https://github.com/cocotb/cocotb-bus";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

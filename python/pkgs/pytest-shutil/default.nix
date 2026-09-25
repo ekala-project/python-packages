@@ -35,7 +35,6 @@ buildPythonPackage {
   meta = {
     description = "Goodie-bag of unix shell and environment tools for py.test";
     homepage = "https://github.com/manahl/pytest-plugins";
-    maintainers = [ ];
     license = lib.licenses.mit;
   };
 }

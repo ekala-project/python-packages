@@ -28,7 +28,6 @@ buildPythonPackage (finalAttrs: {
     description = "Tool and library for manipulating LilyPond files";
     homepage = "https://pypi.org/project/python-ly";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     mainProgram = "ly";
   };
 })

@@ -46,6 +46,5 @@ buildPythonPackage rec {
     description = "Python API for Numato GPIO Expanders";
     homepage = "https://github.com/clssn/numato-gpio";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

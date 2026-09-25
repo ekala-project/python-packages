@@ -40,6 +40,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python library to interact with Meross devices";
     homepage = "https://github.com/albertogeniola/MerossIot";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

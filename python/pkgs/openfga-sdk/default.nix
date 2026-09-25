@@ -50,6 +50,5 @@ buildPythonPackage rec {
     description = "Fine-Grained Authorization solution for Python";
     homepage = "https://github.com/openfga/python-sdk";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

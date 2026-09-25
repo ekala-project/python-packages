@@ -41,6 +41,5 @@ buildPythonPackage rec {
     description = "Implementation of Qt Signals";
     homepage = "https://github.com/pyapp-kit/psygnal";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

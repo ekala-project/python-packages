@@ -58,6 +58,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python bindings for the XML Security Library";
     homepage = "https://github.com/xmlsec/python-xmlsec";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

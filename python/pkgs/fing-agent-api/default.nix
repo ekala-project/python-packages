@@ -31,6 +31,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python library for interacting with the Fingbox local APIs";
     homepage = "https://github.com/fingltd/fing-agent-pyapi";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

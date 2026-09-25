@@ -33,6 +33,5 @@ buildPythonPackage rec {
       many far from the implicit surface.
     '';
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

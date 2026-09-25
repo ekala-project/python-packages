@@ -42,7 +42,6 @@ buildPythonPackage rec {
     description = "Development tools for Textual";
     homepage = "https://github.com/Textualize/textual-dev";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "textual";
   };
 }

@@ -35,6 +35,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://github.com/roniemartinez/latex2mathml";
     license = lib.licenses.mit;
     mainProgram = "latex2mathml";
-    maintainers = [ ];
   };
 })

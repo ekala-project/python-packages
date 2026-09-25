@@ -44,6 +44,5 @@ buildPythonPackage (finalAttrs: {
     description = "OneLogin's SAML Python Toolkit";
     homepage = "https://github.com/onelogin/python3-saml";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

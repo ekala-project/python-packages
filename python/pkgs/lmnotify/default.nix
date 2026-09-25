@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Python package for sending notifications to LaMetric Time";
     homepage = "https://github.com/keans/lmnotify";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

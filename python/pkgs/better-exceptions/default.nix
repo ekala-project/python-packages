@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Pretty and more helpful exceptions in Python, automatically";
     homepage = "https://github.com/qix-/better-exceptions";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

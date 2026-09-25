@@ -64,6 +64,5 @@ buildPythonPackage (finalAttrs: {
     description = "SDK for interacting with the LangGraph Cloud REST API";
     homepage = "https://github.com/langchain-ai/langgraph/tree/main/libs/sdk-py";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

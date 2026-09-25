@@ -34,6 +34,5 @@ buildPythonPackage rec {
     mainProgram = "css-beautify";
     homepage = "https://github.com/beautifier/js-beautify";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

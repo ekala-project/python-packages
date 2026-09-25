@@ -52,6 +52,5 @@ buildPythonPackage (finalAttrs: {
     description = "Dithering algorithms for e-paper/e-ink displays";
     homepage = "https://github.com/OpenDisplay/epaper-dithering";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

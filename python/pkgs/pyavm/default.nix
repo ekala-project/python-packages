@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Simple pure-python AVM meta-data handling";
     homepage = "https://astrofrog.github.io/pyavm/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

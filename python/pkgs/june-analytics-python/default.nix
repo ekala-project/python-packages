@@ -45,6 +45,5 @@ buildPythonPackage {
     description = "Hassle-free way to integrate analytics into any python application";
     homepage = "https://github.com/juneHQ/analytics-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

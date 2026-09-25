@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "Mean Average Precision for Object Detection";
     homepage = "https://github.com/bes-dev/mean_average_precision";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

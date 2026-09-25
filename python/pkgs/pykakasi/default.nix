@@ -32,7 +32,6 @@ buildPythonPackage rec {
     description = "Python converter for Japanese Kana-kanji sentences into Kana-Roman";
     homepage = "https://codeberg.org/miurahr/pykakasi";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     mainProgram = "kakasi";
   };
 }

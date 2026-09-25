@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Pytest plugin to run pycodestyle";
     homepage = "https://github.com/henry0312/pytest-pycodestyle";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

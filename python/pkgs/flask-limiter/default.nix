@@ -59,6 +59,5 @@ buildPythonPackage rec {
     description = "Rate limiting for flask applications";
     homepage = "https://flask-limiter.readthedocs.org/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -64,6 +64,5 @@ buildPythonPackage (finalAttrs: {
     description = "Pandas on AWS";
     homepage = "https://github.com/aws/aws-sdk-pandas";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

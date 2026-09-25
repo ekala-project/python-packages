@@ -43,6 +43,5 @@ buildPythonPackage rec {
     description = "Pythonic wrapper for the Google Calendar API";
     homepage = "https://github.com/kuzmoyev/google-calendar-simple-api";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

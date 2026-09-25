@@ -36,6 +36,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python client library for Asana";
     homepage = "https://github.com/asana/python-asana";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

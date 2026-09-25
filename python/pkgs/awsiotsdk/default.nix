@@ -47,6 +47,5 @@ buildPythonPackage (finalAttrs: {
     description = "Next generation AWS IoT Client SDK for Python using the AWS Common Runtime";
     homepage = "https://github.com/aws/aws-iot-device-sdk-python-v2";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

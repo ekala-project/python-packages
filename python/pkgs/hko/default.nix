@@ -29,6 +29,5 @@ buildPythonPackage rec {
     description = "Unofficial Python wrapper for the Hong Kong Observatory public API";
     homepage = "https://github.com/MisterCommand/python-hko";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

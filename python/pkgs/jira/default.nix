@@ -66,7 +66,6 @@ buildPythonPackage rec {
     description = "Library to interact with the JIRA REST API";
     homepage = "https://github.com/pycontribs/jira";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     mainProgram = "jirashell";
   };
 }

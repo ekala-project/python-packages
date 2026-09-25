@@ -42,6 +42,5 @@ buildPythonPackage rec {
     description = "Smartcard library for python";
     homepage = "https://pyscard.sourceforge.io/";
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
   };
 }

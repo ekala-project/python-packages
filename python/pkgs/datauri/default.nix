@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "Module for Data URI manipulation";
     homepage = "https://github.com/fcurella/python-datauri";
     license = lib.licenses.unlicense;
-    maintainers = [ ];
   };
 }

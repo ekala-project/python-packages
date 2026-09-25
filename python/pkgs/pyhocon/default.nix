@@ -41,6 +41,5 @@ buildPythonPackage (finalAttrs: {
       any HOCON content into JSON, YAML and properties format.
     '';
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

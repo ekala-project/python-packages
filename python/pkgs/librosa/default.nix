@@ -73,6 +73,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python library for audio and music analysis";
     homepage = "https://github.com/librosa/librosa";
     license = lib.licenses.isc;
-    maintainers = [ ];
   };
 })

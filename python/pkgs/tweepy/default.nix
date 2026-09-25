@@ -43,6 +43,5 @@ buildPythonPackage rec {
     description = "Twitter library for Python";
     homepage = "https://github.com/tweepy/tweepy";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

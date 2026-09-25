@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "JSON grammar for tree-sitter";
     homepage = "https://github.com/tree-sitter/tree-sitter-json";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

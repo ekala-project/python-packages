@@ -37,7 +37,6 @@ buildPythonPackage rec {
     description = "Pythonic remote execution";
     homepage = "https://www.fabfile.org/";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     mainProgram = "fab";
   };
 }

@@ -50,6 +50,5 @@ buildPythonPackage rec {
     description = "Official Telethon extension to provide much faster cryptography for Telegram API requests";
     homepage = "https://github.com/cher-nov/cryptg";
     license = lib.licenses.cc0;
-    maintainers = [ ];
   };
 }

@@ -42,6 +42,5 @@ buildPythonPackage rec {
     description = "Library that makes it easier to use Twisted from regular blocking code";
     homepage = "https://github.com/itamarst/crochet";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

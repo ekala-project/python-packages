@@ -44,6 +44,5 @@ buildPythonPackage (finalAttrs: {
     description = "Very simple Salesforce.com REST API client for Python";
     homepage = "https://github.com/simple-salesforce/simple-salesforce";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

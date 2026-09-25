@@ -55,6 +55,5 @@ buildPythonPackage (finalAttrs: {
     description = "Lightweight QUIC and HTTP/3 implementation in Python";
     homepage = "https://github.com/jawah/qh3";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

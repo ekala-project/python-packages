@@ -33,6 +33,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/miguelgrinberg/flask-paranoid/";
     description = "Simple user session protection";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

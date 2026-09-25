@@ -40,6 +40,5 @@ buildPythonPackage rec {
     description = "Harlequin adapter for Postgres";
     homepage = "https://pypi.org/project/harlequin-postgres/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

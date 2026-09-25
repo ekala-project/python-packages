@@ -41,6 +41,5 @@ buildPythonPackage rec {
     description = "Collection of mature utilities for Python programmers";
     homepage = "https://github.com/tpltnt/pyutil";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
   };
 }

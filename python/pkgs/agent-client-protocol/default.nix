@@ -49,6 +49,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python SDK for ACP clients and agents";
     homepage = "https://github.com/agentclientprotocol/python-sdk";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

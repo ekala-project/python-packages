@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "MkDocs plugin that simplifies relative linking between documents";
     homepage = "https://github.com/zachhannum/mkdocs-autolinks-plugin";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

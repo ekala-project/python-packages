@@ -25,6 +25,5 @@ buildPythonPackage (finalAttrs: {
     description = "Access your OS root certificates with utmost ease";
     homepage = "https://github.com/jawah/wassima";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

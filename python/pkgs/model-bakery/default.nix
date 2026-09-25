@@ -33,6 +33,5 @@ buildPythonPackage (finalAttrs: {
     description = "Object factory for Django";
     homepage = "https://github.com/model-bakers/model_bakery";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

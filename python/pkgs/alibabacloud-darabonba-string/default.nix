@@ -28,6 +28,5 @@ buildPythonPackage (finalAttrs: {
     description = "Alibaba Cloud Darabonba String Library for Python";
     homepage = "https://github.com/aliyun/darabonba-string";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

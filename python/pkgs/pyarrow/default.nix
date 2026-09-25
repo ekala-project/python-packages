@@ -105,6 +105,5 @@ buildPythonPackage rec {
     homepage = "https://arrow.apache.org/";
     license = lib.licenses.asl20;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

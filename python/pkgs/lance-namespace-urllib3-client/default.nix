@@ -46,6 +46,5 @@ buildPythonPackage (finalAttrs: {
     description = "Lance namespace OpenAPI specification";
     homepage = "https://github.com/lancedb/lance-namespace/tree/main/python/lance_namespace_urllib3_client";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

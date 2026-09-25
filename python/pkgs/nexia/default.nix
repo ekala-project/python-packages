@@ -45,6 +45,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python module for Nexia thermostats";
     homepage = "https://github.com/bdraco/nexia";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

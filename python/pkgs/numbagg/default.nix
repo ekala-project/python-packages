@@ -66,6 +66,5 @@ buildPythonPackage rec {
     description = "Fast N-dimensional aggregation functions with Numba";
     homepage = "https://github.com/numbagg/numbagg";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

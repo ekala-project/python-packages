@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Series of convenience functions to make basic image processing functions";
     mainProgram = "range-detector";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

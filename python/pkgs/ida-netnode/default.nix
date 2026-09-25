@@ -36,6 +36,5 @@ buildPythonPackage (finalAttrs: {
     description = "Humane API for storing and accessing persistent data in IDA Pro databases";
     homepage = "https://github.com/williballenthin/ida-netnode";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

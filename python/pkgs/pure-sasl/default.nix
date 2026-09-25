@@ -29,6 +29,5 @@ buildPythonPackage rec {
     description = "Reasonably high-level SASL client written in pure Python";
     homepage = "http://github.com/thobbs/pure-sasl";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

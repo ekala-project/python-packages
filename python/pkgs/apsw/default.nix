@@ -46,6 +46,5 @@ buildPythonPackage rec {
     description = "Python wrapper for the SQLite embedded relational database engine";
     homepage = "https://github.com/rogerbinns/apsw";
     license = lib.licenses.zlib;
-    maintainers = [ ];
   };
 }

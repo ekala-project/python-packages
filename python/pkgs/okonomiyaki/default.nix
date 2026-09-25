@@ -47,7 +47,6 @@ buildPythonPackage rec {
   meta = {
     description = "Experimental library aimed at consolidating a lot of low-level code used for Enthought's eggs";
     homepage = "https://github.com/enthought/okonomiyaki";
-    maintainers = [ ];
     license = lib.licenses.bsd3;
   };
 }

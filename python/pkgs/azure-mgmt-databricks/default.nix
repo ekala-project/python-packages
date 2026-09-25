@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "Microsoft Azure Data Bricks Management Client Library";
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/databricks/azure-mgmt-databricks";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

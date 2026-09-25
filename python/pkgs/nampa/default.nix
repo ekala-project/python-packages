@@ -30,6 +30,5 @@ buildPythonPackage {
     description = "Python implementation of the FLIRT technology";
     homepage = "https://github.com/thebabush/nampa";
     license = lib.licenses.lgpl3Only;
-    maintainers = [ ];
   };
 }

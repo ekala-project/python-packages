@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "WebSocket library for Trio";
     homepage = "https://github.com/HyperionGray/trio-websocket";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

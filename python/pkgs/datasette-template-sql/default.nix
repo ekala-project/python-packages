@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Datasette plugin for executing SQL queries from templates";
     homepage = "https://datasette.io/plugins/datasette-template-sql";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

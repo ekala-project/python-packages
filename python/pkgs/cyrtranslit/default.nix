@@ -29,7 +29,6 @@ buildPythonPackage rec {
     description = "Transliterate Cyrillic script to Latin script and vice versa";
     homepage = "https://github.com/opendatakosovo/cyrillic-transliteration";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 
 }

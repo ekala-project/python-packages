@@ -23,6 +23,5 @@ buildPythonPackage rec {
     description = "Legacy registered functions for spaCy backwards compatibility";
     homepage = "https://github.com/explosion/spacy-legacy";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

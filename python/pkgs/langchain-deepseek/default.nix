@@ -64,6 +64,5 @@ buildPythonPackage rec {
     description = "Integration package connecting DeepSeek and LangChain";
     homepage = "https://github.com/langchain-ai/langchain/tree/master/libs/partners/deepseek";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

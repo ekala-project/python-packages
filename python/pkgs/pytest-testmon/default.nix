@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "Pytest plug-in which automatically selects and re-executes only tests affected by recent changes";
     homepage = "https://github.com/tarpas/pytest-testmon/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

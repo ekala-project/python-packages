@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "Fully-managed intelligent event routing service that allows for uniform event consumption using a publish-subscribe model";
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/eventgrid/azure-eventgrid";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

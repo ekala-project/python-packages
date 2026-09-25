@@ -24,6 +24,5 @@ buildPythonPackage rec {
     description = "Makes working with XML feel like you are working with JSON";
     homepage = "https://github.com/martinblech/xmltodict";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

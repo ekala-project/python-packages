@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Library that can print Python objects in human readable format";
     homepage = "https://github.com/gaogaotiantian/objprint";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

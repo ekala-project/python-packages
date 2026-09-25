@@ -43,6 +43,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://github.com/Yelp/swagger_spec_validator";
     license = lib.licenses.asl20;
     description = "Validation of Swagger specifications";
-    maintainers = [ ];
   };
 })

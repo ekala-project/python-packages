@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Object Relational Manager for providing an object interface to your database";
     homepage = "https://www.sqlobject.org/";
     license = lib.licenses.lgpl21Only;
-    maintainers = [ ];
   };
 }

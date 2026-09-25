@@ -34,6 +34,5 @@ buildPythonPackage (finalAttrs: {
     description = "AppImage start scripts";
     homepage = "https://github.com/ssh-mitm/appimage";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 })

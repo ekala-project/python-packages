@@ -26,6 +26,5 @@ buildPythonPackage rec {
     description = "Python library for CMA evolution strategy";
     homepage = "https://github.com/CyberAgentAILab/cmaes";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

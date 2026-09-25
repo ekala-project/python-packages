@@ -46,6 +46,5 @@ buildPythonPackage rec {
     description = "Asyncio-based Interactive Connectivity Establishment (RFC 5245)";
     homepage = "https://github.com/aiortc/aioice";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

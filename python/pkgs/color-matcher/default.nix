@@ -44,7 +44,6 @@ buildPythonPackage {
     description = "Package enabling color transfer across images";
     homepage = "https://github.com/hahnec/color-matcher";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
     # requires py2app which is not packaged for darwin
     broken = stdenv.hostPlatform.isDarwin;
   };

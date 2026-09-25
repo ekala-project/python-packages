@@ -300,6 +300,5 @@ buildPythonPackage rec {
     description = "Allows your tests to easily mock out AWS Services";
     homepage = "https://github.com/getmoto/moto";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

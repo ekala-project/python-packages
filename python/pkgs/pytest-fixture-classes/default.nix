@@ -34,6 +34,5 @@ buildPythonPackage (finalAttrs: {
     description = "Fixtures as classes that work well with dependency injection, autocompletetion, type checkers, and language servers";
     homepage = "https://github.com/zmievsa/pytest-fixture-classes";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

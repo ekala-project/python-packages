@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Write Postgres triggers for your Django models";
     homepage = "https://github.com/Opus10/django-pgtrigger";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

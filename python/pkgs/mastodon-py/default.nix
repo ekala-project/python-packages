@@ -64,6 +64,5 @@ buildPythonPackage rec {
     description = "Python wrapper for the Mastodon API";
     homepage = "https://github.com/halcy/Mastodon.py";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

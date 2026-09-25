@@ -40,6 +40,5 @@ buildPythonPackage rec {
     description = "Universal Tensor Operations in Einstein-Inspired Notation for Python";
     homepage = "https://github.com/fferflo/einx";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

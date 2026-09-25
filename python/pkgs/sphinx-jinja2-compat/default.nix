@@ -42,6 +42,5 @@ buildPythonPackage rec {
     description = "Patches Jinja2 v3 to restore compatibility with earlier Sphinx versions";
     homepage = "https://github.com/sphinx-toolbox/sphinx-jinja2-compat";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

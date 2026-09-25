@@ -57,6 +57,5 @@ buildPythonPackage rec {
     description = "Python native client for easy interaction with a Weaviate instance";
     homepage = "https://github.com/weaviate/weaviate-python-client";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

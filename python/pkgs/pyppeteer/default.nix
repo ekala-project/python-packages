@@ -49,6 +49,5 @@ buildPythonPackage rec {
     mainProgram = "pyppeteer-install";
     homepage = "https://github.com/pyppeteer/pyppeteer";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

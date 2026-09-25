@@ -55,7 +55,6 @@ buildPythonPackage rec {
     description = "Approximate Nearest Neighbors in C++/Python optimized for memory usage and loading/saving to disk";
     homepage = "https://github.com/spotify/annoy";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     badPlatforms = [
       # Several tests fail with AssertionError
       lib.systems.inspect.patterns.isDarwin

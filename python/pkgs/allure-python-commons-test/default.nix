@@ -43,6 +43,5 @@ buildPythonPackage rec {
     description = "Just pack of hamcrest matchers for validation result in allure2 json format";
     homepage = "https://github.com/allure-framework/allure-python";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

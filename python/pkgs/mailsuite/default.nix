@@ -74,6 +74,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python package to simplify receiving, parsing, and sending email";
     homepage = "https://seanthegeek.github.io/mailsuite/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

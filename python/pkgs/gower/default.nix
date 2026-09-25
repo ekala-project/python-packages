@@ -42,6 +42,5 @@ buildPythonPackage {
     description = "Gower's distance calculation in Python";
     homepage = "https://github.com/wwwjk366/gower";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

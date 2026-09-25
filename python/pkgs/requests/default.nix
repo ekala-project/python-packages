@@ -48,6 +48,5 @@ buildPythonPackage (finalAttrs: {
     description = "HTTP library for Python";
     homepage = "http://docs.python-requests.org/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

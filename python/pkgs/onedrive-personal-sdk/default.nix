@@ -37,6 +37,5 @@ buildPythonPackage rec {
     description = "Package to interact with the Microsoft Graph API for personal OneDrives";
     homepage = "https://github.com/zweckj/onedrive-personal-sdk";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

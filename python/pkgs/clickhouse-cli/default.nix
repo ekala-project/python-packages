@@ -41,6 +41,5 @@ buildPythonPackage rec {
     mainProgram = "clickhouse-cli";
     homepage = "https://github.com/hatarist/clickhouse-cli";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

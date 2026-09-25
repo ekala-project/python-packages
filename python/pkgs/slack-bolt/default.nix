@@ -76,6 +76,5 @@ buildPythonPackage (finalAttrs: {
     description = "Framework to build Slack apps using Python";
     homepage = "https://github.com/slackapi/bolt-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

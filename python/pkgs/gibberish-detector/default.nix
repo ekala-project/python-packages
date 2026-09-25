@@ -27,6 +27,5 @@ buildPythonPackage (finalAttrs: {
     mainProgram = "gibberish-detector";
     homepage = "https://github.com/domanchi/gibberish-detector";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

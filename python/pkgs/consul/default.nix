@@ -119,6 +119,5 @@ buildPythonPackage rec {
     description = "Python client for Consul (https://www.consul.io/)";
     homepage = "https://github.com/criteo/py-consul";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

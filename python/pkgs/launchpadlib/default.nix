@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Script Launchpad through its web services interfaces. Officially supported";
     homepage = "https://help.launchpad.net/API/launchpadlib";
     license = lib.licenses.lgpl3Only;
-    maintainers = [ ];
   };
 }

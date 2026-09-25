@@ -29,7 +29,6 @@ buildPythonPackage rec {
     homepage = "https://github.com/adamchainz/blacken-docs";
     description = "Run Black on Python code blocks in documentation files";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "blacken-docs";
   };
 }

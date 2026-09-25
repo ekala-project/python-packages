@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Python mock SSH server for testing purposes";
     homepage = "https://github.com/carletes/mock-ssh-server";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

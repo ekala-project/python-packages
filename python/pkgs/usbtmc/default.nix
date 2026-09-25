@@ -23,6 +23,5 @@ buildPythonPackage rec {
     description = "Python implementation of the USBTMC instrument control protocol";
     homepage = "http://alexforencich.com/wiki/en/python-usbtmc/start";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -63,7 +63,6 @@ buildPythonPackage rec {
     description = "Toolkit for reproducible evaluation, diagnostic, and error analysis of speaker diarization systems";
     homepage = "https://github.com/pyannote/pyannote-metrics";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "pyannote-metrics";
   };
 }

@@ -32,6 +32,5 @@ buildPythonPackage {
     description = "Standalone module for Locality-Aware NMS";
     homepage = "https://github.com/gen-ko/lanms-neo";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

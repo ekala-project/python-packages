@@ -40,7 +40,6 @@ buildPythonPackage (finalAttrs: {
     description = "Pythonic library for reading/modifying/writing Gerber/Excellon/IPC-356 files";
     homepage = "https://github.com/jaseg/gerbonara";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "gerbonara";
   };
 })

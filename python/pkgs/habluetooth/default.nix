@@ -46,6 +46,5 @@ buildPythonPackage (finalAttrs: {
     description = "Library for high availability Bluetooth";
     homepage = "https://github.com/Bluetooth-Devices/habluetooth";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

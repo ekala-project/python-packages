@@ -46,6 +46,5 @@ buildPythonPackage (finalAttrs: {
     description = "Add support for commands that use configuration files to Click";
     homepage = "https://github.com/click-contrib/click-configfile";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

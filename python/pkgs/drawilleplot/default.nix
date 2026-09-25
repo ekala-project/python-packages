@@ -30,7 +30,6 @@ buildPythonPackage rec {
     description = "Matplotlib backend for graph output in unicode terminals using drawille";
     homepage = "https://github.com/gooofy/drawilleplot";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 }

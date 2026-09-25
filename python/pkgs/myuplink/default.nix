@@ -33,6 +33,5 @@ buildPythonPackage rec {
     description = "Module to interact with the myUplink API";
     homepage = "https://github.com/pajzo/myuplink";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

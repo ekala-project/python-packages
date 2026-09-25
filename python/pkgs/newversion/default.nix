@@ -35,7 +35,6 @@ buildPythonPackage rec {
     description = "PEP 440 version manager";
     homepage = "https://github.com/vemel/newversion";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "newversion";
   };
 }

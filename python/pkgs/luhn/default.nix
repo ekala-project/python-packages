@@ -27,6 +27,5 @@ buildPythonPackage rec {
     description = "Python module for generate and verify Luhn check digits";
     homepage = "https://github.com/mmcloughlin/luhn";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -60,6 +60,5 @@ buildPythonPackage (finalAttrs: {
     description = "Access HMI, AIA and MDI data with Python";
     homepage = "https://github.com/sunpy/drms";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 })

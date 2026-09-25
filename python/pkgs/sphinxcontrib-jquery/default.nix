@@ -50,6 +50,5 @@ buildPythonPackage rec {
     '';
     homepage = "https://github.com/sphinx-contrib/jquery";
     license = lib.licenses.bsd0;
-    maintainers = [ ];
   };
 }

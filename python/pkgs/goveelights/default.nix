@@ -26,6 +26,5 @@ buildPythonPackage rec {
     description = "Python module for interacting with the Govee API";
     homepage = "https://github.com/arcanearronax/govee_lights";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

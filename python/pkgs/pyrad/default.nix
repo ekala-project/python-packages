@@ -50,6 +50,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python RADIUS Implementation";
     homepage = "https://github.com/pyradius/pyrad";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

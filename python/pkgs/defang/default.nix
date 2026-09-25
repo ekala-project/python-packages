@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Module to defang and refang malicious URLs";
     homepage = "https://bitbucket.org/johannestaas/defang";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
   };
 }

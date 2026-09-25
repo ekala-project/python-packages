@@ -59,6 +59,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://github.com/Quansight-labs/intersphinx_registry";
     mainProgram = "intersphinx-registry";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

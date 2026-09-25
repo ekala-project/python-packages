@@ -38,6 +38,5 @@ buildPythonPackage (finalAttrs: {
     description = "Hatch build hook plugin to automatically generate manual pages";
     homepage = "https://github.com/damonlynch/hatch-argparse-manpage";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
   };
 })

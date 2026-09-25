@@ -36,6 +36,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/jupyterlab-contrib/jupyterlab-vim";
     license = lib.licenses.mit;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 }

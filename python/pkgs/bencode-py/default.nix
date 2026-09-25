@@ -32,6 +32,5 @@ buildPythonPackage (finalAttrs: {
     description = "Simple bencode parser (for Python 2, Python 3 and PyPy)";
     homepage = "https://github.com/fuzeman/bencode.py";
     license = lib.licenses.bitTorrent11;
-    maintainers = [ ];
   };
 })

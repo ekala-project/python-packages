@@ -52,6 +52,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://github.com/langchain-ai/langgraph/tree/main/libs/cli";
     mainProgram = "langgraph";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

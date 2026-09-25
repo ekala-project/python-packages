@@ -61,6 +61,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/zzzsochi/Flask-Gravatar";
     description = "Small and simple integration of gravatar into flask";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

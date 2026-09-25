@@ -54,6 +54,5 @@ buildPythonPackage rec {
     mainProgram = "habitipy";
     homepage = "https://github.com/ASMfreaK/habitipy";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

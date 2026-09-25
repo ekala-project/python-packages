@@ -43,6 +43,5 @@ buildPythonPackage {
     description = "Byte-pair embeddings in 275 languages";
     homepage = "https://github.com/bheinzerling/bpemb";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

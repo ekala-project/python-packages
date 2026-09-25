@@ -29,6 +29,5 @@ buildPythonPackage (finalAttrs: {
     description = "Typing stubs for tqdm";
     homepage = "https://pypi.org/project/types-tqdm/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

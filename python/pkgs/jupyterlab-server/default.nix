@@ -63,6 +63,5 @@ buildPythonPackage (finalAttrs: {
     description = "Set of server components for JupyterLab and JupyterLab like applications";
     homepage = "https://github.com/jupyterlab/jupyterlab_server";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

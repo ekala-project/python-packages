@@ -20,6 +20,5 @@ buildPythonPackage rec {
     description = "Handy Python library to validate, manipulate and generate strings";
     homepage = "https://github.com/daveoncode/python-string-utils";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

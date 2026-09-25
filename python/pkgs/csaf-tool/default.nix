@@ -38,6 +38,5 @@ buildPythonPackage rec {
     description = "CSAF generator and validator";
     homepage = "https://github.com/anthonyharrison/csaf";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

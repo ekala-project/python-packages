@@ -36,6 +36,5 @@ buildPythonPackage (finalAttrs: {
     description = "Client for the Meilisearch API";
     homepage = "https://github.com/meilisearch/meilisearch-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

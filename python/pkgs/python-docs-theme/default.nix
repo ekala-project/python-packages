@@ -31,6 +31,5 @@ buildPythonPackage (finalAttrs: {
     description = "Sphinx theme for CPython project";
     homepage = "https://github.com/python/python-docs-theme";
     license = lib.licenses.psfl;
-    maintainers = [ ];
   };
 })

@@ -75,6 +75,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python object-oriented interface for interacting with Amazon SageMaker resources";
     homepage = "https://github.com/aws/sagemaker-core";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

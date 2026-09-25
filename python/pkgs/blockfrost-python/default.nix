@@ -33,6 +33,5 @@ buildPythonPackage rec {
     description = "Python SDK for the Blockfrost.io API";
     homepage = "https://github.com/blockfrost/blockfrost-python";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

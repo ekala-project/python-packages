@@ -69,6 +69,5 @@ buildPythonPackage (finalAttrs: {
     description = "Distributed background task system for Python";
     homepage = "https://github.com/chrisguidry/docket";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

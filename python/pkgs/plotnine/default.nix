@@ -41,6 +41,5 @@ buildPythonPackage (finalAttrs: {
     description = "Grammar of graphics for Python";
     homepage = "https://plotnine.readthedocs.io/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

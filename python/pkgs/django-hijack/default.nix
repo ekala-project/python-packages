@@ -41,6 +41,5 @@ buildPythonPackage rec {
     description = "Allows superusers to hijack (=login as) and work on behalf of another user";
     homepage = "https://github.com/django-hijack/django-hijack";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

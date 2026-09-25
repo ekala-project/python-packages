@@ -25,6 +25,5 @@ buildPythonPackage rec {
     description = "issubclass() builtin that doesn't raise TypeError when arguments are not classes";
     homepage = "https://pypi.org/project/issubclass";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -31,6 +31,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Portable mixed-precision math, linear-algebra, & retrieval library with 2000+ SIMD kernels";
     homepage = "https://github.com/ashvardanian/NumKong/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

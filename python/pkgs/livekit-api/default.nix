@@ -42,7 +42,6 @@ buildPythonPackage rec {
     description = "LiveKit real-time and server SDKs for Python";
     homepage = "https://github.com/livekit/python-sdks/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 }

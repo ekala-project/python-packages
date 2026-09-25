@@ -39,6 +39,5 @@ buildPythonPackage rec {
     homepage = "http://pycollada.github.io/";
     license = lib.licenses.bsd3;
     platforms = with lib.platforms; linux ++ darwin;
-    maintainers = [ ];
   };
 }

@@ -35,7 +35,6 @@ buildPythonPackage rec {
     description = "Python module for detection of CPU features";
     homepage = "https://github.com/robbmcleod/cpufeature";
     license = lib.licenses.cc0;
-    maintainers = [ ];
     platforms = [
       "x86_64-linux"
       "x86_64-windows"

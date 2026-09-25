@@ -48,6 +48,5 @@ buildPythonPackage rec {
     description = "HTTP request/response parser for python in C";
     homepage = "https://github.com/benoitc/http-parser";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

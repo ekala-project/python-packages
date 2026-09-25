@@ -43,6 +43,5 @@ buildPythonPackage rec {
     description = "Sphinx extension to add markdown generation support";
     homepage = "https://github.com/liran-funaro/sphinx-markdown-builder";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

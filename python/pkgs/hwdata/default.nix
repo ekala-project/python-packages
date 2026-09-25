@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Python bindings to hwdata";
     homepage = "https://github.com/xsuchy/python-hwdata";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
   };
 }

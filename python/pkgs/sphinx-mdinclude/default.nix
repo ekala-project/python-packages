@@ -35,6 +35,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/omnilib/sphinx-mdinclude";
     description = "Sphinx extension for including or writing pages in Markdown format";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

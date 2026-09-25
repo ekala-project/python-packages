@@ -53,6 +53,5 @@ buildPythonPackage (finalAttrs: {
     description = "Transit Relay server for Magic-Wormhole";
     homepage = "https://github.com/magic-wormhole/magic-wormhole-transit-relay";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

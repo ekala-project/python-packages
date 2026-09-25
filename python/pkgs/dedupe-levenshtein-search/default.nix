@@ -40,6 +40,5 @@ buildPythonPackage rec {
     description = "Search through documents for approximately matching strings using Levenshtein distance";
     homepage = "https://github.com/dedupeio/Levenshtein_search";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

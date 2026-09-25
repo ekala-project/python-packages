@@ -30,6 +30,5 @@ buildPythonPackage rec {
     description = "Python 2 and 3 compatibility library";
     homepage = "https://github.com/benjaminp/six";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

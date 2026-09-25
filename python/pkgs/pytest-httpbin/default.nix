@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Test your HTTP library against a local copy of httpbin.org";
     homepage = "https://github.com/kevin1024/pytest-httpbin";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

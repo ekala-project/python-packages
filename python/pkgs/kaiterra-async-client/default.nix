@@ -29,6 +29,5 @@ buildPythonPackage rec {
     description = "Async Python client for Kaiterra API";
     homepage = "https://github.com/Michsior14/python-kaiterra-async-client";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

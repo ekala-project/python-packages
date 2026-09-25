@@ -37,6 +37,5 @@ buildPythonPackage rec {
     description = "Simple library and cli-tool to help you solve some debts settlement scenarios";
     mainProgram = "debts";
     license = lib.licenses.beerware;
-    maintainers = [ ];
   };
 }

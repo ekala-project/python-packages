@@ -23,6 +23,5 @@ buildPythonPackage rec {
     mainProgram = "json-merge-patch";
     homepage = "https://github.com/open-contracting/json-merge-patch";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

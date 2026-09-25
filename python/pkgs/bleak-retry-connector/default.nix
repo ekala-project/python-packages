@@ -37,6 +37,5 @@ buildPythonPackage (finalAttrs: {
     description = "Connector for Bleak Clients that handles transient connection failures";
     homepage = "https://github.com/bluetooth-devices/bleak-retry-connector";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

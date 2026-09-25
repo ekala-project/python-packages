@@ -25,6 +25,5 @@ buildPythonPackage rec {
     description = "Spec-compliant gitignore parser";
     homepage = "https://github.com/mherrmann/gitignore_parser";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

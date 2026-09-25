@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Pytest plugin for manipulating test data directories and files";
     homepage = "https://github.com/gabrielcnr/pytest-datadir";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

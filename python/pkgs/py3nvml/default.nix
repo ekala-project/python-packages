@@ -38,6 +38,5 @@ buildPythonPackage (finalAttrs: {
       bsd3
       bsd2
     ];
-    maintainers = [ ];
   };
 })

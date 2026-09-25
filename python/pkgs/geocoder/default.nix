@@ -47,6 +47,5 @@ buildPythonPackage (finalAttrs: {
     description = "Module for geocoding";
     homepage = "https://pypi.org/project/geocoder/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

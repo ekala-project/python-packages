@@ -43,6 +43,5 @@ buildPythonPackage rec {
     description = "Python client for the whois.cymru.com service";
     homepage = "https://github.com/JustinAzoff/python-cymruwhois";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

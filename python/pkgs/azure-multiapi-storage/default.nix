@@ -47,6 +47,5 @@ buildPythonPackage rec {
     description = "Microsoft Azure Storage Client Library for Python with multi API version support";
     homepage = "https://github.com/Azure/azure-multiapi-storage-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -25,6 +25,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python Async file IO library";
     homepage = "https://github.com/mosquito/caio";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

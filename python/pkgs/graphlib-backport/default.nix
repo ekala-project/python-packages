@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "Backport of the Python 3.9 graphlib module for Python 3.6+";
     homepage = "https://github.com/mariushelf/graphlib_backport";
     license = lib.licenses.psfl;
-    maintainers = [ ];
   };
 }

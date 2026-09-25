@@ -28,6 +28,5 @@ buildPythonPackage (finalAttrs: {
     description = "Library to create BloodHound OpenGraphs";
     homepage = "https://github.com/p0dalirius/bhopengraph";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

@@ -38,6 +38,5 @@ buildPythonPackage rec {
     description = "Extensions for using Django with htmx";
     homepage = "https://github.com/adamchainz/django-htmx";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

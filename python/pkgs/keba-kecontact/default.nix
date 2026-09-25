@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Python library for controlling KEBA charging stations";
     homepage = "https://github.com/dannerph/keba-kecontact";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

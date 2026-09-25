@@ -57,6 +57,5 @@ buildPythonPackage (finalAttrs: {
     description = "Bittensor drand integration for commit-reveal";
     homepage = "https://github.com/latent-to/bittensor-drand";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

@@ -33,6 +33,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://pypi.org/project/avro-python3/";
     license = lib.licenses.asl20;
 
-    maintainers = [ ];
   };
 })

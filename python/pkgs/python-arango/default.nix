@@ -94,6 +94,5 @@ buildPythonPackage rec {
     description = "Python Driver for ArangoDB";
     homepage = "https://github.com/ArangoDB-Community/python-arango";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

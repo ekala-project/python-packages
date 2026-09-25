@@ -81,6 +81,5 @@ buildPythonPackage rec {
     description = "Fancy curses interface to the Python interactive interpreter";
     homepage = "https://bpython-interpreter.org/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

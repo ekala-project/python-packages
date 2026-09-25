@@ -24,6 +24,5 @@ buildPythonPackage (finalAttrs: {
     description = "High-level Python API for accessing the Hetzner robot";
     mainProgram = "hetznerctl";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

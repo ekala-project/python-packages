@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Efficient APNs Client Library";
     homepage = "https://github.com/Fatal1ty/aioapns";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

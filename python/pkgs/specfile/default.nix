@@ -36,6 +36,5 @@ buildPythonPackage (finalAttrs: {
     description = "Library for parsing and manipulating RPM spec files";
     homepage = "https://github.com/packit/specfile";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

@@ -27,6 +27,5 @@ buildPythonPackage (finalAttrs: {
     description = "Template engine and code generation tool";
     homepage = "https://www.cheetahtemplate.org/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

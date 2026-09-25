@@ -27,7 +27,6 @@ buildPythonPackage rec {
   meta = {
     description = "Script tag with additional attributes for django.forms.Media";
     homepage = "https://github.com/matthiask/django-js-asset";
-    maintainers = [ ];
     license = lib.licenses.bsd3;
   };
 }

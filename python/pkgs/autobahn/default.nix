@@ -100,6 +100,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://crossbar.io/autobahn";
     downloadPage = "https://github.com/crossbario/autobahn-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

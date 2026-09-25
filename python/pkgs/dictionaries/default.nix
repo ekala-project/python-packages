@@ -20,6 +20,5 @@ buildPythonPackage rec {
   meta = {
     description = "Dict implementations with attribute access";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -31,6 +31,5 @@ buildPythonPackage {
     homepage = "https://github.com/jmriebold/BoilerPy3";
     description = "Python port of Boilerpipe library";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

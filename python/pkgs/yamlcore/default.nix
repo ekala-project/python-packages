@@ -32,6 +32,5 @@ buildPythonPackage (finalAttrs: {
     description = "YAML 1.2 Support for PyYAML";
     homepage = "https://github.com/perlpunk/pyyaml-core";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

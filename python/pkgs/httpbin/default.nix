@@ -60,6 +60,5 @@ buildPythonPackage rec {
     description = "HTTP Request and Response Service";
     homepage = "https://github.com/psf/httpbin";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

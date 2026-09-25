@@ -28,6 +28,5 @@ buildPythonPackage (finalAttrs: {
     description = "Chromium HSTS Preload list";
     homepage = "https://github.com/sethmlarson/hstspreload";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

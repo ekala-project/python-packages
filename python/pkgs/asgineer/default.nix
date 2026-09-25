@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Really thin ASGI web framework";
     homepage = "https://asgineer.readthedocs.io";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

@@ -50,6 +50,5 @@ buildPythonPackage rec {
     description = "Pure python ctypes wrapper for libsecp256k1";
     homepage = "https://github.com/spesmilo/electrum-ecc";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

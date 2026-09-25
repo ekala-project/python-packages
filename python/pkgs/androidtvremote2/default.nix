@@ -37,6 +37,5 @@ buildPythonPackage (finalAttrs: {
     description = "Library to interact with the Android TV Remote protocol v2";
     homepage = "https://github.com/tronikos/androidtvremote2";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

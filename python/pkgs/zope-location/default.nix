@@ -52,6 +52,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/zopefoundation/zope.location/";
     description = "Zope Location";
     license = lib.licenses.zpl21;
-    maintainers = [ ];
   };
 }

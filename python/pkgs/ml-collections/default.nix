@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "ML Collections is a library of Python collections designed for ML usecases";
     homepage = "https://github.com/google/ml_collections";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

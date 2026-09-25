@@ -110,7 +110,6 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://litestar.dev/";
     license = lib.licenses.mit;
     mainProgram = "litestar";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

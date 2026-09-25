@@ -68,6 +68,5 @@ buildPythonPackage (finalAttrs: {
     mainProgram = "safety";
     homepage = "https://github.com/pyupio/safety";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

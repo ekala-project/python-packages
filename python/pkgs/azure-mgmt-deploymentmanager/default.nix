@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "Microsoft Azure Deployment Manager Client Library for Python";
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/deploymentmanager/azure-mgmt-deploymentmanager";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

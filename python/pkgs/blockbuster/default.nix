@@ -29,6 +29,5 @@ buildPythonPackage rec {
     description = "Utility to detect blocking calls in the async event loop";
     homepage = "https://github.com/cbornet/blockbuster";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

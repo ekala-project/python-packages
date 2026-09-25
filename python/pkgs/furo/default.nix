@@ -88,6 +88,5 @@ buildPythonPackage rec {
     description = "Clean customizable documentation theme for Sphinx";
     homepage = "https://github.com/pradyunsg/furo";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

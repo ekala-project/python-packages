@@ -45,7 +45,6 @@ buildPythonPackage rec {
     description = "Check python packages from requirement.txt and report issues";
     homepage = "https://github.com/dhatim/python-license-check";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "liccheck";
   };
 }

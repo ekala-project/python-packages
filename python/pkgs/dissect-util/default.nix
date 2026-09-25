@@ -37,7 +37,6 @@ buildPythonPackage rec {
     description = "Dissect module implementing various utility functions for the other Dissect modules";
     homepage = "https://github.com/fox-it/dissect.util";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "dump-nskeyedarchiver";
   };
 }

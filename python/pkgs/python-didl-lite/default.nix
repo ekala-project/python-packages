@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "DIDL-Lite (Digital Item Declaration Language) tools for Python";
     homepage = "https://github.com/StevenLooman/python-didl-lite";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

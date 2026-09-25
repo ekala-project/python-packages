@@ -31,6 +31,5 @@ buildPythonPackage {
     description = "File format determination library";
     homepage = "https://github.com/floyernick/fleep-py";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

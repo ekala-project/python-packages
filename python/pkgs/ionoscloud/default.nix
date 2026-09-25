@@ -39,6 +39,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/ionos-cloud/sdk-python";
     description = "Python API client for ionoscloud";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

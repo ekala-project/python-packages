@@ -54,6 +54,5 @@ buildPythonPackage rec {
     description = "Read and write simple Python objects using HDF5";
     homepage = "https://github.com/h5io/h5io";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

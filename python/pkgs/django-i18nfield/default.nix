@@ -44,6 +44,5 @@ buildPythonPackage rec {
     description = "Store internationalized strings in Django models";
     homepage = "https://github.com/raphaelm/django-i18nfield";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

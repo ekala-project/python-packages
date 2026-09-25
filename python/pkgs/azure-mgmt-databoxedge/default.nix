@@ -38,6 +38,5 @@ buildPythonPackage rec {
     description = "Microsoft Azure Databoxedge Management Client Library for Python";
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/databox/azure-mgmt-databox";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

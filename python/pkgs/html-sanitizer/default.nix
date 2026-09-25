@@ -51,6 +51,5 @@ buildPythonPackage rec {
     description = "Allowlist-based and very opinionated HTML sanitizer";
     homepage = "https://github.com/matthiask/html-sanitizer";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

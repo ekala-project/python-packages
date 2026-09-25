@@ -46,6 +46,5 @@ buildPythonPackage (finalAttrs: {
     description = "Module for interacting with Adafruit IO";
     homepage = "https://github.com/adafruit/Adafruit_IO_Python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

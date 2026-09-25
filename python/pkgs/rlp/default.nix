@@ -30,6 +30,5 @@ buildPythonPackage rec {
     description = "RLP serialization library";
     homepage = "https://github.com/ethereum/pyrlp";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -37,6 +37,5 @@ buildPythonPackage rec {
     description = "Tools to fetch zoneinfo with asyncio";
     homepage = "https://github.com/bluetooth-devices/aiozoneinfo";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

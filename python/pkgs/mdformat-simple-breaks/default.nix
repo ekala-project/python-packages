@@ -37,6 +37,5 @@ buildPythonPackage (finalAttrs: {
     description = "Mdformat plugin to render thematic breaks using three dashes";
     homepage = "https://github.com/csala/mdformat-simple-breaks";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

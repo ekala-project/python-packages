@@ -66,6 +66,5 @@ stdenv.mkDerivation (finalAttrs: {
     pkgConfigModules = [ "blosc2" ];
     license = lib.licenses.bsd3;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

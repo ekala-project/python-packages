@@ -42,6 +42,5 @@ buildPythonPackage rec {
     description = "Python API for the Moonraker API";
     homepage = "https://github.com/cmroche/moonraker-api";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 }

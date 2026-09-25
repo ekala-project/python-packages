@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "Module to work with the AWS IP address ranges";
     homepage = "https://github.com/aws-samples/awsipranges";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

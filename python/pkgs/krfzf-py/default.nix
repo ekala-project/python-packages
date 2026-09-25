@@ -25,6 +25,5 @@ buildPythonPackage rec {
     downloadPage = "https://github.com/justfoolingaround/fzf.py";
     homepage = "https://pypi.org/project/krfzf-py/";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 }

@@ -26,6 +26,5 @@ buildPythonPackage rec {
       psfl
       zpl21
     ];
-    maintainers = [ ];
   };
 }

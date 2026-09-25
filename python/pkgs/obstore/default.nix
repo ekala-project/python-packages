@@ -47,6 +47,5 @@ buildPythonPackage (finalAttrs: {
     description = "Simple, high-throughput Python interface to S3, GCS & Azure Storage, powered by Rust";
     homepage = "https://github.com/developmentseed/obstore";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

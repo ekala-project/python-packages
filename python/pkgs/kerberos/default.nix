@@ -23,6 +23,5 @@ buildPythonPackage rec {
     description = "Kerberos high-level interface";
     homepage = "https://pypi.org/project/kerberos/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

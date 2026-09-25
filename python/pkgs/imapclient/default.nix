@@ -35,6 +35,5 @@ buildPythonPackage rec {
     homepage = "https://imapclient.readthedocs.io";
     description = "Easy-to-use, Pythonic and complete IMAP client library";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

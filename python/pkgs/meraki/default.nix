@@ -33,6 +33,5 @@ buildPythonPackage rec {
     description = "Cisco Meraki cloud-managed platform dashboard API python library";
     homepage = "https://github.com/meraki/dashboard-api-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

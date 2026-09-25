@@ -27,6 +27,5 @@ buildPythonPackage (finalAttrs: {
     description = "ECS (Entity Component System) for Python";
     homepage = "https://github.com/benmoran56/esper";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

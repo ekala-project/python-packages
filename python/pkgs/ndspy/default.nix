@@ -29,6 +29,5 @@ buildPythonPackage rec {
     description = "Python library for many Nintendo DS file formats";
     homepage = "https://github.com/RoadrunnerWMC/ndspy";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
   };
 }

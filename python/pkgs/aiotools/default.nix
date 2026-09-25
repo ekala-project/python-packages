@@ -41,6 +41,5 @@ buildPythonPackage (finalAttrs: {
     description = "Idiomatic asyncio utilities";
     homepage = "https://github.com/achimnol/aiotools";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

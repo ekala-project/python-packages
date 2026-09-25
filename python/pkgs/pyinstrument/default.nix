@@ -33,6 +33,5 @@ buildPythonPackage rec {
     mainProgram = "pyinstrument";
     homepage = "https://github.com/joerick/pyinstrument";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

@@ -39,6 +39,5 @@ buildPythonPackage {
     description = "Simple dataclasses configuration management for Python with hocon/json/yaml/properties/env-vars/dict/cli support";
     homepage = "https://github.com/zifeo/dataconf";
     license = lib.licenses.mpl20;
-    maintainers = [ ];
   };
 }

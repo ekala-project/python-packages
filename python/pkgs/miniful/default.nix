@@ -30,6 +30,5 @@ buildPythonPackage rec {
     description = "Minimal Fuzzy Library";
     homepage = "https://github.com/aresio/miniful";
     license = lib.licenses.lgpl3Only;
-    maintainers = [ ];
   };
 }

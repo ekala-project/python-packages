@@ -46,6 +46,5 @@ buildPythonPackage (finalAttrs: {
     description = "HTTP request adapter implementation for Kiota clients for Python";
     homepage = "https://github.com/microsoft/kiota-python/tree/main/packages/http/httpx";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

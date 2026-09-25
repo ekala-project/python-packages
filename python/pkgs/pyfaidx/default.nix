@@ -38,7 +38,6 @@ buildPythonPackage (finalAttrs: {
     description = "Python classes for indexing, retrieval, and in-place modification of FASTA files using a samtools compatible index";
     homepage = "https://github.com/mdshw5/pyfaidx";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     mainProgram = "faidx";
   };
 })

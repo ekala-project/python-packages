@@ -42,6 +42,5 @@ buildPythonPackage rec {
     description = "Python implementation of the UA Parser";
     homepage = "https://github.com/ua-parser/uap-python";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

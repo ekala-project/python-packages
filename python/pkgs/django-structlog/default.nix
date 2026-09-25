@@ -45,6 +45,5 @@ buildPythonPackage (finalAttrs: {
     description = "Structured Logging for Django";
     homepage = "https://github.com/jrobichaud/django-structlog";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

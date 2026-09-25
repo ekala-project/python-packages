@@ -25,6 +25,5 @@ buildPythonPackage rec {
     description = "Free, open-source package for using Python as a hardware description and verification language";
     homepage = "https://www.myhdl.org/";
     license = lib.licenses.lgpl21;
-    maintainers = [ ];
   };
 }

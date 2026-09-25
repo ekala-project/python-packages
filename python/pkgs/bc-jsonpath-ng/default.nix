@@ -34,6 +34,5 @@ buildPythonPackage (finalAttrs: {
     mainProgram = "bc_jsonpath_ng";
     homepage = "https://github.com/bridgecrewio/jsonpath-ng";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

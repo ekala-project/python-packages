@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Recursive Serialization for Django REST framework";
     homepage = "https://github.com/heywbj/django-rest-framework-recursive";
     license = lib.licenses.isc;
-    maintainers = [ ];
   };
 }

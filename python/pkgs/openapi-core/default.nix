@@ -81,6 +81,5 @@ buildPythonPackage rec {
     description = "Client-side and server-side support for the OpenAPI Specification v3";
     homepage = "https://github.com/python-openapi/openapi-core";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

@@ -45,6 +45,5 @@ buildPythonPackage (finalAttrs: {
     description = "WebGL-based 3D visualizer for Python";
     mainProgram = "meshcat-server";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

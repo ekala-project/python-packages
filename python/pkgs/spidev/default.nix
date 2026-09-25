@@ -25,7 +25,6 @@ buildPythonPackage rec {
     homepage = "https://github.com/doceme/py-spidev";
     description = "Python bindings for Linux SPI access through spidev";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 }

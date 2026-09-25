@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Python bindings for the LZO data compression library";
     homepage = "https://github.com/jd-boyd/python-lzo";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
   };
 }

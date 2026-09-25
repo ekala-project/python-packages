@@ -34,6 +34,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/zopefoundation/zope.i18nmessageid";
     description = "Message Identifiers for internationalization";
     license = lib.licenses.zpl21;
-    maintainers = [ ];
   };
 }

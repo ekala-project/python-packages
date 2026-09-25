@@ -23,6 +23,5 @@ buildPythonPackage rec {
     description = "Python binding of ptrace library";
     homepage = "https://github.com/vstinner/python-ptrace";
     license = lib.licenses.gpl2;
-    maintainers = [ ];
   };
 }

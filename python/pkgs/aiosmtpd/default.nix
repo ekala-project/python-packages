@@ -58,6 +58,5 @@ buildPythonPackage rec {
       standard library's smtpd.py module.
     '';
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

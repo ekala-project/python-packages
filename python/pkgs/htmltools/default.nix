@@ -41,6 +41,5 @@ buildPythonPackage rec {
     description = "Tools for HTML generation and output";
     homepage = "https://github.com/posit-dev/py-htmltools";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

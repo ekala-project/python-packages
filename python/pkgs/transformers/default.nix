@@ -50,6 +50,5 @@ buildPythonPackage (finalAttrs: {
     mainProgram = "transformers-cli";
     license = lib.licenses.asl20;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

@@ -27,6 +27,5 @@ buildPythonPackage rec {
     description = "Test equality of unordered collections in pytest";
     homepage = "https://github.com/utapyngo/pytest-unordered";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

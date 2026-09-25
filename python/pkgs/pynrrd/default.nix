@@ -32,6 +32,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/mhe/pynrrd";
     description = "Simple pure-Python reader for NRRD files";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -23,6 +23,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python to JavaScript compiler";
     homepage = "https://pscript.readthedocs.io";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 })

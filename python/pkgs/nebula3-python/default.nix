@@ -56,6 +56,5 @@ buildPythonPackage rec {
     description = "Client API of Nebula Graph in Python";
     homepage = "https://github.com/vesoft-inc/nebula-python";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

@@ -31,7 +31,6 @@ buildPythonPackage rec {
   meta = {
     description = "Sitemap generator for Sphinx";
     homepage = "https://github.com/jdillard/sphinx-sitemap";
-    maintainers = [ ];
     license = lib.licenses.mit;
   };
 }

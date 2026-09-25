@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "LlamaIndex Vector Store Integration for Google";
     homepage = "https://github.com/run-llama/llama_index/tree/main/llama-index-integrations/vector_stores/llama-index-vector-stores-google";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

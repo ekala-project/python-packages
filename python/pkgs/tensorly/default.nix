@@ -49,6 +49,5 @@ buildPythonPackage rec {
     description = "Tensor learning in Python";
     homepage = "https://tensorly.org/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

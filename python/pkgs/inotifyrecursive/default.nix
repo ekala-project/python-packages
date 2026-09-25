@@ -28,6 +28,5 @@ buildPythonPackage (finalAttrs: {
     description = "Simple recursive inotify watches for Python";
     homepage = "https://github.com/letorbi/inotifyrecursive";
     license = lib.licenses.lgpl3Plus;
-    maintainers = [ ];
   };
 })

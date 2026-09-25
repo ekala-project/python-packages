@@ -36,6 +36,5 @@ buildPythonPackage (finalAttrs: {
     description = "Pytest plugin for URL based tests";
     homepage = "https://github.com/pytest-dev/pytest-base-url";
     license = lib.licenses.mpl20;
-    maintainers = [ ];
   };
 })

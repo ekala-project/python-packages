@@ -41,6 +41,5 @@ buildPythonPackage rec {
     description = "Control JupyterLab from Python notebooks";
     homepage = "https://github.com/jtpio/ipylab";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

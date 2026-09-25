@@ -37,6 +37,5 @@ buildPythonPackage (finalAttrs: {
     description = "Async Python library for Mitsubishi minisplit control via Kumo Cloud and local API";
     homepage = "https://github.com/nikolairahimi/mitsubishi-comfort";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

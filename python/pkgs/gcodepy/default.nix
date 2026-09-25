@@ -25,6 +25,5 @@ buildPythonPackage rec {
     description = "G-code generator for 3D printers that use Marlin Firmware";
     homepage = "https://github.com/rmeno12/gcodepy";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

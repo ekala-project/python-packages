@@ -45,6 +45,5 @@ buildPythonPackage rec {
     description = "Interactive HTML pretty-printer for machine learning research in IPython notebooks";
     homepage = "https://github.com/google-deepmind/treescope";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

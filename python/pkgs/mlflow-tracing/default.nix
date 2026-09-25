@@ -54,6 +54,5 @@ buildPythonPackage (finalAttrs: {
     description = "Open-Source SDK for observability and monitoring GenAI applications";
     homepage = "https://github.com/mlflow/mlflow/tree/master/libs/tracing";
     inherit (mlflow.meta) license;
-    maintainers = [ ];
   };
 })

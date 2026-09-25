@@ -33,6 +33,5 @@ buildPythonPackage (finalAttrs: {
     description = "CPython bindings for zopfli";
     homepage = "https://github.com/obp/py-zopfli";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

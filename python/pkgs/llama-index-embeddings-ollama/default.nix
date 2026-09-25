@@ -38,6 +38,5 @@ buildPythonPackage rec {
     description = "LlamaIndex Llms Integration for Ollama";
     homepage = "https://github.com/run-llama/llama_index/tree/main/llama-index-integrations/embeddings/llama-index-embeddings-ollama";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

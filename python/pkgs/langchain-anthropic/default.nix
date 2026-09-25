@@ -49,6 +49,5 @@ buildPythonPackage (finalAttrs: {
     description = "Build LangChain applications with Anthropic";
     homepage = "https://github.com/langchain-ai/langchain/tree/master/libs/partners/anthropic";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

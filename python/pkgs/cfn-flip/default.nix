@@ -32,6 +32,5 @@ buildPythonPackage rec {
     mainProgram = "cfn-flip";
     homepage = "https://github.com/awslabs/aws-cfn-template-flip";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

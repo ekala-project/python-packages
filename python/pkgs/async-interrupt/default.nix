@@ -26,6 +26,5 @@ buildPythonPackage rec {
     description = "Context manager to raise an exception when a future is done";
     homepage = "https://github.com/bdraco/async_interrupt";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

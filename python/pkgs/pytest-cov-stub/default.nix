@@ -17,6 +17,5 @@ buildPythonPackage {
   meta = {
     description = "Nixpkgs checkPhase stub for pytest-cov";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

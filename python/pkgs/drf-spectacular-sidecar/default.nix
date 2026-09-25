@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Serve self-contained distribution builds of Swagger UI and Redoc with Django";
     homepage = "https://github.com/tfranzel/drf-spectacular-sidecar";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

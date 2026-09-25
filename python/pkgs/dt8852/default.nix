@@ -32,7 +32,6 @@ buildPythonPackage rec {
     description = "Dt8852 is a cross-platform Python package and module for reading and controlling CEM DT-8852 and equivalent Sound Level Meter and Data Logger devices";
     homepage = "https://codeberg.org/randysimons/dt8852";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     mainProgram = "dt8852";
   };
 }

@@ -31,6 +31,5 @@ buildPythonPackage rec {
     mainProgram = "segno";
     homepage = "https://github.com/heuer/segno/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

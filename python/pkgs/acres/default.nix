@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "Data-loading utility for Python";
     homepage = "https://github.com/nipreps/acres";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

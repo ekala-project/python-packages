@@ -51,6 +51,5 @@ buildPythonPackage (finalAttrs: {
     description = "Extend Django sessions with a foreign key back to the user, allowing enumerating all user's sessions";
     homepage = "https://github.com/jazzband/django-user-sessions";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

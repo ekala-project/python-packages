@@ -48,6 +48,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/flask-api/flask-api";
     description = "Browsable web APIs for Flask";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

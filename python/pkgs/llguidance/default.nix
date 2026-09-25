@@ -60,6 +60,5 @@ buildPythonPackage (finalAttrs: {
     description = "Super-fast Structured Outputs";
     homepage = "https://github.com/guidance-ai/llguidance";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

@@ -50,6 +50,5 @@ buildPythonPackage (finalAttrs: {
     description = "Collection of classes implementing the pen protocol for manipulating glyphs";
     homepage = "https://github.com/robotools/fontPens";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

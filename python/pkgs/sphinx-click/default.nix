@@ -55,6 +55,5 @@ buildPythonPackage rec {
     description = "Sphinx extension that automatically documents click applications";
     homepage = "https://github.com/click-contrib/sphinx-click";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

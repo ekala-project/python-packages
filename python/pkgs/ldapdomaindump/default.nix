@@ -37,6 +37,5 @@ buildPythonPackage rec {
     description = "Active Directory information dumper via LDAP";
     homepage = "https://github.com/dirkjanm/ldapdomaindump/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

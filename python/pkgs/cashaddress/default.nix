@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Python tool for convert bitcoin cash legacy addresses";
     homepage = "https://github.com/oskyk/cashaddress";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 }

@@ -50,6 +50,5 @@ buildPythonPackage rec {
     description = "Python interface to the Met Office's Datapoint API";
     homepage = "https://github.com/Perseudonymous/datapoint-python";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 }

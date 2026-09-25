@@ -60,6 +60,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/Neoteroi/mkdocs-plugins";
     description = "Plugins for MkDocs";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

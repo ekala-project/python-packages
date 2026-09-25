@@ -40,7 +40,6 @@ buildPythonPackage rec {
     description = "Wizarding tools for interacting with the Python dataclasses module";
     homepage = "https://github.com/rnag/dataclass-wizard";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "wiz";
   };
 }

@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Module for social authentication/registration mechanism";
     homepage = "https://github.com/python-social-auth/social-app-django";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

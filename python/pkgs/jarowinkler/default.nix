@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "Library for fast approximate string matching using Jaro and Jaro-Winkler similarity";
     homepage = "https://github.com/maxbachmann/JaroWinkler";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

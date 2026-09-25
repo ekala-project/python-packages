@@ -36,6 +36,5 @@ buildPythonPackage (finalAttrs: {
     description = "Library for recovering Bluetooth adapters";
     homepage = "https://github.com/Bluetooth-Devices/bluetooth-auto-recovery";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

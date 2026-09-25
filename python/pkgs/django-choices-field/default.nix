@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Django field that set/get django's new TextChoices/IntegerChoices enum";
     homepage = "https://github.com/bellini666/django-choices-field";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

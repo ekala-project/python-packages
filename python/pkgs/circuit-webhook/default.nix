@@ -28,6 +28,5 @@ buildPythonPackage (finalAttrs: {
     description = "Module for Unify Circuit API webhooks";
     homepage = "https://github.com/braam/unify/tree/master/circuit-webhook-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

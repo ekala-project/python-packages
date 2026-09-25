@@ -105,6 +105,5 @@ buildPythonPackage (finalAttrs: {
     description = "Tools to help you work with Mistral models";
     homepage = "https://github.com/mistralai/mistral-common";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

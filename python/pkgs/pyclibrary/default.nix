@@ -35,6 +35,5 @@ buildPythonPackage (finalAttrs: {
     description = "C parser and ctypes automation for python";
     homepage = "https://github.com/MatthieuDartiailh/pyclibrary";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

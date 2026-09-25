@@ -36,6 +36,5 @@ buildPythonPackage (finalAttrs: {
     description = "Alibaba Cloud Elastic Compute Service (20140526) SDK Library for Python";
     homepage = "https://pypi.org/project/alibabacloud-ecs20140526/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

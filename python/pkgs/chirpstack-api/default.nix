@@ -39,6 +39,5 @@ buildPythonPackage (finalAttrs: {
     description = "ChirpStack gRPC API message and service wrappers for Python";
     homepage = "https://github.com/brocaar/chirpstack-api";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

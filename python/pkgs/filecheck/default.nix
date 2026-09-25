@@ -29,6 +29,5 @@ buildPythonPackage rec {
     license = lib.licenses.asl20;
     description = "Python-native clone of LLVMs FileCheck tool";
     mainProgram = "filecheck";
-    maintainers = [ ];
   };
 }

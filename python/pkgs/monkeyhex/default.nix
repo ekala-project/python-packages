@@ -27,6 +27,5 @@ buildPythonPackage rec {
     description = "Small library to assist users of the python shell who work in contexts where printed numbers are more usefully viewed in hexadecimal";
     homepage = "https://github.com/rhelmot/monkeyhex";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

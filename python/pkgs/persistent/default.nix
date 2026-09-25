@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Automatic persistence for Python objects";
     homepage = "https://github.com/zopefoundation/persistent/";
     license = lib.licenses.zpl21;
-    maintainers = [ ];
   };
 }

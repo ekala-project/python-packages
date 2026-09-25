@@ -23,6 +23,5 @@ buildPythonPackage rec {
     description = "Compression using the Heatshrink algorithm";
     homepage = "https://github.com/eerimoq/pyheatshrink";
     license = lib.licenses.isc;
-    maintainers = [ ];
   };
 }

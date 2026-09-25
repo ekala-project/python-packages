@@ -48,6 +48,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/mbr/flask-bootstrap";
     description = "Ready-to-use Twitter-bootstrap for use in Flask";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

@@ -40,6 +40,5 @@ buildPythonPackage rec {
     description = "Wrapper around various text markup languages";
     homepage = "https://github.com/retext-project/pymarkups";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

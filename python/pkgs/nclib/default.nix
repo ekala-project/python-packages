@@ -26,7 +26,6 @@ buildPythonPackage rec {
     description = "Python module that provides netcat features";
     homepage = "https://nclib.readthedocs.io/";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "serve-stdio";
   };
 }

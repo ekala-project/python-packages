@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Separate project for HTML cleaning functionalities copied from lxml.html.clean";
     homepage = "https://github.com/fedora-python/lxml_html_clean/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

@@ -70,6 +70,5 @@ buildPythonPackage (finalAttrs: {
     description = "Library with a Postgres implementation of LangGraph checkpoint saver";
     homepage = "https://github.com/langchain-ai/langgraph/tree/main/libs/checkpoint-postgres";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

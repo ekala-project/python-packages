@@ -77,6 +77,5 @@ buildPythonPackage rec {
     description = "CTAP (client-to-authenticator-protocol) device backed by python's keyring library";
     homepage = "https://github.com/dany74q/ctap-keyring-device";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

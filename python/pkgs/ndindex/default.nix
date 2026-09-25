@@ -48,6 +48,5 @@ buildPythonPackage rec {
     description = "Python library for manipulating indices of ndarrays";
     homepage = "https://github.com/Quansight-Labs/ndindex";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

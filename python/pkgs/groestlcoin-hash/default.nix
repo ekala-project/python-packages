@@ -20,7 +20,6 @@ buildPythonPackage rec {
   meta = {
     description = "Bindings for groestl key derivation function library used in Groestlcoin";
     homepage = "https://pypi.org/project/groestlcoin_hash/";
-    maintainers = [ ];
     license = lib.licenses.mit;
   };
 }

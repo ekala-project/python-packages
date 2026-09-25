@@ -32,6 +32,5 @@ buildPythonPackage {
     description = "Backport of Python 3.11 asyncio.Runner";
     homepage = "https://github.com/samypr100/backports.asyncio.runner";
     license = lib.licenses.psfl;
-    maintainers = [ ];
   };
 }

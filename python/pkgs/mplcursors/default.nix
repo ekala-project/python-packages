@@ -47,6 +47,5 @@ buildPythonPackage rec {
     description = "Interactive data selection cursors for Matplotlib";
     homepage = "https://github.com/anntzer/mplcursors";
     license = lib.licenses.zlib;
-    maintainers = [ ];
   };
 }

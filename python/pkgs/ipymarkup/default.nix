@@ -25,6 +25,5 @@ buildPythonPackage rec {
     description = "Collection of NLP visualizations for NER and syntax tree markup";
     homepage = "https://github.com/natasha/ipymarkup";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

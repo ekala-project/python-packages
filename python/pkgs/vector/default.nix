@@ -41,6 +41,5 @@ buildPythonPackage (finalAttrs: {
     description = "Library for 2D, 3D, and Lorentz vectors, especially arrays of vectors, to solve common physics problems in a NumPy-like way";
     homepage = "https://github.com/scikit-hep/vector";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

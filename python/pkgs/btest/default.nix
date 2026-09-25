@@ -29,6 +29,5 @@ buildPythonPackage rec {
     description = "Generic Driver for Powerful System Tests";
     homepage = "https://github.com/zeek/btest";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

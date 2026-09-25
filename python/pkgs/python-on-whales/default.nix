@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "Docker client for Python, designed to be fun and intuitive";
     homepage = "https://github.com/gabrieldemarmiesse/python-on-whales";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

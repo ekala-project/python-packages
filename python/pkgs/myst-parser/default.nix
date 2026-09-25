@@ -58,6 +58,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://myst-parser.readthedocs.io/";
     # changelog = "https://raw.githubusercontent.com/executablebooks/MyST-Parser/${finalAttrs.src.tag}/CHANGELOG.md";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "Python-bindings for CityHash, a fast non-cryptographic hash algorithm";
     homepage = "https://github.com/xzkostyan/python-cityhash";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

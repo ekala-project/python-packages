@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "Llama-index node_parser docling integration";
     homepage = "https://pypi.org/project/llama-index-node-parser-docling/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

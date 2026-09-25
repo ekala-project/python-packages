@@ -60,6 +60,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://bambinos.github.io/formulae";
     description = "Formulas for mixed-effects models in Python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

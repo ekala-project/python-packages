@@ -25,6 +25,5 @@ buildPythonPackage rec {
     description = "Sphinx extension to add asyncio-specific markups";
     homepage = "https://github.com/aio-libs/sphinxcontrib-asyncio";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

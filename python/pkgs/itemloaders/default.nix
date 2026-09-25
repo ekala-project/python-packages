@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Library to populate items using XPath and CSS with a convenient API";
     homepage = "https://github.com/scrapy/itemloaders";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

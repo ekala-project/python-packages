@@ -26,6 +26,5 @@ buildPythonPackage rec {
     description = "eBusd python integration library";
     homepage = "https://github.com/CrazYoshi/ebusdpy";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

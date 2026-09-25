@@ -51,6 +51,5 @@ buildPythonPackage rec {
     description = "APScheduler for Django";
     homepage = "https://github.com/jcass77/django-apscheduler";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

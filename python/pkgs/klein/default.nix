@@ -59,6 +59,5 @@ buildPythonPackage rec {
     description = "Klein Web Micro-Framework";
     homepage = "https://github.com/twisted/klein";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

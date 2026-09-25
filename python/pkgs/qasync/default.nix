@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Allows coroutines to be used in PyQt/PySide applications by providing an implementation of the PEP 3156 event-loop";
     homepage = "https://github.com/CabbageDevelopment/qasync";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

@@ -46,6 +46,5 @@ buildPythonPackage (finalAttrs: {
     description = "Sphinx extension for creating tabbed content when building HTML";
     homepage = "https://github.com/executablebooks/sphinx-tabs";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

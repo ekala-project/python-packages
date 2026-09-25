@@ -47,6 +47,5 @@ buildPythonPackage rec {
     description = "Flexible and powerful hierarchical key-value store for your Django models";
     homepage = "https://github.com/raphaelm/django-hierarkey";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

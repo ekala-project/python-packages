@@ -33,6 +33,5 @@ buildPythonPackage rec {
     description = "Set of python bindings for keyutils";
     homepage = "https://github.com/sassoftware/python-keyutils";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

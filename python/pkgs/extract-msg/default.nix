@@ -51,6 +51,5 @@ buildPythonPackage (finalAttrs: {
     description = "Extracts emails and attachments saved in Microsoft Outlook's .msg files";
     homepage = "https://github.com/TeamMsgExtractor/msg-extractor";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 })

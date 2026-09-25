@@ -56,6 +56,5 @@ buildPythonPackage rec {
     description = "Hierachical Explainable Behaviors using Graphs";
     homepage = "https://github.com/IRLL/HEB_graphs";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 }

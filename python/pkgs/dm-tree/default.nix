@@ -70,6 +70,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python library for working with nested data structures";
     homepage = "https://github.com/deepmind/tree";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

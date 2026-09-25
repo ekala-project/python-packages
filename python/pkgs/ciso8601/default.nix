@@ -25,6 +25,5 @@ buildPythonPackage rec {
     description = "Fast ISO8601 date time parser for Python written in C";
     homepage = "https://github.com/closeio/ciso8601";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

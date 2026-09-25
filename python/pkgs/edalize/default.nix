@@ -49,6 +49,5 @@ buildPythonPackage rec {
     mainProgram = "el_docker";
     homepage = "https://github.com/olofk/edalize";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

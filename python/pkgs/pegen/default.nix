@@ -29,6 +29,5 @@ buildPythonPackage rec {
     description = "Library to generate PEG parsers";
     homepage = "https://github.com/we-like-parsers/pegen";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

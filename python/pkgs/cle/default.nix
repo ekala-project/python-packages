@@ -59,6 +59,5 @@ buildPythonPackage rec {
     description = "Python loader for many binary formats";
     homepage = "https://github.com/angr/cle";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

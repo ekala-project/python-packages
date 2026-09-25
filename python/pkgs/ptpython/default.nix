@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "Advanced Python REPL";
     homepage = "https://github.com/prompt-toolkit/ptpython";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

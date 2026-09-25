@@ -22,7 +22,6 @@ buildPythonPackage rec {
     description = "Python serialization and RPC framework";
     homepage = "https://github.com/apache/avro";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "avro";
   };
 }

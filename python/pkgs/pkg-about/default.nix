@@ -45,6 +45,5 @@ buildPythonPackage rec {
     description = "Python metadata sharing at runtime";
     homepage = "https://github.com/karpierz/pkg_about/";
     license = lib.licenses.zlib;
-    maintainers = [ ];
   };
 }

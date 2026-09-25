@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "Prototype for SAT-based dependency handling";
     homepage = "https://github.com/enthought/sat-solver";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

@@ -55,6 +55,5 @@ buildPythonPackage rec {
       The AWS Secrets Manager Python caching client enables in-process caching of secrets for Python applications.
     '';
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

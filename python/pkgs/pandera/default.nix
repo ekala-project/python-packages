@@ -122,6 +122,5 @@ buildPythonPackage (finalAttrs: {
     description = "Light-weight, flexible, and expressive statistical data testing library";
     homepage = "https://pandera.readthedocs.io";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

@@ -48,6 +48,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python module to converts pictures into ASCII art";
     homepage = "https://github.com/LeandroBarone/python-ascii_magic";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

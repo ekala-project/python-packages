@@ -45,6 +45,5 @@ buildPythonPackage (finalAttrs: {
     description = "Manipulate JSON-like data with NumPy-like idioms";
     homepage = "https://github.com/scikit-hep/awkward";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

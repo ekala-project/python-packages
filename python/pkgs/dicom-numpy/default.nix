@@ -42,6 +42,5 @@ buildPythonPackage rec {
     description = "Read DICOM files into Numpy arrays";
     homepage = "https://github.com/innolitics/dicom-numpy";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

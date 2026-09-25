@@ -29,6 +29,5 @@ buildPythonPackage rec {
     description = "Python package fetch data from Yandex maps";
     homepage = "https://github.com/devbis/aioymaps";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

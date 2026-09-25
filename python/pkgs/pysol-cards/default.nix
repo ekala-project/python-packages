@@ -27,6 +27,5 @@ buildPythonPackage rec {
     mainProgram = "pysol_cards";
     homepage = "https://github.com/shlomif/pysol_cards";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Automatic __slots__ for your Python classes";
     homepage = "https://github.com/cjrh/autoslot";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

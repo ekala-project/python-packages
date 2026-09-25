@@ -62,6 +62,5 @@ buildPythonPackage rec {
     description = "Programmable browser for functional black-box tests";
     homepage = "https://github.com/zopefoundation/zope.testbrowser";
     license = lib.licenses.zpl21;
-    maintainers = [ ];
   };
 }

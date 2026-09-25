@@ -44,6 +44,5 @@ buildPythonPackage rec {
     description = "Tools for converting python data types";
     homepage = "https://github.com/bluetooth-devices/convertertools";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

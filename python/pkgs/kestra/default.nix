@@ -45,6 +45,5 @@ buildPythonPackage (finalAttrs: {
     description = "Infinitely scalable orchestration and scheduling platform, creating, running, scheduling, and monitoring millions of complex pipelines";
     homepage = "https://github.com/kestra-io/libs";
     license = lib.licenses.apsl20;
-    maintainers = [ ];
   };
 })

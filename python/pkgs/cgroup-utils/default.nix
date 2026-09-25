@@ -34,7 +34,6 @@ buildPythonPackage rec {
     description = "Utility tools for control groups of Linux";
     homepage = "https://github.com/peo3/cgroup-utils";
     mainProgram = "cgutil";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     license = lib.licenses.gpl2Plus;
   };

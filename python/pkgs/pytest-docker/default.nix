@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Docker-based integration tests";
     homepage = "https://github.com/avast/pytest-docker";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

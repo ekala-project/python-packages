@@ -42,6 +42,5 @@ buildPythonPackage rec {
     description = "Python API for KEF speakers";
     homepage = "https://github.com/basnijholt/aiokef";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

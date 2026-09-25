@@ -22,6 +22,5 @@ buildPythonPackage rec {
     description = "Module to handle code and condifuration";
     homepage = "https://github.com/HBNetwork/python-decouple";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

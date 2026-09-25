@@ -39,6 +39,5 @@ buildPythonPackage (finalAttrs: {
     description = "Protobufs for Google Access Context Manager";
     homepage = "https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-access-context-manager";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

@@ -32,6 +32,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/captin411/ofxhome";
     description = "ofxhome.com financial institution lookup REST client";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

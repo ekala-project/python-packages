@@ -41,6 +41,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/ml31415/numpy-groupies";
     description = "Optimised tools for group-indexing operations: aggregated sum and more";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

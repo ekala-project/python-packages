@@ -53,7 +53,6 @@ buildPythonPackage {
   meta = {
     description = "SDK to integrate with Open Plantbook API";
     homepage = "https://github.com/slaxor505/openplantbook-sdk-py";
-    maintainers = [ ];
     license = lib.licenses.mit;
   };
 }

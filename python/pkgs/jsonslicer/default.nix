@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Stream JSON parser for Python";
     homepage = "https://github.com/AMDmi3/jsonslicer";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -27,6 +27,5 @@ buildPythonPackage rec {
     mainProgram = "spark-parser-coverage";
     homepage = "https://github.com/rocky/python-spark";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

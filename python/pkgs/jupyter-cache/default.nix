@@ -44,6 +44,5 @@ buildPythonPackage rec {
     mainProgram = "jcache";
     homepage = "https://github.com/executablebooks/jupyter-cache";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

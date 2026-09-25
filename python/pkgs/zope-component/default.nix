@@ -64,6 +64,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/zopefoundation/zope.component";
     description = "Zope Component Architecture";
     license = lib.licenses.zpl21;
-    maintainers = [ ];
   };
 }

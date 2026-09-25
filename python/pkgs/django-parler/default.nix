@@ -40,6 +40,5 @@ buildPythonPackage rec {
     description = "Simple Django model translations without nasty hacks";
     homepage = "https://github.com/django-parler/django-parler";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

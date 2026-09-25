@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Helpful functions for Python";
     homepage = "https://github.com/domdfcoding/domdf_python_tools";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Python library which helps in using nmap";
     homepage = "https://xael.org/pages/python-nmap-en.html";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
   };
 }

@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "Async client for Essent dynamic energy prices";
     homepage = "https://github.com/jaapp/py-essent-dynamic-pricing";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

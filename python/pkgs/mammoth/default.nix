@@ -38,6 +38,5 @@ buildPythonPackage rec {
     description = "Convert Word documents (.docx files) to HTML";
     homepage = "https://github.com/mwilliamson/python-mammoth";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

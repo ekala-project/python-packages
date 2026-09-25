@@ -51,6 +51,5 @@ buildPythonPackage rec {
     description = "Server-Sent Event python client library based on aiohttp";
     homepage = "https://github.com/compat-fork/aiohttp-sse-client";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

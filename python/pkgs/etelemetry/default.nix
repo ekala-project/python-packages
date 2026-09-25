@@ -55,6 +55,5 @@ buildPythonPackage (finalAttrs: {
     description = "Lightweight python client to communicate with the etelemetry server";
     homepage = "https://github.com/sensein/etelemetry-client";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

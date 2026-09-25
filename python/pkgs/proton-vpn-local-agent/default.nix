@@ -64,6 +64,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/ProtonVPN/local-agent-rs";
     license = lib.licenses.gpl3Only;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 }

@@ -75,6 +75,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/jmaupetit/md2pdf";
     license = lib.licenses.mit;
     mainProgram = "md2pdf";
-    maintainers = [ ];
   };
 }

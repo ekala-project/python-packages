@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "ListenBrainz tools for matching metadata to and from MusicBrainz";
     homepage = "https://github.com/metabrainz/listenbrainz-matching-tools";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
   };
 }

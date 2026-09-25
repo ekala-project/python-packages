@@ -26,6 +26,5 @@ buildPythonPackage rec {
     description = "Place to exercise inference methods to help make them faster, leaner and more robust";
     homepage = "https://github.com/tensorflow/probability/tree/main/spinoffs/inference_gym";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

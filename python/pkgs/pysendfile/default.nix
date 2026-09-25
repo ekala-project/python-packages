@@ -23,6 +23,5 @@ buildPythonPackage rec {
     description = "Python interface to sendfile(2)";
     homepage = "https://github.com/giampaolo/pysendfile";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

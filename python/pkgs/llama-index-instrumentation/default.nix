@@ -33,6 +33,5 @@ buildPythonPackage rec {
     description = "Support for instrumentation in LlamaIndex applications";
     homepage = "https://pypi.org/project/llama-index-instrumentation/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -22,6 +22,5 @@ buildPythonPackage rec {
     description = "Extra features for Python JSON handling";
     homepage = "https://github.com/mverleg/pyjson_tricks";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

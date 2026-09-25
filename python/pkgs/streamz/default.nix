@@ -36,6 +36,5 @@ buildPythonPackage (finalAttrs: {
     description = "Pipelines to manage continuous streams of data";
     homepage = "https://github.com/python-streamz/streamz";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

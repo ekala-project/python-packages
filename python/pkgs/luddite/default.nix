@@ -43,6 +43,5 @@ buildPythonPackage rec {
     mainProgram = "luddite";
     homepage = "https://github.com/jumptrading/luddite";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

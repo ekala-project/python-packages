@@ -32,7 +32,6 @@ buildPythonPackage rec {
     description = "Finds the libpython associated with your environment, wherever it may be hiding";
     homepage = "https://github.com/ktbarrett/find_libpython";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "find_libpython";
   };
 }

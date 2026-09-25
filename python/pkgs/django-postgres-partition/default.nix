@@ -42,6 +42,5 @@ buildPythonPackage rec {
     description = "Partition support for django, based on django-postgres-extra";
     homepage = "https://gitlab.com/burke-software/django-postgres-partition";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

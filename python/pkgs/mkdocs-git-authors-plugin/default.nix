@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "Lightweight MkDocs plugin to display git authors of a markdown page";
     homepage = "https://github.com/timvink/mkdocs-git-authors-plugin";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

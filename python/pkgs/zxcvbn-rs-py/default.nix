@@ -33,7 +33,6 @@ buildPythonPackage rec {
     description = "Python bindings for zxcvbn-rs, the Rust implementation of zxcvbn";
     homepage = "https://github.com/fief-dev/zxcvbn-rs-py/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 
 }

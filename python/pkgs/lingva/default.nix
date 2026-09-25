@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "Module with tools to extract translatable texts from your code";
     homepage = "https://github.com/vacanza/lingva";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

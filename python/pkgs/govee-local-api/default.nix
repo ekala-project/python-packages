@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "Library to communicate with Govee local API";
     homepage = "https://github.com/Galorhallen/govee-local-api";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

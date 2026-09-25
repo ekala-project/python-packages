@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Python wrapper for the Nanoleaf API";
     homepage = "https://github.com/milanmeu/aionanoleaf";
     license = lib.licenses.lgpl3Plus;
-    maintainers = [ ];
   };
 }

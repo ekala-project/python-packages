@@ -42,6 +42,5 @@ buildPythonPackage rec {
     description = "Python package which allows you to configure keyring to interact with Python repositories stored in Artifact Registry";
     homepage = "https://github.com/GoogleCloudPlatform/artifact-registry-python-tools";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

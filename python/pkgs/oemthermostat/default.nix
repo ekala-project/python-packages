@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Python module to interact with OpenEnergyMonitor thermostats";
     homepage = "https://github.com/Cadair/openenergymonitor_thermostat";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

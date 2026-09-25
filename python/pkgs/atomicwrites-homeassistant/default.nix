@@ -30,6 +30,5 @@ buildPythonPackage {
     description = "Atomic file writes";
     homepage = "https://pypi.org/project/atomicwrites-homeassistant/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

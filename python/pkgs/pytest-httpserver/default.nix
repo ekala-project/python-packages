@@ -29,6 +29,5 @@ buildPythonPackage rec {
     description = "HTTP server for pytest to test HTTP clients";
     homepage = "https://www.github.com/csernazs/pytest-httpserver";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

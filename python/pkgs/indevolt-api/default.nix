@@ -31,6 +31,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python API client for Indevolt devices";
     homepage = "https://github.com/Xirt/indevolt-api";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

@@ -41,6 +41,5 @@ buildPythonPackage rec {
     description = "Integrate Bitcoin, Dogecoin and Litecoin in your Python applications using block.io";
     homepage = "https://github.com/BlockIo/block_io-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

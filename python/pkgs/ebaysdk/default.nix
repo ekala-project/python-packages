@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "eBay SDK for Python";
     homepage = "https://github.com/timotheus/ebaysdk-python";
     license = lib.licenses.cddl;
-    maintainers = [ ];
   };
 }

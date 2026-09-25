@@ -35,6 +35,5 @@ buildPythonPackage rec {
     downloadPage = "https://github.com/wiktor-k/pysequoia";
     homepage = "https://github.com/wiktor-k/pysequoia";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

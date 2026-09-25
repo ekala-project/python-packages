@@ -40,6 +40,5 @@ buildPythonPackage rec {
     description = "Efficiently read embedding in streaming from any filesystem";
     homepage = "https://github.com/rom1504/embedding-reader";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

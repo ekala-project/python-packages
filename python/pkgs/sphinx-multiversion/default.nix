@@ -27,6 +27,5 @@ buildPythonPackage rec {
     description = "Sphinx extension for building self-hosted versioned docs";
     homepage = "https://sphinx-contrib.github.io/multiversion";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

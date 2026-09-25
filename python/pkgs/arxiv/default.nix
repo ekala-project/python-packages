@@ -43,6 +43,5 @@ buildPythonPackage rec {
     description = "Python wrapper for the arXiv API";
     homepage = "https://github.com/lukasschwab/arxiv.py";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

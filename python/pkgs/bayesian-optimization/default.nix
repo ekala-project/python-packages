@@ -65,6 +65,5 @@ buildPythonPackage rec {
     description = "Python implementation of global optimization with gaussian processes";
     homepage = "https://github.com/bayesian-optimization/BayesianOptimization";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

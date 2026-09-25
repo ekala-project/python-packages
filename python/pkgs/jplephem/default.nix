@@ -29,6 +29,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/brandon-rhodes/python-jplephem/";
     description = "Python version of NASA DE4xx ephemerides, the basis for the Astronomical Alamanac";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

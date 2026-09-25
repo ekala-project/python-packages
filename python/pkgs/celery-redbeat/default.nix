@@ -51,6 +51,5 @@ buildPythonPackage rec {
     description = "Database-backed Periodic Tasks";
     homepage = "https://github.com/celery/django-celery-beat";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

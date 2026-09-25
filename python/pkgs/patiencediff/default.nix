@@ -47,6 +47,5 @@ buildPythonPackage rec {
     mainProgram = "patiencediff";
     homepage = "https://github.com/breezy-team/patiencediff";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
   };
 }

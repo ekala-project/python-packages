@@ -33,6 +33,5 @@ buildPythonPackage (finalAttrs: {
     description = "Minimalistic python module to print colorful messages";
     homepage = "https://github.com/30350n/error_helper";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

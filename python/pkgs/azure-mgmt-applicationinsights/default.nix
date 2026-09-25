@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "This is the Microsoft Azure Application Insights Management Client Library";
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/applicationinsights/azure-mgmt-applicationinsights";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

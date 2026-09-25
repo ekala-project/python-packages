@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "Module to interact with Genius Hub systems";
     homepage = "https://github.com/manzanotti/geniushub-client";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

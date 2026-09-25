@@ -54,6 +54,5 @@ buildPythonPackage rec {
     description = "Module for Kusto Ingest";
     homepage = "https://github.com/Azure/azure-kusto-python/tree/master/azure-kusto-ingest";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

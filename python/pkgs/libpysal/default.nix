@@ -82,6 +82,5 @@ buildPythonPackage rec {
     description = "Library of spatial analysis functions";
     homepage = "https://pysal.org/libpysal/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

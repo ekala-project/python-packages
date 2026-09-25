@@ -31,7 +31,6 @@ buildPythonPackage (finalAttrs: {
     description = "Library to convert KML to GeoJSON";
     homepage = "https://github.com/mrcagney/kml2geojson";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "k2g";
   };
 })

@@ -43,6 +43,5 @@ buildPythonPackage (finalAttrs: {
     description = "Tool to detect secrets in the code";
     homepage = "https://github.com/bridgecrewio/detect-secrets";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

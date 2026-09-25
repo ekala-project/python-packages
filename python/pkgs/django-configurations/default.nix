@@ -50,6 +50,5 @@ buildPythonPackage rec {
     mainProgram = "django-cadmin";
     homepage = "https://django-configurations.readthedocs.io/";
     license = lib.licenses.bsd0;
-    maintainers = [ ];
   };
 }

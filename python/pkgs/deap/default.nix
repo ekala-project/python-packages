@@ -33,6 +33,5 @@ buildPythonPackage (finalAttrs: {
     description = "Novel evolutionary computation framework for rapid prototyping and testing of ideas";
     homepage = "https://github.com/DEAP/deap";
     license = lib.licenses.lgpl3Plus;
-    maintainers = [ ];
   };
 })

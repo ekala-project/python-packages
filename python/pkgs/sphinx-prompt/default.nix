@@ -53,6 +53,5 @@ buildPythonPackage rec {
     description = "Sphinx extension for creating unselectable prompt";
     homepage = "https://github.com/sbrunner/sphinx-prompt";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "Unofficial API bindings for Elvia's consumer facing APIs";
     homepage = "https://github.com/andersem/elvia-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "Python bindings for OpenCC (Conversion between Traditional and Simplified Chinese)";
     homepage = "https://github.com/BYVoid/OpenCC";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

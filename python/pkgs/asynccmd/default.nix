@@ -38,6 +38,5 @@ buildPythonPackage rec {
     description = "Asyncio implementation of Cmd Python library";
     homepage = "https://github.com/valentinmk/asynccmd";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

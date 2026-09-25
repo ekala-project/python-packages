@@ -33,7 +33,6 @@ buildPythonPackage rec {
   meta = {
     description = "Youtube extension for Sphinx";
     homepage = "https://github.com/sphinx-contrib/youtube";
-    maintainers = [ ];
     license = lib.licenses.bsd3;
   };
 }

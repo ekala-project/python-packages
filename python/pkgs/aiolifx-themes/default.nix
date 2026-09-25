@@ -42,6 +42,5 @@ buildPythonPackage (finalAttrs: {
     description = "Color themes for LIFX lights running on aiolifx";
     homepage = "https://github.com/Djelibeybi/aiolifx-themes";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

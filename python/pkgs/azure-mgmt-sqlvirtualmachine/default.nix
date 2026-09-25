@@ -41,6 +41,5 @@ buildPythonPackage rec {
     description = "Microsoft Azure SQL Virtual Machine Management Client Library for Python";
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/sql/azure-mgmt-sqlvirtualmachine";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -37,6 +37,5 @@ buildPythonPackage rec {
     mainProgram = "firefly-algorithm";
     homepage = "https://github.com/firefly-cpp/FireflyAlgorithm";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

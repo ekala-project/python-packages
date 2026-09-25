@@ -28,7 +28,6 @@ buildPythonPackage rec {
     description = "This Python package implements Edward Tufte's concept of sparklines, but limited to text only";
     mainProgram = "sparklines";
     homepage = "https://github.com/deeplook/sparklines";
-    maintainers = [ ];
     license = lib.licenses.mit;
   };
 }

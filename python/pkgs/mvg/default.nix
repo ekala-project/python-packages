@@ -40,6 +40,5 @@ buildPythonPackage (finalAttrs: {
     description = "An unofficial interface to timetable information of the Münchner Verkehrsgesellschaft (MVG)";
     homepage = "https://github.com/mondbaron/mvg";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

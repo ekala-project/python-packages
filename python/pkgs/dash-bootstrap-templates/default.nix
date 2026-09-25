@@ -40,6 +40,5 @@ buildPythonPackage rec {
     description = "Collection of 52 Plotly figure templates with a Bootstrap theme";
     homepage = "https://github.com/AnnMarieW/dash-bootstrap-templates";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Text progressbar library";
     homepage = "https://progressbar-2.readthedocs.io/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

@@ -48,6 +48,5 @@ buildPythonPackage (finalAttrs: {
     description = "SPDX parser and tools";
     homepage = "https://github.com/spdx/tools-python";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

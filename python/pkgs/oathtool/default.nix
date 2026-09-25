@@ -40,6 +40,5 @@ buildPythonPackage rec {
     description = "One-time password generator";
     homepage = "https://github.com/jaraco/oathtool";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

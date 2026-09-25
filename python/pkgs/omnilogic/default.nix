@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Python interface for the Hayward Omnilogic pool control system";
     homepage = "https://github.com/djtimca/omnilogic-api";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

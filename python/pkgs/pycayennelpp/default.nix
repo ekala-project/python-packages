@@ -27,6 +27,5 @@ buildPythonPackage rec {
     description = "Python library for Cayenne Low Power Payload";
     homepage = "https://github.com/smlng/pycayennelpp";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

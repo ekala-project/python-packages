@@ -37,6 +37,5 @@ buildPythonPackage rec {
     description = "Enhancements for standard library's cmd module";
     homepage = "https://github.com/python-cmd2/cmd2";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

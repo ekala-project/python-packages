@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Module for interacting with Nanoleaf Aurora lighting";
     homepage = "https://github.com/software-2/nanoleaf";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

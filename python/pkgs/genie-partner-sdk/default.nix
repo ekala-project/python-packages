@@ -30,6 +30,5 @@ buildPythonPackage rec {
     description = "SDK to interact with the AladdinConnect (or OHD) partner API";
     homepage = "https://github.com/Genie-Garage/aladdin-python-sdk";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

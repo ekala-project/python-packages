@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "API to interact with ESPHome Dashboard";
     homepage = "https://github.com/esphome/dashboard-api";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

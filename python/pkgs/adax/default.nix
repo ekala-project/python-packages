@@ -35,6 +35,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python module to communicate with Adax";
     homepage = "https://github.com/Danielhiversen/pyAdax";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

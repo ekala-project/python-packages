@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "Module to extract Ascii, Utf8, and Unicode strings from binary data";
     homepage = "https://github.com/glmcdona/binary2strings";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

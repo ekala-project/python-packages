@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Pdm-build-locked is a pdm plugin to publish locked dependencies as optional-dependencies";
     homepage = "https://github.com/pdm-project/pdm-build-locked";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

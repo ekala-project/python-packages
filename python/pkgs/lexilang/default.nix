@@ -40,6 +40,5 @@ buildPythonPackage (finalAttrs: {
     description = "Simple, fast dictionary-based language detector for short texts";
     homepage = "https://github.com/LibreTranslate/LexiLang";
     license = lib.licenses.agpl3Only;
-    maintainers = [ ];
   };
 })

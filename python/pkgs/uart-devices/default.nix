@@ -26,7 +26,6 @@ buildPythonPackage rec {
     description = "UART Devices for Linux";
     homepage = "https://github.com/bdraco/uart-devices";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 }

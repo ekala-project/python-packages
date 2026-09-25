@@ -62,7 +62,6 @@ buildPythonPackage rec {
     homepage = "https://github.com/AdaCore/e3-core/";
     description = "Core framework for developing portable automated build systems";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     mainProgram = "e3";
     # See the comment regarding distro and psutil. Other platforms are supported
     # upstream, but not by this package.

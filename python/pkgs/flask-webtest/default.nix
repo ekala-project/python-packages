@@ -42,6 +42,5 @@ buildPythonPackage rec {
     description = "Utilities for testing Flask applications with WebTest";
     homepage = "https://github.com/level12/flask-webtest";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

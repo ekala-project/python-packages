@@ -38,7 +38,6 @@ buildPythonPackage rec {
   meta = {
     description = "CMSIS SVD parser";
     homepage = "https://github.com/cmsis-svd/cmsis-svd";
-    maintainers = [ ];
     license = lib.licenses.asl20;
   };
 }

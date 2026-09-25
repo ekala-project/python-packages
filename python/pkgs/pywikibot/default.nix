@@ -33,6 +33,5 @@ buildPythonPackage rec {
     mainProgram = "pwb";
     homepage = "https://www.mediawiki.org/wiki/Manual:Pywikibot";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

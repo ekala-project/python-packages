@@ -43,6 +43,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://github.com/gata-bio/affine-gaps";
     license = lib.licenses.asl20;
     mainProgram = "affine-gaps";
-    maintainers = [ ];
   };
 })

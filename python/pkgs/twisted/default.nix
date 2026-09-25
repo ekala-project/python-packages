@@ -234,6 +234,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/twisted/twisted";
     description = "Asynchronous networking framework written in Python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

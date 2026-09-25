@@ -37,6 +37,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://github.com/fastai/fastprogress";
     description = "Simple and flexible progress bar for Jupyter Notebook and console";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

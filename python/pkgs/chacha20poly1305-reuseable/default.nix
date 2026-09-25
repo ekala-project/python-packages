@@ -53,6 +53,5 @@ buildPythonPackage {
     description = "ChaCha20Poly1305 that is reuseable for asyncio";
     homepage = "https://github.com/bdraco/chacha20poly1305-reuseable";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

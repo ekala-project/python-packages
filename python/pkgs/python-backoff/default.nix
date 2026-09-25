@@ -27,6 +27,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python library providing function decorators for configurable backoff and retry";
     homepage = "https://github.com/python-backoff/backoff";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

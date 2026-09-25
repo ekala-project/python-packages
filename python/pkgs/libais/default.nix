@@ -32,7 +32,6 @@ buildPythonPackage rec {
     description = "Library for decoding maritime Automatic Identification System messages";
     homepage = "https://github.com/schwehr/libais";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

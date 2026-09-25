@@ -70,6 +70,5 @@ buildPythonPackage rec {
     mainProgram = "rst2pdf";
     homepage = "https://rst2pdf.org/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

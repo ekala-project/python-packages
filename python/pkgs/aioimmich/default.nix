@@ -50,6 +50,5 @@ buildPythonPackage rec {
     description = "Asynchronous library to fetch albums and assests from immich";
     homepage = "https://github.com/mib1185/aioimmich";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

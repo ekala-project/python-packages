@@ -43,6 +43,5 @@ buildPythonPackage rec {
     '';
     homepage = "https://github.com/gpodder/mygpoclient";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
   };
 }

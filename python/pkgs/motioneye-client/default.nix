@@ -45,7 +45,6 @@ buildPythonPackage rec {
     description = "Python library for motionEye";
     homepage = "https://github.com/dermotduffy/motioneye-client";
     license = lib.licenses.mit;
-    maintainers = [ ];
     broken = stdenv.hostPlatform.isDarwin;
   };
 }

@@ -43,6 +43,5 @@ buildPythonPackage rec {
     description = "Transports for httpx to work atop aiohttp";
     homepage = "https://github.com/karpetrosyan/httpx-aiohttp/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

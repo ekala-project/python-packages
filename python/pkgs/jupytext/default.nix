@@ -83,7 +83,6 @@ buildPythonPackage rec {
     description = "Jupyter notebooks as Markdown documents, Julia, Python or R scripts";
     homepage = "https://github.com/mwouts/jupytext";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "jupytext";
   };
 }

@@ -42,6 +42,5 @@ buildPythonPackage (finalAttrs: {
     description = "Utility for working with recurring dates in Django";
     homepage = "https://github.com/jazzband/django-recurrence";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

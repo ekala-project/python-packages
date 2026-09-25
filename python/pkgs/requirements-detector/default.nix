@@ -47,7 +47,6 @@ buildPythonPackage rec {
     description = "Python tool to find and list requirements of a Python project";
     homepage = "https://github.com/landscapeio/requirements-detector";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "detect-requirements";
   };
 }

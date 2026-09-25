@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "Yet Another Terminal Spinner";
     homepage = "https://github.com/pavdmyt/yaspin";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

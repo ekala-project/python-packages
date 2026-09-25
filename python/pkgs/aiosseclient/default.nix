@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Asynchronous Server Side Events (SSE) client";
     homepage = "https://github.com/ebraminio/aiosseclient";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

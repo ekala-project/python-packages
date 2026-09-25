@@ -28,6 +28,5 @@ buildPythonPackage (finalAttrs: {
     description = "Home Assistant Panel for managing the KNX integration";
     homepage = "https://github.com/XKNX/knx-frontend";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

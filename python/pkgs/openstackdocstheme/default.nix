@@ -41,6 +41,5 @@ buildPythonPackage rec {
     description = "Sphinx theme for RST-sourced documentation published to docs.openstack.org";
     homepage = "https://github.com/openstack/openstackdocstheme";
     license = lib.licenses.asl20;
-    teams = [ ];
   };
 }

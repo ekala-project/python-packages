@@ -38,6 +38,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python XML Signature and XAdES library";
     homepage = "https://github.com/XML-Security/signxml";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

@@ -63,6 +63,5 @@ buildPythonPackage rec {
     description = "Python library and tool for generating .pex (Python EXecutable) files";
     homepage = "https://github.com/pantsbuild/pex";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

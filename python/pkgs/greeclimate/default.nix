@@ -62,6 +62,5 @@ buildPythonPackage rec {
     description = "Discover, connect and control Gree based minisplit systems";
     homepage = "https://github.com/cmroche/greeclimate";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 }

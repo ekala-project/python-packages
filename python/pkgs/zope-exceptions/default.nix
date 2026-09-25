@@ -40,6 +40,5 @@ buildPythonPackage rec {
     description = "Exception interfaces and implementations";
     homepage = "https://pypi.org/project/zope.exceptions/";
     license = lib.licenses.zpl21;
-    maintainers = [ ];
   };
 }

@@ -48,6 +48,5 @@ buildPythonPackage rec {
     description = "Cython implementation of the affine gap string distance";
     homepage = "https://github.com/dedupeio/affinegap";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

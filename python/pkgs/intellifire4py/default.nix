@@ -47,7 +47,6 @@ buildPythonPackage (finalAttrs: {
     description = "Module to read Intellifire fireplace status data";
     homepage = "https://github.com/jeeftor/intellifire4py";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "intellifire4py";
 
   };

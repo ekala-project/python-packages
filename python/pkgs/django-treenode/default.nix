@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "Deciduous_tree: probably the best abstract model/admin for your tree based stuff";
     homepage = "https://github.com/fabiocaccamo/django-treenode";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

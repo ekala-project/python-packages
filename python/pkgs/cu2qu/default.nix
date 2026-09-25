@@ -42,6 +42,5 @@ buildPythonPackage rec {
     mainProgram = "cu2qu";
     homepage = "https://github.com/googlefonts/cu2qu";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

@@ -37,6 +37,5 @@ buildPythonPackage (finalAttrs: {
     description = "Fast Python Bloom Filter using Mmap";
     homepage = "https://github.com/prashnts/pybloomfilter3";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

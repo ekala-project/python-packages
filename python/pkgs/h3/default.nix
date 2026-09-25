@@ -63,6 +63,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://github.com/uber/h3-py";
     description = "Hierarchical hexagonal geospatial indexing system";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

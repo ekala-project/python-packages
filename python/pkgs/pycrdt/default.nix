@@ -50,6 +50,5 @@ buildPythonPackage (finalAttrs: {
     description = "CRDTs based on Yrs";
     homepage = "https://github.com/jupyter-server/pycrdt";
     license = lib.licenses.mit;
-    teams = [ ];
   };
 })

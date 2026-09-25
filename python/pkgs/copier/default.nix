@@ -75,7 +75,6 @@ buildPythonPackage (finalAttrs: {
     description = "Library and command-line utility for rendering projects templates";
     homepage = "https://copier.readthedocs.io";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "copier";
   };
 })

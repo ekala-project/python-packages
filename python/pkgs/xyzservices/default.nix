@@ -33,6 +33,5 @@ buildPythonPackage rec {
     description = "Source of XYZ tiles providers";
     homepage = "https://github.com/geopandas/xyzservices";
     license = lib.licenses.bsd3;
-    teams = [ ];
   };
 }

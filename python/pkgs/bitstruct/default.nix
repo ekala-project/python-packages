@@ -26,6 +26,5 @@ buildPythonPackage rec {
     description = "Python bit pack/unpack package";
     homepage = "https://github.com/eerimoq/bitstruct";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

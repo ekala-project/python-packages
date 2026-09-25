@@ -71,7 +71,6 @@ buildPythonPackage rec {
     description = "Swagger/OpenAPI First framework on top of Flask";
     homepage = "https://github.com/spec-first/connexion";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "connexion";
   };
 }

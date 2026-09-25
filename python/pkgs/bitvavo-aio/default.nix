@@ -33,6 +33,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python client for Bitvavo crypto exchange API";
     homepage = "https://github.com/cyberjunky/bitvavo-aio";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

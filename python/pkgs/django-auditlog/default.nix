@@ -40,6 +40,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/jazzband/django-auditlog";
     downloadPage = "https://github.com/jazzband/django-auditlog";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

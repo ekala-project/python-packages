@@ -29,6 +29,5 @@ buildPythonPackage rec {
     description = "Power Profiling Kit 2 unofficial Python API";
     homepage = "https://github.com/IRNAS/ppk2-api-python";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
   };
 }

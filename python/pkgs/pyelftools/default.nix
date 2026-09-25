@@ -42,7 +42,6 @@ buildPythonPackage rec {
       # See elftools/construct/{LICENSE,README} in the source code.
       mit
     ];
-    maintainers = [ ];
     mainProgram = "readelf.py";
   };
 }

@@ -39,6 +39,5 @@ buildPythonPackage rec {
       so this module currently is not portable to other platforms.
     '';
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

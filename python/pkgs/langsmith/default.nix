@@ -73,7 +73,6 @@ buildPythonPackage (finalAttrs: {
     description = "Client library to connect to the LangSmith LLM Tracing and Evaluation Platform";
     homepage = "https://github.com/langchain-ai/langsmith-sdk";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "langsmith";
   };
 })

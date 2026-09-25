@@ -30,6 +30,5 @@ buildPythonPackage rec {
     description = "File operations with asyncio support";
     homepage = "https://github.com/mosquito/aiofile";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

@@ -55,6 +55,5 @@ buildPythonPackage rec {
     description = "Lightweight piece tokenization library";
     homepage = "https://github.com/explosion/curated-tokenizers";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

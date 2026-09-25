@@ -60,6 +60,5 @@ buildPythonPackage rec {
     description = "Python pathlib-style classes for cloud storage services such as Amazon S3, Azure Blob Storage, and Google Cloud Storage";
     homepage = "https://github.com/drivendataorg/cloudpathlib";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

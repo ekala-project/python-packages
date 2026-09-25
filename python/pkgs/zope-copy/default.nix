@@ -44,6 +44,5 @@ buildPythonPackage rec {
     description = "Pluggable object copying mechanism";
     homepage = "https://github.com/zopefoundation/zope.copy";
     license = lib.licenses.zpl21;
-    maintainers = [ ];
   };
 }

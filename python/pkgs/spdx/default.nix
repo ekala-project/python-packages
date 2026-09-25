@@ -26,6 +26,5 @@ buildPythonPackage rec {
     description = "SPDX license list database";
     homepage = "https://github.com/bbqsrc/spdx-python";
     license = lib.licenses.cc0;
-    maintainers = [ ];
   };
 }

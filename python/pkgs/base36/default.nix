@@ -37,6 +37,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python implementation for the positional numeral system using 36 as the radix";
     homepage = "https://github.com/tonyseek/python-base36";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

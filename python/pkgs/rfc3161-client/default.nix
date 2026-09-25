@@ -41,7 +41,6 @@ buildPythonPackage (finalAttrs: {
   ];
   meta = {
     homepage = "https://github.com/trailofbits/rfc3161-client";
-    maintainers = [ ];
     license = lib.licenses.asl20;
     platforms = lib.platforms.all;
     description = "Opinionated Python RFC3161 Client";

@@ -66,6 +66,5 @@ buildPythonPackage rec {
     downloadPage = "https://github.com/pyocd/pyOCD";
     homepage = "https://pyocd.io";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

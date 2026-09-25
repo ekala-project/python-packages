@@ -37,6 +37,5 @@ buildPythonPackage (finalAttrs: {
     description = "Pytest plugin for easy integration of memray memory profiler";
     homepage = "https://github.com/bloomberg/pytest-memray";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

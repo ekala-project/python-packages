@@ -45,6 +45,5 @@ buildPythonPackage rec {
     description = "Communicate with Actron Air systems via the Actron Neo API";
     homepage = "https://github.com/kclif9/actronneoapi";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

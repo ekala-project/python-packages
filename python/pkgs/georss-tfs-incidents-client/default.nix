@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Python library for accessing Tasmania Fire Service Incidents feed";
     homepage = "https://github.com/exxamalte/python-georss-tfs-incidents-client";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

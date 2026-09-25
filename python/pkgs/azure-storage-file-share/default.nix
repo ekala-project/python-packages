@@ -45,6 +45,5 @@ buildPythonPackage rec {
     description = "Microsoft Azure File Share Storage Client Library for Python";
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/storage/azure-storage-file-share";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

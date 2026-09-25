@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Simple natural order sorting API for Python that just works";
     homepage = "https://github.com/xolox/python-naturalsort";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

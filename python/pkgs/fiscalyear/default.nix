@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Utilities for managing the fiscal calendar";
     homepage = "https://github.com/adamjstewart/fiscalyear";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

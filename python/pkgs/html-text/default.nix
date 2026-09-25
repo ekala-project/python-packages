@@ -35,6 +35,5 @@ buildPythonPackage (finalAttrs: {
     description = "Extract text from HTML";
     homepage = "https://github.com/zytedata/html-text";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

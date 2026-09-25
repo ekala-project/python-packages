@@ -35,6 +35,5 @@ buildPythonPackage (finalAttrs: {
     description = "Fast and simple enum/regex-based tokenizer with decent configurability";
     license = lib.licenses.mit;
     homepage = "https://trag1c.github.io/crossandra";
-    maintainers = [ ];
   };
 })

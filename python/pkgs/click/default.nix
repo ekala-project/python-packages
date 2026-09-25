@@ -26,6 +26,5 @@ buildPythonPackage rec {
       composable way, with as little code as necessary.
     '';
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

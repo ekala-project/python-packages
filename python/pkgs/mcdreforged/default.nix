@@ -69,6 +69,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://mcdreforged.com";
     license = lib.licenses.lgpl3Only;
     mainProgram = "mcdreforged";
-    maintainers = [ ];
   };
 })

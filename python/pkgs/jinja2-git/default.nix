@@ -31,6 +31,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/wemake-services/jinja2-git";
     description = "Jinja2 extension to handle git-specific things";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

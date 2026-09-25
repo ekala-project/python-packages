@@ -55,6 +55,5 @@ buildPythonPackage rec {
     description = "Conic Interior Point Solver";
     homepage = "https://github.com/oxfordcontrol/Clarabel.rs";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

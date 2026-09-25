@@ -50,6 +50,5 @@ buildPythonPackage rec {
     description = "Library for sklearn compatible categorical variable encoders";
     homepage = "https://github.com/scikit-learn-contrib/category_encoders";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

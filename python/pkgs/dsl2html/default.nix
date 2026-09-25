@@ -24,6 +24,5 @@ buildPythonPackage rec {
     description = "Python module for converting DSL dictionary texts into HTML";
     homepage = "https://github.com/Crissium/python-dsl";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 }

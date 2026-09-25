@@ -45,6 +45,5 @@ buildPythonPackage rec {
     description = "Framework for testing MkDocs projects";
     homepage = "https://github.com/fralau/mkdocs-test";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

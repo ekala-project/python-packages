@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "Installer for Python Build Standalone";
     homepage = "https://github.com/frostming/pbs-installer";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -38,6 +38,5 @@ buildPythonPackage rec {
     description = "Derive PyPI package description from Python package docstring";
     homepage = "https://github.com/flying-sheep/hatch-docstring-description";
     license = lib.licenses.gpl3;
-    maintainers = [ ];
   };
 }

@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Modern, interlingual wordnet interface for Python";
     homepage = "https://github.com/goodmami/wn";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

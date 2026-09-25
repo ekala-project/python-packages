@@ -33,6 +33,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python module to communicate with the AVM Fritz!Box";
     homepage = "https://github.com/kbr/fritzconnection";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

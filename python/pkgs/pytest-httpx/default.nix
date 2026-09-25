@@ -37,6 +37,5 @@ buildPythonPackage rec {
     description = "Send responses to httpx";
     homepage = "https://github.com/Colin-b/pytest_httpx";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

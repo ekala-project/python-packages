@@ -73,6 +73,5 @@ buildPythonPackage {
     description = "Interface to netCDF library (versions 3 and 4)";
     homepage = "https://github.com/Unidata/netcdf4-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

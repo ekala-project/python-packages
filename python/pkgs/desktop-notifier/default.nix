@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "Python library for cross-platform desktop notifications";
     homepage = "https://github.com/samschott/desktop-notifier";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

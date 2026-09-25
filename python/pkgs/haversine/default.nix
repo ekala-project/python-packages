@@ -25,6 +25,5 @@ buildPythonPackage rec {
     description = "Python module the distance between 2 points on earth";
     homepage = "https://github.com/mapado/haversine";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

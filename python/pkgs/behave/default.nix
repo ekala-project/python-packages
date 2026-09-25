@@ -67,6 +67,5 @@ buildPythonPackage rec {
     description = "Behaviour-driven development, Python style";
     mainProgram = "behave";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

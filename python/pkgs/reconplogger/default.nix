@@ -40,6 +40,5 @@ buildPythonPackage (finalAttrs: {
     description = "Module to ease the standardization of logging within omni:us";
     homepage = "https://github.com/omni-us/reconplogger";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

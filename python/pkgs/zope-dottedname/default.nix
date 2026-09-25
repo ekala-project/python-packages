@@ -32,6 +32,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/zopefoundation/zope.dottedname";
     description = "Resolver for Python dotted names";
     license = lib.licenses.zpl21;
-    maintainers = [ ];
   };
 }

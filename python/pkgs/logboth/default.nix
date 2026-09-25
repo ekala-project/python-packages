@@ -33,6 +33,5 @@ buildPythonPackage (finalAttrs: {
     description = "Easily write logs to standard output and a file at the same time";
     homepage = "https://gitlab.com/zehkira/logboth";
     license = lib.licenses.bsd0;
-    maintainers = [ ];
   };
 })

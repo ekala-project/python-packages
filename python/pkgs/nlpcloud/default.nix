@@ -29,6 +29,5 @@ buildPythonPackage rec {
     description = "Python client for the NLP Cloud API";
     homepage = "https://nlpcloud.com/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

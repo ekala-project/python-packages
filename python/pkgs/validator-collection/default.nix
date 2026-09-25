@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Python library of 60+ commonly-used validator functions";
     homepage = "https://github.com/insightindustry/validator-collection/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

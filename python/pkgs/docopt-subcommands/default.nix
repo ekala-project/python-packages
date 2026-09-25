@@ -35,6 +35,5 @@ buildPythonPackage {
     description = "Create subcommand-based CLI programs with docopt";
     homepage = "https://github.com/abingham/docopt-subcommands";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

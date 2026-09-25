@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Classes with architecture-specific information";
     homepage = "https://github.com/angr/archinfo";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

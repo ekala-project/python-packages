@@ -44,6 +44,5 @@ buildPythonPackage rec {
     description = "Simple API to create, execute, and analyze Druid queries";
     homepage = "https://github.com/druid-io/pydruid";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

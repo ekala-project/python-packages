@@ -57,6 +57,5 @@ buildPythonPackage rec {
     description = "PEP-484 stubs for Django";
     homepage = "https://github.com/typeddjango/django-stubs";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

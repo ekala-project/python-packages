@@ -26,6 +26,5 @@ buildPythonPackage rec {
     description = "Mathematical expression parser, cython wrapper";
     homepage = "https://github.com/mjdrushton/cexprtk";
     license = lib.licenses.cpl10;
-    maintainers = [ ];
   };
 }

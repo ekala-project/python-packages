@@ -33,6 +33,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/newAM/monitorcontrol";
     license = lib.licenses.mit;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 }

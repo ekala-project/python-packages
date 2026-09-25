@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "Idiomatic asyncio MQTT client, wrapped around paho-mqtt";
     homepage = "https://github.com/sbtinstruments/aiomqtt";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

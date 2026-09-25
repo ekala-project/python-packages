@@ -85,7 +85,6 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://streamlit.io/";
     description = "Fastest way to build custom ML tools";
     mainProgram = "streamlit";
-    maintainers = [ ];
     license = lib.licenses.asl20;
   };
 })

@@ -37,6 +37,5 @@ buildPythonPackage rec {
     description = "Header-only C++/python library for fast approximate nearest neighbors";
     homepage = "https://github.com/chroma-core/hnswlib";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

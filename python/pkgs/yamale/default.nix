@@ -34,7 +34,6 @@ buildPythonPackage rec {
     description = "Schema and validator for YAML";
     homepage = "https://github.com/23andMe/Yamale";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "yamale";
   };
 }

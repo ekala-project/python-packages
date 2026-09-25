@@ -36,6 +36,5 @@ buildPythonPackage rec {
     mainProgram = "jello";
     homepage = "https://github.com/kellyjonbrazil/jello";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

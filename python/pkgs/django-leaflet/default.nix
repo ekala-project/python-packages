@@ -33,6 +33,5 @@ buildPythonPackage rec {
     description = "Allows you to use Leaflet in your Django projects";
     homepage = "https://github.com/makinacorpus/django-leaflet";
     license = lib.licenses.lgpl3Only;
-    maintainers = [ ];
   };
 }

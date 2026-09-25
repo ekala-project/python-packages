@@ -41,6 +41,5 @@ buildPythonPackage rec {
     description = "Complete yet simple CSS parser for Python";
     homepage = "https://tinycss.readthedocs.io";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

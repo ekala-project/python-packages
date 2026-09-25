@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Runtime library 'msrestazure' for AutoRest generated Python clients";
     homepage = "https://azure.microsoft.com/en-us/develop/python/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -30,6 +30,5 @@ buildPythonPackage rec {
     description = "Collection of widgets for urwid";
     homepage = "https://github.com/AnonymouX47/urwidgets";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

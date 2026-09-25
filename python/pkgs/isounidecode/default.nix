@@ -23,6 +23,5 @@ buildPythonPackage rec {
     description = "Python package for conversion and transliteration of unicode into ascii or iso-8859-1";
     homepage = "https://github.com/redvasily/isounidecode";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

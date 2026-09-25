@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Neurio energy sensor and appliance automation API library";
     homepage = "https://github.com/jordanh/neurio-python";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

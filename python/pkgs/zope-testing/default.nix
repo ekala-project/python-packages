@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Zope testing helpers";
     homepage = "https://github.com/zopefoundation/zope.testing";
     license = lib.licenses.zpl21;
-    maintainers = [ ];
   };
 }

@@ -47,6 +47,5 @@ buildPythonPackage rec {
     description = "Lean enterprise content management powered by Django";
     homepage = "https://django-cms.org";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

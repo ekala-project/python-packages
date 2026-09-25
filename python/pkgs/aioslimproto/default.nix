@@ -42,6 +42,5 @@ buildPythonPackage (finalAttrs: {
     description = "Module to control Squeezebox players";
     homepage = "https://github.com/home-assistant-libs/aioslimproto";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

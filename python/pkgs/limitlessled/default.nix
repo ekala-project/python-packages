@@ -18,6 +18,5 @@ buildPythonPackage rec {
     description = "Control LimitlessLED products";
     homepage = "https://github.com/happyleavesaoc/python-limitlessled/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

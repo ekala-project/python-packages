@@ -33,6 +33,5 @@ buildPythonPackage rec {
     description = "Coroutine-based library for concurrent systems programming";
     homepage = "https://github.com/klen/curio";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

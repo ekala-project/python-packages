@@ -48,6 +48,5 @@ buildPythonPackage rec {
     description = "Google Cloud Translation API client library";
     homepage = "https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-translate";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

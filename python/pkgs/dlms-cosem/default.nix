@@ -50,6 +50,5 @@ buildPythonPackage rec {
     description = "Python module to parse DLMS/COSEM";
     homepage = "https://github.com/pwitab/dlms-cosem";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

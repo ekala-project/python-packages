@@ -44,6 +44,5 @@ buildPythonPackage (finalAttrs: {
     description = "FastAPI pagination";
     homepage = "https://github.com/uriyyo/fastapi-pagination";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

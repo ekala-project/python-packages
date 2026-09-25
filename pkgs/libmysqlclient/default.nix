@@ -100,7 +100,6 @@ stdenv.mkDerivation {
     description = "Client library that can be used to connect to MySQL or MariaDB";
     homepage = "https://github.com/mariadb-corporation/mariadb-connector-c";
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 }

@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "Parse and use crontab schedules in Python";
     homepage = "https://gitlab.com/doctormo/python-crontab/";
     license = lib.licenses.lgpl21Only;
-    maintainers = [ ];
   };
 }

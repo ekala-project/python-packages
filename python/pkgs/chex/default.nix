@@ -45,6 +45,5 @@ buildPythonPackage (finalAttrs: {
     description = "Library of utilities for helping to write reliable JAX code";
     homepage = "https://github.com/google-deepmind/chex";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

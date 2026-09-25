@@ -98,6 +98,5 @@ buildPythonPackage rec {
     homepage = "http://mkdocs.org/";
     license = lib.licenses.bsd2;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

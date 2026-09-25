@@ -38,6 +38,5 @@ buildPythonPackage {
     '';
     homepage = "https://github.com/scikit-build/cmake-python-distributions";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

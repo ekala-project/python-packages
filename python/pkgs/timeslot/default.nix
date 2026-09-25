@@ -26,7 +26,6 @@ buildPythonPackage {
   meta = {
     description = "Data type for representing time slots with a start and end";
     homepage = "https://github.com/ErikBjare/timeslot";
-    maintainers = [ ];
     license = lib.licenses.mit;
   };
 }

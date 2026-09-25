@@ -53,6 +53,5 @@ buildPythonPackage {
     description = "Source-built JAX frontend: differentiate, compile, and transform Numpy code";
     homepage = "https://github.com/google/jax";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

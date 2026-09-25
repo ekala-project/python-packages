@@ -45,7 +45,6 @@ buildPythonPackage (finalAttrs: {
     description = "Tools to work with CAN bus";
     homepage = "https://github.com/cantools/cantools";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "cantools";
   };
 })

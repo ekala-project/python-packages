@@ -56,6 +56,5 @@ buildPythonPackage (finalAttrs: {
     description = "Bayesian estimation, particularly using Markov chain Monte Carlo (MCMC)";
     homepage = "https://github.com/pymc-devs/pymc";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

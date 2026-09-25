@@ -40,6 +40,5 @@ buildPythonPackage rec {
     mainProgram = "warcio";
     homepage = "https://github.com/webrecorder/warcio";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

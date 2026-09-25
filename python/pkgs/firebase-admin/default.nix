@@ -47,6 +47,5 @@ buildPythonPackage (finalAttrs: {
     description = "Firebase Admin Python SDK";
     homepage = "https://github.com/firebase/firebase-admin-python";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

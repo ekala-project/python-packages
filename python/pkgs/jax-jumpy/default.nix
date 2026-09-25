@@ -29,6 +29,5 @@ buildPythonPackage rec {
     description = "Jumpy is a common backend for NumPy and optionally JAX";
     homepage = "https://github.com/Farama-Foundation/Jumpy";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

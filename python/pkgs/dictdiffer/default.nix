@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Module to diff and patch dictionaries";
     homepage = "https://github.com/inveniosoftware/dictdiffer";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

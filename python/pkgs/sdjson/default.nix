@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "Custom JSON Encoder for Python utilising functools.singledispatch";
     homepage = "https://github.com/domdfcoding/singledispatch-json";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

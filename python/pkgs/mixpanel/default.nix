@@ -46,6 +46,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/mixpanel/mixpanel-python";
     description = "Official Mixpanel Python library";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

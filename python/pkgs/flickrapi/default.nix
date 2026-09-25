@@ -69,6 +69,5 @@ buildPythonPackage rec {
     description = "Python interface to the Flickr API";
     homepage = "https://stuvel.eu/flickrapi";
     license = lib.licenses.psfl;
-    maintainers = [ ];
   };
 }

@@ -27,6 +27,5 @@ buildPythonPackage (finalAttrs: {
     description = "Verbose logging for Python's logging module";
     homepage = "https://github.com/xolox/python-verboselogs";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

@@ -68,6 +68,5 @@ buildPythonPackage rec {
     description = "Python library for accessing the Rigetti QCS API";
     homepage = "https://qcs-api-client-python.readthedocs.io/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

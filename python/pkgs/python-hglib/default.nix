@@ -37,6 +37,5 @@ buildPythonPackage rec {
     description = "Library with a fast, convenient interface to Mercurial. It uses Mercurial’s command server for communication with hg";
     homepage = "https://www.mercurial-scm.org/wiki/PythonHglibs";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

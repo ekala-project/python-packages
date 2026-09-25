@@ -49,6 +49,5 @@ buildPythonPackage rec {
     description = "Python client for Qdrant vector search engine";
     homepage = "https://github.com/qdrant/qdrant-client";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

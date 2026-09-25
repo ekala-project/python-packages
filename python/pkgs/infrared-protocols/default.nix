@@ -35,6 +35,5 @@ buildPythonPackage (finalAttrs: {
     description = "Library to decode and encode infrared signals";
     homepage = "https://github.com/home-assistant-libs/infrared-protocols";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

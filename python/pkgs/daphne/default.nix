@@ -35,7 +35,6 @@ buildPythonPackage (finalAttrs: {
     description = "Django ASGI (HTTP/WebSocket) server";
     homepage = "https://github.com/django/daphne";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     mainProgram = "daphne";
   };
 })

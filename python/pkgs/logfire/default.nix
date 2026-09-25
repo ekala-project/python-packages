@@ -135,6 +135,5 @@ buildPythonPackage (finalAttrs: {
     downloadPage = "https://github.com/pydantic/logfire/releases/tag/${finalAttrs.src.tag}";
     homepage = "https://logfire.pydantic.dev";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

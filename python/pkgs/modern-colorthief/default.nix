@@ -50,6 +50,5 @@ buildPythonPackage rec {
   meta = {
     homepage = "https://modern-colorthief.readthedocs.io/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

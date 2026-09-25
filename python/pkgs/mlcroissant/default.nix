@@ -93,7 +93,6 @@ buildPythonPackage (finalAttrs: {
     description = "High-level format for machine learning datasets that brings together four rich layers";
     homepage = "https://github.com/mlcommons/croissant";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     platforms = lib.platforms.all;
     mainProgram = "mlcroissant";
   };

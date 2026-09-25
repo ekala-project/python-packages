@@ -29,6 +29,5 @@ buildPythonPackage rec {
     description = "Sphinx extension using KaTeX to render math in HTML";
     homepage = "https://github.com/hagenw/sphinxcontrib-katex";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

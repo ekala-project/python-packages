@@ -37,6 +37,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python API for interacting with luftdaten.info";
     homepage = "https://github.com/home-assistant-ecosystem/python-luftdaten";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

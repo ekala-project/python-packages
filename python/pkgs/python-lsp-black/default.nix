@@ -53,6 +53,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/python-lsp/python-lsp-black";
     description = "Black plugin for the Python LSP Server";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

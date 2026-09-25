@@ -37,6 +37,5 @@ buildPythonPackage rec {
     description = "Simple Arve library";
     homepage = "https://github.com/arvetech/asyncarve";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

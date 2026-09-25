@@ -68,6 +68,5 @@ buildPythonPackage rec {
 
   meta = sqlite-vec-c.meta // {
     description = "Python bindings for sqlite-vec";
-    maintainers = [ ];
   };
 }

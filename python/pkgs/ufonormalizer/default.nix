@@ -23,6 +23,5 @@ buildPythonPackage rec {
     mainProgram = "ufonormalizer";
     homepage = "https://github.com/unified-font-object/ufoNormalizer";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

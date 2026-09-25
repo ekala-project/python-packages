@@ -54,6 +54,5 @@ buildPythonPackage rec {
     description = "Mock an entire service API based on requests-mock";
     homepage = "https://github.com/peopledoc/mock-services";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

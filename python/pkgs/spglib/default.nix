@@ -50,6 +50,5 @@ buildPythonPackage rec {
     description = "Python bindings for C library for finding and handling crystal symmetries";
     homepage = "https://spglib.github.io/spglib/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

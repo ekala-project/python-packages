@@ -45,7 +45,6 @@ buildPythonPackage rec {
     description = "Library for working with ONTAP's REST APIs simply in Python";
     homepage = "https://library.netapp.com/ecmdocs/ECMLP3331665/html/index.html";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     mainProgram = "ontap-cli";
   };
 }

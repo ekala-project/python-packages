@@ -30,7 +30,6 @@ buildPythonPackage (finalAttrs: {
     description = "PyDev.Debugger (used in PyDev, PyCharm and VSCode Python)";
     homepage = "https://github.com/fabioz/PyDev.Debugger";
     license = lib.licenses.epl10;
-    maintainers = [ ];
     mainProgram = "pydevd";
   };
 })

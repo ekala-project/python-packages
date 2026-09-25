@@ -55,6 +55,5 @@ buildPythonPackage (finalAttrs: {
     description = "Google Ai Generativelanguage API client library";
     homepage = "https://github.com/googleapis/google-cloud-python/tree/main/packages/google-ai-generativelanguage";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

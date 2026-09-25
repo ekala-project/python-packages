@@ -43,6 +43,5 @@ buildPythonPackage (finalAttrs: {
     '';
     homepage = "https://github.com/idiap/coqui-ai-coqpit";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

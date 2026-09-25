@@ -29,6 +29,5 @@ buildPythonPackage {
     description = "I like command-line interfaces";
     homepage = "https://github.com/cloudant/ilcli";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

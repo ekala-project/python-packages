@@ -26,6 +26,5 @@ buildPythonPackage rec {
     description = "Library for the Apption Labs Meater cooking probe";
     homepage = "https://github.com/Sotolotl/meater-python";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

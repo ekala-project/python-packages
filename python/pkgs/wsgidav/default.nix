@@ -51,7 +51,6 @@ buildPythonPackage (finalAttrs: {
     description = "Generic and extendable WebDAV server based on WSGI";
     homepage = "https://wsgidav.readthedocs.io/";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "wsgidav";
   };
 })

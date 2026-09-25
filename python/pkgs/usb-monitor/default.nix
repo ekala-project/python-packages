@@ -31,7 +31,6 @@ buildPythonPackage (finalAttrs: {
     description = "Cross-platform library for USB device monitoring";
     homepage = "https://github.com/Eric-Canas/USBMonitor";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

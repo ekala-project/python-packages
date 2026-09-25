@@ -37,6 +37,5 @@ buildPythonPackage (finalAttrs: {
     description = "WTForms integration for peewee models";
     homepage = "https://github.com/coleifer/wtf-peewee/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

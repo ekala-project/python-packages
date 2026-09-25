@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Logging formatters for the Elastic Common Schema (ECS) in Python";
     homepage = "https://github.com/elastic/ecs-logging-python";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

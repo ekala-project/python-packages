@@ -52,6 +52,5 @@ buildPythonPackage rec {
     description = "Create richer and more beautiful pages in MkDocs, by using variables and calls to macros in the markdown code";
     homepage = "https://github.com/fralau/mkdocs-macros-plugin";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

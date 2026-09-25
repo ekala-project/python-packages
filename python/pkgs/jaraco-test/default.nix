@@ -38,6 +38,5 @@ buildPythonPackage (finalAttrs: {
     description = "Testing support by jaraco";
     homepage = "https://github.com/jaraco/jaraco.test";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

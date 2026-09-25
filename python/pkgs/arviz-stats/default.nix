@@ -54,6 +54,5 @@ buildPythonPackage (finalAttrs: {
     description = "Statistical computation and diagnostics for ArviZ";
     homepage = "https://github.com/arviz-devs/arviz-stats";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

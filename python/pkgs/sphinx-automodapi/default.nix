@@ -45,6 +45,5 @@ buildPythonPackage rec {
     description = "Sphinx extension for generating API documentation";
     homepage = "https://github.com/astropy/sphinx-automodapi";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

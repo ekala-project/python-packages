@@ -26,6 +26,5 @@ buildPythonPackage rec {
     description = "Immutable list for Python";
     homepage = "https://github.com/rohanpm/frozenlist2";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
   };
 }

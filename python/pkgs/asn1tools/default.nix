@@ -45,7 +45,6 @@ buildPythonPackage rec {
     description = "ASN.1 parsing, encoding and decoding";
     homepage = "https://github.com/eerimoq/asn1tools";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "asn1tools";
   };
 }

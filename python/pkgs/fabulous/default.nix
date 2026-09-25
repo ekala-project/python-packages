@@ -43,6 +43,5 @@ buildPythonPackage rec {
     description = "Make the output of terminal applications look fabulous";
     homepage = "https://jart.github.io/fabulous";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

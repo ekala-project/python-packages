@@ -32,6 +32,5 @@ buildPythonPackage rec {
       gfl
       ofl
     ];
-    maintainers = [ ];
   };
 }

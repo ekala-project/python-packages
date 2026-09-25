@@ -29,6 +29,5 @@ buildPythonPackage rec {
     description = "Plot in the terminal using braille dots";
     homepage = "https://github.com/tammoippen/plotille";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

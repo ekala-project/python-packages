@@ -44,6 +44,5 @@ buildPythonPackage (finalAttrs: {
     description = "Asynchronous Python wrapper library over Bond Local API";
     homepage = "https://github.com/bondhome/bond-async";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

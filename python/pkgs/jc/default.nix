@@ -52,7 +52,6 @@ buildPythonPackage rec {
     description = "This tool serializes the output of popular command line tools and filetypes to structured JSON output";
     homepage = "https://github.com/kellyjonbrazil/jc";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "jc";
   };
 }

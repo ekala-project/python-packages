@@ -31,6 +31,5 @@ buildPythonPackage (finalAttrs: {
     description = "Fluss+ API Client";
     homepage = "https://github.com/fluss/Fluss_Python_Library";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

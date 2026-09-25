@@ -34,6 +34,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/scanny/python-oxmsg";
     license = lib.licenses.mit;
     mainProgram = "oxmsg";
-    maintainers = [ ];
   };
 }

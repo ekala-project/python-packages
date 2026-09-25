@@ -32,6 +32,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/zopefoundation/zope.proxy";
     description = "Generic Transparent Proxies";
     license = lib.licenses.zpl21;
-    maintainers = [ ];
   };
 }

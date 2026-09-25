@@ -21,7 +21,6 @@ buildGoModule (finalAttrs: {
     description = "Public-key signature system for NATS";
     homepage = "https://github.com/nats-io/nkeys";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "nk";
   };
 })

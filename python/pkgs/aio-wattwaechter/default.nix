@@ -37,6 +37,5 @@ buildPythonPackage (finalAttrs: {
     description = "Async Python client for the WattWächter smart meter API";
     homepage = "https://github.com/SmartCircuits-GmbH/WattWaechter-PyPI";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

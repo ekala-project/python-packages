@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Framework-agnostic, logic-free templating system inspired by ctemplate and et";
     homepage = "https://github.com/PennyDreadfulMTG/pystache";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -24,6 +24,5 @@ buildPythonPackage (finalAttrs: {
     description = "Typing stubs for webencodings";
     homepage = "https://pypi.org/project/types-webencodings/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

@@ -56,7 +56,6 @@ let
       homepage = "https://github.com/fastapi/fastapi-cli";
       mainProgram = "fastapi";
       license = lib.licenses.mit;
-      maintainers = [ ];
       # This package provides a `fastapi`-executable that is in conflict with the one from
       # python3Packages.fastapi. Because this package is primarily used for the purpose of
       # implementing the CLI for python3Packages.fastapi, we reduce the executable's priority

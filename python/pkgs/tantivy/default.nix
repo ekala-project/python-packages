@@ -49,6 +49,5 @@ buildPythonPackage (finalAttrs: {
     description = "Official Python bindings for the Tantivy search engine";
     homepage = "https://pypi.org/project/tantivy";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

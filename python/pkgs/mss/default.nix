@@ -42,6 +42,5 @@ buildPythonPackage rec {
     mainProgram = "mss";
     homepage = "https://github.com/BoboTiG/python-mss";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

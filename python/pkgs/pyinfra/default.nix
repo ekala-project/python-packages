@@ -60,7 +60,6 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://pyinfra.com";
     downloadPage = "https://pyinfra.com/Fizzadar/pyinfra/releases";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "pyinfra";
   };
 })

@@ -36,6 +36,5 @@ buildPythonPackage (finalAttrs: {
     description = "Wrapper for logging";
     homepage = "https://github.com/geopozo/logistro";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

@@ -49,6 +49,5 @@ buildPythonPackage rec {
     description = "Various parsers for ECMA standards";
     homepage = "https://github.com/calmjs/calmjs.parse";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

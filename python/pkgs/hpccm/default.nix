@@ -47,7 +47,6 @@ buildPythonPackage rec {
     description = "HPC Container Maker";
     homepage = "https://github.com/NVIDIA/hpc-container-maker";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "hpccm";
     platforms = lib.platforms.x86;
   };

@@ -45,6 +45,5 @@ buildPythonPackage (finalAttrs: {
     description = "Abstractions library for Kiota generated Python clients";
     homepage = "https://github.com/microsoft/kiota-python/tree/main/packages/abstractions/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

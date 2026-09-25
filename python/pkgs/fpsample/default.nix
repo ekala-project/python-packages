@@ -36,6 +36,5 @@ buildPythonPackage (finalAttrs: {
     description = "Efficient CPU farthest-point sampling for point clouds";
     homepage = "https://github.com/leonardodalinky/fpsample";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

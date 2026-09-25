@@ -59,6 +59,5 @@ buildPythonPackage (finalAttrs: {
     description = "Simple, Elegant, Typed Argument Parsing with argparse";
     homepage = "https://github.com/lebrice/SimpleParsing";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

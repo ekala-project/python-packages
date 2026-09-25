@@ -53,6 +53,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python implementation of the Ethereum Virtual Machine";
     homepage = "https://github.com/ethereum/py-evm";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

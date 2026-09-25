@@ -51,6 +51,5 @@ buildPythonPackage rec {
     description = "Python client for performing REST calls to configurable data curation system (CDCS) databases";
     homepage = "https://github.com/usnistgov/pycdcs";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

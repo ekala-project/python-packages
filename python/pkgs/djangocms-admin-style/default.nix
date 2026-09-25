@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Django Theme tailored to the needs of django CMS";
     homepage = "https://django-cms.org";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

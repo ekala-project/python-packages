@@ -54,6 +54,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python bindings for SparseDiffEngine, a C library for computing sparse Jacobians and Hessians";
     homepage = "https://github.com/SparseDifferentiation/SparseDiffPy";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

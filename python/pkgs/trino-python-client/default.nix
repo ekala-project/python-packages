@@ -55,6 +55,5 @@ buildPythonPackage rec {
     description = "Client for the Trino distributed SQL Engine";
     homepage = "https://github.com/trinodb/trino-python-client";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

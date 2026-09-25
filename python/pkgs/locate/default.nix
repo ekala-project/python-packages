@@ -32,6 +32,5 @@ buildPythonPackage (finalAttrs: {
     description = "Locate files relative to the current Python script";
     homepage = "https://github.com/AutoActuary/locate";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

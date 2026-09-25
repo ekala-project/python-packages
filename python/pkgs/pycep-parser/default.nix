@@ -42,6 +42,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python based Bicep parser";
     homepage = "https://github.com/gruebel/pycep";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

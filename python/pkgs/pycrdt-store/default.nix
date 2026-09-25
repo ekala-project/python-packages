@@ -41,6 +41,5 @@ buildPythonPackage (finalAttrs: {
     description = "Persistent storage for pycrdt";
     homepage = "https://github.com/y-crdt/pycrdt-store";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

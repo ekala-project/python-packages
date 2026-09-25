@@ -51,6 +51,5 @@ buildPythonPackage rec {
     description = "Module for communicating with the wifi module from OpenEVSE";
     homepage = "https://github.com/miniconfig/python-openevse-wifi";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

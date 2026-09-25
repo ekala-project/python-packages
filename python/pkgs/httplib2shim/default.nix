@@ -44,6 +44,5 @@ buildPythonPackage (finalAttrs: {
     description = "Urllib3 sanity for httplib2 users";
     homepage = "https://github.com/GoogleCloudPlatform/httplib2shim";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

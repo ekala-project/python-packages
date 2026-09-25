@@ -31,7 +31,6 @@ buildPythonPackage {
     description = "Simple command-line script to download files from mediafire based on gdown";
     homepage = "https://github.com/Juvenal-Yescas/mediafire-dl";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "mediafire-dl";
   };
 }

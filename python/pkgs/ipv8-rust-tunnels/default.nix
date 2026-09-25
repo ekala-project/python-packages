@@ -33,6 +33,5 @@ buildPythonPackage rec {
     description = "A set of performance enhancements to the TunnelCommunity, the anonymization layer used in IPv8 and Tribler";
     homepage = "https://github.com/Tribler/ipv8-rust-tunnels";
     license = lib.licenses.lgpl3Only;
-    maintainers = [ ];
   };
 }

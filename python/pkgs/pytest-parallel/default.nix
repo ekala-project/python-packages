@@ -32,6 +32,5 @@ buildPythonPackage {
     description = "Pytest plugin for parallel and concurrent testing";
     homepage = "https://github.com/kevlened/pytest-parallelt";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

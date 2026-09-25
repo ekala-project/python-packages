@@ -37,6 +37,5 @@ buildPythonPackage (finalAttrs: {
     description = "Generate a json file from an OpenDocument Format .ods file";
     homepage = "https://github.com/jdum/odsparsator";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

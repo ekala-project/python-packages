@@ -19,7 +19,6 @@ buildPythonPackage rec {
     description = "AR file handling for Python (including .deb files)";
     homepage = "https://github.com/getninjas/unix_ar";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = with lib.platforms; linux ++ darwin;
   };
 }

@@ -26,6 +26,5 @@ buildPythonPackage (finalAttrs: {
     description = "Module for temporary (disposable/throwaway) email detection";
     homepage = "https://github.com/FGRibreau/mailchecker";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

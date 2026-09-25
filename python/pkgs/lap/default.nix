@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Linear Assignment Problem solver (LAPJV/LAPMOD)";
     homepage = "https://github.com/gatagat/lap";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

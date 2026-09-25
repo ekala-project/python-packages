@@ -27,6 +27,5 @@ buildPythonPackage rec {
     description = "PEP 621 metadata parsing";
     homepage = "https://github.com/FFY00/python-pyproject-metadata";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

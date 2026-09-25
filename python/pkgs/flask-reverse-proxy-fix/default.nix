@@ -35,7 +35,6 @@ buildPythonPackage rec {
 
   meta = {
     description = "Python Flask middleware for applications running under a reverse proxy";
-    maintainers = [ ];
     homepage = "https://github.com/antarctica/flask-reverse-proxy-fix";
 
     license = {

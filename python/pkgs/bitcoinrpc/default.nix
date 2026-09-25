@@ -43,6 +43,5 @@ buildPythonPackage (finalAttrs: {
     description = "Bitcoin JSON-RPC client";
     homepage = "https://github.com/bibajz/bitcoin-python-async-rpc";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

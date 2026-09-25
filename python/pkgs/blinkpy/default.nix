@@ -66,6 +66,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python library for the Blink Camera system";
     homepage = "https://github.com/fronzbot/blinkpy";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

@@ -50,6 +50,5 @@ buildPythonPackage {
     mainProgram = "ttp";
     homepage = "https://github.com/dmulyalin/ttp";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

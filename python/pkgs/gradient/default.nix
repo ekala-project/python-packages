@@ -51,6 +51,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://github.com/digitalocean/gradient-python";
     license = lib.licenses.asl20;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

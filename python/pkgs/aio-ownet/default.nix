@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Asynchronous OWFS (owserver network protocol) client library";
     homepage = "https://github.com/hacf-fr/aio-ownet";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

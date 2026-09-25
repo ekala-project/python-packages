@@ -45,6 +45,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/pmclanahan/django-celery-email";
     description = "Django email backend that uses a celery task for sending the email";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

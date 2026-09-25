@@ -43,6 +43,5 @@ buildPythonPackage (finalAttrs: {
     description = "Bindings to access Kaggle endpoints";
     homepage = "https://github.com/Kaggle/kagglesdk";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

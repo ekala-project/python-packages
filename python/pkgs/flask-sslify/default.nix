@@ -29,6 +29,5 @@ buildPythonPackage rec {
     description = "Flask extension that redirects all incoming requests to HTTPS";
     homepage = "https://github.com/kennethreitz42/flask-sslify";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

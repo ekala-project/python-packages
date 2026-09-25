@@ -42,6 +42,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python module to control VLC";
     homepage = "https://github.com/MartinHjelmare/aiovlc";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

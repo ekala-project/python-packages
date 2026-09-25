@@ -37,6 +37,5 @@ buildPythonPackage rec {
     description = "Python parser for Apache/nginx-style HTML directory listing";
     mainProgram = "rehttpfs";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

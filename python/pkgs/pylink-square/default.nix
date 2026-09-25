@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "Python interface for the SEGGER J-Link";
     homepage = "https://github.com/square/pylink";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

@@ -23,6 +23,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/SkyTemple/dungeon-eos";
     description = "Package that simulates PMD EoS dungeon generation";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
   };
 }

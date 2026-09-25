@@ -30,6 +30,5 @@ buildPythonPackage rec {
     description = "CrowdStrike Falcon SDK for Python";
     homepage = "https://github.com/CrowdStrike/falconpy";
     license = lib.licenses.unlicense;
-    maintainers = [ ];
   };
 }

@@ -26,6 +26,5 @@ buildPythonPackage (finalAttrs: {
     description = "Section-based human-readable data format";
     homepage = "https://github.com/pyrustic/braq";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

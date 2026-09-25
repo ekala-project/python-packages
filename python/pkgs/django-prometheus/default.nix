@@ -45,6 +45,5 @@ buildPythonPackage (finalAttrs: {
     description = "Django middlewares to monitor your application with Prometheus.io";
     homepage = "https://github.com/django-commons/django-prometheus";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

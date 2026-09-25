@@ -37,6 +37,5 @@ buildPythonPackage (finalAttrs: {
     description = "HTTPS CredSSP authentication with the requests library";
     homepage = "https://github.com/jborean93/requests-credssp";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

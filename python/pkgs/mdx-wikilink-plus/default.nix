@@ -37,7 +37,6 @@ buildPythonPackage (finalAttrs: {
     description = "A wikilink extension for Python Markdown";
     homepage = "https://github.com/neurobin/mdx_wikilink_plus";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     mainProgram = "mdx-wikilink-plus";
   };
 })

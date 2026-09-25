@@ -127,6 +127,5 @@ buildPythonPackage (finalAttrs: {
     description = "Dependency-slim FastMCP package";
     homepage = "https://github.com/PrefectHQ/fastmcp/tree/main/fastmcp_slim";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

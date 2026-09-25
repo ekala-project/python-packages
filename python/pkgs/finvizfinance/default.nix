@@ -60,6 +60,5 @@ buildPythonPackage (finalAttrs: {
     description = "Finviz Finance information downloader";
     homepage = "https://github.com/lit26/finvizfinance";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

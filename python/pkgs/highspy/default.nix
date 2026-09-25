@@ -33,6 +33,5 @@ buildPythonPackage {
     description = "Linear optimization software";
     homepage = "https://github.com/ERGO-Code/HiGHS";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

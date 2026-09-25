@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "Live patches pip and requests to use system certs by default";
     homepage = "https://gitlab.com/alelec/pip-system-certs";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

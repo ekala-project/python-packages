@@ -53,6 +53,5 @@ buildPythonPackage rec {
     description = "Python asynchronous client library for Kubernetes http://kubernetes.io";
     homepage = "https://github.com/tomplus/kubernetes_asyncio";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

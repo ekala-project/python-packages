@@ -25,6 +25,5 @@ buildPythonPackage rec {
     description = "Define placeholders where your blocks get rendered and append to those blocks";
     homepage = "https://github.com/django-cms/django-sekizai";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

@@ -44,6 +44,5 @@ buildPythonPackage rec {
     description = "Super-fast, efficiently stored Trie for Python";
     homepage = "https://github.com/kmike/datrie";
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
   };
 }

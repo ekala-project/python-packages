@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Client for Arista eAPI";
     homepage = "https://github.com/arista-eosplus/pyeapi";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

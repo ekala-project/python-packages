@@ -28,6 +28,5 @@ buildPythonPackage (finalAttrs: {
     description = "Cross-platform automation framework for all kinds of apps, built on top of the W3C WebDriver protocol";
     homepage = "https://appium.io/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

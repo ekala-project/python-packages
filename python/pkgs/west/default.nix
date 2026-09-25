@@ -37,6 +37,5 @@ buildPythonPackage rec {
     mainProgram = "west";
     homepage = "https://github.com/zephyrproject-rtos/west";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

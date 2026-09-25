@@ -41,6 +41,5 @@ buildPythonPackage rec {
     description = "Helper functions for injecting a conda environment into the current python environment";
     homepage = "https://github.com/koesterlab/conda-inject";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

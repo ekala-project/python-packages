@@ -39,6 +39,5 @@ buildPythonPackage (finalAttrs: {
     description = "FastAPI plugin to enable SSO to most common providers (such as Facebook login, Google login and login via Microsoft Office 365 Account";
     homepage = "https://github.com/tomasvotava/fastapi-sso";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

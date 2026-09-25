@@ -45,6 +45,5 @@ buildPythonPackage rec {
     description = "Library of common code leveraged by cybox, maec and stix";
     homepage = "https://github.com/CybOXProject/mixbox";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

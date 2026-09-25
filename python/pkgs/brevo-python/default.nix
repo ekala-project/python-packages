@@ -46,6 +46,5 @@ buildPythonPackage rec {
     description = "Fully-featured Python API client to interact with Brevo";
     homepage = "https://github.com/getbrevo/brevo-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

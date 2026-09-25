@@ -77,6 +77,5 @@ buildPythonPackage (finalAttrs: {
     description = "Sign and stamp PDF files";
     homepage = "https://github.com/MatthiasValvekens/pyHanko";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

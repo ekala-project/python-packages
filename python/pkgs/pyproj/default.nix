@@ -60,6 +60,5 @@ buildPythonPackage rec {
     mainProgram = "pyproj";
     homepage = "https://github.com/pyproj4/pyproj";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Python helpers to send logs to Logmatic.io";
     homepage = "https://github.com/logmatic/logmatic-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

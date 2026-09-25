@@ -41,6 +41,5 @@ buildPythonPackage (finalAttrs: {
     description = "Bidirectional communication for the HoloViz ecosystem";
     homepage = "https://pyviz.org/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

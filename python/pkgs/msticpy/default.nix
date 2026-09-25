@@ -122,6 +122,5 @@ buildPythonPackage (finalAttrs: {
     description = "Microsoft Threat Intelligence Security Tools";
     homepage = "https://github.com/microsoft/msticpy";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "Python DBAPI driver for MSSQL using pure Python TDS (Tabular Data Stream) protocol implementation";
     homepage = "https://python-tds.readthedocs.io/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

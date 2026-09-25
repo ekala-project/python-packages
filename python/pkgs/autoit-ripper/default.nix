@@ -30,6 +30,5 @@ buildPythonPackage rec {
     mainProgram = "autoit-ripper";
     homepage = "https://github.com/nazywam/AutoIt-Ripper";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

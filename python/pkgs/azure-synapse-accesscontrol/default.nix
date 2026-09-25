@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "Microsoft Azure Synapse AccessControl Client Library";
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/synapse/azure-synapse-accesscontrol";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

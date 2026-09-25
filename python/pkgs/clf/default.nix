@@ -43,6 +43,5 @@ buildPythonPackage (finalAttrs: {
     description = "Command line tool to search snippets on Commandlinefu.com";
     mainProgram = "clf";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

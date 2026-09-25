@@ -25,6 +25,5 @@ buildPythonPackage (finalAttrs: {
     description = "Drop-in replacement for smbus-cffi/smbus-python";
     homepage = "https://smbus2.readthedocs.io/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

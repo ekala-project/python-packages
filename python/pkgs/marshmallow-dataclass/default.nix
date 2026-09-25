@@ -42,6 +42,5 @@ buildPythonPackage (finalAttrs: {
     description = "Automatic generation of marshmallow schemas from dataclasses";
     homepage = "https://github.com/lovasoa/marshmallow_dataclass";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

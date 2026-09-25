@@ -25,6 +25,5 @@ buildPythonPackage rec {
     description = "Systemd OnCalendar expression parser and evaluator";
     homepage = "https://github.com/cuu508/oncalendar";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Library to control Airzone via Cloud API";
     homepage = "https://github.com/Noltari/aioairzone-cloud";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

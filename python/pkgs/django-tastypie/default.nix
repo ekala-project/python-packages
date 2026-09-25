@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Utilities and helpers for writing Pylint plugins";
     homepage = "https://github.com/django-tastypie/django-tastypie";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
   };
 }

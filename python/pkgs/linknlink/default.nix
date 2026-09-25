@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Module and CLI for controlling Linklink devices locally";
     homepage = "https://github.com/xuanxuan000/python-linknlink";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

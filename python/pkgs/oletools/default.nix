@@ -43,6 +43,5 @@ buildPythonPackage (finalAttrs: {
       bsd2
       mit
     ];
-    maintainers = [ ];
   };
 })

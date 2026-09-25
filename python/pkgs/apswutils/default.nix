@@ -49,6 +49,5 @@ buildPythonPackage (finalAttrs: {
     description = "A fork of sqlite-minutils for apsw";
     homepage = "https://github.com/AnswerDotAI/apswutils";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

@@ -45,7 +45,6 @@ buildPythonPackage rec {
     mainProgram = "ezdxf";
     homepage = "https://ezdxf.mozman.at/";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

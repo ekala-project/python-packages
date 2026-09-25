@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Library for converting complex objects to and from simple Python datatypes";
     homepage = "https://github.com/marshmallow-code/marshmallow";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "INWX Domrobot Python Client";
     homepage = "https://github.com/inwx/python-client";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

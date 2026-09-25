@@ -41,6 +41,5 @@ buildPythonPackage rec {
     description = "Python utilities useful for database and internal apps";
     license = lib.licenses.gpl2Only;
     homepage = "https://github.com/tcgoetz/utilities";
-    maintainers = [ ];
   };
 }

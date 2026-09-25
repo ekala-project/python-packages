@@ -37,6 +37,5 @@ buildPythonPackage (finalAttrs: {
     description = "Docker API client for asyncio";
     homepage = "https://github.com/aio-libs/aiodocker";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

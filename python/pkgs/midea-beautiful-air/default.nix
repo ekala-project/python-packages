@@ -45,7 +45,6 @@ buildPythonPackage rec {
   meta = {
     description = "Python client for accessing Midea air conditioners and dehumidifiers (Midea, Comfee, Inventor EVO) via local network";
     homepage = "https://github.com/nbogojevic/midea-beautiful-air";
-    maintainers = [ ];
     mainProgram = "midea-beautiful-air-cli";
     license = lib.licenses.mit;
   };

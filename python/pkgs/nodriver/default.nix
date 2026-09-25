@@ -44,6 +44,5 @@ buildPythonPackage rec {
       automation, webscraping, bots and any other creative ideas which are normally
       hindered by annoying anti bot systems like Captcha / CloudFlare / Imperva / hCaptcha
     '';
-    maintainers = [ ];
   };
 }

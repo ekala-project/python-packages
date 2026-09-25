@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "PySpark test helper methods with beautiful error messages";
     homepage = "https://github.com/MrPowers/chispa";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

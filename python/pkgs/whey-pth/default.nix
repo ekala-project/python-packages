@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "Extension to whey to support .pth files";
     homepage = "https://github.com/repo-helper/whey-pth";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

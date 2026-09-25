@@ -43,6 +43,5 @@ buildPythonPackage rec {
     description = "Python library for NETCONF clients";
     homepage = "https://github.com/ncclient/ncclient";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

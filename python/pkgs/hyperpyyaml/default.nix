@@ -56,6 +56,5 @@ buildPythonPackage rec {
     description = "Extensions to YAML syntax for better python interaction";
     homepage = "https://github.com/speechbrain/HyperPyYAML";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

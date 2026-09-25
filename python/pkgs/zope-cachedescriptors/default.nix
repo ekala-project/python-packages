@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "Method and property caching decorators";
     homepage = "https://github.com/zopefoundation/zope.cachedescriptors";
     license = lib.licenses.zpl21;
-    maintainers = [ ];
   };
 }

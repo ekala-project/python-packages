@@ -31,6 +31,5 @@ buildPythonPackage (finalAttrs: {
     description = "Standalone Lark based Beancount syntax parser";
     homepage = "https://github.com/LaunchPlatform/beancount-parser/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

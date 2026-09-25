@@ -25,6 +25,5 @@ buildPythonPackage rec {
     description = "Create and extract conda packages of various formats";
     homepage = "https://github.com/conda/conda-package-handling";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

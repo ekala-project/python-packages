@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Library to connect to an Arris TG2492LG";
     homepage = "https://github.com/vanbalken/arris-tg2492lg";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -48,6 +48,5 @@ buildPythonPackage rec {
     '';
     homepage = "https://github.com/amatellanes/fixerio";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

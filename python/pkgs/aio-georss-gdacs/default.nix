@@ -45,6 +45,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python library for accessing GeoRSS feeds";
     homepage = "https://github.com/exxamalte/python-aio-georss-gdacs";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

@@ -26,6 +26,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/nabla-c0d3/tls_parser";
     platforms = with lib.platforms; linux ++ darwin;
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -28,6 +28,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://jquery.org";
     description = "jquery packaged static files for python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

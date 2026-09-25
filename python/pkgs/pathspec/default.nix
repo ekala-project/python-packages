@@ -22,6 +22,5 @@ buildPythonPackage rec {
     description = "Utility library for gitignore-style pattern matching of file paths";
     homepage = "https://github.com/cpburnz/python-path-specification";
     license = lib.licenses.mpl20;
-    maintainers = [ ];
   };
 }

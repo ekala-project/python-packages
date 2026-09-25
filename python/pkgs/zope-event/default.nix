@@ -26,6 +26,5 @@ buildPythonPackage (finalAttrs: {
     description = "Event publishing system";
     homepage = "https://github.com/zopefoundation/zope.event";
     license = lib.licenses.zpl21;
-    maintainers = [ ];
   };
 })

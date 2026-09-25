@@ -57,6 +57,5 @@ buildPythonPackage rec {
     description = "High speed download python library";
     homepage = "https://github.com/huggingface/hf_transfer";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

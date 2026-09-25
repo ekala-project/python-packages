@@ -30,6 +30,5 @@ buildPythonPackage rec {
     description = "Python client for the official Notion API";
     homepage = "https://github.com/ramnes/notion-sdk-py";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

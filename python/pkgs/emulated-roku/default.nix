@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Library to emulate a roku server to serve as a proxy for remotes such as Harmony";
     homepage = "https://github.com/mindigmarton/emulated_roku";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

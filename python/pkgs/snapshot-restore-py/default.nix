@@ -23,7 +23,6 @@ buildPythonPackage rec {
     description = "Snapshot Restore for Python library which can be used for registering runtime hooks in Snapstart enabled Python Lambda functions";
     homepage = "https://github.com/aws/snapshot-restore-py";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 }

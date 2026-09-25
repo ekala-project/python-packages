@@ -36,6 +36,5 @@ buildPythonPackage (finalAttrs: {
     description = "Framework for formal grammars";
     homepage = "https://github.com/Aunsiels/pyformlang";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

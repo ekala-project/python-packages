@@ -27,7 +27,6 @@ buildPythonPackage (finalAttrs: {
   meta = {
     description = "Python interface to Bluetooth LE on Linux";
     homepage = "https://github.com/IanHarvey/bluepy";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
     license = lib.licenses.gpl2;
   };

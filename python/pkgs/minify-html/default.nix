@@ -40,6 +40,5 @@ buildPythonPackage rec {
     description = "Extremely fast and smart HTML + JS + CSS minifier";
     homepage = "https://github.com/wilsonzlin/minify-html/tree/master/minify-html-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -44,6 +44,5 @@ buildPythonPackage (finalAttrs: {
     description = "Adds SQL read/write support to agate";
     homepage = "https://github.com/wireservice/agate-sql";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

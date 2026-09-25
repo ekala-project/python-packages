@@ -53,6 +53,5 @@ buildPythonPackage rec {
     description = "JOSE implementation in Python";
     homepage = "https://github.com/mpdavis/python-jose";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

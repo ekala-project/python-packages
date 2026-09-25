@@ -31,7 +31,6 @@ buildPythonPackage rec {
     description = "Google's i18n address data packaged for Python";
     homepage = "https://github.com/mirumee/google-i18n-address";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     mainProgram = "update-validation-files";
   };
 }

@@ -50,6 +50,5 @@ buildPythonPackage rec {
     description = "Python SMB library";
     homepage = "https://github.com/skelsec/aiosmb";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

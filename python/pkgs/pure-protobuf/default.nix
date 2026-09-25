@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Python implementation of Protocol Buffers with dataclass-based schemas";
     homepage = "https://github.com/eigenein/protobuf";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

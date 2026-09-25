@@ -51,7 +51,6 @@ buildPythonPackage {
     homepage = "https://github.com/pytest-dev/nose2pytest";
     sourceProvenance = [ lib.sourceTypes.fromSource ];
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     mainProgram = "nose2pytest";
   };
 }

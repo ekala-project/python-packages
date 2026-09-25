@@ -46,6 +46,5 @@ buildPythonPackage rec {
     description = "Simple key-value store for binary data";
     homepage = "https://github.com/mbr/simplekv";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

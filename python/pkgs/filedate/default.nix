@@ -53,6 +53,5 @@ buildPythonPackage rec {
     description = "Simple, convenient and cross-platform file date changing library";
     homepage = "https://github.com/kubinka0505/filedate";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 }

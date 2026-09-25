@@ -38,6 +38,5 @@ buildPythonPackage rec {
     description = "Pytest plugin that allows you recording of network interactions via VCR.py";
     homepage = "https://github.com/kiwicom/pytest-recording";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

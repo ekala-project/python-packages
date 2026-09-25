@@ -47,6 +47,5 @@ buildPythonPackage (finalAttrs: {
     description = "Xet client tech, used in huggingface_hub";
     homepage = "https://github.com/huggingface/xet-core/tree/main/hf_xet";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

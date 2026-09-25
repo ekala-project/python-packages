@@ -25,6 +25,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/pdm-project/pdm-backend";
     description = "Yet another PEP 517 backend";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

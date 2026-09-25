@@ -54,6 +54,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://github.com/twisted/treq";
     description = "Requests-like API built on top of twisted.web's Agent";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

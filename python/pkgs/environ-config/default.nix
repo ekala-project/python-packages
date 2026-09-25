@@ -44,6 +44,5 @@ buildPythonPackage rec {
     description = "Python Application Configuration With Environment Variables";
     homepage = "https://github.com/hynek/environ-config";
     license = lib.licenses.apsl20;
-    maintainers = [ ];
   };
 }

@@ -58,6 +58,5 @@ buildPythonPackage rec {
     description = "PyScaffold extension for Data Science projects";
     homepage = "https://pypi.org/project/pyscaffoldext-dsproject/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

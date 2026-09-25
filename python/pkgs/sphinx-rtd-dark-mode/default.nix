@@ -28,7 +28,6 @@ buildPythonPackage rec {
   meta = {
     description = "Adds a toggleable dark mode to the Read the Docs theme for Sphinx";
     homepage = "https://github.com/MrDogeBro/sphinx_rtd_dark_mode";
-    maintainers = [ ];
     license = lib.licenses.mit;
   };
 }

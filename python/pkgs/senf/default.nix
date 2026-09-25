@@ -27,7 +27,6 @@ buildPythonPackage {
     description = "Consistent filename handling for all Python versions and platforms";
     homepage = "https://senf.readthedocs.io/en/latest/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 
 }

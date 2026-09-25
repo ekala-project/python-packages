@@ -33,6 +33,5 @@ buildPythonPackage rec {
     description = "Report Python session information";
     homepage = "https://session-info2.readthedocs.io";
     license = lib.licenses.mpl20;
-    maintainers = [ ];
   };
 }

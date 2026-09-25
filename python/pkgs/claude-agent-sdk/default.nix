@@ -36,6 +36,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python SDK for Claude Agent";
     homepage = "https://github.com/anthropics/claude-agent-sdk-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

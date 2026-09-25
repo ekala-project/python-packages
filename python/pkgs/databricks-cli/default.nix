@@ -42,6 +42,5 @@ buildPythonPackage rec {
     description = "Command line interface for Databricks";
     homepage = "https://github.com/databricks/databricks-cli";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

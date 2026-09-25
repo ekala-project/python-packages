@@ -50,7 +50,6 @@ buildPythonPackage rec {
   meta = {
     description = "Python module for iCal URL/file parsing and querying";
     homepage = "https://github.com/jazzband/icalevents";
-    maintainers = [ ];
     license = lib.licenses.mit;
   };
 }

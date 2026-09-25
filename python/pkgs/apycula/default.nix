@@ -35,6 +35,5 @@ buildPythonPackage (finalAttrs: {
     description = "Open Source tools for Gowin FPGAs";
     homepage = "https://github.com/YosysHQ/apicula";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

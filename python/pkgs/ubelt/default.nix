@@ -47,6 +47,5 @@ buildPythonPackage rec {
     description = "Python utility library with a stdlib like feel and extra batteries. Paths, Progress, Dicts, Downloads, Caching, Hashing: ubelt makes it easy";
     homepage = "https://github.com/Erotemic/ubelt";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

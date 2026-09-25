@@ -34,6 +34,5 @@ buildPythonPackage (finalAttrs: {
     mainProgram = "ftfy";
     homepage = "https://github.com/LuminosoInsight/python-ftfy";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

@@ -34,6 +34,5 @@ buildPythonPackage (finalAttrs: {
     description = "Llama-index vector_stores milvus integration";
     homepage = "https://pypi.org/project/llama-index-vector-stores-milvus/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

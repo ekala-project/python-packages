@@ -33,6 +33,5 @@ buildPythonPackage rec {
     mainProgram = "geomet";
     homepage = "https://github.com/geomet/geomet";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

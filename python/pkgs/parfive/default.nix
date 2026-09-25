@@ -42,6 +42,5 @@ buildPythonPackage (finalAttrs: {
     mainProgram = "parfive";
     homepage = "https://parfive.readthedocs.io/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

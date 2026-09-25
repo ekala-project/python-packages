@@ -40,6 +40,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/python-poetry/cleo";
     description = "Allows you to create beautiful and testable command-line interfaces";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

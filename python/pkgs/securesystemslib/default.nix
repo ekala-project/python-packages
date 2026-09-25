@@ -78,6 +78,5 @@ buildPythonPackage (finalAttrs: {
     description = "Cryptographic and general-purpose routines";
     homepage = "https://github.com/secure-systems-lab/securesystemslib";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

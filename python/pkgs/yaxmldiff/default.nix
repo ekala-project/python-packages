@@ -36,6 +36,5 @@ buildPythonPackage (finalAttrs: {
     description = "Yet Another XML Differ";
     homepage = "https://github.com/latk/yaxmldiff.py";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

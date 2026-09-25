@@ -41,6 +41,5 @@ buildPythonPackage rec {
     description = "Retrieve data from the Belgian Royal Meteorological Institute";
     homepage = "https://github.com/jdejaegh/irm-kmi-api";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

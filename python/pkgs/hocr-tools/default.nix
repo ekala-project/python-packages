@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Tools for manipulating and evaluating the hOCR format for representing multi-lingual OCR results by embedding them into HTML";
     homepage = "https://github.com/ocropus/hocr-tools";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

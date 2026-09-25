@@ -27,6 +27,5 @@ buildPythonPackage rec {
     description = "Implementation of SSL and TLS";
     homepage = "https://github.com/tlsfuzzer/tlslite-ng";
     license = lib.licenses.lgpl21Only;
-    maintainers = [ ];
   };
 }

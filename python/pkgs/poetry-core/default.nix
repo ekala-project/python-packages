@@ -27,6 +27,5 @@ buildPythonPackage rec {
     description = "Poetry PEP 517 Build Backend";
     homepage = "https://github.com/python-poetry/poetry-core/";
     license = lib.licenses.mit;
-    teams = [ ];
   };
 }

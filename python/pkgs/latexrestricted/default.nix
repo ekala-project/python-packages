@@ -26,6 +26,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/gpoore/latexrestricted";
     description = "Python library for creating executables compatible with LaTeX restricted shell escape";
     license = lib.licenses.lppl13c;
-    maintainers = [ ];
   };
 }

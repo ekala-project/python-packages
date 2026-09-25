@@ -55,6 +55,5 @@ buildPythonPackage rec {
     description = "Python SDK for dashscope";
     homepage = "https://github.com/dashscope/dashscope-sdk-python";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

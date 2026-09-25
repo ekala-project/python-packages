@@ -47,6 +47,5 @@ buildPythonPackage rec {
     homepage = "https://github3py.readthedocs.org/en/master/";
     description = "Wrapper for the GitHub API written in python";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

@@ -32,6 +32,5 @@ buildPythonPackage (finalAttrs: {
     description = "Simple GraphQL client for Python";
     homepage = "https://github.com/prisma-labs/python-graphql-client";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

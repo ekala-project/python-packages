@@ -41,6 +41,5 @@ buildPythonPackage rec {
     description = "Ultra-performant Promise implementation in Python";
     homepage = "https://github.com/syrusakbary/promise";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

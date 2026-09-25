@@ -22,6 +22,5 @@ buildPythonPackage rec {
     description = "Python HTTP library to call APIs";
     homepage = "https://github.com/sendgrid/python-http-client";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

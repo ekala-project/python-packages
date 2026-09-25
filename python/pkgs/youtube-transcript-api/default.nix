@@ -37,6 +37,5 @@ buildPythonPackage rec {
     mainProgram = "youtube_transcript_api";
     homepage = "https://github.com/jdepoix/youtube-transcript-api";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

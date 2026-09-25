@@ -30,6 +30,5 @@ buildPythonPackage (finalAttrs: {
     mainProgram = "git-sweep";
     homepage = "https://github.com/arc90/git-sweep";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

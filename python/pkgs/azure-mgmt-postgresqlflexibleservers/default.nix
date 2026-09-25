@@ -43,6 +43,5 @@ buildPythonPackage rec {
     description = "Microsoft Azure Postgresqlflexibleservers Management Client Library for Python";
     homepage = "https://pypi.org/project/azure-mgmt-postgresqlflexibleservers/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -26,6 +26,5 @@ buildPythonPackage rec {
     description = "Dynect dns lib";
     homepage = "https://dyn.readthedocs.org";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

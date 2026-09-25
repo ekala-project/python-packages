@@ -72,6 +72,5 @@ buildPythonPackage rec {
     mainProgram = "jupyter-server";
     homepage = "https://github.com/jupyter-server/jupyter_server";
     license = lib.licenses.bsdOriginal;
-    maintainers = [ ];
   };
 }

@@ -54,6 +54,5 @@ buildPythonPackage (finalAttrs: {
     description = "Rectified L1 logistic regression with CUTLASS critical range encoding";
     homepage = "https://github.com/jworender/cutlass";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

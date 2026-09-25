@@ -30,6 +30,5 @@ buildPythonPackage rec {
     description = "LlamaIndex Readers Integration for Databases";
     homepage = "https://github.com/run-llama/llama_index/tree/main/llama-index-integrations/readers/llama-index-readers-database";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

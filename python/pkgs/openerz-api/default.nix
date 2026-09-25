@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Python module to interact with the OpenERZ API";
     homepage = "https://github.com/misialq/openerz-api";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

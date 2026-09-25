@@ -27,6 +27,5 @@ buildPythonPackage rec {
     description = "Python wrapper for Wikipedia";
     homepage = "https://github.com/martin-majlis/Wikipedia-API";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

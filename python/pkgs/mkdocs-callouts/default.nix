@@ -37,6 +37,5 @@ buildPythonPackage (finalAttrs: {
     description = "A simple MkDocs plugin that converts Obsidian callout blocks to mkdocs supported Admonitions";
     homepage = "https://github.com/sondregronas/mkdocs-callouts";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

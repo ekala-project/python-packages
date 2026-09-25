@@ -95,7 +95,6 @@ buildPythonPackage rec {
     description = "Python agent for the Elastic APM";
     homepage = "https://github.com/elastic/apm-agent-python";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     mainProgram = "elasticapm-run";
   };
 }

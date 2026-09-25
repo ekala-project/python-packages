@@ -58,6 +58,5 @@ buildPythonPackage rec {
     description = "Integration of Cookiecutter project templates into PyScaffold (see: https://github.com/cookiecutter/cookiecutter";
     homepage = "https://pypi.org/project/pyscaffoldext-cookiecutter/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

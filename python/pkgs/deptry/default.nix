@@ -51,7 +51,6 @@ buildPythonPackage (finalAttrs: {
     description = "Find unused, missing and transitive dependencies in a Python project";
     homepage = "https://github.com/osprey-oss/deptry";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "deptry";
   };
 })

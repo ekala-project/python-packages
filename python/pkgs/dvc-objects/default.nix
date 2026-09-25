@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Library for DVC objects";
     homepage = "https://github.com/iterative/dvc-objects";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

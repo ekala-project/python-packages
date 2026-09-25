@@ -59,6 +59,5 @@ buildPythonPackage {
     mainProgram = "nbexec";
     homepage = "https://github.com/jsvine/nbexec";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

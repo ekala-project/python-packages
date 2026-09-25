@@ -58,7 +58,6 @@ buildPythonPackage (finalAttrs: {
     description = "Structured outputs for llm";
     homepage = "https://github.com/jxnl/instructor";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "instructor";
   };
 })

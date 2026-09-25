@@ -26,7 +26,6 @@ buildPythonPackage rec {
     homepage = "https://github.com/lukehugh/cv2_enumerate_cameras";
     description = "Retrieve the connected camera's name, VID, PID, and the corresponding OpenCV index";
     license = lib.licenses.mit;
-    maintainers = [ ];
     # Needs pyobjc-framework-avfoundation; not currently packaged.
     broken = stdenv.hostPlatform.isDarwin;
   };

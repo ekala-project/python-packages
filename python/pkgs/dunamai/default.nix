@@ -32,6 +32,5 @@ buildPythonPackage rec {
     mainProgram = "dunamai";
     homepage = "https://github.com/mtkennerly/dunamai";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

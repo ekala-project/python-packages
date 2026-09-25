@@ -26,6 +26,5 @@ buildPythonPackage rec {
     description = "Library that integrates the multiprocessing module with asyncio";
     homepage = "https://github.com/dano/aioprocessing";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

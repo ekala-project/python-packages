@@ -40,6 +40,5 @@ buildPythonPackage rec {
     description = "Python module to help parse and construct Tasmota MQTT messages";
     homepage = "https://github.com/emontnemery/hatasmota";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -65,6 +65,5 @@ buildPythonPackage rec {
     description = "Py.test plugin to validate Jupyter notebooks";
     homepage = "https://github.com/computationalmodelling/nbval";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

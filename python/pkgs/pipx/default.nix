@@ -67,6 +67,5 @@ buildPythonPackage (finalAttrs: {
     mainProgram = "pipx";
     homepage = "https://github.com/pypa/pipx";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

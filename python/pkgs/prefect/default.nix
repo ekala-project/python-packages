@@ -188,7 +188,6 @@ buildPythonPackage (finalAttrs: {
     description = "Workflow orchestration framework for building resilient data pipelines in Python";
     homepage = "https://github.com/PrefectHQ/prefect";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "prefect";
   };
 })

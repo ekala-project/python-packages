@@ -63,6 +63,5 @@ buildPythonPackage (finalAttrs: {
     description = "Fast excel file reader for Python, written in Rust";
     homepage = "https://github.com/ToucanToco/fastexcel/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

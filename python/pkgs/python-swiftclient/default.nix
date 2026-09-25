@@ -62,6 +62,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://docs.openstack.org/python-swiftclient/latest/";
     downloadPage = "https://github.com/openstack/python-swiftclient/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

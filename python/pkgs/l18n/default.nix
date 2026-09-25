@@ -30,6 +30,5 @@ buildPythonPackage (finalAttrs: {
     description = "Locale internationalization package";
     homepage = "https://github.com/tkhyn/l18n";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

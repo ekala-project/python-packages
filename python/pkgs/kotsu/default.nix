@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "Lightweight framework for structured and repeatable model validation";
     homepage = "https://github.com/datavaluepeople/kotsu";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

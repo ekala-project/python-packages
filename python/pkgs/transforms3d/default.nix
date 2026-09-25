@@ -34,6 +34,5 @@ buildPythonPackage rec {
     homepage = "https://matthew-brett.github.io/transforms3d";
     description = "Convert between various geometric transformations";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

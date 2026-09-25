@@ -41,6 +41,5 @@ buildPythonPackage (finalAttrs: {
     description = "Shared code between key-value-aio and key-value-sync";
     homepage = "https://github.com/strawgate/py-key-value";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

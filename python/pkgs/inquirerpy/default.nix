@@ -30,6 +30,5 @@ buildPythonPackage rec {
     description = "Python port of Inquirer.js";
     homepage = "https://github.com/kazhala/InquirerPy";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

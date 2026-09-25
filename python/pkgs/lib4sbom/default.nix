@@ -66,6 +66,5 @@ buildPythonPackage rec {
     description = "Library to ingest and generate SBOMs";
     homepage = "https://github.com/anthonyharrison/lib4sbom";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

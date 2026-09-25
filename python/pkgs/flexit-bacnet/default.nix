@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Client BACnet library for Flexit Nordic series of air handling units";
     homepage = "https://github.com/piotrbulinski/flexit_bacnet";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -34,7 +34,6 @@ buildPythonPackage rec {
   meta = {
     description = "py.test plugin for efficiently checking PEP8 compliance";
     homepage = "https://github.com/coherent-oss/pytest-flake8";
-    maintainers = [ ];
     license = lib.licenses.bsd2;
   };
 }

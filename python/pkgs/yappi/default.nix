@@ -35,6 +35,5 @@ buildPythonPackage rec {
     mainProgram = "yappi";
     homepage = "https://github.com/sumerc/yappi";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

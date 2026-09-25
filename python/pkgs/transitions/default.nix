@@ -34,6 +34,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/pytransitions/transitions";
     description = "Lightweight, object-oriented finite state machine implementation in Python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

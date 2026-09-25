@@ -44,6 +44,5 @@ buildPythonPackage (finalAttrs: {
     description = "Implementation of the communication protocol for Power-One Aurora inverters";
     homepage = "https://gitlab.com/energievalsabbia/aurorapy";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

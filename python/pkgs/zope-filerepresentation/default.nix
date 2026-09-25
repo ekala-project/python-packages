@@ -41,6 +41,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/zopefoundation/zope.filerepresentation";
     description = "File-system Representation Interfaces";
     license = lib.licenses.zpl21;
-    maintainers = [ ];
   };
 }

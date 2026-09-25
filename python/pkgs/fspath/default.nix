@@ -32,6 +32,5 @@ buildPythonPackage (finalAttrs: {
     description = "Handling path names and executables more comfortable";
     homepage = "https://github.com/return42/fspath";
     license = lib.licenses.agpl3Plus;
-    maintainers = [ ];
   };
 })

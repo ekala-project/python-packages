@@ -55,6 +55,5 @@ buildPythonPackage rec {
       http://www.kuwata-lab.com/kwalify/ruby/users-guide.01.html#schema
     '';
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

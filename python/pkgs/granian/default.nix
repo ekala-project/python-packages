@@ -76,7 +76,6 @@ buildPythonPackage rec {
     homepage = "https://github.com/emmett-framework/granian";
     license = lib.licenses.bsd3;
     mainProgram = "granian";
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

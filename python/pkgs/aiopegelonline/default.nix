@@ -42,6 +42,5 @@ buildPythonPackage (finalAttrs: {
     description = "Library to retrieve data from PEGELONLINE";
     homepage = "https://github.com/mib1185/aiopegelonline";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

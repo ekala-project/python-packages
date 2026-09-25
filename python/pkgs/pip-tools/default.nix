@@ -49,6 +49,5 @@ buildPythonPackage rec {
     description = "Keeps your pinned dependencies fresh";
     homepage = "https://github.com/jazzband/pip-tools/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

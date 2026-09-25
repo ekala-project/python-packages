@@ -42,7 +42,6 @@ buildPythonPackage (finalAttrs: {
     description = "Module for finding the timezone of any point on earth (coordinates) offline";
     homepage = "https://github.com/MrMinimal64/timezonefinder";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "timezonefinder";
   };
 })

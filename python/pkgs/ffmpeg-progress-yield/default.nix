@@ -35,6 +35,5 @@ buildPythonPackage rec {
     mainProgram = "ffmpeg-progress-yield";
     homepage = "https://github.com/slhck/ffmpeg-progress-yield";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -43,7 +43,6 @@ buildPythonPackage (finalAttrs: {
     description = "Python client library for the mwdb service";
     homepage = "https://github.com/CERT-Polska/mwdblib";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     mainProgram = "mwdb";
   };
 })

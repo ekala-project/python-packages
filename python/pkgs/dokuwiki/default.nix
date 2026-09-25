@@ -20,6 +20,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/fmenabe/python-dokuwiki";
     description = "Python module that aims to manage DokuWiki wikis by using the provided XML-RPC API";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

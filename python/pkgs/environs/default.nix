@@ -34,6 +34,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python module for environment variable parsing";
     homepage = "https://github.com/sloria/environs";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

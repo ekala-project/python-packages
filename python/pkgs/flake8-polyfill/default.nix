@@ -51,6 +51,5 @@ buildPythonPackage rec {
     homepage = "https://gitlab.com/pycqa/flake8-polyfill";
     description = "Polyfill package for Flake8 plugins";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

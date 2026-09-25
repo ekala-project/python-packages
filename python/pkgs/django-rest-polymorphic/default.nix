@@ -35,6 +35,5 @@ buildPythonPackage {
     description = "Polymorphic serializers for Django REST Framework";
     homepage = "https://github.com/apirobot/django-rest-polymorphic";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "XPath for JSON";
     homepage = "https://www.ultimate.com/phil/python/#jsonpath";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

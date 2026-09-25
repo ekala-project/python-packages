@@ -55,6 +55,5 @@ buildPythonPackage (finalAttrs: {
     description = "Generate and work with holidays in Python";
     homepage = "https://github.com/vacanza/python-holidays";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

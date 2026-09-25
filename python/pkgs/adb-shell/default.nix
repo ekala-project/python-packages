@@ -61,6 +61,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python implementation of ADB with shell and FileSync functionality";
     homepage = "https://github.com/JeffLIrion/adb_shell";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "Functions for flattening a JSON object to a single dictionary of pairs";
     license = lib.licenses.asl20;
     homepage = "https://github.com/simonw/json-flatten";
-    maintainers = [ ];
   };
 }

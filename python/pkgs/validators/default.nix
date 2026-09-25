@@ -27,6 +27,5 @@ buildPythonPackage rec {
     description = "Python Data Validation for Humans";
     homepage = "https://github.com/python-validators/validators";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

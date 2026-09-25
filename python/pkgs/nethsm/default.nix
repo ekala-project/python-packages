@@ -57,6 +57,5 @@ buildPythonPackage rec {
     description = "Client-side Python SDK for NetHSM";
     homepage = "https://github.com/Nitrokey/nethsm-sdk-py";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

@@ -33,6 +33,5 @@ buildPythonPackage rec {
     description = "LDAP authentication extension for Flask";
     homepage = "https://github.com/alexferl/flask-simpleldap";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -50,6 +50,5 @@ buildPythonPackage (finalAttrs: {
     description = "Calculate prices for calling LLM inference APIs";
     homepage = "https://github.com/pydantic/genai-prices";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

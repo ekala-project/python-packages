@@ -30,6 +30,5 @@ buildPythonPackage rec {
     description = "Minimal asyncio memcached client";
     homepage = "https://github.com/aio-libs/aiomcache/";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

@@ -30,6 +30,5 @@ buildPythonPackage rec {
     '';
     homepage = "https://github.com/jquast/wcwidth";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

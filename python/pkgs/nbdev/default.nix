@@ -54,6 +54,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://github.com/AnswerDotAI/nbdev";
     description = "Create delightful software with Jupyter Notebooks";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

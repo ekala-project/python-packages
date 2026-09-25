@@ -45,6 +45,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python dataclasses for the Envoy Data-Plane-API";
     homepage = "https://pypi.org/project/envoy_data_plane/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

@@ -38,6 +38,5 @@ buildPythonPackage (finalAttrs: {
     description = "Expressive busy wait for Python";
     homepage = "https://github.com/rockem/busypie";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

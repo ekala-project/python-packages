@@ -29,6 +29,5 @@ buildPythonPackage rec {
     description = "Python bindings for the LZFSE reference implementation";
     homepage = "https://github.com/m1stadev/lzfse";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

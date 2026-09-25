@@ -43,6 +43,5 @@ buildPythonPackage (finalAttrs: {
     description = "Fast version of fnv1a";
     homepage = "https://github.com/bdraco/fnv-hash-fast";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

@@ -42,6 +42,5 @@ buildPythonPackage (finalAttrs: {
     description = "Fully featured framework for fast, easy and documented API development with Flask";
     homepage = "https://github.com/python-restx/flask-restx";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

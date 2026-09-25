@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Python implementation of the MMTF API, decoder and encoder";
     homepage = "https://github.com/rcsb/mmtf-python";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

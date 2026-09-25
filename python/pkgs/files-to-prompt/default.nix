@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "Concatenate a directory full of files into a single prompt for use with LLMs";
     homepage = "https://github.com/simonw/files-to-prompt";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

@@ -33,6 +33,5 @@ buildPythonPackage rec {
     description = "ClearPass API Python Library";
     homepage = "https://github.com/zemerick1/clearpasspy";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

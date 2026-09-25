@@ -116,6 +116,5 @@ buildPythonPackage rec {
     description = "Stripe Models for Django";
     homepage = "https://github.com/dj-stripe/dj-stripe";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

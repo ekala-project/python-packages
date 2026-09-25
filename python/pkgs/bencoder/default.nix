@@ -27,6 +27,5 @@ buildPythonPackage (finalAttrs: {
     description = "Simple bencode decoder/encoder library in pure Python";
     homepage = "https://github.com/utdemir/bencoder";
     license = lib.licenses.gpl2;
-    maintainers = [ ];
   };
 })

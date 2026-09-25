@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "RFC1459 and IRCv3 protocol tokeniser library for python3";
     license = lib.licenses.mit;
     homepage = "https://github.com/jesopo/irctokens";
-    maintainers = [ ];
   };
 }

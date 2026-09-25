@@ -26,6 +26,5 @@ buildPythonPackage rec {
     description = "Caching based on computation time and storage space";
     homepage = "https://github.com/dask/cachey/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

@@ -39,7 +39,6 @@ buildPythonPackage {
     description = "Find value in the E-series used for electronic components values";
     homepage = "https://github.com/rob-smallshire/eseries";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "eseries";
   };
 }

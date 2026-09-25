@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "Python bindings for the miniaudio library and its decoders";
     homepage = "https://github.com/irmen/pyminiaudio";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

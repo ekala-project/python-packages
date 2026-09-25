@@ -41,6 +41,5 @@ buildPythonPackage rec {
     description = "Python client library for Google Photos Library API";
     homepage = "https://github.com/allenporter/python-google-photos-library-api";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

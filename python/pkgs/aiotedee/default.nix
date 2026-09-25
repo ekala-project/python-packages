@@ -41,6 +41,5 @@ buildPythonPackage rec {
     description = "Module to interact with Tedee locks";
     homepage = "https://github.com/zweckj/aiotedee";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Python library for accessing the IGN Sismologia GeoRSS feed";
     homepage = "https://github.com/exxamalte/python-georss-ign-sismologia-client";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

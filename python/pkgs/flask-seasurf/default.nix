@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Flask extension for preventing cross-site request forgery";
     homepage = "https://github.com/maxcountryman/flask-seasurf";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

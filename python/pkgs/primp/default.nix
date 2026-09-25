@@ -50,6 +50,5 @@ buildPythonPackage (finalAttrs: {
     description = " HTTP client that can impersonate web browsers";
     homepage = "https://github.com/deedy5/primp";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

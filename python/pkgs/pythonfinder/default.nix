@@ -33,7 +33,6 @@ buildPythonPackage (finalAttrs: {
     description = "Cross platform search tool for finding Python";
     homepage = "https://github.com/sarugaku/pythonfinder";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "pyfinder";
   };
 })

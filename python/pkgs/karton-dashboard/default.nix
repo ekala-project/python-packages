@@ -44,6 +44,5 @@ buildPythonPackage rec {
     mainProgram = "karton-dashboard";
     homepage = "https://github.com/CERT-Polska/karton-dashboard";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

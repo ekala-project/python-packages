@@ -34,6 +34,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python library for detecting and launching browsers";
     homepage = "https://github.com/roniemartinez/browsers";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

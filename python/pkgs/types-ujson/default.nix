@@ -27,6 +27,5 @@ buildPythonPackage rec {
     description = "Typing stubs for ujson";
     homepage = "https://github.com/python/typeshed";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

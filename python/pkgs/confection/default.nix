@@ -42,6 +42,5 @@ buildPythonPackage (finalAttrs: {
     description = "Library that offers a configuration system";
     homepage = "https://github.com/explosion/confection";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

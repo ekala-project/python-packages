@@ -42,6 +42,5 @@ buildPythonPackage rec {
     mainProgram = "poetry-template";
     homepage = "https://github.com/home-assistant-ecosystem/python-elmax";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

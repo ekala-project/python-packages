@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "Flag emoji from country codes for Python";
     homepage = "https://github.com/cvzi/flag";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

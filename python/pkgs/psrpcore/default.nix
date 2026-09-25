@@ -28,7 +28,6 @@ buildPythonPackage rec {
     description = "Library for the PowerShell Remoting Protocol (PSRP)";
     homepage = "https://github.com/jborean93/psrpcore";
     license = lib.licenses.mit;
-    maintainers = [ ];
     broken = stdenv.hostPlatform.isDarwin;
   };
 }

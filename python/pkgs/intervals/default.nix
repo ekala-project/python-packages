@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Tools for handling intervals (ranges of comparable objects)";
     homepage = "https://github.com/kvesteri/intervals";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

@@ -102,6 +102,5 @@ buildPythonPackage (finalAttrs: {
     description = "OPC UA / IEC 62541 Client and Server for Python";
     homepage = "https://github.com/FreeOpcUa/opcua-asyncio";
     license = lib.licenses.lgpl3Plus;
-    maintainers = [ ];
   };
 })

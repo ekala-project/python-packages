@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Netapp-lib is required for Ansible deployments to interact with NetApp storage systems";
     homepage = "https://netapp.io/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

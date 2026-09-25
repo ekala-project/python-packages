@@ -29,6 +29,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python library for the IoTaWatt Energy device";
     homepage = "https://github.com/gtdiehl/iotawattpy";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
   };
 })

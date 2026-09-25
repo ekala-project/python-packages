@@ -25,6 +25,5 @@ buildPythonPackage rec {
     description = "Log filter that removes duplicate log messages";
     homepage = "https://github.com/twizmwazin/unique_log_filter";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

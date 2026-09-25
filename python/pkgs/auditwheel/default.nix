@@ -34,7 +34,6 @@ buildPythonPackage rec {
       bsd3 # from https://sources.gentoo.org/cgi-bin/viewvc.cgi/gentoo-projects/pax-utils/lddtree.py
     ];
     mainProgram = "auditwheel";
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 }

@@ -55,6 +55,5 @@ buildPythonPackage (finalAttrs: {
     description = "Module to manage the Generalized World Coordinate System";
     homepage = "https://github.com/spacetelescope/gwcs";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

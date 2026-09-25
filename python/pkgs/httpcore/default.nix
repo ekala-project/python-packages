@@ -44,6 +44,5 @@ buildPythonPackage rec {
     description = "Minimal low-level HTTP client";
     homepage = "https://github.com/encode/httpcore";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

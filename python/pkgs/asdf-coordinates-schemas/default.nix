@@ -39,6 +39,5 @@ buildPythonPackage (finalAttrs: {
     description = "ASDF schemas for coordinates";
     homepage = "https://github.com/asdf-format/asdf-coordinates-schemas";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

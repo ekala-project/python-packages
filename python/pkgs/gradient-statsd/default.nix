@@ -41,7 +41,6 @@ buildPythonPackage rec {
     description = "Wrapper around the DogStatsd client";
     homepage = "https://paperspace.com";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 }

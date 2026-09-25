@@ -34,7 +34,6 @@ buildPythonPackage rec {
     description = "Python API and command line interface for HDFS";
     homepage = "https://github.com/mtth/hdfs";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "hdfscli";
   };
 }

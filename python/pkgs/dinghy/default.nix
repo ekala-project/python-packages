@@ -54,6 +54,5 @@ buildPythonPackage rec {
     mainProgram = "dinghy";
     homepage = "https://github.com/nedbat/dinghy";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

@@ -69,6 +69,5 @@ buildPythonPackage (finalAttrs: {
     description = "Implementation of chunked, compressed, N-dimensional arrays for Python";
     homepage = "https://github.com/zarr-developers/zarr";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

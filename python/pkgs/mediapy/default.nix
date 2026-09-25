@@ -41,6 +41,5 @@ buildPythonPackage (finalAttrs: {
     description = "Read/write/show images and videos in an IPython notebook";
     homepage = "https://github.com/google/mediapy";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

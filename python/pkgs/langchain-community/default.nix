@@ -71,6 +71,5 @@ buildPythonPackage rec {
     description = "Community contributed LangChain integrations";
     homepage = "https://github.com/langchain-ai/langchain-community";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

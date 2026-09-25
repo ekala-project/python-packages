@@ -41,6 +41,5 @@ buildPythonPackage (finalAttrs: {
     description = "Helper class for working with steno strokes";
     homepage = "https://github.com/openstenoproject/plover_stroke";
     license = lib.licenses.gpl2Plus; # https://github.com/openstenoproject/plover_stroke/issues/4
-    maintainers = [ ];
   };
 })

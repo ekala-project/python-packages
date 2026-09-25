@@ -74,6 +74,5 @@ buildPythonPackage rec {
     description = "front-end agnostic toolbox for autocompletion fields";
     homepage = "https://github.com/peopledoc/django-agnocomplete";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

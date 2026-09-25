@@ -26,6 +26,5 @@ buildPythonPackage rec {
     mainProgram = "onkyo";
     homepage = "https://github.com/miracle2k/onkyo-eiscp";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

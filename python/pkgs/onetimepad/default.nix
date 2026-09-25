@@ -25,6 +25,5 @@ buildPythonPackage rec {
     mainProgram = "onetimepad";
     homepage = "https://jailuthra.in/onetimepad";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

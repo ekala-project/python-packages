@@ -37,6 +37,5 @@ buildPythonPackage (finalAttrs: {
     description = "Simple and beautiful way to create date and datetime objects";
     homepage = "https://github.com/kuzmoyev/beautiful-date";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

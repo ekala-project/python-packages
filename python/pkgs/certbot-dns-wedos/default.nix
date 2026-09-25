@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Wedos DNS Authenticator plugin for Certbot";
     homepage = "https://github.com/clazzor/certbot-dns-wedos";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

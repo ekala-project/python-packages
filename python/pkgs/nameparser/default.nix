@@ -24,6 +24,5 @@ buildPythonPackage rec {
     description = "Module for parsing human names into their individual components";
     homepage = "https://github.com/derek73/python-nameparser";
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
   };
 }

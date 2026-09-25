@@ -45,6 +45,5 @@ buildPythonPackage rec {
     mainProgram = "gsd";
     homepage = "https://github.com/glotzerlab/gsd";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

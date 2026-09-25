@@ -27,6 +27,5 @@ buildPythonPackage {
     description = "Pure python module which implements the DES and Triple-DES encryption algorithms";
     homepage = "https://github.com/twhiteman/pyDes";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

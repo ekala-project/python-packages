@@ -77,6 +77,5 @@ buildPythonPackage (finalAttrs: {
     description = "Module for the homematicIP REST API";
     homepage = "https://github.com/hahn-th/homematicip-rest-api";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
   };
 })

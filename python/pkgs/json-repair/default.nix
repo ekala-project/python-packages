@@ -24,7 +24,6 @@ buildPythonPackage rec {
     description = "Module to repair invalid JSON, commonly used to parse the output of LLMs";
     homepage = "https://github.com/mangiucugna/json_repair/";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "json_repair";
   };
 }

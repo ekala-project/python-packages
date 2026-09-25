@@ -73,6 +73,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python library to get Environment Canada weather data";
     homepage = "https://github.com/michaeldavie/env_canada";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

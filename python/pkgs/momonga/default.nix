@@ -33,6 +33,5 @@ buildPythonPackage rec {
     description = "Python Route B Library: A Communicator for Low-voltage Smart Electric Energy Meters";
     homepage = "https://github.com/nbtk/momonga";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "API to retrieve data from the Länderübergreifendes Hochwasser Portal (LHP)";
     homepage = "https://github.com/stephan192/lhpapi";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

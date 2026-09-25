@@ -33,6 +33,5 @@ buildPythonPackage {
     description = "Collection of BM25 Algorithms in Python";
     homepage = "https://github.com/dorianbrown/rank_bm25";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

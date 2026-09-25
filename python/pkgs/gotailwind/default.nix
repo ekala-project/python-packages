@@ -67,7 +67,6 @@ buildPythonPackage rec {
     description = "Modul to communicate with Tailwind garage door openers";
     homepage = "https://github.com/frenck/python-gotailwind";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "tailwind";
   };
 }

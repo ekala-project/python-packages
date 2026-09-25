@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "This is the Microsoft Azure IoTHub Management Client Library";
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/iothub/azure-mgmt-iothub";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -27,6 +27,5 @@ buildPythonPackage (finalAttrs: {
     description = "Set of disposable email domains";
     homepage = "https://github.com/disposable-email-domains/disposable-email-domains";
     license = lib.licenses.cc0;
-    maintainers = [ ];
   };
 })

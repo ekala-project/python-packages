@@ -38,6 +38,5 @@ buildPythonPackage (finalAttrs: {
     description = "Simple app that provides django integration for RQ (Redis Queue)";
     homepage = "https://github.com/rq/django-rq";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

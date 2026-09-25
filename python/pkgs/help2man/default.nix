@@ -46,7 +46,6 @@ buildPythonPackage rec {
     description = "Convert --help and --version to man page";
     homepage = "https://github.com/Freed-Wu/help2man";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     mainProgram = "help2man";
   };
 }

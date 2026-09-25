@@ -35,7 +35,6 @@ buildPythonPackage (finalAttrs: {
     description = "Generate random JSON with no schemas involved";
     license = lib.licenses.mit;
     homepage = "https://trag1c.github.io/oddsprout";
-    maintainers = [ ];
     mainProgram = "oddsprout";
   };
 })

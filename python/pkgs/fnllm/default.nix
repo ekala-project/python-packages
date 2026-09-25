@@ -99,6 +99,5 @@ buildPythonPackage (finalAttrs: {
     description = "Function-based LLM protocol and wrapper";
     homepage = "https://github.com/microsoft/essex-toolkit/tree/main/python/fnllm";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

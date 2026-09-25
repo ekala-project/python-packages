@@ -43,6 +43,5 @@ buildPythonPackage rec {
     description = "HTTP client for controlling a Bryant Evolution HVAC system";
     homepage = "https://github.com/danielsmyers/evolutionhttp";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

@@ -32,6 +32,5 @@ buildPythonPackage rec {
     homepage = "https://pytest-relaxed.readthedocs.io/";
     description = "Relaxed test discovery/organization for pytest";
     license = lib.licenses.bsd0;
-    maintainers = [ ];
   };
 }

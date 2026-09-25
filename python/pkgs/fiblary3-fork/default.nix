@@ -46,6 +46,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/graham33/fiblary";
     description = "Fibaro Home Center API Python Library";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

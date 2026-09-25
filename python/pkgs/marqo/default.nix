@@ -71,6 +71,5 @@ buildPythonPackage rec {
     description = "Unified embedding generation and search engine";
     homepage = "https://marqo.ai";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

@@ -42,6 +42,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/census-instrumentation/opencensus-python/tree/master/contrib/opencensus-ext-azure";
     description = "OpenCensus Azure Monitor Exporter";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

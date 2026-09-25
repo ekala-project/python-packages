@@ -49,7 +49,6 @@ buildPythonPackage rec {
   meta = {
     homepage = "https://github.com/elijahr/python-autopxd2";
     mainProgram = "autopxd";
-    maintainers = [ ];
     license = lib.licenses.mit;
     description = "Generates .pxd files automatically from .h files";
   };

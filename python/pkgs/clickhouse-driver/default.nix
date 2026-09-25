@@ -59,6 +59,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python driver with native interface for ClickHouse";
     homepage = "https://github.com/mymarilyn/clickhouse-driver";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

@@ -96,6 +96,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/tpm2-software/tpm2-pytss";
     description = "TPM2 TSS Python bindings for Enhanced System API (ESYS)";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

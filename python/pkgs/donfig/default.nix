@@ -41,6 +41,5 @@ buildPythonPackage rec {
     description = "Python library for configuring a package including defaults, env variable loading, and yaml loading";
     homepage = "https://github.com/pytroll/donfig";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

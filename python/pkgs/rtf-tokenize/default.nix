@@ -41,6 +41,5 @@ buildPythonPackage (finalAttrs: {
     description = "Simple RTF tokenizer package for Python";
     homepage = "https://github.com/openstenoproject/rtf_tokenize";
     license = lib.licenses.gpl2Plus; # https://github.com/openstenoproject/rtf_tokenize/issues/1
-    maintainers = [ ];
   };
 })

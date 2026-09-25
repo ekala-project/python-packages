@@ -28,6 +28,5 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     description = "Generate Github-style HTML for unified diffs";
     mainProgram = "ghdiff";
-    maintainers = [ ];
   };
 }

@@ -47,6 +47,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python module for accessing the NSW Rural Fire Service incidents feeds";
     homepage = "https://github.com/exxamalte/python-aio-geojson-nsw-rfs-incidents";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

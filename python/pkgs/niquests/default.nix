@@ -58,6 +58,5 @@ buildPythonPackage (finalAttrs: {
     description = "Simple HTTP library that is a drop-in replacement for Requests";
     homepage = "https://github.com/jawah/niquests";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

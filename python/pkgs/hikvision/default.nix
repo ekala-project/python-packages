@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Python module for interacting with Hikvision IP Cameras";
     homepage = "https://github.com/fbradyirl/hikvision";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

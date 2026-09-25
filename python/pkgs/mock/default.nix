@@ -22,6 +22,5 @@ buildPythonPackage (finalAttrs: {
     description = "Rolling backport of unittest.mock for all Pythons";
     homepage = "https://github.com/testing-cabal/mock";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 })

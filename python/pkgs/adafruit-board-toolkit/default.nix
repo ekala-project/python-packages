@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "CircuitPython board identification and information";
     homepage = "https://github.com/adafruit/Adafruit_Board_Toolkit";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

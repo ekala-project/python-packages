@@ -26,6 +26,5 @@ buildPythonPackage rec {
     description = "Python client for getting air pollution data from NILU sensor stations";
     homepage = "https://github.com/hfurubotten/niluclient";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

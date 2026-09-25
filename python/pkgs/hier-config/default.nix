@@ -35,6 +35,5 @@ buildPythonPackage (finalAttrs: {
     description = "Module to handle hierarchical configurations";
     homepage = "https://github.com/netdevops/hier_config";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

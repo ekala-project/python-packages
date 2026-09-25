@@ -31,6 +31,5 @@ buildPythonPackage (finalAttrs: {
     description = "Module to work with the Monzo API";
     homepage = "https://github.com/JakeMartin-ICL/monzopy";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 })

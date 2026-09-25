@@ -33,6 +33,5 @@ buildPythonPackage rec {
     description = "Wadler--Lindig pretty printer for Python";
     homepage = "https://github.com/patrick-kidger/wadler_lindig";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Python3 library for graphql subscription manager";
     homepage = "https://github.com/Danielhiversen/PyGraphqlWebsocketManager";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

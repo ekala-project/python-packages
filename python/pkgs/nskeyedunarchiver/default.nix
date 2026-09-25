@@ -23,6 +23,5 @@ buildPythonPackage rec {
     description = "Unserializes plist data into a usable Python dict";
     homepage = "https://github.com/avibrazil/NSKeyedUnArchiver";
     license = lib.licenses.bsdOriginal;
-    maintainers = [ ];
   };
 }

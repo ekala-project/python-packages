@@ -38,7 +38,6 @@ buildPythonPackage rec {
     description = "Asyncio UPnP Client library for Python";
     homepage = "https://github.com/StevenLooman/async_upnp_client";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "upnp-client";
   };
 }

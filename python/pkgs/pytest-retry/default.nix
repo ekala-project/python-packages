@@ -30,6 +30,5 @@ buildPythonPackage rec {
     '';
     homepage = "https://github.com/str0zzapreti/pytest-retry";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

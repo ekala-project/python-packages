@@ -30,6 +30,5 @@ buildPythonPackage (finalAttrs: {
     description = "Simple, generic API for escaping strings";
     homepage = "https://github.com/minrk/escapism";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

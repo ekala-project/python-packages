@@ -47,6 +47,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python web framework";
     homepage = "https://trypyramid.com/";
     license = lib.licenses.bsd0;
-    maintainers = [ ];
   };
 })

@@ -46,6 +46,5 @@ buildPythonPackage rec {
     description = "Module to check if a phone number is used on different sites";
     homepage = "https://pypi.org/project/ignorant/";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 }

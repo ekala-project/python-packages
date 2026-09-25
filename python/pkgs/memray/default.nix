@@ -61,7 +61,6 @@ buildPythonPackage (finalAttrs: {
     description = "Memory profiler for Python";
     homepage = "https://bloomberg.github.io/memray/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     platforms = lib.platforms.linux ++ lib.platforms.darwin;
     mainProgram = "memray";
   };

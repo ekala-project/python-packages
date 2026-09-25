@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "JavaScript and JSX grammar for tree-sitter";
     homepage = "https://github.com/tree-sitter/tree-sitter-javascript";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

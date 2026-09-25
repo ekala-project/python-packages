@@ -130,6 +130,5 @@ buildPythonPackage (finalAttrs: {
     description = "Unified model for defining both batch and streaming data-parallel processing pipelines";
     homepage = "https://beam.apache.org/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

@@ -25,6 +25,5 @@ buildPythonPackage rec {
     description = "Module for calculation of meteorological variables";
     homepage = "https://github.com/malexer/meteocalc";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

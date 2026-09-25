@@ -74,6 +74,5 @@ buildPythonPackage (finalAttrs: {
     description = "Normalizing-flow enhanced sampling package for probabilistic inference in Jax";
     homepage = "https://github.com/kazewong/flowMC";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

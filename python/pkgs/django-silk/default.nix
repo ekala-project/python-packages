@@ -62,6 +62,5 @@ buildPythonPackage rec {
     description = "Silky smooth profiling for the Django Framework";
     homepage = "https://github.com/jazzband/django-silk";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

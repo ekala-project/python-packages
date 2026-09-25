@@ -46,7 +46,6 @@ buildPythonPackage (finalAttrs: {
     description = "Convert any LCSC components (including EasyEDA) to KiCad library";
     homepage = "https://github.com/atopile/easyeda2kicad.py";
     license = lib.licenses.agpl3Only;
-    maintainers = [ ];
     mainProgram = "easyeda2kicad";
   };
 })

@@ -86,7 +86,6 @@ buildPythonPackage (finalAttrs: {
     description = "Jupyter lab environment notebook server extension";
     license = lib.licenses.bsd3;
     homepage = "https://jupyter.org/";
-    maintainers = [ ];
     mainProgram = "jupyter-lab";
   };
 })

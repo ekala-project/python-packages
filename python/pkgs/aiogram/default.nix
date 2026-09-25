@@ -67,6 +67,5 @@ buildPythonPackage rec {
     description = "Modern and fully asynchronous framework for Telegram Bot API";
     homepage = "https://github.com/aiogram/aiogram";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

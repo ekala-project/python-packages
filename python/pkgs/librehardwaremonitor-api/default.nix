@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Python API client for LibreHardwareMonitor";
     homepage = "https://github.com/Sab44/librehardwaremonitor-api";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

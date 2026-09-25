@@ -82,6 +82,5 @@ buildPythonPackage rec {
       bsd3
       psfl
     ];
-    maintainers = [ ];
   };
 }

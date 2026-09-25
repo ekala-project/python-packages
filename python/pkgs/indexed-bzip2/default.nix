@@ -31,6 +31,5 @@ buildPythonPackage rec {
     mainProgram = "ibzip2";
     homepage = "https://github.com/mxmlnkn/indexed_bzip2";
     license = lib.licenses.mit; # dual MIT and asl20, https://internals.rust-lang.org/t/rationale-of-apache-dual-licensing/8952
-    maintainers = [ ];
   };
 }

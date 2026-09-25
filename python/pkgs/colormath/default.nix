@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Color math and conversion library";
     homepage = "https://github.com/gtaylor/python-colormath";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

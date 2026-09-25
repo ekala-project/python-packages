@@ -42,6 +42,5 @@ buildPythonPackage rec {
     '';
     homepage = "https://github.com/4n4nd/prometheus-api-client-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

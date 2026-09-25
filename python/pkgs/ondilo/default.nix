@@ -37,6 +37,5 @@ buildPythonPackage rec {
     description = "Python package to access Ondilo ICO APIs";
     homepage = "https://github.com/JeromeHXP/ondilo";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

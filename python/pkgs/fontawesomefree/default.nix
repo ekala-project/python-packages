@@ -27,6 +27,5 @@ buildPythonPackage (finalAttrs: {
       ofl
       cc-by-40
     ];
-    maintainers = [ ];
   };
 })

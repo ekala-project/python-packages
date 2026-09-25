@@ -25,6 +25,5 @@ buildPythonPackage rec {
     description = "Library for fetching a list of bot-safe user agents";
     homepage = "https://github.com/ivan-sincek/bot-safe-agents";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

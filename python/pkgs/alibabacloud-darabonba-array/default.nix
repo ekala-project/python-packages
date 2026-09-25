@@ -29,6 +29,5 @@ buildPythonPackage (finalAttrs: {
     description = "Alibaba Cloud Darabonba Array SDK Library for Python";
     homepage = "https://github.com/aliyun/darabonba-array";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

@@ -29,7 +29,6 @@ buildPythonPackage rec {
     description = "Library to interact with Google Translate API";
     homepage = "https://py-googletrans.readthedocs.io";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "translate";
   };
 }

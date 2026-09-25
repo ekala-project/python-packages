@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "Experimental SMB/CIFS library to support file sharing between Windows and Linux machines";
     homepage = "https://pysmb.readthedocs.io/";
     license = lib.licenses.zlib;
-    maintainers = [ ];
   };
 }

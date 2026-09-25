@@ -52,6 +52,5 @@ buildPythonPackage (finalAttrs: {
       asl20
       mit
     ];
-    maintainers = [ ];
   };
 })

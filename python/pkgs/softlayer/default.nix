@@ -46,6 +46,5 @@ buildPythonPackage rec {
     description = "Python libraries that assist in calling the SoftLayer API";
     homepage = "https://github.com/softlayer/softlayer-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -42,6 +42,5 @@ buildPythonPackage rec {
     description = "Deezer client for python *but async";
     homepage = "https://github.com/music-assistant/deezer-python-async";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

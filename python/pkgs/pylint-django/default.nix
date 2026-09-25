@@ -33,6 +33,5 @@ buildPythonPackage (finalAttrs: {
     description = "Pylint plugin to analyze Django applications";
     homepage = "https://github.com/PyCQA/pylint-django";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
   };
 })

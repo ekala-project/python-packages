@@ -35,6 +35,5 @@ buildPythonPackage (finalAttrs: {
     description = "IDA Library Python module";
     homepage = "https://pypi.org/project/idapro";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

@@ -58,6 +58,5 @@ buildPythonPackage rec {
     description = "Toolkit for developing and comparing your reinforcement learning agents";
     homepage = "https://www.gymlibrary.dev/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -26,6 +26,5 @@ buildPythonPackage rec {
     description = "Module for serializing and de-serializing Java objects";
     homepage = "https://github.com/tcalmant/python-javaobj";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

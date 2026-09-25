@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "Rust grammar for tree-sitter";
     homepage = "https://github.com/tree-sitter/tree-sitter-rust";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -47,6 +47,5 @@ buildPythonPackage (finalAttrs: {
     description = "Asynchronous client for IDrive e2";
     homepage = "https://github.com/patrickvorgers/idrive-e2-client";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "API client library for Netbox";
     homepage = "https://github.com/netbox-community/pynetbox";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

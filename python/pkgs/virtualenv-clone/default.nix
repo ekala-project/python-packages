@@ -49,6 +49,5 @@ buildPythonPackage (finalAttrs: {
     description = "Script to clone virtualenvs";
     mainProgram = "virtualenv-clone";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

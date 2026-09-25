@@ -77,6 +77,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://github.com/huggingface/datasets";
     changelog = "https://github.com/huggingface/datasets/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

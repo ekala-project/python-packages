@@ -25,6 +25,5 @@ buildPythonPackage rec {
     description = "Tokenizer/parser/executor for the PartiQL-language";
     homepage = "https://github.com/getmoto/py-partiql-parser";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

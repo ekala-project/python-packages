@@ -30,6 +30,5 @@ buildPythonPackage (finalAttrs: {
     description = "Poor man's debugger for Python";
     homepage = "https://github.com/cool-RR/PySnooper";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

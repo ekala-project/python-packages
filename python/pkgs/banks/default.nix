@@ -52,6 +52,5 @@ buildPythonPackage (finalAttrs: {
     description = "Module that provides tools and functions to build prompts text and chat messages from generic blueprints";
     homepage = "https://github.com/masci/banks";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

@@ -43,6 +43,5 @@ buildPythonPackage (finalAttrs: {
     description = "OAuth2 goodies for the Djangonauts";
     homepage = "https://github.com/jazzband/django-oauth-toolkit";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 })

@@ -34,6 +34,5 @@ buildPythonPackage {
     '';
     homepage = "https://github.com/byrnereese/linkchecker-mkdocs";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

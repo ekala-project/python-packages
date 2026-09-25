@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Module to support for legacy Python Packaging functionality";
     homepage = "https://github.com/di/packaging_legacy";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

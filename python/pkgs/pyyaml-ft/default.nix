@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "YAML parser and emitter for Python with support for free-threading";
     homepage = "https://github.com/Quansight-Labs/pyyaml-ft";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

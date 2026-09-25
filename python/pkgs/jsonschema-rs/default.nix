@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "High-performance JSON Schema validator for Python";
     homepage = "https://github.com/Stranger6667/jsonschema/tree/master/crates/jsonschema-py";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

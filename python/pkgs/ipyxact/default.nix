@@ -31,7 +31,6 @@ buildPythonPackage rec {
     homepage = "https://github.com/olofk/ipyxact";
     description = "IP-XACT parser";
     mainProgram = "ipxact2v";
-    maintainers = [ ];
     license = lib.licenses.mit;
   };
 }

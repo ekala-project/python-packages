@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "`bytes` subclass that decodes hex, with a readable console output";
     homepage = "https://github.com/ethereum/hexbytes";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

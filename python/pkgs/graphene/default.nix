@@ -38,6 +38,5 @@ buildPythonPackage rec {
     description = "GraphQL Framework for Python";
     homepage = "https://github.com/graphql-python/graphene";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

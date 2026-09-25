@@ -40,6 +40,5 @@ buildPythonPackage rec {
     description = "Python client for SendGrid";
     homepage = "https://github.com/sendgrid/sendgrid-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

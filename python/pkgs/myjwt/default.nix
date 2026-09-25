@@ -60,7 +60,6 @@ buildPythonPackage (finalAttrs: {
     description = "CLI tool for testing vulnerabilities of JSON Web Tokens (JWT)";
     homepage = "https://github.com/tyki6/MyJWT";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "myjwt";
     # Build failures
     broken = stdenv.hostPlatform.isDarwin;

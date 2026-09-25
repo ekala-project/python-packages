@@ -36,7 +36,6 @@ stdenv.mkDerivation (finalAttrs: {
       hpndSellVariant
       mit
     ];
-    maintainers = [ ];
     pkgConfigModules = [ "xfixes" ];
     platforms = lib.platforms.unix;
   };

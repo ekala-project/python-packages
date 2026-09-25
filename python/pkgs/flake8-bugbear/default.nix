@@ -37,6 +37,5 @@ buildPythonPackage rec {
       program.
     '';
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

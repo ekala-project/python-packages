@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "Python library for Hawk HTTP authorization";
     homepage = "https://github.com/kumar303/mohawk";
     license = lib.licenses.mpl20;
-    maintainers = [ ];
   };
 }

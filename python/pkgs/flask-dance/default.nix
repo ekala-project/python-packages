@@ -67,6 +67,5 @@ buildPythonPackage rec {
     description = "Doing the OAuth dance with style using Flask, requests, and oauthlib";
     homepage = "https://github.com/singingwolfboy/flask-dance";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

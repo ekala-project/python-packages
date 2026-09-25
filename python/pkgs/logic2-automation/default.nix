@@ -48,6 +48,5 @@ buildPythonPackage (finalAttrs: {
     description = "Automation interface for Saleae Logic 2 software";
     homepage = "https://github.com/saleae/logic2-automation";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

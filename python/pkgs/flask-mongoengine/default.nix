@@ -59,6 +59,5 @@ buildPythonPackage rec {
     description = "Flask extension that provides integration with MongoEngine and WTF model forms";
     homepage = "https://github.com/mongoengine/flask-mongoengine";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

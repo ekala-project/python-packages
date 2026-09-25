@@ -35,6 +35,5 @@ buildPythonPackage (finalAttrs: {
     description = "Fast Python parser that generates a serialized AST";
     homepage = "https://github.com/mypyc/ast_serialize";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

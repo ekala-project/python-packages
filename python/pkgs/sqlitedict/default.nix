@@ -25,6 +25,5 @@ buildPythonPackage rec {
     description = "Persistent, thread-safe dict";
     homepage = "https://github.com/RaRe-Technologies/sqlitedict";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

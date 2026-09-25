@@ -57,6 +57,5 @@ buildPythonPackage rec {
     description = "WebDriver implementation for asyncio and asyncio-compatible frameworks";
     homepage = "https://github.com/HENNGE/arsenic/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

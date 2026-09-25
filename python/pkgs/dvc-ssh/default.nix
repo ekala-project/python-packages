@@ -57,6 +57,5 @@ buildPythonPackage (finalAttrs: {
     description = "SSH plugin for dvc";
     homepage = "https://pypi.org/project/dvc-ssh/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

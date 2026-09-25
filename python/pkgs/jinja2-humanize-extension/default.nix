@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Jinja2 extension to use humanize library inside jinja2 templates";
     homepage = "https://github.com/metwork-framework/jinja2_humanize_extension";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

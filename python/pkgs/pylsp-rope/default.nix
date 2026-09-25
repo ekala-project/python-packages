@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "Extended refactoring capabilities for Python LSP Server using Rope";
     homepage = "https://github.com/python-rope/pylsp-rope";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

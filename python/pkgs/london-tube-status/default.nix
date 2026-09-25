@@ -50,6 +50,5 @@ buildPythonPackage rec {
     description = "Parse London tube data from TFL into a dictionary";
     homepage = "https://github.com/robmarkcole/London-tube-status";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

@@ -37,6 +37,5 @@ buildPythonPackage rec {
     description = "Python library for Hydrawise API";
     homepage = "https://github.com/ptcryan/hydrawiser";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -61,6 +61,5 @@ buildPythonPackage (finalAttrs: {
     description = "Linear solvers in JAX and Equinox";
     homepage = "https://github.com/patrick-kidger/lineax";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

@@ -27,6 +27,5 @@ buildPythonPackage (finalAttrs: {
     description = "Management commands to help backup and restore your project database and media files";
     homepage = "https://github.com/Archmonger/django-dbbackup";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

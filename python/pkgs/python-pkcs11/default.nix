@@ -37,6 +37,5 @@ buildPythonPackage rec {
     description = "PKCS#11/Cryptoki support for Python";
     homepage = "https://github.com/danni/python-pkcs11";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

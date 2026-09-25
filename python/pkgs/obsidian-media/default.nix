@@ -40,7 +40,6 @@ buildPythonPackage (finalAttrs: {
       bsd3
       cc0
     ];
-    maintainers = [ ];
     mainProgram = "obsidian-media";
   };
 })

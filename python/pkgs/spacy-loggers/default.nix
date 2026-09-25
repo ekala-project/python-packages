@@ -34,6 +34,5 @@ buildPythonPackage (finalAttrs: {
     description = "Logging utilities for spaCy";
     homepage = "https://github.com/explosion/spacy-loggers";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

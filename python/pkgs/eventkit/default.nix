@@ -21,6 +21,5 @@ buildPythonPackage {
     homepage = "https://github.com/erdewit/eventkit";
     description = "Event-driven data pipelines";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

@@ -38,6 +38,5 @@ buildPythonPackage (finalAttrs: {
     description = "Client library for Microsoft Azure Storage services containing the file service APIs";
     homepage = "https://github.com/Azure/azure-sdk-for-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

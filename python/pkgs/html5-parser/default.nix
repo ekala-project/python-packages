@@ -44,6 +44,5 @@ buildPythonPackage rec {
     description = "Fast C based HTML 5 parsing for python";
     homepage = "https://html5-parser.readthedocs.io";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

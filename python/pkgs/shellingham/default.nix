@@ -32,6 +32,5 @@ buildPythonPackage (finalAttrs: {
     description = "Tool to detect the surrounding shell";
     homepage = "https://github.com/sarugaku/shellingham";
     license = lib.licenses.isc;
-    maintainers = [ ];
   };
 })

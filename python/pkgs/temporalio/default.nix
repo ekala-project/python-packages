@@ -79,6 +79,5 @@ buildPythonPackage rec {
     description = "Temporal Python SDK";
     homepage = "https://temporal.io/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

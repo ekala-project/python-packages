@@ -39,7 +39,6 @@ let
       description = "Python implementation of the Loom file format";
       homepage = "https://github.com/linnarsson-lab/loompy";
       license = lib.licenses.bsd2;
-      maintainers = [ ];
       mainProgram = "loompy";
     };
   };

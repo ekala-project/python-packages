@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Python library for manipulating Bezier curves and paths in fonts";
     homepage = "https://github.com/simoncozens/beziers.py";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

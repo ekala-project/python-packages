@@ -53,6 +53,5 @@ buildPythonPackage rec {
     description = "Authentication Library for OpenStack Identity";
     homepage = "https://github.com/openstack/keystoneauth";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

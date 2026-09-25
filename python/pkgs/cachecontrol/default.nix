@@ -46,6 +46,5 @@ buildPythonPackage rec {
     mainProgram = "doesitcache";
     homepage = "https://github.com/ionrock/cachecontrol";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

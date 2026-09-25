@@ -31,6 +31,5 @@ buildPythonPackage rec {
     homepage = "https://complycube.com";
     description = "Official Python client for the ComplyCube API";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

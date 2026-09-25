@@ -49,6 +49,5 @@ buildPythonPackage (finalAttrs: {
     longDescription = "A drop-in replacement for py-scale-codec — same scalecodec module name, same public API, compiled with Cython for improved throughput.";
     homepage = "https://github.com/latent-to/cyscale";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

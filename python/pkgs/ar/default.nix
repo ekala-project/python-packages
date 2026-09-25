@@ -44,6 +44,5 @@ buildPythonPackage rec {
     description = "Implementation of the ar archive format";
     homepage = "https://github.com/vidstige/ar";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

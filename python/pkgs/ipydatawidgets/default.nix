@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "Widgets to help facilitate reuse of large datasets across different widgets";
     homepage = "https://github.com/vidartf/ipydatawidgets";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

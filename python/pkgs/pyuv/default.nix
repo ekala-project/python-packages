@@ -44,6 +44,5 @@ buildPythonPackage rec {
     description = "Python interface for libuv";
     homepage = "https://github.com/saghul/pyuv";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

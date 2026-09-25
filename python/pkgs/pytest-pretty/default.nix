@@ -39,6 +39,5 @@ buildPythonPackage (finalAttrs: {
     description = "Pytest plugin for pretty printing the test summary";
     homepage = "https://github.com/samuelcolvin/pytest-pretty";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

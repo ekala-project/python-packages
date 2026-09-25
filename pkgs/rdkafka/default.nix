@@ -77,6 +77,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/confluentinc/librdkafka";
     license = lib.licenses.bsd2;
     platforms = lib.platforms.linux ++ lib.platforms.darwin;
-    maintainers = [ ];
   };
 })

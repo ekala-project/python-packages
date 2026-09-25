@@ -61,6 +61,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python library for Reformatting GTFS data for Station Arrivals";
     homepage = "https://github.com/bcpearce/gtfs-station-stop";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

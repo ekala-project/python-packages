@@ -48,6 +48,5 @@ buildPythonPackage rec {
     description = "Threading and Multiprocessing made easy";
     homepage = "https://github.com/BrianPugh/lox";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

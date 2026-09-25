@@ -23,6 +23,5 @@ buildPythonPackage (finalAttrs: {
     description = "Zero-dependency Python package for easy throttling with asyncio support";
     homepage = "https://github.com/uburuntu/throttler";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

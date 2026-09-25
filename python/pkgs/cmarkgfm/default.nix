@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Minimal bindings to GitHub's fork of cmark";
     homepage = "https://github.com/jonparrott/cmarkgfm";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -65,6 +65,5 @@ buildPythonPackage (finalAttrs: {
     mainProgram = "pytensor-cache";
     homepage = "https://github.com/pymc-devs/pytensor";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

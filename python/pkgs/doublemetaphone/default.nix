@@ -45,6 +45,5 @@ buildPythonPackage rec {
     description = "Python wrapper for Double Metaphone phonetic encoding algorithm";
     homepage = "https://github.com/dedupeio/doublemetaphone";
     license = lib.licenses.artistic1;
-    maintainers = [ ];
   };
 }

@@ -35,6 +35,5 @@ buildPythonPackage rec {
     mainProgram = "dingz";
     homepage = "https://github.com/home-assistant-ecosystem/python-dingz";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

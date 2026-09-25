@@ -29,6 +29,5 @@ buildPythonPackage rec {
     description = "pytest-plus adds new features to pytest";
     homepage = "https://github.com/pytest-dev/pytest-plus";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

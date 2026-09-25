@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Scrape and search localized results from Google, Bing, Baidu, Yahoo, Yandex, Ebay, Homedepot, youtube at scale using SerpApi.com";
     homepage = "https://github.com/serpapi/google-search-results-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

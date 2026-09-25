@@ -42,7 +42,6 @@ buildPythonPackage rec {
     description = "Functions for plotting area-proportional two- and three-way Venn diagrams in matplotlib";
     homepage = "https://github.com/konstantint/matplotlib-venn";
     license = lib.licenses.mit;
-    maintainers = [ ];
     broken = stdenv.hostPlatform.isDarwin; # https://github.com/konstantint/matplotlib-venn/issues/87
   };
 }

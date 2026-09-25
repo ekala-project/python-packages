@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Implementation of the Ethereum bloom filter";
     homepage = "https://github.com/ethereum/eth-bloom";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

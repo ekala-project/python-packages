@@ -32,6 +32,5 @@ buildPythonPackage (finalAttrs: {
     description = "OpenDocument Format (ODF, ISO/IEC 26300) library for Python";
     homepage = "https://github.com/jdum/odfdo";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

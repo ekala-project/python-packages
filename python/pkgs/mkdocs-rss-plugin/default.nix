@@ -41,6 +41,5 @@ buildPythonPackage (finalAttrs: {
     description = "MkDocs plugin to generate a RSS feeds for created and updated pages, using git log and YAML frontmatter";
     homepage = "https://github.com/Guts/mkdocs-rss-plugin";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

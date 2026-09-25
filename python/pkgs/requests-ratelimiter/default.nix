@@ -32,6 +32,5 @@ buildPythonPackage (finalAttrs: {
     description = "Module for rate-limiting for requests";
     homepage = "https://github.com/JWCook/requests-ratelimiter";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

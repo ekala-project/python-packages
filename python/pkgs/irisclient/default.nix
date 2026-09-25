@@ -37,6 +37,5 @@ buildPythonPackage rec {
     description = "Python client for Iris REST api";
     homepage = "https://github.com/houqp/iris-python-client";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

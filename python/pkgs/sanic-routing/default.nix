@@ -22,6 +22,5 @@ buildPythonPackage rec {
     description = "Core routing component for the Sanic web framework";
     homepage = "https://github.com/sanic-org/sanic-routing";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

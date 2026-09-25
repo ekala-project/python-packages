@@ -37,6 +37,5 @@ buildPythonPackage rec {
     description = "Python library for Mill heater devices";
     homepage = "https://github.com/Danielhiversen/pymill";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

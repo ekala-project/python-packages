@@ -38,6 +38,5 @@ buildPythonPackage rec {
     description = "Python module to authenticate to Azure Active Directory (AAD) in order to access AAD protected web resources";
     homepage = "https://github.com/AzureAD/azure-activedirectory-library-for-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

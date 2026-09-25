@@ -23,6 +23,5 @@ buildPythonPackage rec {
     description = "Easily configure apps using simple environmental overrides";
     homepage = "https://github.com/coddingtonbear/environmental-override";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

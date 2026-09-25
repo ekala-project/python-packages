@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "List of HTML void tag names";
     homepage = "https://github.com/Riverside-Healthcare/html-void-elements";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 }

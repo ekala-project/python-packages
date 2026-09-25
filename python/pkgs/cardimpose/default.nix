@@ -36,6 +36,5 @@ buildPythonPackage {
     license = lib.licenses.agpl3Only;
     platforms = pymupdf.meta.platforms;
     badPlatforms = pymupdf.meta.badPlatforms or [ ];
-    maintainers = [ ];
   };
 }

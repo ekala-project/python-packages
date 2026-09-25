@@ -53,6 +53,5 @@ buildPythonPackage rec {
     description = "2D plotting library for Jupyter based on Grammar of Graphics";
     homepage = "https://bqplot.github.io/bqplot";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

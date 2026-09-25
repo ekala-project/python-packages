@@ -49,6 +49,5 @@ buildPythonPackage (finalAttrs: {
     description = "Provides access to the Keycloak API";
     homepage = "https://github.com/marcospereirampj/python-keycloak";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

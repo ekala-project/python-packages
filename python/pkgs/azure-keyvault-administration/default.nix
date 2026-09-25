@@ -38,6 +38,5 @@ buildPythonPackage rec {
     description = "Microsoft Azure Key Vault Administration Client Library for Python";
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/master/sdk/keyvault/azure-keyvault-administration";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "Helpers to assist with building Python packages with compiled C/Cython extensions";
     homepage = "https://github.com/astropy/extension-helpers";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

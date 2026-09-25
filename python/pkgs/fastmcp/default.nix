@@ -56,6 +56,5 @@ buildPythonPackage (finalAttrs: {
     description = "Fast, Pythonic way to build MCP servers and clients";
     homepage = "https://github.com/PrefectHQ/fastmcp";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

@@ -25,6 +25,5 @@ buildPythonPackage (finalAttrs: {
     description = "PyQt/PySide compatibility layer";
     homepage = "https://github.com/ales-erjavec/anyqt";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 })

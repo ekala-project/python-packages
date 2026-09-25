@@ -52,6 +52,5 @@ buildPythonPackage (finalAttrs: {
     description = "Markdown template filter for Django";
     homepage = "https://github.com/erwinmatijsen/django-markdownify";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

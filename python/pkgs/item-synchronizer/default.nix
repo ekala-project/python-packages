@@ -37,6 +37,5 @@ buildPythonPackage rec {
     description = "";
     homepage = "https://github.com/bergercookie/item_synchronizer";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

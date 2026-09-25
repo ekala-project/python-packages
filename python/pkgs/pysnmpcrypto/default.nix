@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "Strong crypto support for Python SNMP library";
     homepage = "https://github.com/lextudio/pysnmpcrypto";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

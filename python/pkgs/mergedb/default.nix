@@ -38,6 +38,5 @@ buildPythonPackage rec {
     mainProgram = "mergedb";
     homepage = "https://github.com/graysonhead/mergedb";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 }

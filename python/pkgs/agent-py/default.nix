@@ -43,6 +43,5 @@ buildPythonPackage rec {
     description = "Python wrapper around the Agent REST API";
     homepage = "https://github.com/ispysoftware/agent-py";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

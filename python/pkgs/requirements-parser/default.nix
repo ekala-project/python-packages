@@ -29,6 +29,5 @@ buildPythonPackage rec {
     description = "Pip requirements file parser";
     homepage = "https://github.com/davidfischer/requirements-parser";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

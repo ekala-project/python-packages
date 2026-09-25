@@ -28,7 +28,6 @@ buildPythonPackage rec {
     description = "Rewrite of Python's builtin doctest module (with pytest plugin integration) with AST instead of REGEX";
     homepage = "https://github.com/Erotemic/xdoctest";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "xdoctest";
   };
 }

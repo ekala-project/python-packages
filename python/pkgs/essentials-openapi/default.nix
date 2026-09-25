@@ -71,6 +71,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/Neoteroi/essentials-openapi";
     description = "Functions to handle OpenAPI Documentation";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

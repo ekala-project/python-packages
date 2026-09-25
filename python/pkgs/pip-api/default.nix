@@ -28,6 +28,5 @@ buildPythonPackage (finalAttrs: {
     description = "Importable pip API";
     homepage = "https://github.com/di/pip-api/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

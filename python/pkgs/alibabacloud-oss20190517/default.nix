@@ -42,6 +42,5 @@ buildPythonPackage (finalAttrs: {
     description = "Alibaba Cloud Object Storage Service (20190517) SDK Library for Python";
     homepage = "https://pypi.org/project/alibabacloud-oss20190517/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

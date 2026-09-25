@@ -22,6 +22,5 @@ buildPythonPackage (finalAttrs: {
     description = "Dash component starter pack";
     homepage = "https://dash.plot.ly/dash-core-components";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

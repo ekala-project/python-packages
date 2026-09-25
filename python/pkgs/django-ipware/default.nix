@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Django application to retrieve user's IP address";
     homepage = "https://github.com/un33k/django-ipware";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

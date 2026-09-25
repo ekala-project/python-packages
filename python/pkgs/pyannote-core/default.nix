@@ -41,6 +41,5 @@ buildPythonPackage rec {
     description = "Advanced data structures for handling temporal segments with attached labels";
     homepage = "https://github.com/pyannote/pyannote-core";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

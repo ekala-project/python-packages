@@ -69,6 +69,5 @@ buildPythonPackage (finalAttrs: {
     description = "Universal web framework adapter for Python";
     homepage = "https://github.com/usecross/cross-web";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "F5 BIG-IP iControl REST API client";
     homepage = "https://github.com/F5Networks/f5-icontrol-rest-python";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

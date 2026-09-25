@@ -33,6 +33,5 @@ buildPythonPackage rec {
     description = "Python client for the BSH Home Connect REST API";
     homepage = "https://github.com/DavidMStraub/homeconnect";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

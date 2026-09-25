@@ -29,6 +29,5 @@ buildPythonPackage rec {
     description = "Pure python implementation of the milter protocol";
     homepage = "https://github.com/flowerysong/miltertest";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 }

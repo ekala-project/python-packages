@@ -34,6 +34,5 @@ buildPythonPackage rec {
     mainProgram = "ete3";
     homepage = "http://etetoolkit.org/";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 }

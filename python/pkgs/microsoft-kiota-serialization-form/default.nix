@@ -40,6 +40,5 @@ buildPythonPackage (finalAttrs: {
     description = "Form serialization implementation for Kiota clients in Python";
     homepage = "https://github.com/microsoft/kiota-python/tree/main/packages/serialization/form";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

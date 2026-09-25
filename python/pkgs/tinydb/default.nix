@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Lightweight document oriented database written in Python";
     homepage = "https://tinydb.readthedocs.org/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

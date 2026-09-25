@@ -37,6 +37,5 @@ buildPythonPackage rec {
     description = "WebSocket support for Flask";
     homepage = "https://github.com/miguelgrinberg/flask-sock/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

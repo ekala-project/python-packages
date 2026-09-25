@@ -29,6 +29,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/pycontribs/subprocess-tee";
     description = "Subprocess.run drop-in replacement that supports a tee mode";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

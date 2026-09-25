@@ -58,6 +58,5 @@ buildPythonPackage rec {
     description = "Python module for Jewish/Hebrew date and Zmanim";
     homepage = "https://github.com/py-libhdate/py-libhdate";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
   };
 }

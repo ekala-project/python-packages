@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Zero-dependency DBus library for Python with asyncio support";
     homepage = "https://github.com/altdesktop/python-dbus-next";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

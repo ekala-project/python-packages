@@ -50,7 +50,6 @@ buildPythonPackage (finalAttrs: {
   meta = {
     description = "Official Python SDK for Exa, the web search API for AI";
     homepage = "https://github.com/exa-labs/exa-py/";
-    maintainers = [ ];
     license = lib.licenses.mit;
   };
 })

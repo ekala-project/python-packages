@@ -23,6 +23,5 @@ buildPythonPackage rec {
     description = "Module to work with the IamMeter API";
     homepage = "https://pypi.org/project/iammeter/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

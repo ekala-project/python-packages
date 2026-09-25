@@ -23,7 +23,6 @@ buildPythonPackage rec {
     description = "Drawing in terminal with unicode braille characters";
     homepage = "https://github.com/asciimoo/drawille";
     license = lib.licenses.agpl3Plus;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 }

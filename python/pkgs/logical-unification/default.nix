@@ -43,6 +43,5 @@ buildPythonPackage (finalAttrs: {
     description = "Straightforward unification in Python that's extensible via generic functions";
     homepage = "https://github.com/pythological/unification";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

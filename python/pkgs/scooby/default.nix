@@ -32,6 +32,5 @@ buildPythonPackage rec {
     mainProgram = "scooby";
     homepage = "https://github.com/banesullivan/scooby";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

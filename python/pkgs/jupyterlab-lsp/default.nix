@@ -33,6 +33,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/jupyter-lsp/jupyterlab-lsp";
     license = lib.licenses.bsd3;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 }

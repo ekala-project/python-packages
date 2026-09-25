@@ -36,6 +36,5 @@ buildPythonPackage (finalAttrs: {
     description = "Alibaba Cloud Sts (20150401) SDK Library for Python";
     homepage = "https://pypi.org/project/alibabacloud-sts20150401/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

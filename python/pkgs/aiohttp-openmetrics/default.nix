@@ -33,6 +33,5 @@ buildPythonPackage rec {
     description = "OpenMetrics provider for aiohttp";
     homepage = "https://github.com/jelmer/aiohttp-openmetrics/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

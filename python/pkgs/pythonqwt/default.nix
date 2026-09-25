@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Qt plotting widgets for Python (pure Python reimplementation of Qwt C++ library)";
     homepage = "https://github.com/PlotPyStack/PythonQwt";
     license = lib.licenses.lgpl21Only;
-    maintainers = [ ];
   };
 }

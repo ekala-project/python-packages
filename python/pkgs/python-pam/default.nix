@@ -41,6 +41,5 @@ buildPythonPackage rec {
     description = "Python pam module";
     homepage = "https://github.com/FirefighterBlu3/python-pam";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

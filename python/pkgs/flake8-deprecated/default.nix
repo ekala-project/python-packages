@@ -33,6 +33,5 @@ buildPythonPackage rec {
     description = "Flake8 plugin that warns about deprecated method calls";
     homepage = "https://github.com/gforcada/flake8-deprecated";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
   };
 }

@@ -38,6 +38,5 @@ buildPythonPackage rec {
     description = "Lossless codec for numerical data";
     homepage = "https://github.com/pcodec/pcodec";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

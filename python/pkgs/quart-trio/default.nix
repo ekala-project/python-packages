@@ -41,6 +41,5 @@ buildPythonPackage rec {
     description = "Quart-Trio is an extension for Quart to support the Trio event loop";
     homepage = "https://github.com/pgjones/quart-trio";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

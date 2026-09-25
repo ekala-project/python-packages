@@ -28,6 +28,5 @@ buildPythonPackage (finalAttrs: {
     description = "Wrapper to make difflib.unified_diff more fun to use";
     homepage = "https://github.com/thatch/moreorless/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

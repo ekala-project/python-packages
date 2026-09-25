@@ -47,6 +47,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/dbfixtures/mirakuru";
     description = "Process orchestration tool designed for functional and integration tests";
     license = lib.licenses.lgpl3Plus;
-    maintainers = [ ];
   };
 }

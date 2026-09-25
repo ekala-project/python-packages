@@ -74,6 +74,5 @@ buildPythonPackage (finalAttrs: {
     description = "Module to implement minimal boilerplate CLIs derived from various sources";
     homepage = "https://github.com/omni-us/jsonargparse";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

@@ -49,7 +49,6 @@ buildPythonPackage (finalAttrs: {
   meta = {
     homepage = "https://polyfactory.litestar.dev/";
     platforms = lib.platforms.unix;
-    maintainers = [ ];
     description = "Simple and powerful factories for mock data generation";
     license = lib.licenses.mit;
   };

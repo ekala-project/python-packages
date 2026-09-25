@@ -42,6 +42,5 @@ buildPythonPackage rec {
     description = "Tool suite for testing ethereum applications";
     homepage = "https://github.com/ethereum/eth-tester";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

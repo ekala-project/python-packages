@@ -45,6 +45,5 @@ buildPythonPackage (finalAttrs: {
     mainProgram = "chat_downloader";
     homepage = "https://github.com/xenova/chat-downloader";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

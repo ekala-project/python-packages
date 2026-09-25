@@ -22,6 +22,5 @@ buildPythonPackage rec {
     description = "Python module to control the GPIO on a Raspberry Pi";
     license = lib.licenses.mit;
     platforms = lib.platforms.linux;
-    maintainers = [ ];
   };
 }

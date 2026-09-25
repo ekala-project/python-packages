@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "Python module for listening to Crownstone SSE events";
     homepage = "https://github.com/Crownstone-Community/crownstone-lib-python-sse";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

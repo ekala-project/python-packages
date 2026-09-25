@@ -30,6 +30,5 @@ buildPythonPackage (finalAttrs: {
     description = "Simple, minimal and powerful logger for Python";
     homepage = "https://github.com/deepjyoti30/simber";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

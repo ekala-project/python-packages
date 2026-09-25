@@ -39,6 +39,5 @@ buildPythonPackage (finalAttrs: {
     description = "Asynchronous Python wrapper library over Bond Local API";
     homepage = "https://github.com/prystupa/bond-api";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

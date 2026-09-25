@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "Python library for iNELS mqtt protocol";
     homepage = "https://github.com/epdevlab/elkoep-aio-mqtt";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

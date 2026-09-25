@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Supplement module for langcodes";
     homepage = "https://github.com/georgkrause/language_data";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

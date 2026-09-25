@@ -60,6 +60,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/astrofrog/mpl-scatter-density";
     description = "Fast scatter density plots for Matplotlib";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

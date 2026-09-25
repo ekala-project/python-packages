@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "Python utilities to download and parse the MNIST dataset";
     homepage = "https://github.com/datapythonista/mnist";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

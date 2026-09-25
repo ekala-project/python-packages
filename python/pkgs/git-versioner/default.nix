@@ -30,6 +30,5 @@ buildPythonPackage rec {
     description = "Manage current / next version for project";
     homepage = "https://gitlab.com/alelec/__version__";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

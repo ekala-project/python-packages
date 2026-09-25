@@ -29,6 +29,5 @@ buildPythonPackage (finalAttrs: {
     description = "Library for manipulating Glyph Bitmap Distribution Format (BDF) Fonts";
     platforms = lib.platforms.all;
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

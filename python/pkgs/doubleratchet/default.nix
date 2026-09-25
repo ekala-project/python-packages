@@ -47,7 +47,5 @@ buildPythonPackage rec {
     description = "Python implementation of the Double Ratchet algorithm";
     homepage = "https://github.com/Syndace/python-doubleratchet";
     license = lib.licenses.mit;
-    teams = [ ];
-    maintainers = [ ];
   };
 }

@@ -25,6 +25,5 @@ buildPythonPackage rec {
     description = "Python client for HLK-SW16";
     homepage = "https://github.com/jameshilliard/hlk-sw16";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

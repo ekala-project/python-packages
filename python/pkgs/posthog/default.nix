@@ -47,6 +47,5 @@ buildPythonPackage (finalAttrs: {
     description = "Module for interacting with PostHog";
     homepage = "https://github.com/PostHog/posthog-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

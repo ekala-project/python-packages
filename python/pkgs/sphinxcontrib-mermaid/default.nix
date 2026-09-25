@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Mermaid diagrams in yours sphinx powered docs";
     homepage = "https://github.com/mgaitan/sphinxcontrib-mermaid";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

@@ -35,6 +35,5 @@ buildPythonPackage (finalAttrs: {
     description = "Retrieve a list of devices from a bt smarthub or bt smarthub 2 on a local network";
     homepage = "https://github.com/jxwolstenholme/btsmarthub_devicelist";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

@@ -30,6 +30,5 @@ buildPythonPackage rec {
     description = "F5 Networks Python SDK";
     homepage = "https://github.com/F5Networks/f5-common-python";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

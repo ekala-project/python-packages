@@ -50,6 +50,5 @@ buildPythonPackage (finalAttrs: {
       unlicense
       lgpl3Plus
     ];
-    maintainers = [ ];
   };
 })

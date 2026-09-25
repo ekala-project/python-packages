@@ -85,6 +85,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://docs.openstack.org/openstacksdk/latest/";
     downloadPage = "https://github.com/openstack/openstacksdk/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

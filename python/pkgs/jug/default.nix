@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "Task-Based Parallelization Framework";
     homepage = "https://jug.readthedocs.io/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "Core testing clients for the Sanic web framework";
     homepage = "https://github.com/sanic-org/sanic-testing";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

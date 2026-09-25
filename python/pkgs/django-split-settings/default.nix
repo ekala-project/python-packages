@@ -39,7 +39,6 @@ buildPythonPackage rec {
   meta = {
     description = "Organize Django settings into multiple files and directories";
     homepage = "https://github.com/wemake-services/django-split-settings";
-    maintainers = [ ];
     license = lib.licenses.bsd3;
   };
 }

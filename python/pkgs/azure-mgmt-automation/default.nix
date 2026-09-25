@@ -36,6 +36,5 @@ buildPythonPackage (finalAttrs: {
     description = "This is the Microsoft Azure Automation Client Library";
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/automation/azure-mgmt-automation";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

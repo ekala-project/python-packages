@@ -49,7 +49,6 @@ buildPythonPackage rec {
     description = "New file format derived from Riegeli, achieving a new frontier of IO efficiency";
     homepage = "https://github.com/google/array_record";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     platforms = [ "x86_64-linux" ];
   };
 }

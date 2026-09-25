@@ -29,6 +29,5 @@ buildPythonPackage (finalAttrs: {
     description = "Module for functionality with text, escape codes, octal and hexadecimal codes, and other data";
     homepage = "https://github.com/EntySec/ColorScript";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

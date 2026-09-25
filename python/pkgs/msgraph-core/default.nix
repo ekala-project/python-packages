@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "Core component of the Microsoft Graph Python SDK";
     homepage = "https://github.com/microsoftgraph/msgraph-sdk-python-core";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

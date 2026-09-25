@@ -43,6 +43,5 @@ buildPythonPackage (finalAttrs: {
     description = "Microformats2 parser written in Python";
     homepage = "https://microformats.org/wiki/mf2py";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

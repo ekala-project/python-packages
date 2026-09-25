@@ -37,6 +37,5 @@ buildPythonPackage rec {
     mainProgram = "micloud";
     homepage = "https://github.com/Squachen/micloud";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

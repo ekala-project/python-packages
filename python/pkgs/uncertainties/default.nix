@@ -37,7 +37,6 @@ buildPythonPackage rec {
   meta = {
     homepage = "https://uncertainties.readthedocs.io/";
     description = "Transparent calculations with uncertainties on the quantities involved (aka error propagation)";
-    maintainers = [ ];
     license = lib.licenses.bsd3;
   };
 }

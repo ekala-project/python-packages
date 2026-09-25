@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "Module to control Steamist steam systems";
     homepage = "https://github.com/bdraco/aiosteamist";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

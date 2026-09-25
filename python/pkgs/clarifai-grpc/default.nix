@@ -43,6 +43,5 @@ buildPythonPackage (finalAttrs: {
     description = "Clarifai gRPC API Client";
     homepage = "https://github.com/Clarifai/clarifai-python-grpc";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

@@ -29,6 +29,5 @@ buildPythonPackage rec {
     mainProgram = "simple-term-menu";
     homepage = "https://github.com/IngoMeyer441/simple-term-menu";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

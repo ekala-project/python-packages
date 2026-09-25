@@ -32,7 +32,6 @@ buildPythonPackage rec {
     description = "Python library for CRCs and checksums";
     homepage = "https://github.com/MartinScharrer/crccheck";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 }

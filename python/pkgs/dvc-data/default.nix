@@ -52,7 +52,6 @@ buildPythonPackage (finalAttrs: {
     description = "DVC's data management subsystem";
     homepage = "https://github.com/iterative/dvc-data";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "dvc-data";
   };
 })

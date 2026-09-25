@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "Modern password hashing for Python";
     homepage = "https://github.com/frankie567/pwdlib";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

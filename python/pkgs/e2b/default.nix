@@ -58,6 +58,5 @@ buildPythonPackage rec {
     description = "E2B SDK that give agents cloud environments";
     homepage = "https://github.com/e2b-dev/E2B/blob/main/packages/python-sdk";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

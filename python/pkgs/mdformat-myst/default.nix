@@ -49,6 +49,5 @@ buildPythonPackage (finalAttrs: {
     description = "Mdformat plugin for MyST compatibility";
     homepage = "https://github.com/executablebooks/mdformat-myst";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

@@ -44,7 +44,6 @@ buildPythonPackage (finalAttrs: {
     description = "Robust, dependency-free way to use the system clipboard in Python";
     homepage = "https://github.com/Klavionik/copykitten";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

@@ -43,6 +43,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python interpreter discovery";
     homepage = "https://github.com/tox-dev/python-discovery";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

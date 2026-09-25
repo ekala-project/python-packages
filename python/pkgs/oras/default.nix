@@ -32,6 +32,5 @@ buildPythonPackage (finalAttrs: {
     description = "ORAS Python SDK";
     homepage = "https://github.com/oras-project/oras-py";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

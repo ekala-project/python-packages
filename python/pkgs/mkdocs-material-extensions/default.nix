@@ -27,6 +27,5 @@ buildPythonPackage rec {
     description = "Markdown extension resources for MkDocs Material";
     homepage = "https://github.com/facelessuser/mkdocs-material-extensions";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

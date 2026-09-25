@@ -44,6 +44,5 @@ buildPythonPackage rec {
     description = "Python module for Apache Thrift";
     homepage = "https://github.com/Thriftpy/thriftpy2";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

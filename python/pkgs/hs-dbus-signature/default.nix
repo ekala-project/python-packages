@@ -27,6 +27,5 @@ buildPythonPackage rec {
     description = "Hypothesis Strategy for Generating Arbitrary DBus Signatures";
     homepage = "https://github.com/stratis-storage/hs-dbus-signature";
     license = lib.licenses.mpl20;
-    maintainers = [ ];
   };
 }

@@ -43,6 +43,5 @@ buildPythonPackage rec {
     description = "Python configuration library for your app";
     homepage = "https://github.com/willkg/everett";
     license = lib.licenses.mpl20;
-    maintainers = [ ];
   };
 }

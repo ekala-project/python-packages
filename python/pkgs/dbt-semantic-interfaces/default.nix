@@ -55,6 +55,5 @@ buildPythonPackage (finalAttrs: {
     description = "Shared interfaces used by dbt-core and MetricFlow projects";
     homepage = "https://github.com/dbt-labs/dbt-semantic-interfaces";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

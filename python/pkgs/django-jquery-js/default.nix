@@ -27,6 +27,5 @@ buildPythonPackage rec {
     description = "jQuery, bundled up so apps can depend upon it";
     homepage = "https://bitbucket.org/tim_heap/django-jquery";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Pythonic Linear Congruential Generator iterator";
     homepage = "https://github.com/cisagov/lcgit";
     license = lib.licenses.cc0;
-    maintainers = [ ];
   };
 }

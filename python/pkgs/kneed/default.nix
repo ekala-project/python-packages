@@ -44,6 +44,5 @@ buildPythonPackage rec {
     description = "Knee point detection in Python";
     homepage = "https://github.com/arvkevi/kneed";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

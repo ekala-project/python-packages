@@ -36,6 +36,5 @@ buildPythonPackage (finalAttrs: {
     description = "Pydantic-based, protobuf-free data models for Sigstore";
     homepage = "https://github.com/astral-sh/sigstore-models";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

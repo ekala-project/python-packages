@@ -25,6 +25,5 @@ buildPythonPackage rec {
     description = "Read and modify image EXIF metadata using Python";
     homepage = "https://gitlab.com/TNThieding/exif";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

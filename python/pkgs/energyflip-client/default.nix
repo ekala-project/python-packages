@@ -38,6 +38,5 @@ buildPythonPackage rec {
     description = "Library to communicate with the API behind EnergyFlip";
     homepage = "https://github.com/dennisschroer/energyflip-client";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

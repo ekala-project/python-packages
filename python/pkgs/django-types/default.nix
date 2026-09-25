@@ -25,6 +25,5 @@ buildPythonPackage rec {
     description = "Type stubs for Django";
     homepage = "https://github.com/sbdchd/django-types";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

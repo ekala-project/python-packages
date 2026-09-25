@@ -50,6 +50,5 @@ buildPythonPackage rec {
     description = "Library for testing asyncio code with pytest";
     homepage = "https://github.com/pytest-dev/pytest-asyncio";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

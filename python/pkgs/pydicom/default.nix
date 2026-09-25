@@ -39,6 +39,5 @@ buildPythonPackage (finalAttrs: {
     description = "Pure Python package for DICOM medical file reading and writing";
     homepage = "https://pydicom.github.io";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

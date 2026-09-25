@@ -29,6 +29,5 @@ buildPythonPackage (finalAttrs: {
     description = "Alibaba Cloud Darabonba Map SDK Library for Python";
     homepage = "https://github.com/aliyun/darabonba-map";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

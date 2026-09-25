@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "Fast, lightweight and easy-to-use Python library for splitting text into semantically meaningful chunks";
     homepage = "https://github.com/isaacus-dev/semchunk";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

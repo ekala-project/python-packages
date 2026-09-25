@@ -37,6 +37,5 @@ buildPythonPackage rec {
     description = "Use Database URLs in your Django Application";
     homepage = "https://github.com/jazzband/dj-database-url";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

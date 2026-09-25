@@ -92,6 +92,5 @@ buildPythonPackage rec {
       binaryNativeCode
     ];
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

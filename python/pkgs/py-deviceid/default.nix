@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Simple library to get or create a unique device id for a device in Python";
     homepage = "https://pypi.org/project/py-deviceid/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

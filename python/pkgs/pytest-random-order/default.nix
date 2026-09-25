@@ -33,6 +33,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/jbasko/pytest-random-order";
     description = "Randomise the order of tests with some control over the randomness";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

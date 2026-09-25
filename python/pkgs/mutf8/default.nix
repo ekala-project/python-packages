@@ -33,6 +33,5 @@ buildPythonPackage rec {
     description = "Fast MUTF-8 encoder & decoder";
     homepage = "https://github.com/TkTech/mutf8";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

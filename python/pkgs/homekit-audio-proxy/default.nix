@@ -41,6 +41,5 @@ buildPythonPackage (finalAttrs: {
     description = "SRTP audio proxy for HomeKit camera streaming";
     homepage = "https://github.com/bdraco/homekit-audio-proxy";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

@@ -29,6 +29,5 @@ buildPythonPackage rec {
     description = "LibMR provides core MetaRecognition and Weibull fitting functionality";
     homepage = "https://github.com/Vastlab/libMR";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

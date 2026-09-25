@@ -42,6 +42,5 @@ buildPythonPackage rec {
     description = "Set of classes for working with MediaWiki data types";
     homepage = "https://github.com/mediawiki-utilities/python-mwtypes";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

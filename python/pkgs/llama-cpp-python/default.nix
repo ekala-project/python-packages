@@ -89,6 +89,5 @@ buildPythonPackage.override { stdenv = stdenvTarget; } rec {
     description = "Python bindings for llama.cpp";
     homepage = "https://github.com/abetlen/llama-cpp-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

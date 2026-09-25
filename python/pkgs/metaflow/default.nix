@@ -49,6 +49,5 @@ buildPythonPackage rec {
     description = "Open Source AI/ML Platform";
     homepage = "https://metaflow.org/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

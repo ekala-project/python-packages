@@ -28,6 +28,5 @@ buildPythonPackage (finalAttrs: {
     description = "Library to make data intended for machines, readable to humans";
     homepage = "https://github.com/staticdev/human-readable";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

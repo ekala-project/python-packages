@@ -31,7 +31,6 @@ buildPythonPackage (finalAttrs: {
     description = "Generate HTML reports from Junit results";
     homepage = "https://gitlab.com/inorton/junit2html";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "junit2html";
   };
 })

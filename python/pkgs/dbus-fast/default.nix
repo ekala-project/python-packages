@@ -65,6 +65,5 @@ buildPythonPackage (finalAttrs: {
     description = "Faster version of dbus-next";
     homepage = "https://github.com/bluetooth-devices/dbus-fast";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

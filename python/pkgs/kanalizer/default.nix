@@ -62,7 +62,6 @@ buildPythonPackage (finalAttrs: {
     description = "Library that guesses the Japanese pronounciation of English words";
     homepage = "https://github.com/VOICEVOX/kanalizer";
     license = lib.licenses.mit;
-    maintainers = [ ];
     sourceProvenance = with lib.sourceTypes; [
       fromSource
       binaryNativeCode # the model file

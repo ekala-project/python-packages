@@ -20,6 +20,5 @@ buildPythonPackage rec {
   meta = {
     description = "SOCKS module for Python";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

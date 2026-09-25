@@ -30,6 +30,5 @@ buildPythonPackage rec {
     description = "Python attributes without boilerplate";
     homepage = "https://github.com/python-attrs/attrs";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

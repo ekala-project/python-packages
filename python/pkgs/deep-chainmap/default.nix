@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Recursive subclass of ChainMap";
     homepage = "https://github.com/neutrinoceros/deep_chainmap";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

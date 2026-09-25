@@ -56,6 +56,5 @@ buildPythonPackage (finalAttrs: {
     description = "mdformat plugin to format YAML, TOML, or JSON front matter";
     homepage = "https://github.com/kyleking/mdformat-front-matters";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

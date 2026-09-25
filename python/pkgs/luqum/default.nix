@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "Lucene query parser generating ElasticSearch queries";
     homepage = "https://github.com/jurismarches/luqum";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

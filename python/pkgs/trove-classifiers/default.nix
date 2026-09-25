@@ -37,6 +37,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://github.com/pypa/trove-classifiers";
     license = lib.licenses.asl20;
     mainProgram = "trove-classifiers";
-    maintainers = [ ];
   };
 })

@@ -32,6 +32,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/mkleehammer/pyodbc";
     license = lib.licenses.mit;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

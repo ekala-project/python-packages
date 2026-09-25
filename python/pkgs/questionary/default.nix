@@ -33,6 +33,5 @@ buildPythonPackage rec {
     description = "Python library to build command line user prompts";
     homepage = "https://github.com/tmbo/questionary";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

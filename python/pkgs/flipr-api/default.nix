@@ -48,6 +48,5 @@ buildPythonPackage rec {
     mainProgram = "flipr-api";
     homepage = "https://github.com/cnico/flipr-api";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
   };
 }

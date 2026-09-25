@@ -34,6 +34,5 @@ buildPythonPackage rec {
     '';
     homepage = "https://github.com/didix21/mdutils";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

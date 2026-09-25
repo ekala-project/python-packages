@@ -35,6 +35,5 @@ buildPythonPackage (finalAttrs: {
     description = "Extract datetime objects from strings";
     homepage = "https://github.com/akoumjian/datefinder";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

@@ -30,6 +30,5 @@ buildPythonPackage (finalAttrs: {
     description = "Extract and distribute Homematic CCU/OpenCCU configuration metadata";
     homepage = "https://github.com/SukramJ/openccu-data";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

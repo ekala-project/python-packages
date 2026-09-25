@@ -32,6 +32,5 @@ buildPythonPackage (finalAttrs: {
     description = "Simple, easy-to-use throttler for asyncio";
     homepage = "https://github.com/hallazzang/asyncio-throttle";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

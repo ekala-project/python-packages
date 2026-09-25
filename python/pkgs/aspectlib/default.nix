@@ -48,6 +48,5 @@ buildPythonPackage rec {
     description = "Aspect-oriented programming, monkey-patch and decorators library";
     homepage = "https://github.com/ionelmc/python-aspectlib";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

@@ -69,6 +69,5 @@ buildPythonPackage (finalAttrs: {
     description = "Uniform Manifold Approximation and Projection";
     homepage = "https://github.com/lmcinnes/umap";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

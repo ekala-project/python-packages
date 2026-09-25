@@ -57,6 +57,5 @@ buildPythonPackage rec {
     description = "Python tools to handle ASDF files";
     homepage = "https://github.com/asdf-format/asdf";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

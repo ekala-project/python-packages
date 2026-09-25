@@ -38,6 +38,5 @@ buildPythonPackage (finalAttrs: {
     description = "Interface to GMP, MPFR, and MPC for Python 3.7+";
     homepage = "https://github.com/aleaxit/gmpy/";
     license = lib.licenses.lgpl3Plus;
-    maintainers = [ ];
   };
 })

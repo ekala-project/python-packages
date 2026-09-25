@@ -54,6 +54,5 @@ buildPythonPackage rec {
     description = "OpenStackClient Library";
     homepage = "https://github.com/openstack/osc-lib";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

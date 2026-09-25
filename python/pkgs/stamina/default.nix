@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "Production-grade retries for Python";
     homepage = "https://github.com/hynek/stamina";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

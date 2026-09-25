@@ -35,6 +35,5 @@ buildPythonPackage rec {
     mainProgram = "pudb";
     homepage = "https://github.com/inducer/pudb";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

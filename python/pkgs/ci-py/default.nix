@@ -33,6 +33,5 @@ buildPythonPackage (finalAttrs: {
     description = "Library for working with Continuous Integration services";
     homepage = "https://github.com/grantmcconnaughey/ci.py";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

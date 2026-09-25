@@ -40,6 +40,5 @@ buildPythonPackage rec {
     description = "High-performance Python wrapper around the rust-stemmers library, utilizing the Snowball stemming algorithm";
     homepage = "https://github.com/qdrant/py-rust-stemmers";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

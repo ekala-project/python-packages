@@ -24,6 +24,5 @@ buildPythonPackage {
     description = "Python client for GPSD";
     homepage = "https://github.com/wadda/gps3";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

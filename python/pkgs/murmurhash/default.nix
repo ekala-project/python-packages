@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "Cython bindings for MurmurHash2";
     homepage = "https://github.com/explosion/murmurhash";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

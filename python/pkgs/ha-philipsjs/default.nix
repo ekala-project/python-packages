@@ -46,6 +46,5 @@ buildPythonPackage rec {
     description = "Library to interact with Philips TVs with jointSPACE API";
     homepage = "https://github.com/danielperna84/ha-philipsjs";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

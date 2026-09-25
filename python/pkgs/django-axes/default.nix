@@ -31,7 +31,6 @@ buildPythonPackage rec {
   meta = {
     description = "Keep track of failed login attempts in Django-powered sites";
     homepage = "https://github.com/jazzband/django-axes";
-    maintainers = [ ];
     license = lib.licenses.mit;
   };
 }

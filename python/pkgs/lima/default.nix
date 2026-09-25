@@ -26,6 +26,5 @@ buildPythonPackage rec {
     description = "Lightweight Marshalling of Python Objects";
     homepage = "https://github.com/b6d/lima";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -29,6 +29,5 @@ buildPythonPackage rec {
     description = "Module for machine learning and optimization";
     homepage = "https://github.com/BYU-PRISM/GEKKO";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

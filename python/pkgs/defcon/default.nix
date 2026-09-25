@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "Set of UFO based objects for use in font editing applications";
     homepage = "https://github.com/robotools/defcon";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

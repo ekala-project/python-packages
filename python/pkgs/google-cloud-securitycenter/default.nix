@@ -52,6 +52,5 @@ buildPythonPackage (finalAttrs: {
     description = "Cloud Security Command Center API API client library";
     homepage = "https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-securitycenter";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

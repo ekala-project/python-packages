@@ -51,6 +51,5 @@ buildPythonPackage rec {
     description = "Selection of most dominant colors in image using Modified Median Cut Quantization";
     homepage = "https://github.com/bedapisl/fast-colorthief";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

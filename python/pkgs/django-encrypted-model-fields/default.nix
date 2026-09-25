@@ -29,6 +29,5 @@ buildPythonPackage rec {
     description = "Set of fields that wrap standard Django fields with encryption provided by the python cryptography library";
     homepage = "https://gitlab.com/lansharkconsulting/django/django-encrypted-model-fields";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

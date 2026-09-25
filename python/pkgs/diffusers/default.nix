@@ -75,6 +75,5 @@ buildPythonPackage rec {
     mainProgram = "diffusers-cli";
     homepage = "https://github.com/huggingface/diffusers";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

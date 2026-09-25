@@ -38,6 +38,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://github.com/awslabs/aws-crt-python";
     description = "Python bindings for the AWS Common Runtime";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

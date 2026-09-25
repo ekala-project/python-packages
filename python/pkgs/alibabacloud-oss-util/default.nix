@@ -32,6 +32,5 @@ buildPythonPackage (finalAttrs: {
     description = "Alibaba Cloud Cloud OSS Util Library for Python";
     homepage = "https://pypi.org/project/alibabacloud-oss-util/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

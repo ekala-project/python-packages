@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Integration VCR.py into pytest";
     homepage = "https://github.com/ktosiek/pytest-vcr";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

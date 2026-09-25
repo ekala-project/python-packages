@@ -57,6 +57,5 @@ buildPythonPackage rec {
     description = "Python module for Amcrest and Dahua Cameras";
     homepage = "https://github.com/tchellomello/python-amcrest";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
   };
 }

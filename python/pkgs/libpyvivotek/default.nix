@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Python Library for Vivotek IP Cameras";
     homepage = "https://github.com/HarlemSquirrel/python-vivotek";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

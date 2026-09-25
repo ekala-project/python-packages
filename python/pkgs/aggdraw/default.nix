@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "High quality drawing interface for PIL";
     homepage = "https://github.com/pytroll/aggdraw";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

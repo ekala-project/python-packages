@@ -63,6 +63,5 @@ buildPythonPackage rec {
     description = "Native Rust library for Delta Lake, with bindings into Python";
     homepage = "https://github.com/delta-io/delta-rs";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

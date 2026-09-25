@@ -41,7 +41,6 @@ buildPythonPackage (finalAttrs: {
     description = "Nearest Neighbor Descent";
     homepage = "https://github.com/lmcinnes/pynndescent";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     badPlatforms = [
       # The majority of tests are crashing:
       # Fatal Python error: Segmentation fault

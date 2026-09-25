@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "Pure-python wrapper generator for ctypes";
     homepage = "https://github.com/ctypesgen/ctypesgen";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

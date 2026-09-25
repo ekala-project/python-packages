@@ -33,6 +33,5 @@ buildPythonPackage rec {
     description = "Uvicorn worker for Gunicorn";
     homepage = "https://github.com/Kludex/uvicorn-worker";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

@@ -212,6 +212,5 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://arrow.apache.org/docs/cpp/";
     license = lib.licenses.asl20;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

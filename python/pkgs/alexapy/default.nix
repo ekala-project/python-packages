@@ -55,6 +55,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python Package for controlling Alexa devices (echo dot, etc) programmatically";
     homepage = "https://gitlab.com/keatontaylor/alexapy";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

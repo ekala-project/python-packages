@@ -35,6 +35,5 @@ buildPythonPackage (finalAttrs: {
     description = "Travel through time in your tests";
     homepage = "https://github.com/adamchainz/time-machine";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

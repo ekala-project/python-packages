@@ -34,6 +34,5 @@ buildPythonPackage (finalAttrs: {
     description = "Aliyun Tea OpenApi Library for Python";
     homepage = "https://pypi.org/project/alibabacloud-openapi-util/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

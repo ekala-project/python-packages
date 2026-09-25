@@ -69,6 +69,5 @@ buildPythonPackage rec {
     description = "Client library and utilities for access to B2 Cloud Storage (backblaze)";
     homepage = "https://github.com/Backblaze/b2-sdk-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

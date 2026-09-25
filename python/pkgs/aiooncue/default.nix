@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "Module to interact with the Kohler Oncue API";
     homepage = "https://github.com/bdraco/aiooncue";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

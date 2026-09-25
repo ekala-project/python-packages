@@ -47,6 +47,5 @@ buildPythonPackage rec {
     description = "Jobs scheduler for managing background task (asyncio)";
     homepage = "https://github.com/aio-libs/aiojobs";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

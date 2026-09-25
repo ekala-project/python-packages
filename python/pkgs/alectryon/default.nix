@@ -41,6 +41,5 @@ buildPythonPackage (finalAttrs: {
     description = "Collection of tools for writing technical documents that mix Coq code and prose";
     mainProgram = "alectryon";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Pytest utilities for tests";
     homepage = "https://github.com/iterative/pytest-test-utils";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

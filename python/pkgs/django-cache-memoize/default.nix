@@ -47,6 +47,5 @@ buildPythonPackage rec {
     description = "Django utility for a memoization decorator that uses the Django cache framework";
     homepage = "https://github.com/peterbe/django-cache-memoize";
     license = lib.licenses.mpl20;
-    maintainers = [ ];
   };
 }

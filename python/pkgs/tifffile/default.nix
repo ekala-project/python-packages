@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Read and write image data from and to TIFF files";
     homepage = "https://github.com/cgohlke/tifffile/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

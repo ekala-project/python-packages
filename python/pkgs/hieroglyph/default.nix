@@ -62,6 +62,5 @@ buildPythonPackage rec {
     description = "Generate HTML presentations from plain text sources";
     homepage = "https://github.com/nyergler/hieroglyph/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

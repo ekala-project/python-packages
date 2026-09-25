@@ -39,6 +39,5 @@ buildPythonPackage (finalAttrs: {
     description = "Alibaba Cloud ActionTrail (20200706) SDK Library for Python";
     homepage = "https://pypi.org/project/alibabacloud-actiontrail20200706/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

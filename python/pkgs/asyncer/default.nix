@@ -33,6 +33,5 @@ buildPythonPackage rec {
     description = "Asyncer, async and await, focused on developer experience";
     homepage = "https://github.com/fastapi/asyncer";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

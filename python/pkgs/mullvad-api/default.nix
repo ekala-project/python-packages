@@ -26,6 +26,5 @@ buildPythonPackage rec {
     description = "Python client for the Mullvad API";
     homepage = "https://github.com/meichthys/mullvad-api";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

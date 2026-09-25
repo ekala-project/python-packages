@@ -42,6 +42,5 @@ buildPythonPackage (finalAttrs: {
     description = "Module for reading/writing dBase, FoxPro, and Visual FoxPro .dbf files";
     homepage = "https://github.com/ethanfurman/dbf";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 })

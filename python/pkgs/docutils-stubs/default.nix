@@ -37,6 +37,5 @@ buildPythonPackage (finalAttrs: {
     description = "PEP 561 based Type information for docutils";
     homepage = "https://github.com/tk0miya/docutils-stubs";
     license = lib.licenses.unlicense;
-    maintainers = [ ];
   };
 })

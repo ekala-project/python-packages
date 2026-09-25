@@ -42,6 +42,5 @@ buildPythonPackage rec {
     description = "Python toolbox library";
     homepage = "https://github.com/pyveci/pueblo";
     license = lib.licenses.lgpl3Only;
-    maintainers = [ ];
   };
 }

@@ -44,6 +44,5 @@ buildPythonPackage rec {
     '';
     homepage = "https://github.com/pypa/build";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

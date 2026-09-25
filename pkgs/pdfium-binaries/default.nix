@@ -45,7 +45,6 @@ stdenv.mkDerivation (finalAttrs: {
       mit
     ];
     sourceProvenance = with lib.sourceTypes; [ binaryBytecode ];
-    maintainers = [ ];
     platforms = [
       "aarch64-linux"
       "aarch64-darwin"

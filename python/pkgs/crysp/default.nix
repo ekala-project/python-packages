@@ -37,6 +37,5 @@ buildPythonPackage rec {
     description = "Module that provides crypto-related facilities";
     homepage = "https://github.com/bdcht/crysp";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
   };
 }

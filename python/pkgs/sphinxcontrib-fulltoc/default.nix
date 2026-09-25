@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "Include a full table of contents in your Sphinx HTML sidebar";
     homepage = "https://sphinxcontrib-fulltoc.readthedocs.org/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

@@ -23,6 +23,5 @@ buildPythonPackage rec {
     description = "Module that implements ChaCha20Poly1305";
     homepage = "https://github.com/ph4r05/py-chacha20poly1305";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

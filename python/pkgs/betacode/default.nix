@@ -27,6 +27,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://github.com/matgrioni/betacode";
     description = "Small python package to flexibly convert from betacode to unicode and back";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

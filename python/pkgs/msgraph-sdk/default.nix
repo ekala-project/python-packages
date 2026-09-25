@@ -49,6 +49,5 @@ buildPythonPackage (finalAttrs: {
     description = "Microsoft Graph SDK for Python";
     homepage = "https://github.com/microsoftgraph/msgraph-sdk-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

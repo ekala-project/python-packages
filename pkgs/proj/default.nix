@@ -81,7 +81,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Cartographic Projections Library";
     homepage = "https://proj.org/";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

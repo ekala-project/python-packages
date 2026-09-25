@@ -44,6 +44,5 @@ buildPythonPackage rec {
     description = "Python's missing debug print command and other development tools";
     homepage = "https://python-devtools.helpmanual.io/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

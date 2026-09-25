@@ -26,7 +26,6 @@ buildPythonPackage rec {
   meta = {
     homepage = "https://github.com/robgolding/tasklib";
     description = "Library for interacting with taskwarrior databases";
-    maintainers = [ ];
     platforms = lib.platforms.all;
     license = lib.licenses.bsd3;
   };

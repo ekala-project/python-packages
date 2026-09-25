@@ -31,6 +31,5 @@ buildPythonPackage (finalAttrs: {
     description = "Module to use git";
     homepage = "https://github.com/AnswerDotAI/fastgit";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

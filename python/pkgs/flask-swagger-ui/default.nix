@@ -27,6 +27,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/sveint/flask-swagger-ui";
     license = lib.licenses.mit;
     description = "Swagger UI blueprint for Flask";
-    maintainers = [ ];
   };
 }

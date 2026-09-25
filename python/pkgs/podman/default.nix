@@ -37,6 +37,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python bindings for Podman's RESTful API";
     homepage = "https://github.com/containers/podman-py";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

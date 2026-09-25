@@ -37,6 +37,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python API for interacting with Glances";
     homepage = "https://github.com/home-assistant-ecosystem/python-glances-api";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

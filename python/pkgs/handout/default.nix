@@ -25,6 +25,5 @@ buildPythonPackage rec {
     description = "Turn Python scripts into handouts with Markdown and figures";
     homepage = "https://github.com/danijar/handout";
     license = lib.licenses.gpl3;
-    maintainers = [ ];
   };
 }

@@ -51,6 +51,5 @@ buildPythonPackage rec {
     description = "Email processing engine for archiving and extracting financial data with LLM";
     homepage = "https://github.com/LaunchPlatform/beanhub-inbox";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

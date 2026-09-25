@@ -23,7 +23,6 @@ buildPythonPackage rec {
 
   meta = {
     homepage = "https://docs.litestar.dev/latest/usage/htmx.html";
-    maintainers = [ ];
     license = lib.licenses.asl20;
     platforms = lib.platforms.unix;
     description = "HTMX Integration for Litesstar";

@@ -46,6 +46,5 @@ buildPythonPackage rec {
     description = "E2B Code Interpreter - Stateful code execution";
     homepage = "https://github.com/e2b-dev/code-interpreter/tree/main/python";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

@@ -58,6 +58,5 @@ buildPythonPackage (finalAttrs: {
     mainProgram = "grip";
     homepage = "https://github.com/joeyespo/grip";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

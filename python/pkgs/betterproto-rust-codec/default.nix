@@ -44,6 +44,5 @@ buildPythonPackage rec {
     description = "Converter between betterproto messages and the Protobuf wire format";
     homepage = "https://github.com/124C41p/betterproto-rust-codec/releases/tag/${src.tag}";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

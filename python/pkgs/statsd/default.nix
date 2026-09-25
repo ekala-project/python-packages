@@ -20,7 +20,6 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools ];
   meta = {
-    maintainers = [ ];
     description = "Simple statsd client";
     license = lib.licenses.mit;
     homepage = "https://github.com/jsocol/pystatsd";

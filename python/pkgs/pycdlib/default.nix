@@ -25,7 +25,6 @@ buildPythonPackage rec {
     description = "Pure python library to read and write ISO9660 files";
     homepage = "https://github.com/clalancette/pycdlib";
     license = lib.licenses.lgpl2Only;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 }

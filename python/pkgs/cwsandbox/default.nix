@@ -61,6 +61,5 @@ buildPythonPackage (finalAttrs: {
       asl20
       bsd3
     ];
-    maintainers = [ ];
   };
 })

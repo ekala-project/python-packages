@@ -63,6 +63,5 @@ buildPythonPackage rec {
       mit
       bsd2
     ];
-    maintainers = [ ];
   };
 }

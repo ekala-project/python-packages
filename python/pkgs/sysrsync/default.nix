@@ -40,6 +40,5 @@ buildPythonPackage rec {
     description = "Simple and safe system's rsync wrapper for Python";
     homepage = "https://github.com/gchamon/sysrsync";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

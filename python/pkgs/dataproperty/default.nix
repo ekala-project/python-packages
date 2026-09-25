@@ -40,6 +40,5 @@ buildPythonPackage rec {
     description = "Library for extracting properties from data";
     homepage = "https://github.com/thombashi/DataProperty";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

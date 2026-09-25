@@ -49,6 +49,5 @@ buildPythonPackage rec {
     mainProgram = "cryptfile-convert";
     homepage = "https://github.com/frispete/keyrings.cryptfile";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

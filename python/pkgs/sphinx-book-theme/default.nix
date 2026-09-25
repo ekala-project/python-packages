@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Clean book theme for scientific explanations and documentation with Sphinx";
     homepage = "https://github.com/executablebooks/sphinx-book-theme";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

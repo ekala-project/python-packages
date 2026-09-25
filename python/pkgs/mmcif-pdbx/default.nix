@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Yet another version of PDBx/mmCIF Python implementation";
     homepage = "https://github.com/Electrostatics/mmcif_pdbx";
     license = lib.licenses.cc0;
-    maintainers = [ ];
   };
 }

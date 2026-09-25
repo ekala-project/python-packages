@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Easy PEM file parsing in Python";
     homepage = "https://pem.readthedocs.io/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

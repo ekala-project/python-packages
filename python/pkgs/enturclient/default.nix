@@ -39,6 +39,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python library for interacting with the Entur.org API";
     homepage = "https://github.com/hfurubotten/enturclient";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Click command line utilities";
     homepage = "https://codeberg.org/hjacobs/python-clickclick/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

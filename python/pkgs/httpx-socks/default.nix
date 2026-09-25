@@ -70,6 +70,5 @@ buildPythonPackage rec {
     description = "Proxy (HTTP, SOCKS) transports for httpx";
     homepage = "https://github.com/romis2012/httpx-socks";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

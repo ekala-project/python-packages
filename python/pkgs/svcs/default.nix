@@ -55,6 +55,5 @@ buildPythonPackage rec {
     description = "Flexible Service Locator for Python";
     homepage = "https://github.com/hynek/svcs";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

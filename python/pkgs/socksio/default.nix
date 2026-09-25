@@ -35,6 +35,5 @@ buildPythonPackage {
     description = "Sans-I/O implementation of SOCKS4, SOCKS4A, and SOCKS5";
     homepage = "https://github.com/sethmlarson/socksio";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

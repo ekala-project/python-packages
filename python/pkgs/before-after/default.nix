@@ -41,7 +41,6 @@ buildPythonPackage (finalAttrs: {
   meta = {
     description = "Sugar over the Mock library to help test race conditions";
     homepage = "https://github.com/c-oreills/before_after";
-    maintainers = [ ];
     license = lib.licenses.gpl2Only;
   };
 })

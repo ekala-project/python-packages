@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "Pytest plugin for working with MPI";
     homepage = "https://github.com/aragilar/pytest-mpi";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

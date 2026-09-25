@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "Library to retrieve and parse whois data";
     homepage = "https://github.com/secynic/ipwhois";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

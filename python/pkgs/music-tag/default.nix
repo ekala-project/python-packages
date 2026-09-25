@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Simple interface to edit audio file metadata";
     homepage = "https://github.com/KristoforMaynard/music-tag";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

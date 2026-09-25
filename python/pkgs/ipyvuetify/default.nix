@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "Jupyter widgets based on Vuetify UI Components";
     homepage = "https://github.com/mariobuikhuizen/ipyvuetify";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

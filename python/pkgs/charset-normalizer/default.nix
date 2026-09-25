@@ -30,6 +30,5 @@ buildPythonPackage rec {
     mainProgram = "normalizer";
     homepage = "https://charset-normalizer.readthedocs.io/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

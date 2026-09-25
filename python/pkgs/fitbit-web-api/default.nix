@@ -47,6 +47,5 @@ buildPythonPackage rec {
     description = "Access data from Fitbit activity trackers, Aria scale, and manually entered logs";
     homepage = "https://github.com/allenporter/fitbit-web-api";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

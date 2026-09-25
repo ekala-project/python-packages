@@ -37,6 +37,5 @@ buildPythonPackage (finalAttrs: {
     mainProgram = "bean-black";
     homepage = "https://github.com/LaunchPlatform/beancount-black/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

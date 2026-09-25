@@ -45,6 +45,5 @@ buildPythonPackage rec {
     description = "Python test runner";
     homepage = "https://github.com/CleanCut/green";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

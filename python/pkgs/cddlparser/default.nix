@@ -32,6 +32,5 @@ buildPythonPackage rec {
       Concise data definition language (RFC 8610) parser implementation in Python.
     '';
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -30,6 +30,5 @@ buildPythonPackage rec {
     description = "μ-library for constructing cascading style sheets from Python dictionaries";
     homepage = "https://github.com/sphinx-toolbox/dict2css";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

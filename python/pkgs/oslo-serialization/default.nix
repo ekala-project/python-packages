@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Oslo Serialization library";
     homepage = "https://github.com/openstack/oslo.serialization";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

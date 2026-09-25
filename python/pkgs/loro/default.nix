@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Data collaborative and version-controlled JSON with CRDTs";
     homepage = "https://github.com/loro-dev/loro-py";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

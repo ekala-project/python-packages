@@ -38,6 +38,5 @@ buildPythonPackage rec {
     description = "Minimalistic implementation of the BIP32 key derivation scheme";
     homepage = "https://github.com/darosior/python-bip32";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

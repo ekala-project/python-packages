@@ -50,7 +50,6 @@ buildPythonPackage rec {
     description = "Python package to get the MAC address of network interfaces and hosts on the local network";
     homepage = "https://github.com/GhostofGoes/getmac";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "getmac";
   };
 }

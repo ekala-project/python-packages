@@ -54,6 +54,5 @@ buildPythonPackage rec {
     description = "Bootstrap 4 integration with Django";
     homepage = "https://github.com/zostera/django-bootstrap4";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

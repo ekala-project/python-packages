@@ -40,6 +40,5 @@ buildPythonPackage (finalAttrs: {
     description = "Alibaba Cloud Resource Access Management (20150501) SDK Library for Python";
     homepage = "https://pypi.org/project/alibabacloud-ram20150501/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

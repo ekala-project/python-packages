@@ -43,6 +43,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python client for NATS.io";
     homepage = "https://github.com/nats-io/nats.py";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

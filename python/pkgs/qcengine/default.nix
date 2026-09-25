@@ -45,7 +45,6 @@ buildPythonPackage rec {
     description = "Quantum chemistry program executor and IO standardizer (QCSchema) for quantum chemistry";
     homepage = "https://molssi.github.io/QCElemental/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     mainProgram = "qcengine";
   };
 }

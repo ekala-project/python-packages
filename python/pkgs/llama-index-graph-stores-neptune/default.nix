@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "LlamaIndex Graph Store Integration for Neptune";
     homepage = "https://github.com/run-llama/llama_index/tree/main/llama-index-integrations/graph_stores/llama-index-graph-stores-neptune";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

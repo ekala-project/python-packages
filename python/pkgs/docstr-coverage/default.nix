@@ -47,6 +47,5 @@ buildPythonPackage {
     mainProgram = "docstr-coverage";
     homepage = "https://github.com/HunterMcGushion/docstr_coverage";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

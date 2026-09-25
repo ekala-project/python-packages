@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "Python API client for Jellyfin";
     homepage = "https://github.com/jellyfin/jellyfin-apiclient-python";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 }

@@ -24,6 +24,5 @@ buildPythonPackage (finalAttrs: {
     description = "Library to adapt iterables to a file-like interface";
     homepage = "https://github.com/pR0Ps/iterable-io";
     license = lib.licenses.lgpl3Only;
-    maintainers = [ ];
   };
 })

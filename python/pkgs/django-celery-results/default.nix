@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "Celery result back end with django";
     homepage = "https://github.com/celery/django-celery-results";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

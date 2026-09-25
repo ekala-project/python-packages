@@ -29,6 +29,5 @@ buildPythonPackage rec {
     description = "Send data from LaTeX to Python using Python literal format";
     license = lib.licenses.bsd3;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

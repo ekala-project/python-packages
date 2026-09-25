@@ -95,7 +95,6 @@ buildPythonPackage (finalAttrs: {
     description = "Comprehensive collection of tree-sitter language parsers with polyglot bindings";
     homepage = "https://github.com/kreuzberg-dev/tree-sitter-language-pack";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = builtins.attrNames parserBundleSpecs;
   };
 })

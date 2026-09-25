@@ -40,7 +40,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Vector search SQLite extension that runs anywhere";
     homepage = "https://github.com/asg017/sqlite-vec";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

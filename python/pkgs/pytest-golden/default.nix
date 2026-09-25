@@ -41,6 +41,5 @@ buildPythonPackage rec {
     description = "Plugin for pytest that offloads expected outputs to data files";
     homepage = "https://github.com/oprypin/pytest-golden";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

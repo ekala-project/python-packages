@@ -68,6 +68,5 @@ buildPythonPackage rec {
     description = "Module to publishes data, models and other Python objects";
     homepage = "https://github.com/rstudio/pins-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

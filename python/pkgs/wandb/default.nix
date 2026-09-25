@@ -212,7 +212,6 @@ buildPythonPackage (finalAttrs: {
     description = "CLI and library for interacting with the Weights and Biases API";
     homepage = "https://github.com/wandb/wandb";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "wandb";
     broken = wandb-xpu.meta.broken || wandb-core.meta.broken;
   };

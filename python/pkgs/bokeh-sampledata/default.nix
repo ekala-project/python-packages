@@ -46,6 +46,5 @@ buildPythonPackage rec {
     description = "Sample datasets for Bokeh examples";
     homepage = "https://pypi.org/project/bokeh-sampledata";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

@@ -54,6 +54,5 @@ buildPythonPackage rec {
     description = "Expose your FastAPI endpoints as Model Context Protocol (MCP) tools, with Auth";
     homepage = "https://github.com/tadata-org/fastapi_mcp";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

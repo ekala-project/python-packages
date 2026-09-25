@@ -21,6 +21,5 @@ buildPythonPackage {
     description = "Smart conversions between unicode and bytes types";
     homepage = "https://github.com/mkalinski/morphys";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

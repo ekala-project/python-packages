@@ -63,6 +63,5 @@ buildPythonPackage (finalAttrs: {
     mainProgram = "bcg";
     platforms = lib.platforms.linux;
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

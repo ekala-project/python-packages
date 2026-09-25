@@ -53,6 +53,5 @@ buildPythonPackage rec {
     description = "Extension for the python package 'construct' that adds typing features";
     homepage = "https://github.com/timrid/construct-typing";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

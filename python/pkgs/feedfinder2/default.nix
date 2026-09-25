@@ -37,6 +37,5 @@ buildPythonPackage rec {
     description = "Python library for finding feed links on websites";
     homepage = "https://github.com/dfm/feedfinder2";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

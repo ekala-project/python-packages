@@ -53,6 +53,5 @@ buildPythonPackage (finalAttrs: {
     description = "Next generation Python CMake adaptor and Python API for plugins";
     homepage = "https://github.com/scikit-build/scikit-build-core";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

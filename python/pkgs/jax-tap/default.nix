@@ -56,6 +56,5 @@ buildPythonPackage (finalAttrs: {
     description = "Make print-debugging great again";
     homepage = "https://github.com/arcueil/jax-tap";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

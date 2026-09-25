@@ -35,6 +35,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://sass.github.io/libsass-python/";
     downloadPage = "https://github.com/sass/libsass-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

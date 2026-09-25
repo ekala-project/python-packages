@@ -38,6 +38,5 @@ buildPythonPackage rec {
     description = "Linter that tracks reference to deprecated functions";
     homepage = "https://github.com/QuantStack/memestra";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

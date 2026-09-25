@@ -115,6 +115,5 @@ buildPythonPackage {
     homepage = "https://github.com/google/jax";
     sourceProvenance = with lib.sourceTypes; [ binaryNativeCode ];
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

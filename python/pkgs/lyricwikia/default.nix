@@ -49,6 +49,5 @@ buildPythonPackage rec {
     mainProgram = "lyrics";
     homepage = "https://github.com/enricobacis/lyricwikia";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

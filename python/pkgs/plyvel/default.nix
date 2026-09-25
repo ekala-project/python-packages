@@ -24,6 +24,5 @@ buildPythonPackage rec {
     platforms = lib.platforms.unix;
     homepage = "https://github.com/wbolster/plyvel";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

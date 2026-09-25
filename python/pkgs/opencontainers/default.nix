@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Python module for oci specifications";
     homepage = "https://github.com/vsoch/oci-python";
     license = lib.licenses.mpl20;
-    maintainers = [ ];
   };
 }

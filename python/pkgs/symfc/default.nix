@@ -39,6 +39,5 @@ buildPythonPackage (finalAttrs: {
     description = "Generate symmetrized force constants";
     homepage = "https://github.com/symfc/symfc";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

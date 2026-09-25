@@ -48,6 +48,5 @@ buildPythonPackage rec {
     description = "Embedding files of Diagrams.net (Draw.io) into MkDocs";
     homepage = "https://github.com/onixpro/mkdocs-drawio-file/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

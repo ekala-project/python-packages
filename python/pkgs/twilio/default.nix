@@ -42,6 +42,5 @@ buildPythonPackage (finalAttrs: {
     description = "Twilio API client and TwiML generator";
     homepage = "https://github.com/twilio/twilio-python/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

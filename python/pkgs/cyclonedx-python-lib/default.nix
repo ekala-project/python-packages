@@ -60,6 +60,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python library for generating CycloneDX SBOMs";
     homepage = "https://github.com/CycloneDX/cyclonedx-python-lib";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

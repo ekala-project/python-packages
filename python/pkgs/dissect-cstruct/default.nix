@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Dissect module implementing a parser for C-like structures";
     homepage = "https://github.com/fox-it/dissect.cstruct";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

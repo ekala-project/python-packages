@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Django app for handling server Cross-Origin Resource Sharing (CORS) headers";
     homepage = "https://github.com/OttoYiu/django-cors-headers";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

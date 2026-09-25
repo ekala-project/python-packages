@@ -36,6 +36,5 @@ buildPythonPackage (finalAttrs: {
     description = "Alibaba Cloud Virtual Private Cloud (20160428) SDK Library for Python";
     homepage = "https://pypi.org/project/alibabacloud-vpc20160428/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

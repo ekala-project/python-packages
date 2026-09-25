@@ -40,6 +40,5 @@ buildPythonPackage (finalAttrs: {
     description = "High-performance image processing library to optimize and extend Albumentations with specialized functions for image transformations";
     homepage = "https://github.com/albumentations-team/albucore";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

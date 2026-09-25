@@ -48,6 +48,5 @@ buildPythonPackage rec {
       programs, conforming to the OpenPGP specification per RFC 4880.
     '';
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

@@ -61,6 +61,5 @@ buildPythonPackage rec {
     description = "Library to extract google home devices local authentication tokens from google servers";
     homepage = "https://github.com/leikoilja/glocaltokens";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

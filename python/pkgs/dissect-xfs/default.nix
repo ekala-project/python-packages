@@ -42,6 +42,5 @@ buildPythonPackage rec {
     description = "Dissect module implementing a parser for the XFS file system";
     homepage = "https://github.com/fox-it/dissect.xfs";
     license = lib.licenses.agpl3Only;
-    maintainers = [ ];
   };
 }

@@ -69,6 +69,5 @@ buildPythonPackage (finalAttrs: {
       asl20
       gpl2Plus
     ];
-    maintainers = [ ];
   };
 })

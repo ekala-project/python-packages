@@ -55,6 +55,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/cs50/lib50";
     license = lib.licenses.gpl3Only;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

@@ -57,6 +57,5 @@ buildPythonPackage (finalAttrs: {
     description = "BSD-licensed HEALPix for Astropy";
     homepage = "https://github.com/astropy/astropy-healpix";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

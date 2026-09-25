@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Encipher HTTP Messages";
     homepage = "https://github.com/web-push-libs/encrypted-content-encoding";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

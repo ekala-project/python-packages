@@ -37,6 +37,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python implementation of the AWS Encryption SDK";
     homepage = "https://aws-encryption-sdk-python.readthedocs.io/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

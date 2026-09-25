@@ -33,6 +33,5 @@ buildPythonPackage (finalAttrs: {
     description = "Tools for virtual machine firmware volumes";
     homepage = "https://gitlab.com/kraxel/virt-firmware";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
   };
 })

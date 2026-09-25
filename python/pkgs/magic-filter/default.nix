@@ -29,6 +29,5 @@ buildPythonPackage rec {
     description = "Magic filter based on dynamic attribute getter";
     homepage = "https://github.com/aiogram/magic-filter";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

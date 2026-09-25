@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Python module that identifies Chinese text as being Simplified or Traditional";
     homepage = "https://github.com/tsroten/hanzidentifier";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

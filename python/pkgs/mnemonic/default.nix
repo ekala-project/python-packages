@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Reference implementation of BIP-0039";
     homepage = "https://github.com/trezor/python-mnemonic";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

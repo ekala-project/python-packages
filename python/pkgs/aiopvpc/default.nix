@@ -45,6 +45,5 @@ buildPythonPackage rec {
     description = "Python module to download Spanish electricity hourly prices (PVPC)";
     homepage = "https://github.com/azogue/aiopvpc";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

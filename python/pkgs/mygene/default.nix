@@ -37,6 +37,5 @@ buildPythonPackage rec {
     description = "REST web services to query/retrieve gene annotation data";
     homepage = "https://github.com/biothings/mygene.py";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

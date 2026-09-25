@@ -21,6 +21,5 @@ buildPythonPackage rec {
     description = "Universal Binary JSON draft-12 serializer for Python";
     homepage = "https://github.com/Iotic-Labs/py-ubjson";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

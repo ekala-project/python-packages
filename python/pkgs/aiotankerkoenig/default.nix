@@ -54,6 +54,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python module for interacting with tankerkoenig.de";
     homepage = "https://github.com/jpbede/aiotankerkoenig";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

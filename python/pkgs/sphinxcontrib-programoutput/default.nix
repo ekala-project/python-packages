@@ -30,6 +30,5 @@ buildPythonPackage rec {
     description = "Sphinx extension to include program output";
     homepage = "https://github.com/NextThought/sphinxcontrib-programoutput";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

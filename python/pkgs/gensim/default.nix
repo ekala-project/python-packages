@@ -52,6 +52,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://radimrehurek.com/gensim/";
     downloadPage = "https://github.com/piskvorky/gensim";
     license = lib.licenses.lgpl21Only;
-    maintainers = [ ];
   };
 })

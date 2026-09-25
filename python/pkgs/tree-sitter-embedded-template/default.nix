@@ -44,6 +44,5 @@ buildPythonPackage rec {
     description = "Tree-sitter grammar for embedded template languages like ERB, EJS";
     homepage = "https://github.com/tree-sitter/tree-sitter-embedded-template";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

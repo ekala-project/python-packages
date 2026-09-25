@@ -43,6 +43,5 @@ buildPythonPackage rec {
     description = "Interoperate R with Python";
     homepage = "https://github.com/randy3k/rchitect";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

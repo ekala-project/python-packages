@@ -38,7 +38,6 @@ buildPythonPackage rec {
     description = "Reading, writing and manipulationg text-based subtitle files";
     homepage = "https://github.com/otsaloma/gaupol";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
   };
 
 }

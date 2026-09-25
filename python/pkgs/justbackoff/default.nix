@@ -30,6 +30,5 @@ buildPythonPackage rec {
     description = "Simple backoff algorithm in Python";
     homepage = "https://github.com/alexferl/justbackoff";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

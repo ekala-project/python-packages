@@ -32,6 +32,5 @@ buildPythonPackage (finalAttrs: {
     description = "User-space driver for modern FTDI devices";
     homepage = "https://github.com/eblot/pyftdi";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

@@ -30,6 +30,5 @@ buildPythonPackage (finalAttrs: {
     description = "Unpack and repack android backups";
     homepage = "https://github.com/bluec0re/android-backup-tools";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

@@ -55,6 +55,5 @@ buildPythonPackage rec {
     homepage = "https://dipy.org/";
     description = "Diffusion imaging toolkit for Python";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

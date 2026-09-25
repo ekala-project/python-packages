@@ -64,6 +64,5 @@ buildPythonPackage rec {
     description = "Pytest plugin to create CodSpeed benchmarks";
     homepage = "https://github.com/CodSpeedHQ/pytest-codspeed";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

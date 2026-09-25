@@ -25,6 +25,5 @@ buildPythonPackage {
     description = "GDB script to enhance debugging of a QEMU-based virtual machine";
     homepage = "https://github.com/martinradev/gdb-pt-dump";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

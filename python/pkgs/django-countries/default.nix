@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "Provides a country field for Django models";
     homepage = "https://github.com/SmileyChris/django-countries";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

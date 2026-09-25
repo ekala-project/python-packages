@@ -40,6 +40,5 @@ buildPythonPackage rec {
     description = "Kerberos manipulation library in Python";
     homepage = "https://github.com/skelsec/minikerberos";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

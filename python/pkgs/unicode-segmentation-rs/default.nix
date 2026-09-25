@@ -43,6 +43,5 @@ buildPythonPackage rec {
     description = "Python bindings for the Rust unicode-segmentation and unicode-width crates";
     homepage = "https://github.com/WeblateOrg/unicode-segmentation-rs/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

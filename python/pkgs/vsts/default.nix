@@ -33,6 +33,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python APIs for interacting with and managing Azure DevOps";
     homepage = "https://github.com/microsoft/azure-devops-python-api";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

@@ -84,6 +84,5 @@ buildPythonPackage rec {
     description = "Serves as a complement to the Python standard library by providing a suite of tools to solve many common problems";
     homepage = "https://github.com/materialsvirtuallab/monty";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

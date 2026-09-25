@@ -37,6 +37,5 @@ buildPythonPackage rec {
     mainProgram = "mercantile";
     homepage = "https://github.com/mapbox/mercantile";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

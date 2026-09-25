@@ -29,6 +29,5 @@ buildPythonPackage rec {
     description = "Miniflux Python API Client";
     homepage = "https://github.com/miniflux/python-client";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

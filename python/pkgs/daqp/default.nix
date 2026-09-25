@@ -51,6 +51,5 @@ buildPythonPackage (finalAttrs: {
     description = "Dual active-set algorithm for convex quadratic programming";
     homepage = "https://github.com/darnstrom/daqp";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

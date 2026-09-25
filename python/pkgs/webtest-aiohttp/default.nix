@@ -46,6 +46,5 @@ buildPythonPackage rec {
     description = "Provides integration of WebTest with aiohttp.web applications";
     homepage = "https://github.com/sloria/webtest-aiohttp";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

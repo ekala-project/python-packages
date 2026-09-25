@@ -59,6 +59,5 @@ buildPythonPackage rec {
     description = "Least-Squares Minimization with Bounds and Constraints";
     homepage = "https://lmfit.github.io/lmfit-py/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

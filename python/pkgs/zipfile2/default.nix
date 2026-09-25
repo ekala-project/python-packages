@@ -26,6 +26,5 @@ buildPythonPackage {
     description = "Backwards-compatible improved zipfile class";
     homepage = "https://github.com/cournape/zipfile2";
     license = lib.licenses.psfl;
-    maintainers = [ ];
   };
 }

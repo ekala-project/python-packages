@@ -49,6 +49,5 @@ buildPythonPackage rec {
     description = "Schemas for Safety CLI";
     homepage = "https://pypi.org/project/safety-schemas/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -38,7 +38,6 @@ buildPythonPackage (finalAttrs: {
     description = "Tool to automatically convert old string literal formatting to f-strings";
     homepage = "https://github.com/ikamensh/flynt";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "flynt";
   };
 })

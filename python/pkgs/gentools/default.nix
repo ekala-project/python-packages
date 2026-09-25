@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Tools for generators, generator functions, and generator-based coroutines";
     homepage = "https://gentools.readthedocs.io/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

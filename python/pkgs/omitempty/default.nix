@@ -28,6 +28,5 @@ buildPythonPackage (finalAttrs: {
     description = "Go's omitempty for Python";
     homepage = "https://github.com/bfontaine/omitempty";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

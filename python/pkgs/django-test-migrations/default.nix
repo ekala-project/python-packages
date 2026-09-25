@@ -43,6 +43,5 @@ buildPythonPackage (finalAttrs: {
     description = "Test django schema and data migrations, including migrations' order and best practices";
     homepage = "https://github.com/wemake-services/django-test-migrations";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

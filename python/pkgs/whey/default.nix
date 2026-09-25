@@ -71,6 +71,5 @@ buildPythonPackage rec {
     description = "Simple Python wheel builder for simple projects";
     homepage = "https://github.com/repo-helper/whey";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Python library to view and edit a binary stream";
     homepage = "https://hachoir.readthedocs.io/";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
   };
 }

@@ -41,6 +41,5 @@ buildPythonPackage (finalAttrs: {
     mainProgram = "websockify";
     homepage = "https://github.com/novnc/websockify";
     license = lib.licenses.lgpl3Only;
-    maintainers = [ ];
   };
 })

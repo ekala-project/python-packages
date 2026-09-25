@@ -37,6 +37,5 @@ buildPythonPackage rec {
       bsdOriginal
       mit
     ];
-    maintainers = [ ];
   };
 }

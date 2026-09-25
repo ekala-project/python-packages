@@ -28,6 +28,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python Library for writing distributed self-replicating programs";
     homepage = "https://github.com/mitogen-hq/mitogen";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

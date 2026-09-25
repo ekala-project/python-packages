@@ -29,6 +29,5 @@ buildPythonPackage (finalAttrs: {
     mainProgram = "titlecase";
     homepage = "https://github.com/ppannuto/python-titlecase";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

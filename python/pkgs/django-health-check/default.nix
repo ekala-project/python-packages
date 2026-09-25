@@ -64,6 +64,5 @@ buildPythonPackage (finalAttrs: {
     description = "Pluggable app that runs a full check on the deployment";
     homepage = "https://github.com/codingjoe/django-health-check";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

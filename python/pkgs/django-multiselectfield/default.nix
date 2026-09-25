@@ -30,6 +30,5 @@ buildPythonPackage rec {
     description = "Multiple Choice model field for Django";
     homepage = "https://github.com/goinnn/django-multiselectfield";
     license = lib.licenses.lgpl3Plus;
-    maintainers = [ ];
   };
 }

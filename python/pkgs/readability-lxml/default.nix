@@ -40,6 +40,5 @@ buildPythonPackage rec {
     description = "Fast python port of arc90's readability tool";
     homepage = "https://github.com/buriy/python-readability";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

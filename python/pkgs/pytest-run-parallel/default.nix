@@ -40,6 +40,5 @@ buildPythonPackage (finalAttrs: {
     description = "Simple pytest plugin to run tests concurrently";
     homepage = "https://github.com/Quansight-Labs/pytest-run-parallel";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

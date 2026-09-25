@@ -41,6 +41,5 @@ buildPythonPackage rec {
     description = "AsyicIO client for US models of Honeywell Thermostats";
     homepage = "https://github.com/mkmer/AIOSomecomfort";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 }

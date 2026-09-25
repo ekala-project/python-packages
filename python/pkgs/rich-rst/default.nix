@@ -32,6 +32,5 @@ buildPythonPackage (finalAttrs: {
     description = "Beautiful reStructuredText renderer for rich";
     homepage = "https://github.com/wasi-master/rich-rst";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

@@ -45,6 +45,5 @@ buildPythonPackage (finalAttrs: {
     description = "Autocompletion tool for Python that can be used for text editors";
     homepage = "https://github.com/davidhalter/jedi";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

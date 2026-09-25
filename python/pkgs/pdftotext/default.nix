@@ -21,6 +21,5 @@ buildPythonPackage rec {
     description = "Simple PDF text extraction";
     homepage = "https://github.com/jalan/pdftotext";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

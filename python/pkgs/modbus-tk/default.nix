@@ -30,6 +30,5 @@ buildPythonPackage rec {
     description = "Module for simple Modbus interactions";
     homepage = "https://github.com/ljean/modbus-tk";
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
   };
 }

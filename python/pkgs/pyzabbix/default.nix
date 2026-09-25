@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Module to interact with the Zabbix API";
     homepage = "https://github.com/lukecyca/pyzabbix";
     license = lib.licenses.lgpl21Only;
-    maintainers = [ ];
   };
 }

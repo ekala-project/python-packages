@@ -25,7 +25,6 @@ buildPythonPackage rec {
   meta = {
     description = "Sphinx extension to include jinja templates in documentation";
     homepage = "https://github.com/tardyp/sphinx-jinja";
-    maintainers = [ ];
     license = lib.licenses.mit;
   };
 }

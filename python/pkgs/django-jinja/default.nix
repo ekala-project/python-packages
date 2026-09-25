@@ -61,6 +61,5 @@ buildPythonPackage rec {
     description = "Simple and nonobstructive jinja2 integration with Django";
     homepage = "https://github.com/niwinz/django-jinja";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

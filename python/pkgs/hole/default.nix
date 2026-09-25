@@ -35,6 +35,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python API for interacting with a Pihole instance";
     homepage = "https://github.com/home-assistant-ecosystem/python-hole";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

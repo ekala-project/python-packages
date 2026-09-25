@@ -29,6 +29,5 @@ buildPythonPackage rec {
     description = "Python implementation of Google's Encoded Polyline Algorithm Format";
     homepage = "https://github.com/frederickjansen/polyline";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

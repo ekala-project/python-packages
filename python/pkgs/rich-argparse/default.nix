@@ -27,6 +27,5 @@ buildPythonPackage rec {
     description = "Format argparse help output using rich";
     homepage = "https://github.com/hamdanal/rich-argparse";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

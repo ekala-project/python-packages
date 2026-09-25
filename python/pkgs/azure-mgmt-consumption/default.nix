@@ -42,6 +42,5 @@ buildPythonPackage rec {
     description = "This is the Microsoft Azure Consumption Management Client Library";
     homepage = "https://github.com/Azure/azure-sdk-for-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

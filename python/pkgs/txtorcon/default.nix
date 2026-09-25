@@ -36,7 +36,6 @@ buildPythonPackage rec {
   meta = {
     description = "Twisted-based Tor controller client, with state-tracking and configuration abstractions";
     homepage = "https://github.com/meejah/txtorcon";
-    maintainers = [ ];
     license = lib.licenses.mit;
   };
 }

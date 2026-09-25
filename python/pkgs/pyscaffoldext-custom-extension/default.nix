@@ -59,6 +59,5 @@ buildPythonPackage rec {
     description = "PyScaffold extension to create a custom PyScaffold extension";
     homepage = "https://pypi.org/project/pyscaffoldext-custom-extension/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -30,6 +30,5 @@ buildPythonPackage rec {
     description = "Peak detection utilities for 1D data";
     homepage = "https://pypi.org/project/PeakUtils/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

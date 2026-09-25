@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Efficient implementation of tree data structure in python 2/3";
     homepage = "https://github.com/caesar0301/treelib";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

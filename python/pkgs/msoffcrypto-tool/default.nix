@@ -33,7 +33,6 @@ buildPythonPackage (finalAttrs: {
     description = "Python tool and library for decrypting MS Office files with passwords or other keys";
     homepage = "https://github.com/nolze/msoffcrypto-tool";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "msoffcrypto-tool";
   };
 })

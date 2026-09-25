@@ -24,6 +24,5 @@ buildPythonPackage rec {
     description = "Base library for enochecker libs";
     homepage = "https://github.com/enowars/enochecker_core";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

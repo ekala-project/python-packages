@@ -42,6 +42,5 @@ buildPythonPackage rec {
     description = "Toolkit for working with spatial databases";
     homepage = "https://geoalchemy-2.readthedocs.io/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

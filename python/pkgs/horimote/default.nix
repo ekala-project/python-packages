@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Async API wrapper for Samsung's set-top boxes SMT-G7400 and SMT-G7401";
     homepage = "https://github.com/benleb/horimote";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

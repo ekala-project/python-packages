@@ -45,7 +45,6 @@ buildPythonPackage (finalAttrs: {
     description = "Command line utility to show dependency tree of packages";
     homepage = "https://github.com/tox-dev/pipdeptree";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "pipdeptree";
   };
 })

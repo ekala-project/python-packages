@@ -32,6 +32,5 @@ buildPythonPackage (finalAttrs: {
     description = "Safely separate multiple tenants in a Django database";
     homepage = "https://github.com/raphaelm/django-scopes";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Helpful pytest fixtures for Sphinx extensions";
     homepage = "https://github.com/chrisjsewell/sphinx-pytest";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

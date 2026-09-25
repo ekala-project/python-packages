@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Replaces django's ImageField with a more flexible interface";
     homepage = "https://github.com/respondcreate/django-versatileimagefield/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -27,6 +27,5 @@ buildPythonPackage rec {
     description = "HTTP proxying tools for WSGI apps";
     homepage = "https://wsgiproxy2.readthedocs.io/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

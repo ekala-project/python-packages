@@ -35,6 +35,5 @@ buildPythonPackage (finalAttrs: {
     description = "Quickly match many regexes against a string";
     homepage = "https://github.com/quantco/multiregex";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

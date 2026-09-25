@@ -43,6 +43,5 @@ buildPythonPackage rec {
     description = "AMQP 0.9.1 asynchronous client library";
     homepage = "https://github.com/mosquito/aiormq";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Django tenants using PostgreSQL Schemas";
     homepage = "https://github.com/django-tenants/django-tenants";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

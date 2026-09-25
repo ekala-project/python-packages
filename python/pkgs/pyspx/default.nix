@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "Python bindings for SPHINCS";
     homepage = "https://github.com/sphincs/pyspx";
     license = lib.licenses.cc0;
-    maintainers = [ ];
   };
 }

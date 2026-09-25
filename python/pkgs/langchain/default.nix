@@ -70,6 +70,5 @@ buildPythonPackage (finalAttrs: {
     description = "Building applications with LLMs through composability";
     homepage = "https://github.com/langchain-ai/langchain";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

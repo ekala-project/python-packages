@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "Epic Games Store Web API Wrapper written in Python";
     homepage = "https://github.com/SD4RK/epicstore_api";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -29,6 +29,5 @@ buildPythonPackage (finalAttrs: {
     mainProgram = "pyupgrade";
     homepage = "https://github.com/asottile/pyupgrade";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

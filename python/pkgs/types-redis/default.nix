@@ -33,6 +33,5 @@ buildPythonPackage rec {
     description = "Typing stubs for redis";
     homepage = "https://github.com/python/typeshed";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

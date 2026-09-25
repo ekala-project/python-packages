@@ -82,6 +82,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python library to access Kaggle resources";
     homepage = "https://github.com/Kaggle/kagglehub";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

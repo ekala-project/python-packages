@@ -47,6 +47,5 @@ buildPythonPackage (finalAttrs: {
     description = "Mouser Python API";
     homepage = "https://github.com/sparkmicro/mouser-api";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

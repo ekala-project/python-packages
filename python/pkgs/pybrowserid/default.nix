@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "Python library for the BrowserID Protocol";
     homepage = "https://github.com/mozilla/PyBrowserID";
     license = lib.licenses.mpl20;
-    maintainers = [ ];
   };
 }

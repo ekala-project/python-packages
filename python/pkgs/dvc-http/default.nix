@@ -44,6 +44,5 @@ buildPythonPackage (finalAttrs: {
     description = "HTTP plugin for dvc";
     homepage = "https://github.com/iterative/dvc-http";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

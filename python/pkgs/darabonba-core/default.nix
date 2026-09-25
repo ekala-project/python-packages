@@ -40,6 +40,5 @@ buildPythonPackage (finalAttrs: {
     description = "The darabonba module of alibabaCloud Python SDK";
     homepage = "https://github.com/aliyun/tea-python";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

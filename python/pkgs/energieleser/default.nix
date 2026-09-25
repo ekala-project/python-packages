@@ -37,6 +37,5 @@ buildPythonPackage (finalAttrs: {
     description = "Async Python client for energieleser devices (stromleser, gasleser, wasserleser, wärmeleser)";
     homepage = "https://github.com/nineti-GmbH/energieleser.py";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

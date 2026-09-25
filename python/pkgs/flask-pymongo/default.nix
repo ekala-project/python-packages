@@ -37,6 +37,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/dcrosta/flask-pymongo";
     description = "PyMongo support for Flask applications";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

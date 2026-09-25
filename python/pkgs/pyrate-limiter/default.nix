@@ -46,6 +46,5 @@ buildPythonPackage rec {
     description = "Python Rate-Limiter using Leaky-Bucket Algorimth Family";
     homepage = "https://github.com/vutran1710/PyrateLimiter";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

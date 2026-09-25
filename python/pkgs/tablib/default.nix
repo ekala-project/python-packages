@@ -55,6 +55,5 @@ buildPythonPackage rec {
     description = "Format-agnostic tabular dataset library";
     homepage = "https://tablib.readthedocs.io/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

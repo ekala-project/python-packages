@@ -43,6 +43,5 @@ buildPythonPackage rec {
     description = "Python module for handling PSKC files";
     homepage = "https://github.com/arthurdejong/python-pskc";
     license = lib.licenses.lgpl21Plus;
-    maintainers = [ ];
   };
 }

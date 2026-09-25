@@ -66,6 +66,5 @@ buildPythonPackage rec {
     description = "Snapshot testing for Textual applications";
     homepage = "https://github.com/Textualize/pytest-textual-snapshot";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

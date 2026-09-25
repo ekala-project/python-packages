@@ -43,6 +43,5 @@ buildPythonPackage rec {
     description = "Demumble wrapper library";
     homepage = "https://github.com/angr/pydemumble";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

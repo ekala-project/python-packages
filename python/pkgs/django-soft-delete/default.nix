@@ -30,6 +30,5 @@ buildPythonPackage rec {
     description = "Soft delete models, managers, queryset for Django";
     homepage = "https://github.com/san4ezy/django_softdelete";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

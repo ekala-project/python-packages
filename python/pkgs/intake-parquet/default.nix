@@ -50,6 +50,5 @@ buildPythonPackage rec {
     description = "Parquet plugin for Intake";
     homepage = "https://github.com/intake/intake-parquet";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

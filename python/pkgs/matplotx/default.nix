@@ -60,6 +60,5 @@ buildPythonPackage rec {
     description = "More styles and useful extensions for Matplotlib";
     mainProgram = "matplotx";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

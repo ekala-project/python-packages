@@ -73,6 +73,5 @@ buildPythonPackage rec {
     description = "Application development framework, built on top of Flask";
     homepage = "https://github.com/dpgaspar/flask-appbuilder/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

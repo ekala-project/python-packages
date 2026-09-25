@@ -88,6 +88,5 @@ buildPythonPackage rec {
     description = "Developer-friendly load testing framework";
     homepage = "https://docs.locust.io/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

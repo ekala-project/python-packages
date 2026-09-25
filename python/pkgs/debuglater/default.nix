@@ -40,6 +40,5 @@ buildPythonPackage rec {
     description = "Module for post-mortem debugging of Python programs";
     homepage = "https://github.com/ploomber/debuglater";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

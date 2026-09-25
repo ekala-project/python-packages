@@ -33,6 +33,5 @@ buildPythonPackage rec {
     description = "Socket.io client library for protocol 1.x";
     homepage = "https://github.com/invisibleroads/socketIO-client";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "View, filter, and kill Postgres queries";
     homepage = "https://github.com/AmbitionEng/django-pgactivity";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

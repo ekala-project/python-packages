@@ -27,7 +27,6 @@ buildPythonPackage rec {
   meta = {
     homepage = "https://github.com/graphite-project/whisper";
     description = "Fixed size round-robin style database";
-    maintainers = [ ];
     license = lib.licenses.asl20;
   };
 }

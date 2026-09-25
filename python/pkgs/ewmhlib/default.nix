@@ -35,6 +35,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://github.com/Kalmat/EWMHlib";
     license = lib.licenses.bsd3;
     description = "Extended Window Manager Hints implementation in Python 3";
-    maintainers = [ ];
   };
 })

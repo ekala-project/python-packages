@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Tweak the form field rendering in templates, not in python-level form definitions";
     homepage = "https://github.com/jazzband/django-widget-tweaks";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

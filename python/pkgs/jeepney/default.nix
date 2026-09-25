@@ -43,6 +43,5 @@ buildPythonPackage rec {
     homepage = "https://gitlab.com/takluyver/jeepney";
     description = "Pure Python DBus interface";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

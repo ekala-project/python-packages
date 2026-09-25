@@ -44,6 +44,5 @@ buildPythonPackage rec {
     description = "Library for parsing, manipulating, and generating CybOX content";
     homepage = "https://github.com/CybOXProject/python-cybox/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

@@ -24,6 +24,5 @@ buildPythonPackage (finalAttrs: {
     description = "Watchdog that interrupts long running code";
     homepage = "https://bitbucket.org/evzijst/interruptingcow";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

@@ -32,6 +32,5 @@ buildPythonPackage rec {
     mainProgram = "deepl";
     homepage = "https://github.com/DeepLcom/deepl-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

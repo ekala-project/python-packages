@@ -37,6 +37,5 @@ buildPythonPackage rec {
     description = "Interact with the bionyx third party API of the ekey biometric systems";
     homepage = "https://github.com/richardpolzer/ekey-bionyx-api";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

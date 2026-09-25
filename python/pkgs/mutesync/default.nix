@@ -30,6 +30,5 @@ buildPythonPackage rec {
     description = "Python module for interacting with mutesync buttons";
     homepage = "https://github.com/currentoor/pymutesync";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

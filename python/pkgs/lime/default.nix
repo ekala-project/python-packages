@@ -64,6 +64,5 @@ buildPythonPackage (finalAttrs: {
     description = "Local Interpretable Model-Agnostic Explanations for machine learning classifiers";
     homepage = "https://github.com/marcotcr/lime";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 })

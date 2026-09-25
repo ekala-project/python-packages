@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Library to work with OSRAM Lightify";
     homepage = "https://github.com/tfriedel/python-lightify";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

@@ -99,6 +99,5 @@ buildPythonPackage (finalAttrs: {
     description = "Data framework for your LLM applications";
     homepage = "https://github.com/run-llama/llama_index/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

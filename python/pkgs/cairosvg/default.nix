@@ -44,6 +44,5 @@ buildPythonPackage rec {
     license = lib.licenses.lgpl3Plus;
     description = "SVG converter based on Cairo";
     mainProgram = "cairosvg";
-    maintainers = [ ];
   };
 }

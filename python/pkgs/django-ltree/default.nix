@@ -34,6 +34,5 @@ buildPythonPackage (finalAttrs: {
     description = "An ltree extension implementation to support hierarchical tree-like data using the native Postgres extension ltree in django models";
     homepage = "https://github.com/mariocesar/django-ltree";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

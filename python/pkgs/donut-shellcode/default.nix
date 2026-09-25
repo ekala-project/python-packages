@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Module to generate x86, x64, or AMD64+x86 position-independent shellcode";
     homepage = "https://github.com/TheWover/donut";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

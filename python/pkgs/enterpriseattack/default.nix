@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "Module to interact with the Mitre Att&ck Enterprise dataset";
     homepage = "https://github.com/xakepnz/enterpriseattack";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

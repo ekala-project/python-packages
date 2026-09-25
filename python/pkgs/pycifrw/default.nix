@@ -45,6 +45,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python library for reading and writing CIF files";
     homepage = "https://github.com/jamesrhester/pycifrw";
     license = lib.licenses.psfl;
-    maintainers = [ ];
   };
 })

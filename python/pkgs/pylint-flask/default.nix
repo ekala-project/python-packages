@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Pylint plugin to analyze Flask applications";
     homepage = "https://github.com/jschaf/pylint-flask";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
   };
 }

@@ -45,6 +45,5 @@ buildPythonPackage (finalAttrs: {
     description = "The blessed package to manage your versions by scm tags";
     homepage = "https://github.com/pypa/setuptools-scm/tree/main/vcs-versioning";
     license = lib.licenses.mit;
-    teams = [ ];
   };
 })

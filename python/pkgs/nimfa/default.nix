@@ -43,6 +43,5 @@ buildPythonPackage rec {
     description = "Nonnegative matrix factorization library";
     homepage = "http://nimfa.biolab.si";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

@@ -37,6 +37,5 @@ buildPythonPackage rec {
     description = "Standard library aifc redistribution";
     homepage = "https://github.com/youknowone/python-deadlib/tree/main/aifc";
     license = lib.licenses.psfl;
-    maintainers = [ ];
   };
 }

@@ -41,6 +41,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://github.com/certifi/python-certifi";
     description = "Python package for providing Mozilla's CA Bundle";
     license = lib.licenses.isc;
-    maintainers = [ ];
   };
 })

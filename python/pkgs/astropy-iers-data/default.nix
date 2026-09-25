@@ -32,6 +32,5 @@ buildPythonPackage (finalAttrs: {
     description = "IERS data maintained by @astrofrog and astropy.utils.iers maintainers";
     homepage = "https://github.com/astropy/astropy-iers-data";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

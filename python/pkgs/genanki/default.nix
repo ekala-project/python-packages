@@ -41,6 +41,5 @@ buildPythonPackage rec {
     description = "Generate Anki decks programmatically";
     homepage = "https://github.com/kerrickstaley/genanki";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

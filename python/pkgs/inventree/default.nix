@@ -71,6 +71,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python library for communication with inventree via API";
     homepage = "https://github.com/inventree/inventree-python/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

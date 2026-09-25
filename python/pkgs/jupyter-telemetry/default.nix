@@ -45,6 +45,5 @@ buildPythonPackage rec {
     description = "Telemetry for Jupyter Applications and extensions";
     homepage = "https://jupyter-telemetry.readthedocs.io/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

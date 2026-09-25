@@ -27,6 +27,5 @@ buildPythonPackage rec {
     description = "Implementation of a (model) pluglet for mkdocs-macros";
     homepage = "https://github.com/fralau/mkdocs-macros-test";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

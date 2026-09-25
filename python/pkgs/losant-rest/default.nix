@@ -37,6 +37,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python module for consuming the Losant IoT Platform API";
     homepage = "https://github.com/Losant/losant-rest-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

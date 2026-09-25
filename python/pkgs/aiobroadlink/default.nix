@@ -30,6 +30,5 @@ buildPythonPackage (finalAttrs: {
     mainProgram = "aiobroadlink";
     homepage = "https://github.com/frawau/aiobroadlink";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

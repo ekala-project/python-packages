@@ -38,6 +38,5 @@ buildPythonPackage rec {
     description = "Module to work with the Microsoft Azure Cosmos DB Management";
     homepage = "https://github.com/Azure/azure-sdk-for-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Intuitive and low-overhead instrumentation tool for Python";
     homepage = "https://github.com/gaogaotiantian/dowhen";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

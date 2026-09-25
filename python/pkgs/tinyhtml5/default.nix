@@ -33,6 +33,5 @@ buildPythonPackage rec {
     description = "Tiny HTML5 parser";
     homepage = "https://github.com/CourtBouillon/tinyhtml5";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

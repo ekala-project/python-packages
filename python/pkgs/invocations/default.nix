@@ -51,6 +51,5 @@ buildPythonPackage rec {
     description = "Common/best-practice Invoke tasks and collections";
     homepage = "https://invocations.readthedocs.io/";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

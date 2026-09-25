@@ -26,6 +26,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://www.joachim-bauch.de/projects/pylzma/";
     description = "Platform independent python bindings for the LZMA compression library";
     license = lib.licenses.lgpl21Only;
-    maintainers = [ ];
   };
 })

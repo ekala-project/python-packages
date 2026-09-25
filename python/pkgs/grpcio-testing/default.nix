@@ -46,6 +46,5 @@ buildPythonPackage rec {
     description = "Testing utilities for gRPC Python";
     homepage = "https://grpc.io/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

@@ -39,6 +39,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python wrapper package for The CMU Pronouncing Dictionary data files";
     homepage = "https://github.com/prosegrinder/python-cmudict";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 })

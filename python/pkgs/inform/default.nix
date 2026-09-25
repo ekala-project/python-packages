@@ -53,6 +53,5 @@ buildPythonPackage (finalAttrs: {
     '';
     homepage = "https://inform.readthedocs.io";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 })

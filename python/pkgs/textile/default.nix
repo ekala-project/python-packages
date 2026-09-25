@@ -41,7 +41,6 @@ buildPythonPackage (finalAttrs: {
     description = "Module for generating web text";
     homepage = "https://github.com/textile/python-textile";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     mainProgram = "pytextile";
   };
 })

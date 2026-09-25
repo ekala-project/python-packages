@@ -30,6 +30,5 @@ buildPythonPackage (finalAttrs: {
     description = "Russian dictionaries for pymorphy2";
     homepage = "https://github.com/kmike/pymorphy2-dicts/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

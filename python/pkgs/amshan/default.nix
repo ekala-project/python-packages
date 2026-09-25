@@ -48,6 +48,5 @@ buildPythonPackage rec {
     '';
     homepage = "https://github.com/toreamun/amshan";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

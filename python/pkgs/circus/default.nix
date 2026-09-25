@@ -67,6 +67,5 @@ buildPythonPackage rec {
     description = "Process and socket manager";
     homepage = "https://github.com/circus-tent/circus";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

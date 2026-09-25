@@ -34,6 +34,5 @@ buildPythonPackage (finalAttrs: {
     description = "Collection of APIs that help with remote controlling a Greenbone Security Manager";
     homepage = "https://github.com/greenbone/python-gvm";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
   };
 })

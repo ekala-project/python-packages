@@ -48,6 +48,5 @@ buildPythonPackage rec {
     description = "Asynchronous client library for MeteoSwiss API";
     homepage = "https://github.com/albertomontesg/meteoswiss-async";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

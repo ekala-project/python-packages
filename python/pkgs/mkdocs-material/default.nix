@@ -88,6 +88,5 @@ buildPythonPackage (finalAttrs: {
     downloadPage = "https://github.com/squidfunk/mkdocs-material";
     homepage = "https://squidfunk.github.io/mkdocs-material/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

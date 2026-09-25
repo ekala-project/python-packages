@@ -69,6 +69,5 @@ buildPythonPackage (finalAttrs: {
     '';
     homepage = "https://github.com/bachya/aioguardian";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

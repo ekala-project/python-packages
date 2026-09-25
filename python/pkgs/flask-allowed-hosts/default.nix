@@ -27,6 +27,5 @@ buildPythonPackage rec {
     description = "Flask extension that helps you limit access to your API endpoints";
     homepage = "https://github.com/riad-azz/flask-allowedhosts";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

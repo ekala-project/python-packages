@@ -40,6 +40,5 @@ buildPythonPackage rec {
     mainProgram = "Netio";
     homepage = "https://github.com/netioproducts/PyNetio";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "Setuptools_scm plugin for nipreps version schemes";
     homepage = "https://github.com/nipreps/version-schemes";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

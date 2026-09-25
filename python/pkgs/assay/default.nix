@@ -31,6 +31,5 @@ buildPythonPackage {
     homepage = "https://github.com/brandon-rhodes/assay";
     description = "Attempt to write a Python testing framework I can actually stand";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

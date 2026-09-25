@@ -41,7 +41,6 @@ buildPythonPackage rec {
     description = "Generate network-diagram image from spec-text file (similar to Graphviz)";
     homepage = "http://blockdiag.com/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "rackdiag";
     platforms = lib.platforms.unix;
   };

@@ -36,6 +36,5 @@ buildPythonPackage (finalAttrs: {
     description = "RabbitMQ Focused AMQP low-level library";
     homepage = "https://github.com/gmr/pamqp";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

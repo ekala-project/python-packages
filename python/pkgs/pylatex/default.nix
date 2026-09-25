@@ -32,6 +32,5 @@ buildPythonPackage rec {
     homepage = "https://jeltef.github.io/PyLaTeX/current/";
     downloadPage = "https://github.com/JelteF/PyLaTeX/releases";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

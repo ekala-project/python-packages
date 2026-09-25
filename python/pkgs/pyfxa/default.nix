@@ -37,6 +37,5 @@ buildPythonPackage rec {
     mainProgram = "fxa-client";
     homepage = "https://github.com/mozilla/PyFxA";
     license = lib.licenses.mpl20;
-    maintainers = [ ];
   };
 }

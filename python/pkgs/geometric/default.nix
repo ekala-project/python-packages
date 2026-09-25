@@ -35,6 +35,5 @@ buildPythonPackage rec {
     mainProgram = "geometric-optimize";
     homepage = "https://github.com/leeping/geomeTRIC";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

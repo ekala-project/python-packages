@@ -40,6 +40,5 @@ buildPythonPackage rec {
     description = "Convert number words (eg. twenty one) to numeric digits (21)";
     homepage = "http://w2n.readthedocs.io/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

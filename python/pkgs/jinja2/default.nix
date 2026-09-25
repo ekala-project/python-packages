@@ -80,6 +80,5 @@ buildPythonPackage rec {
       placeholders in the template allow writing code similar to Python
       syntax. Then the template is passed data to render the final document.
     '';
-    maintainers = [ ];
   };
 }

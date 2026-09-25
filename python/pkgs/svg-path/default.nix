@@ -25,6 +25,5 @@ buildPythonPackage rec {
     description = "SVG path objects and parser";
     homepage = "https://github.com/regebro/svg.path";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -36,6 +36,5 @@ buildPythonPackage rec {
     mainProgram = "lupupy";
     homepage = "https://github.com/majuss/lupupy";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

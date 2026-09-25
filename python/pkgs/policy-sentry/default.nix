@@ -41,7 +41,6 @@ buildPythonPackage rec {
     description = "Python module for generating IAM least privilege policies";
     homepage = "https://github.com/salesforce/policy_sentry";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     mainProgram = "policy_sentry";
   };
 }

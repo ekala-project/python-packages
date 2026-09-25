@@ -107,6 +107,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/nschloe/meshio";
     mainProgram = "meshio";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

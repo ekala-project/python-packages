@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Generates Python parsers from grammars in a variation of EBNF";
     homepage = "https://tatsu.readthedocs.io/";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

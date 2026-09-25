@@ -23,6 +23,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/acroz/git-find-repos";
     license = lib.licenses.mit;
     mainProgram = "git-find-repos";
-    maintainers = [ ];
   };
 }

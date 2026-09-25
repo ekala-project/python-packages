@@ -40,6 +40,5 @@ buildPythonPackage (finalAttrs: {
     description = "Library for Huum saunas";
     homepage = "https://github.com/frwickst/pyhuum";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

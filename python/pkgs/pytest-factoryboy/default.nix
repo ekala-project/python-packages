@@ -43,7 +43,6 @@ buildPythonPackage rec {
   meta = {
     description = "Integration of factory_boy into the pytest runner";
     homepage = "https://pytest-factoryboy.readthedocs.io/en/latest/";
-    maintainers = [ ];
     license = lib.licenses.mit;
   };
 }

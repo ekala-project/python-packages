@@ -41,6 +41,5 @@ buildPythonPackage (finalAttrs: {
     '';
     homepage = "https://github.com/vlaci/lzallright";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

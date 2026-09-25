@@ -40,6 +40,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/Neoteroi/essentials";
     description = "General purpose classes and functions";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

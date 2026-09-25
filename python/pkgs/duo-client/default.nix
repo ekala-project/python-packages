@@ -56,6 +56,5 @@ buildPythonPackage rec {
     description = "Python library for interacting with the Duo Auth, Admin, and Accounts APIs";
     homepage = "https://github.com/duosecurity/duo_client_python";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

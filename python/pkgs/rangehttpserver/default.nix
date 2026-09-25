@@ -26,6 +26,5 @@ buildPythonPackage rec {
     description = "SimpleHTTPServer with support for Range requests";
     homepage = "https://github.com/danvk/RangeHTTPServer";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

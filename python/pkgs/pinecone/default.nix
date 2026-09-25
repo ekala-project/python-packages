@@ -45,6 +45,5 @@ buildPythonPackage rec {
     description = "Pinecone Python SDK";
     homepage = "https://www.pinecone.io/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

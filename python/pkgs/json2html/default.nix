@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Python module for converting complex JSON to HTML Table representation";
     homepage = "https://github.com/softvar/json2html";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

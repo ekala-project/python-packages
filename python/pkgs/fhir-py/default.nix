@@ -53,6 +53,5 @@ buildPythonPackage rec {
     description = "Async/sync API for FHIR resources";
     homepage = "https://github.com/beda-software/fhir-py";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

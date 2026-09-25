@@ -55,6 +55,5 @@ buildPythonPackage rec {
     description = "Collection of useful middlewares for aiohttp.web applications";
     homepage = "https://github.com/playpauseandstop/aiohttp-middlewares";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

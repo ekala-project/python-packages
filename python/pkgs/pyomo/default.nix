@@ -34,7 +34,6 @@ buildPythonPackage rec {
     description = "Python Optimization Modeling Objects";
     homepage = "http://www.pyomo.org/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     mainProgram = "pyomo";
   };
 }

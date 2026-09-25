@@ -38,6 +38,5 @@ buildPythonPackage rec {
     description = "Async python library to interact with Audiobookshelf";
     homepage = "https://github.com/music-assistant/aioaudiobookshelf";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

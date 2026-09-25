@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Datetime type support for click";
     homepage = "https://github.com/click-contrib/click-datetime";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

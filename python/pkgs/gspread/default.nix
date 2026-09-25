@@ -33,6 +33,5 @@ buildPythonPackage rec {
     description = "Google Spreadsheets client library";
     homepage = "https://github.com/burnash/gspread";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

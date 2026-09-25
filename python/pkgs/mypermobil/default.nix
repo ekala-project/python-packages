@@ -49,6 +49,5 @@ buildPythonPackage rec {
     description = "Python wrapper for the MyPermobil API";
     homepage = "https://github.com/Permobil-Software/mypermobil";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

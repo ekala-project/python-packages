@@ -52,6 +52,5 @@ buildPythonPackage (finalAttrs: {
     description = "Production-ready community-driven modern Stripe-like API versioning in FastAPI";
     homepage = "https://github.com/zmievsa/cadwyn";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

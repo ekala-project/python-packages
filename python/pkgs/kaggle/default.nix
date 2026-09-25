@@ -69,6 +69,5 @@ buildPythonPackage (finalAttrs: {
     mainProgram = "kaggle";
     homepage = "https://github.com/Kaggle/kaggle-cli";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

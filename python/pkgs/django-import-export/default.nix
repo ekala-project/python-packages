@@ -47,6 +47,5 @@ buildPythonPackage rec {
     description = "Django application and library for importing and exporting data with admin integration";
     homepage = "https://github.com/django-import-export/django-import-export";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

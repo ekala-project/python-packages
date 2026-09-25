@@ -27,6 +27,5 @@ buildPythonPackage (finalAttrs: {
     description = "Flatten JSON in Python";
     homepage = "https://github.com/amirziai/flatten";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

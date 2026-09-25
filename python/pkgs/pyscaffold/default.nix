@@ -100,6 +100,5 @@ buildPythonPackage rec {
     mainProgram = "putup";
     homepage = "https://pypi.org/project/PyScaffold/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

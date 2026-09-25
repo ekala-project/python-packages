@@ -58,6 +58,5 @@ buildPythonPackage rec {
     description = "IAM Service Account Credentials API client library";
     homepage = "https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-iam";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

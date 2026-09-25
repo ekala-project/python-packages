@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "Ethereum ABI utilities";
     homepage = "https://github.com/ethereum/eth-abi";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

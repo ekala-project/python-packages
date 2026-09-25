@@ -26,6 +26,5 @@ buildPythonPackage rec {
     description = "Python dead batteries. See PEP 594";
     homepage = "https://github.com/youknowone/python-deadlib";
     license = lib.licenses.psfl;
-    maintainers = [ ];
   };
 }

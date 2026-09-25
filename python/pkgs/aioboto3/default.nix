@@ -61,6 +61,5 @@ buildPythonPackage (finalAttrs: {
     description = "Wrapper to use boto3 resources with the aiobotocore async backend";
     homepage = "https://github.com/terricain/aioboto3";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

@@ -40,6 +40,5 @@ buildPythonPackage (finalAttrs: {
     description = "Fresh approach to autocomplete implementations, specially for Django";
     homepage = "https://django-autocomplete-light.readthedocs.io";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

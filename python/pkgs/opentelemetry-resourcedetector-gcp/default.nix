@@ -37,6 +37,5 @@ buildPythonPackage rec {
     description = "Google Cloud resource detector for OpenTelemetry";
     homepage = "https://pypi.org/project/opentelemetry-resourcedetector-gcp";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

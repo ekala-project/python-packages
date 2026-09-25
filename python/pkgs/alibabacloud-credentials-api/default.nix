@@ -27,6 +27,5 @@ buildPythonPackage (finalAttrs: {
     description = "Aliyun Credentials API Library for Python";
     homepage = "https://pypi.org/project/alibabacloud-credentials-api/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

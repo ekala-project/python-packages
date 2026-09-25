@@ -37,6 +37,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/aristanetworks/j2lint";
     description = "Jinja2 Linter CLI";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

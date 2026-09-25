@@ -23,6 +23,5 @@ buildPythonPackage rec {
     description = "Module for interacting with LightwaveRF hubs";
     homepage = "https://github.com/GeoffAtHome/lightwave";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

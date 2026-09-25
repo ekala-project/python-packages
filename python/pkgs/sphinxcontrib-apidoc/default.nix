@@ -33,6 +33,5 @@ buildPythonPackage rec {
     description = "Sphinx extension for running sphinx-apidoc on each build";
     homepage = "https://github.com/sphinx-contrib/apidoc";
     license = lib.licenses.bsd2;
-    teams = [ ];
   };
 }

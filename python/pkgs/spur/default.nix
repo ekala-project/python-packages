@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Python module to run commands and manipulate files locally or over SSH";
     homepage = "https://github.com/mwilliamson/spur.py";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

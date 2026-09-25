@@ -45,6 +45,5 @@ buildPythonPackage rec {
     downloadPage = "https://github.com/terryyin/lizard";
     homepage = "http://www.lizard.ws";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -52,6 +52,5 @@ buildPythonPackage rec {
     description = "API client for docker written in Python";
     homepage = "https://github.com/docker/docker-py";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

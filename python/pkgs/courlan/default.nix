@@ -55,7 +55,6 @@ buildPythonPackage (finalAttrs: {
     description = "Clean, filter and sample URLs to optimize data collection";
     homepage = "https://github.com/adbar/courlan";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "courlan";
   };
 })

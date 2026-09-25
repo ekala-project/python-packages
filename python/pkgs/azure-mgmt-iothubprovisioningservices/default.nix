@@ -44,6 +44,5 @@ buildPythonPackage (finalAttrs: {
     description = "This is the Microsoft Azure IoTHub Provisioning Services Client Library";
     homepage = "https://github.com/Azure/azure-sdk-for-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

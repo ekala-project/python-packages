@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Twisted plugin for py.test";
     homepage = "https://github.com/pytest-dev/pytest-twisted";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

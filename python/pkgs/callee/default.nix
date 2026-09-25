@@ -26,6 +26,5 @@ buildPythonPackage (finalAttrs: {
     description = "Argument matchers for unittest.mock";
     homepage = "https://github.com/Xion/callee";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

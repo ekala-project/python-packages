@@ -42,6 +42,5 @@ buildPythonPackage rec {
     description = "Client library for Microsoft Azure Storage services containing the queue service APIs";
     homepage = "https://github.com/Azure/azure-sdk-for-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

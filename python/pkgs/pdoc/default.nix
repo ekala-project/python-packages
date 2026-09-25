@@ -47,6 +47,5 @@ buildPythonPackage rec {
     description = "API Documentation for Python Projects";
     mainProgram = "pdoc";
     license = lib.licenses.unlicense;
-    maintainers = [ ];
   };
 }

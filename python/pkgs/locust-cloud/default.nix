@@ -47,6 +47,5 @@ buildPythonPackage rec {
     description = "Hosted version of Locust to run distributed load tests";
     homepage = "https://github.com/locustcloud/locust-cloud";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

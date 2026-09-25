@@ -42,6 +42,5 @@ buildPythonPackage (finalAttrs: {
     description = "Numpy data serialization using msgpack (opentensor fork)";
     homepage = "https://github.com/opentensor/msgpack-numpy";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

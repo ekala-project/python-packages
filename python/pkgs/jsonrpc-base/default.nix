@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "JSON-RPC client library base interface";
     homepage = "https://github.com/emlove/jsonrpc-base";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

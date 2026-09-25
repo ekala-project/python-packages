@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Kerberos API bindings for Python";
     homepage = "https://github.com/jborean93/pykrb5";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

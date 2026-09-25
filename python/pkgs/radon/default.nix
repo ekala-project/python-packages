@@ -52,7 +52,6 @@ buildPythonPackage rec {
     description = "Various code metrics for Python code";
     homepage = "https://radon.readthedocs.org";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "radon";
   };
 }

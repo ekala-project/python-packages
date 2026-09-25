@@ -67,6 +67,5 @@ buildPythonPackage (finalAttrs: {
     description = "Accessor for xarray objects that interprets CF attributes";
     homepage = "https://github.com/xarray-contrib/cf-xarray";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

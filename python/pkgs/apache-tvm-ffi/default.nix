@@ -60,6 +60,5 @@ buildPythonPackage (finalAttrs: {
     description = "Open ABI and FFI for Machine Learning Systems";
     homepage = "https://github.com/apache/tvm-ffi";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

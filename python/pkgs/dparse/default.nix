@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Parser for Python dependency files";
     homepage = "https://github.com/pyupio/dparse";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

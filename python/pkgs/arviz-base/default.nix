@@ -49,6 +49,5 @@ buildPythonPackage (finalAttrs: {
     description = "Base ArviZ features and converters";
     homepage = "https://github.com/arviz-devs/arviz-base";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

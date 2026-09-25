@@ -26,6 +26,5 @@ buildPythonPackage rec {
     description = "Python to class to hold configuration values";
     homepage = "https://github.com/schettino72/configclass/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

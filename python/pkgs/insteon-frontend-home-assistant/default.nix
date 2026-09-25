@@ -27,6 +27,5 @@ buildPythonPackage rec {
     description = "Insteon frontend for Home Assistant";
     homepage = "https://github.com/pyinsteon/insteon-panel";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

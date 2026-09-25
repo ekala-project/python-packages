@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "Django application that contains a widget to render a form field as a TinyMCE editor";
     homepage = "https://github.com/jazzband/django-tinymce";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

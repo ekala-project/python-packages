@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Python implementation of the DICOM networking protocol";
     homepage = "https://github.com/pydicom/pynetdicom";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

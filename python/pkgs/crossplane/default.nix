@@ -26,6 +26,5 @@ buildPythonPackage rec {
     mainProgram = "crossplane";
     homepage = "https://github.com/nginxinc/crossplane";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

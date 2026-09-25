@@ -58,6 +58,5 @@ buildPythonPackage rec {
     description = "Library for fast canonical-correlation-based search algorithm";
     homepage = "https://github.com/scikit-learn-contrib/fastcan";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

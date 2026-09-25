@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Development tool for grabbing the dominant color or representative color palette from an image";
     homepage = "https://github.com/LanceGin/haishoku";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

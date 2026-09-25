@@ -34,7 +34,6 @@ buildPythonPackage rec {
     description = "Prompt toolkit for console interaction";
     homepage = "https://github.com/nonebot/noneprompt";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "noneprompt";
   };
 }

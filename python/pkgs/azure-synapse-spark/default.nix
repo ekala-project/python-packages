@@ -33,6 +33,5 @@ buildPythonPackage rec {
     description = "Microsoft Azure Synapse Spark Client Library";
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/synapse/azure-synapse-spark";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

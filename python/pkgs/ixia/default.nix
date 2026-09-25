@@ -27,6 +27,5 @@ buildPythonPackage (finalAttrs: {
     description = "Connecting secrets' security with random's versatility";
     license = lib.licenses.mit;
     homepage = "https://trag1c.github.io/ixia";
-    maintainers = [ ];
   };
 })

@@ -27,6 +27,5 @@ buildPythonPackage rec {
     mainProgram = "pyclip";
     homepage = "https://github.com/spyoungtech/pyclip";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

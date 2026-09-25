@@ -27,7 +27,6 @@ buildPythonPackage rec {
   meta = {
     description = "Caching extension for Flask";
     homepage = "https://github.com/pallets-eco/flask-caching";
-    maintainers = [ ];
     license = lib.licenses.bsd3;
   };
 }

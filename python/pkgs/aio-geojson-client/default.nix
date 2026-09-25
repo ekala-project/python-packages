@@ -51,6 +51,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python module for accessing GeoJSON feeds";
     homepage = "https://github.com/exxamalte/python-aio-geojson-client";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

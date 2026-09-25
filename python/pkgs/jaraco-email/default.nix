@@ -44,6 +44,5 @@ buildPythonPackage rec {
     description = "E-mail facilities by jaraco";
     homepage = "https://github.com/jaraco/jaraco.email";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

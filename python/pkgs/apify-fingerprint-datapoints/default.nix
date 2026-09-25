@@ -27,6 +27,5 @@ buildPythonPackage (finalAttrs: {
     description = "Browser fingerprint datapoints collected by Apify";
     homepage = "https://pypi.org/project/apify-fingerprint-datapoints/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

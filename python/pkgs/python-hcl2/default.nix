@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Parser for HCL2 written in Python using Lark";
     homepage = "https://github.com/amplify-education/python-hcl2";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

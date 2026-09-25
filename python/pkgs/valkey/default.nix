@@ -73,6 +73,5 @@ buildPythonPackage rec {
     description = "Python client for Redis key-value store";
     homepage = "https://github.com/valkey-io/valkey-py";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

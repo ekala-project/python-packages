@@ -44,6 +44,5 @@ buildPythonPackage rec {
     description = "Oslo Database library";
     homepage = "https://github.com/openstack/oslo.db";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

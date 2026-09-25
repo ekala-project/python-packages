@@ -37,6 +37,5 @@ buildPythonPackage rec {
     description = "Python library for parsing the opack format";
     homepage = "https://github.com/doronz88/opack2";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
   };
 }

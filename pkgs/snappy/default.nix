@@ -63,6 +63,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.bsd3;
     description = "Compression/decompression library for very high speeds";
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 })

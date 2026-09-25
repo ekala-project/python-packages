@@ -42,6 +42,5 @@ buildPythonPackage rec {
     description = "Python implementation of the JSON-LD API";
     homepage = "https://github.com/digitalbazaar/pyld";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

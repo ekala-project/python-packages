@@ -41,6 +41,5 @@ buildPythonPackage (finalAttrs: {
     description = "Read Google Cloud Storage, Azure Blobs, and local paths with the same interface";
     homepage = "https://github.com/christopher-hesse/blobfile";
     license = lib.licenses.unlicense;
-    maintainers = [ ];
   };
 })

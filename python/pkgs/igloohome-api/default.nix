@@ -37,6 +37,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python package for using igloohome's API";
     homepage = "https://github.com/keithle888/igloohome-api";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

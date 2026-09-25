@@ -59,6 +59,5 @@ buildPythonPackage (finalAttrs: {
     description = "Async Key-Value";
     homepage = "https://github.com/strawgate/py-key-value";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

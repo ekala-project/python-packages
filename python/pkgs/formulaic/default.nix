@@ -57,6 +57,5 @@ buildPythonPackage rec {
     description = "High-performance implementation of Wilkinson formulas";
     homepage = "https://matthewwardrop.github.io/formulaic/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

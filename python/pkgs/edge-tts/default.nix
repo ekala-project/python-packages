@@ -52,7 +52,6 @@ buildPythonPackage rec {
       mit # `src/edge_tts/srt_composer.py` only
       lgpl3Plus # All remaining files
     ];
-    maintainers = [ ];
     mainProgram = "edge-tts";
   };
 }

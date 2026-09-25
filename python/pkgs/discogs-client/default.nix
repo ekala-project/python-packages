@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "Unofficial Python API client for Discogs";
     homepage = "https://github.com/joalla/discogs_client";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

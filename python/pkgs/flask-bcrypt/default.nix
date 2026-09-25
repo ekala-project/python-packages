@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "Brcrypt hashing for Flask";
     homepage = "https://github.com/maxcountryman/flask-bcrypt";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

@@ -64,6 +64,5 @@ buildPythonPackage rec {
     description = "Toolkit for storing files and attachments in web applications";
     homepage = "https://github.com/amol-/depot";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

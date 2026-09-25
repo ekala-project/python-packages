@@ -56,6 +56,5 @@ buildPythonPackage (finalAttrs: {
     mainProgram = "hatchling";
     homepage = "https://hatch.pypa.io/latest/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

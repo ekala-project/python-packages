@@ -42,6 +42,5 @@ buildPythonPackage rec {
     description = "Channel Level Live Debug Information Service for gRPC";
     homepage = "https://pypi.org/project/grpcio-channelz";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

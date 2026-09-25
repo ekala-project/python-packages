@@ -28,6 +28,5 @@ buildPythonPackage (finalAttrs: {
     description = "Distributed object middleware for Python (RPC)";
     homepage = "https://github.com/irmen/Pyro5";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

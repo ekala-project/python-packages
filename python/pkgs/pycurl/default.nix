@@ -51,6 +51,5 @@ buildPythonPackage rec {
       lgpl2Only
       mit
     ];
-    maintainers = [ ];
   };
 }

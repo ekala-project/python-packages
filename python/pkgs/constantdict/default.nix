@@ -39,6 +39,5 @@ buildPythonPackage (finalAttrs: {
     downloadPage = "https://github.com/matthiasdiener/constantdict";
     description = "Immutable dictionary class for Python, implemented as a thin layer around Python's builtin dict class";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

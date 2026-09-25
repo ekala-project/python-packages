@@ -46,6 +46,5 @@ buildPythonPackage (finalAttrs: {
     description = "Async Python library for querying the Green Planet Energy API";
     homepage = "https://github.com/petschni/greenplanet-energy-api";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

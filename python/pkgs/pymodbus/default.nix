@@ -34,7 +34,6 @@ buildPythonPackage (finalAttrs: {
     description = "Python implementation of the Modbus protocol";
     homepage = "https://github.com/pymodbus-dev/pymodbus";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     mainProgram = "pymodbus.simulator";
   };
 })

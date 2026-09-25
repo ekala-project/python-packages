@@ -45,6 +45,5 @@ buildPythonPackage rec {
     description = "Python package for HTTP/1.1 style headers";
     homepage = "https://github.com/Ousret/kiss-headers";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

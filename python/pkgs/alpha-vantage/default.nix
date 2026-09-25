@@ -58,6 +58,5 @@ buildPythonPackage rec {
     description = "Python module for the Alpha Vantage API";
     homepage = "https://github.com/RomelTorres/alpha_vantage";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

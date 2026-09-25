@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Library to fetch data from QNAP QSW switches";
     homepage = "https://github.com/Noltari/aioqsw";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

@@ -29,6 +29,5 @@ buildPythonPackage rec {
     description = "Python bindings around Google Chromium's embedded compact language detection library (CLD2)";
     homepage = "https://github.com/LibreTranslate/pycld2";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

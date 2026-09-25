@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "MkDocs plugin that enables displaying the date of the last git modification of a page";
     homepage = "https://github.com/timvink/mkdocs-git-revision-date-localized-plugin";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

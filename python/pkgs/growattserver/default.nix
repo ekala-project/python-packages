@@ -31,6 +31,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python package to retrieve information from Growatt units";
     homepage = "https://github.com/indykoning/PyPi_GrowattServer";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

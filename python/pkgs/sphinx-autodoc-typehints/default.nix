@@ -34,6 +34,5 @@ buildPythonPackage (finalAttrs: {
     description = "Type hints (PEP 484) support for the Sphinx autodoc extension";
     homepage = "https://github.com/tox-dev/sphinx-autodoc-typehints";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

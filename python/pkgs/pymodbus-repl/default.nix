@@ -48,6 +48,5 @@ buildPythonPackage rec {
     description = "REPL client and server for pymodbus";
     homepage = "https://github.com/pymodbus-dev/repl";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

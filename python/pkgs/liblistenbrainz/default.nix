@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "Simple ListenBrainz client library for Python";
     homepage = "https://github.com/metabrainz/liblistenbrainz";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
   };
 }

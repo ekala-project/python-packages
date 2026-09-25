@@ -104,6 +104,5 @@ buildPythonPackage (finalAttrs: {
       bindings of existing C++ code.
     '';
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

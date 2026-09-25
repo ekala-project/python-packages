@@ -48,6 +48,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://docs.spyder-ide.org/current/ipythonconsole.html";
     downloadPage = "https://github.com/spyder-ide/spyder-kernels/releases";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

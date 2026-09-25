@@ -50,7 +50,6 @@ buildPythonPackage rec {
   meta = {
     description = "Python API for accessing resources on a Jenkins continuous-integration server";
     homepage = "https://github.com/salimfadhley/jenkinsapi";
-    maintainers = [ ];
     license = lib.licenses.mit;
   };
 }

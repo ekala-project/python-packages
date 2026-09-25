@@ -45,6 +45,5 @@ buildPythonPackage rec {
     description = "Stand-alone Assertions for Python";
     homepage = "https://github.com/srittau/python-asserts";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

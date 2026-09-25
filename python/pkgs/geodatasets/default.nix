@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "Spatial data examples";
     homepage = "https://geodatasets.readthedocs.io/";
     license = lib.licenses.bsd3;
-    teams = [ ];
   };
 }

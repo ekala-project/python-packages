@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "Computes extremal rays of polyhedral cones with filtering";
     homepage = "https://github.com/3-manifolds/FXrays";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
   };
 }

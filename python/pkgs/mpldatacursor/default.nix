@@ -28,6 +28,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/joferkington/mpldatacursor";
     description = "Interactive data cursors for matplotlib";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

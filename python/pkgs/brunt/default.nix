@@ -47,6 +47,5 @@ buildPythonPackage (finalAttrs: {
     description = "Unofficial Python SDK for Brunt";
     homepage = "https://github.com/eavanvalkenburg/brunt-api";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

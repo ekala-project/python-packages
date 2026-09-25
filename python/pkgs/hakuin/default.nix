@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "Blind SQL Injection optimization and automation framework";
     homepage = "https://github.com/pruzko/hakuin";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

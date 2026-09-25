@@ -38,6 +38,5 @@ buildPythonPackage rec {
     mainProgram = "jupyter-contrib";
     homepage = "https://github.com/jupyter-contrib/jupyter_contrib_core";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

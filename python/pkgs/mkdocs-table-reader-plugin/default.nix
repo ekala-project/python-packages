@@ -55,6 +55,5 @@ buildPythonPackage rec {
     description = "MkDocs plugin that enables a markdown tag like {{ read_csv('table.csv') }} to directly insert various table formats into a page";
     homepage = "https://github.com/timvink/mkdocs-table-reader-plugin";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

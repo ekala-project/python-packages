@@ -24,7 +24,6 @@ buildPythonPackage (finalAttrs: {
     description = "Reference data and converters for CASA operation";
     homepage = "https://casa.nrao.edu/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

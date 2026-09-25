@@ -61,7 +61,6 @@ buildPythonPackage (finalAttrs: {
     description = "Python and Command-Line Interface to Archive.org";
     homepage = "https://github.com/jjjake/internetarchive";
     license = lib.licenses.agpl3Plus;
-    maintainers = [ ];
     mainProgram = "ia";
   };
 })

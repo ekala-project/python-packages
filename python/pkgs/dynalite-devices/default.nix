@@ -41,6 +41,5 @@ buildPythonPackage rec {
     description = "Unofficial Dynalite DyNET interface creating devices";
     homepage = "https://github.com/ziv1234/python-dynalite-devices";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

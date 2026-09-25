@@ -44,6 +44,5 @@ buildPythonPackage (finalAttrs: {
     description = "Feature-rich Telnet Server, Client, and Protocol library for Python";
     homepage = "https://github.com/jquast/telnetlib3";
     license = lib.licenses.isc;
-    maintainers = [ ];
   };
 })

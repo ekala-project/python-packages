@@ -28,6 +28,5 @@ buildPythonPackage (finalAttrs: {
     description = "Easy python module for creating git-style subcommand handling";
     homepage = "https://github.com/unixorn/gitlike-commands";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

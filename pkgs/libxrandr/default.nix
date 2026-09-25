@@ -43,7 +43,6 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Xlib Resize, Rotate and Reflection (RandR) extension library";
     homepage = "https://gitlab.freedesktop.org/xorg/lib/libxrandr";
     license = lib.licenses.hpndSellVariant;
-    maintainers = [ ];
     pkgConfigModules = [ "xrandr" ];
     platforms = lib.platforms.unix;
   };

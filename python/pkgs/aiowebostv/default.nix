@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "Module to interact with LG webOS based TV devices";
     homepage = "https://github.com/home-assistant-libs/aiowebostv";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

@@ -37,6 +37,5 @@ buildPythonPackage rec {
     description = "Simple connector to Binance Public API";
     homepage = "https://github.com/binance/binance-connector-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

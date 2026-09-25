@@ -81,6 +81,5 @@ buildPythonPackage (finalAttrs: {
     description = "Build LangChain application on AWS";
     homepage = "https://github.com/langchain-ai/langchain-aws/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

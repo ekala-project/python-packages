@@ -95,6 +95,5 @@ buildPythonPackage rec {
     description = "High-level plotting API for the PyData ecosystem built on HoloViews";
     homepage = "https://hvplot.pyviz.org";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

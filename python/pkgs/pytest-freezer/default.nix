@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Pytest plugin providing a fixture interface for spulec/freezegun";
     homepage = "https://github.com/pytest-dev/pytest-freezer";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -33,6 +33,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/bethgelab/imagecorruptions";
     description = "This package provides a set of image corruptions";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

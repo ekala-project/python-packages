@@ -37,6 +37,5 @@ buildPythonPackage rec {
     description = "Efficiently Composable Data Augmentation on the GPU with Jax";
     homepage = "https://github.com/khdlr/augmax";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

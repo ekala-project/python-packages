@@ -42,6 +42,5 @@ buildPythonPackage (finalAttrs: {
     description = "Hatch build hook plugin for Mypyc";
     homepage = "https://github.com/ofek/hatch-mypyc";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

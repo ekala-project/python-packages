@@ -65,6 +65,5 @@ buildPythonPackage rec {
     description = "ClickHouse Database Core Driver for Python, Pandas, and Superset";
     homepage = "https://github.com/ClickHouse/clickhouse-connect";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

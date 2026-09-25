@@ -33,6 +33,5 @@ buildPythonPackage rec {
     description = "Numpy data type serialization using msgpack";
     homepage = "https://github.com/lebedov/msgpack-numpy";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

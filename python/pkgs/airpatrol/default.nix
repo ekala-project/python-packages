@@ -35,6 +35,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python package for interacting with AirPatrol devices";
     homepage = "https://github.com/antondalgren/airpatrol";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

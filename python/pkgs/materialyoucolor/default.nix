@@ -58,6 +58,5 @@ buildPythonPackage (finalAttrs: {
     description = "Material You color generation algorithms in python";
     homepage = "https://github.com/T-Dynamos/materialyoucolor-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

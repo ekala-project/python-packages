@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Python wrapping of the Israeli Rail API";
     homepage = "https://github.com/sh0oki/israel-rail-api";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

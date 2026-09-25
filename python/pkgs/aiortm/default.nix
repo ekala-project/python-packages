@@ -58,7 +58,6 @@ buildPythonPackage rec {
     description = "Library for the Remember the Milk API";
     homepage = "https://github.com/MartinHjelmare/aiortm";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "aiortm";
   };
 }

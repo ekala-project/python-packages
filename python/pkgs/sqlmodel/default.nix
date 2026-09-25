@@ -34,6 +34,5 @@ buildPythonPackage (finalAttrs: {
     description = "Module to work with SQL databases";
     homepage = "https://github.com/fastapi/sqlmodel";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

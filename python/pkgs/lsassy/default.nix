@@ -40,7 +40,6 @@ buildPythonPackage (finalAttrs: {
     description = "Python module to extract data from Local Security Authority Subsystem Service (LSASS)";
     homepage = "https://github.com/Hackndo/lsassy";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "lsassy";
   };
 })

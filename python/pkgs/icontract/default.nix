@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Provide design-by-contract with informative violation messages";
     homepage = "https://github.com/Parquery/icontract";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

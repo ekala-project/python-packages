@@ -21,6 +21,5 @@ buildPythonPackage rec {
     description = "Python implementation of standard from IAPWS";
     homepage = "https://github.com/jjgomera/iapws";
     license = lib.licenses.gpl3;
-    maintainers = [ ];
   };
 }

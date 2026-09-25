@@ -38,6 +38,5 @@ buildPythonPackage rec {
     description = "Automatically link across pages in MkDocs";
     homepage = "https://github.com/mkdocstrings/autorefs/";
     license = lib.licenses.isc;
-    maintainers = [ ];
   };
 }

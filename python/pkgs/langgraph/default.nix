@@ -74,6 +74,5 @@ buildPythonPackage (finalAttrs: {
     description = "Build resilient language agents as graphs";
     homepage = "https://github.com/langchain-ai/langgraph";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

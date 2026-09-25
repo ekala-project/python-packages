@@ -45,6 +45,5 @@ buildPythonPackage rec {
     description = "Python tools to create and manipulate SVG files";
     homepage = "https://github.com/btel/svg_utils";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -41,6 +41,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://sparse.pydata.org/";
     downloadPage = "https://github.com/pydata/sparse/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

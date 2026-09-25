@@ -89,6 +89,5 @@ buildPythonPackage (finalAttrs: {
     description = "Build context-aware reasoning applications";
     homepage = "https://github.com/langchain-ai/langchain";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

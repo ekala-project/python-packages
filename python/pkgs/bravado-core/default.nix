@@ -65,6 +65,5 @@ buildPythonPackage rec {
     description = "Library for adding Swagger support to clients and servers";
     homepage = "https://github.com/Yelp/bravado-core";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Full featured consistent hashing python library compatible with ketama";
     homepage = "https://github.com/ultrabug/uhashring";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

@@ -79,6 +79,5 @@ buildPythonPackage rec {
       bsd3
       lgpl3
     ];
-    maintainers = [ ];
   };
 }

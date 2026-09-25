@@ -29,6 +29,5 @@ buildPythonPackage rec {
     description = "Convert WSGI app to ASGI app or ASGI app to WSGI app";
     homepage = "https://github.com/abersheeran/a2wsgi";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

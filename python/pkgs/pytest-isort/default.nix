@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Pytest plugin to perform isort checks (import ordering)";
     homepage = "https://github.com/moccu/pytest-isort/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

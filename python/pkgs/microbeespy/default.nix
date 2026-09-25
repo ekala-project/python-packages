@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Official microBees Python Library";
     homepage = "https://github.com/microBeesTech/pythonSDK";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

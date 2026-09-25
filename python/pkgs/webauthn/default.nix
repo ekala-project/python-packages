@@ -41,6 +41,5 @@ buildPythonPackage rec {
     description = "Implementation of the WebAuthn API";
     homepage = "https://github.com/duo-labs/py_webauthn";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

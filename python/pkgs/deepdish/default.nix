@@ -51,6 +51,5 @@ buildPythonPackage rec {
     mainProgram = "ddls";
     homepage = "https://github.com/uchicago-cs/deepdish";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

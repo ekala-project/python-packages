@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "NTLM authentication support for HTTPX";
     homepage = "https://github.com/ulodciv/httpx-ntlm";
     license = lib.licenses.isc;
-    maintainers = [ ];
   };
 }

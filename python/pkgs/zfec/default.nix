@@ -24,6 +24,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://github.com/tahoe-lafs/zfec";
     description = "Fast erasure codec which can be used with the command-line, C, Python, or Haskell";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
   };
 })

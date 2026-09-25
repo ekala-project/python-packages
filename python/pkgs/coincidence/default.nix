@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Helper functions for pytest";
     homepage = "https://github.com/python-coincidence/coincidence";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

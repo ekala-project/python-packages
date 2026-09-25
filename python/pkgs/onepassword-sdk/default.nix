@@ -39,6 +39,5 @@ buildPythonPackage (finalAttrs: {
     description = "1Password Python SDK for programmatic secret management";
     homepage = "https://github.com/1Password/onepassword-sdk-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

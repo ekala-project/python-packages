@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "Python module to get information about Bizkaibus buses";
     homepage = "https://github.com/UgaitzEtxebarria/BizkaibusRTPI";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

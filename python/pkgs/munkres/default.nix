@@ -34,6 +34,5 @@ buildPythonPackage rec {
     homepage = "http://bmc.github.com/munkres/";
     description = "Munkres algorithm for the Assignment Problem";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

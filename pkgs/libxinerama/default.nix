@@ -45,7 +45,6 @@ stdenv.mkDerivation (finalAttrs: {
       mitOpenGroup
       x11NoPermitPersons
     ];
-    maintainers = [ ];
     pkgConfigModules = [ "xinerama" ];
     platforms = lib.platforms.unix;
   };

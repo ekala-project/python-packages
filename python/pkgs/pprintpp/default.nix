@@ -34,7 +34,6 @@ buildPythonPackage rec {
     description = "Drop-in replacement for pprint that's actually pretty";
     homepage = "https://github.com/wolever/pprintpp";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     mainProgram = "pypprint";
   };
 }

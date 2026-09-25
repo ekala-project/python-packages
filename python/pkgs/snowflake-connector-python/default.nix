@@ -93,6 +93,5 @@ buildPythonPackage rec {
     description = "Snowflake Connector for Python";
     homepage = "https://github.com/snowflakedb/snowflake-connector-python";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

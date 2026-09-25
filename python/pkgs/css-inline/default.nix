@@ -59,6 +59,5 @@ buildPythonPackage rec {
     description = "Inline CSS into style attributes";
     homepage = "https://github.com/Stranger6667/css-inline";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

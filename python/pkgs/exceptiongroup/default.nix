@@ -52,6 +52,5 @@ buildPythonPackage rec {
     description = "Backport of PEP 654 (exception groups)";
     homepage = "https://github.com/agronholm/exceptiongroup";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

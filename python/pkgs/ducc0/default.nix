@@ -68,6 +68,5 @@ buildPythonPackage (finalAttrs: {
     description = "Efficient algorithms for Fast Fourier transforms and more";
     homepage = "https://gitlab.mpcdf.mpg.de/mtr/ducc";
     license = lib.licenses.gpl2Plus;
-    maintainers = [ ];
   };
 })

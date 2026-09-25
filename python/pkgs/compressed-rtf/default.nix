@@ -23,6 +23,5 @@ buildPythonPackage (finalAttrs: {
     description = "Compressed Rich Text Format (RTF) compression and decompression";
     homepage = "https://github.com/delimitry/compressed_rtf";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

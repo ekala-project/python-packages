@@ -31,6 +31,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python wrapper for the Kiosker API";
     homepage = "https://github.com/Top-North/kiosker-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

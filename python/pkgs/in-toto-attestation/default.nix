@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "Python implementation of in-toto attestations";
     homepage = "https://github.com/in-toto/attestation/tree/main/python";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

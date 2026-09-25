@@ -55,6 +55,5 @@ buildPythonPackage rec {
     description = "Python3 OpenAPI 3 Spec Parser";
     homepage = "https://github.com/Dorthu/openapi3";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

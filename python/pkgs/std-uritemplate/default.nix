@@ -27,6 +27,5 @@ buildPythonPackage (finalAttrs: {
     description = "Std-uritemplate implementation for Python";
     homepage = "https://github.com/std-uritemplate/std-uritemplate";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

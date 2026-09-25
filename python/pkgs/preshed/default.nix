@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Cython hash tables that assume keys are pre-hashed";
     homepage = "https://github.com/explosion/preshed";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

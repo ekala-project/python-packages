@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Python library that makes color math, color scales, and color-space conversion easy";
     homepage = "https://github.com/jsvine/spectra";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

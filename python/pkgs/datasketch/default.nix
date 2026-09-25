@@ -53,6 +53,5 @@ buildPythonPackage (finalAttrs: {
     description = "MinHash, LSH, LSH Forest, Weighted MinHash, HyperLogLog, HyperLogLog++, LSH Ensemble and HNSW";
     homepage = "https://ekzhu.com/datasketch/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

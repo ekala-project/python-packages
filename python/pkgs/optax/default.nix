@@ -42,6 +42,5 @@ buildPythonPackage (finalAttrs: {
     description = "Gradient processing and optimization library for JAX";
     homepage = "https://github.com/deepmind/optax";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

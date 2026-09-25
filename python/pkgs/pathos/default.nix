@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "Parallel graph management and execution in heterogeneous computing";
     homepage = "https://pathos.readthedocs.io/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

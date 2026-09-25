@@ -40,6 +40,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://github.com/modelscope/modelscope";
     license = lib.licenses.asl20;
     mainProgram = "modelscope";
-    maintainers = [ ];
   };
 })

@@ -47,6 +47,5 @@ buildPythonPackage {
     mainProgram = "widsindex";
     homepage = "https://github.com/webdataset/webdataset";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

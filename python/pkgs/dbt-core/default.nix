@@ -122,7 +122,6 @@ buildPythonPackage (finalAttrs: {
     '';
     homepage = "https://github.com/dbt-labs/dbt-core";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "dbt";
   };
 })

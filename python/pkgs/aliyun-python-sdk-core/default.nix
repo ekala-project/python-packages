@@ -35,6 +35,5 @@ buildPythonPackage (finalAttrs: {
     description = "Core module of Aliyun Python SDK";
     homepage = "https://github.com/aliyun/aliyun-openapi-python-sdk";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

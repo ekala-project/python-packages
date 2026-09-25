@@ -30,6 +30,5 @@ buildPythonPackage rec {
     description = "Restricted execution environment for Python to run untrusted code";
     homepage = "https://github.com/zopefoundation/RestrictedPython";
     license = lib.licenses.zpl21;
-    maintainers = [ ];
   };
 }

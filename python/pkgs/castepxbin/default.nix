@@ -33,6 +33,5 @@ buildPythonPackage rec {
     description = "Collection of readers for CASTEP binary outputs";
     homepage = "https://github.com/zhubonan/castepxbin";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

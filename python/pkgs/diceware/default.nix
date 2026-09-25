@@ -49,6 +49,5 @@ buildPythonPackage rec {
     mainProgram = "diceware";
     homepage = "https://github.com/ulif/diceware";
     license = lib.licenses.gpl3;
-    maintainers = [ ];
   };
 }

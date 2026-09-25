@@ -43,6 +43,5 @@ buildPythonPackage rec {
     description = "Multiprocessing distributed task queue for Django based on Django-Q";
     homepage = "https://github.com/django-q2/django-q2";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

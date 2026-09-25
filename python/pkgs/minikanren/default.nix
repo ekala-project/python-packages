@@ -48,6 +48,5 @@ buildPythonPackage (finalAttrs: {
     description = "Relational programming in Python";
     homepage = "https://github.com/pythological/kanren";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

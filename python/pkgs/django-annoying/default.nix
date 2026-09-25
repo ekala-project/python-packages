@@ -39,6 +39,5 @@ buildPythonPackage (finalAttrs: {
     description = "Django application that tries to eliminate annoying things in the Django framework";
     homepage = "https://skorokithakis.github.io/django-annoying/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

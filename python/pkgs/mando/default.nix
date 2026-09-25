@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Create Python CLI apps with little to no effort at all";
     homepage = "https://mando.readthedocs.org";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -37,6 +37,5 @@ buildPythonPackage rec {
     description = "Greybox and Coverage-based library to fuzz Python applications";
     homepage = "https://github.com/Rog3rSm1th/frelatage";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

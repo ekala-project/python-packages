@@ -42,6 +42,5 @@ buildPythonPackage (finalAttrs: {
     description = "Microsoft Azure Management Core Library for Python";
     homepage = "https://github.com/Azure/azure-sdk-for-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

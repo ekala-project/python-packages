@@ -22,6 +22,5 @@ buildPythonPackage rec {
     description = "Module for stubbing";
     homepage = "https://github.com/alex/pretend";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

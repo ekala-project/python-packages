@@ -33,6 +33,5 @@ buildPythonPackage (finalAttrs: {
     description = "LlamaIndex Vector Store Integration for Qdrant";
     homepage = "https://github.com/run-llama/llama_index/tree/main/llama-index-integrations/vector_stores/llama-index-vector-stores-qdrant";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

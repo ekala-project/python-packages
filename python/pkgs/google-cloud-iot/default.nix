@@ -60,6 +60,5 @@ buildPythonPackage rec {
     description = "Cloud IoT API API client library";
     homepage = "https://github.com/googleapis/python-iot";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

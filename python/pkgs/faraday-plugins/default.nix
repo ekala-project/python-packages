@@ -77,7 +77,6 @@ buildPythonPackage (finalAttrs: {
     description = "Security tools report parsers for Faraday";
     homepage = "https://github.com/infobyte/faraday_plugins";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
     mainProgram = "faraday-plugins";
   };
 })

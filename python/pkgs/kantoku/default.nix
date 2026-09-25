@@ -68,6 +68,5 @@ buildPythonPackage (finalAttrs: {
     description = "A Process & Socket Manager built with zmq";
     homepage = "https://github.com/bentoml/kantoku";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

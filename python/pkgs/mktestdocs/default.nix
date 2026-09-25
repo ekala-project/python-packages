@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Run pytest against markdown files/docstrings";
     homepage = "https://github.com/koaning/mktestdocs";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

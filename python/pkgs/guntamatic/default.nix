@@ -31,6 +31,5 @@ buildPythonPackage (finalAttrs: {
     description = "Module to get data from a Guntamatic heater e.g. BMK 20";
     homepage = "https://github.com/JensTimmerman/guntamatic";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 })

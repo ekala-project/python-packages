@@ -31,7 +31,6 @@ buildPythonPackage rec {
       gpl2Only # or
       gpl3Only
     ];
-    maintainers = [ ];
     mainProgram = "findimports";
   };
 }

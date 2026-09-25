@@ -42,6 +42,5 @@ buildPythonPackage rec {
     description = "Python library for Google Fonts language metadata";
     homepage = "https://github.com/googlefonts/lang";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

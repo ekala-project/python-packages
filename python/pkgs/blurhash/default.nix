@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "Pure-Python implementation of the blurhash algorithm";
     homepage = "https://github.com/halcy/blurhash-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

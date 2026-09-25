@@ -44,6 +44,5 @@ buildPythonPackage rec {
     description = "C# Grammar for tree-sitter";
     homepage = "https://github.com/tree-sitter/tree-sitter-c-sharp";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

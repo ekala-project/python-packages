@@ -37,6 +37,5 @@ buildPythonPackage rec {
     description = "Cython wrapper for tinydtls with a Socket like interface";
     homepage = "https://git.fslab.de/jkonra2m/tinydtls-cython";
     license = lib.licenses.epl10;
-    maintainers = [ ];
   };
 }

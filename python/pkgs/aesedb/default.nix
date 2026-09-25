@@ -41,6 +41,5 @@ buildPythonPackage rec {
     mainProgram = "antdsparse";
     homepage = "https://github.com/skelsec/aesedb";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

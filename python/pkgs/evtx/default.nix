@@ -37,6 +37,5 @@ buildPythonPackage (finalAttrs: {
     description = "Bindings for evtx";
     homepage = "https://github.com/omerbenamram/pyevtx-rs";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

@@ -27,6 +27,5 @@ buildPythonPackage rec {
     description = "XML Schema validator and data conversion library for Python";
     homepage = "https://github.com/sissaschool/xmlschema";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

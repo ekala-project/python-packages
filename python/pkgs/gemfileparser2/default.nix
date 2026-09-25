@@ -35,6 +35,5 @@ buildPythonPackage rec {
       mit # or
       gpl3Plus
     ];
-    maintainers = [ ];
   };
 }

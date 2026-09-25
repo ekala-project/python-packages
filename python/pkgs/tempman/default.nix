@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "Create and clean up temporary directories";
     homepage = "https://github.com/mwilliamson/python-tempman";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

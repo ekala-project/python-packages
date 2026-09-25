@@ -25,6 +25,5 @@ buildPythonPackage rec {
     description = "Python Sorted Collections";
     homepage = "http://www.grantjenks.com/docs/sortedcollections/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

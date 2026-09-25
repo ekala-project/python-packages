@@ -43,6 +43,5 @@ buildPythonPackage rec {
     description = "Multi factor authentication for Django";
     homepage = "https://github.com/xi/django-mfa3";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

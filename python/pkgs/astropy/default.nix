@@ -54,6 +54,5 @@ buildPythonPackage rec {
     homepage = "https://www.astropy.org";
     license = lib.licenses.bsd3;
     platforms = lib.platforms.all;
-    maintainers = [ ];
   };
 }

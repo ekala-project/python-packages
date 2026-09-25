@@ -27,6 +27,5 @@ buildPythonPackage (finalAttrs: {
     description = "Simple wrapper library to the Apache Arrow-based Feather File Format";
     homepage = "https://github.com/wesm/feather";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

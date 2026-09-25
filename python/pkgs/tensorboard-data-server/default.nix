@@ -24,6 +24,5 @@ buildPythonPackage rec {
     description = "Fast data loading for TensorBoard";
     homepage = "https://github.com/tensorflow/tensorboard/tree/master/tensorboard/data/server";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

@@ -79,6 +79,5 @@ buildPythonPackage {
     mainProgram = "ansible-community";
     homepage = "https://www.ansible.com";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
   };
 }

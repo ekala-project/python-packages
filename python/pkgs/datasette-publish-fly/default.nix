@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "Datasette plugin for publishing data using Fly";
     homepage = "https://datasette.io/plugins/datasette-publish-fly";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

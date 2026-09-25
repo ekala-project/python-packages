@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Native Python client for Vertica database";
     homepage = "https://github.com/vertica/vertica-python";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

@@ -72,6 +72,5 @@ buildPythonPackage (finalAttrs: {
     description = "Orbax provides common utility libraries for JAX users";
     homepage = "https://github.com/google/orbax/tree/main/checkpoint";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

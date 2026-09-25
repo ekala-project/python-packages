@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "SDK for connection to the LK IHC Controller";
     homepage = "https://github.com/dingusdk/PythonIhcSdk";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
   };
 }

@@ -27,6 +27,5 @@ buildPythonPackage rec {
     description = "Module for determining appropriate platform-specific directories";
     homepage = "https://platformdirs.readthedocs.io/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

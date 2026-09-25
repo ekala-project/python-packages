@@ -36,7 +36,6 @@ buildPythonPackage rec {
     description = "Bidirectional HTML-python translator";
     homepage = "https://gitlab.com/kamichal/airium";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "airium";
   };
 }

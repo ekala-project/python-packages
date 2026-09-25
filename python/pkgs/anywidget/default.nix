@@ -46,6 +46,5 @@ buildPythonPackage rec {
     description = "Custom jupyter widgets made easy";
     homepage = "https://github.com/manzt/anywidget";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -49,6 +49,5 @@ buildPythonPackage (finalAttrs: {
     description = "Neo4j Bolt Driver for Python";
     homepage = "https://github.com/neo4j/neo4j-python-driver";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

@@ -43,6 +43,5 @@ buildPythonPackage (finalAttrs: {
     description = "This is the Microsoft Azure SAP Hana on Azure Management Client Library";
     homepage = "https://github.com/Azure/azure-sdk-for-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

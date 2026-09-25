@@ -39,6 +39,5 @@ buildPythonPackage (finalAttrs: {
     description = "Micro-library to normalize text strings";
     homepage = "https://github.com/pudo/normality";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

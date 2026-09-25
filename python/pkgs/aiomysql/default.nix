@@ -37,6 +37,5 @@ buildPythonPackage rec {
     description = "MySQL driver for asyncio";
     homepage = "https://github.com/aio-libs/aiomysql";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -65,6 +65,5 @@ buildPythonPackage rec {
     '';
     homepage = "https://github.com/bobbui/json-logging-python";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

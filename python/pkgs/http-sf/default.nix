@@ -31,6 +31,5 @@ buildPythonPackage (finalAttrs: {
     description = "Module to parse and serialise HTTP structured field values";
     homepage = "https://github.com/mnot/http-sf";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

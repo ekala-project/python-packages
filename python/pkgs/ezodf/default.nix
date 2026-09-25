@@ -38,6 +38,5 @@ buildPythonPackage rec {
     description = "Extract, add, modify, or delete document data in OpenDocument (ODF) files";
     homepage = "https://github.com/T0ha/ezodf";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

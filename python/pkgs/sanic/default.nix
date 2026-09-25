@@ -65,7 +65,6 @@ buildPythonPackage rec {
     description = "Web server and web framework";
     homepage = "https://github.com/sanic-org/sanic/";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "sanic";
   };
 }

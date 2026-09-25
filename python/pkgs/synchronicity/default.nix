@@ -51,6 +51,5 @@ buildPythonPackage (finalAttrs: {
     description = "Export blocking and async library versions from a single async implementation";
     homepage = "https://github.com/modal-labs/synchronicity";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

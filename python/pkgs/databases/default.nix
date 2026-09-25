@@ -55,6 +55,5 @@ buildPythonPackage rec {
     description = "Async database support for Python";
     homepage = "https://github.com/encode/databases";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

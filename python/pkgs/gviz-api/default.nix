@@ -26,6 +26,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python API for Google Visualization";
     homepage = "https://developers.google.com/chart/interactive/docs/dev/gviz_api_lib";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

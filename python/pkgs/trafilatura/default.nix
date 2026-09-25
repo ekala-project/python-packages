@@ -52,7 +52,6 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://trafilatura.readthedocs.io";
     downloadPage = "https://github.com/adbar/trafilatura";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "trafilatura";
   };
 })

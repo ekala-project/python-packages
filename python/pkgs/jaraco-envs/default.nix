@@ -42,6 +42,5 @@ buildPythonPackage rec {
     description = "Classes for orchestrating Python (virtual) environments";
     homepage = "https://github.com/jaraco/jaraco.envs";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

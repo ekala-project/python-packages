@@ -37,6 +37,5 @@ buildPythonPackage (finalAttrs: {
     description = "Async Python client for the Hayward Aquarite pool API";
     homepage = "https://github.com/fdebrus/aioaquarite";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Color math and conversion library (fork)";
     homepage = "https://github.com/bkmgit/python-colormath2";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "PEP-484 stubs for Celery";
     homepage = "https://github.com/sbdchd/celery-types";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

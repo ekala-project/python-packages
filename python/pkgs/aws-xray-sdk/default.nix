@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "AWS X-Ray SDK for the Python programming language";
     homepage = "https://github.com/aws/aws-xray-sdk-python";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

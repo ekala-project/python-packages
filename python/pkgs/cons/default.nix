@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Implementation of Lisp/Scheme-like cons in Python";
     homepage = "https://github.com/pythological/python-cons";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 }

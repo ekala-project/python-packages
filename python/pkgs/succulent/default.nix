@@ -47,6 +47,5 @@ buildPythonPackage rec {
     description = "Collect POST requests";
     homepage = "https://github.com/firefly-cpp/succulent";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

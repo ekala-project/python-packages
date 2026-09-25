@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Powerful and exquisite WSGI/ASGI framework/toolkit";
     homepage = "https://github.com/abersheeran/baize";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

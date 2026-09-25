@@ -39,6 +39,5 @@ buildPythonPackage rec {
     mainProgram = "statmake";
     homepage = "https://github.com/daltonmaag/statmake";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

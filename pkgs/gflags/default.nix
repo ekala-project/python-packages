@@ -42,7 +42,6 @@ stdenv.mkDerivation (finalAttrs: {
     '';
     homepage = "https://gflags.github.io/gflags/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 })

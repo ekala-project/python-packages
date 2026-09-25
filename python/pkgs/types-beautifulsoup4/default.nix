@@ -30,6 +30,5 @@ buildPythonPackage rec {
     description = "Typing stubs for beautifulsoup4";
     homepage = "https://pypi.org/project/types-beautifulsoup4/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

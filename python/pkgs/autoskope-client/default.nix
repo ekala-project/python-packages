@@ -39,6 +39,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python client library for the Autoskope API";
     homepage = "https://github.com/mcisk/autoskope_client";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

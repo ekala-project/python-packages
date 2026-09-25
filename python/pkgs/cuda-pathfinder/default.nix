@@ -39,7 +39,6 @@ buildPythonPackage (finalAttrs: {
     description = "one-stop solution for locating CUDA components";
     homepage = "https://github.com/NVIDIA/cuda-python/tree/main/cuda_pathfinder";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 })

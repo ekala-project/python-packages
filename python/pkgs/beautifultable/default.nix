@@ -35,6 +35,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python package for printing visually appealing tables";
     homepage = "https://github.com/pri22296/beautifultable";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

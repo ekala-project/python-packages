@@ -47,6 +47,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python implementation of the Frontier Silicon API";
     homepage = "https://github.com/wlcrs/python-afsapi";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

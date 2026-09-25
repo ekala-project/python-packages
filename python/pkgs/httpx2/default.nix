@@ -88,6 +88,5 @@ buildPythonPackage (finalAttrs: {
     description = "A next generation HTTP client for Python";
     homepage = "https://github.com/pydantic/httpx2";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

@@ -55,6 +55,5 @@ buildPythonPackage rec {
     description = "Basic client for connecting to Home Assistant over websockets and REST";
     homepage = "https://github.com/music-assistant/python-hass-client";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

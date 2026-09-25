@@ -43,6 +43,5 @@ buildPythonPackage rec {
     description = "Dom's tools for Tom's Obvious, Minimal Language";
     homepage = "https://github.com/domdfcoding/dom_toml";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

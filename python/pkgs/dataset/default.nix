@@ -37,6 +37,5 @@ buildPythonPackage rec {
     description = "Toolkit for Python-based database access";
     homepage = "https://dataset.readthedocs.io";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

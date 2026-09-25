@@ -44,6 +44,5 @@ buildPythonPackage rec {
     description = "Python client for Ogmios";
     homepage = "https://gitlab.com/viperscience/ogmios-python";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
   };
 }

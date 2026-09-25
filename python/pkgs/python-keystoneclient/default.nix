@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Client Library for OpenStack Identity";
     homepage = "https://github.com/openstack/python-keystoneclient";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

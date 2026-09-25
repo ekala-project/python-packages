@@ -31,6 +31,5 @@ buildPythonPackage (finalAttrs: {
     description = "Curated lists of tags and attributes for sanitizing html";
     homepage = "https://github.com/yourcelf/bleach-allowlist";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 })

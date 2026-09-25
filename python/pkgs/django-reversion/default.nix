@@ -30,6 +30,5 @@ buildPythonPackage rec {
     description = "Extension to the Django web framework that provides comprehensive version control facilities";
     homepage = "https://github.com/etianen/django-reversion";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

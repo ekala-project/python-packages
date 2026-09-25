@@ -35,6 +35,5 @@ buildPythonPackage (finalAttrs: {
     description = "LlamaIndex CLI";
     homepage = "https://github.com/run-llama/llama_index/tree/main/llama-index-cli";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

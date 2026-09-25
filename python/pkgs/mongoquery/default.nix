@@ -23,6 +23,5 @@ buildPythonPackage rec {
     description = "Python implementation of mongodb queries";
     homepage = "https://github.com/kapouille/mongoquery";
     license = lib.licenses.unlicense;
-    maintainers = [ ];
   };
 }

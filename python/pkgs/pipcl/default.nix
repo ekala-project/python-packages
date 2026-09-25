@@ -29,6 +29,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python packaging operations for use by setup.py";
     homepage = "https://github.com/ArtifexSoftware/pipcl";
     license = lib.licenses.agpl3Only;
-    maintainers = [ ];
   };
 })

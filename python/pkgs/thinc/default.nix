@@ -73,6 +73,5 @@ buildPythonPackage (finalAttrs: {
     description = "Library for NLP machine learning";
     homepage = "https://github.com/explosion/thinc";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

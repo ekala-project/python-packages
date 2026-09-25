@@ -38,6 +38,5 @@ buildPythonPackage rec {
     mainProgram = "editorconfig";
     homepage = "https://github.com/editorconfig/editorconfig-core-py";
     license = lib.licenses.psfl;
-    maintainers = [ ];
   };
 }

@@ -94,6 +94,5 @@ buildPythonPackage (finalAttrs: {
     sourceProvenance = with lib.sourceTypes; [
       binaryBytecode
     ];
-    maintainers = [ ];
   };
 })

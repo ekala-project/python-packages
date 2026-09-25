@@ -45,6 +45,5 @@ buildPythonPackage rec {
     description = "Scientific library providing a collection of spectral collocation differentiation matrices";
     homepage = "https://github.com/labrosse/dmsuite";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
   };
 }

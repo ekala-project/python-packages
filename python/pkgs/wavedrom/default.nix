@@ -41,6 +41,5 @@ buildPythonPackage (finalAttrs: {
     mainProgram = "wavedrompy";
     homepage = "https://github.com/wallento/wavedrompy";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

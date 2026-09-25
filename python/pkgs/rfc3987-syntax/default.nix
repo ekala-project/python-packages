@@ -33,6 +33,5 @@ buildPythonPackage rec {
     description = "Helper functions to syntactically validate strings according to RFC 3987";
     homepage = "https://github.com/willynilly/rfc3987-syntax";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

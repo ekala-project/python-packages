@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Lightweight version of glyphsets for ESPHome";
     homepage = "https://github.com/esphome/esphome-glyphsets";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

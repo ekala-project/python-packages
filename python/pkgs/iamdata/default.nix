@@ -32,6 +32,5 @@ buildPythonPackage (finalAttrs: {
     description = "Module for utilizing AWS IAM data for Services, Actions, Resources, and Condition Keys";
     homepage = "https://github.com/cloud-copilot/iam-data-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

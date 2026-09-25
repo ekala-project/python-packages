@@ -29,6 +29,5 @@ buildPythonPackage rec {
     mainProgram = "f90nml";
     homepage = "https://f90nml.readthedocs.io";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

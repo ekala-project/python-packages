@@ -37,6 +37,5 @@ buildPythonPackage rec {
     description = "Parsing made fun ... using typing";
     homepage = "https://github.com/hgrecco/flexparser";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

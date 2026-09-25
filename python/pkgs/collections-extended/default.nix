@@ -40,6 +40,5 @@ buildPythonPackage rec {
     description = "Extra Python Collections - bags (multisets), setlists (unique list/indexed set), RangeMap and IndexedDict";
     homepage = "https://github.com/mlenzen/collections-extended";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

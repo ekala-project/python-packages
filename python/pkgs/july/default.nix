@@ -47,6 +47,5 @@ buildPythonPackage rec {
     description = "Small library for creating pretty heatmaps of daily data";
     homepage = "https://github.com/e-hulten/july";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

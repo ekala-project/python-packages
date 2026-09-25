@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Python module that implements the Transmission bittorent client RPC protocol";
     homepage = "https://github.com/Trim21/transmission-rpc";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

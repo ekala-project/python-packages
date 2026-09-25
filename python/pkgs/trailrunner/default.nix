@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Module to walk paths and run things";
     homepage = "https://github.com/omnilib/trailrunner";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

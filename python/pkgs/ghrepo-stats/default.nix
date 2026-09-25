@@ -37,7 +37,6 @@ buildPythonPackage (finalAttrs: {
     description = "Python module and CLI tool for GitHub repo statistics";
     homepage = "https://github.com/mrbean-bremen/ghrepo-stats";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "show-ghstats";
   };
 })

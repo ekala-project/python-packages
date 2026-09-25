@@ -45,6 +45,5 @@ buildPythonPackage {
     homepage = "https://github.com/rlabbe/filterpy";
     description = "Kalman filtering and optimal estimation library";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

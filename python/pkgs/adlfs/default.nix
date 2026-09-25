@@ -49,6 +49,5 @@ buildPythonPackage (finalAttrs: {
     description = "Filesystem interface to Azure-Datalake Gen1 and Gen2 Storage";
     homepage = "https://github.com/fsspec/adlfs";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

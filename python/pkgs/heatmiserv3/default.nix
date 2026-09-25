@@ -45,6 +45,5 @@ buildPythonPackage rec {
     description = "Library to interact with Heatmiser Themostats using V3 protocol";
     homepage = "https://github.com/andylockran/heatmiserV3";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

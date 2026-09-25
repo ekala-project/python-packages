@@ -46,6 +46,5 @@ buildPythonPackage rec {
     description = "WebSocket support for HTTPX";
     homepage = "https://github.com/frankie567/httpx-ws";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

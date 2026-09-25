@@ -37,6 +37,5 @@ buildPythonPackage (finalAttrs: {
     mainProgram = "";
     homepage = "https://hist.readthedocs.io/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

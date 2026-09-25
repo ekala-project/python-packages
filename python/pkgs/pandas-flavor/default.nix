@@ -39,6 +39,5 @@ buildPythonPackage (finalAttrs: {
     description = "The easy way to write your own flavor of Pandas";
     homepage = "https://github.com/pyjanitor-devs/pandas_flavor";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

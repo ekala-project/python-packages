@@ -45,6 +45,5 @@ buildPythonPackage rec {
     '';
     homepage = "https://github.com/kmike/marisa-trie";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

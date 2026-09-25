@@ -47,6 +47,5 @@ buildPythonPackage (finalAttrs: {
     description = "Event-driven, async-first, step-based way to control the execution flow of AI applications like Agents";
     homepage = "https://pypi.org/project/llama-index-workflows/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

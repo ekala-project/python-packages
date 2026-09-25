@@ -59,6 +59,5 @@ buildPythonPackage rec {
     description = "Python client for Ruckus Unleashed and Ruckus ZoneDirector";
     homepage = "https://github.com/ms264556/aioruckus";
     license = lib.licenses.bsd0;
-    maintainers = [ ];
   };
 }

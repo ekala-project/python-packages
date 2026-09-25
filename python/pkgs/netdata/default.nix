@@ -41,6 +41,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python API for interacting with Netdata";
     homepage = "https://github.com/home-assistant-ecosystem/python-netdata";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

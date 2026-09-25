@@ -57,6 +57,5 @@ buildPythonPackage rec {
     description = "Pytest plugin for distributed testing";
     homepage = "https://github.com/pytest-dev/pytest-xdist";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

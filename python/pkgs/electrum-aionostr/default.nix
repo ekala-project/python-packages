@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "Asyncio nostr client";
     homepage = "https://github.com/spesmilo/electrum-aionostr";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

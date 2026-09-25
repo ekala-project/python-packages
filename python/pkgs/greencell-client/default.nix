@@ -32,6 +32,5 @@ buildPythonPackage (finalAttrs: {
     description = "Library for communication with Greencell devices used by the Home Assistant integration";
     homepage = "https://github.com/csg-sa/greencell-client";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

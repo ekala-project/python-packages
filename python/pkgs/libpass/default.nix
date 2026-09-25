@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "Comprehensive password hashing framework supporting over 30 schemes";
     homepage = "https://github.com/ThirVondukr/passlib";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

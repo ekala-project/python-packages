@@ -26,6 +26,5 @@ buildPythonPackage rec {
     mainProgram = "pyprof2calltree";
     homepage = "https://github.com/pwaller/pyprof2calltree";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

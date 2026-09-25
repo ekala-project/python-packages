@@ -47,6 +47,5 @@ buildPythonPackage rec {
     description = "World Coordinate System (WCS) ASDF schemas";
     homepage = "https://github.com/asdf-format/asdf-wcs-schemas";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

@@ -61,6 +61,5 @@ buildPythonPackage rec {
     description = "Python implementation of the Language Server Protocol";
     homepage = "https://github.com/microsoft/lsprotocol";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

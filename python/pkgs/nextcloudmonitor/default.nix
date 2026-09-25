@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "Python wrapper around nextcloud monitor api";
     homepage = "https://github.com/meichthys/nextcloud_monitor";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

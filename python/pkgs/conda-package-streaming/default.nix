@@ -30,6 +30,5 @@ buildPythonPackage rec {
     description = "Efficient library to read from new and old format .conda and .tar.bz2 conda packages";
     homepage = "https://github.com/conda/conda-package-streaming";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

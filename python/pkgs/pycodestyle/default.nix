@@ -37,6 +37,5 @@ buildPythonPackage rec {
     mainProgram = "pycodestyle";
     homepage = "https://pycodestyle.pycqa.org/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

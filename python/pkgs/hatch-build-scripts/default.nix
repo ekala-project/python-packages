@@ -31,6 +31,5 @@ buildPythonPackage {
     description = "Plugin for Hatch that runs build scripts and saves their artifacts";
     homepage = "https://github.com/rmorshea/hatch-build-scripts";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

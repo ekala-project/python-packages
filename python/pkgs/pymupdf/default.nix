@@ -112,7 +112,6 @@ buildPythonPackage (finalAttrs: {
     description = "Python bindings for MuPDF's rendering library";
     homepage = "https://github.com/pymupdf/PyMuPDF";
     license = lib.licenses.agpl3Only;
-    maintainers = [ ];
     platforms = lib.platforms.unix;
   };
 })

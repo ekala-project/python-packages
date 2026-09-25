@@ -31,7 +31,6 @@ buildPythonPackage rec {
     description = "Parser for the KDL language";
     homepage = "https://github.com/tabatkins/kdlpy";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "kdlreformat";
   };
 }

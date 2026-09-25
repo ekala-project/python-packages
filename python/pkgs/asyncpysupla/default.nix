@@ -29,6 +29,5 @@ buildPythonPackage rec {
     description = "Simple Supla's OpenAPI async wrapper";
     homepage = "https://github.com/mwegrzynek/asyncpysupla";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

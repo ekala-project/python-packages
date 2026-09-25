@@ -40,6 +40,5 @@ buildPythonPackage rec {
     mainProgram = "iocextract";
     homepage = "https://github.com/InQuest/iocextract";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
   };
 }

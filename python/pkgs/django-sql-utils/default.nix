@@ -47,6 +47,5 @@ buildPythonPackage rec {
     description = "SQL utilities for Django";
     homepage = "https://github.com/martsberger/django-sql-utils";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

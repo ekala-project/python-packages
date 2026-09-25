@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Library for interacting with Amazon S3";
     homepage = "https://github.com/jpetrucciani/bucketstore";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

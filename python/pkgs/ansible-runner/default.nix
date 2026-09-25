@@ -48,7 +48,6 @@ buildPythonPackage rec {
     description = "Helps when interfacing with Ansible";
     homepage = "https://github.com/ansible/ansible-runner";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "ansible-runner";
   };
 }

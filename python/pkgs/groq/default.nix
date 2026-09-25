@@ -61,6 +61,5 @@ buildPythonPackage rec {
     description = "Library for the Groq API";
     homepage = "https://github.com/groq/groq-python";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

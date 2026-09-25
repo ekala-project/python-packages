@@ -76,6 +76,5 @@ buildPythonPackage (finalAttrs: {
     description = "Aviation Weather parsing engine";
     homepage = "https://github.com/avwx-rest/avwx-engine";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

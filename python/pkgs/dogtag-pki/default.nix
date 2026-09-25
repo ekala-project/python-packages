@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Enterprise-class Certificate Authority";
     homepage = "https://github.com/dogtagpki/pki";
     license = lib.licenses.gpl2;
-    maintainers = [ ];
   };
 }

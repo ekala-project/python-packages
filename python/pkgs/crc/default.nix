@@ -30,7 +30,6 @@ buildPythonPackage rec {
     description = "Python module for calculating and verifying predefined & custom CRC's";
     homepage = "https://nicoretti.github.io/crc/";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
     mainProgram = "crc";
   };
 }

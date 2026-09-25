@@ -54,6 +54,5 @@ buildPythonPackage (finalAttrs: {
     description = "Object storage interface definitions for Python";
     homepage = "http://developmentseed.org/obspec/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

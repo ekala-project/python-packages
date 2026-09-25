@@ -50,6 +50,5 @@ buildPythonPackage rec {
     description = "Extensions and monkey-patching for django-stubs";
     homepage = "https://github.com/typeddjango/django-stubs";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

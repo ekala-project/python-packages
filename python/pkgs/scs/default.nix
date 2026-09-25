@@ -58,6 +58,5 @@ buildPythonPackage (finalAttrs: {
     inherit (pkgs.scs.meta) homepage;
     downloadPage = "https://github.com/bodono/scs-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

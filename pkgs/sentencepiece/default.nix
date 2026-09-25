@@ -54,6 +54,5 @@ stdenv.mkDerivation (finalAttrs: {
     description = "Unsupervised text tokenizer for Neural Network-based text generation";
     license = lib.licenses.asl20;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 })

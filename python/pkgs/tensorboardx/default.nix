@@ -43,7 +43,6 @@ buildPythonPackage rec {
     homepage = "https://tensorboardx.readthedocs.io";
     downloadPage = "https://github.com/lanpa/tensorboardX";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 }

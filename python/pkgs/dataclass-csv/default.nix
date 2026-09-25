@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Map CSV data into dataclasses";
     homepage = "https://github.com/dfurtado/dataclass-csv";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

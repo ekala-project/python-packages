@@ -26,6 +26,5 @@ buildPythonPackage (finalAttrs: {
     description = "Class based template tags for Django";
     homepage = "https://github.com/divio/django-classy-tags";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

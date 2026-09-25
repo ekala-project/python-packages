@@ -40,6 +40,5 @@ buildPythonPackage rec {
     description = "Python wrapper for NOAA CO-OPS Tides & Currents Data and Metadata APIs";
     homepage = "https://github.com/GClunies/noaa_coops";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

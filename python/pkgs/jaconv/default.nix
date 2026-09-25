@@ -24,6 +24,5 @@ buildPythonPackage rec {
     description = "Python Japanese character interconverter for Hiragana, Katakana, Hankaku and Zenkaku";
     homepage = "https://github.com/ikegami-yukino/jaconv";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

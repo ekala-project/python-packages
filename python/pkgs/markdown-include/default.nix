@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Extension to Python-Markdown which provides an include function";
     homepage = "https://github.com/cmacmackin/markdown-include";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
   };
 }

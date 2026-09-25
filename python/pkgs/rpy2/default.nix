@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Python interface to R";
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

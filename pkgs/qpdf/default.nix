@@ -65,6 +65,5 @@ stdenv.mkDerivation (finalAttrs: {
     mainProgram = "qpdf";
     platforms = lib.platforms.all;
     pkgConfigModules = [ "libqpdf" ];
-    maintainers = [ ];
   };
 })

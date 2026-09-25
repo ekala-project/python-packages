@@ -48,6 +48,5 @@ buildPythonPackage rec {
     description = "Cython backend for GSTools";
     homepage = "https://github.com/GeoStat-Framework/GSTools-Cython";
     license = lib.licenses.lgpl3Only;
-    maintainers = [ ];
   };
 }

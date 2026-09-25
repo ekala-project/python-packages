@@ -31,7 +31,6 @@ buildPythonPackage rec {
     description = "Module that wraps the pdftoppm utility to convert PDF to PIL Image object";
     homepage = "https://github.com/Belval/pdf2image";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.all;
   };
 }

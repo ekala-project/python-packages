@@ -74,6 +74,5 @@ buildPythonPackage (finalAttrs: {
     description = "Kusto Data Client";
     homepage = "https://github.com/Azure/azure-kusto-python/tree/master/azure-kusto-data";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

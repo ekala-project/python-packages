@@ -74,6 +74,5 @@ buildPythonPackage rec {
     mainProgram = "panel";
     homepage = "https://github.com/holoviz/panel";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "This is the Microsoft Azure Container Service Management Client Library";
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/containerservice/azure-mgmt-containerservice";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

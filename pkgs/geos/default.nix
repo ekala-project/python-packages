@@ -34,6 +34,5 @@ stdenv.mkDerivation (finalAttrs: {
     license = lib.licenses.lgpl21Only;
     mainProgram = "geosop";
     pkgConfigModules = [ "geos" ];
-    maintainers = [ ];
   };
 })

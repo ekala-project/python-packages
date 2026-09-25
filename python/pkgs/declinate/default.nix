@@ -47,6 +47,5 @@ buildPythonPackage rec {
     description = "Command line interface generator";
     homepage = "https://gitlab.com/ternaris/declinate";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

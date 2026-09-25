@@ -42,6 +42,5 @@ buildPythonPackage rec {
     description = "Backtest trading strategies in Python";
     homepage = "https://kernc.github.io/backtesting.py/";
     license = lib.licenses.agpl3Only;
-    maintainers = [ ];
   };
 }

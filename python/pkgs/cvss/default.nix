@@ -36,7 +36,6 @@ buildPythonPackage rec {
     description = "Library for CVSS2/3/4";
     homepage = "https://github.com/RedHatProductSecurity/cvss";
     license = lib.licenses.lgpl3Plus;
-    maintainers = [ ];
     mainProgram = "cvss_calculator";
   };
 }

@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "JSON5 serializer and parser library";
     homepage = "https://github.com/Kijewski/pyjson5";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

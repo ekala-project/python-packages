@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "Pure python Aho-Corasick library";
     homepage = "https://github.com/abusix/ahocorapy";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

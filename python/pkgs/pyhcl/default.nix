@@ -30,6 +30,5 @@ buildPythonPackage rec {
     mainProgram = "hcltool";
     homepage = "https://github.com/virtuald/pyhcl";
     license = lib.licenses.mpl20;
-    maintainers = [ ];
   };
 }

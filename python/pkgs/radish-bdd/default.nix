@@ -40,6 +40,5 @@ buildPythonPackage rec {
     description = "Behaviour-Driven-Development tool for python";
     homepage = "https://radish-bdd.github.io/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

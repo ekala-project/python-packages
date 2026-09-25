@@ -29,6 +29,5 @@ buildPythonPackage (finalAttrs: {
     description = "Module for base62 encoding";
     homepage = "https://github.com/suminb/base62";
     license = lib.licenses.bsd2WithViews;
-    maintainers = [ ];
   };
 })

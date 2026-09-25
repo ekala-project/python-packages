@@ -28,6 +28,5 @@ buildPythonPackage (finalAttrs: {
     description = "Lightweight Python library for creating and verifying ALTCHA challenges";
     homepage = "https://github.com/altcha-org/altcha-lib-py";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

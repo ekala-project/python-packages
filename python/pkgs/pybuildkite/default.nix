@@ -39,6 +39,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python library for the Buildkite API";
     homepage = "https://github.com/pyasi/pybuildkite";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 })

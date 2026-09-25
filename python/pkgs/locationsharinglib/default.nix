@@ -44,6 +44,5 @@ buildPythonPackage rec {
     description = "Python package to retrieve coordinates from a Google account";
     homepage = "https://locationsharinglib.readthedocs.io/";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

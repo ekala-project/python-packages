@@ -26,6 +26,5 @@ buildPythonPackage (finalAttrs: {
     description = "Does single char input, like C getch/getche";
     homepage = "https://pypi.org/project/getch/";
     license = lib.licenses.publicDomain;
-    maintainers = [ ];
   };
 })

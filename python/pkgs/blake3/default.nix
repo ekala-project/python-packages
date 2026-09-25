@@ -52,6 +52,5 @@ buildPythonPackage rec {
       cc0
       asl20
     ];
-    maintainers = [ ];
   };
 }

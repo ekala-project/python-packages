@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Mdformat plugin to generate a table of contents";
     homepage = "https://github.com/hukkin/mdformat-toc";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

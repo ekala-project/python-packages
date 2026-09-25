@@ -33,6 +33,5 @@ buildPythonPackage (finalAttrs: {
     description = "SSL-enabled development server for Django";
     homepage = "https://github.com/teddziuba/django-sslserver";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

@@ -42,6 +42,5 @@ buildPythonPackage rec {
     description = "Module to obtain and visualize band paths in the Brillouin zone of crystal structures";
     homepage = "https://github.com/materialscloud-org/seekpath";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -61,6 +61,5 @@ buildPythonPackage (finalAttrs: {
     description = "Powerful, user-friendly HTTP client for Python";
     homepage = "https://github.com/urllib3/urllib3";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

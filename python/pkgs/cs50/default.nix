@@ -43,6 +43,5 @@ buildPythonPackage rec {
     description = "CS50 Library for Python";
     homepage = "https://github.com/cs50/python-cs50/";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 }

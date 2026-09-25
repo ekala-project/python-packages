@@ -32,6 +32,5 @@ buildPythonPackage (finalAttrs: {
     description = "Retry layer for HTTPX";
     homepage = "https://github.com/will-ockmore/httpx-retries";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

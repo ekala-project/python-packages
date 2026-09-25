@@ -50,6 +50,5 @@ buildPythonPackage rec {
     description = "Easy access to the most common Google Drive API calls";
     homepage = "https://github.com/Lykos153/python-drivelib";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 }

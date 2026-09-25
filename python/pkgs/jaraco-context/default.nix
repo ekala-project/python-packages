@@ -38,6 +38,5 @@ buildPythonPackage rec {
     description = "Python module for context management";
     homepage = "https://github.com/jaraco/jaraco.context";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

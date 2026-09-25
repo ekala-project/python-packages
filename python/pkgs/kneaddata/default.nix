@@ -31,7 +31,6 @@ buildPythonPackage rec {
     homepage = "https://github.com/biobakery/kneaddata";
     license = lib.licenses.mit;
     platforms = lib.platforms.all;
-    maintainers = [ ];
     mainProgram = "kneaddata";
   };
 }

@@ -47,6 +47,5 @@ buildPythonPackage rec {
     description = "Async ntfy client library";
     homepage = "https://github.com/tr4nt0r/aiontfy";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

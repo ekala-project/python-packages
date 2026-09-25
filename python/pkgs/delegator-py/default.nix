@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Subprocesses for Humans 2.0";
     homepage = "https://github.com/amitt001/delegator.py";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

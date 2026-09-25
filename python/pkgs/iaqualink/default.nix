@@ -57,6 +57,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python library for Jandy iAqualink";
     homepage = "https://github.com/flz/iaqualink-py";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

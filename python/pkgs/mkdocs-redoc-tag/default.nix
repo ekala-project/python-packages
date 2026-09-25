@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "MkDocs plugin supports for add Redoc UI in page";
     homepage = "https://github.com/blueswen/mkdocs-redoc-tag";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

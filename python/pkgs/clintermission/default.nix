@@ -33,6 +33,5 @@ buildPythonPackage (finalAttrs: {
     description = "Non-fullscreen command-line selection menu";
     homepage = "https://github.com/sebageek/clintermission";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

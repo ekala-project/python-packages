@@ -45,7 +45,6 @@ buildPythonPackage (finalAttrs: {
     description = "Interact with a Connect Box 3 modem/router";
     homepage = "https://github.com/home-assistant-ecosystem/python-connect-box3";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "connect-box";
   };
 })

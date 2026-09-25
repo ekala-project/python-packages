@@ -24,6 +24,5 @@ buildPythonPackage (finalAttrs: {
     description = "Cron expression parser and evaluator";
     homepage = "https://github.com/cuu508/cronsim";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

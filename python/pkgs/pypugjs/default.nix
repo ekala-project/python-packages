@@ -41,6 +41,5 @@ buildPythonPackage rec {
     mainProgram = "pypugjs";
     homepage = "https://github.com/kakulukia/pypugjs";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

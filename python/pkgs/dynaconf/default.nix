@@ -26,6 +26,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/dynaconf/dynaconf";
     mainProgram = "dynaconf";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

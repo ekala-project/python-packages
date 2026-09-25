@@ -20,7 +20,6 @@ buildPythonPackage rec {
   meta = {
     description = "Collection of common regular expressions bundled with an easy to use interface";
     homepage = "https://github.com/madisonmay/CommonRegex";
-    maintainers = [ ];
     license = lib.licenses.mit;
   };
 }

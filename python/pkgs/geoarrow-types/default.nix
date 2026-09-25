@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "PyArrow types for geoarrow";
     homepage = "https://github.com/geoarrow/geoarrow-python";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

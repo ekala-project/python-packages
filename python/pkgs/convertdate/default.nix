@@ -31,7 +31,6 @@ buildPythonPackage (finalAttrs: {
     description = "Utils for converting between date formats and calculating holidays";
     homepage = "https://github.com/fitnr/convertdate";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "censusgeocode";
   };
 })

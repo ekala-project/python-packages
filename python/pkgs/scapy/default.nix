@@ -58,6 +58,5 @@ buildPythonPackage rec {
     homepage = "https://scapy.net/";
     license = lib.licenses.gpl2Only;
     platforms = lib.platforms.unix;
-    maintainers = [ ];
   };
 }

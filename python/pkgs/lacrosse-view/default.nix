@@ -37,6 +37,5 @@ buildPythonPackage rec {
     description = "Client for retrieving data from the La Crosse View cloud";
     homepage = "https://github.com/IceBotYT/lacrosse_view";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

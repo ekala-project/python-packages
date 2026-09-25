@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Python module to communicate locally with Mill heaters";
     homepage = "https://github.com/Danielhiversen/pyMillLocal";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

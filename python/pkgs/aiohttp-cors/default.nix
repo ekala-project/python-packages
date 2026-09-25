@@ -38,6 +38,5 @@ buildPythonPackage rec {
     description = "CORS support for aiohttp";
     homepage = "https://github.com/aio-libs/aiohttp-cors";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

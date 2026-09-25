@@ -38,6 +38,5 @@ buildPythonPackage rec {
     description = "Create temporary files and temporary dirs in memory-based filesystems on Linux";
     homepage = "https://github.com/mbello/memory-tempfile";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

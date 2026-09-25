@@ -59,6 +59,5 @@ buildPythonPackage rec {
     mainProgram = "jupyter-console";
     homepage = "https://github.com/jupyter/jupyter_console";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

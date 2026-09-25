@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Angr Intermediate Language";
     homepage = "https://github.com/angr/ailment";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

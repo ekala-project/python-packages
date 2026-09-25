@@ -30,6 +30,5 @@ buildPythonPackage (finalAttrs: {
     description = "Implementation of the Base58Check encoding scheme";
     homepage = "https://github.com/joeblackwaslike/base58check";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

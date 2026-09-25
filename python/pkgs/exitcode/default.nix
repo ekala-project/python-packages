@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Preferred system exit codes as defined by sysexits.h";
     homepage = "https://github.com/rumpelsepp/exitcode";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

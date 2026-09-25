@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "Module for integrating and sending Web Push Notification in Django Application";
     homepage = "https://github.com/safwanrahman/django-webpush/";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
   };
 }

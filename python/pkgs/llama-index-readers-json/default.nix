@@ -30,6 +30,5 @@ buildPythonPackage (finalAttrs: {
     description = "LlamaIndex Readers Integration for Json";
     homepage = "https://github.com/run-llama/llama_index/tree/main/llama-index-integrations/readers/llama-index-readers-json";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

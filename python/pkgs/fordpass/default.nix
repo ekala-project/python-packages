@@ -29,6 +29,5 @@ buildPythonPackage rec {
     mainProgram = "demo.py";
     homepage = "https://github.com/clarkd/fordpass-python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

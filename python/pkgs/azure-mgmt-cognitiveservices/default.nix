@@ -40,6 +40,5 @@ buildPythonPackage rec {
     description = "This is the Microsoft Azure Cognitive Services Management Client Library";
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/cognitiveservices/azure-mgmt-cognitiveservices";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -31,6 +31,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python implementation of bounded Levenshtein distance (Ukkonen)";
     homepage = "https://github.com/asottile/ukkonen";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

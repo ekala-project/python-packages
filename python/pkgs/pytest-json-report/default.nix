@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Pytest plugin to report test results as JSON";
     homepage = "https://github.com/numirias/pytest-json-report";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -43,6 +43,5 @@ buildPythonPackage (finalAttrs: {
     description = "Async Python client for the Ghost Admin API";
     homepage = "https://github.com/TryGhost/aioghost";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

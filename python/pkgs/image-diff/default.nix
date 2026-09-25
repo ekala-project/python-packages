@@ -35,6 +35,5 @@ buildPythonPackage rec {
     mainProgram = "image-diff";
     homepage = "https://github.com/simonw/image-diff";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

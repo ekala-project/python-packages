@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "Bitcoin utility functions";
     homepage = "https://github.com/doersf/python-bitcoin-utils";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

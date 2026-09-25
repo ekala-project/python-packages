@@ -40,6 +40,5 @@ buildPythonPackage rec {
     description = "CSS Cascading Style Sheets library for Python";
     homepage = "https://github.com/jaraco/cssutils";
     license = lib.licenses.lgpl3Plus;
-    maintainers = [ ];
   };
 }

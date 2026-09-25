@@ -34,6 +34,5 @@ buildPythonPackage (finalAttrs: {
     description = "Universal Python binding for the LMDB 'Lightning' Database";
     homepage = "https://github.com/dw/py-lmdb";
     license = lib.licenses.openldap;
-    maintainers = [ ];
   };
 })

@@ -33,6 +33,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/CharlesGillanders/alphaess-openAPI";
     description = "Library that uses the Alpha ESS Open API to retrieve data on your Alpha ESS inverter, photovoltaic panels, and battery";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

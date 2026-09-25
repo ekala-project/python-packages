@@ -26,6 +26,5 @@ buildPythonPackage rec {
     description = "Human Readable Time Deltas";
     homepage = "https://git.unturf.com/python/ago";
     license = lib.licenses.publicDomain;
-    maintainers = [ ];
   };
 }

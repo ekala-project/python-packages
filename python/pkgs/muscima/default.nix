@@ -45,6 +45,5 @@ buildPythonPackage {
     description = "Tools for working with the MUSCIMA++ dataset of handwritten music notation";
     homepage = "https://github.com/hajicj/muscima";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

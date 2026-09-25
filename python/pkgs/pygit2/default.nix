@@ -47,6 +47,5 @@ buildPythonPackage rec {
     description = "Set of Python bindings to the libgit2 shared library";
     homepage = "https://github.com/libgit2/pygit2";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
   };
 }

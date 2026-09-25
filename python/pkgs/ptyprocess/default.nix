@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Run a subprocess in a pseudo terminal";
     homepage = "https://github.com/pexpect/ptyprocess";
     license = lib.licenses.isc;
-    maintainers = [ ];
   };
 }

@@ -37,6 +37,5 @@ buildPythonPackage rec {
     description = "Python library to interact with the HomeWizard Energy devices API";
     homepage = "https://github.com/DCSBL/aiohwenergy";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

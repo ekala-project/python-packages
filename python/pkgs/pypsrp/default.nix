@@ -48,6 +48,5 @@ buildPythonPackage (finalAttrs: {
     description = "PowerShell Remoting Protocol Client library";
     homepage = "https://github.com/jborean93/pypsrp";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

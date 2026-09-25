@@ -47,6 +47,5 @@ buildPythonPackage (finalAttrs: {
     description = "Authentication for Django Rest Framework";
     homepage = "https://github.com/iMerica/dj-rest-auth";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

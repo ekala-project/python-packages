@@ -48,6 +48,5 @@ buildPythonPackage rec {
     description = "Web sessions for aiohttp.web";
     homepage = "https://github.com/aio-libs/aiohttp-session";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

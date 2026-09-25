@@ -37,6 +37,5 @@ buildPythonPackage {
     mainProgram = "findpython";
     homepage = "https://github.com/frostming/findpython";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

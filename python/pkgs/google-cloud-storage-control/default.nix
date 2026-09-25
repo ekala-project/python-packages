@@ -46,6 +46,5 @@ buildPythonPackage (finalAttrs: {
     description = "Google Cloud Storage Control API client library";
     homepage = "https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-storage-control";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

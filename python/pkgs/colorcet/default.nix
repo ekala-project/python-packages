@@ -35,6 +35,5 @@ buildPythonPackage rec {
     mainProgram = "colorcet";
     homepage = "https://colorcet.pyviz.org";
     license = lib.licenses.cc-by-40;
-    maintainers = [ ];
   };
 }

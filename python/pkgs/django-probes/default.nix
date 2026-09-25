@@ -37,6 +37,5 @@ buildPythonPackage rec {
     description = "Django app to run database liveness probe in a Kubernetes project";
     homepage = "https://github.com/painless-software/django-probes";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

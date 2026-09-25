@@ -39,6 +39,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python Client for Organization Policy";
     homepage = "https://github.com/googleapis/google-cloud-python/blob/main/packages/${finalAttrs.pname}";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

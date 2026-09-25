@@ -43,6 +43,5 @@ buildPythonPackage (finalAttrs: {
     description = "This package will be released in the near future. Stay tuned";
     homepage = "https://pypi.org/project/azure-mgmt-domainregistration";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

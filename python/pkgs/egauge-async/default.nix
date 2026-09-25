@@ -49,6 +49,5 @@ buildPythonPackage (finalAttrs: {
     description = "Async client for eGauge energy monitor";
     homepage = "https://github.com/neggert/egauge-async";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 })

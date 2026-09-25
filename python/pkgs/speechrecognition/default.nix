@@ -74,6 +74,5 @@ buildPythonPackage (finalAttrs: {
       gpl2Only
       bsd3
     ];
-    maintainers = [ ];
   };
 })

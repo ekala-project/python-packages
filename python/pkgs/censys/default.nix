@@ -66,7 +66,6 @@ buildPythonPackage rec {
     description = "Python API wrapper for the Censys Search Engine (censys.io)";
     homepage = "https://github.com/censys/censys-python";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "censys";
   };
 }

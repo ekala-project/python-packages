@@ -42,6 +42,5 @@ buildPythonPackage rec {
     description = "Python client library to the MediaWiki API";
     license = lib.licenses.mit;
     homepage = "https://github.com/mwclient/mwclient";
-    maintainers = [ ];
   };
 }

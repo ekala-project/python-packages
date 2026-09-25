@@ -59,6 +59,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://github.com/supabase/supabase-py";
     license = lib.licenses.mit;
     description = "Supabase client for Python";
-    maintainers = [ ];
   };
 })

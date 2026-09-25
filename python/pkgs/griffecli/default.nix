@@ -40,6 +40,5 @@ buildPythonPackage (finalAttrs: {
     description = "Signatures for entire Python programs. Extract the structure, the frame, the skeleton of your project, to generate API documentation or find breaking changes in your API";
     homepage = "https://github.com/mkdocstrings/griffe";
     license = lib.licenses.isc;
-    maintainers = [ ];
   };
 })

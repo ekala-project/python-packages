@@ -49,7 +49,6 @@ buildPythonPackage rec {
     description = "Python module for AWS IAM security assessment";
     homepage = "https://github.com/salesforce/cloudsplaining";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
     mainProgram = "cloudsplaining";
   };
 }

@@ -52,6 +52,5 @@ buildPythonPackage rec {
     description = "Python module to read/write NFC tags or communicate with another NFC device";
     homepage = "https://github.com/nfcpy/nfcpy";
     license = lib.licenses.eupl11;
-    maintainers = [ ];
   };
 }

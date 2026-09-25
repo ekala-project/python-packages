@@ -47,6 +47,5 @@ buildPythonPackage (finalAttrs: {
     description = "Module to access the Bring! shopping lists API";
     homepage = "https://github.com/miaucl/bring-api";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

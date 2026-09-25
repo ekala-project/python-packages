@@ -36,6 +36,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://github.com/gnome-keysign/babel-glade";
     description = "Babel Glade XML files translatable strings extractor";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

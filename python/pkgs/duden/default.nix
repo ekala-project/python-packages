@@ -54,7 +54,6 @@ let
       '';
       license = lib.licenses.mit;
       mainProgram = "duden";
-      maintainers = [ ];
     };
   };
 in

@@ -47,6 +47,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python module for accessing the GeoNet NZ Quakes GeoJSON feeds";
     homepage = "https://github.com/exxamalte/python-aio-geojson-geonetnz-quakes";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

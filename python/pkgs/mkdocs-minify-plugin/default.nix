@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Mkdocs plugin to minify the HTML of a page before it is written to disk";
     homepage = "https://github.com/byrnereese/mkdocs-minify-plugin";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

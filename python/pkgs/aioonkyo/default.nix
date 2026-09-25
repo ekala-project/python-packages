@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Library for controlling Onkyo AV receivers";
     homepage = "https://github.com/arturpragacz/aioonkyo";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 }

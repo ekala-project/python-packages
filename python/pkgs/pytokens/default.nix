@@ -34,6 +34,5 @@ buildPythonPackage (finalAttrs: {
     description = "Fast, spec compliant Python 3.14+ tokenizer that runs on older Pythons";
     homepage = "https://github.com/tusharsadhwani/pytokens";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

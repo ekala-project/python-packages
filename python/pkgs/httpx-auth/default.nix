@@ -34,6 +34,5 @@ buildPythonPackage rec {
     description = "Authentication classes to be used with httpx";
     homepage = "https://github.com/Colin-b/httpx_auth";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -46,6 +46,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python Reddit API wrapper";
     homepage = "https://praw.readthedocs.org/";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 })

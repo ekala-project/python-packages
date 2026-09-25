@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Implementation of the CRC algorithm";
     homepage = "https://github.com/zeroSteiner/crcelk";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

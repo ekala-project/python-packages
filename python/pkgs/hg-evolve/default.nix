@@ -22,7 +22,6 @@ buildPythonPackage rec {
   meta = {
     description = "Enables the “changeset evolution” feature of Mercurial core";
     homepage = "https://www.mercurial-scm.org/doc/evolution/";
-    maintainers = [ ];
     license = lib.licenses.gpl2Plus;
   };
 }

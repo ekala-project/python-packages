@@ -45,7 +45,6 @@ buildPythonPackage (finalAttrs: {
     description = "Python SDK for GE smart appliances";
     homepage = "https://github.com/simbaja/gehome";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "gehome-appliance-data";
   };
 })

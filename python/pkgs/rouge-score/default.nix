@@ -52,6 +52,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python ROUGE Implementation";
     homepage = "https://github.com/google-research/google-research/tree/master/rouge";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

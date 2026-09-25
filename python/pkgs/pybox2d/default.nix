@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "2D Game Physics for Python";
     homepage = "https://github.com/pybox2d/pybox2d";
     license = lib.licenses.zlib;
-    maintainers = [ ];
   };
 }

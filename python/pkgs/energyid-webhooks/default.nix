@@ -41,6 +41,5 @@ buildPythonPackage rec {
     description = "Light weight Python package to interface with EnergyID Webhooks";
     homepage = "https://github.com/EnergieID/energyid-webhooks-py";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

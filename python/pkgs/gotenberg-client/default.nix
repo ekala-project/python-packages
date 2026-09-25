@@ -33,6 +33,5 @@ buildPythonPackage rec {
     description = "Python client for interfacing with the Gotenberg API";
     homepage = "https://github.com/stumpylog/gotenberg-client";
     license = lib.licenses.mpl20;
-    maintainers = [ ];
   };
 }

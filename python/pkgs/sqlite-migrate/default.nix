@@ -33,6 +33,5 @@ buildPythonPackage (finalAttrs: {
     description = "Simple database migration system for SQLite, based on sqlite-utils";
     homepage = "https://github.com/simonw/sqlite-migrate";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

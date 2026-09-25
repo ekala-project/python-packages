@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Pure-python ZUGFeRD implementation";
     homepage = "https://github.com/pretix/python-drafthorse";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

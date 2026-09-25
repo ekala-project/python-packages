@@ -37,6 +37,5 @@ buildPythonPackage rec {
     mainProgram = "cchardetect";
     homepage = "https://github.com/faust-streaming/cChardet";
     license = lib.licenses.mpl11;
-    maintainers = [ ];
   };
 }

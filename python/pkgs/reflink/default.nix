@@ -32,6 +32,5 @@ buildPythonPackage rec {
     description = "Python reflink wraps around platform specific reflink implementations";
     homepage = "https://gitlab.com/rubdos/pyreflink";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

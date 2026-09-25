@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Pythonic interface to netCDF4 via h5py";
     homepage = "https://github.com/shoyer/h5netcdf";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

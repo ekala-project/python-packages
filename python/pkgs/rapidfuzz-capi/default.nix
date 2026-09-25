@@ -24,6 +24,5 @@ buildPythonPackage rec {
     description = "C-API of RapidFuzz, which can be used to extend RapidFuzz from separate packages";
     homepage = "https://github.com/maxbachmann/rapidfuzz_capi";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

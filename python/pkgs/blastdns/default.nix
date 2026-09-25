@@ -79,6 +79,5 @@ buildPythonPackage (finalAttrs: {
     description = "Ultra-fast DNS resolver";
     homepage = "https://github.com/blacklanternsecurity/blastdns";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 })

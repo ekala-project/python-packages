@@ -31,6 +31,5 @@ buildPythonPackage rec {
       setup.py develop).
     '';
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

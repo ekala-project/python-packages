@@ -59,6 +59,5 @@ buildPythonPackage (finalAttrs: {
     description = "Integration package connecting Groq and LangChain";
     homepage = "https://github.com/langchain-ai/langchain/tree/master/libs/partners/groq";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

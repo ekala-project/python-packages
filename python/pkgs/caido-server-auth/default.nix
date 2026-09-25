@@ -44,6 +44,5 @@ buildPythonPackage (finalAttrs: {
     description = "Authenticate with a Caido instance";
     homepage = "https://github.com/caido-community/sdk-py/tree/main/packages/caido-server-auth";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

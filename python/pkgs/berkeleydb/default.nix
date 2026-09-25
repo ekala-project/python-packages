@@ -38,6 +38,5 @@ buildPythonPackage rec {
     description = "Python bindings for Oracle Berkeley DB";
     homepage = "https://www.jcea.es/programacion/pybsddb.htm";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

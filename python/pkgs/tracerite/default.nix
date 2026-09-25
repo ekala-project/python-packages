@@ -39,6 +39,5 @@ buildPythonPackage rec {
       publicDomain
       unlicense
     ];
-    maintainers = [ ];
   };
 }

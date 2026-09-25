@@ -34,6 +34,5 @@ buildPythonPackage rec {
     homepage = "https://github.com/scikit-fuzzy/scikit-fuzzy";
     description = "Fuzzy logic toolkit for scientific Python";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

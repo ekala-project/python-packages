@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "Python module for Asuswrt";
     homepage = "https://github.com/kennedyshead/aioasuswrt";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

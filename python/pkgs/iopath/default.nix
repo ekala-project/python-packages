@@ -37,6 +37,5 @@ buildPythonPackage {
     description = "Python library that provides common I/O interface across different storage backends";
     homepage = "https://github.com/facebookresearch/iopath";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

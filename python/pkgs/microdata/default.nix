@@ -29,6 +29,5 @@ buildPythonPackage (finalAttrs: {
     mainProgram = "microdata";
     homepage = "https://github.com/edsu/microdata";
     license = lib.licenses.cc0;
-    maintainers = [ ];
   };
 })

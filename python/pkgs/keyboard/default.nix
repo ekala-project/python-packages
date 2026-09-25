@@ -32,7 +32,6 @@ buildPythonPackage {
     description = "Hook and simulate keyboard events on Windows and Linux";
     homepage = "https://github.com/boppreh/keyboard";
     license = lib.licenses.mit;
-    maintainers = [ ];
     platforms = lib.platforms.linux;
   };
 }

@@ -30,6 +30,5 @@ buildPythonPackage rec {
     description = "Low-level PDF generator written in Python and based on PDF specification 1.7";
     homepage = "https://doc.courtbouillon.org/pydyf/stable/";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

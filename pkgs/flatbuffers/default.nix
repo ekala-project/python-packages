@@ -41,7 +41,6 @@ stdenv.mkDerivation rec {
     '';
     homepage = "https://google.github.io/flatbuffers/";
     license = lib.licenses.asl20;
-    maintainers = [ ];
     mainProgram = "flatc";
     platforms = lib.platforms.unix;
   };

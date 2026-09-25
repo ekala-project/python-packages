@@ -105,7 +105,6 @@ buildPythonPackage rec {
       asl20
       mit
     ];
-    maintainers = [ ];
     mainProgram = "minari";
   };
 }

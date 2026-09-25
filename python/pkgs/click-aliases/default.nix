@@ -27,6 +27,5 @@ buildPythonPackage (finalAttrs: {
     description = "Enable aliases for click";
     homepage = "https://github.com/click-contrib/click-aliases";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

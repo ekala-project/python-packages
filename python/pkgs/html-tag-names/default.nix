@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "List of known HTML tags";
     homepage = "https://github.com/Riverside-Healthcare/html-tag-names";
     license = lib.licenses.gpl3Only;
-    maintainers = [ ];
   };
 }

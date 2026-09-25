@@ -39,6 +39,5 @@ buildPythonPackage rec {
     description = "Logging tool for deep learning";
     homepage = "https://github.com/NVIDIA/dllogger";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

@@ -48,6 +48,5 @@ buildPythonPackage rec {
     description = "Flask + marshmallow for beautiful APIs";
     homepage = "https://github.com/marshmallow-code/flask-marshmallow";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

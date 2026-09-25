@@ -24,6 +24,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python c-module for siphash";
     homepage = "https://github.com/WeblateOrg/siphashc";
     license = lib.licenses.isc;
-    maintainers = [ ];
   };
 })

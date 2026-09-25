@@ -41,6 +41,5 @@ buildPythonPackage rec {
     description = "Asyncio-native library for requesting data from a Ruuvi Gateway";
     homepage = "https://github.com/akx/aioruuvigateway";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

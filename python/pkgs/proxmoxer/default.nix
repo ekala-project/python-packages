@@ -32,6 +32,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python wrapper for Proxmox API v2";
     homepage = "https://github.com/proxmoxer/proxmoxer";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

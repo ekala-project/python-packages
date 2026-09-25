@@ -36,6 +36,5 @@ buildPythonPackage rec {
     description = "Extends Numba to make it aware of SciPy";
     homepage = "https://github.com/numba/numba-scipy";
     license = lib.licenses.bsd2;
-    maintainers = [ ];
   };
 }

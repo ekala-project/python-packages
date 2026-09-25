@@ -49,6 +49,5 @@ buildPythonPackage rec {
     description = "Improved colorized diff";
     homepage = "https://github.com/jeffkaufman/icdiff";
     license = lib.licenses.psfl;
-    maintainers = [ ];
   };
 }

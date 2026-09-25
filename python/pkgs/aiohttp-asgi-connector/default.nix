@@ -39,6 +39,5 @@ buildPythonPackage (finalAttrs: {
     description = "An AIOHTTP ClientSession connector for directly interacting with ASGI applications";
     homepage = "https://github.com/thearchitector/aiohttp-asgi-connector";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 })

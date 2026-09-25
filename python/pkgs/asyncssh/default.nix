@@ -57,6 +57,5 @@ buildPythonPackage rec {
       epl20 # or
       gpl2Plus
     ];
-    maintainers = [ ];
   };
 }

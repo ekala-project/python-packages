@@ -38,7 +38,6 @@ buildPythonPackage rec {
     description = "Modular source code checker: pep8, pyflakes and co";
     homepage = "https://github.com/PyCQA/flake8";
     license = lib.licenses.mit;
-    maintainers = [ ];
     mainProgram = "flake8";
   };
 }

@@ -55,6 +55,5 @@ buildPythonPackage (finalAttrs: {
     downloadPage = "https://github.com/alexschimpf/fastapi-versionizer/releases/tag/${finalAttrs.src.tag}";
     homepage = "https://github.com/alexschimpf/fastapi-versionizer";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

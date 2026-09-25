@@ -67,6 +67,5 @@ buildPythonPackage rec {
     description = "Python library to interact with the API behind the myVAILLANT app";
     homepage = "https://github.com/signalkraft/myPyllant";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

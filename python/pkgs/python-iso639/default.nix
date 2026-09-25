@@ -24,6 +24,5 @@ buildPythonPackage (finalAttrs: {
     description = "ISO 639 language codes, names, and other associated information";
     homepage = "https://github.com/jacksonllee/iso639";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

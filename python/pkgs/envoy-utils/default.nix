@@ -27,6 +27,5 @@ buildPythonPackage rec {
     description = "Python utilities for the Enphase Envoy";
     homepage = "https://pypi.org/project/envoy-utils/";
     license = lib.licenses.gpl3Plus;
-    maintainers = [ ];
   };
 }

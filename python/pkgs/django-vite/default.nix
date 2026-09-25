@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Integration of ViteJS in a Django project";
     homepage = "https://github.com/MrBin99/django-vite";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

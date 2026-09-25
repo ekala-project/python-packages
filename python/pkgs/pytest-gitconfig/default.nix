@@ -28,6 +28,5 @@ buildPythonPackage (finalAttrs: {
     description = "Pytest gitconfig sandbox";
     homepage = "https://github.com/noirbizarre/pytest-gitconfig";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

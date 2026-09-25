@@ -72,6 +72,5 @@ buildPythonPackage (finalAttrs: {
 
     # I don't directly use this, only needed it as a dependency of debianbts
     #  so co-maintainers would be welcome.
-    maintainers = [ ];
   };
 })

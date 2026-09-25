@@ -28,6 +28,5 @@ buildPythonPackage (finalAttrs: {
     description = "Library that defines a Json type alias for Python";
     homepage = "https://github.com/kevinheavey/jsonalias";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

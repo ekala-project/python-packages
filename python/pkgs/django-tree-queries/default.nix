@@ -49,6 +49,5 @@ buildPythonPackage rec {
     description = "Adjacency-list trees for Django using recursive common table expressions. Supports PostgreSQL, sqlite, MySQL and MariaDB";
     homepage = "https://github.com/feincms/django-tree-queries";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

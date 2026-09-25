@@ -42,6 +42,5 @@ buildPythonPackage rec {
     description = "WebRTC models as Python dataclasses with mashumaro";
     homepage = "https://github.com/home-assistant-libs/python-webrtc-models";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

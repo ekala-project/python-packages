@@ -43,6 +43,5 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://codeberg.org/Lonami/Telethon";
     description = "Full-featured Telegram client library for Python 3";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

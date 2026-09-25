@@ -36,6 +36,5 @@ buildPythonPackage (finalAttrs: {
     description = "Acunetix Web Vulnerability Scanner SDK for Python";
     homepage = "https://github.com/hikariatama/acunetix";
     license = lib.licenses.agpl3Only;
-    maintainers = [ ];
   };
 })

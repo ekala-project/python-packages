@@ -39,6 +39,5 @@ buildPythonPackage (finalAttrs: {
     mainProgram = "mac_vendor_lookup";
     homepage = "https://github.com/bauerj/mac_vendor_lookup";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 })

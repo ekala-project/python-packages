@@ -33,6 +33,5 @@ buildPythonPackage rec {
     description = "Cython bindings and Pillow plugin for JPEG XL";
     homepage = "https://github.com/olokelo/jxlpy";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

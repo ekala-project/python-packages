@@ -31,6 +31,5 @@ buildPythonPackage (finalAttrs: {
     description = "Python to communicate with the Brel hubs";
     homepage = "https://gitlab.com/rogiervandergeer/brelpy";
     license = lib.licenses.agpl3Only;
-    maintainers = [ ];
   };
 })

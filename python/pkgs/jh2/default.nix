@@ -45,6 +45,5 @@ buildPythonPackage (finalAttrs: {
     description = "HTTP/2 State-Machine based protocol implementation";
     homepage = "https://github.com/jawah/h2";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 })

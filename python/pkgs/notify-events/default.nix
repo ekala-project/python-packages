@@ -28,6 +28,5 @@ buildPythonPackage rec {
     description = "Python client for Notify.Events";
     homepage = "https://github.com/notify-events/python";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "Python client for AEMET OpenData Rest API";
     homepage = "https://github.com/Noltari/AEMET-OpenData";
     license = lib.licenses.gpl2Only;
-    maintainers = [ ];
   };
 }

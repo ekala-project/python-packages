@@ -37,6 +37,5 @@ buildPythonPackage rec {
     mainProgram = "histoprint";
     homepage = "https://github.com/scikit-hep/histoprint";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

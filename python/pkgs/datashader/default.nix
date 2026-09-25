@@ -72,6 +72,5 @@ buildPythonPackage rec {
     mainProgram = "datashader";
     homepage = "https://datashader.org";
     license = lib.licenses.bsd3;
-    maintainers = [ ];
   };
 }

@@ -31,6 +31,5 @@ buildPythonPackage rec {
     description = "Python wrapper for the Aurora API";
     homepage = "https://github.com/djtimca/aurora-api";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

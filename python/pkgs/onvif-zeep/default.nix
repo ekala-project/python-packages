@@ -31,6 +31,5 @@ buildPythonPackage rec {
     mainProgram = "onvif-cli";
     homepage = "https://github.com/quatanium/python-onvif";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

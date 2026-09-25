@@ -35,6 +35,5 @@ buildPythonPackage rec {
     description = "ACME protocol implementation in Python";
     homepage = "https://github.com/certbot/certbot";
     license = lib.licenses.asl20;
-    maintainers = [ ];
   };
 }

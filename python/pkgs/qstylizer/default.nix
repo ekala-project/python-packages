@@ -40,6 +40,5 @@ buildPythonPackage rec {
     description = "Qt stylesheet generation utility for PyQt/PySide";
     homepage = "https://github.com/blambright/qstylizer";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }

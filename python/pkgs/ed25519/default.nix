@@ -34,6 +34,5 @@ buildPythonPackage rec {
     mainProgram = "edsig";
     homepage = "https://github.com/warner/python-ed25519";
     license = lib.licenses.mit;
-    maintainers = [ ];
   };
 }
