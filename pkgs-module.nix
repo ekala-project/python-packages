@@ -3,7 +3,7 @@
 let
   nativeOverlay = lib.packageSets.mkAutoCalledPackageDir ./pkgs;
   pythonOverlay = lib.packageSets.mkAutoCalledPackageDir ./python/pkgs;
-  pythonOverrides = import ./python-packages.nix;
+  pythonOverrides = import ./ci/python-packages.nix;
   pkgsOverlay = import ./top-level.nix;
 in
 {

@@ -7,7 +7,7 @@ poly-repo nixpkgs fork.
 
 ```
 default.nix         # Entry point, return pkgs + our changes in this repo
-python-packages.nix # Python overlay, applied after the auto called entries in `pkgs/`
+ci/python-packages.nix # Python overlay, applied after the auto called entries in `pkgs/`
 top-level.nix       # top-level overlay
 pkgs/               # mkAutoCalledDirectory containing all python expressions, these get auto called based on directory name
 ```

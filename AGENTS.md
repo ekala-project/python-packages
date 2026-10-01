@@ -9,9 +9,9 @@ This repository is a curated collection of Python (and a few native) packages fo
 | [`default.nix`](default.nix) | Entry point; imports pins and applies `pkgs-module.nix` via the corepkgs module system |
 | [`pins.nix`](pins.nix) | Pinned Git dependencies (`corepkgs`, `nix-lib`) |
 | [`pkgs-module.nix`](pkgs-module.nix) | Module that wires up native and Python overlays via `mkAutoCalledPackageDir` |
-| [`python-packages.nix`](python-packages.nix) | Post-processing overlay for aliases and overrides applied after auto-called entries |
+| [`ci/python-packages.nix`](ci/python-packages.nix) | Post-processing overlay for aliases and overrides applied after auto-called entries |
 | [`top-level.nix`](top-level.nix) | Promotes select Python packages to CLI applications via `toPythonApplication` |
-| [`repos-packages.nix`](repos-packages.nix) | Standalone helper that projects overlays onto base packages (useful for validation/testing) |
+| [`ci/repos-packages.nix`](ci/repos-packages.nix) | Standalone helper that projects overlays onto base packages (useful for validation/testing) |
 | [`python/pkgs/`](python/pkgs/) | ~2,500+ auto-discovered Python package expressions |
 | [`pkgs/`](pkgs/) | Native (C/C++) package expressions (`qhull`, `xsimd`) |
 | [`README.md`](README.md) | Brief project overview |
@@ -25,7 +25,7 @@ python/pkgs/requests/default.nix  -->  python3Packages.requests
 pkgs/qhull/default.nix            -->  pkgs.qhull
 ```
 
-Only add an entry to `python-packages.nix` if a package needs post-processing (aliasing, dependency patching, overrides). Only add to `top-level.nix` if a Python package should be exposed as a top-level CLI binary.
+Only add an entry to `ci/python-packages.nix` if a package needs post-processing (aliasing, dependency patching, overrides). Only add to `top-level.nix` if a Python package should be exposed as a top-level CLI binary.
 
 ## Adding a Python Package
 
@@ -96,9 +96,33 @@ nix-build -A python3Packages.<pname>
 
 # Format
 nix fmt <path-to-file>
+
+# Full eval gate (same as CI)
+./ci/eval.sh
 ```
 
 For native packages, use the bare attribute name (e.g., `nix-build -A qhull`).
+
+## CI / GitHub Actions
+
+The `.github/workflows/nix.yml` workflow runs two gates on every push and PR to `master`:
+
+| Job | What it checks | Command |
+|-----|---------------|---------|
+| **lint** | Nix formatting via `nix fmt . -- --ci` | `nix fmt . -- --ci` |
+| **eval** | Every package evaluates without error | `./ci/eval.sh` |
+
+Both jobs use the `ekala-corepkgs` Cachix cache.
+
+### CI scripts (`ci/`)
+
+| File | Purpose |
+|------|---------|
+| [`ci/eval.sh`](ci/eval.sh) | Shell wrapper; fails on eval errors or Nix warnings |
+| [`ci/eval.nix`](ci/eval.nix) | Entry point that deep-seq's every package via `packages.nix` |
+| [`ci/packages.nix`](ci/packages.nix) | Enumerates all packages with `tryEval` to separate real bugs from expected throws |
+| [`ci/repos-packages.nix`](ci/repos-packages.nix) | Lists all derivations contributed by this repo (for automated updates) |
+| [`ci/shadowed-packages.nix`](ci/shadowed-packages.nix) | Finds packages that shadow corepkgs (useful after pin bumps) |
 
 ### Checking if a dependency exists
 
@@ -107,9 +131,9 @@ nix-instantiate -A python3Packages.<dep>  # Python dependency
 nix-instantiate -A <dep>                   # Native dependency
 ```
 
-Do **not** grep `top-level.nix` or `python-packages.nix` -- packages are auto-discovered and may not appear there.
+Do **not** grep `top-level.nix` or `ci/python-packages.nix` -- packages are auto-discovered and may not appear there.
 
-## Current Overrides in python-packages.nix
+## Current Overrides in ci/python-packages.nix
 
 | Package | Override Reason |
 |---------|----------------|

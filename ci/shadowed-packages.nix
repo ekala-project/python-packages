@@ -1,12 +1,12 @@
-# shadowed-packages.nix — Discover python-packages packages that shadow corepkgs.
+# shadowed-packages.nix — Discover python-packages that shadow corepkgs.
 #
 # After bumping the corepkgs pin, run:
-#   nix-instantiate --eval --strict shadowed-packages.nix -A all --json | jq .
+#   nix-instantiate --eval --strict ci/shadowed-packages.nix -A all --json | jq .
 #
 # Packages in `pkgsDir` are safe candidates for removal.
 # Packages in `topLevel` are intentional overrides — review before removing.
 let
-  pins = import ./pins.nix;
+  pins = import ../pins.nix;
 
   inherit (builtins)
     readDir
@@ -41,12 +41,12 @@ let
     // overlayKeys (import (pins.core + "/top-level.nix"));
 
   # --- python-packages keys ---
-  localPkgs = dirKeys ./pkgs;
-  localToplevel = overlayKeys (import ./top-level.nix);
+  pythonPkgs = dirKeys ../pkgs;
+  pythonToplevel = overlayKeys (import ../top-level.nix);
 
   # --- intersection by source ---
-  shadowedPkgsDir = intersectAttrs corepkgsAll localPkgs;
-  shadowedTopLevel = intersectAttrs corepkgsAll localToplevel;
+  shadowedPkgsDir = intersectAttrs corepkgsAll pythonPkgs;
+  shadowedTopLevel = intersectAttrs corepkgsAll pythonToplevel;
   allShadowed = shadowedPkgsDir // shadowedTopLevel;
 in
 {

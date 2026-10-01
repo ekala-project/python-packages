@@ -26,13 +26,13 @@ If this fails, report the error and stop.
 Run the shadowed-packages detection script:
 
 ```
-nix-instantiate --eval --strict shadowed-packages.nix -A pkgsDir --json
+nix-instantiate --eval --strict ci/shadowed-packages.nix -A pkgsDir --json
 ```
 
 Also check for top-level shadows:
 
 ```
-nix-instantiate --eval --strict shadowed-packages.nix -A topLevel --json
+nix-instantiate --eval --strict ci/shadowed-packages.nix -A topLevel --json
 ```
 
 ## Step 4: Prune shadowed `pkgs/` directories
