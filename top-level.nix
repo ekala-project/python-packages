@@ -9,10 +9,6 @@ final: prev: {
   fastep = with final.python3Packages; toPythonApplication fastentrypoints;
   huey = with final.python3Packages; toPythonApplication huey;
   libsoxr = final.soxr;
-  libmpg123 = final.mpg123.override {
-    libOnly = true;
-    withConplay = false;
-  };
   poetry = with final.python3Packages; toPythonApplication poetry;
   pox = with final.python3Packages; toPythonApplication pox;
   rnc2rng = with final.python3Packages; toPythonApplication rnc2rng;
