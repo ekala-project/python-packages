@@ -1,6 +1,7 @@
 # These will be added to the pkgs scope
 final: prev: {
   ansi2html = with final.python3Packages; toPythonApplication ansi2html;
+  breathe = with final.python3Packages; toPythonApplication breathe;
   exifread = with final.python3Packages; toPythonApplication exifread;
   ghp-import = with final.python3Packages; toPythonApplication ghp-import;
   glad = with final.python3Packages; toPythonApplication glad;
