@@ -176,8 +176,6 @@ let
         src = py.pkgs.azure-mgmt-resource.src;
 
         installPhase = ''
-          runHook preInstall
-
           mkdir -p $out/${py.sitePackages}
           for pkg in ${
             lib.concatStringsSep " " (
@@ -192,8 +190,6 @@ let
           }; do
             cp -rs --no-preserve=mode "$pkg/${py.sitePackages}/." "$out/${py.sitePackages}/" || true
           done
-
-          runHook postInstall
         '';
 
         doCheck = false;

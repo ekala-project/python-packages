@@ -40,14 +40,10 @@ let
         inherit pname src;
         inherit (base) version;
         installPhase = ''
-          runHook preInstall
-
           mkdir -p $out
           unzip ${src}/packages/${location}/${pname}.zip
           mkdir -p $out/${location}
           cp -R ${pname}/ $out/${location}
-
-          runHook postInstall
         '';
       }
     );

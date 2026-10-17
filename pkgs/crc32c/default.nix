@@ -53,9 +53,7 @@ stdenv.mkDerivation (finalAttrs: {
   doInstallCheck = true;
 
   installCheckPhase = ''
-    runHook preInstallCheck
     ctest
-    runHook postInstallCheck
   '';
 
   postFixup = ''

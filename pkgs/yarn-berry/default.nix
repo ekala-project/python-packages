@@ -40,15 +40,11 @@ stdenv.mkDerivation (finalAttrs: {
   dontConfigure = true;
 
   buildPhase = ''
-    runHook preBuild
     yarn workspace @yarnpkg/cli build:cli
-    runHook postBuild
   '';
 
   installPhase = ''
-    runHook preInstall
     install -Dm 755 ./packages/yarnpkg-cli/bundles/yarn.js "$out/bin/yarn"
-    runHook postInstall
   '';
 
   passthru = (callPackage ./fetcher { yarn-berry = finalAttrs; });

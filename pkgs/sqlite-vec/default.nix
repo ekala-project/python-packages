@@ -27,13 +27,9 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   installPhase = ''
-    runHook preInstall
-
     install -Dm444 -t "$out/lib" \
       "dist/libsqlite_vec0${stdenv.hostPlatform.extensions.staticLibrary}" \
       "dist/vec0${stdenv.hostPlatform.extensions.sharedLibrary}"
-
-    runHook postInstall
   '';
 
   meta = {

@@ -33,11 +33,9 @@ stdenv.mkDerivation (finalAttrs: {
   ];
 
   installPhase = ''
-    runHook preInstall
     mkdir -p $out/lib
     cp -r include $out/
     cp out/*.a out/*.so out/*.dylib $out/lib/ 2>/dev/null || true
-    runHook postInstall
   '';
 
   meta = {

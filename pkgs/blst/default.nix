@@ -16,16 +16,10 @@ stdenv.mkDerivation (finalAttrs: {
   };
 
   buildPhase = ''
-    runHook preBuild
-
     ./build.sh ${lib.optionalString stdenv.hostPlatform.isWindows "flavour=mingw64"}
     ./build.sh -shared ${lib.optionalString stdenv.hostPlatform.isWindows "flavour=mingw64"}
-
-    runHook postBuild
   '';
   installPhase = ''
-    runHook preInstall
-
     mkdir -p $out/{lib,include}
     for lib in libblst.{a,so,dylib}; do
       if [ -f $lib ]; then
@@ -57,8 +51,6 @@ stdenv.mkDerivation (finalAttrs: {
     Libs: -L''${libdir} -lblst
     Libs.private:
     EOF
-
-    runHook postInstall
   '';
 
   # ensure we have the right install id set.  Otherwise the library

@@ -121,8 +121,6 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   installPhase = ''
-    runHook preInstall
-
     make -C src/common install pg_config.env
     make -C src/include install
     make -C src/interfaces/libpq install
@@ -141,8 +139,6 @@ stdenv.mkDerivation (finalAttrs: {
 
     rm -rfv $out/share
     rm -rfv $dev/lib/*_shlib.a
-
-    runHook postInstall
   '';
 
   postInstall =

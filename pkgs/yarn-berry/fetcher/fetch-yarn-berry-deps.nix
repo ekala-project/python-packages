@@ -50,12 +50,8 @@ stdenv.mkDerivation (
     impureEnvVars = lib.fetchers.proxyImpureEnvVars;
 
     buildPhase = ''
-      runHook preBuild
-
       yarnLock=''${yarnLock:=$PWD/yarn.lock}
       yarn-berry-fetcher fetch $yarnLock $missingHashes
-
-      runHook postBuild
     '';
 
     outputHashMode = "recursive";
