@@ -16,14 +16,13 @@ buildPythonPackage rec {
     hash = "sha256-Cqtubu2o3w9TFuwtIZC9dFYbfgNWKrCRzo1Wh828//Y=";
   };
 
-  propagatedBuildInputs = [ mutagen ];
+  dependencies = [ mutagen ];
 
-  checkInputs = [ pytestCheckHook ];
+  nativeCheckInputs = [ pytestCheckHook ];
 
   enabledTestPaths = [ "test" ];
 
   # Tests fail: ModuleNotFoundError: No module named '_test_common'
-  doCheck = false;
 
   pythonImportsCheck = [ "music_tag" ];
 

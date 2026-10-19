@@ -15,8 +15,6 @@ buildPythonPackage rec {
     sha256 = "2kGu9QPP5WqKv2gO9DAkE9SNDerzNaEDRt5DrrYD9nQ=";
   };
 
-  doCheck = false;
-
   nativeBuildInputs = [ setuptools-scm ];
 
   pythonImportsCheck = [ "devgoldyutils" ];

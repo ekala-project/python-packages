@@ -25,8 +25,6 @@ buildPythonPackage rec {
     sqlalchemy
   ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "flask_sqlalchemy" ];
 
   meta = {

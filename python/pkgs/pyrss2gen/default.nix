@@ -19,7 +19,6 @@ buildPythonPackage rec {
   build-system = [ setuptools ];
 
   # No tests in archive
-  doCheck = false;
 
   meta = {
     description = "Library for generating RSS 2.0 feeds";

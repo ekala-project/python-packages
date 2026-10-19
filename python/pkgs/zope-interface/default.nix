@@ -21,8 +21,6 @@ buildPythonPackage rec {
 
   pythonImportsCheck = [ "zope.interface" ];
 
-  doCheck = false; # Circular deps.
-
   pythonNamespaces = [ "zope" ];
 
   meta = {

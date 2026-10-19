@@ -23,7 +23,7 @@ buildPythonPackage rec {
 
   build-system = [ hatchling ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     mkdocs
     beautifulsoup4
   ];

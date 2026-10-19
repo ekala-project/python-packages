@@ -16,7 +16,6 @@ buildPythonPackage rec {
   };
 
   # No tests in archive
-  doCheck = false;
 
   meta = {
     description = "First-Class Interactive DataTable for Dash";

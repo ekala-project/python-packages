@@ -48,7 +48,6 @@ buildPythonPackage (finalAttrs: {
   };
 
   # tests are meant to be ran "in-place" in the same directory as src
-  doCheck = false;
 
   pythonImportsCheck = [
     "lxml"

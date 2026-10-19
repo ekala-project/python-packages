@@ -19,7 +19,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [ twisted ];
+  dependencies = [ twisted ];
 
   # Couldn't get tests working
 

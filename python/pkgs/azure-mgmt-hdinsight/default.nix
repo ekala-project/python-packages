@@ -28,7 +28,6 @@ buildPythonPackage rec {
   ];
 
   # no tests included
-  doCheck = false;
 
   pythonNamespaces = [ "azure.mgmt" ];
 

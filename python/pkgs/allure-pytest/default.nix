@@ -28,7 +28,6 @@ buildPythonPackage rec {
   dependencies = [ allure-python-commons ];
 
   # Tests were moved to the meta package
-  doCheck = false;
 
   pythonImportsCheck = [ "allure_pytest" ];
 

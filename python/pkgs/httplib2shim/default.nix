@@ -15,8 +15,6 @@ buildPythonPackage (finalAttrs: {
   version = "0.0.2";
   pyproject = true;
 
-  __structuredAttrs = true;
-
   src = fetchFromGitHub {
     owner = "GoogleCloudPlatform";
     repo = "httplib2shim";
@@ -34,7 +32,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # Tests require a network access
-  doCheck = false;
 
   pythonImportsCheck = [ "httplib2shim" ];
 

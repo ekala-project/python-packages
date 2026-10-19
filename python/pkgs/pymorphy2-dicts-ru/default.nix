@@ -22,7 +22,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "pymorphy2_dicts_ru" ];
 

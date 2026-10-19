@@ -21,7 +21,7 @@ buildPythonPackage (finalAttrs: {
 
   buildInputs = [ poetry-core ];
 
-  propagatedBuildInputs = [ lark ];
+  dependencies = [ lark ];
 
   nativeCheckInputs = [ pytestCheckHook ];
 

@@ -29,7 +29,6 @@ buildPythonPackage rec {
 
   dependencies = [ pymongo ];
   # network connections
-  doCheck = false;
 
   pythonImportsCheck = [ "motor" ];
 

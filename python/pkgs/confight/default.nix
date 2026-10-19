@@ -18,11 +18,9 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [ toml ];
+  dependencies = [ toml ];
 
   pythonImportsCheck = [ "confight" ];
-
-  doCheck = false;
 
   meta = {
     description = "Python context manager for managing pid files";

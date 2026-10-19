@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "dsoprea";
     repo = "PythonEtcdClient";
-    rev = version;
+    tag = version;
     hash = "sha256-h+jYIRSNdrGkW3tBV1ifIDEXU46EQGyeJoz/Mxym4pI=";
   };
 
@@ -24,14 +24,13 @@ buildPythonPackage rec {
     sed -i -e '13,14d;37d' setup.py
   '';
 
-  propagatedBuildInputs = [
+  dependencies = [
     simplejson
     pytz
     requests
   ];
 
   # No proper tests are available
-  doCheck = false;
 
   meta = {
     description = "Python etcd client that just works";

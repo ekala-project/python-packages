@@ -25,7 +25,7 @@ buildPythonPackage {
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     lxml
     numpy
     scikit-image

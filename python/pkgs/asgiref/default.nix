@@ -17,7 +17,7 @@ buildPythonPackage rec {
     hash = "sha256-2ZaUIWGF5cQVNj95b7WiKGsn2wYsoJmJ/CfPhIEZdjc=";
   };
 
-  propagatedBuildInputs = [ typing-extensions ];
+  dependencies = [ typing-extensions ];
 
   pythonImportsCheck = [ "asgiref" ];
 

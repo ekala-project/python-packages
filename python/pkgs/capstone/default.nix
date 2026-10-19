@@ -25,7 +25,7 @@ buildPythonPackage rec {
     "macosx_11_0"
   ];
 
-  propagatedBuildInputs = [ setuptools ];
+  dependencies = [ setuptools ];
 
   pythonImportsCheck = [ "capstone" ];
 

@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "antarctica";
     repo = "flask-reverse-proxy-fix";
-    rev = "v${version}";
+    tag = "v${version}";
     hash = "sha256-ZRZI1psr1dnY2FbuLZXOQvLMJd4TF7BfBNZnW9kxeck=";
   };
 
@@ -28,7 +28,7 @@ buildPythonPackage rec {
   # after which setuptools throws an error for an invalid version.
   env.CI_COMMIT_TAG = "v${version}";
 
-  propagatedBuildInputs = [
+  dependencies = [
     flask
     werkzeug
   ];

@@ -68,7 +68,6 @@ buildPythonPackage rec {
     cp -R testing $testout/testing
   '';
 
-  doCheck = false;
   passthru.tests.pytest = callPackage ./tests.nix { };
 
   # Remove .pytest_cache when using py.test in a Nix build

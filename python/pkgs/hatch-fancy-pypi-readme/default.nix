@@ -18,7 +18,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ hatchling ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     hatchling
   ];
   # Requires network connection

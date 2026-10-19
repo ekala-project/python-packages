@@ -29,7 +29,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # tests require docker daemon
-  doCheck = false;
 
   pythonImportsCheck = [ "aiodocker" ];
 

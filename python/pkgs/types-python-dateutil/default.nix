@@ -19,7 +19,6 @@ buildPythonPackage rec {
   build-system = [ setuptools ];
 
   # Modules doesn't have tests
-  doCheck = false;
 
   pythonImportsCheck = [ "dateutil-stubs" ];
 

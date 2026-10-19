@@ -27,7 +27,7 @@ buildPythonPackage rec {
     })
   ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     python-dateutil
     docopt
     ruamel-yaml

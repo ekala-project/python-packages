@@ -23,14 +23,15 @@ buildPythonPackage rec {
       --replace "py.test" "pytest"
   '';
 
-  propagatedBuildInputs = [
+  dependencies = [
     attrs
     six
   ];
 
-  nativeCheckInputs = [ pytestCheckHook ];
-
-  checkInputs = [ testtools ];
+  nativeCheckInputs = [
+    pytestCheckHook
+    testtools
+  ];
 
   pythonImportsCheck = [ "effect" ];
 

@@ -20,7 +20,7 @@ buildPythonPackage {
   src = fetchFromGitHub {
     owner = "pytest-dev";
     repo = "nose2pytest";
-    rev = "v${version}";
+    tag = "v${version}";
     hash = "sha256-BYyj2ZOZvWBpmzQACpmxAzCdQhlZlDYt+HLMdft+wYY=";
   };
 
@@ -42,7 +42,6 @@ buildPythonPackage {
   ];
 
   # Tests depend on nose!
-  doCheck = false;
 
   pythonImportsCheck = [ "nose2pytest.assert_tools" ];
 

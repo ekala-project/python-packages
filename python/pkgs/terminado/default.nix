@@ -19,7 +19,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ hatchling ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     ptyprocess
     tornado
   ];

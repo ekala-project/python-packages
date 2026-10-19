@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mariushelf";
     repo = "graphlib_backport";
-    rev = version;
+    tag = version;
     hash = "sha256-ssJLtBQH8sSnccgcAKLKfYpPyw5U0RIm1F66/Er81lo=";
   };
 
@@ -25,7 +25,7 @@ buildPythonPackage rec {
       --replace 'poetry.masonry.api' 'poetry.core.masonry.api'
   '';
 
-  propagatedBuildInputs = [
+  dependencies = [
     setuptools
     poetry-core
   ];

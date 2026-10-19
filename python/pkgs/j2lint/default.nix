@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "aristanetworks";
     repo = "j2lint";
-    rev = "v${version}";
+    tag = "v${version}";
     hash = "sha256-aT25Yq5GkQpZBgVNjYdV/afyqFanJkmqkDGMz2Yf+Ps=";
   };
 

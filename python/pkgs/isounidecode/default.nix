@@ -17,7 +17,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "isounidecode" ];
 
   # no real tests included, fails to run
-  doCheck = false;
 
   meta = {
     description = "Python package for conversion and transliteration of unicode into ascii or iso-8859-1";

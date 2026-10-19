@@ -28,7 +28,6 @@ buildPythonPackage rec {
   ];
 
   # Module has no tests
-  doCheck = false;
 
   meta = {
     description = "Microsoft Azure Data Bricks Management Client Library";

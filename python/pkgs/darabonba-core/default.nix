@@ -14,8 +14,6 @@ buildPythonPackage (finalAttrs: {
   version = "1.0.9";
   pyproject = true;
 
-  __structuredAttrs = true;
-
   src = fetchPypi {
     pname = "darabonba_core";
     inherit (finalAttrs) version;
@@ -34,7 +32,6 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [ "Tea" ];
 
   # Module has no tests
-  doCheck = false;
 
   meta = {
     description = "The darabonba module of alibabaCloud Python SDK";

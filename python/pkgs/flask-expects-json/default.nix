@@ -13,12 +13,10 @@ buildPythonPackage (finalAttrs: {
   version = "1.7.0";
   pyproject = true;
 
-  __structuredAttrs = true;
-
   src = fetchFromGitHub {
     owner = "Fischerfredl";
     repo = "flask-expects-json";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-CUxuwqjjAb9Fy6xWtX1WtSANYaYr5//vY8k89KghYoQ=";
   };
 

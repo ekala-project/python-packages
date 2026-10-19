@@ -29,8 +29,6 @@ buildPythonPackage rec {
     pydocstyle
   ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "flake8_docstrings" ];
 
   meta = {

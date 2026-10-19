@@ -17,10 +17,9 @@ buildPythonPackage rec {
     hash = "sha256-E2K3n9qCQofm4gXu1l7/0iMoJsniuzhsBUplr4aZ39s=";
   };
 
-  propagatedBuildInputs = [ urllib3 ];
+  dependencies = [ urllib3 ];
 
   # Disable checks due to networking (Errno 101)
-  doCheck = false;
 
   pythonImportsCheck = [ "downloader_cli" ];
 

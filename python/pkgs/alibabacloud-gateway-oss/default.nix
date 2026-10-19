@@ -23,8 +23,6 @@ buildPythonPackage (finalAttrs: {
   version = "0.0.29";
   pyproject = true;
 
-  __structuredAttrs = true;
-
   src = fetchPypi {
     pname = "alibabacloud_gateway_oss";
     inherit (finalAttrs) version;
@@ -52,7 +50,6 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [ "alibabacloud_gateway_oss" ];
 
   # Module has only tests in the untagged upstream repo
-  doCheck = false;
 
   meta = {
     description = "Aliyun Gateway OSS Library for Python";

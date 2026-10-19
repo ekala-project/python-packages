@@ -17,14 +17,13 @@ buildPythonPackage rec {
     sha256 = "0pwg7n9xqcjia1qmz6g48h5s31slh3mxmcqag73gq4zhl4xb6bai";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     lxml
     pycryptodome
     colorama
   ];
 
   # No tests on PyPI
-  doCheck = false;
 
   meta = {
     homepage = "https://github.com/libkeepass/libkeepass";

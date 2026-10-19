@@ -22,9 +22,8 @@ buildPythonPackage rec {
   '';
 
   # Doesn't actually run tests
-  doCheck = false;
 
-  propagatedBuildInputs = [ keepalive ];
+  dependencies = [ keepalive ];
 
   meta = {
     description = "This is a wrapper around a SPARQL service. It helps in creating the query URI and, possibly, convert the result into a more manageable format";

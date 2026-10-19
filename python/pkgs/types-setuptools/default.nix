@@ -19,7 +19,6 @@ buildPythonPackage rec {
   nativeBuildInputs = [ setuptools ];
 
   # Module doesn't have tests
-  doCheck = false;
 
   pythonImportsCheck = [ "setuptools-stubs" ];
 

@@ -28,7 +28,7 @@ buildPythonPackage rec {
     })
   ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     six
     setuptools
   ];

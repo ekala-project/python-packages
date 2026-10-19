@@ -37,7 +37,7 @@ buildPythonPackage rec {
   '';
 
   nativeBuildInputs = [ pkgs.pkg-config ];
-  propagatedBuildInputs = [ pkgs.parted ];
+  dependencies = [ pkgs.parted ];
 
   meta = {
     homepage = "https://github.com/dcantrell/pyparted/";

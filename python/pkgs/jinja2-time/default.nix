@@ -26,7 +26,7 @@ buildPythonPackage rec {
     })
   ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     arrow
     jinja2
   ];

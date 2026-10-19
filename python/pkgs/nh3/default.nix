@@ -12,7 +12,7 @@ let
   src = fetchFromGitHub {
     owner = "messense";
     repo = "nh3";
-    rev = "v${version}";
+    tag = "v${version}";
     hash = "sha256-2D8ZLmVRA+SuMqeUsSXyY+0zlgqp7TSRyQuJMjmRVFk=";
   };
 in

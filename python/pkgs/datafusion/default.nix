@@ -17,7 +17,6 @@ buildPythonPackage (finalAttrs: {
   pname = "datafusion";
   version = "53.0.0";
   pyproject = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     name = "datafusion-source";

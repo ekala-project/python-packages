@@ -58,8 +58,6 @@ buildPythonPackage rec {
     toml
   ];
 
-  doCheck = false;
-
   # qcs_api_client.client requires qcs-api-client-common (Rust native extension)
   # which is not yet packaged, so skip import check
   pythonImportsCheck = [ ];

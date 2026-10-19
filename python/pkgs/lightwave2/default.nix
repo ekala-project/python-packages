@@ -21,7 +21,6 @@ buildPythonPackage (finalAttrs: {
   dependencies = [ aiohttp ];
 
   # Module has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "lightwave2" ];
 

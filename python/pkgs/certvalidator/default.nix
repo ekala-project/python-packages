@@ -12,8 +12,6 @@ buildPythonPackage (finalAttrs: {
   version = "0.11.1";
   pyproject = true;
 
-  __structuredAttrs = true;
-
   src = fetchFromGitHub {
     owner = "wbond";
     repo = "certvalidator";

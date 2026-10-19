@@ -15,10 +15,9 @@ buildPythonPackage rec {
     hash = "sha256-+lHr6GTqk1WyaDDif91qQdWli0GfqNS0fjuLgHGNbiE=";
   };
 
-  propagatedBuildInputs = [ numpy ];
+  dependencies = [ numpy ];
 
   # no tests defined upstream
-  doCheck = false;
 
   pythonImportsCheck = [ "isosurfaces" ];
 

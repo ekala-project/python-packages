@@ -25,7 +25,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "dynalite_panel" ];
 
   # upstream has no tests
-  doCheck = false;
 
   meta = {
     description = "Dynalite panel for Home Assistant";

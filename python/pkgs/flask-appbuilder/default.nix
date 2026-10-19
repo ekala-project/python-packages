@@ -35,7 +35,7 @@ buildPythonPackage rec {
     hash = "sha256-9Xe5gqGuQLwhMjjO25PDnGfPIZmqHgBuCH6hs1B9VFA=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     apispec
     colorama
     click

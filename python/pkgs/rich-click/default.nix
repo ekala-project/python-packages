@@ -29,7 +29,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # Module has no test
-  doCheck = false;
 
   pythonImportsCheck = [ "rich_click" ];
 

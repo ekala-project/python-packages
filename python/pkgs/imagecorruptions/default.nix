@@ -26,7 +26,6 @@ buildPythonPackage rec {
     opencv-python
   ];
 
-  doCheck = false;
   pythonImportsCheck = [ "imagecorruptions" ];
 
   meta = {

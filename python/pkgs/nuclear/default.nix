@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "igrek51";
     repo = "nuclear";
-    rev = version;
+    tag = version;
     hash = "sha256-hoOvISKjl5XTxtv8I3BSkOI7oZFSL+yA3NiYceJGcIY=";
   };
 

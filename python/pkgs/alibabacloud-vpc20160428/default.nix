@@ -12,8 +12,6 @@ buildPythonPackage (finalAttrs: {
   version = "7.2.1";
   pyproject = true;
 
-  __structuredAttrs = true;
-
   src = fetchPypi {
     pname = "alibabacloud_vpc20160428";
     inherit (finalAttrs) version;
@@ -30,7 +28,6 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [ "alibabacloud_vpc20160428" ];
 
   # Module has no tests
-  doCheck = false;
 
   meta = {
     description = "Alibaba Cloud Virtual Private Cloud (20160428) SDK Library for Python";

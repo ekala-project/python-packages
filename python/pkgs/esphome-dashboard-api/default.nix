@@ -26,8 +26,6 @@ buildPythonPackage rec {
     orjson
   ];
 
-  doCheck = false; # no tests
-
   pythonImportsCheck = [ "esphome_dashboard_api" ];
 
   meta = {

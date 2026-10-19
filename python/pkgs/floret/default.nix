@@ -29,7 +29,7 @@ buildPythonPackage rec {
     wheel
   ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     numpy
     pybind11
   ];

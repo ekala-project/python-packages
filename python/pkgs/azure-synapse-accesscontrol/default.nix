@@ -28,7 +28,6 @@ buildPythonPackage rec {
   ];
 
   # zero tests run
-  doCheck = false;
 
   pythonImportsCheck = [ "azure.synapse.accesscontrol" ];
 

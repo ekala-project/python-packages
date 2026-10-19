@@ -19,8 +19,6 @@ buildPythonPackage rec {
 
   pythonImportsCheck = [ "pdfrw" ];
 
-  doCheck = false;
-
   meta = {
     homepage = "https://github.com/pmaupin/pdfrw";
     description = "Pure Python library that reads and writes PDFs";

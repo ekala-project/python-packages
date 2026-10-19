@@ -28,8 +28,6 @@ buildPythonPackage rec {
     pyyaml
   ];
 
-  doCheck = false; # most tests require internet access
-
   pythonImportsCheck = [ "lmformatenforcer" ];
 
   meta = {

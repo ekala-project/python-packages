@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "woltapp";
     repo = "blurhash-python";
-    rev = "v${version}";
+    tag = "v${version}";
     hash = "sha256-Cz+PkPp1knvT3U5ofyb1PstM9kzBOkgPbx03LgOLXgw=";
   };
 
@@ -27,7 +27,7 @@ buildPythonPackage rec {
     setuptools-scm
   ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     cffi
     pillow
     six

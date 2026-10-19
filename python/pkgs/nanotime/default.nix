@@ -19,7 +19,6 @@ buildPythonPackage rec {
 
   # Tests currently failing
   # https://github.com/jbenet/nanotime/issues/2
-  doCheck = false;
 
   pythonImportsCheck = [ "nanotime" ];
 

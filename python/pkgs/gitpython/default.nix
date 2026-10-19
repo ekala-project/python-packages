@@ -34,7 +34,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # Tests require a git repo
-  doCheck = false;
 
   pythonImportsCheck = [ "git" ];
 

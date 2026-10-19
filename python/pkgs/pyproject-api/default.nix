@@ -29,8 +29,6 @@ buildPythonPackage rec {
 
   dependencies = [ packaging ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "pyproject_api" ];
 
   meta = {

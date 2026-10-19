@@ -26,7 +26,6 @@ buildPythonPackage rec {
   ];
 
   # Tests are only providing coverage
-  doCheck = false;
 
   pythonImportsCheck = [ "crownstone_sse" ];
 

@@ -24,7 +24,7 @@ buildPythonPackage rec {
     hash = "sha256-HFWOCiz6ISfxEeC6KPKNKGZoHvFjFGUn7QJWnwvJKYw=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     libusb1
     ndeflib
     pydes

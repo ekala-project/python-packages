@@ -26,7 +26,6 @@ buildPythonPackage rec {
   ];
 
   # Checks needs internet access
-  doCheck = false;
 
   pythonImportsCheck = [ "aiohttp_socks" ];
 

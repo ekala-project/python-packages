@@ -15,7 +15,6 @@ buildPythonPackage rec {
   };
 
   # Tests are not shipped
-  doCheck = false;
 
   pythonImportsCheck = [ "oocsi" ];
 

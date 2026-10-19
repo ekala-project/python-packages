@@ -23,7 +23,6 @@ let
   pytest-trio' = (pytest-trio.override { trio = null; }).overrideAttrs {
     # `pythonRemoveDeps` is not working properly
     dontCheckRuntimeDeps = true;
-    doCheck = false;
     pythonImportsCheck = [ ];
   };
 in

@@ -19,7 +19,7 @@ buildPythonPackage (finalAttrs: {
 
   build-system = [ setuptools ];
 
-  propagatedBuildInputs = [ pillow ];
+  dependencies = [ pillow ];
 
   nativeCheckInputs = [ pytestCheckHook ];
 

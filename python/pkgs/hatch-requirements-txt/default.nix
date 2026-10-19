@@ -24,8 +24,6 @@ buildPythonPackage rec {
     packaging
   ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "hatch_requirements_txt" ];
 
   meta = {

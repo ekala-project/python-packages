@@ -15,10 +15,9 @@ buildPythonPackage rec {
     hash = "sha256-86XJmKOc2MCyU9v0UAZsPCUL/kAXywOlQOIHaykNF1o=";
   };
 
-  propagatedBuildInputs = [ aiohttp ];
+  dependencies = [ aiohttp ];
 
   # Module has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "meater" ];
 

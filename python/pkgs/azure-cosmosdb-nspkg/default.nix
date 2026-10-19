@@ -21,7 +21,6 @@ buildPythonPackage (finalAttrs: {
   dependencies = [ azure-nspkg ];
 
   # has no tests
-  doCheck = false;
 
   meta = {
     description = "This is the Microsoft Azure CosmosDB namespace package";

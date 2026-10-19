@@ -20,7 +20,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [ text-unidecode ];
+  dependencies = [ text-unidecode ];
 
   pythonImportsCheck = [ "slugify" ];
 

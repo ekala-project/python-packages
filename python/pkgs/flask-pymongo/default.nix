@@ -31,7 +31,6 @@ buildPythonPackage rec {
   nativeCheckInputs = [ pytestCheckHook ];
 
   # requires running MongoDB
-  doCheck = false;
 
   meta = {
     homepage = "https://github.com/dcrosta/flask-pymongo";

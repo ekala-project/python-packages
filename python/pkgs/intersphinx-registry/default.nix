@@ -19,7 +19,6 @@ buildPythonPackage (finalAttrs: {
   pname = "intersphinx-registry";
   version = "0.2705.27";
   pyproject = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "Quansight-labs";

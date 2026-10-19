@@ -26,7 +26,6 @@ buildPythonPackage (finalAttrs: {
 
   dependencies = [ sphinx ];
   # requires spobjinv, nbtyping
-  doCheck = false;
 
   pythonImportsCheck = [ "sphinx_autodoc_typehints" ];
 

@@ -32,7 +32,7 @@ buildPythonPackage (finalAttrs: {
     poetry-core
   ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     lsprotocol
     typeguard
   ];

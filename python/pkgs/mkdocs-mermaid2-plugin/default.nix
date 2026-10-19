@@ -23,7 +23,7 @@ buildPythonPackage rec {
     hash = "sha256-EsfcOnfjZpAndYccN8WTpfLoUAlc5JQkgoy1ro1hMRo=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     beautifulsoup4
     jsbeautifier
     mkdocs
@@ -34,7 +34,6 @@ buildPythonPackage rec {
   ];
 
   # non-traditional python tests (e.g. nodejs based tests)
-  doCheck = false;
 
   pythonImportsCheck = [ "mermaid2" ];
 

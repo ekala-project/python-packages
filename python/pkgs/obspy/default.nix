@@ -43,7 +43,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # Tests require Internet access.
-  doCheck = false;
 
   pythonImportsCheck = [ "obspy" ];
 

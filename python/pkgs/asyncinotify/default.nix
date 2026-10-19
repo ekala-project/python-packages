@@ -19,8 +19,6 @@ buildPythonPackage rec {
 
   build-system = [ flit-core ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "asyncinotify" ];
 
   meta = {

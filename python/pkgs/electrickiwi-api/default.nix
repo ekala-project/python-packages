@@ -31,7 +31,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "electrickiwi_api" ];
 
   # Tests require authentication credentials
-  doCheck = false;
 
   meta = {
     description = "Python library for interfacing with the Electric Kiwi power company API";

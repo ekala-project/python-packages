@@ -21,8 +21,6 @@ buildPythonPackage rec {
 
   dependencies = [ flask ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "flask_httpauth" ];
 
   meta = {

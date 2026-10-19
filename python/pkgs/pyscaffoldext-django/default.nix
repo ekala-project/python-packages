@@ -34,8 +34,6 @@ buildPythonPackage rec {
 
   pythonRelaxDeps = [ "django" ];
 
-  doCheck = false; # tests require git checkout
-
   pythonImportsCheck = [ "pyscaffoldext.django" ];
 
   meta = {

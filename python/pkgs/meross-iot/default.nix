@@ -32,7 +32,6 @@ buildPythonPackage (finalAttrs: {
   ++ aiohttp.optional-dependencies.speedups;
 
   # Test require network access
-  doCheck = false;
 
   pythonImportsCheck = [ "meross_iot" ];
 

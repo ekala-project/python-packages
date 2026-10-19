@@ -27,7 +27,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     atpublic
     attrs
   ];
@@ -38,7 +38,6 @@ buildPythonPackage rec {
   ];
 
   # Fixes can't be applied easily, https://github.com/aio-libs/aiosmtpd/pull/294
-  doCheck = false;
 
   disabledTests = [
     # Requires git

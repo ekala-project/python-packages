@@ -30,8 +30,6 @@ buildPythonPackage rec {
 
   dependencies = [ markupsafe ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "wtforms" ];
 
   meta = {

@@ -38,7 +38,6 @@ buildPythonPackage rec {
     typing-extensions
   ];
   # Tests attempt to create some file artifacts and fails
-  doCheck = false;
 
   pythonImportsCheck = [ "tableauserverclient" ];
 

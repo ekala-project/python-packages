@@ -21,7 +21,7 @@ buildPythonPackage rec {
 
   nativeCheckInputs = [ pytest ];
 
-  propagatedBuildInputs = [ numpy ];
+  dependencies = [ numpy ];
 
   checkPhase = ''
     pytest

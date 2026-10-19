@@ -40,7 +40,6 @@ buildPythonPackage rec {
   ++ pyjwt.optional-dependencies.crypto;
 
   # Test suite makes REST calls against github.com
-  doCheck = false;
 
   pythonImportsCheck = [ "github" ];
 

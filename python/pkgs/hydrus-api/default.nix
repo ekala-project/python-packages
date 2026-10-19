@@ -24,7 +24,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "hydrus_api" ];
 
   # There are no unit tests
-  doCheck = false;
 
   meta = {
     description = "Python module implementing the Hydrus API";

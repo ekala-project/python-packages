@@ -21,7 +21,7 @@ buildPythonPackage rec {
     hash = "sha256-o9IAk3EN8ghEft7Y7Xx+sEjWMNgoyiZ0eiBqnCyXkm8=";
   };
 
-  propagatedBuildInputs = [ colorama ];
+  dependencies = [ colorama ];
 
   optional-dependencies = {
     all = [ dill ];

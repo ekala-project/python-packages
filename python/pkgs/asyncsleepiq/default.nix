@@ -18,10 +18,9 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [ aiohttp ];
+  dependencies = [ aiohttp ];
 
   # upstream has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "asyncsleepiq" ];
 

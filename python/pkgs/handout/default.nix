@@ -16,7 +16,7 @@ buildPythonPackage rec {
     sha256 = "52daaf1f9a4cb2ceb88c1dedf85d22ef449b9422b424a2534d21f941e57bc915";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     imageio
     imageio-ffmpeg
   ];

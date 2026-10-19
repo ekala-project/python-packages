@@ -30,7 +30,6 @@ buildPythonPackage rec {
   build-system = [ setuptools ];
 
   # Tests are outdated
-  doCheck = false;
 
   pythonImportsCheck = [ "asynccmd" ];
 

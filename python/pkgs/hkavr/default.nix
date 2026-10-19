@@ -15,10 +15,9 @@ buildPythonPackage rec {
     hash = "sha256-wa0yS0KPdrQUuxxViweESD6Itn2rFlTwwrPQ0COWIPc=";
   };
 
-  propagatedBuildInputs = [ requests ];
+  dependencies = [ requests ];
 
   # Module has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "hkavr" ];
 

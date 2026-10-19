@@ -17,13 +17,12 @@ buildPythonPackage rec {
     hash = "sha256-Qb6KK6hRQ0hOYX3LkX1LGeOuEq/caIYipJAQNJk7U+Q=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     httpx
     pyspnego
   ];
 
   # https://github.com/ulodciv/httpx-ntlm/issues/5
-  doCheck = false;
 
   pythonImportsCheck = [ "httpx_ntlm" ];
 

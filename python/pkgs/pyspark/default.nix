@@ -75,7 +75,6 @@ buildPythonPackage (finalAttrs: {
   };
 
   # Tests assume running spark instance
-  doCheck = false;
 
   pythonImportsCheck = [ "pyspark" ];
 

@@ -27,7 +27,6 @@ buildPythonPackage rec {
   ];
 
   # no tests implemented
-  doCheck = false;
 
   pythonImportsCheck = [ "aemet_opendata.interface" ];
 

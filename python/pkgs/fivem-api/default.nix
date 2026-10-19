@@ -18,10 +18,9 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools-scm ];
 
-  propagatedBuildInputs = [ aiohttp ];
+  dependencies = [ aiohttp ];
 
   # Module has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "fivem" ];
 

@@ -28,7 +28,6 @@ buildPythonPackage rec {
   pythonNamespaces = [ "azure" ];
 
   # Module has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "azure.servicemanagement" ];
 

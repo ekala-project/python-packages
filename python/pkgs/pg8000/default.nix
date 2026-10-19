@@ -36,7 +36,6 @@ buildPythonPackage rec {
   ];
 
   # Tests require a running PostgreSQL instance
-  doCheck = false;
 
   pythonImportsCheck = [ "pg8000" ];
 

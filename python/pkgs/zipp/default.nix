@@ -30,7 +30,6 @@ let
     ];
 
     # Prevent infinite recursion with pytest
-    doCheck = false;
     pythonImportsCheck = [ "zipp" ];
     meta = {
       description = "Pathlib-compatible object wrapper for zip files";

@@ -26,7 +26,6 @@ buildPythonPackage (finalAttrs: {
   build-system = [ setuptools ];
 
   # Tests want to interact with actual browsers
-  doCheck = false;
 
   pythonImportsCheck = [ "browsers" ];
 

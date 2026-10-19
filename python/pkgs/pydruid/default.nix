@@ -32,7 +32,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [ requests ];
+  dependencies = [ requests ];
   optional-dependencies = {
     pandas = [ pandas ];
     async = [ tornado ];

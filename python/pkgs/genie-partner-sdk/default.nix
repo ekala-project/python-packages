@@ -19,10 +19,9 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ hatchling ];
 
-  propagatedBuildInputs = [ aiohttp ];
+  dependencies = [ aiohttp ];
 
   # No tests
-  doCheck = false;
 
   pythonImportsCheck = [ "genie_partner_sdk" ];
 

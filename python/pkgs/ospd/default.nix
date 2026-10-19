@@ -22,7 +22,7 @@ buildPythonPackage rec {
     hash = "sha256-dZgs+G2vJQIKnN9xHcNeNViG7mOIdKb+Ms2AKE+FC4M=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     defusedxml
     deprecated
     lxml

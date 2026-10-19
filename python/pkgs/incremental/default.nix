@@ -20,8 +20,6 @@ buildPythonPackage rec {
 
   dependencies = [ packaging ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "incremental" ];
 
   meta = {

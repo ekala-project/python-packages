@@ -16,10 +16,9 @@ buildPythonPackage rec {
     hash = "sha256-DadBRsc8qEu9PWgMNllGS2ESKL7kgBLDhg4yDr87WRk=";
   };
 
-  propagatedBuildInputs = [ xmltodict ];
+  dependencies = [ xmltodict ];
 
   # no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "DataModelDict" ];
 

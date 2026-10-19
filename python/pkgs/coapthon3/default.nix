@@ -13,14 +13,13 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Tanganelli";
     repo = "CoAPthon3";
-    rev = version;
+    tag = version;
     hash = "sha256-9QApoPUu3XFZY/lgjAsf5r2StFiRtUd1UXWDrzYUh6w=";
   };
 
-  propagatedBuildInputs = [ cachetools ];
+  dependencies = [ cachetools ];
 
   # tests take in the order of 10 minutes to execute and sometimes hang forever on tear-down
-  doCheck = false;
   pythonImportsCheck = [ "coapthon" ];
 
   meta = {

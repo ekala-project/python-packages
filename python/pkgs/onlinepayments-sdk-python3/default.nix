@@ -17,7 +17,7 @@ buildPythonPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "wl-online-payments-direct";
     repo = "sdk-python3";
-    rev = finalAttrs.version;
+    tag = finalAttrs.version;
     hash = "sha256-GGMDAeIErVjx2hJMhKWS/ysXi2izHI3LIKfbvGr+Gds=";
   };
 

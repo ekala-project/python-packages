@@ -15,7 +15,7 @@ buildPythonPackage rec {
     sha256 = "1zqqjlgmhgkpzg9ss5ki8wamxl83xn51fs6gn2a8cxsx9vkbvcvj";
   };
 
-  propagatedBuildInputs = [ packaging ];
+  dependencies = [ packaging ];
 
   meta = {
     description = "Library to handle automated deprecations";

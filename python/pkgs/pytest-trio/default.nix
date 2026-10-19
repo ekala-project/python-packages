@@ -30,7 +30,6 @@ buildPythonPackage rec {
     outcome
   ];
   # broken with pytest 5 and 6
-  doCheck = false;
   checkPhase = ''
     rm pytest.ini
     PYTHONPATH=$PWD:$PYTHONPATH pytest

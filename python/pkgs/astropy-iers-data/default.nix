@@ -26,7 +26,6 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [ "astropy_iers_data" ];
 
   # no tests
-  doCheck = false;
 
   meta = {
     description = "IERS data maintained by @astrofrog and astropy.utils.iers maintainers";

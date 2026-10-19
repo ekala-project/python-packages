@@ -23,7 +23,7 @@ buildPythonPackage rec {
 
   build-system = [ setuptools ];
 
-  propagatedBuildInputs = [ blockdiag ];
+  dependencies = [ blockdiag ];
 
   nativeCheckInputs = [ pytestCheckHook ];
 

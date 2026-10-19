@@ -21,7 +21,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "peopledoc";
     repo = "django-agnocomplete";
-    rev = version;
+    tag = version;
     hash = "sha256-SDuLJM/ZvROkBOSbaVi6FMDRcR5Um4UrdPSq1ZMrlXM=";
   };
 

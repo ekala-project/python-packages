@@ -34,7 +34,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "dash_bootstrap_templates" ];
 
   # There are no tests.
-  doCheck = false;
 
   meta = {
     description = "Collection of 52 Plotly figure templates with a Bootstrap theme";

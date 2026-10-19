@@ -16,13 +16,12 @@ buildPythonPackage rec {
     hash = "sha256-rKv3Vy2w5/XL9pg9SV7vVAgfcb45IzDrOq25zLOdqqQ=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     requests
     six
   ];
 
   # has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "snowplow_tracker" ];
 

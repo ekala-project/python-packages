@@ -29,7 +29,6 @@ buildPythonPackage rec {
   ];
 
   # require internet connection
-  doCheck = false;
 
   pythonImportsCheck = [ "rosetta" ];
 

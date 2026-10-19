@@ -32,7 +32,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     blessed
     browser-cookie3
     cloudscraper

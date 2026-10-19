@@ -29,7 +29,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [ dpkt ];
+  dependencies = [ dpkt ];
 
   nativeCheckInputs = [
     mock

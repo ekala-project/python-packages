@@ -49,7 +49,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # No tests available.
-  doCheck = false;
 
   meta = {
     description = "A way to embed a file present in your docs";

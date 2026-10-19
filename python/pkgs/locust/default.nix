@@ -36,10 +36,10 @@ buildPythonPackage rec {
 
   postPatch = ''
     substituteInPlace locust/test/test_main.py \
-      --replace-fail '"locust"' '"${placeholder "out"}/bin/locust"'
+      --replace-fail '"locust"' '"$(out)/bin/locust"'
 
     substituteInPlace locust/test/test_log.py \
-      --replace-fail '"locust"' '"${placeholder "out"}/bin/locust"'
+      --replace-fail '"locust"' '"$(out)/bin/locust"'
   '';
 
   webui = callPackage ./webui.nix {
@@ -81,8 +81,6 @@ buildPythonPackage rec {
   ];
 
   pythonImportsCheck = [ "locust" ];
-
-  doCheck = false;
 
   meta = {
     description = "Developer-friendly load testing framework";

@@ -20,7 +20,6 @@ buildPythonPackage rec {
   ];
 
   # Project has no tests
-  doCheck = false;
 
   meta = {
     description = "User-friendly view of FreeRTOS kernel objects in GDB";

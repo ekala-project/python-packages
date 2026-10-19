@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ethereum";
     repo = "pyrlp";
-    rev = "v${version}";
+    tag = "v${version}";
     hash = "sha256-a13KBXZyId83EukBTc3zu1GgllsqMRS0gpYfZ29+bjQ=";
   };
 
@@ -24,7 +24,7 @@ buildPythonPackage rec {
     setuptools-scm
   ];
 
-  propagatedBuildInputs = [ eth-utils ];
+  dependencies = [ eth-utils ];
   pythonImportsCheck = [ "rlp" ];
   meta = {
     description = "RLP serialization library";

@@ -21,7 +21,6 @@ buildPythonPackage rec {
   dependencies = [ aiohttp ];
 
   # PyPI tarball doesn't include tests
-  doCheck = false;
 
   pythonImportsCheck = [ "kaiterra_async_client" ];
 

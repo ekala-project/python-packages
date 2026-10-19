@@ -19,7 +19,6 @@ buildPythonPackage rec {
   buildInputs = [ django ];
 
   # There is no test embedded
-  doCheck = false;
 
   meta = {
     description = "Snapshot of django-filebrowser for the Mezzanine CMS";

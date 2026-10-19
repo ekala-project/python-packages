@@ -17,7 +17,7 @@ buildPythonPackage rec {
     sha256 = "0mx7bn1p3n0fxyxa82wg3c719hby7vqkxv57fhf7zvhlg2zfnr0v";
   };
 
-  propagatedBuildInputs = [ six ];
+  dependencies = [ six ];
 
   postPatch = ''
     for path in \

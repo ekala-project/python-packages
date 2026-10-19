@@ -20,11 +20,11 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "kuzmoyev";
     repo = "google-calendar-simple-api";
-    rev = "v${version}";
+    tag = "v${version}";
     hash = "sha256-lDmdV1F/EFtZEhq4ufH9nPvzNZ9msUGNZcmWiVTTTWc=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     tzlocal
     google-api-python-client
     google-auth-httplib2

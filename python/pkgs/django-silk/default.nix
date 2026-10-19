@@ -44,7 +44,7 @@ buildPythonPackage rec {
 
   buildInputs = [ mock ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     autopep8
     django
     gprof2dot

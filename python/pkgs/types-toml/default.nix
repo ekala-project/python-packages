@@ -15,7 +15,6 @@ buildPythonPackage rec {
   };
 
   # Module doesn't have tests
-  doCheck = false;
 
   pythonImportsCheck = [ "toml-stubs" ];
 

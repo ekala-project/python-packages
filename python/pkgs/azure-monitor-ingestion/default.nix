@@ -33,7 +33,6 @@ buildPythonPackage rec {
   ];
 
   # requires checkout from mono-repo and a mock account
-  doCheck = false;
 
   meta = {
     description = "Send custom logs to Azure Monitor using the Logs Ingestion API";

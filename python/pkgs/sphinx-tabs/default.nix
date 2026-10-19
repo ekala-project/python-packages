@@ -34,7 +34,7 @@ buildPythonPackage (finalAttrs: {
     sphinxHook
   ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     sphinx
     pygments
     docutils

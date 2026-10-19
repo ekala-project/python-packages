@@ -14,7 +14,6 @@ buildPythonPackage (finalAttrs: {
   pname = "jupyter-ydoc";
   version = "3.4.1";
   pyproject = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "jupyter-server";

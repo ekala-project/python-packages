@@ -23,13 +23,12 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ poetry-core ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     dunamai
     jinja2
     tomlkit
   ];
   # virtualenv: error: argument dest: the destination . is not write-able at /
-  doCheck = false;
   pythonImportsCheck = [ "poetry_dynamic_versioning" ];
 
   setupHook = ./setup-hook.sh;

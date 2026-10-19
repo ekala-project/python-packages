@@ -19,7 +19,7 @@ buildPythonPackage rec {
     hash = "sha256-+jwIK1ZU+j58VoOfZAm7GdFy7KHU28khwzxhYhcws74=";
   };
 
-  propagatedBuildInputs = [ justbases ];
+  dependencies = [ justbases ];
   nativeCheckInputs = [
     unittestCheckHook
     hypothesis

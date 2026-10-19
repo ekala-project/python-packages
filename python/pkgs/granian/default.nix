@@ -65,7 +65,6 @@ buildPythonPackage rec {
   # numbers of times. The issue has not been fully identified,
   # and upstream claims it does not exist.
   # FIXME: root cause and fix this.
-  doCheck = false;
 
   pythonImportsCheck = [ "granian" ];
 

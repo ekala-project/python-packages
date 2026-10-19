@@ -18,13 +18,12 @@ buildPythonPackage rec {
     sha256 = "sha256-asAFIRoc2zll8a8gMMt4ZRQILhMAes8wf3PGwG5wF9c=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     requests
     six
   ];
 
   # needs to be updated to newer pytest version and requires physical device
-  doCheck = false;
 
   enabledTestPaths = [ "icontrol/test" ];
 

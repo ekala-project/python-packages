@@ -24,7 +24,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ hatchling ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     bluetooth-data-tools
     httpx
   ];

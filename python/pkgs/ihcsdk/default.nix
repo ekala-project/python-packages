@@ -29,7 +29,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "ihcsdk" ];
 
   # upstream has no tests
-  doCheck = false;
 
   meta = {
     description = "SDK for connection to the LK IHC Controller";

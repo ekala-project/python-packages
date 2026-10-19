@@ -26,7 +26,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [ sqlalchemy ];
+  dependencies = [ sqlalchemy ];
 
   optional-dependencies = {
     postgresql = [ asyncpg ];

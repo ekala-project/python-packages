@@ -21,12 +21,11 @@ buildPythonPackage (finalAttrs: {
   pname = "mlflow-tracing";
   inherit (mlflow) version;
   pyproject = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "mlflow";
     repo = "mlflow";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-e11ZncpvThb1Nt6OH+O6Do74N3dphxBiK/HIeLQMxAw=";
   };
 
@@ -48,7 +47,6 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [ "mlflow.tracing" ];
 
   # No tests
-  doCheck = false;
 
   meta = {
     description = "Open-Source SDK for observability and monitoring GenAI applications";

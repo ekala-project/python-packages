@@ -20,7 +20,6 @@ buildPythonPackage rec {
   nativeBuildInputs = [ poetry-core ];
 
   # Module has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "exitcode" ];
 

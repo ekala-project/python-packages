@@ -24,7 +24,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # No tests on upstream
-  doCheck = false;
 
   pythonImportsCheck = [ "x_forwarded_for" ];
 

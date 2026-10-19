@@ -25,7 +25,6 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [ "hdfury" ];
 
   # Module no tests
-  doCheck = false;
 
   meta = {
     description = "Python client for HDFury devices";

@@ -30,7 +30,6 @@ buildPythonPackage (finalAttrs: {
   pname = "langchain-google-genai";
   version = "4.2.7";
   pyproject = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "langchain-ai";

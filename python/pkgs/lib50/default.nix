@@ -48,7 +48,6 @@ buildPythonPackage rec {
 
   # latest GitHub release is several years old and doesn't include
   # tests and neither does pypi version include tests
-  doCheck = false;
 
   meta = {
     description = "CS50's own internal library used in many of its tools";

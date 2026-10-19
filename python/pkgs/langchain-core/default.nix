@@ -38,7 +38,6 @@ buildPythonPackage (finalAttrs: {
   pname = "langchain-core";
   version = "1.4.9";
   pyproject = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "langchain-ai";
@@ -66,7 +65,6 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [ "langchain_core" ];
 
   # avoid infinite recursion
-  doCheck = false;
   passthru = {
     tests.pytest = langchain-core.overridePythonAttrs (_: {
     });

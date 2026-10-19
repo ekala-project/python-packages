@@ -13,8 +13,6 @@ buildPythonPackage (finalAttrs: {
   version = "1.0.0";
   pyproject = true;
 
-  __structuredAttrs = true;
-
   src = fetchPypi {
     inherit (finalAttrs) pname version;
     extension = "zip";
@@ -27,7 +25,6 @@ buildPythonPackage (finalAttrs: {
 
   # Just a namespace package, no tests exist:
   #   https://github.com/Azure/azure-sdk-for-python/blob/master/sdk/keyvault/tests.yml
-  doCheck = false;
 
   meta = {
     description = "Microsoft Azure Key Vault Namespace Package [Internal]";

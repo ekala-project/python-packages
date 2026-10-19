@@ -18,7 +18,7 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-VkQ3Di3vXxQAmvuMP8KpGVVdx7LMYcQFEF4ZsuA9KeA=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     django
     djangorestframework
   ];

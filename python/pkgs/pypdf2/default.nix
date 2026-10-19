@@ -18,8 +18,6 @@ buildPythonPackage rec {
 
   build-system = [ flit-core ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "PyPDF2" ];
 
   meta = {

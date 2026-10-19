@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "clarketm";
     repo = "mergedeep";
-    rev = "v${version}";
+    tag = "v${version}";
     hash = "sha256-yRB0GqoIFu6BHuijAaR0J+qsaUPaEb39+12PMX/bW9c=";
   };
 

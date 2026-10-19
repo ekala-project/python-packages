@@ -22,7 +22,6 @@ buildPythonPackage rec {
   dependencies = [ protobuf ];
 
   # Tests are not shipped, only a tarball for Java is present
-  doCheck = false;
 
   pythonImportsCheck = [ "google.transit" ];
 

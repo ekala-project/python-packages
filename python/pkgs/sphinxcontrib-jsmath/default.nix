@@ -15,7 +15,6 @@ buildPythonPackage (finalAttrs: {
   };
 
   # Check is disabled due to circular dependency of sphinx
-  doCheck = false;
 
   pythonNamespaces = [ "sphinxcontrib" ];
 

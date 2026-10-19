@@ -48,7 +48,6 @@ buildPythonPackage rec {
 
   # a bunch of failures, including an assumption of what the timezone on the host is
   # TODO: try enabling on bump
-  doCheck = false;
 
   passthru.updateScript = nix-update-script { };
 

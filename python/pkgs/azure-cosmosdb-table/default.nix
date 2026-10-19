@@ -32,7 +32,6 @@ buildPythonPackage (finalAttrs: {
   ++ lib.optionals (!isPy3k) [ futures ];
 
   # has no tests
-  doCheck = false;
 
   meta = {
     description = "This is the Microsoft Azure Log Analytics Client Library";

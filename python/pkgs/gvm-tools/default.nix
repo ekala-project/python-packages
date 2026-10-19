@@ -20,7 +20,7 @@ buildPythonPackage (finalAttrs: {
 
   nativeBuildInputs = [ poetry-core ];
 
-  propagatedBuildInputs = [ python-gvm ];
+  dependencies = [ python-gvm ];
 
   pythonImportsCheck = [ "gvmtools" ];
 

@@ -24,7 +24,6 @@ buildPythonPackage rec {
   # The tests seem to be impure.
   # They are throwing a error about unset configs:
   # > django.core.exceptions.ImproperlyConfigured: Requested setting LEAFLET_CONFIG, but settings are not configured.
-  doCheck = false;
 
   # This dosn't work either because of the same exception as above
   # pythonImportsCheck = [ "leaflet" ];

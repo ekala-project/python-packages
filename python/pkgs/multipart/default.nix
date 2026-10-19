@@ -19,8 +19,6 @@ buildPythonPackage rec {
 
   pythonImportsCheck = [ "multipart" ];
 
-  doCheck = false;
-
   meta = {
     description = "Parser for multipart/form-data";
     homepage = "https://github.com/defnull/multipart";

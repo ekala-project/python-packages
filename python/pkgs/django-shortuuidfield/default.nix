@@ -17,14 +17,13 @@ buildPythonPackage rec {
     hash = "sha256-opLA/lU4q+lHsTHiuRTt2axEr8xqQOrscUSOYjGj7wA=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     django
     shortuuid
     six
   ];
 
   # no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "shortuuidfield" ];
 

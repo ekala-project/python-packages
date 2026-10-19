@@ -39,7 +39,7 @@ buildPythonPackage (finalAttrs: {
 
   build-system = [ hatchling ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     aiohttp
     attrs
     multidict

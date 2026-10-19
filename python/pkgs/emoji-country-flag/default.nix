@@ -23,8 +23,6 @@ buildPythonPackage rec {
     setuptools
   ];
 
-  doCheck = true;
-
   nativeCheckInputs = [
     pytestCheckHook
     emoji

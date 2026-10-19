@@ -14,11 +14,11 @@ buildPythonPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "bluec0re";
     repo = "android-backup-tools";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "0c436hv64ddqrjs77pa7z6spiv49pjflbmgg31p38haj5mzlrqvw";
   };
 
-  propagatedBuildInputs = [ pycrypto ];
+  dependencies = [ pycrypto ];
 
   checkPhase = ''
     ${python.interpreter} -m android_backup.tests

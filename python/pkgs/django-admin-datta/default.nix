@@ -15,10 +15,9 @@ buildPythonPackage rec {
     hash = "sha256-65fUrV4FIbuVvNX93rgOCMjz4CoozMHEEVpzJqtbhKY=";
   };
 
-  propagatedBuildInputs = [ django ];
+  dependencies = [ django ];
 
   # no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "admin_datta" ];
 

@@ -59,7 +59,6 @@ buildPythonPackage rec {
   };
 
   # Tests require hardware
-  doCheck = false;
 
   pythonImportsCheck = [ "nidaqmx" ];
 

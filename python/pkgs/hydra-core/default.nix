@@ -27,7 +27,6 @@ buildPythonPackage (finalAttrs: {
   pname = "hydra-core";
   version = "1.3.6";
   pyproject = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "facebookresearch";

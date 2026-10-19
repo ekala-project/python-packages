@@ -20,8 +20,6 @@ buildPythonPackage rec {
 
   dependencies = [ attrs ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "outcome" ];
 
   meta = {

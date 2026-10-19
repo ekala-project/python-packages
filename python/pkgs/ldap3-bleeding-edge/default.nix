@@ -35,7 +35,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "ldap3" ];
 
   # Tests require network access
-  doCheck = false;
 
   meta = {
     description = "Strictly RFC 4510 conforming LDAP V3 client library (bleeding edge)";

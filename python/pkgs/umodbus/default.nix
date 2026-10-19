@@ -17,7 +17,7 @@ buildPythonPackage rec {
     hash = "sha256-5IXadb5mjrMwr+L9S1iMN5kba5VGrzYt1p8nBvvLCh4=";
   };
 
-  propagatedBuildInputs = [ pyserial ];
+  dependencies = [ pyserial ];
 
   pythonImportsCheck = [ "umodbus" ];
 

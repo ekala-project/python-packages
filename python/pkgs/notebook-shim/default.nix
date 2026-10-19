@@ -19,7 +19,7 @@ buildPythonPackage rec {
   };
 
   nativeBuildInputs = [ hatchling ];
-  propagatedBuildInputs = [ jupyter-server ];
+  dependencies = [ jupyter-server ];
   # TODO: understand & possibly fix why tests fail. On github most testfiles
   # have been committed with msgs "wip" though.
   pythonImportsCheck = [ "notebook_shim" ];

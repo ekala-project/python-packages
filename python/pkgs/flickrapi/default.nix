@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "sybrenstuvel";
     repo = "flickrapi";
-    rev = "version-${version}";
+    tag = "version-${version}";
     hash = "sha256-vRZrlXKI0UDdmDevh3XUngH4X8G3VlOCSP0z/rxhIgw=";
   };
 

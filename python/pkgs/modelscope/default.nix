@@ -31,8 +31,6 @@ buildPythonPackage (finalAttrs: {
     tqdm
   ];
 
-  doCheck = false; # need network
-
   pythonImportsCheck = [ "modelscope" ];
 
   meta = {

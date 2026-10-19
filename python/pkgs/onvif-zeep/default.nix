@@ -19,12 +19,11 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [ zeep ];
+  dependencies = [ zeep ];
 
   pythonImportsCheck = [ "onvif" ];
 
   # Tests require hardware
-  doCheck = false;
 
   meta = {
     description = "Python Client for ONVIF Camera";

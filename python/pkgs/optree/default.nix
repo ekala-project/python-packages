@@ -22,7 +22,7 @@ buildPythonPackage rec {
 
   dontUseCmakeConfigure = true;
 
-  propagatedBuildInputs = [ typing-extensions ];
+  dependencies = [ typing-extensions ];
   nativeBuildInputs = [
     setuptools
     pybind11

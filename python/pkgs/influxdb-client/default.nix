@@ -48,7 +48,6 @@ buildPythonPackage rec {
   };
 
   # Requires influxdb server
-  doCheck = false;
 
   pythonImportsCheck = [ "influxdb_client" ];
 

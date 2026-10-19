@@ -21,7 +21,7 @@ buildPythonPackage rec {
 
   build-system = [ flit-core ];
 
-  propagatedBuildInputs = [ six ];
+  dependencies = [ six ];
   # iterable = range(10 ** 10)  # Is efficiently reversible
   # OverflowError: Python int too large to convert to C long
   doCheck = !stdenv.hostPlatform.is32bit;

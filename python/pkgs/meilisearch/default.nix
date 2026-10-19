@@ -30,7 +30,6 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [ "meilisearch" ];
 
   # Tests spin up a local server and are not mocking the requests
-  doCheck = false;
 
   meta = {
     description = "Client for the Meilisearch API";

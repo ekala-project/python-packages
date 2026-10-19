@@ -13,10 +13,10 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "dask";
     repo = "cachey";
-    rev = version;
+    tag = version;
     hash = "sha256-5USmuufrrWtmgibpfkjo9NtgN30hdl8plJfythmxM4s=";
   };
-  propagatedBuildInputs = [
+  dependencies = [
     typing-extensions
     heapdict
   ];

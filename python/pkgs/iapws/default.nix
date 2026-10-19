@@ -15,7 +15,7 @@ buildPythonPackage rec {
     hash = "sha256-yG4eFxVRh3/pzrA+5BXkpJBtLlJpj/nVZWeEYJc5300=";
   };
 
-  propagatedBuildInputs = [ scipy ];
+  dependencies = [ scipy ];
 
   meta = {
     description = "Python implementation of standard from IAPWS";

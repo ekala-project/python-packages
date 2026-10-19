@@ -40,8 +40,6 @@ buildPythonPackage rec {
       --replace-fail "setuptools_scm[toml]<8" "setuptools_scm"
   '';
 
-  doCheck = false;
-
   pythonImportsCheck = [ "flask_compress" ];
 
   meta = {

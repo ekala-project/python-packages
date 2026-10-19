@@ -13,8 +13,6 @@ buildPythonPackage (finalAttrs: {
   version = "1.1.0";
   pyproject = true;
 
-  __structuredAttrs = true;
-
   src = fetchPypi {
     inherit (finalAttrs) pname version;
     hash = "sha256-QVw6Y9HachwBRwCbF0cSGLCAkSJtNnXBvsj5YX1TmJU=";
@@ -32,7 +30,6 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [ "azure.mgmt.servicelinker" ];
 
   # no tests with sdist
-  doCheck = false;
 
   meta = {
     description = "Microsoft Azure Servicelinker Management Client Library for Python";

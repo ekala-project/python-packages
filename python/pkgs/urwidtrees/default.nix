@@ -20,7 +20,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [ urwid ];
+  dependencies = [ urwid ];
 
   # Module has no tests
 

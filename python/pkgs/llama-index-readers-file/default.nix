@@ -43,7 +43,6 @@ buildPythonPackage rec {
   };
 
   # Tests are only available in the mono repo
-  doCheck = false;
 
   pythonImportsCheck = [ "llama_index.readers.file" ];
 

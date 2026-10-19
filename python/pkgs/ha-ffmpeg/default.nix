@@ -24,7 +24,6 @@ buildPythonPackage rec {
   ];
 
   # only manual tests
-  doCheck = false;
 
   pythonImportsCheck = [
     "haffmpeg.camera"

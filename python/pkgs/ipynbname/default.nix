@@ -23,7 +23,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "ipynbname" ];
 
   # upstream has no tests
-  doCheck = false;
 
   meta = {
     description = "Simply returns either notebook filename or the full path to the notebook";

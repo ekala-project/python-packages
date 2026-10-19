@@ -21,7 +21,7 @@ buildPythonPackage rec {
 
   buildInputs = [ pytest ];
 
-  propagatedBuildInputs = [ numpy ];
+  dependencies = [ numpy ];
 
   # The tests requires astropy, which itself requires pytest-arraydiff
 

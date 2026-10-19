@@ -32,7 +32,6 @@ buildPythonPackage rec {
   ];
 
   # has no tests
-  doCheck = false;
 
   meta = {
     description = "This is the Microsoft Azure Web Apps Management Client Library";

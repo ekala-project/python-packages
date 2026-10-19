@@ -23,7 +23,7 @@ buildPythonPackage (finalAttrs: {
 
   nativeBuildInputs = [ poetry-core ];
 
-  propagatedBuildInputs = [ httpx ];
+  dependencies = [ httpx ];
 
   nativeCheckInputs = [
     pytest-asyncio

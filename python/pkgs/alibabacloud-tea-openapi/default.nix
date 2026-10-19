@@ -36,7 +36,6 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [ "Tea" ];
 
   # Module has only tests in the untagged upstream repo
-  doCheck = false;
 
   meta = {
     description = "Aliyun Tea OpenAPI Library for Python";

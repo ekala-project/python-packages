@@ -15,7 +15,6 @@ buildPythonPackage rec {
   };
 
   # Tests are out-dated as the last upstream release is from 2016
-  doCheck = false;
 
   pythonImportsCheck = [ "DistUtilsExtra" ];
 

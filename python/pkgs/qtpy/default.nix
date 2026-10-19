@@ -17,9 +17,8 @@ buildPythonPackage rec {
     hash = "sha256-23RPeDLm09qQVoumzLyj7is7SokMPW+7xjFC9uTN9bs=";
   };
 
-  propagatedBuildInputs = [ packaging ];
+  dependencies = [ packaging ];
 
-  doCheck = false; # ModuleNotFoundError: No module named 'PyQt5.QtConnectivity'
   meta = {
     description = "Abstraction layer for PyQt5/PyQt6/PySide2/PySide6";
     mainProgram = "qtpy";

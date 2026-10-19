@@ -23,7 +23,7 @@ buildPythonPackage {
     hash = "sha256-k7Cl2QYkaGOZaTo8v5Wg9Wqh8x0WC5i9Sggqj8eeECY=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     django
     django-polymorphic
     djangorestframework

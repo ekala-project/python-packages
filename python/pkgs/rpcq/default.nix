@@ -28,7 +28,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     msgpack
     python-rapidjson
     pyzmq

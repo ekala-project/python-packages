@@ -36,7 +36,7 @@ buildPythonPackage (finalAttrs: {
       --replace-fail "'git', 'rev-parse'" "'${lib.getExe gitMinimal}', 'rev-parse'"
   '';
 
-  propagatedBuildInputs = [ gitMinimal ];
+  dependencies = [ gitMinimal ];
 
   meta = {
     description = "Get the last updated time for each Sphinx page from Git";

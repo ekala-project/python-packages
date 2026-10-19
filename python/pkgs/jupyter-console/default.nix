@@ -32,7 +32,7 @@ buildPythonPackage rec {
   postPatch =
     # Use wrapped executable in tests
     let
-      binPath = "${placeholder "out"}/bin/jupyter-console";
+      binPath = "$(out)/bin/jupyter-console";
     in
     ''
       substituteInPlace jupyter_console/tests/test_console.py \

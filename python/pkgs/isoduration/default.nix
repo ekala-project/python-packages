@@ -13,11 +13,11 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "bolsote";
     repo = "isoduration";
-    rev = version;
+    tag = version;
     hash = "sha256-6LqsH+3V/K0s2YD1gvmelo+cCH+yCAmmyTYGhUegVdk=";
   };
 
-  propagatedBuildInputs = [ arrow ];
+  dependencies = [ arrow ];
 
   pythonImportsCheck = [ "isoduration" ];
 

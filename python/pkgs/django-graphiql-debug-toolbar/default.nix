@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "flavors";
     repo = "django-graphiql-debug-toolbar";
-    rev = version;
+    tag = version;
     sha256 = "0fikr7xl786jqfkjdifymqpqnxy4qj8g3nlkgfm24wwq0za719dw";
   };
 

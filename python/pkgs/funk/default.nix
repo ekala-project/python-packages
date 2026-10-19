@@ -26,7 +26,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "funk" ];
 
   # Disabling tests, they rely on Nose which is outdated and not supported
-  doCheck = false;
 
   passthru.updateScript = gitUpdater { };
 

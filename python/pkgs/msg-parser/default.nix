@@ -22,7 +22,7 @@ buildPythonPackage {
     hash = "sha256-srDk6w8nzt0dyGCFQWfVCnKb4LawHoqoHX6d1l1dAmM=";
   };
 
-  propagatedBuildInputs = [ olefile ];
+  dependencies = [ olefile ];
 
   nativeCheckInputs = [ pytestCheckHook ];
 

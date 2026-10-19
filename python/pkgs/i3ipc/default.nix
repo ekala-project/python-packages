@@ -20,8 +20,6 @@ buildPythonPackage rec {
 
   dependencies = [ python-xlib ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "i3ipc" ];
 
   meta = {

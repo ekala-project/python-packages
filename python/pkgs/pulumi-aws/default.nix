@@ -38,7 +38,6 @@ buildPythonPackage rec {
   ];
 
   # Checks require cloud resources
-  doCheck = false;
 
   pythonImportsCheck = [ "pulumi_aws" ];
 

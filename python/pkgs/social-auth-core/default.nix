@@ -34,7 +34,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     cryptography
     defusedxml
     oauthlib

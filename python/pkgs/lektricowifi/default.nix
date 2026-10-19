@@ -42,7 +42,6 @@ buildPythonPackage rec {
   ];
 
   # AttributeError: type object 'InfoForCharger' has no attribute 'from_dict'
-  doCheck = false;
 
   meta = {
     description = "Communication with Lektrico's chargers";

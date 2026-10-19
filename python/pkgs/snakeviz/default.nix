@@ -22,7 +22,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [ tornado ];
+  dependencies = [ tornado ];
   pythonImportsCheck = [ "snakeviz" ];
   meta = {
     description = "Browser based viewer for profiling data";

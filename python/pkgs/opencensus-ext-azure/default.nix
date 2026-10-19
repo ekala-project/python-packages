@@ -36,8 +36,6 @@ buildPythonPackage rec {
 
   pythonImportsCheck = [ "opencensus.ext.azure" ];
 
-  doCheck = false; # tests are not included in the PyPi tarball
-
   meta = {
     homepage = "https://github.com/census-instrumentation/opencensus-python/tree/master/contrib/opencensus-ext-azure";
     description = "OpenCensus Azure Monitor Exporter";

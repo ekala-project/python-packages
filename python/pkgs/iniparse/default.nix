@@ -20,8 +20,6 @@ buildPythonPackage rec {
 
   dependencies = [ six ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "iniparse" ];
 
   meta = {

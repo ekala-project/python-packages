@@ -40,7 +40,6 @@ buildPythonPackage rec {
 
   # Tests require an API key
   # e2b.exceptions.AuthenticationException: API key is required, please visit the Team tab at https://e2b.dev/dashboard to get your API key.
-  doCheck = false;
 
   meta = {
     description = "E2B Code Interpreter - Stateful code execution";

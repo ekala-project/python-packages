@@ -16,8 +16,6 @@ buildPythonPackage (finalAttrs: {
   version = "0.2.11";
   pyproject = true;
 
-  __structuredAttrs = true;
-
   # pypi source doesn't contain tests
   src = fetchFromGitHub {
     owner = "mymarilyn";
@@ -51,7 +49,6 @@ buildPythonPackage (finalAttrs: {
   # some test in test_buffered_reader.py doesn't seem to return
   # most tests require `clickhouse`
   # TODO: enable tests after `clickhouse` unbroken
-  doCheck = false;
 
   pythonImportsCheck = [ "clickhouse_driver" ];
 

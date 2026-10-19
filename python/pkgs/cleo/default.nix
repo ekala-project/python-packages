@@ -25,7 +25,7 @@ buildPythonPackage rec {
 
   pythonRelaxDeps = [ "rapidfuzz" ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     crashtest
     rapidfuzz
   ];

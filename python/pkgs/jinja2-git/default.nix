@@ -23,7 +23,6 @@ buildPythonPackage rec {
   dependencies = [ jinja2 ];
 
   # the tests need to be run on the git repository
-  doCheck = false;
 
   pythonImportsCheck = [ "jinja2_git" ];
 

@@ -22,7 +22,6 @@ buildPythonPackage rec {
   dependencies = [ django ];
 
   # Tests assume the availability of a mysql/postgresql database
-  doCheck = false;
 
   pythonImportsCheck = [ "reversion" ];
 

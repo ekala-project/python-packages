@@ -32,7 +32,6 @@ buildPythonPackage rec {
   ];
 
   # has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "azure.mgmt.eventgrid" ];
 

@@ -22,7 +22,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [ requests ];
+  dependencies = [ requests ];
 
   nativeCheckInputs = [
     pytestCheckHook

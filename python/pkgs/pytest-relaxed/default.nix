@@ -25,7 +25,7 @@ buildPythonPackage rec {
 
   buildInputs = [ pytest ];
 
-  propagatedBuildInputs = [ decorator ];
+  dependencies = [ decorator ];
   pythonImportsCheck = [ "pytest_relaxed" ];
 
   meta = {

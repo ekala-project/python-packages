@@ -29,7 +29,6 @@ buildPythonPackage (finalAttrs: {
 
   # requires x session (call to defaultDisplay.screen() on import)
   pythonImportsCheck = [ ];
-  doCheck = false;
 
   meta = {
     homepage = "https://github.com/Kalmat/EWMHlib";

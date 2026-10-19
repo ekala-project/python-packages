@@ -19,13 +19,12 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ poetry-core ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     starlette
     fastapi
   ];
 
   # running the real tests would require sqlalchemy 1.4 and starsessions 1.x
-  doCheck = false;
   pythonImportsCheck = [ "imia" ];
 
   meta = {

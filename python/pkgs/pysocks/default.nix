@@ -15,8 +15,6 @@ buildPythonPackage rec {
     sha256 = "184sg65mbmih6ljblfsxcmq5js5l7dj3gpn618w9q5dy3rbh921z";
   };
 
-  doCheck = false;
-
   meta = {
     description = "SOCKS module for Python";
     license = lib.licenses.bsd3;

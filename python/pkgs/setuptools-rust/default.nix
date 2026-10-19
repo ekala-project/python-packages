@@ -34,8 +34,6 @@ buildPythonPackage rec {
 
   pythonImportsCheck = [ "setuptools_rust" ];
 
-  doCheck = false;
-
   setupHook =
     let
       pythonOnTarget = python.pythonOnTargetForTarget or { };

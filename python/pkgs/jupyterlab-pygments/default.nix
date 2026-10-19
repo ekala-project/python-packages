@@ -32,9 +32,8 @@ buildPythonPackage rec {
   ];
 
   # no tests exist on upstream repo
-  doCheck = false;
 
-  propagatedBuildInputs = [ pygments ];
+  dependencies = [ pygments ];
 
   pythonImportsCheck = [ "jupyterlab_pygments" ];
 

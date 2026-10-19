@@ -10,8 +10,6 @@ buildPythonPackage (finalAttrs: {
   version = "0.0.3";
   pyproject = true;
 
-  __structuredAttrs = true;
-
   src = fetchPypi {
     pname = "alibabacloud_darabonba_encode_util";
     inherit (finalAttrs) version;
@@ -23,7 +21,6 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [ "alibabacloud_darabonba_encode_util" ];
 
   # Module has no tests
-  doCheck = false;
 
   meta = {
     description = "Darabonba Encode Util Library for Alibaba Cloud Python SDK";

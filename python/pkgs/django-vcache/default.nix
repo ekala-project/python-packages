@@ -43,7 +43,6 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [ "django_vcache" ];
 
   # requires valkey sentinel cluster
-  doCheck = false;
 
   meta = {
     description = "Specialized, lightweight Django cache backend for Valkey";

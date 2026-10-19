@@ -23,11 +23,10 @@ buildPythonPackage rec {
   };
 
   buildInputs = [ django ];
-  propagatedBuildInputs = [
+  dependencies = [
     django
     six
   ];
 
   # tests need a postgres database
-  doCheck = false;
 }

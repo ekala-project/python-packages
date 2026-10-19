@@ -34,12 +34,11 @@ buildPythonPackage (finalAttrs: {
   pname = "mlflow-skinny";
   inherit (mlflow) version;
   pyproject = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "mlflow";
     repo = "mlflow";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-e11ZncpvThb1Nt6OH+O6Do74N3dphxBiK/HIeLQMxAw=";
   };
 
@@ -73,7 +72,6 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [ "mlflow" ];
 
   # No tests in the skinny subtree.
-  doCheck = false;
 
   meta = mlflow.meta // {
     description = "Lightweight version of MLflow that is designed to minimize package size";

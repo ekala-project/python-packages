@@ -34,7 +34,7 @@ buildPythonPackage rec {
     setuptools
   ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     essentials-openapi
     click
     jinja2

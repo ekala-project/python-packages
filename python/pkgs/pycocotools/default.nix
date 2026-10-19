@@ -16,7 +16,7 @@ buildPythonPackage rec {
     hash = "sha256-NCVNdtqFV2/K9cHzqpquFrjLFUGDNLpCg7gAeWvRmT0=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     cython
     matplotlib
   ];
@@ -27,7 +27,6 @@ buildPythonPackage rec {
   ];
 
   # has no tests
-  doCheck = false;
 
   meta = {
     description = "Official APIs for the MS-COCO dataset";

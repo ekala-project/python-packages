@@ -23,8 +23,6 @@ buildPythonPackage rec {
 
   pythonImportsCheck = [ "re_assert" ];
 
-  doCheck = false;
-
   meta = {
     description = "Show where your regex match assertion failed";
     homepage = "https://github.com/asottile/re-assert";

@@ -29,7 +29,6 @@ buildPythonPackage rec {
 
   # To prevent circular dependency
   # as harlequin-bigquery requires harlequin which requires harlequin-bigquery
-  doCheck = false;
   pythonRemoveDeps = [
     "harlequin"
   ];

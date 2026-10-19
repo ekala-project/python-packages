@@ -21,7 +21,6 @@ buildPythonPackage (finalAttrs: {
   dependencies = [ cryptography ];
 
   # Project has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "aiobroadlink" ];
 

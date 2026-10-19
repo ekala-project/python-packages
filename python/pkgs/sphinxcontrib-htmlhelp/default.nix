@@ -20,7 +20,6 @@ buildPythonPackage rec {
 
   # Check is disabled due to circular dependency of sphinx
   dontCheckRuntimeDeps = true;
-  doCheck = false;
 
   pythonNamespaces = [ "sphinxcontrib" ];
 

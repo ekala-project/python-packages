@@ -18,7 +18,6 @@ buildPythonPackage rec {
   build-system = [ setuptools ];
 
   # Package has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "ebusdpy" ];
 

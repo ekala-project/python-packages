@@ -15,8 +15,6 @@ buildPythonPackage rec {
     sha256 = "1mpwjfvpmryqqwlbyf500584jclgm3vnxa740yyfzkvb5vmyc6bs";
   };
 
-  doCheck = false;
-
   pythonImportsCheck = [ "smdebug_rulesconfig" ];
 
   meta = {

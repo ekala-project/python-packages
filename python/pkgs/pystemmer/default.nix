@@ -36,8 +36,6 @@ buildPythonPackage rec {
 
   pythonImportsCheck = [ "Stemmer" ];
 
-  __structuredAttrs = true;
-
   meta = {
     description = "Snowball stemming algorithms, for information retrieval";
     downloadPage = "https://github.com/snowballstem/pystemmer";

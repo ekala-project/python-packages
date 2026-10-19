@@ -30,7 +30,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # has no tests
-  doCheck = false;
 
   meta = {
     description = "This is the Microsoft Azure Management Groups Client Library";

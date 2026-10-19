@@ -23,7 +23,6 @@ buildPythonPackage rec {
   dependencies = [ aiohttp ];
 
   # Module has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "aioqsw" ];
 

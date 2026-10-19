@@ -41,7 +41,7 @@ buildPythonPackage rec {
     sphinx-rtd-theme
     sphinxHook
   ];
-  propagatedBuildInputs = [ packaging ];
+  dependencies = [ packaging ];
 
   optional-dependencies = {
     validation = [ pydantic ];

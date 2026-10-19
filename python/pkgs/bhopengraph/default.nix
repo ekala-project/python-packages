@@ -22,7 +22,6 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [ "bhopengraph" ];
 
   # Module has no tests
-  doCheck = false;
 
   meta = {
     description = "Library to create BloodHound OpenGraphs";

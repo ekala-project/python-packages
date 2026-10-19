@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "cher-nov";
     repo = "cryptg";
-    rev = "v${version}";
+    tag = "v${version}";
     hash = "sha256-3vdZGtr4NTtba42jqklhEEMWqHgEct/0Rw0Krllgcn4=";
   };
 
@@ -38,7 +38,6 @@ buildPythonPackage rec {
   ];
 
   # has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "cryptg" ];
 

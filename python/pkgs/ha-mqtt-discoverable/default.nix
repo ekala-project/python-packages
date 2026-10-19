@@ -37,7 +37,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # Test require a running Mosquitto instance
-  doCheck = false;
 
   pythonImportsCheck = [ "ha_mqtt_discoverable" ];
 

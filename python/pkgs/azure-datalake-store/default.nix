@@ -30,7 +30,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # has no tests
-  doCheck = false;
 
   meta = {
     description = "This project is the Python filesystem library for Azure Data Lake Store";

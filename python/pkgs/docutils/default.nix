@@ -24,7 +24,6 @@ let
     build-system = [ flit-core ];
 
     # infinite recursion via sphinx and pillow
-    doCheck = false;
     passthru.tests.pytest = self.overridePythonAttrs { doCheck = true; };
     checkPhase = ''
       runHook preCheck

@@ -15,7 +15,7 @@ buildPythonPackage rec {
     hash = "sha256-zdwAxyVElSICO62Un3D/97SPCxredNFwpvEKsERzlDI=";
   };
 
-  propagatedBuildInputs = [ vine ];
+  dependencies = [ vine ];
 
   pythonImportsCheck = [ "amqp" ];
 

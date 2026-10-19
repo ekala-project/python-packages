@@ -34,7 +34,7 @@ buildPythonPackage rec {
   buildInputs = [
     libiconv
   ];
-  propagatedBuildInputs = [
+  dependencies = [
     appdirs
     pyyaml
   ];

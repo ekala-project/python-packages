@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "UgaitzEtxebarria";
     repo = "BizkaibusRTPI";
-    rev = version;
+    tag = version;
     hash = "sha256-TM02pSSOELRGSwsKc5C+34W94K6mnS0C69aijsPqSWs=";
   };
 
@@ -26,7 +26,6 @@ buildPythonPackage rec {
   dependencies = [ aiohttp ];
 
   # Project has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "bizkaibus" ];
 

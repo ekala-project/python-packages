@@ -33,7 +33,7 @@ buildPythonPackage rec {
     cython
   ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     apsw
   ]
   ++ lib.optionals withPostgres [ psycopg2 ]

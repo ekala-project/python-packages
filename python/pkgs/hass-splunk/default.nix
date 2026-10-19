@@ -25,7 +25,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "hass_splunk" ];
 
   # upstream has no tests
-  doCheck = false;
 
   meta = {
     description = "Async single threaded connector to Splunk HEC using an asyncio session";

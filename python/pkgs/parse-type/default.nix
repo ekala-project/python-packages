@@ -31,8 +31,6 @@ buildPythonPackage rec {
 
   pythonImportsCheck = [ "parse_type" ];
 
-  doCheck = false;
-
   meta = {
     homepage = "https://github.com/jenisys/parse_type";
     description = "Simplifies to build parse types based on the parse module";

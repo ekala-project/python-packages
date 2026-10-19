@@ -29,7 +29,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "decora_wifi" ];
 
   # No tests in Pypi source
-  doCheck = false;
 
   meta = {
     description = "Python library for controlling Leviton Decora Smart Wi-Fi devices";

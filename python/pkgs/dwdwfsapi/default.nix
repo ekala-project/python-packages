@@ -25,7 +25,6 @@ buildPythonPackage rec {
   ];
 
   # All tests require network access
-  doCheck = false;
 
   pythonImportsCheck = [ "dwdwfsapi" ];
 

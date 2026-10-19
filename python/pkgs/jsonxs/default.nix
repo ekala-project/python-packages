@@ -13,7 +13,7 @@ buildPythonPackage {
   src = fetchFromGitHub {
     owner = "fboender";
     repo = "jsonxs";
-    rev = "v0.6";
+    tag = "v0.6";
     hash = "sha256-CmKK+qStb9xjmEACY41tQnffD4cMUUQPb74Cni5FTEk=";
   };
 

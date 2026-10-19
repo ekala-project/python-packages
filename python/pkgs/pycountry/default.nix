@@ -28,8 +28,6 @@ buildPythonPackage rec {
 
   pythonImportsCheck = [ "pycountry" ];
 
-  doCheck = false;
-
   meta = {
     description = "ISO country, subdivision, language, currency and script definitions and their translations";
     homepage = "https://github.com/pycountry/pycountry";

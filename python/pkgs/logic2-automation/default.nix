@@ -40,7 +40,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # Tests require the unfree saleae-logic-2 package, plus gRPC server which is not packaged, yet.
-  doCheck = false;
 
   pythonImportsCheck = [ "saleae.automation" ];
 

@@ -31,7 +31,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # No tests available.
-  doCheck = false;
 
   meta = {
     description = "A wikilink extension for Python Markdown";

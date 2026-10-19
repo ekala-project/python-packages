@@ -25,7 +25,7 @@ buildPythonPackage rec {
     hatchling
   ];
 
-  propagatedBuildInputs = [ anyio ];
+  dependencies = [ anyio ];
   pythonImportsCheck = [ "anysqlite" ];
 
   meta = {

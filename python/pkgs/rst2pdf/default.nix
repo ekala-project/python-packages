@@ -44,7 +44,7 @@ buildPythonPackage rec {
     wheel
   ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     docutils
     importlib-metadata
     jinja2
@@ -58,7 +58,6 @@ buildPythonPackage rec {
 
   pythonImportsCheck = [ "rst2pdf" ];
   # Test suite fails: https://github.com/rst2pdf/rst2pdf/issues/1067
-  doCheck = false;
 
   postInstall = ''
     ${lib.getExe' docutils "rst2man"} doc/rst2pdf.rst rst2pdf.1

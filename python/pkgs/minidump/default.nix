@@ -18,7 +18,6 @@ buildPythonPackage rec {
   build-system = [ setuptools ];
 
   # Upstream doesn't have tests
-  doCheck = false;
 
   pythonImportsCheck = [ "minidump" ];
 

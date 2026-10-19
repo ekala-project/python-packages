@@ -32,7 +32,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ poetry-core ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     pillow
     beautifulsoup4
     httpx

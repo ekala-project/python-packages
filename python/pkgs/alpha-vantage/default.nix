@@ -50,7 +50,6 @@ buildPythonPackage rec {
   ++ lib.concatAttrValues optional-dependencies;
 
   # Starting with 3.0.0 most tests require an API key
-  doCheck = false;
 
   pythonImportsCheck = [ "alpha_vantage" ];
 

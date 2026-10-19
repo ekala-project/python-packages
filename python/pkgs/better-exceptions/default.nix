@@ -22,7 +22,6 @@ buildPythonPackage rec {
 
   # As noted by @WolfangAukang, some check files need to be disabled because of various errors, same with some tests.
   # After disabling and running the build, no tests are collected.
-  doCheck = false;
 
   meta = {
     description = "Pretty and more helpful exceptions in Python, automatically";

@@ -49,7 +49,6 @@ buildPythonPackage rec {
   ];
 
   # upstream has no tests
-  doCheck = false;
 
   meta = {
     description = "Basic client for connecting to Home Assistant over websockets and REST";

@@ -45,7 +45,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "dbt.adapters" ];
 
   # circular dependencies
-  doCheck = false;
   meta = {
     description = "Set of adapter protocols and base functionality that supports integration with dbt-core";
     homepage = "https://github.com/dbt-labs/dbt-adapters";

@@ -40,7 +40,6 @@ buildPythonPackage rec {
   enabledTestPaths = [ "tests/ayla_iot_unofficial.py" ];
 
   # tests interact with the actual API
-  doCheck = false;
 
   meta = {
     description = "Unofficial python library for interacting with the Ayla IoT API";

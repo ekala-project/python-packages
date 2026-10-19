@@ -17,7 +17,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ hatchling ];
 
-  propagatedBuildInputs = [ pyflakes ];
+  dependencies = [ pyflakes ];
   pythonImportsCheck = [ "autoflake" ];
   meta = {
     description = "Tool to remove unused imports and unused variables";

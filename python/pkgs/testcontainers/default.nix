@@ -41,7 +41,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # Tests require various container and database services running
-  doCheck = false;
 
   pythonImportsCheck = [
     "testcontainers"

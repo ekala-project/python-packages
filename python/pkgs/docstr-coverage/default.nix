@@ -23,7 +23,7 @@ buildPythonPackage {
     hash = "sha256-k1ny4fWS+CmgLNWPlYPsscjei2UZ6h8QJrZSay5abck=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     click
     pyyaml
     tqdm

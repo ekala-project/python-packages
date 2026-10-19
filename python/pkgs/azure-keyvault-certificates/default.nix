@@ -22,7 +22,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     azure-common
     azure-core
     isodate
@@ -32,7 +32,6 @@ buildPythonPackage rec {
   pythonNamespaces = [ "azure.keyvault" ];
 
   # Module has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "azure.keyvault.certificates" ];
 

@@ -36,7 +36,6 @@ buildPythonPackage rec {
   ];
 
   # No tests
-  doCheck = false;
 
   meta = {
     description = "Backtest trading strategies in Python";

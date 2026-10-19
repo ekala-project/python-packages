@@ -33,7 +33,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "in_toto_attestation" ];
 
   # No tests in the Pypi archive
-  doCheck = false;
 
   meta = {
     description = "Python implementation of in-toto attestations";

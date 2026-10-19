@@ -18,7 +18,7 @@ buildPythonPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "source-foundry";
     repo = "font-v";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-ceASyYcNul5aWPAPGajCQrqsQ3bN1sE+nMbCbj7f35w=";
   };
 

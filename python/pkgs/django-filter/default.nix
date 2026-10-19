@@ -23,8 +23,6 @@ buildPythonPackage rec {
 
   pythonImportsCheck = [ "django_filters" ];
 
-  doCheck = false;
-
   meta = {
     description = "Reusable Django application for allowing users to filter querysets dynamically";
     homepage = "https://github.com/carltongibson/django-filter";

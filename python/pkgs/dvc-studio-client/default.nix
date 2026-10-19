@@ -33,7 +33,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "dvc_studio_client" ];
 
   # Tests try to access network
-  doCheck = false;
 
   meta = {
     description = "Library to post data from DVC/DVCLive to Iterative Studio";

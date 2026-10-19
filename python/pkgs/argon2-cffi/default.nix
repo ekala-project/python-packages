@@ -25,7 +25,7 @@ buildPythonPackage rec {
     hatch-fancy-pypi-readme
   ];
 
-  propagatedBuildInputs = [ argon2-cffi-bindings ];
+  dependencies = [ argon2-cffi-bindings ];
 
   pythonImportsCheck = [ "argon2" ];
 

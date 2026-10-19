@@ -26,7 +26,7 @@ buildPythonPackage rec {
 
   build-system = [ setuptools-scm ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     networkx
     numpy
     pandas

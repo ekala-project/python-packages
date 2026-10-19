@@ -24,7 +24,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ hatchling ];
 
-  propagatedBuildInputs = [ terminado ];
+  dependencies = [ terminado ];
 
   meta = {
     description = "Jupyter Server Extension Providing Support for Terminals";

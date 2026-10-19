@@ -18,7 +18,6 @@ buildPythonPackage (finalAttrs: {
   pname = "moyopy";
   version = "0.15.0";
   pyproject = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "spglib";

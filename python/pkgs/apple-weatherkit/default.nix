@@ -30,7 +30,6 @@ buildPythonPackage (finalAttrs: {
   ++ pyjwt.optional-dependencies.crypto;
 
   # Module has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "apple_weatherkit" ];
 

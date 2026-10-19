@@ -17,9 +17,8 @@ buildPythonPackage rec {
   };
 
   # No Tests
-  doCheck = false;
 
-  propagatedBuildInputs = [
+  dependencies = [
     flask
     pyyaml
   ];

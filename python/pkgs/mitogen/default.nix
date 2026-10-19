@@ -20,7 +20,6 @@ buildPythonPackage (finalAttrs: {
   build-system = [ setuptools ];
 
   # Tests require network access and Docker support
-  doCheck = false;
 
   pythonImportsCheck = [ "mitogen" ];
 

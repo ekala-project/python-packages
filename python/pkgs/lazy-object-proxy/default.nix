@@ -20,7 +20,6 @@ buildPythonPackage rec {
   build-system = [ setuptools-scm ];
 
   # Broken tests. Seem to be fixed upstream according to Travis.
-  doCheck = false;
 
   meta = {
     description = "Fast and thorough lazy object proxy";

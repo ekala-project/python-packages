@@ -17,7 +17,7 @@ buildPythonPackage rec {
     hash = "sha256-jWB9C/CcqUYAuOQvByHb5D7lOgRwGCNErHrOfljcYXc=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     pyzmq
     twisted
   ];

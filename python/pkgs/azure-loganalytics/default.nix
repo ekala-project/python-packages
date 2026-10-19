@@ -11,7 +11,6 @@ buildPythonPackage (finalAttrs: {
   version = "0.1.1";
   pyproject = true;
 
-  __structuredAttrs = true;
   pname = "azure-loganalytics";
 
   src = fetchPypi {
@@ -30,7 +29,6 @@ buildPythonPackage (finalAttrs: {
   pythonNamespaces = [ "azure" ];
 
   # has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "azure.loganalytics" ];
 

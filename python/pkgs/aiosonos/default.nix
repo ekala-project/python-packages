@@ -37,8 +37,6 @@ buildPythonPackage (finalAttrs: {
     brotli
   ];
 
-  doCheck = false; # no tests
-
   pythonImportsCheck = [
     "aiosonos"
     "aiosonos.api"

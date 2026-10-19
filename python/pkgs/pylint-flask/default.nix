@@ -22,7 +22,7 @@ buildPythonPackage rec {
 
   buildInputs = [ pylint ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     astroid
     pylint-plugin-utils
   ];

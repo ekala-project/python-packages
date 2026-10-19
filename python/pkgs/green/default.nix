@@ -25,7 +25,7 @@ buildPythonPackage rec {
       --subst-var-by green "$out/bin/green"
   '';
 
-  propagatedBuildInputs = [
+  dependencies = [
     colorama
     coverage
     unidecode

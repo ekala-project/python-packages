@@ -23,14 +23,13 @@ buildPythonPackage rec {
       --replace 'protobuf>=4.21.6' 'protobuf'
   '';
 
-  propagatedBuildInputs = [
+  dependencies = [
     googleapis-common-protos
     grpcio
     protobuf
   ];
 
   # Project has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "grpc_status" ];
 

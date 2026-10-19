@@ -33,7 +33,6 @@ buildPythonPackage rec {
   ];
 
   # no tests, just a script
-  doCheck = false;
 
   meta = {
     description = "Cloudbell webpush notification support for ntfy";

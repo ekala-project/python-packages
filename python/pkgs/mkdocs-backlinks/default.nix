@@ -33,7 +33,6 @@ buildPythonPackage rec {
   ];
 
   # No tests available
-  doCheck = false;
 
   meta = {
     description = "Plugin for adding backlinks to mkdocs";

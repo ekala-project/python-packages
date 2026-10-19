@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "saghul";
     repo = "pyuv";
-    rev = "pyuv-${version}";
+    tag = "pyuv-${version}";
     sha256 = "1wiwwdylz66lfsjh6p4iv7pfhzvnhwjk332625njizfhz3gq9fwr";
   };
 

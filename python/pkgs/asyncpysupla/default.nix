@@ -21,7 +21,6 @@ buildPythonPackage rec {
   dependencies = [ aiohttp ];
 
   # Tests require API credentials and network access
-  doCheck = false;
 
   pythonImportsCheck = [ "asyncpysupla" ];
 

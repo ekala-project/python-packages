@@ -15,7 +15,6 @@ buildPythonPackage (finalAttrs: {
   pname = "kagglesdk";
   version = "0.1.37";
   pyproject = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "Kaggle";
@@ -37,7 +36,6 @@ buildPythonPackage (finalAttrs: {
 
   # The two available tests fail with:
   # AssertionError: 'https://api.kaggle.com' != 'https://www.kaggle.com'
-  doCheck = false;
 
   meta = {
     description = "Bindings to access Kaggle endpoints";

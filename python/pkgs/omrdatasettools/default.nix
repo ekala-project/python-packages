@@ -29,7 +29,7 @@ buildPythonPackage rec {
     hash = "sha256-kUUcbti29uDnSEvCubMAUnptlaZGpEsW2IBGSAGnGyQ=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     pillow
     scikit-image
     h5py

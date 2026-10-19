@@ -29,7 +29,6 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [ "compit_inext_api" ];
 
   # upstream has no tests
-  doCheck = false;
 
   meta = {
     description = "Python client for the Compit iNext API";

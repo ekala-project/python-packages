@@ -18,7 +18,6 @@ buildPythonPackage rec {
   build-system = [ hatchling ];
 
   # Tests require gradio and attempt to load a cert file
-  doCheck = false;
 
   pythonImportsCheck = [ "groovy" ];
 

@@ -28,8 +28,6 @@ buildPythonPackage (finalAttrs: {
 
   pythonImportsCheck = [ "readchar" ];
 
-  doCheck = false;
-
   meta = {
     description = "Python library to read characters and key strokes";
     homepage = "https://github.com/magmax/python-readchar";

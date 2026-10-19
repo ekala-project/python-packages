@@ -20,7 +20,6 @@ buildPythonPackage rec {
   build-system = [ setuptools ];
 
   # Module has no test
-  doCheck = false;
 
   pythonImportsCheck = [ "dropmqttapi" ];
 

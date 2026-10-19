@@ -45,7 +45,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "django_celery_beat" ];
 
   # Tests require additional work
-  doCheck = false;
 
   meta = {
     description = "Database-backed Periodic Tasks";

@@ -23,8 +23,6 @@ buildPythonPackage rec {
     "pysendfile"
   ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "pyftpdlib" ];
 
   meta = {

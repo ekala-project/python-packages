@@ -29,8 +29,6 @@ buildPythonPackage rec {
 
   pythonImportsCheck = [ "intervaltree" ];
 
-  doCheck = false;
-
   meta = {
     description = "Editable interval tree data structure for Python 2 and 3";
     homepage = "https://github.com/chaimleib/intervaltree";

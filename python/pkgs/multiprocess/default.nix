@@ -17,10 +17,9 @@ buildPythonPackage rec {
     hash = "sha256-dH6SWecBxBQYqLohCg1gPWu6cQ7iKtRmIet9UlDMkWs=";
   };
 
-  propagatedBuildInputs = [ dill ];
+  dependencies = [ dill ];
 
   # Python-version dependent tests
-  doCheck = false;
 
   pythonImportsCheck = [ "multiprocess" ];
 

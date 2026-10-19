@@ -27,8 +27,6 @@ buildPythonPackage {
     opentelemetry-util-http
   ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "opentelemetry.instrumentation.asgi" ];
 
   meta = opentelemetry-instrumentation.meta // {

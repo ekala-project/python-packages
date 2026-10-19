@@ -19,7 +19,6 @@ buildPythonPackage rec {
   build-system = [ setuptools-scm ];
 
   # Project has not published tests yet
-  doCheck = false;
 
   pythonImportsCheck = [ "adafruit_platformdetect" ];
 

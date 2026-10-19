@@ -26,7 +26,6 @@ buildPythonPackage (finalAttrs: {
   build-system = [ hatchling ];
 
   # Module has no test
-  doCheck = false;
 
   pythonImportsCheck = [ "appimage" ];
 

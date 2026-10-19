@@ -10,8 +10,6 @@ buildPythonPackage (finalAttrs: {
   version = "0.1.14";
   pyproject = true;
 
-  __structuredAttrs = true;
-
   src = fetchFromGitHub {
     owner = "boalang";
     repo = "api-python";
@@ -22,7 +20,6 @@ buildPythonPackage (finalAttrs: {
   build-system = [ setuptools ];
 
   # upstream has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "boaapi" ];
 

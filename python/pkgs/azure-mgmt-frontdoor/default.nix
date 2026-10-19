@@ -28,7 +28,6 @@ buildPythonPackage rec {
   ];
 
   # Tests are only available in mono repo
-  doCheck = false;
 
   pythonImportsCheck = [ "azure.mgmt.frontdoor" ];
 

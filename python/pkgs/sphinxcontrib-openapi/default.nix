@@ -22,7 +22,7 @@ buildPythonPackage rec {
   };
 
   nativeBuildInputs = [ setuptools-scm ];
-  propagatedBuildInputs = [
+  dependencies = [
     deepmerge
     jsonschema
     picobox

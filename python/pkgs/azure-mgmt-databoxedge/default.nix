@@ -30,7 +30,6 @@ buildPythonPackage rec {
   ];
 
   # no tests in pypi tarball
-  doCheck = false;
 
   pythonImportsCheck = [ "azure.mgmt.databoxedge" ];
 

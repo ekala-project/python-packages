@@ -23,7 +23,6 @@ buildPythonPackage rec {
   dependencies = [ aiohttp ];
 
   # no tests implemented
-  doCheck = false;
 
   pythonImportsCheck = [ "emulated_roku" ];
 

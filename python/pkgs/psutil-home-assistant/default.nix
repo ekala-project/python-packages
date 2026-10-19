@@ -17,7 +17,7 @@ buildPythonPackage rec {
     hash = "sha256-6bj1aaa/JYZFVwUAJfxISRoldgTmumCG8WrlKhkb6kM=";
   };
 
-  propagatedBuildInputs = [ psutil ];
+  dependencies = [ psutil ];
 
   meta = {
     description = "Wrapper of psutil that removes reliance on globals";

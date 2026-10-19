@@ -31,7 +31,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "onedrive_personal_sdk" ];
 
   # upstream has no tests
-  doCheck = false;
 
   meta = {
     description = "Package to interact with the Microsoft Graph API for personal OneDrives";

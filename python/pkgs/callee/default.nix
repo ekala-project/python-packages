@@ -21,7 +21,6 @@ buildPythonPackage (finalAttrs: {
 
   pythonImportsCheck = [ "callee" ];
 
-  doCheck = false; # missing dependency
   meta = {
     description = "Argument matchers for unittest.mock";
     homepage = "https://github.com/Xion/callee";

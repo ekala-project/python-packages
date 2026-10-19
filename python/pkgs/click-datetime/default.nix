@@ -24,7 +24,6 @@ buildPythonPackage rec {
   dependencies = [ click ];
 
   # no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "click_datetime" ];
 

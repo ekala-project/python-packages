@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ProtonVPN";
     repo = "local-agent-rs";
-    rev = version;
+    tag = version;
     hash = "sha256-y2FEfICwWa/GgaKkq8CR+lVDYIsk0HsuKuGUsUQZAFo=";
   };
 

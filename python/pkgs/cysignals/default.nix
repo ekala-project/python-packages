@@ -33,7 +33,6 @@ buildPythonPackage rec {
   hardeningDisable = [ "fortify" ];
 
   # known failure: https://github.com/sagemath/cysignals/blob/582dbf6a7b0f9ade0abe7a7b8720b7fb32435c3c/testgdb.py#L5
-  doCheck = false;
   checkTarget = "check-install";
   meta = {
     description = "Interrupt and signal handling for Cython";

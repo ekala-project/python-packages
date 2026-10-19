@@ -35,7 +35,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # upstream tests require network access and AWS credentials
-  doCheck = false;
 
   pythonImportsCheck = [ "homelink" ];
 

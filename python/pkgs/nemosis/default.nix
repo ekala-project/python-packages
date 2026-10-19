@@ -38,7 +38,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   pythonImportsCheck = [ "nemosis" ];
-  doCheck = false; # require network and patching
 
   meta = {
     description = "Downloader of historical data published by the Australian Energy Market Operator";

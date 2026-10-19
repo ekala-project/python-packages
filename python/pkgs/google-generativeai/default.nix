@@ -41,7 +41,6 @@ buildPythonPackage rec {
   ];
 
   # Issue with the google.ai module. Check with the next release
-  doCheck = false;
 
   pythonImportsCheck = [ "google.generativeai" ];
 

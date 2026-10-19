@@ -27,7 +27,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools-scm ];
 
-  propagatedBuildInputs = [ distro ];
+  dependencies = [ distro ];
   pythonImportsCheck = [ "ruyaml" ];
   meta = {
     description = "YAML 1.2 loader/dumper package for Python";

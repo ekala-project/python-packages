@@ -29,7 +29,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # Module has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "ghrepo_stats" ];
 

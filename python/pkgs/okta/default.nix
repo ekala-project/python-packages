@@ -53,7 +53,7 @@ buildPythonPackage rec {
     yarl
   ];
 
-  checkInputs = [
+  nativeCheckInputs = [
     pyfakefs
     pytest-asyncio
     pytest-mock

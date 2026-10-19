@@ -20,12 +20,11 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     jupyterlab
     jupyter-lsp
   ];
   # No tests
-  doCheck = false;
   pythonImportsCheck = [ "jupyterlab_lsp" ];
 
   meta = {

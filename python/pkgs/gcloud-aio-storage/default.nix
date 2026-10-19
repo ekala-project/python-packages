@@ -39,7 +39,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "gcloud.aio.storage" ];
 
   # Tests require network access
-  doCheck = false;
 
   meta = {
     description = "Python client for Google Cloud Storage";

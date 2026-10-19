@@ -14,16 +14,15 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mnot";
     repo = "http_sfv";
-    rev = "http_sfv-${version}";
+    tag = "http_sfv-${version}";
     hash = "sha256-xf9bGDfsEcQnFQ2b1bLRGYug+H4e5jeV/LJstQtp6Bw=";
   };
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [ typing-extensions ];
+  dependencies = [ typing-extensions ];
 
   # Tests require external data (https://github.com/httpwg/structured-field-tests)
-  doCheck = false;
 
   pythonImportsCheck = [ "http_sfv" ];
 

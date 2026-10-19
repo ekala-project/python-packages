@@ -17,7 +17,7 @@ buildPythonPackage rec {
     hash = "sha256-EqAv4bcTHworjORbRvHgzdKLmBj+RJlVTCaISYfqDDI=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     msgpack
     numpy
   ];

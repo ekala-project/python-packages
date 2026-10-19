@@ -14,17 +14,16 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ktosiek";
     repo = "pytest-vcr";
-    rev = version;
+    tag = version;
     sha256 = "1i6fin91mklvbi8jzfiswvwf1m91f43smpj36a17xrzk4gisfs6i";
   };
 
   buildInputs = [ pytest ];
 
-  propagatedBuildInputs = [ vcrpy ];
+  dependencies = [ vcrpy ];
 
   # Tests are using an obsolete attribute 'config'
   # https://github.com/ktosiek/pytest-vcr/issues/43
-  doCheck = false;
   pythonImportsCheck = [ "pytest_vcr" ];
 
   meta = {

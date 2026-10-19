@@ -27,8 +27,6 @@ buildPythonPackage rec {
 
   dependencies = [ pygments ];
 
-  doCheck = false;
-
   pythonImportsCheck = [
     "a11y_pygments"
     "a11y_pygments.utils"

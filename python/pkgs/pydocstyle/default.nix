@@ -22,8 +22,6 @@ buildPythonPackage rec {
 
   pythonImportsCheck = [ "pydocstyle" ];
 
-  doCheck = false;
-
   meta = {
     homepage = "https://github.com/PyCQA/pydocstyle";
     description = "Python docstring style checker";

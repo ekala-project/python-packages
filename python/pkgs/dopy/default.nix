@@ -18,13 +18,12 @@ buildPythonPackage {
     sha256 = "0ams289qcgna96aak96jbz6wybs6qb95h2gn8lb4lmx2p5sq4q56";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     requests
     six
   ];
 
   # contains no tests
-  doCheck = false;
   pythonImportsCheck = [ "dopy" ];
 
   meta = {

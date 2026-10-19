@@ -24,7 +24,6 @@ buildPythonPackage rec {
   '';
 
   # errors with vendored libs
-  doCheck = false;
 
   pythonImportsCheck = [ "invoke" ];
 

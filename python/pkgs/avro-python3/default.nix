@@ -25,7 +25,6 @@ buildPythonPackage (finalAttrs: {
     pycodestyle
     isort
   ];
-  doCheck = false; # No such file or directory: './run_tests.py
 
   meta = {
     description = "Serialization and RPC framework";

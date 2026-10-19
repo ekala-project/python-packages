@@ -30,9 +30,10 @@ buildPythonPackage rec {
     hatchling
   ];
 
-  checkInputs = [ pcpp ];
-
-  nativeCheckInputs = [ pytestCheckHook ];
+  nativeCheckInputs = [
+    pcpp
+    pytestCheckHook
+  ];
 
   pythonImportsCheck = [ "cxxheaderparser" ];
 

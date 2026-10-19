@@ -23,7 +23,6 @@ buildPythonPackage rec {
   dependencies = [ requests ];
 
   # Project has tests but they require actual API credentials
-  doCheck = false;
 
   pythonImportsCheck = [ "neurio" ];
 

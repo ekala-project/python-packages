@@ -21,7 +21,6 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [ "apify_fingerprint_datapoints" ];
 
   # Module has no tests
-  doCheck = false;
 
   meta = {
     description = "Browser fingerprint datapoints collected by Apify";

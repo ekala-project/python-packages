@@ -18,7 +18,6 @@ buildPythonPackage (finalAttrs: {
   pname = "plotnine";
   version = "0.15.8";
   pyproject = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "has2k1";

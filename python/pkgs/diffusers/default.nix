@@ -68,8 +68,6 @@ buildPythonPackage rec {
 
   pythonImportsCheck = [ "diffusers" ];
 
-  doCheck = false;
-
   meta = {
     description = "State-of-the-art diffusion models for image and audio generation in PyTorch";
     mainProgram = "diffusers-cli";

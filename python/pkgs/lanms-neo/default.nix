@@ -21,7 +21,7 @@ buildPythonPackage {
     hash = "sha256-0fs4RNN1ptiir7GfR9B8HK0VqTkk5PbVJxgKiDId3po=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     pybind11
     numpy
   ];

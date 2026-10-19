@@ -20,8 +20,6 @@ buildPythonPackage rec {
 
   dependencies = [ gast ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "beniget" ];
 
   meta = {

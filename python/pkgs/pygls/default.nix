@@ -25,7 +25,7 @@ buildPythonPackage (finalAttrs: {
     poetry-core
   ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     attrs
     cattrs
     lsprotocol

@@ -23,7 +23,6 @@ buildPythonPackage rec {
   dependencies = [ lark ];
 
   # This fork of python-hcl2 doesn't ship tests
-  doCheck = false;
 
   pythonImportsCheck = [ "hcl2" ];
 

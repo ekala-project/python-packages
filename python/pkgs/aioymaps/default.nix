@@ -21,7 +21,6 @@ buildPythonPackage rec {
   dependencies = [ aiohttp ];
 
   # Project has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "aioymaps" ];
 

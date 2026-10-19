@@ -24,7 +24,6 @@ buildPythonPackage rec {
   nativeCheckInputs = [ pytestCheckHook ];
 
   # data files missing
-  doCheck = false;
 
   pythonImportsCheck = [ "ais" ];
 

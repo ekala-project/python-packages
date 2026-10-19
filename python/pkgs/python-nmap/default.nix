@@ -15,7 +15,7 @@ buildPythonPackage rec {
     hash = "sha256-91r2uR3Y47DDH4adsyFj9iraaGlF5bfCX4S8D3+tO2Q=";
   };
 
-  propagatedBuildInputs = [ nmap ];
+  dependencies = [ nmap ];
 
   postPatch = ''
     substituteInPlace setup.cfg \

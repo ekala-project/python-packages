@@ -22,7 +22,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     urllib3
     six
     certifi
@@ -31,7 +31,6 @@ buildPythonPackage rec {
   ];
 
   # upstream only has codecoverage tests, but no actual tests to go with them
-  doCheck = false;
 
   pythonImportsCheck = [ "ionoscloud" ];
 

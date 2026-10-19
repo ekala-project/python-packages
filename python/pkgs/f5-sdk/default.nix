@@ -16,13 +16,12 @@ buildPythonPackage rec {
     hash = "sha256-IokMj9mCMsFMVFYO4CpZUB2i32cOamhS5u2mNkNjljo=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     f5-icontrol-rest
     six
   ];
 
   # needs to be updated to newer pytest version and requires physical device
-  doCheck = false;
 
   pythonImportsCheck = [ "f5" ];
 

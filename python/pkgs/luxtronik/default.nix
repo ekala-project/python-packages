@@ -12,12 +12,11 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Bouni";
     repo = "python-luxtronik";
-    rev = version;
+    tag = version;
     hash = "sha256-7TuvqOAb/MUumOF6BKTRLOJuvteqZPmFUXXsuwEpmOM=";
   };
 
   # Project has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "luxtronik" ];
 

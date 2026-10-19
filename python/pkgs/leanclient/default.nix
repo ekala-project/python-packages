@@ -35,7 +35,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # Tests require a real Lean toolchain
-  doCheck = false;
 
   pythonImportsCheck = [ "leanclient" ];
 

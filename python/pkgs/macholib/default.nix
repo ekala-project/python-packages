@@ -22,7 +22,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ronaldoussoren";
     repo = "macholib";
-    rev = "v${version}";
+    tag = "v${version}";
     hash = "sha256-+7dFPwzwKmvtDY/blLNyrNDEATcgo+BUceoSGg55gbo=";
   };
 

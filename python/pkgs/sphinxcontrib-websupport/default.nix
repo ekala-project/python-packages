@@ -20,7 +20,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ flit-core ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     jinja2
     sphinxcontrib-serializinghtml
   ];

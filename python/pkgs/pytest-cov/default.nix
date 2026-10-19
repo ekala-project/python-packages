@@ -34,8 +34,6 @@ buildPythonPackage rec {
     tomli
   ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "pytest_cov" ];
 
   meta = {

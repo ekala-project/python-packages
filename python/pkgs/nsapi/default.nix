@@ -23,7 +23,6 @@ buildPythonPackage rec {
   dependencies = [ pytz ];
 
   # Project has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "ns_api" ];
 

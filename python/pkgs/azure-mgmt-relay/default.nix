@@ -34,7 +34,6 @@ buildPythonPackage rec {
   pythonNamespaces = [ "azure.mgmt" ];
 
   # has no tests
-  doCheck = false;
   pythonImportsCheck = [ "azure.mgmt.relay" ];
 
   meta = {

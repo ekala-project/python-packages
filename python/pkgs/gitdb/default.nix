@@ -22,7 +22,7 @@ buildPythonPackage rec {
 
   pythonRelaxDeps = [ "smmap" ];
 
-  propagatedBuildInputs = [ smmap ];
+  dependencies = [ smmap ];
 
   pythonImportsCheck = [ "gitdb" ];
 

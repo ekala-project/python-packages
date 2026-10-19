@@ -33,7 +33,6 @@ buildPythonPackage rec {
 
   # ImportError: No module named test_elasticsearch_dsl
   # Tests require a local instance of elasticsearch
-  doCheck = false;
 
   meta = {
     description = "High level Python client for Elasticsearch";

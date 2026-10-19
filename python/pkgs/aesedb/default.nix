@@ -24,7 +24,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     aiowinreg
     colorama
     pycryptodomex

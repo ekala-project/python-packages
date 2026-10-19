@@ -38,8 +38,6 @@ buildPythonPackage rec {
 
   pythonImportsCheck = [ "nox" ];
 
-  doCheck = false;
-
   meta = {
     description = "Flexible test automation for Python";
     homepage = "https://github.com/wntrblm/nox";

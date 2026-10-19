@@ -33,8 +33,6 @@ buildPythonPackage rec {
     networkx = [ networkx ];
   };
 
-  doCheck = false;
-
   pythonImportsCheck = [ "rdflib" ];
 
   meta = {

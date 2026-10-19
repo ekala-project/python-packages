@@ -36,7 +36,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "jupyter_client" ];
 
   # Circular dependency with ipykernel
-  doCheck = false;
 
   meta = {
     description = "Jupyter protocol implementation and client libraries";

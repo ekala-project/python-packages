@@ -25,7 +25,7 @@ buildPythonPackage rec {
     social_cards_generation = [ matplotlib ];
   };
 
-  propagatedBuildInputs = [ sphinx ];
+  dependencies = [ sphinx ];
 
   pythonImportsCheck = [ "sphinxext.opengraph" ];
 

@@ -20,7 +20,7 @@ buildPythonPackage (finalAttrs: {
 
   nativeBuildInputs = [ flit-core ];
 
-  propagatedBuildInputs = [ sphinx ];
+  dependencies = [ sphinx ];
 
   # no tests, see https://github.com/pradyunsg/sphinx-inline-tabs/issues/6
 

@@ -31,7 +31,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # Tests require a live 1Password service account token.
-  doCheck = false;
 
   pythonImportsCheck = [ "onepassword" ];
 

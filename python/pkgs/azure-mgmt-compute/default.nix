@@ -30,7 +30,6 @@ buildPythonPackage rec {
   pythonNamespaces = [ "azure.mgmt" ];
 
   # Module has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "azure.mgmt.compute" ];
 

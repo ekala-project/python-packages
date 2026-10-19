@@ -10,7 +10,6 @@
 }:
 
 buildPythonPackage rec {
-  __structuredAttrs = true;
 
   pname = "ipydatawidgets";
   version = "4.3.5";
@@ -25,7 +24,7 @@ buildPythonPackage rec {
 
   setupPyBuildFlags = [ "--skip-npm" ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     ipywidgets
     numpy
     six

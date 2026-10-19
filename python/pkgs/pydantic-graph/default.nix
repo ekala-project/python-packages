@@ -47,8 +47,6 @@ buildPythonPackage (finalAttrs: {
     "pydantic_graph"
   ];
 
-  doCheck = false; # no tests
-
   meta = {
     description = "GenAI Agent Framework, the Pydantic way";
     homepage = "https://github.com/pydantic/pydantic-ai";

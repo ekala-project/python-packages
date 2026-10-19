@@ -20,7 +20,7 @@ buildPythonPackage rec {
 
   build-system = [ setuptools ];
 
-  propagatedBuildInputs = [ wrapt ];
+  dependencies = [ wrapt ];
 
   pythonImportsCheck = [ "deprecated" ];
 

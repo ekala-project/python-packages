@@ -36,7 +36,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "azure.storage.filedatalake" ];
 
   # Tests are only available in mono repo
-  doCheck = false;
 
   meta = {
     description = "Microsoft Azure File DataLake Storage Client Library for Python";

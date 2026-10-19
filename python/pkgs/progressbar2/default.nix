@@ -28,7 +28,7 @@ buildPythonPackage rec {
     setuptools-scm
   ];
 
-  propagatedBuildInputs = [ python-utils ];
+  dependencies = [ python-utils ];
   pythonImportsCheck = [ "progressbar" ];
 
   meta = {

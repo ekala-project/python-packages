@@ -30,7 +30,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "goslideapi" ];
 
   # upstream has no tests
-  doCheck = false;
 
   meta = {
     description = "Python API to utilise the Slide Open Cloud and Local API";

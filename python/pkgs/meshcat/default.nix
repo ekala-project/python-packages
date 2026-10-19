@@ -25,7 +25,7 @@ buildPythonPackage (finalAttrs: {
     sed -i '/PYTHONPATH/d' src/meshcat/servers/zmqserver.py
   '';
 
-  propagatedBuildInputs = [
+  dependencies = [
     ipython
     u-msgpack-python
     numpy
@@ -38,7 +38,6 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [ "meshcat" ];
 
   # requires a running MeshCat viewer
-  doCheck = false;
 
   meta = {
     homepage = "https://github.com/rdeits/meshcat-python";

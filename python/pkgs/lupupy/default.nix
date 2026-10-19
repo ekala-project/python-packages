@@ -20,14 +20,13 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     colorlog
     pyyaml
     requests
   ];
 
   # Project has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "lupupy" ];
 

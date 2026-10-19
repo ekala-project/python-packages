@@ -61,8 +61,6 @@ buildPythonPackage {
     regex
   ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "tiktoken" ];
 
   meta = {

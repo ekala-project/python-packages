@@ -19,7 +19,7 @@ buildPythonPackage rec {
     hash = "sha256-/7wp41jz/5nUFqZNg4O7yF2+eE+awAEXp6dhD+Loc0U=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     lxml
     lxml-html-clean
   ];

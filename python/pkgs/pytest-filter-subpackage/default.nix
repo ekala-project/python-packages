@@ -22,7 +22,7 @@ buildPythonPackage rec {
 
   buildInputs = [ pytest ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     pytest-doctestplus
     pytest-cov-stub
   ];

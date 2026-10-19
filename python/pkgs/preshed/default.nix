@@ -19,12 +19,11 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ cython ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     cymem
     murmurhash
   ];
   # Tests have import issues with 3.0.8
-  doCheck = false;
 
   pythonImportsCheck = [ "preshed" ];
 

@@ -21,7 +21,7 @@ buildPythonPackage rec {
     sha256 = "sha256-mIdr4mppQqKGBdlLwLECCvKgwYmGMY1zjq/gzV0urRQ=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     pytest
     jupyter-client
     ipykernel
@@ -32,7 +32,6 @@ buildPythonPackage rec {
   ];
 
   # tests not included with pypi release
-  doCheck = false;
   pythonImportsCheck = [ "nbsmoke" ];
 
   meta = {

@@ -79,7 +79,6 @@ buildPythonPackage (finalAttrs: {
   };
 
   # No tests for python
-  doCheck = false;
 
   pythonImportsCheck = [ "mkdocs" ];
 

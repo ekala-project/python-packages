@@ -15,10 +15,9 @@ buildPythonPackage rec {
     hash = "sha256-5OMlfvLPgaMzl4ek1c+STlTJHwlacj9tJYTa5h1Dlu0=";
   };
 
-  propagatedBuildInputs = [ numpy ];
+  dependencies = [ numpy ];
 
   # Tests assume network connectivity
-  doCheck = false;
 
   pythonImportsCheck = [ "javaobj" ];
 

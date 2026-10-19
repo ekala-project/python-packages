@@ -17,7 +17,7 @@ buildPythonPackage rec {
     hash = "sha256-1gkk5vutOPNcNyd5vF62UaAORG1tJPHRxy8UKXodDlY=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     grpcio
     protobuf
   ];
@@ -27,7 +27,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "grpc_health" ];
 
   # no tests
-  doCheck = false;
 
   meta = {
     description = "Standard Health Checking Service for gRPC";

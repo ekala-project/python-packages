@@ -28,7 +28,6 @@ buildPythonPackage rec {
   nativeCheckInputs = [ pytestCheckHook ];
 
   # tests directory exists but contains no test cases
-  doCheck = false;
 
   meta = {
     description = "Epic Games Store Web API Wrapper written in Python";

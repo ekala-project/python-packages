@@ -33,8 +33,6 @@ buildPythonPackage (finalAttrs: {
 
   pythonImportsCheck = [ "pydicom" ];
 
-  doCheck = false;
-
   meta = {
     description = "Pure Python package for DICOM medical file reading and writing";
     homepage = "https://pydicom.github.io";

@@ -22,7 +22,7 @@ buildPythonPackage rec {
     hash = "sha256-7bRrHowRKq3xiBiAkfS4ZL9PXHIUmZc99q9pHex9BLg=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     pandas
     typing-extensions
   ];

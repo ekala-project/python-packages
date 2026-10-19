@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "dermotduffy";
     repo = "motioneye-client";
-    rev = "v${version}";
+    tag = "v${version}";
     hash = "sha256-kgFSd5RjO+OtnPeAOimPTDVEfJ47rXh2Ku5xEYStHv8=";
   };
 
@@ -30,7 +30,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ poetry-core ];
 
-  propagatedBuildInputs = [ aiohttp ];
+  dependencies = [ aiohttp ];
 
   nativeCheckInputs = [
     pytest-aiohttp

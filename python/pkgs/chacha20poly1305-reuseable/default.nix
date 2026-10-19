@@ -40,7 +40,7 @@ buildPythonPackage {
 
   pythonRelaxDeps = [ "cryptography" ];
 
-  propagatedBuildInputs = [ cryptography ];
+  dependencies = [ cryptography ];
 
   pythonImportsCheck = [ "chacha20poly1305_reuseable" ];
 

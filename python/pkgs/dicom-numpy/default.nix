@@ -29,7 +29,7 @@ buildPythonPackage rec {
     setuptools
   ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     numpy
     pydicom
   ];

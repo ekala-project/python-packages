@@ -24,7 +24,7 @@ buildPythonPackage rec {
     wheel
   ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     docutils
     sphinx
   ];

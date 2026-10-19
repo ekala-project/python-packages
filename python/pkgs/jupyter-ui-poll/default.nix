@@ -22,7 +22,6 @@ buildPythonPackage rec {
 
   dependencies = [ ipython ];
 
-  doCheck = false; # no tests in package :(
   pythonImportsCheck = [ "jupyter_ui_poll" ];
 
   meta = {

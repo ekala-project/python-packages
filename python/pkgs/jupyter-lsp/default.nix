@@ -19,7 +19,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [ jupyter-server ];
+  dependencies = [ jupyter-server ];
 
   pythonImportsCheck = [ "jupyter_lsp" ];
 

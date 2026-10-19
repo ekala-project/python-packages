@@ -20,7 +20,7 @@ buildPythonPackage rec {
     hash = "sha256-xEahzA1PIrGPfnnOcuXQLVQpSVOUFk6/0v9ViLgWCwk=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     spotipy
     click
     pycryptodomex
@@ -30,7 +30,6 @@ buildPythonPackage rec {
   ];
 
   # Project has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "deezer" ];
 

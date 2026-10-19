@@ -22,7 +22,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools-scm ];
 
-  propagatedBuildInputs = [ more-itertools ];
+  dependencies = [ more-itertools ];
   meta = {
     description = "Utility functions for Python class constructs";
     homepage = "https://github.com/jaraco/jaraco.classes";

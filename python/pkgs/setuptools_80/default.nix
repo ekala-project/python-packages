@@ -36,7 +36,6 @@ buildPythonPackage (finalAttrs: {
   '';
 
   # Requires pytest, causing infinite recursion.
-  doCheck = false;
 
   meta = {
     description = "Utilities to facilitate the installation of Python packages";

@@ -31,7 +31,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # Prevent circular dependency with pytest
-  doCheck = false;
 
   passthru.tests = packaging.overridePythonAttrs (_: {
     doCheck = true;

@@ -27,7 +27,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # Project has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "adax" ];
 

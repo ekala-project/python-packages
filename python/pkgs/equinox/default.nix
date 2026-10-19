@@ -17,7 +17,6 @@ buildPythonPackage (finalAttrs: {
   pname = "equinox";
   version = "0.13.8";
   pyproject = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "patrick-kidger";
@@ -36,8 +35,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   pythonImportsCheck = [ "equinox" ];
-
-  doCheck = false;
 
   meta = {
     description = "JAX library based around a simple idea: represent parameterised functions as PyTrees";

@@ -37,7 +37,6 @@ buildPythonPackage rec {
     "tests/test_turn.py"
     "tests/test_ice_trickle.py"
   ];
-  doCheck = true;
   pythonImportsCheck = [
     "aioice"
   ];

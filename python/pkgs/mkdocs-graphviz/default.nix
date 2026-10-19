@@ -36,7 +36,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "mkdocs_graphviz" ];
 
   # Tests are not available in the source code.
-  doCheck = false;
 
   meta = {
     description = "Configurable Python markdown extension for graphviz and Mkdocs";

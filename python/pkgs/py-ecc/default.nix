@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ethereum";
     repo = "py_ecc";
-    rev = "v${version}";
+    tag = "v${version}";
     hash = "sha256-4nmmX4TuErHxIDrBi+Ppr+4vuE7dSeqf8OqOxtqb3sY=";
   };
 

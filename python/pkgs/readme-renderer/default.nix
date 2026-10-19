@@ -27,8 +27,6 @@ buildPythonPackage rec {
     pygments
   ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "readme_renderer" ];
 
   meta = {

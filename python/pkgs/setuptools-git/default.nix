@@ -19,8 +19,6 @@ buildPythonPackage rec {
 
   pythonImportsCheck = [ "setuptools_git" ];
 
-  doCheck = false;
-
   meta = {
     homepage = "https://github.com/msabramo/setuptools-git";
     description = "Setuptools revision control system plugin for Git";

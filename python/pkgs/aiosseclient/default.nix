@@ -23,7 +23,6 @@ buildPythonPackage rec {
   dependencies = [ aiohttp ];
 
   # Test requires network access
-  doCheck = false;
 
   pythonImportsCheck = [ "aiosseclient" ];
 

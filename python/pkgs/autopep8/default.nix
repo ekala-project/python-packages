@@ -20,8 +20,6 @@ buildPythonPackage rec {
 
   dependencies = [ pycodestyle ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "autopep8" ];
 
   meta = {

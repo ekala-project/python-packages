@@ -90,7 +90,6 @@ buildPythonPackage rec {
 
   # https://github.com/cython/cython/issues/2785
   # Temporary solution
-  doCheck = false;
   # doCheck = !stdenv.hostPlatform.isDarwin;
 
   # force regeneration of generated code in source distributions

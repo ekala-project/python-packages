@@ -36,7 +36,6 @@ buildPythonPackage (finalAttrs: {
   # On Darwin, the tests try to use `pbcopy`/`pbpaste`, which aren't packaged in Nix.
   # On Linux, I tried adding `xclip` to `nativeCheckInputs`, but got errors about
   # displays being null and the clipboard never being initialized.
-  doCheck = false;
 
   pythonImportsCheck = [ "copykitten" ];
 

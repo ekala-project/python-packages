@@ -28,7 +28,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "tempman" ];
 
   # Disabling tests, they rely on dependencies that are outdated and not supported
-  doCheck = false;
 
   passthru.updateScript = gitUpdater { };
 

@@ -13,8 +13,6 @@ buildPythonPackage (finalAttrs: {
   version = "2.0.0b9";
   pyproject = true;
 
-  __structuredAttrs = true;
-
   src = fetchFromGitHub {
     owner = "sciunto-org";
     repo = "python-${finalAttrs.pname}";

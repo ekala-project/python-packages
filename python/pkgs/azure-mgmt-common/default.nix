@@ -15,7 +15,6 @@ buildPythonPackage (finalAttrs: {
   version = "0.20.0";
   pyproject = true;
 
-  __structuredAttrs = true;
   pname = "azure-mgmt-common";
 
   src = fetchPypi {
@@ -37,8 +36,6 @@ buildPythonPackage (finalAttrs: {
     echo "__import__('pkg_resources').declare_namespace(__name__)" >> "$out/${python.sitePackages}"/azure/mgmt/__init__.py
     echo "__import__('pkg_resources').declare_namespace(__name__)" >> "$out/${python.sitePackages}"/azure/__init__.py
   '';
-
-  doCheck = false;
 
   pythonImportsCheck = [ "azure.mgmt.common" ];
 

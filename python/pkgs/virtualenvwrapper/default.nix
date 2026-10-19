@@ -36,7 +36,7 @@ buildPythonPackage rec {
     pip
     pkgs.which
   ];
-  propagatedBuildInputs = [
+  dependencies = [
     stevedore
     virtualenv
     virtualenv-clone

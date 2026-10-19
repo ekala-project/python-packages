@@ -20,7 +20,6 @@ buildPythonPackage rec {
   ];
 
   # doesnt work out of the box but might be possible
-  doCheck = false;
 
   meta = {
     description = "Flexible Python 2/3 Kconfig implementation and library";

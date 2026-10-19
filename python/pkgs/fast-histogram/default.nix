@@ -36,7 +36,7 @@ buildPythonPackage (finalAttrs: {
     pytestCheckHook
   ];
 
-  enabledTestPaths = [ "${placeholder "out"}/${python.sitePackages}" ];
+  enabledTestPaths = [ "$(out)/${python.sitePackages}" ];
 
   pythonImportsCheck = [ "fast_histogram" ];
 

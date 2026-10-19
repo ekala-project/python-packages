@@ -46,7 +46,7 @@ buildPythonPackage rec {
 
   pythonRelaxDeps = [ "bokeh" ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     bleach
     bokeh
     linkify-it-py
@@ -67,7 +67,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "panel" ];
 
   # infinite recursion in test dependencies (hvplot)
-  doCheck = false;
 
   meta = {
     description = "High level dashboarding library for python visualization libraries";

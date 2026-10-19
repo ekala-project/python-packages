@@ -15,7 +15,7 @@ buildPythonPackage rec {
     sha256 = "sha256-6QH4buWvfvbtovLCb0vSz+g4DYHxeLfjYH27zc7pcjk=";
   };
 
-  propagatedBuildInputs = [ six ];
+  dependencies = [ six ];
 
   pythonImportsCheck = [ "mongoquery" ];
 

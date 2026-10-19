@@ -29,8 +29,6 @@ buildPythonPackage rec {
     blinker
   ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "flask_principal" ];
 
   meta = {

@@ -30,8 +30,6 @@ buildPythonPackage rec {
 
   dependencies = [ sniffio ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "asgi_lifespan" ];
 
   meta = {

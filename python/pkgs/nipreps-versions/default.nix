@@ -25,7 +25,7 @@ buildPythonPackage rec {
     setuptools-scm
   ];
 
-  propagatedBuildInputs = [ packaging ];
+  dependencies = [ packaging ];
 
   nativeCheckInputs = [ pytestCheckHook ];
   pythonImportsCheck = [ "nipreps_versions" ];

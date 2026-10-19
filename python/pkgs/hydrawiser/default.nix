@@ -17,11 +17,11 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ptcryan";
     repo = "hydrawiser";
-    rev = "v${version}";
+    tag = "v${version}";
     sha256 = "161hazlpvd71xcl2ja86560wm5lnrjv210ki3ji37l6c6gwmhjdj";
   };
 
-  propagatedBuildInputs = [ requests ];
+  dependencies = [ requests ];
 
   nativeCheckInputs = [
     pytest-asyncio

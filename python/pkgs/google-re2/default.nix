@@ -24,8 +24,6 @@ buildPythonPackage rec {
 
   dependencies = [ pybind11 ];
 
-  doCheck = false; # no tests in sdist
-
   pythonImportsCheck = [ "re2" ];
 
   meta = {

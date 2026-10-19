@@ -11,8 +11,6 @@ buildPythonPackage (finalAttrs: {
   version = "0.0.6";
   pyproject = true;
 
-  __structuredAttrs = true;
-
   src = fetchPypi {
     pname = "alibabacloud_oss_util";
     inherit (finalAttrs) version;
@@ -26,7 +24,6 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [ "alibabacloud_oss_util" ];
 
   # Module has no tests
-  doCheck = false;
 
   meta = {
     description = "Alibaba Cloud Cloud OSS Util Library for Python";

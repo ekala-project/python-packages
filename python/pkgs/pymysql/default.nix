@@ -23,10 +23,9 @@ buildPythonPackage rec {
 
   build-system = [ setuptools ];
 
-  propagatedBuildInputs = [ cryptography ];
+  dependencies = [ cryptography ];
 
   # Wants to connect to MySQL
-  doCheck = false;
 
   meta = {
     description = "Pure Python MySQL Client";

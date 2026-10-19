@@ -13,16 +13,15 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "nbuchwitz";
     repo = "nc_dnsapi";
-    rev = "v${version}";
+    tag = "v${version}";
     hash = "sha256-OE4+wJbJbUZ+YB5J5OyvytLFCcrnXCeZEqmphHKKprQ=";
   };
 
-  propagatedBuildInputs = [ requests ];
+  dependencies = [ requests ];
 
   pythonImportsCheck = [ "nc_dnsapi" ];
 
   # no tests
-  doCheck = false;
 
   meta = {
     description = "API wrapper for the netcup DNS api";

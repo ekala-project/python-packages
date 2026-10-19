@@ -41,7 +41,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # Module doesn't have tests
-  doCheck = false;
 
   pythonImportsCheck = [ "msgraph" ];
 

@@ -22,7 +22,6 @@ buildPythonPackage rec {
   dependencies = [ types-webencodings ];
 
   # Module has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "html5lib-stubs" ];
 

@@ -32,7 +32,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "developer_disk_image" ];
 
   # tests connect to github.com
-  doCheck = false;
 
   meta = {
     description = "Download DeveloperDiskImage ans Personalized images from GitHub";

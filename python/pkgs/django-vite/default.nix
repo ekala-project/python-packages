@@ -17,10 +17,9 @@ buildPythonPackage rec {
     hash = "sha256-S5DpU0Sw0TOY1SNici6djeTrvg4gehH/a2UCzju1e/s=";
   };
 
-  propagatedBuildInputs = [ django ];
+  dependencies = [ django ];
 
   # Package doesn’t have any tests
-  doCheck = false;
 
   pythonImportsCheck = [ "django_vite" ];
 

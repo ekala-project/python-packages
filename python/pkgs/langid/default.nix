@@ -23,9 +23,8 @@ buildPythonPackage rec {
     wheel
   ];
 
-  propagatedBuildInputs = [ numpy ];
+  dependencies = [ numpy ];
 
-  doCheck = false; # Package has no tests
   pythonImportsCheck = [ "langid" ];
 
   meta = {

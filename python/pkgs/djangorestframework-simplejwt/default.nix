@@ -23,7 +23,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools-scm ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     django
     djangorestframework
     pyjwt
@@ -35,7 +35,6 @@ buildPythonPackage rec {
   };
 
   # Test raises django.core.exceptions.ImproperlyConfigured
-  doCheck = false;
 
   pythonImportsCheck = [ "rest_framework_simplejwt" ];
 

@@ -29,7 +29,6 @@ buildPythonPackage rec {
   ];
 
   # No tests in repo
-  doCheck = false;
 
   pythonImportsCheck = [ "asyncarve" ];
 

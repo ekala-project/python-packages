@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "maxcountryman";
     repo = "flask-bcrypt";
-    rev = version;
+    tag = version;
     hash = "sha256-WlIholi/nzq6Ikc0LS6FhG0Q5Kz0kvvAlA2YJ7EksZ4=";
   };
 
@@ -26,7 +26,7 @@ buildPythonPackage rec {
                      "self.assertTrue(self.bcrypt.check_password_hash(pw_hash, 'A' * 72))"
   '';
 
-  propagatedBuildInputs = [
+  dependencies = [
     flask
     bcrypt
   ];

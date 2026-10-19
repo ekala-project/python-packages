@@ -28,7 +28,6 @@ buildPythonPackage (finalAttrs: {
   pname = "orbax-checkpoint";
   version = "0.12.1";
   pyproject = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "google";
@@ -65,8 +64,6 @@ buildPythonPackage (finalAttrs: {
     "orbax"
     "orbax.checkpoint"
   ];
-
-  doCheck = false;
 
   meta = {
     description = "Orbax provides common utility libraries for JAX users";

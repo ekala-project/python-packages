@@ -17,7 +17,7 @@ buildPythonPackage rec {
     hash = "sha256-DfUPEtd0ZZq8i7yI5MeU8nhajxHzC1uyZ8MUuF2UG3M=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     django
     zstandard
     brotli

@@ -29,7 +29,6 @@ buildPythonPackage (finalAttrs: {
   dependencies = [ pkgs.fuse ];
 
   # No tests included
-  doCheck = false;
 
   pythonImportsCheck = lib.optionals (!stdenv.hostPlatform.isDarwin) [ "fuse" ];
 

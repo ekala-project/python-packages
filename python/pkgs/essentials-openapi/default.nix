@@ -39,7 +39,7 @@ buildPythonPackage rec {
     setuptools
   ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     pyyaml
     essentials
     markupsafe

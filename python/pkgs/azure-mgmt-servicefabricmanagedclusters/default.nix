@@ -30,7 +30,6 @@ buildPythonPackage rec {
   pythonNamespaces = [ "azure.mgmt" ];
 
   # Module has tests in mono-repo
-  doCheck = false;
 
   meta = {
     description = "This is the Microsoft Azure Service Fabric Cluster Management Client Library";

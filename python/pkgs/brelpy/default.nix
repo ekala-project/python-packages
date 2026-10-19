@@ -11,8 +11,6 @@ buildPythonPackage (finalAttrs: {
   version = "0.0.3";
   pyproject = true;
 
-  __structuredAttrs = true;
-
   src = fetchPypi {
     inherit (finalAttrs) pname version;
     hash = "sha256-MYWSKYd7emHZfY+W/UweQtTg62GSUMybpecL9BR8dhg=";
@@ -23,7 +21,6 @@ buildPythonPackage (finalAttrs: {
   dependencies = [ pycryptodome ];
 
   # Source not tagged and PyPI releases don't contain tests
-  doCheck = false;
 
   pythonImportsCheck = [ "brelpy" ];
 

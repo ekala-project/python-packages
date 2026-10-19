@@ -33,7 +33,7 @@ buildPythonPackage rec {
     wheel
   ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     cookiecutter
     importlib-metadata
     pyscaffold

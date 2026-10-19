@@ -21,8 +21,6 @@ buildPythonPackage rec {
     setuptools
   ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "cwcwidth" ];
 
   meta = {

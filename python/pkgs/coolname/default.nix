@@ -26,7 +26,6 @@ buildPythonPackage rec {
   ];
 
   # Tests require coolname.data to be packaged
-  doCheck = false;
 
   meta = {
     description = "Random Name and Slug Generator";

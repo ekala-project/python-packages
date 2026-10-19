@@ -21,7 +21,6 @@ buildPythonPackage (finalAttrs: {
   dependencies = [ inotify-simple ];
 
   # No tests included
-  doCheck = false;
   pythonImportsCheck = [ "inotifyrecursive" ];
 
   meta = {

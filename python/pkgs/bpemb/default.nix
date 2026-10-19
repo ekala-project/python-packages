@@ -35,7 +35,6 @@ buildPythonPackage {
   ];
 
   # need network connection for tests
-  doCheck = false;
 
   pythonImportsCheck = [ "bpemb" ];
 

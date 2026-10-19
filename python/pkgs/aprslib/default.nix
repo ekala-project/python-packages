@@ -28,8 +28,6 @@ buildPythonPackage (finalAttrs: {
 
   build-system = [ setuptools ];
 
-  doCheck = false; # mox3 is not packaged
-
   nativeCheckInputs = [ pytestCheckHook ];
 
   pythonImportsCheck = [ "aprslib" ];

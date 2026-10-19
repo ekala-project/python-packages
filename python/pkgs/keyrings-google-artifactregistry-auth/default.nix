@@ -36,7 +36,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "keyrings.gauth" ];
 
   # upstream has no tests
-  doCheck = false;
 
   meta = {
     description = "Python package which allows you to configure keyring to interact with Python repositories stored in Artifact Registry";

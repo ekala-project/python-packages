@@ -44,7 +44,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # Tests depend on upath which is unmaintained and only available as wheel
-  doCheck = false;
 
   pythonImportsCheck = [ "dvc_data" ];
 

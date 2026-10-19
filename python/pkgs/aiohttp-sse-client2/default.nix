@@ -45,7 +45,6 @@ buildPythonPackage rec {
   ];
 
   # tests access the internet
-  doCheck = false;
 
   meta = {
     description = "Server-Sent Event python client library based on aiohttp";

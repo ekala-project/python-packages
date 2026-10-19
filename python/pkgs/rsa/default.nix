@@ -14,13 +14,13 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "sybrenstuvel";
     repo = "python-rsa";
-    rev = "version-${version}";
+    tag = "version-${version}";
     hash = "sha256-PwaRe+ICy0UoguXSMSh3PFl5R+YAhJwNdNN9isadlJY=";
   };
 
   nativeBuildInputs = [ poetry-core ];
 
-  propagatedBuildInputs = [ pyasn1 ];
+  dependencies = [ pyasn1 ];
 
   meta = {
     homepage = "https://stuvel.eu/rsa";

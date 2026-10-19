@@ -20,7 +20,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "widgetsnbextension" ];
 
   # No tests in archive
-  doCheck = false;
 
   meta = {
     description = "IPython HTML widgets for Jupyter";

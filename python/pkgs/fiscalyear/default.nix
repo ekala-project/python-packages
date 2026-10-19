@@ -22,7 +22,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "fiscalyear" ];
 
   # upstream has no tests
-  doCheck = false;
 
   meta = {
     description = "Utilities for managing the fiscal calendar";

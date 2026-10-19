@@ -56,7 +56,6 @@ buildPythonPackage rec {
 
   # all tests fail; don't know why:
   # test_absolute_paths_made_relative (hieroglyph.tests.test_path_fixing.PostProcessImageTests) ... ERROR
-  doCheck = false;
 
   meta = {
     description = "Generate HTML presentations from plain text sources";

@@ -49,7 +49,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "sqlalchemy_bigquery" ];
 
   # Tests require a BigQuery project
-  doCheck = false;
 
   meta = {
     description = "SQLAlchemy dialect for BigQuery";

@@ -17,7 +17,6 @@ buildPythonPackage (finalAttrs: {
   pname = "courlan";
   version = "1.4.0";
   pyproject = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "adbar";
@@ -29,7 +28,7 @@ buildPythonPackage (finalAttrs: {
   # Tests try to write to /tmp directly. use $TMPDIR instead.
   postPatch =
     let
-      courlanBinPath = "${placeholder "out"}/bin/courlan";
+      courlanBinPath = "$(out)/bin/courlan";
     in
     ''
       substituteInPlace tests/unit_tests.py \

@@ -20,7 +20,6 @@ buildPythonPackage (finalAttrs: {
   build-system = [ setuptools ];
 
   # Tests require network connection
-  doCheck = false;
 
   pythonImportsCheck = [ "hstspreload" ];
 

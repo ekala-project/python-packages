@@ -16,11 +16,11 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "PyCQA";
     repo = "pylint-celery";
-    rev = version;
+    tag = version;
     sha256 = "05fhwraq12c2724pn4py1bjzy5rmsrb1x68zck73nlp5icba6yap";
   };
 
-  propagatedBuildInputs = [ pylint-plugin-utils ];
+  dependencies = [ pylint-plugin-utils ];
 
   # Testing requires a very old version of pylint, incompatible with other dependencies
 

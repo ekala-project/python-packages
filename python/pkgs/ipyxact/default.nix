@@ -12,8 +12,8 @@ buildPythonPackage rec {
   version = "0.3.2";
   format = "setuptools";
 
-  propagatedBuildInputs = [ pyyaml ];
-  checkInputs = [
+  dependencies = [ pyyaml ];
+  nativeCheckInputs = [
     six
     lxml
   ];
@@ -21,7 +21,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "olofk";
     repo = "ipyxact";
-    rev = "v${version}";
+    tag = "v${version}";
     hash = "sha256-myD+NnqcxxaSAV7qZa8xqeciaiFqFePqIzd7sb/2GXA=";
   };
 

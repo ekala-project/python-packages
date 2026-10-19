@@ -37,7 +37,6 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [ "uv_build" ];
 
   # The package has no tests
-  doCheck = false;
 
   # Run the tests of a package built by `uv_build`.
   passthru = {

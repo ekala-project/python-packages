@@ -34,9 +34,8 @@ buildPythonPackage rec {
     cattrs
   ];
 
-  nativeCheckInputs = [ pytestCheckHook ];
-
-  checkInputs = [
+  nativeCheckInputs = [
+    pytestCheckHook
     importlib-resources
     jsonschema
     pyhamcrest

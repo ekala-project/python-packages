@@ -27,8 +27,6 @@ buildPythonPackage (finalAttrs: {
   ]
   ++ pyjwt.optional-dependencies.crypto;
 
-  doCheck = false;
-
   pythonImportsCheck = [ "msal" ];
 
   meta = {

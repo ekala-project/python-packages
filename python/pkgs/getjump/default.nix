@@ -42,7 +42,6 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [ "getjump" ];
 
   # all the tests talk to the internet
-  doCheck = false;
 
   meta = {
     description = "Get and save images from jump web viewer";

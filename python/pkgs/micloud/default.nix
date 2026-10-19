@@ -16,11 +16,11 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Squachen";
     repo = "micloud";
-    rev = "v_${version}";
+    tag = "v_${version}";
     hash = "sha256-IsNXFs1N+rKwqve2Pjp+wRTZCxHF4acEo6KyhsSKuqI=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     click
     pycryptodome
     requests
@@ -28,7 +28,6 @@ buildPythonPackage rec {
   ];
 
   # tests require credentials
-  doCheck = false;
 
   pythonImportsCheck = [ "micloud" ];
 

@@ -42,7 +42,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # tests require network access and a valid API key
-  doCheck = false;
 
   pythonImportsCheck = [
     "fishaudio"

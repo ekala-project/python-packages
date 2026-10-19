@@ -32,8 +32,6 @@ buildPythonPackage rec {
     asyncio-throttle
   ];
 
-  doCheck = false; # requires access to the deezer api
-
   pythonImportsCheck = [
     "deezer"
   ];

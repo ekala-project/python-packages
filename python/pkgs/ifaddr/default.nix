@@ -17,8 +17,6 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "ifaddr" ];
 
   meta = {

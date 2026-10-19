@@ -64,7 +64,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "google.genai" ];
 
   # ValueError: GOOGLE_GENAI_REPLAYS_DIRECTORY environment variable is not set
-  doCheck = false;
 
   meta = {
     description = "Google Generative AI Python SDK";

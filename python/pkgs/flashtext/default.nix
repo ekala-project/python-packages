@@ -15,7 +15,6 @@ buildPythonPackage rec {
   };
 
   # json files that tests look for don't exist in the pypi dist
-  doCheck = false;
 
   meta = {
     homepage = "https://github.com/vi3k6i5/flashtext";

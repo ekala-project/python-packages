@@ -23,7 +23,6 @@ buildPythonPackage (finalAttrs: {
   dependencies = [ aiohttp ];
 
   # upstream has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "homevolt" ];
 

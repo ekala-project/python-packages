@@ -17,14 +17,13 @@ buildPythonPackage rec {
     hash = "sha256-cCP7BU2f7QJe9gAI298cvkp3OGijvBv8G1RN7qfZ5PE=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     oauthlib
     requests
     requests-oauthlib
   ];
 
   # Module has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "lmnotify" ];
 

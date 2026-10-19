@@ -35,7 +35,7 @@ buildPythonPackage rec {
     })
   ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     click
     ecdsa
     fido2
@@ -46,7 +46,6 @@ buildPythonPackage rec {
   ];
 
   # no tests
-  doCheck = false;
   pythonImportsCheck = [ "solo" ];
 
   meta = {

@@ -21,8 +21,6 @@ buildPythonPackage rec {
 
   build-system = [ setuptools ];
 
-  doCheck = false; # no tests
-
   meta = {
     description = "Python dead batteries. See PEP 594";
     homepage = "https://github.com/youknowone/python-deadlib";

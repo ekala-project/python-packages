@@ -33,7 +33,6 @@ buildPythonPackage rec {
 
   pythonImportsCheck = [ "nodriver" ];
   # no tests in upstream
-  doCheck = false;
 
   meta = {
     homepage = "https://github.com/ultrafunkamsterdam/nodriver";

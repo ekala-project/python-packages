@@ -21,7 +21,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "alibabacloud_endpoint_util" ];
 
   # Module has only tests in the untagged upstream repo
-  doCheck = false;
 
   meta = {
     description = "Endpoint-util module of alibabaCloud Python SDK";

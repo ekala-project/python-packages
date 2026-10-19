@@ -11,8 +11,6 @@ buildPythonPackage (finalAttrs: {
   version = "4.45.0";
   pyproject = true;
 
-  __structuredAttrs = true;
-
   src = fetchFromGitHub {
     owner = "braintree";
     repo = "braintree_python";

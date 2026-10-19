@@ -15,7 +15,6 @@ buildPythonPackage (finalAttrs: {
   pname = "adbc-driver-manager";
   version = "1.12.0";
   pyproject = true;
-  __structuredAttrs = true;
 
   src = fetchPypi {
     pname = "adbc_driver_manager";
@@ -33,7 +32,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # Tests create a circular dependency on adbc-driver-sqlite
-  doCheck = false;
 
   pythonImportsCheck = [
     "adbc_driver_manager"

@@ -180,7 +180,6 @@ buildPythonPackage (finalAttrs: {
   };
 
   # Tests are extremely slow and require complex infrastructure
-  doCheck = false;
 
   pythonImportsCheck = [ "prefect" ];
 

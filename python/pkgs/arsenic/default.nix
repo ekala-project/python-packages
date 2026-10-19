@@ -49,7 +49,6 @@ buildPythonPackage rec {
   ];
 
   # Test depends on asyncio_extras which is not longer maintained
-  doCheck = false;
 
   pythonImportsCheck = [ "arsenic" ];
 

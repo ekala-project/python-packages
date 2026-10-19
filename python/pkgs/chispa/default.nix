@@ -27,7 +27,6 @@ buildPythonPackage rec {
   ];
 
   # Tests require a spark installation
-  doCheck = false;
 
   # pythonImportsCheck needs spark installation
 

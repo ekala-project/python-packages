@@ -22,7 +22,6 @@ buildPythonPackage (finalAttrs: {
   pname = "prometheus-fastapi-instrumentator";
   version = "8.1.0";
   pyproject = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "trallnag";

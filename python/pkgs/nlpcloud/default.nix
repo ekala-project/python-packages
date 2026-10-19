@@ -21,7 +21,6 @@ buildPythonPackage rec {
   dependencies = [ requests ];
 
   # upstream has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "nlpcloud" ];
 

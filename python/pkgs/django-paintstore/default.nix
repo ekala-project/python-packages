@@ -14,8 +14,6 @@ buildPythonPackage rec {
     sha256 = "12wxgwv1qbkfq7w5i7bm7aidv655c2sxp0ym73qf8606dxbjcwwg";
   };
 
-  doCheck = false;
-
   meta = {
     description = "Django app that integrates jQuery ColorPicker with the Django admin";
     homepage = "https://github.com/gsiegman/django-paintstore";

@@ -26,8 +26,6 @@ buildPythonPackage rec {
 
   pythonImportsCheck = [ "aioresponses" ];
 
-  doCheck = false;
-
   meta = {
     homepage = "https://github.com/pnuckowski/aioresponses";
     description = "Helper to mock/fake web requests in python aiohttp package";

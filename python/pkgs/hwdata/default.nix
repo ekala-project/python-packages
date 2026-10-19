@@ -26,8 +26,6 @@ buildPythonPackage rec {
 
   pythonImportsCheck = [ "hwdata" ];
 
-  doCheck = false; # no tests
-
   meta = {
     description = "Python bindings to hwdata";
     homepage = "https://github.com/xsuchy/python-hwdata";

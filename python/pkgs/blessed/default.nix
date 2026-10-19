@@ -26,8 +26,6 @@ buildPythonPackage rec {
 
   pythonImportsCheck = [ "blessed" ];
 
-  doCheck = false;
-
   meta = {
     homepage = "https://github.com/jquast/blessed";
     description = "Thin, practical wrapper around terminal capabilities in Python";

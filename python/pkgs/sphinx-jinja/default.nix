@@ -15,10 +15,9 @@ buildPythonPackage rec {
     hash = "sha256-xiMrWaiUE5dwvh3G0LAKN55CiM54FXkE4fhHPeo+Bxg=";
   };
 
-  propagatedBuildInputs = [ sphinx ];
+  dependencies = [ sphinx ];
 
   # upstream source is not updated to 2.0.X and pypi does not contain tests
-  doCheck = false;
 
   pythonImportsCheck = [ "sphinx_jinja" ];
 

@@ -26,7 +26,7 @@ buildPythonPackage rec {
 
   buildInputs = [ pkgs.libxml2 ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     chardet
     lxml
   ];

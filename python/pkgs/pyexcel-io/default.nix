@@ -23,7 +23,6 @@ buildPythonPackage rec {
   dependencies = [ lml ];
 
   # Tests depend on stuff that depends on this.
-  doCheck = false;
 
   pythonImportsCheck = [ "pyexcel_io" ];
 

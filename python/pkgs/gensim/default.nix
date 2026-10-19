@@ -18,8 +18,6 @@ buildPythonPackage (finalAttrs: {
   version = "4.4.0";
   pyproject = true;
 
-  __structuredAttrs = true;
-
   src = fetchFromGitHub {
     owner = "piskvorky";
     repo = "gensim";

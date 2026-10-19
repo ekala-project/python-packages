@@ -17,14 +17,13 @@ buildPythonPackage rec {
   };
 
   nativeCheckInputs = [ pytest ];
-  propagatedBuildInputs = [ six ];
+  dependencies = [ six ];
 
   checkPhase = ''
     py.test
   '';
 
   # tests not packaged with PyPi download
-  doCheck = false;
 
   meta = {
     description = "Python package for docstring repetition";

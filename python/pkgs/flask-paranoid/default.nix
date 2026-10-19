@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "miguelgrinberg";
     repo = "flask-paranoid";
-    rev = "v${version}";
+    tag = "v${version}";
     hash = "sha256-tikD8efc3Q3xIQnaC3SSBaCRQxMI1HzXxeupvYeNnE4=";
   };
 
@@ -23,7 +23,7 @@ buildPythonPackage rec {
     substituteInPlace tests/test_paranoid.py --replace "01-Jan-1970" "01 Jan 1970"
   '';
 
-  propagatedBuildInputs = [ flask ];
+  dependencies = [ flask ];
 
   nativeCheckInputs = [ pytestCheckHook ];
 

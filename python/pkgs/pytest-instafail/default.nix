@@ -20,8 +20,6 @@ buildPythonPackage rec {
 
   buildInputs = [ pytest ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "pytest_instafail" ];
 
   meta = {

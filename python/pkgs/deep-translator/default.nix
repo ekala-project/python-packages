@@ -21,7 +21,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ poetry-core ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     beautifulsoup4
     requests
     click
@@ -34,7 +34,6 @@ buildPythonPackage rec {
 
   # Again, initializing an instance needs network connection.
   # Tests will fail.
-  doCheck = false;
 
   meta = {
     description = "Python tool to translate between different languages by using multiple translators";

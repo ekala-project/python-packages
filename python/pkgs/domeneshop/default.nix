@@ -25,7 +25,6 @@ buildPythonPackage rec {
   ];
 
   # There are none
-  doCheck = false;
 
   pythonImportsCheck = [ "domeneshop" ];
 

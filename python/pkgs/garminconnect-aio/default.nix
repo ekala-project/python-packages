@@ -15,18 +15,17 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "cyberjunky";
     repo = "python-garminconnect-aio";
-    rev = version;
+    tag = version;
     hash = "sha256-GWY2kTG2D+wOJqM/22pNV5rLvWjAd4jxVGlHBou/T2g=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     aiohttp
     brotlipy
     yarl
   ];
 
   # Project has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "garminconnect_aio" ];
 

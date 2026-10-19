@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Tivix";
     repo = "django-rest-auth";
-    rev = version;
+    tag = version;
     hash = "sha256-rCChUHv8sTEFErDCZnPN5b5XVtMJ7JNVZwBYF3d99mY=";
   };
 
@@ -27,13 +27,12 @@ buildPythonPackage rec {
       --replace "djangorestframework-jwt" "drf-jwt"
   '';
 
-  propagatedBuildInputs = [
+  dependencies = [
     django
     djangorestframework
     six
   ];
   # tests are icnompatible with current django version
-  doCheck = false;
 
   pythonImportsCheck = [ "rest_auth" ];
 

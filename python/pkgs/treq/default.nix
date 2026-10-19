@@ -33,7 +33,7 @@ buildPythonPackage (finalAttrs: {
     hatchling
   ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     attrs
     hyperlink
     incremental

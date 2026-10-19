@@ -18,7 +18,6 @@ buildPythonPackage rec {
   build-system = [ setuptools ];
 
   # Tests are not shipped
-  doCheck = false;
 
   pythonImportsCheck = [ "uptime" ];
 

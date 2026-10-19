@@ -121,7 +121,6 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [ "fastmcp" ];
 
   # tests are done in fastmcp package
-  doCheck = false;
 
   meta = {
     description = "Dependency-slim FastMCP package";

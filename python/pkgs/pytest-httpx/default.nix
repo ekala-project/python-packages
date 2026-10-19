@@ -28,7 +28,7 @@ buildPythonPackage rec {
 
   buildInputs = [ pytest ];
 
-  propagatedBuildInputs = [ httpx ];
+  dependencies = [ httpx ];
 
   pythonRelaxDeps = [ "httpx" ];
   pythonImportsCheck = [ "pytest_httpx" ];

@@ -28,7 +28,6 @@ buildPythonPackage rec {
   ];
 
   # has not tests
-  doCheck = false;
 
   pythonImportsCheck = [ "csaf" ];
 

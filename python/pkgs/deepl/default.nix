@@ -18,12 +18,11 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ poetry-core ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     requests
   ];
 
   # Requires internet access and an API key
-  doCheck = false;
 
   pythonImportsCheck = [ "deepl" ];
 

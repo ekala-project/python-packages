@@ -18,7 +18,7 @@ buildPythonPackage (finalAttrs: {
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [ pyutil ];
+  dependencies = [ pyutil ];
 
   meta = {
     homepage = "https://github.com/tahoe-lafs/zfec";

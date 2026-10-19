@@ -17,10 +17,9 @@ buildPythonPackage rec {
   };
 
   nativeBuildInputs = [ poetry-core ];
-  propagatedBuildInputs = [ asgiref ];
+  dependencies = [ asgiref ];
 
   # tests are not in the pypi release, and there are no tags/release corresponding to the pypi releases in the github
-  doCheck = false;
   pythonImportsCheck = [ "asgi_logger" ];
 
   meta = {

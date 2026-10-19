@@ -45,8 +45,6 @@ let
       ++ uvicorn.optional-dependencies.standard;
     };
 
-    doCheck = false;
-
     passthru.tests.pytest = self.overridePythonAttrs { doCheck = true; };
     # coverage
     pythonImportsCheck = [ "fastapi_cli" ];

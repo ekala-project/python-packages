@@ -31,8 +31,6 @@ buildPythonPackage rec {
     requests-toolbelt
   ];
 
-  doCheck = false;
-
   meta = {
     description = "Python library to sign AWS requests using AWS Signature V4";
     homepage = "https://github.com/iksteen/aws-request-signer";

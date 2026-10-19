@@ -38,8 +38,6 @@ buildPythonPackage rec {
     cli-helpers
   ];
 
-  doCheck = true;
-
   pythonImportsCheck = [
     "litecli"
   ];

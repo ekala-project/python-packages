@@ -26,7 +26,6 @@ buildPythonPackage rec {
   buildInputs = [ cython ];
 
   # No test
-  doCheck = false;
 
   pythonImportsCheck = [ "murmurhash" ];
 

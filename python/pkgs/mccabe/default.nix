@@ -18,7 +18,6 @@ buildPythonPackage rec {
   buildInputs = [ pytest ];
 
   # https://github.com/PyCQA/mccabe/issues/93
-  doCheck = false;
 
   meta = {
     description = "McCabe checker, plugin for flake8";

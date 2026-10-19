@@ -28,7 +28,7 @@ buildPythonPackage rec {
   ];
 
   buildInputs = [ webtest ];
-  propagatedBuildInputs = [
+  dependencies = [
     pyramid
     mako
   ];

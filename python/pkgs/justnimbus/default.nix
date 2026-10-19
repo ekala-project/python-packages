@@ -20,10 +20,9 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ poetry-core ];
 
-  propagatedBuildInputs = [ requests ];
+  dependencies = [ requests ];
 
   # Module has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "justnimbus" ];
 

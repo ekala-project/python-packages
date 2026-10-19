@@ -20,10 +20,9 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [ anyio ];
+  dependencies = [ anyio ];
 
   # The tests depend on httpx-socks, whose tests depend on tiny-proxy.
-  doCheck = false;
 
   pythonImportsCheck = [ "tiny_proxy" ];
 

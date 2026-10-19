@@ -34,7 +34,6 @@ buildPythonPackage rec {
   ];
 
   # Cyclic dependencies due to pyflakefs
-  doCheck = false;
 
   pythonImportsCheck = [ "importlib_metadata" ];
   meta = {

@@ -14,7 +14,7 @@ buildPythonPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "vlaci";
     repo = "lzallright";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-bnGnx+CKcneBWd5tpYWxEPp5f3hvGxM+8QcD2NKX4Tw=";
   };
 

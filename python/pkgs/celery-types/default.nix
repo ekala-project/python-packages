@@ -26,8 +26,6 @@ buildPythonPackage rec {
 
   dependencies = [ typing-extensions ];
 
-  doCheck = false;
-
   meta = {
     description = "PEP-484 stubs for Celery";
     homepage = "https://github.com/sbdchd/celery-types";

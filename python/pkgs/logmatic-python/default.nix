@@ -20,10 +20,9 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [ python-json-logger ];
+  dependencies = [ python-json-logger ];
 
   # Only functional tests, no unit tests
-  doCheck = false;
 
   pythonImportsCheck = [ "logmatic" ];
 

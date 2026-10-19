@@ -25,7 +25,6 @@ buildPythonPackage rec {
   dependencies = [ requests ];
 
   # Package has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "clearpasspy" ];
 

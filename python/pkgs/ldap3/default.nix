@@ -20,8 +20,6 @@ buildPythonPackage rec {
 
   dependencies = [ pyasn1 ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "ldap3" ];
 
   meta = {

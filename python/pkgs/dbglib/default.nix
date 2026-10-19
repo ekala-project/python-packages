@@ -13,7 +13,7 @@ buildPythonPackage rec {
     inherit pname version;
     sha256 = "7b4fd5c4949af435a7ab558f87b406acd5ddf9dc7f01fc3b3e99ebcec9a4674c";
   };
-  propagatedBuildInputs = [ poetry-core ];
+  dependencies = [ poetry-core ];
   pythonImportsCheck = [ "dbglib" ];
   meta = {
     homepage = "https://github.com/savioxavier/dbglib/";

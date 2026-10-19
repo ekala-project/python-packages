@@ -36,8 +36,6 @@ buildPythonPackage rec {
     python-discovery
   ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "virtualenv" ];
 
   meta = {

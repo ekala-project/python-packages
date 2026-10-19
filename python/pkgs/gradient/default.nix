@@ -20,7 +20,7 @@ buildPythonPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "digitalocean";
     repo = "gradient-python";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-2blzsP8KJfCbqBmoaWgQRCmiR5Dj3ofbd65fJqQpfAI=";
   };
 

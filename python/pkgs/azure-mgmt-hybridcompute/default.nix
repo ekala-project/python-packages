@@ -23,7 +23,7 @@ buildPythonPackage rec {
     hash = "sha256-XRCJM+DHVPOvhpOq4J6JjbPPkTBOuQ/9C9DxcTWCIWs=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     azure-common
     azure-mgmt-core
     isodate
@@ -31,7 +31,6 @@ buildPythonPackage rec {
   ];
 
   # Module has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "azure.mgmt.hybridcompute" ];
 

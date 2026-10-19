@@ -38,7 +38,6 @@ buildPythonPackage (finalAttrs: {
     "vcs_versioning"
   ];
 
-  doCheck = false; # infinite recursion with pytest
   passthru.tests.pytest = vcs-versioning.overridePythonAttrs { doCheck = true; };
 
   meta = {

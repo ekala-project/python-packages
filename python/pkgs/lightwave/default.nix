@@ -17,7 +17,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "lightwave" ];
 
   # Requires physical hardware
-  doCheck = false;
 
   meta = {
     description = "Module for interacting with LightwaveRF hubs";

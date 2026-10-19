@@ -25,8 +25,6 @@ let
 
     dependencies = [ pytz ];
 
-    doCheck = false;
-
     passthru.tests.pytest = dirty-equals.overrideAttrs { doCheck = true; };
     pythonImportsCheck = [ "dirty_equals" ];
 

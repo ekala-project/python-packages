@@ -32,8 +32,6 @@ buildPythonPackage rec {
     six
   ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "eventlet" ];
 
   meta = {

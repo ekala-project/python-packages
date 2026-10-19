@@ -39,10 +39,9 @@ buildPythonPackage rec {
   nativeCheckInputs = [
     pytestCheckHook
     pytest-django
+    testfixtures
   ]
   ++ lib.concatAttrValues optional-dependencies;
-
-  checkInputs = [ testfixtures ];
 
   disabledTests = [
     # AssertionError: 'ERROR' != 'INFO'

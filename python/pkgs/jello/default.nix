@@ -21,7 +21,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ installShellFiles ];
 
-  propagatedBuildInputs = [ pygments ];
+  dependencies = [ pygments ];
 
   nativeCheckInputs = [ unittestCheckHook ];
 

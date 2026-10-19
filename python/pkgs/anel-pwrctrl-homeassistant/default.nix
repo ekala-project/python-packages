@@ -15,7 +15,6 @@ buildPythonPackage rec {
   };
 
   # No tests
-  doCheck = false;
 
   pythonImportsCheck = [ "anel_pwrctrl" ];
 

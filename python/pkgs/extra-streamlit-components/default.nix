@@ -24,7 +24,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "extra_streamlit_components" ];
 
   # Module has no tests
-  doCheck = false;
 
   meta = {
     description = "Additional components for streamlit";

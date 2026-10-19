@@ -13,8 +13,6 @@ buildPythonPackage (finalAttrs: {
   version = "0.3.0";
   pyproject = true;
 
-  __structuredAttrs = true;
-
   src = fetchPypi {
     pname = "aliyun_log_fastpb";
     inherit (finalAttrs) version;
@@ -34,7 +32,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # Missing dependency logs_pb2
-  doCheck = false;
 
   pythonImportsCheck = [ "aliyun_log_fastpb" ];
 

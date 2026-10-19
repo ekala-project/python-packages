@@ -28,7 +28,7 @@ buildPythonPackage rec {
       --replace '"pytest-runner"' ""
   '';
 
-  propagatedBuildInputs = [
+  dependencies = [
     djangorestframework
     graphene
     graphql-core

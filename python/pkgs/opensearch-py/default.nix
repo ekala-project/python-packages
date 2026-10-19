@@ -32,7 +32,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     certifi
     events
     python-dateutil
@@ -42,8 +42,6 @@ buildPythonPackage rec {
   ];
 
   optional-dependencies.async = [ aiohttp ];
-
-  doCheck = false;
 
   meta = {
     description = "Python low-level client for OpenSearch";

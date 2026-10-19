@@ -23,11 +23,10 @@ buildPythonPackage {
     ./pillow-version.patch
   ];
 
-  doCheck = false;
   # Mouseinfo requires a X server running to import successfully
   # pythonImportsCheck = [ "mouseinfo" ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     pyperclip
     python-xlib
     pillow

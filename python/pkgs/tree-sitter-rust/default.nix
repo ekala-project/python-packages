@@ -29,7 +29,6 @@ buildPythonPackage rec {
   };
 
   # There are no tests
-  doCheck = false;
   pythonImportsCheck = [ "tree_sitter_rust" ];
 
   meta = {

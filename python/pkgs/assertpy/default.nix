@@ -19,8 +19,6 @@ buildPythonPackage rec {
 
   build-system = [ setuptools ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "assertpy" ];
 
   meta = {

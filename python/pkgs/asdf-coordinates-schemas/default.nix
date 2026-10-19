@@ -31,7 +31,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # Circular dependency with asdf-astropy
-  doCheck = false;
 
   pythonImportsCheck = [ "asdf_coordinates_schemas" ];
 

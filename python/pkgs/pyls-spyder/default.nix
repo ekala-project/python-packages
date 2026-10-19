@@ -13,11 +13,11 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "spyder-ide";
     repo = "pyls-spyder";
-    rev = "v${version}";
+    tag = "v${version}";
     sha256 = "11ajbsia60d4c9s6m6rbvaqp1d69fcdbq6a98lkzkkzv2b9pdhkk";
   };
 
-  propagatedBuildInputs = [ python-lsp-server ];
+  dependencies = [ python-lsp-server ];
 
   pythonImportsCheck = [ "pyls_spyder" ];
 

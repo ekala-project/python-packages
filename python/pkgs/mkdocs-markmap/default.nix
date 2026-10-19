@@ -37,7 +37,6 @@ buildPythonPackage rec {
   ];
 
   # No tests available
-  doCheck = false;
 
   meta = {
     description = "MkDocs plugin and extension to create mindmaps from markdown using markmap";

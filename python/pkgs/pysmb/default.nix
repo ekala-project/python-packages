@@ -28,7 +28,6 @@ buildPythonPackage rec {
 
   # Tests require Network Connectivity and a server up and running
   # https://github.com/miketeo/pysmb/blob/master/python3/tests/README_1st.txt
-  doCheck = false;
 
   pythonImportsCheck = [
     "nmb"

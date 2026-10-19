@@ -17,10 +17,9 @@ buildPythonPackage rec {
     hash = "sha256-YwM7CdZVXpUXKXUzFL3AtoDhekLDIvZ/q8taLsHihNk=";
   };
 
-  propagatedBuildInputs = [ requests ];
+  dependencies = [ requests ];
 
   # upstream code does not provide tests
-  doCheck = false;
 
   pythonImportsCheck = [ "mcuuid" ];
 

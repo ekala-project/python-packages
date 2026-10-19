@@ -35,7 +35,6 @@ buildPythonPackage rec {
   nativeBuildInputs = [ cffi ];
 
   # No tests included nor upstream available.
-  doCheck = false;
 
   pythonImportsCheck = [ "sounddevice" ];
 

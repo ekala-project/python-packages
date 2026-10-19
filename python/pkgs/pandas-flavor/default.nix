@@ -13,7 +13,6 @@ buildPythonPackage (finalAttrs: {
   pname = "pandas-flavor";
   version = "0.8.1";
   pyproject = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "pyjanitor-devs";

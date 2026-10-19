@@ -26,10 +26,9 @@ buildPythonPackage rec {
       --replace 'numpy==' 'numpy>='
   '';
 
-  propagatedBuildInputs = [ numpy ];
+  dependencies = [ numpy ];
 
   # package has no tests
-  doCheck = false;
 
   meta = {
     description = "Meta-package providing the oldest supported Numpy for a given Python version and platform";

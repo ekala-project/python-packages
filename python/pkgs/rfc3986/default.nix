@@ -20,8 +20,6 @@ buildPythonPackage rec {
 
   dependencies = [ idna ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "rfc3986" ];
 
   meta = {

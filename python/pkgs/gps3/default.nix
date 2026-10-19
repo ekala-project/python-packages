@@ -17,7 +17,6 @@ buildPythonPackage {
   };
 
   # Project has no tests
-  doCheck = false;
   pythonImportsCheck = [ "gps3" ];
 
   meta = {

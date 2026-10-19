@@ -23,8 +23,6 @@ buildPythonPackage rec {
 
   pythonImportsCheck = [ "requestsexceptions" ];
 
-  doCheck = false;
-
   meta = {
     homepage = "https://pypi.org/project/requestsexceptions/";
     description = "Import exceptions from potentially bundled packages in requests";

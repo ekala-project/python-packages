@@ -29,7 +29,7 @@ buildPythonPackage (finalAttrs: {
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     cryptography
     more-itertools
     pendulum

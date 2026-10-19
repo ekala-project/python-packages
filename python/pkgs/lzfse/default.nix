@@ -23,7 +23,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "lzfse" ];
 
   # upstream has no tests
-  doCheck = false;
 
   meta = {
     description = "Python bindings for the LZFSE reference implementation";

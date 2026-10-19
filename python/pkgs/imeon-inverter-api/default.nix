@@ -38,7 +38,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "imeon_inverter_api" ];
 
   # upstream has no tests
-  doCheck = false;
 
   meta = {
     description = "Standalone API to collect data from the Imeon Energy Inverters that uses HTTP POST/GET";

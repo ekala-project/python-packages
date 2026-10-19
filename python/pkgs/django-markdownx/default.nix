@@ -22,14 +22,13 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     django
     markdown
     pillow
   ];
 
   # tests only executable in vagrant
-  doCheck = false;
 
   pythonImportsCheck = [ "markdownx" ];
 

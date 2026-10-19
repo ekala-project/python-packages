@@ -126,8 +126,6 @@ buildPythonPackage rec {
     in
     extras // { all = lib.concatLists (lib.attrValues extras); };
 
-  doCheck = false;
-
   pythonImportsCheck = [ "pandas" ];
 
   meta = {

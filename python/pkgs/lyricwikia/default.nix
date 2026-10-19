@@ -26,7 +26,7 @@ buildPythonPackage rec {
       --replace "'pytest-runner'" ""
   '';
 
-  propagatedBuildInputs = [
+  dependencies = [
     beautifulsoup4
     requests
     six

@@ -31,7 +31,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # No tests are available
-  doCheck = false;
 
   meta = {
     description = "A plugin for Python-Markdown that allows you to use callouts as in Obsidian";

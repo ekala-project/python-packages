@@ -28,7 +28,7 @@ buildPythonPackage rec {
     wheel
   ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     numpy
     matplotlib
     schema

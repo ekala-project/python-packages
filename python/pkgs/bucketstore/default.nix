@@ -22,7 +22,7 @@ buildPythonPackage rec {
 
   build-system = [ poetry-core ];
 
-  propagatedBuildInputs = [ boto3 ];
+  dependencies = [ boto3 ];
 
   nativeCheckInputs = [
     moto

@@ -32,7 +32,6 @@ buildPythonPackage rec {
   dependencies = [ dnspython ];
 
   # Tests call a running mongodb instance
-  doCheck = false;
 
   pythonImportsCheck = [ "pymongo" ];
 

@@ -29,7 +29,7 @@ buildPythonPackage rec {
 
   build-system = [ hatchling ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     h5py
     numpy
     scipy

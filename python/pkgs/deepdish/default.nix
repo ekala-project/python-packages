@@ -44,7 +44,6 @@ buildPythonPackage rec {
   # ];
 
   # The tests are broken: `ModuleNotFoundError: No module named 'deepdish.six.conf'`
-  doCheck = false;
 
   meta = {
     description = "Flexible HDF5 saving/loading and other data science tools from the University of Chicago";

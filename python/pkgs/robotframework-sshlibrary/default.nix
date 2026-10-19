@@ -17,7 +17,7 @@ buildPythonPackage rec {
     sha256 = "aedf8a02bcb7344404cf8575d0ada25d6c7dc2fcb65de2113c4e07c63d2446c2";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     robotframework
     paramiko
     scp

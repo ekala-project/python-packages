@@ -33,7 +33,6 @@ buildPythonPackage rec {
   ];
 
   # No tests
-  doCheck = false;
 
   meta = {
     description = "Mean Average Precision for Object Detection";

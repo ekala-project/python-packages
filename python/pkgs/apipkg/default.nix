@@ -21,8 +21,6 @@ buildPythonPackage rec {
     hatchling
   ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "apipkg" ];
 
   meta = {

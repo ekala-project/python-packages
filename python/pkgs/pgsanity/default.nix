@@ -27,7 +27,7 @@ buildPythonPackage (finalAttrs: {
 
   unittestFlagsArray = [ "test" ];
 
-  propagatedBuildInputs = [ postgresql ];
+  dependencies = [ postgresql ];
 
   # To find "ecpg"
   nativeBuildInputs = [ (lib.getDev postgresql) ];

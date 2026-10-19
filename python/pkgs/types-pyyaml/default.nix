@@ -19,7 +19,6 @@ buildPythonPackage (finalAttrs: {
   build-system = [ setuptools ];
 
   # Module doesn't have tests
-  doCheck = false;
 
   pythonImportsCheck = [ "yaml-stubs" ];
 

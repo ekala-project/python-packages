@@ -21,10 +21,9 @@ buildPythonPackage rec {
 
   buildInputs = [ gevent-websocket ];
 
-  propagatedBuildInputs = [ gevent ];
+  dependencies = [ gevent ];
 
   # Tests are not ported to Python 3
-  doCheck = false;
 
   pythonImportsCheck = [ "socketio" ];
 

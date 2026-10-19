@@ -82,7 +82,6 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [
     "httpx2"
   ];
-  __structuredAttrs = true;
 
   meta = {
     description = "A next generation HTTP client for Python";

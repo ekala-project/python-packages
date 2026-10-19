@@ -24,7 +24,6 @@ buildPythonPackage (finalAttrs: {
   pyproject = true;
 
   strictDeps = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "Voyz";

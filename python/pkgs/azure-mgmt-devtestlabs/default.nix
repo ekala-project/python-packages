@@ -16,8 +16,6 @@ buildPythonPackage (finalAttrs: {
   version = "9.0.0";
   pyproject = true;
 
-  __structuredAttrs = true;
-
   src = fetchPypi {
     inherit (finalAttrs) pname version;
     extension = "zip";
@@ -39,7 +37,6 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [ "azure.mgmt.devtestlabs" ];
 
   # has no tests
-  doCheck = false;
 
   meta = {
     description = "This is the Microsoft Azure DevTestLabs Management Client Library";

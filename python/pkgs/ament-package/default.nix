@@ -24,7 +24,6 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [ "ament_package" ];
 
   # Tests currently broken
-  doCheck = false;
 
   # The script selects tag release-alpha8
   passthru.skipBulkUpdate = true;

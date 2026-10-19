@@ -38,8 +38,6 @@ buildPythonPackage rec {
 
   pythonImportsCheck = [ "responses" ];
 
-  doCheck = false;
-
   meta = {
     description = "Python module for mocking out the requests Python library";
     homepage = "https://github.com/getsentry/responses";

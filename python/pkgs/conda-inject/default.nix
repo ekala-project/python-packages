@@ -35,7 +35,6 @@ buildPythonPackage rec {
   ];
 
   # no tests
-  doCheck = false;
 
   meta = {
     description = "Helper functions for injecting a conda environment into the current python environment";

@@ -18,13 +18,12 @@ buildPythonPackage rec {
 
   pythonRelaxDeps = [ "Pillow" ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     pillow
     regex
   ];
 
   # No tests implemented.
-  doCheck = false;
 
   pythonImportsCheck = [ "material_color_utilities_python" ];
 

@@ -16,13 +16,12 @@ buildPythonPackage rec {
     hash = "sha256-B8EM9E1wc/TwEQLKEtmi3DG0HUfkxh7ZLvam0mabNWs=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     jinja2
     pyyaml
   ];
 
   # no tests include in sdist, and source not available
-  doCheck = false;
 
   pythonImportsCheck = [ "jinja2_ansible_filters" ];
 

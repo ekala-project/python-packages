@@ -32,7 +32,6 @@ buildPythonPackage rec {
     setuptools
   ];
 
-  doCheck = false; # no tests on PyPi/GitHub
   pythonImportsCheck = [ "ipyvuetify" ];
 
   meta = {

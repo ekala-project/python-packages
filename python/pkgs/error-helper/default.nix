@@ -11,7 +11,6 @@ buildPythonPackage (finalAttrs: {
   pname = "error-helper";
   version = "1.5";
   pyproject = true;
-  __structuredAttrs = true;
 
   # GitHub source doesn't build correctly (fails imports check)
   src = fetchPypi {
@@ -25,7 +24,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # No tests in the Pypi archive.
-  doCheck = false;
 
   pythonImportsCheck = [ "error_helper" ];
 

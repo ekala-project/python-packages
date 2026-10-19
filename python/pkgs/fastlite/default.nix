@@ -33,7 +33,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # No tests
-  doCheck = false;
 
   pythonImportsCheck = [
     "fastlite"

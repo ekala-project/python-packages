@@ -26,7 +26,6 @@ buildPythonPackage rec {
   ];
 
   # The tests try to connect to qemu
-  doCheck = false;
 
   pythonImportsCheck = [ "vagrant" ];
 

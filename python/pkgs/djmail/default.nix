@@ -28,12 +28,11 @@ buildPythonPackage rec {
 
   env.LC_ALL = "en_US.UTF-8";
 
-  propagatedBuildInputs = [
+  dependencies = [
     celery
     django
     psycopg2
   ];
 
   # django.core.exceptions.ImproperlyConfigured: Requested setting DEFAULT_INDEX_TABLESPACE, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
-  doCheck = false;
 }

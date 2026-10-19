@@ -21,7 +21,7 @@ buildPythonPackage rec {
     hash = "sha256-vzF1SC4fUIeR0OYesOq60eWjlX+N+YYA/h7mNfxWEtk=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     sphinx
     requests
   ];

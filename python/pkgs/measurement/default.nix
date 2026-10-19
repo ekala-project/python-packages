@@ -31,7 +31,7 @@ buildPythonPackage rec {
     sphinx
   ];
 
-  propagatedBuildInputs = [ sympy ];
+  dependencies = [ sympy ];
 
   nativeCheckInputs = [
     pytestCheckHook

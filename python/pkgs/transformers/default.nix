@@ -40,8 +40,6 @@ buildPythonPackage (finalAttrs: {
     typer
   ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "transformers" ];
 
   meta = {

@@ -22,7 +22,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [ fpyutils ];
+  dependencies = [ fpyutils ];
 
   nativeCheckInputs = [
     pyfakefs

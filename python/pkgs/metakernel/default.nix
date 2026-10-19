@@ -29,7 +29,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # Tests hang, so disable
-  doCheck = false;
 
   pythonImportsCheck = [ "metakernel" ];
 

@@ -34,7 +34,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "azure.search.documents" ];
 
   # require devtools_testutils which is a internal package for azure-sdk
-  doCheck = false;
 
   passthru = {
     # multiple packages in the repo and the updater picks the wrong tag

@@ -19,7 +19,7 @@ buildPythonPackage {
     hash = "sha256-E8brnt8CtTEEP1KQTsTsgnl54H4zRGp+1IuoI/Qf5NA=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     six
     twisted
   ];

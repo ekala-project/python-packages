@@ -32,7 +32,7 @@ buildPythonPackage rec {
     setuptools-scm
   ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     cffi
     six
     packaging

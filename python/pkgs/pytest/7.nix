@@ -45,7 +45,7 @@ let
       setuptools-scm
     ];
 
-    propagatedBuildInputs = [
+    dependencies = [
       iniconfig
       packaging
       pluggy
@@ -69,7 +69,6 @@ let
       cp -R testing $testout/testing
     '';
 
-    doCheck = false;
     passthru.tests.pytest = callPackage ./tests.nix { pytest = self; };
 
     # Remove .pytest_cache when using py.test in a Nix build

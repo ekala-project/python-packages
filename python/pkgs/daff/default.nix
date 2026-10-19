@@ -15,7 +15,6 @@ buildPythonPackage rec {
   };
 
   # there are no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "daff" ];
 

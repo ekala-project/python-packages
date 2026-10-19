@@ -42,7 +42,6 @@ buildPythonPackage rec {
   # Cannot find various classes. If you want to fix this
   # take a look at the opensuse packaging:
   # https://build.opensuse.org/projects/openSUSE:Factory/packages/python-JPype1/files/python-JPype1.spec?expand=1
-  doCheck = false;
   pythonImportsCheck = [
     "jpype"
     "jpype.imports"

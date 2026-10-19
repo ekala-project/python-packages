@@ -49,7 +49,6 @@ buildPythonPackage (finalAttrs: {
     pillow
   ];
 
-  doCheck = false; # tests are in Typescript and require `npx` and `chromium`
   pythonImportsCheck = [ "ipycanvas" ];
 
   meta = {

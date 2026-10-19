@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "vsajip";
     repo = "sarge";
-    rev = version;
+    tag = version;
     hash = "sha256-//iAmcocP0VESkWgWR2k0D9/E7lgp5QKZ3CdzE54qmM=";
   };
 

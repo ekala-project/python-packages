@@ -13,14 +13,13 @@ buildPythonPackage rec {
 
   src = fetchhg {
     url = "http://hg.code.sf.net/p/ruamel-yaml-clib/code";
-    rev = version;
+    tag = version;
     hash = "sha256-SnMELcG2L2ei3UjImljjG1sSCHHROhXYcLe5kAR6h8E=";
   };
 
   build-system = [ setuptools ];
 
   # no tests
-  doCheck = false;
 
   # circular dependency with ruamel-yaml
   # pythonImportsCheck = [ "_ruamel_yaml" ];

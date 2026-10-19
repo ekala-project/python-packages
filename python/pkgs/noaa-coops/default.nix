@@ -29,7 +29,6 @@ buildPythonPackage rec {
   ];
 
   # The package does not include tests in the PyPI source distribution
-  doCheck = false;
 
   pythonImportsCheck = [
     "noaa_coops"

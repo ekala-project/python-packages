@@ -24,7 +24,6 @@ buildPythonPackage (finalAttrs: {
   pname = "cwsandbox";
   version = "1.14.2";
   pyproject = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "coreweave";

@@ -22,7 +22,6 @@ buildPythonPackage rec {
   dependencies = [ dash ];
 
   # Tests a additional requirements
-  doCheck = false;
 
   pythonImportsCheck = [ "dash_bootstrap_components" ];
 

@@ -32,7 +32,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # tests require network access
-  doCheck = false;
 
   pythonImportsCheck = [ "mvg" ];
 

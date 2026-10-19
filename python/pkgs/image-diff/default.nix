@@ -16,11 +16,11 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "simonw";
     repo = "image-diff";
-    rev = version;
+    tag = version;
     hash = "sha256-AQykJNvBgVjmPVTwJOX17eKWelqvZZieq/giid8GYAY=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     pillow
     click
     click-default-group

@@ -33,7 +33,7 @@ buildPythonPackage rec {
   nativeBuildInputs = [ setuptools-scm ];
 
   buildInputs = [ setuptools ];
-  propagatedBuildInputs = [
+  dependencies = [
     find-libpython
     pytest
   ];

@@ -22,7 +22,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "nhc" ];
 
   # upstream has no test
-  doCheck = false;
 
   meta = {
     description = "SDK for Niko Home Control";

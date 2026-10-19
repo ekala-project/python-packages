@@ -30,7 +30,6 @@ buildPythonPackage rec {
   ];
 
   # Module has no tests
-  doCheck = false;
 
   meta = {
     description = "This is the Microsoft Azure Advisor Client Library";

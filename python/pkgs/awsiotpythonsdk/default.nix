@@ -25,7 +25,6 @@ buildPythonPackage (finalAttrs: {
   nativeBuildInputs = [ setuptools ];
 
   # Module has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "AWSIoTPythonSDK" ];
 

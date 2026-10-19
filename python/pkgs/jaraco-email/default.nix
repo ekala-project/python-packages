@@ -29,7 +29,7 @@ buildPythonPackage rec {
     setuptools-scm
   ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     aiosmtpd
     jaraco-text
     jaraco-collections

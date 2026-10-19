@@ -31,7 +31,6 @@ buildPythonPackage rec {
   buildInputs = lib.optionals stdenv.hostPlatform.isDarwin [ libiconv ];
 
   # no python tests exist
-  doCheck = false;
 
   pythonImportsCheck = [ "dbt_extractor" ];
 

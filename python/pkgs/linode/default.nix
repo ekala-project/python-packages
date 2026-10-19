@@ -15,7 +15,7 @@ buildPythonPackage rec {
     sha256 = "db3c2a7fab8966d903a63f16c515bff241533e4ef2d746aa7aae4a49bba5e573";
   };
 
-  propagatedBuildInputs = [ requests ];
+  dependencies = [ requests ];
 
   meta = {
     homepage = "https://github.com/ghickman/linode";

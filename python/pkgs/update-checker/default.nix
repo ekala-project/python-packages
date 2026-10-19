@@ -25,7 +25,6 @@ buildPythonPackage rec {
   build-system = [ setuptools ];
 
   # requires network
-  doCheck = false;
 
   pythonImportsCheck = [ "update_checker" ];
 

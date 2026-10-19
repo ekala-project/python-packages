@@ -24,7 +24,7 @@ buildPythonPackage (finalAttrs: {
 
   # https://github.com/xattr/xattr/issues/43
 
-  propagatedBuildInputs = [ cffi ];
+  dependencies = [ cffi ];
 
   postBuild = ''
     ${python.pythonOnBuildForHost.interpreter} -m compileall -f xattr

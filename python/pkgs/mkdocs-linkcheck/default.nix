@@ -18,7 +18,7 @@ buildPythonPackage {
     hash = "sha256-z59F7zUKZKIQSiTlE6wGbGDecPMeruNgltWUYfDf8jY=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     aiohttp
     requests
   ];

@@ -28,7 +28,6 @@ buildPythonPackage rec {
   ];
 
   # Not running tests as aiomysql is missing support for pymysql>=0.9.3
-  doCheck = false;
 
   pythonImportsCheck = [ "asyncmy" ];
 

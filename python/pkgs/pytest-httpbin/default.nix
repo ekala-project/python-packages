@@ -24,7 +24,7 @@ buildPythonPackage rec {
 
   buildInputs = [ pytest ];
 
-  propagatedBuildInputs = [ httpbin ];
+  dependencies = [ httpbin ];
   pythonImportsCheck = [ "pytest_httpbin" ];
 
   meta = {

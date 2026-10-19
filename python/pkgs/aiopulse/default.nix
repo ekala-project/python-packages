@@ -25,7 +25,6 @@ buildPythonPackage rec {
   ];
 
   # Tests are not present
-  doCheck = false;
 
   pythonImportsCheck = [ "aiopulse" ];
 

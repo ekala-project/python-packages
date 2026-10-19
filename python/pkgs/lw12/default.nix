@@ -20,7 +20,6 @@ buildPythonPackage rec {
   build-system = [ setuptools ];
 
   # Tests require hardware access
-  doCheck = false;
 
   meta = {
     description = "Library to control the Lagute LW-12 WiFi LED controller";

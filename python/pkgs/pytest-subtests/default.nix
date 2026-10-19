@@ -33,8 +33,6 @@ buildPythonPackage rec {
     pytest
   ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "pytest_subtests" ];
 
   meta = {

@@ -16,7 +16,6 @@ buildPythonPackage rec {
   };
 
   # No tests included in Pypi archive
-  doCheck = false;
 
   meta = {
     homepage = "https://github.com/asottile/future-fstrings";

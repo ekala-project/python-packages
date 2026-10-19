@@ -20,7 +20,6 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [ "getch" ];
 
   # Module has no tests
-  doCheck = false;
 
   meta = {
     description = "Does single char input, like C getch/getche";

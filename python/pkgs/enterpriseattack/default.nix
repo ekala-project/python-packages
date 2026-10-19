@@ -31,7 +31,6 @@ buildPythonPackage rec {
   ];
 
   # Tests require network access
-  doCheck = false;
 
   pythonImportsCheck = [ "enterpriseattack" ];
 

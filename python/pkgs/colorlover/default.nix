@@ -18,7 +18,6 @@ buildPythonPackage rec {
   build-system = [ setuptools ];
 
   # no tests included in distributed archive
-  doCheck = false;
 
   pythonImportsCheck = [ "colorlover" ];
 

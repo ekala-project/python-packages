@@ -20,7 +20,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [ numpy ];
+  dependencies = [ numpy ];
   pythonImportsCheck = [ "cmaes" ];
   meta = {
     description = "Python library for CMA evolution strategy";

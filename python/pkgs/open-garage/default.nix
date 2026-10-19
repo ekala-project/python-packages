@@ -14,17 +14,16 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Danielhiversen";
     repo = "pyOpenGarage";
-    rev = version;
+    tag = version;
     hash = "sha256-iJ7HcJhpTceFpHTUdNZOYDuxUWZGWPmZ9lxD3CyGvk8=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     aiohttp
     async-timeout
   ];
 
   # Project has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "opengarage" ];
 

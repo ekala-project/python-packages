@@ -28,8 +28,6 @@ buildPythonPackage rec {
     legacy-cgi
   ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "formencode" ];
 
   meta = {

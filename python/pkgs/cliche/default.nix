@@ -23,7 +23,7 @@ buildPythonPackage {
       --replace "ipdb == 0.13.9" "ipdb"
   '';
 
-  propagatedBuildInputs = [ ipdb ];
+  dependencies = [ ipdb ];
 
   nativeCheckInputs = [ pytestCheckHook ];
 

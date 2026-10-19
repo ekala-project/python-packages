@@ -23,7 +23,6 @@ buildPythonPackage (finalAttrs: {
   pname = "anndata";
   version = "0.13.2";
   pyproject = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "scverse";

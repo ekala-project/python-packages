@@ -17,8 +17,6 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ libkrb5 ];
 
-  doCheck = false;
-
   meta = {
     description = "Kerberos high-level interface";
     homepage = "https://pypi.org/project/kerberos/";

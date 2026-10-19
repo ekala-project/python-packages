@@ -22,9 +22,8 @@ buildPythonPackage rec {
   nativeBuildInputs = [ setuptools ];
 
   # Tests use relative paths
-  doCheck = false;
 
-  propagatedBuildInputs = [
+  dependencies = [
     ruamel-base
   ]
   ++ lib.optional (!isPyPy) ruamel-yaml-clib;

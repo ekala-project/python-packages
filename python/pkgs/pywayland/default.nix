@@ -23,7 +23,7 @@ buildPythonPackage rec {
   nativeBuildInputs = [ wayland-scanner ];
   propagatedNativeBuildInputs = [ cffi ];
   buildInputs = [ wayland ];
-  propagatedBuildInputs = [ cffi ];
+  dependencies = [ cffi ];
 
   postBuild = ''
     ${python.pythonOnBuildForHost.interpreter} pywayland/ffi_build.py

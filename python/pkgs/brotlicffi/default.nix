@@ -36,7 +36,6 @@ buildPythonPackage rec {
     export USE_SHARED_BROTLI=1
   '';
   # Test data is only available from libbrotli git checkout, not brotli.src
-  doCheck = false;
   pythonImportsCheck = [ "brotlicffi" ];
 
   meta = {

@@ -16,11 +16,9 @@ buildPythonPackage rec {
     sha256 = "0nibblvj3n20zvq6d73zalbjqjby0w8ji5mim7inhn7vb9dw4hhy";
   };
 
-  doCheck = false;
-
   pythonImportsCheck = [ "protobuf_to_dict" ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     protobuf
     six
   ];

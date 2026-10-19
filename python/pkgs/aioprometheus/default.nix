@@ -25,7 +25,7 @@ buildPythonPackage rec {
     hash = "sha256-2z68rQkMjYqkszg5Noj9owWUWQGOEp/91RGiWiyZVOY=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     orjson
     quantile-python
   ];

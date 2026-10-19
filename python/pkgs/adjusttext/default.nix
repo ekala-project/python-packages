@@ -33,7 +33,6 @@ buildPythonPackage rec {
   ];
 
   # Project has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "adjustText" ];
 

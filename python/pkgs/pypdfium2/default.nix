@@ -52,7 +52,7 @@ buildPythonPackage rec {
     removeReferencesTo
   ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     pdfium-binaries
   ];
 

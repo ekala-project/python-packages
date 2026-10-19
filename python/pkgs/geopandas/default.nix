@@ -29,7 +29,6 @@ buildPythonPackage (finalAttrs: {
   pname = "geopandas";
   version = "1.1.4";
   pyproject = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "geopandas";
@@ -51,12 +50,10 @@ buildPythonPackage (finalAttrs: {
   optional-dependencies = {
     all = [
       (folium.overridePythonAttrs (prevAttrs: {
-        doCheck = false;
       }))
       geoalchemy2
       geopy
       (mapclassify.overridePythonAttrs (prevAttrs: {
-        doCheck = false;
       }))
       matplotlib
       psycopg

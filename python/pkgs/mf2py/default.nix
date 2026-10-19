@@ -25,7 +25,7 @@ buildPythonPackage (finalAttrs: {
 
   nativeBuildInputs = [ poetry-core ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     beautifulsoup4
     html5lib
     requests

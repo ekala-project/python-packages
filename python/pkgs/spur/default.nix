@@ -17,10 +17,9 @@ buildPythonPackage rec {
     hash = "sha256-LTkZ1p2P9fsD+gZEQZaCS68Q6nGc4qFGMNtH75gQmXQ=";
   };
 
-  propagatedBuildInputs = [ paramiko ];
+  dependencies = [ paramiko ];
 
   # Tests require a running SSH server
-  doCheck = false;
 
   pythonImportsCheck = [ "spur" ];
 

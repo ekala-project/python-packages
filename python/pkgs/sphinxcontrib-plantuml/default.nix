@@ -22,7 +22,7 @@ buildPythonPackage rec {
 
   dependencies = [ sphinx ];
 
-  propagatedBuildInputs = [ plantuml ];
+  dependencies = [ plantuml ];
 
   pythonImportsCheck = [ "sphinxcontrib.plantuml" ];
 

@@ -23,7 +23,7 @@ buildPythonPackage rec {
 
   buildInputs = [ pytest ];
 
-  propagatedBuildInputs = [ isort ];
+  dependencies = [ isort ];
 
   pythonImportsCheck = [ "pytest_isort" ];
 

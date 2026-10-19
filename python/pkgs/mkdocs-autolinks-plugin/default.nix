@@ -24,7 +24,6 @@ buildPythonPackage rec {
   dependencies = [ mkdocs ];
 
   # Module has no tests.
-  doCheck = false;
 
   pythonImportsCheck = [ "mkdocs_autolinks_plugin" ];
 

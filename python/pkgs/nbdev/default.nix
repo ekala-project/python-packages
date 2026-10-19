@@ -46,7 +46,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # no real tests
-  doCheck = false;
 
   pythonImportsCheck = [ "nbdev" ];
 

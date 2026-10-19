@@ -23,7 +23,6 @@ buildPythonPackage (finalAttrs: {
   dependencies = [ pycares ];
 
   # Could not contact DNS servers
-  doCheck = false;
 
   pythonImportsCheck = [ "aiodns" ];
 

@@ -17,7 +17,6 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools ];
   # upstream doesn't contain tests
-  doCheck = false;
 
   pythonImportsCheck = [ "bespon" ];
   meta = {

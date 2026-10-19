@@ -31,7 +31,7 @@ buildPythonPackage rec {
     setuptools-scm
   ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     atom
     bytecode
     cppy

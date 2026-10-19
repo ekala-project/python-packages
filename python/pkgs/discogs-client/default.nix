@@ -20,7 +20,7 @@ buildPythonPackage rec {
     hash = "sha256-UWiop9hg6KSpSq4SnTtvFbRHYTnLe/Ed/o65sf78MYo=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     requests
     oauthlib
     python-dateutil

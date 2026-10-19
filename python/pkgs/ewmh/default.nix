@@ -15,10 +15,9 @@ buildPythonPackage rec {
     sha256 = "0g9l14my3v8zlgq1yd8wh5gpara0qcapsfmvg7lq2lapglzhjsy5";
   };
 
-  propagatedBuildInputs = [ python-xlib ];
+  dependencies = [ python-xlib ];
 
   # No tests included
-  doCheck = false;
 
   meta = {
     homepage = "https://github.com/parkouss/pyewmh";

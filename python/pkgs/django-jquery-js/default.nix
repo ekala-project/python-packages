@@ -21,8 +21,6 @@ buildPythonPackage rec {
 
   pythonImportsCheck = [ "jquery" ];
 
-  doCheck = false; # no tests
-
   meta = {
     description = "jQuery, bundled up so apps can depend upon it";
     homepage = "https://bitbucket.org/tim_heap/django-jquery";

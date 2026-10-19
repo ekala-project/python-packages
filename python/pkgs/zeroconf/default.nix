@@ -26,8 +26,6 @@ buildPythonPackage rec {
 
   dependencies = [ ifaddr ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "zeroconf" ];
 
   meta = {

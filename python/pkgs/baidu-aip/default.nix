@@ -25,7 +25,6 @@ buildPythonPackage rec {
   ];
 
   # Package has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "aip" ];
 

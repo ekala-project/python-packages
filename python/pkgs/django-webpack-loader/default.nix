@@ -22,8 +22,6 @@ buildPythonPackage rec {
 
   dependencies = [ django ];
 
-  doCheck = false; # tests require fetching node_modules
-
   pythonImportsCheck = [ "webpack_loader" ];
 
   meta = {

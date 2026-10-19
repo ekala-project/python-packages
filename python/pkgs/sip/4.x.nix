@@ -35,7 +35,7 @@ buildPythonPackage rec {
     substituteInPlace configure.py --replace-fail "from distutils" "from setuptools._distutils"
   '';
 
-  propagatedBuildInputs = lib.optional (pythonAtLeast "3.12") setuptools;
+  dependencies = lib.optional (pythonAtLeast "3.12") setuptools;
 
   configurePhase = ''
     ${python.executable} ./configure.py \

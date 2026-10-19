@@ -33,7 +33,6 @@ buildPythonPackage rec {
   pythonNamespaces = [ "azure.mgmt" ];
 
   # Tests are only available in the mono-repo
-  doCheck = false;
 
   meta = {
     description = "This is the Microsoft Azure DNS Management Client Library";

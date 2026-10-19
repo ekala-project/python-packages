@@ -25,7 +25,7 @@ buildPythonPackage rec {
     cython
   ];
 
-  propagatedBuildInputs = [ cython ];
+  dependencies = [ cython ];
 
   pythonImportsCheck = [ "memory_allocator" ];
 

@@ -18,7 +18,7 @@ buildPythonPackage rec {
   };
 
   nativeCheckInputs = [ zope-testrunner ];
-  propagatedBuildInputs = [
+  dependencies = [
     six
     chardet
   ];

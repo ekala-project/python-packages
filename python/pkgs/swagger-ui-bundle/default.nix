@@ -24,10 +24,9 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ poetry-core ];
 
-  propagatedBuildInputs = [ jinja2 ];
+  dependencies = [ jinja2 ];
 
   # package contains no tests
-  doCheck = false;
 
   meta = {
     description = "Bundled swagger-ui pip package";

@@ -42,7 +42,6 @@ buildPythonPackage rec {
     twine
   ];
   # majority of tests just try to call out to Google's Translate API endpoint
-  doCheck = false;
   checkPhase = ''
     pytest
   '';

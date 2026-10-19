@@ -14,14 +14,13 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ocropus";
     repo = "hocr-tools";
-    rev = "v${version}";
+    tag = "v${version}";
     sha256 = "14f9hkp7pr677085w8iidwd0la9cjzy3pyj3rdg9b03nz9pc0w6p";
   };
 
   # hocr-tools uses a test framework that requires internet access
-  doCheck = false;
 
-  propagatedBuildInputs = [
+  dependencies = [
     pillow
     lxml
     reportlab

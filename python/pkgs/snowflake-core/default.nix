@@ -38,7 +38,6 @@ buildPythonPackage rec {
   ];
 
   # Tests require access to Snowflake
-  doCheck = false;
 
   pythonImportsCheck = [
     "snowflake.core"

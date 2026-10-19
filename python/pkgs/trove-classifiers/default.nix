@@ -27,7 +27,6 @@ buildPythonPackage (finalAttrs: {
     setuptools
   ];
 
-  doCheck = false; # avoid infinite recursion with hatchling
   pythonImportsCheck = [ "trove_classifiers" ];
 
   passthru.tests.trove-classifiers = finalAttrs.finalPackage.overrideAttrs { doInstallCheck = true; };

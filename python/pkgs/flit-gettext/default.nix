@@ -25,7 +25,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "codingjoe";
     repo = "flit-gettext";
-    rev = version;
+    tag = version;
     hash = "sha256-rCIMwAiXXCJ+PH26/hoPWsuKd68crWStBErAOh9wzUg=";
   };
 
@@ -40,7 +40,7 @@ buildPythonPackage rec {
     wheel
   ];
 
-  propagatedBuildInputs = [ flit-core ];
+  dependencies = [ flit-core ];
 
   optional-dependencies = {
     scm = [ flit-scm ];

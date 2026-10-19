@@ -14,8 +14,6 @@ buildPythonPackage (finalAttrs: {
   version = "2.1.0";
   pyproject = true;
 
-  __structuredAttrs = true;
-
   src = fetchPypi {
     inherit (finalAttrs) pname version;
     hash = "sha256-NVm5x6sTRQxm6oM+uCwoIzvuJPG9jKGap9J/jCPVvFM=";
@@ -30,7 +28,6 @@ buildPythonPackage (finalAttrs: {
   ++ lib.optional (!isPy3k) futures;
 
   # has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "azure.storage.file" ];
 

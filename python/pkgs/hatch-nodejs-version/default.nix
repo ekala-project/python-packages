@@ -17,7 +17,7 @@ buildPythonPackage rec {
     hash = "sha256-Oe07HFzhhnAGTWM51xSgRmpJgIZg0oMIxkmMxKRPMwI=";
   };
 
-  propagatedBuildInputs = [ hatchling ];
+  dependencies = [ hatchling ];
   pythonImportsCheck = [ "hatch_nodejs_version" ];
 
   meta = {

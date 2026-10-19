@@ -28,7 +28,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # Tests are not shipped with PyPI package
-  doCheck = false;
 
   pythonImportsCheck = [ "llama_index.graph_stores.neo4j" ];
 

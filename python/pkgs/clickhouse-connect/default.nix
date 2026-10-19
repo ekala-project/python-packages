@@ -36,7 +36,7 @@ buildPythonPackage rec {
   setupPyBuildFlags = [ "--inplace" ];
   enableParallelBuilding = true;
 
-  propagatedBuildInputs = [
+  dependencies = [
     certifi
     importlib-metadata
     numpy

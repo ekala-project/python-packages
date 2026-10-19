@@ -26,8 +26,6 @@ buildPythonPackage (finalAttrs: {
 
   dependencies = [ aiohttp ];
 
-  doCheck = false; # all tests are async and no async plugin is configured
-
   nativeCheckInputs = [
     faker
     pytest-aiohttp

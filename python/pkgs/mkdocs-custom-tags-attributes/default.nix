@@ -30,8 +30,6 @@ buildPythonPackage (finalAttrs: {
     "custom_attributes"
   ];
 
-  doCheck = false;
-
   meta = {
     description = "A mkdocs plugin to create custom attributes using hashtags";
     homepage = "https://github.com/Mara-Li/mkdocs-custom-tags-attributes";

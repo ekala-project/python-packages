@@ -23,7 +23,6 @@ buildPythonPackage rec {
   build-system = [ hatchling ];
 
   # Package has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "aioonkyo" ];
 

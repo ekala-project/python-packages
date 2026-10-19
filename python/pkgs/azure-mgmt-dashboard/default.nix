@@ -22,7 +22,7 @@ buildPythonPackage rec {
     hash = "sha256-1LASBzs+biyDDQPoCujcvLhK3iyNaHLU8VCtBSdTJxg=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     azure-common
     azure-mgmt-core
     isodate
@@ -30,7 +30,6 @@ buildPythonPackage rec {
   ];
 
   # Module has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "azure.mgmt.dashboard" ];
 

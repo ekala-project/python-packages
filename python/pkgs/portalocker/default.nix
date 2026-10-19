@@ -26,7 +26,7 @@ buildPythonPackage rec {
     setuptools-scm
   ];
 
-  propagatedBuildInputs = [ redis ];
+  dependencies = [ redis ];
 
   pythonImportsCheck = [ "portalocker" ];
 

@@ -14,11 +14,11 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "exxamalte";
     repo = "python-georss-tfs-incidents-client";
-    rev = "v${version}";
+    tag = "v${version}";
     hash = "sha256-Cz0PRcGReAE0mg04ktCUaoLqPTjvyU1TiB/Pdz7o7zo=";
   };
 
-  propagatedBuildInputs = [ georss-client ];
+  dependencies = [ georss-client ];
 
   nativeCheckInputs = [ pytestCheckHook ];
 

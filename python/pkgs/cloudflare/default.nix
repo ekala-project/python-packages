@@ -42,7 +42,6 @@ buildPythonPackage rec {
   ];
 
   # tests require networking
-  doCheck = false;
 
   pythonImportsCheck = [ "cloudflare" ];
 

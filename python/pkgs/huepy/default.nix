@@ -21,7 +21,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "huepy" ];
 
   # no test
-  doCheck = false;
 
   meta = {
     description = "Print awesomely in terminals";

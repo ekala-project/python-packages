@@ -22,8 +22,6 @@ buildPythonPackage rec {
 
   pythonNamespaces = [ "repoze" ];
 
-  doCheck = false;
-
   meta = {
     homepage = "http://www.repoze.org/";
     description = "Tiny LRU cache implementation and decorator";

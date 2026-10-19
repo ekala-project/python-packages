@@ -22,7 +22,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "flexit_bacnet" ];
 
   # upstream has no tests
-  doCheck = false;
 
   meta = {
     description = "Client BACnet library for Flexit Nordic series of air handling units";

@@ -32,7 +32,6 @@ buildPythonPackage rec {
   ];
 
   # Checks need an Oracle database
-  doCheck = false;
 
   pythonImportsCheck = [ "oracledb" ];
 

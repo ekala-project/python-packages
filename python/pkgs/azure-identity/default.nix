@@ -33,8 +33,6 @@ buildPythonPackage rec {
 
   pythonImportsCheck = [ "azure.identity" ];
 
-  doCheck = false;
-
   meta = {
     description = "Microsoft Azure Identity Library for Python";
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/identity/azure-identity";

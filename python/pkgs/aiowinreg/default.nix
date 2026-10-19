@@ -21,13 +21,12 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     prompt-toolkit
     winacl
   ];
 
   # Project doesn't have tests
-  doCheck = false;
 
   pythonImportsCheck = [ "aiowinreg" ];
 

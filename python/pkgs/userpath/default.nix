@@ -20,8 +20,6 @@ buildPythonPackage rec {
 
   dependencies = [ click ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "userpath" ];
 
   meta = {

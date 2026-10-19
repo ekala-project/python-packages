@@ -15,7 +15,6 @@ buildPythonPackage rec {
   };
 
   # Tests are not included in pypi tarball
-  doCheck = false;
 
   pythonImportsCheck = [ "httptools" ];
 

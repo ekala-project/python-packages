@@ -19,7 +19,6 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools ];
 
-  doCheck = false; # Package does not contain tests
   pythonImportsCheck = [ "checksumdir" ];
 
   meta = {

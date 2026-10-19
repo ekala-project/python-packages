@@ -28,7 +28,6 @@ buildPythonPackage rec {
   dependencies = [ aiohttp ];
 
   # Tests are out-dated
-  doCheck = false;
 
   pythonImportsCheck = [ "aiooncue" ];
 

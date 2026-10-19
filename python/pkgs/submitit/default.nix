@@ -19,7 +19,6 @@ buildPythonPackage (finalAttrs: {
   pname = "submitit";
   version = "1.5.4";
   pyproject = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "facebookincubator";

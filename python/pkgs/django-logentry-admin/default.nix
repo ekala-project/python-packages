@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "yprez";
     repo = "django-logentry-admin";
-    rev = "v${version}";
+    tag = "v${version}";
     sha256 = "1bndxgvisw8kk52zfdifvly6dl4833wqilxf77pg473172yaf5gq";
   };
 
@@ -28,7 +28,7 @@ buildPythonPackage rec {
     pytest
   '';
 
-  propagatedBuildInputs = [ django ];
+  dependencies = [ django ];
 
   meta = {
     description = "Show all LogEntry objects in the Django admin site";

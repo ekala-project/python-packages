@@ -53,7 +53,6 @@ buildPythonPackage (finalAttrs: {
   pname = "msticpy";
   version = "3.0.1";
   pyproject = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "microsoft";
@@ -114,7 +113,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # Test requires network access
-  doCheck = false;
 
   pythonImportsCheck = [ "msticpy" ];
 

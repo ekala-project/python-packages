@@ -93,8 +93,6 @@ buildPythonPackage (finalAttrs: {
 
   pythonImportsCheck = [ "llama_index" ];
 
-  doCheck = false;
-
   meta = {
     description = "Data framework for your LLM applications";
     homepage = "https://github.com/run-llama/llama_index/";

@@ -21,7 +21,7 @@ buildPythonPackage rec {
     hash = "sha256-Y+cRQW29GBGt4aC+ENx8zSocV9A5Exzq1sMDv/wcJ3M=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     pymongo
     six
   ];
@@ -32,7 +32,6 @@ buildPythonPackage rec {
   '';
 
   # tests require mongodb running in background
-  doCheck = false;
 
   pythonImportsCheck = [ "mongoengine" ];
 

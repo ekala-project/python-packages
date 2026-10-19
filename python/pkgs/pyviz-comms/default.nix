@@ -34,7 +34,6 @@ buildPythonPackage (finalAttrs: {
   dependencies = [ param ];
 
   # there are not tests with the package
-  doCheck = false;
 
   pythonImportsCheck = [ "pyviz_comms" ];
   meta = {

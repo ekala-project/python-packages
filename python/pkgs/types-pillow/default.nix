@@ -16,7 +16,6 @@ buildPythonPackage rec {
   };
 
   # Modules doesn't have tests
-  doCheck = false;
 
   pythonImportsCheck = [ "PIL-stubs" ];
 

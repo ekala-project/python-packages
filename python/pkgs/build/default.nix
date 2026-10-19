@@ -31,7 +31,6 @@ buildPythonPackage rec {
 
   # We need to disable tests because this package is part of the bootstrap chain
   # and its test dependencies cannot be built yet when this is being built.
-  doCheck = false;
 
   pythonImportsCheck = [ "build" ];
 

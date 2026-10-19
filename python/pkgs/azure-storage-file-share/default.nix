@@ -34,7 +34,6 @@ buildPythonPackage rec {
   };
 
   # Tests require checkout from monorepo
-  doCheck = false;
 
   pythonImportsCheck = [
     "azure.core"

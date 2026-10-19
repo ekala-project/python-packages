@@ -16,7 +16,7 @@ buildPythonPackage rec {
     sha256 = "sha256-3GbUjEJlxBM9tBqcX+nBxQKzsgFn3xWKDyNM0xcSz2Q=";
   };
 
-  propagatedBuildInputs = [ click ];
+  dependencies = [ click ];
 
   unittestFlagsArray = [
     "-s"

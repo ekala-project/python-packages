@@ -18,7 +18,6 @@ buildPythonPackage rec {
   build-system = [ setuptools ];
 
   # Checks disabled due to missing python unittest framework 'sancho' in nixpkgs
-  doCheck = false;
 
   pythonImportsCheck = [
     "durus.connection"

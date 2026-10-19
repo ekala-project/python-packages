@@ -24,8 +24,6 @@ buildPythonPackage rec {
     hash = "sha256-C+/M25oCLTNGGEUj2EyXn3UjcvPvDYFmmUW8IOoF1uU=";
   };
 
-  doCheck = false;
-
   /*
     postPatch = ''
       substituteInPlace tests/conftest.py \

@@ -33,7 +33,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "mopidyapi" ];
 
   # PyPi does not include tests
-  doCheck = false;
 
   meta = {
     description = "Module for interacting with Mopidy via its JSON RPC API";

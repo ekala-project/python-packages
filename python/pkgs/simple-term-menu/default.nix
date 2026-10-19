@@ -22,7 +22,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "simple_term_menu" ];
 
   # no unit tests in the upstream
-  doCheck = false;
 
   meta = {
     description = "Python package which creates simple interactive menus on the command line";

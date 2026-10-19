@@ -26,8 +26,6 @@ buildPythonPackage rec {
     requests
   ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "outdated" ];
 
   meta = {

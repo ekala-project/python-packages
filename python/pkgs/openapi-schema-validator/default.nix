@@ -38,8 +38,6 @@ buildPythonPackage rec {
     rfc3339-validator
   ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "openapi_schema_validator" ];
 
   meta = {

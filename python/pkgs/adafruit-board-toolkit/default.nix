@@ -31,7 +31,6 @@ buildPythonPackage rec {
   ];
 
   # Project has not published tests yet
-  doCheck = false;
 
   pythonImportsCheck = [ "adafruit_board_toolkit" ];
 

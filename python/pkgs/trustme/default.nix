@@ -24,8 +24,6 @@ buildPythonPackage rec {
     idna
   ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "trustme" ];
 
   meta = {

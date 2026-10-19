@@ -29,7 +29,6 @@ buildPythonPackage {
 
   # missing https://github.com/ezequielramos/http-server-mock
   # which looks unmaintained
-  doCheck = false;
   pythonImportsCheck = [ "opentelemetry.instrumentation.aiohttp_client" ];
 
   meta = opentelemetry-instrumentation.meta // {

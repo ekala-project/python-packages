@@ -15,7 +15,7 @@ buildPythonPackage rec {
     hash = "sha256-iCN17nMZJ1rl9qahKHQGNl2sHpZDuRrRDlGH0/hCU70=";
   };
 
-  propagatedBuildInputs = [ cffi ];
+  dependencies = [ cffi ];
 
   propagatedNativeBuildInputs = [ cffi ];
   postPatch = ''
@@ -24,7 +24,6 @@ buildPythonPackage rec {
   '';
 
   # FIXME: These do not work, and I have been unable to figure out why.
-  doCheck = false;
 
   pythonImportsCheck = [ "reflink" ];
 

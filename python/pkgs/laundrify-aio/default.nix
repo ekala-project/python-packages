@@ -27,7 +27,6 @@ buildPythonPackage rec {
   ];
 
   # Module has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "laundrify_aio" ];
 

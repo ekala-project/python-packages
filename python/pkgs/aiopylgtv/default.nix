@@ -29,7 +29,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # Project has no tests
-  doCheck = false;
   pythonImportsCheck = [ "aiopylgtv" ];
 
   meta = {

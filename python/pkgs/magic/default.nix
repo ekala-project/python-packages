@@ -18,7 +18,6 @@ buildPythonPackage {
   preConfigure = "cd python";
 
   # No test suite
-  doCheck = false;
 
   meta = {
     description = "Python wrapper around libmagic";

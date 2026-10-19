@@ -21,7 +21,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ flit-core ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     fire
     tqdm
     intelhex
@@ -29,7 +29,6 @@ buildPythonPackage rec {
   ];
 
   # no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "nkdfu" ];
 

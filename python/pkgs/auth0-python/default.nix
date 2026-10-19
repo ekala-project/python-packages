@@ -35,7 +35,7 @@ buildPythonPackage rec {
     poetry-dynamic-versioning
   ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     aiohttp
     cryptography
     httpx

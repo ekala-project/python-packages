@@ -29,7 +29,7 @@ buildPythonPackage rec {
 
   build-system = [ flit-core ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     click
     polib
   ];

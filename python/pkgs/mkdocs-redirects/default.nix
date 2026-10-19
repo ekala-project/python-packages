@@ -20,7 +20,7 @@ buildPythonPackage rec {
 
   build-system = [ hatchling ];
 
-  propagatedBuildInputs = [ mkdocs ];
+  dependencies = [ mkdocs ];
   pythonImportsCheck = [ "mkdocs_redirects" ];
 
   meta = {

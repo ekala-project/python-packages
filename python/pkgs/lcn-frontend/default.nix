@@ -21,7 +21,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "lcn_frontend" ];
 
   # upstream has no tests
-  doCheck = false;
 
   meta = {
     description = "LCN panel for Home Assistant";
