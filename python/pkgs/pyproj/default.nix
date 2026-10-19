@@ -10,7 +10,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyproj";
   version = "3.8.0";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pyproj4";
     repo = "pyproj";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-+2wUMbswg2yltNMLPc9U8MbEFx2xKVWxGjP/TBfCjto=";
   };
 
@@ -61,4 +61,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pyproj4/pyproj";
     license = lib.licenses.mit;
   };
-}
+})

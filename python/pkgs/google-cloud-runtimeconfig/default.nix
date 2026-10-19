@@ -9,14 +9,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "google-cloud-runtimeconfig";
   version = "0.37.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "google_cloud_runtimeconfig";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-oj/3RJYhPCXwy7o4TbNdmVjYuuObeAB9RHFV7QIB+dw=";
   };
 
@@ -47,4 +47,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/googleapis/python-runtimeconfig";
     license = lib.licenses.asl20;
   };
-}
+})

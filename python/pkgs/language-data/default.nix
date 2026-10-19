@@ -6,7 +6,7 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "language-data";
   version = "1.4.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "georgkrause";
     repo = "language_data";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-cWjeb2toGrnNSsK566e18NgWhv6YdQrKEzFPilmBdoA=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/georgkrause/language_data";
     license = lib.licenses.mit;
   };
-}
+})

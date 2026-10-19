@@ -16,7 +16,7 @@
   sympy,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "fonttools";
   version = "4.64.0";
   pyproject = true;
@@ -24,7 +24,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "fonttools";
     repo = "fonttools";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-cKbspI3FekEuKAmzUYzekVGEgLBPLyZz3Howz32sJ6k=";
   };
 
@@ -62,4 +62,4 @@ buildPythonPackage rec {
     description = "Library to manipulate font files from Python";
     license = lib.licenses.mit;
   };
-}
+})

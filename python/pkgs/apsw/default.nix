@@ -13,14 +13,14 @@ let
   };
 in
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "apsw";
   version = "3.53.4.0";
   pyproject = true;
 
   # https://github.com/rogerbinns/apsw/issues/548
   src = fetchurl {
-    url = "https://github.com/rogerbinns/apsw/releases/download/${version}/apsw-${version}.tar.gz";
+    url = "https://github.com/rogerbinns/apsw/releases/download/${finalAttrs.version}/apsw-${finalAttrs.version}.tar.gz";
     hash = "sha256-zVn2szMJS6zYArXleW8Xn1/WE2T5HniAdBGbXsZtxGs=";
   };
 
@@ -47,4 +47,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/rogerbinns/apsw";
     license = lib.licenses.zlib;
   };
-}
+})

@@ -9,7 +9,7 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "colout";
   version = "1.1";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "nojhan";
     repo = "colout";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-7Dtf87erBElqVgqRx8BYHYOWv1uI84JJ0LHrcneczCI=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/nojhan/colout";
     license = lib.licenses.gpl3Only;
   };
-}
+})

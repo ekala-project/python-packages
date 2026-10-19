@@ -7,7 +7,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "strenum";
   version = "0.4.15";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "irgeek";
     repo = "StrEnum";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-LrDLIWiV/zIbl7CwKh7DAy4LoLyY7+hfUu8nqduclnA=";
   };
 
@@ -45,4 +45,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/irgeek/StrEnum";
     license = lib.licenses.mit;
   };
-}
+})

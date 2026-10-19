@@ -8,13 +8,13 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "elevate";
   version = "0.1.3";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     sha256 = "53ad19fa1de301fb1de3f8768fb3a5894215716fd96a475690c4d0ff3b1de209";
   };
 
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/barneygale/elevate";
     license = lib.licenses.mit;
   };
-}
+})

@@ -20,7 +20,7 @@
   threadpoolctl,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
 
   pname = "scikit-learn";
   version = "1.9.0";
@@ -28,14 +28,14 @@ buildPythonPackage rec {
 
   src = fetchPypi {
     pname = "scikit_learn";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-iDMmaYnTpREBeKn64weDZ1Rgck0OHvsTsUkB0sZgxVc=";
   };
 
   postPatch = ''
     substituteInPlace meson.build --replace-fail \
       "run_command('sklearn/_build_utils/version.py', check: true).stdout().strip()," \
-      "'${version}',"
+      "'${finalAttrs.version}',"
     substituteInPlace pyproject.toml \
       --replace-fail "meson-python>=0.17.1,<0.20.0" meson-python \
       --replace-fail "numpy>=2,<2.5.0" numpy \
@@ -83,4 +83,4 @@ buildPythonPackage rec {
     homepage = "https://scikit-learn.org";
     license = lib.licenses.bsd3;
   };
-}
+})

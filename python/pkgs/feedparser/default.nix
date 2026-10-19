@@ -6,13 +6,13 @@
   sgmllib3k,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "feedparser";
   version = "6.0.12";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-ZPds6Qrj6O9dHt4PjTtQzia8znHdiuXoKxzS1KX5Qig=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/kurtmckee/feedparser";
     license = lib.licenses.bsd2;
   };
-}
+})

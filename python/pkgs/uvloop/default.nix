@@ -12,7 +12,7 @@
   libuv,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "uvloop";
   version = "0.22.1";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "MagicStack";
     repo = "uvloop";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-9NJugzxFycr1LLZXiDKbpeVcIvlCPHHIcYMp8jmffuE=";
   };
 
@@ -53,4 +53,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/MagicStack/uvloop";
     license = lib.licenses.mit;
   };
-}
+})

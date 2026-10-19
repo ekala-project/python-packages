@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "csscompressor";
   version = "0.9.5";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-r6IrrbzzEgpPOS5NIvn/9IXARKH+2kqVDsxeup3TGgU=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     description = "Python port of YUI CSS Compressor";
     license = lib.licenses.bsd3;
   };
-}
+})

@@ -7,7 +7,7 @@
   sortedcontainers,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "sortedcollections";
   version = "2.1.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "grantjenks";
     repo = "python-sortedcollections";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-GkZO8afUAgDpDjIa3dhO6nxykqrljeKldunKMODSXfg=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "http://www.grantjenks.com/docs/sortedcollections/";
     license = lib.licenses.asl20;
   };
-}
+})

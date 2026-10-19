@@ -10,7 +10,7 @@
   tinycss2,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "qstylizer";
   version = "0.2.4";
   pyproject = true;
@@ -18,11 +18,11 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "blambright";
     repo = "qstylizer";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-Is/kYkSX9fOX+pLv5g1ns2OxeLpSkaCfO2jPIbiuIxA=";
   };
 
-  env.PBR_VERSION = version;
+  env.PBR_VERSION = finalAttrs.version;
 
   build-system = [
     pbr
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/blambright/qstylizer";
     license = lib.licenses.mit;
   };
-}
+})

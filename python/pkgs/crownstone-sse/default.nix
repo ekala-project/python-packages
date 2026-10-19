@@ -7,14 +7,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "crownstone-sse";
   version = "2.0.5";
   pyproject = true;
 
   src = fetchPypi {
     pname = "crownstone_sse";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-RUqo68UAVGV+JmauKsGlp7dG8FzixHBDnr3eho/IQdY=";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Crownstone-Community/crownstone-lib-python-sse";
     license = lib.licenses.mit;
   };
-}
+})

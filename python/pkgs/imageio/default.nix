@@ -11,7 +11,7 @@
   pillow,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "imageio";
   version = "2.37.4";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "imageio";
     repo = "imageio";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-7UiKj/PH3eVa8Qa8zz5FJ2RmFHcL19THwSLY51tdy2I=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://imageio.readthedocs.io";
     license = lib.licenses.bsd2;
   };
-}
+})

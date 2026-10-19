@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyserial";
   version = "3.5";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-PHfgFBcN//vYFub/wgXphC77EL6fWOwW0+hnW0klzds=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     description = "Python serial port extension";
     license = lib.licenses.bsd3;
   };
-}
+})

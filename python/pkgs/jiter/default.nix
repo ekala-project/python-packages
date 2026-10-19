@@ -6,7 +6,7 @@
   libiconv,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jiter";
   version = "0.12.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pydantic";
     repo = "jiter";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-d87RUXKEmZXxVQZnAvjwRKSP6F3Z+kXxg/LdY2l9B+k=";
   };
 
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pydantic/jiter/";
     license = lib.licenses.mit;
   };
-}
+})

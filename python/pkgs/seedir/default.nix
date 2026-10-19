@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "seedir";
   version = "0.5.1";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "earnestt1234";
     repo = "seedir";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-o2CUK00WdoYyLqbDlh+wa30Q23ZkWZC+RvGDCSiCwH4=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     mainProgram = "seedir";
   };
-}
+})

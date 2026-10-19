@@ -7,14 +7,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "argparse-manpage";
   version = "4.7";
   pyproject = true;
 
   src = fetchPypi {
     pname = "argparse_manpage";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-Heq3ayEqyHU8u2e50tK8CUm7wzi7HMNUfwiQyzQQizI=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/praiskup/argparse-manpage";
     license = lib.licenses.asl20;
   };
-}
+})

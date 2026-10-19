@@ -14,14 +14,14 @@
   textual,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "textual-serve";
   version = "1.1.3";
   pyproject = true;
 
   src = fetchPypi {
     pname = "textual_serve";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-+PY2ri9f1lG3nZZUc8PpOD01Ic34lvm8KJcJGF2j9oM=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://pypi.org/project/textual-serve/";
     license = lib.licenses.mit;
   };
-}
+})

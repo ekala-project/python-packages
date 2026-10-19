@@ -7,7 +7,7 @@
   urllib3,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "requests-unixsocket2";
   version = "1.0.1";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitLab {
     owner = "thelabnyc";
     repo = "requests-unixsocket2";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-KgPIecKQibB5ZH+itw3OM9heSE3uDuodNS1R9dRkaHE=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://gitlab.com/thelabnyc/requests-unixsocket2";
     license = lib.licenses.bsd0;
   };
-}
+})

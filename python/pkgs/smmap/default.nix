@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "smmap";
   version = "6.0.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-jXkCjqbMEx2l6rCZpdlamY1DxneZVv/+O0VQQJEQdto=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/gitpython-developers/smmap";
     license = lib.licenses.bsd3;
   };
-}
+})

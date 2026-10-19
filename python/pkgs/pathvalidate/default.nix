@@ -5,13 +5,13 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pathvalidate";
   version = "3.3.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-sYwHISv+rWJDRbuOHWFBzc8Vo5c2mU6guUA1rSsboXc=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/thombashi/pathvalidate";
     license = lib.licenses.mit;
   };
-}
+})

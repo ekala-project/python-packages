@@ -17,7 +17,7 @@
   scipy,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mdtraj";
   version = "1.11.1.post2";
   pyproject = true;
@@ -25,7 +25,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mdtraj";
     repo = "mdtraj";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-K08XeutguD2JkJJvcyv4X+Y3Bl20uBc1Ux55zQALtdk=";
   };
 
@@ -69,4 +69,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mdtraj/mdtraj";
     license = lib.licenses.lgpl21Plus;
   };
-}
+})

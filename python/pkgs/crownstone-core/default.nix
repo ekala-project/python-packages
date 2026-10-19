@@ -8,7 +8,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "crownstone-core";
   version = "3.2.1";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "crownstone";
     repo = "crownstone-lib-python-core";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-zrlCzx7N3aUcTUNa64jSzDdWgQneX+Hc5n8TTTcZ4ck=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/crownstone/crownstone-lib-python-core";
     license = lib.licenses.mit;
   };
-}
+})

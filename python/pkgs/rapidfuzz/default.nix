@@ -11,7 +11,7 @@
   numpy,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "rapidfuzz";
   version = "3.14.5";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "maxbachmann";
     repo = "RapidFuzz";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-wF7eeSD6GQfN0EOwDvrgjMqN5u2wxXFlktQS7nIKgkU=";
   };
 
@@ -67,4 +67,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/maxbachmann/RapidFuzz";
     license = lib.licenses.mit;
   };
-}
+})

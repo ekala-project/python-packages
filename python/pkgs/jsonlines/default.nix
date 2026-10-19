@@ -7,7 +7,7 @@
   buildPythonPackage,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jsonlines";
   version = "4.0.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "wbolster";
     repo = "jsonlines";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-KNEJdAxEgd0NGPnk9J51C3yUN2e6Cvvevth0iKOMlhE=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/wbolster/jsonlines";
     license = lib.licenses.bsd3;
   };
-}
+})

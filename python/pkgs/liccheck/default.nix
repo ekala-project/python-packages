@@ -12,7 +12,7 @@
   toml,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "liccheck";
   version = "0.9.3";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "dhatim";
     repo = "python-license-check";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-ohq3ZsbZcyqhwmvaVF/+mo7lNde5gjbz8pwhzHi3SPY=";
   };
 
@@ -47,4 +47,4 @@ buildPythonPackage rec {
     license = lib.licenses.asl20;
     mainProgram = "liccheck";
   };
-}
+})

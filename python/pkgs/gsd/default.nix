@@ -8,7 +8,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "gsd";
   version = "5.0.1";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "glotzerlab";
     repo = "gsd";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-jgj5XgBN68E/Rd60YnXwsy0YIJDcPAk8ajnGeVe1k9g=";
   };
 
@@ -46,4 +46,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/glotzerlab/gsd";
     license = lib.licenses.bsd2;
   };
-}
+})

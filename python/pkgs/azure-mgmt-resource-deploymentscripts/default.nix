@@ -9,14 +9,14 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-resource-deploymentscripts";
   version = "1.0.0b1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_mgmt_resource_deploymentscripts";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-Vm2FWVPpSbsrNMtD4ecwVKqnkoHHRhO3Rf/duCyAI3U=";
   };
 
@@ -43,7 +43,7 @@ buildPythonPackage rec {
   meta = {
     description = "Microsoft Azure SDK for Python";
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/resources/azure-mgmt-resource-deploymentscripts";
-    changelog = "https://github.com/Azure/azure-sdk-for-python/blob/azure-mgmt-resource-deploymentscripts_${version}/sdk/resources/azure-mgmt-resource-deploymentscripts/CHANGELOG.md";
+    changelog = "https://github.com/Azure/azure-sdk-for-python/blob/azure-mgmt-resource-deploymentscripts_${finalAttrs.version}/sdk/resources/azure-mgmt-resource-deploymentscripts/CHANGELOG.md";
     license = lib.licenses.mit;
   };
-}
+})

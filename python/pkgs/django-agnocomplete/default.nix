@@ -13,7 +13,7 @@
   mock,
   pyyaml,
 }:
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-agnocomplete";
   version = "2.2.0";
   pyproject = true;
@@ -21,7 +21,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "peopledoc";
     repo = "django-agnocomplete";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-SDuLJM/ZvROkBOSbaVi6FMDRcR5Um4UrdPSq1ZMrlXM=";
   };
 
@@ -75,4 +75,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/peopledoc/django-agnocomplete";
     license = lib.licenses.mit;
   };
-}
+})

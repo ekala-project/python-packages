@@ -8,7 +8,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jarowinkler";
   version = "2.0.1";
 
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "maxbachmann";
     repo = "JaroWinkler";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-B3upTBNqMyi+CH7Zx04wceEXjGJnr6S3BIl87AQkfbo=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/maxbachmann/JaroWinkler";
     license = lib.licenses.mit;
   };
-}
+})

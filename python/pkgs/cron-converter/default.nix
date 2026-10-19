@@ -6,7 +6,7 @@
   python-dateutil,
   python,
 }:
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "cron-converter";
   version = "2.0.1";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Sonic0";
     repo = "cron-converter";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-bf25BccSCvx5p9U57DZEJ3pv9K15XuH5As832W1fXws=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Sonic0/cron-converter";
     license = lib.licenses.mit;
   };
-}
+})

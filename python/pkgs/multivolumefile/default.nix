@@ -8,7 +8,7 @@
   pytest-timeout,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "multivolumefile";
   version = "0.2.3";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromCodeberg {
     owner = "miurahr";
     repo = "multivolume";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-7gjfF7biQZOcph2dfwi2ouDn/uIYik/KBQ0k6u5Ne+Q=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     homepage = "https://codeberg.org/miurahr/multivolume";
     license = lib.licenses.gpl2Plus;
   };
-}
+})

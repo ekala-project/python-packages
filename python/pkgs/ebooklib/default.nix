@@ -11,13 +11,13 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ebooklib";
   version = "0.20";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-NeL519OZB76NOa4t6yYbGYSJRZA649u2V3sYfq1p6YU=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/aerkalov/ebooklib";
     license = lib.licenses.agpl3Only;
   };
-}
+})

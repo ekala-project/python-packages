@@ -6,13 +6,13 @@
   build,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "inotify";
   version = "0.2.12";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-mu5Af5LH1Ros5Q87eCkakJTjNONL1o6Cv2ACB5X6LJQ=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     license = lib.licenses.gpl2Only;
     platforms = lib.platforms.linux;
   };
-}
+})

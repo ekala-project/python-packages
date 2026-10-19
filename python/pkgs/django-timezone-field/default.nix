@@ -10,7 +10,7 @@
   pytz,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-timezone-field";
   version = "7.2.2";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mfogel";
     repo = "django-timezone-field";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-EGjBzKTYXTShrPIHfBIm1LqzYGuxew7ptvlGppXOYSY=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mfogel/django-timezone-field";
     license = lib.licenses.bsd2;
   };
-}
+})

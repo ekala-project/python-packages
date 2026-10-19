@@ -8,13 +8,13 @@
   twisted,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "txzmq";
   version = "1.0.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit version;
+    inherit (finalAttrs) version;
     pname = "txZMQ";
     hash = "sha256-jWB9C/CcqUYAuOQvByHb5D7lOgRwGCNErHrOfljcYXc=";
   };
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/smira/txZMQ";
     license = lib.licenses.mpl20;
   };
-}
+})

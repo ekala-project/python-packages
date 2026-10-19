@@ -12,13 +12,13 @@
   markupsafe,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "wtforms";
   version = "3.3.0b3";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-oRxWo1Xbp0OzRUFL8kkPw/5xUCatkNxZGBLasYXZQ30=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/wtforms/wtforms";
     license = lib.licenses.bsd3;
   };
-}
+})

@@ -8,7 +8,7 @@
   pyfakefs,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "validator-collection";
   version = "1.5.0";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "insightindustry";
     repo = "validator-collection";
-    tag = "v.${version}";
+    tag = "v.${finalAttrs.version}";
     hash = "sha256-CDPfIkZZRpl1rAzNpLKJfaBEGWUl71coic2jOHIgi6o=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/insightindustry/validator-collection/";
     license = lib.licenses.mit;
   };
-}
+})

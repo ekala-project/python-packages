@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyftpdlib";
   version = "2.2.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-S6BkIHh5LfY907LpyPg48qPs9CjHUY1ZIcBTDVNRKs8=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     description = "Asynchronous FTP server library";
     license = lib.licenses.mit;
   };
-}
+})

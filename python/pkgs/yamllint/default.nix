@@ -8,7 +8,7 @@
   pyyaml,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "yamllint";
   version = "1.38.0";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "adrienverge";
     repo = "yamllint";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-4H8tbn2TRzTGIXmP9Hnmc93rGSLsWh5A5R9KAIz0mKM=";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     license = lib.licenses.gpl3Plus;
     mainProgram = "yamllint";
   };
-}
+})

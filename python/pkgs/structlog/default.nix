@@ -9,7 +9,7 @@
   hatchling,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "structlog";
   version = "26.1.0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "hynek";
     repo = "structlog";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-Q31eqeRYAbwn6Cj3hkXfy3udeBHHglEk5/qTjKbBbL8=";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/hynek/structlog";
     license = lib.licenses.asl20;
   };
-}
+})

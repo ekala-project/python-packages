@@ -30,13 +30,13 @@
   tox,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyscaffold";
   version = "4.6";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-QIW43pIAufMZ32+Op5lyiPFZqOSyhLBi2bKk1qnBI0w=";
   };
 
@@ -101,4 +101,4 @@ buildPythonPackage rec {
     homepage = "https://pypi.org/project/PyScaffold/";
     license = lib.licenses.mit;
   };
-}
+})

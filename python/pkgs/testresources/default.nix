@@ -6,7 +6,7 @@
   pbr,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "testresources";
   version = "2.0.2";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "testing-cabal";
     repo = "testresources";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-cdZObOgBOUxYg4IGUUMb6arlpb6NTU7w+EW700LKH4Y=";
   };
 
@@ -27,7 +27,7 @@ buildPythonPackage rec {
     pbr
   ];
 
-  env.PBR_VERSION = version;
+  env.PBR_VERSION = finalAttrs.version;
 
   meta = {
     description = "Pyunit extension for managing expensive test resources";
@@ -37,4 +37,4 @@ buildPythonPackage rec {
       bsd3
     ];
   };
-}
+})

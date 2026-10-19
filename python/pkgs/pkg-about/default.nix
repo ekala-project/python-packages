@@ -9,14 +9,14 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pkg-about";
   version = "2.4.4";
   pyproject = true;
 
   src = fetchPypi {
     pname = "pkg_about";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-tURSRw79LnIOWij+JzDLLjKNPts9gcXdN4tQ9u/gbuQ=";
   };
 
@@ -46,4 +46,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/karpierz/pkg_about/";
     license = lib.licenses.zlib;
   };
-}
+})

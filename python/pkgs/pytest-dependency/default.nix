@@ -6,13 +6,13 @@
   pytest,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytest-dependency";
   version = "0.6.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-k0sOajnZWZUGLBk/fq7tio/6Bv8bzvS2Kw3HSnCLrME=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/RKrahl/pytest-dependency";
     license = lib.licenses.asl20;
   };
-}
+})

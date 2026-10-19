@@ -5,14 +5,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyprind";
   version = "2.11.3";
   pyproject = true;
 
   src = fetchPypi {
     pname = "PyPrind";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-433KtuGpyOCn8PzmX956eeLe2hx1qgFZEKSeITe1TL8=";
   };
 
@@ -25,4 +25,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/rasbt/pyprind";
     license = lib.licenses.bsd3;
   };
-}
+})

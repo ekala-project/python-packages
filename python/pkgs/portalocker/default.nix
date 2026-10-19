@@ -11,13 +11,13 @@
   redis,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "portalocker";
   version = "3.2.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-HzAClWpUqMNzBYbFx3vxj65BSeB+rxwp/D+vTVo/iaw=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/WoLpH/portalocker";
     license = lib.licenses.psfl;
   };
-}
+})

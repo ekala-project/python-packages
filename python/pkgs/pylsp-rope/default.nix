@@ -9,7 +9,7 @@
   python-lsp-server,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pylsp-rope";
   version = "0.1.17";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "python-rope";
     repo = "pylsp-rope";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-gEmSZQZ2rtSljN8USsUiqsP2cr54k6kwvsz8cjam9dU=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/python-rope/pylsp-rope";
     license = lib.licenses.mit;
   };
-}
+})

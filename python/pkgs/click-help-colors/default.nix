@@ -6,13 +6,13 @@
   click,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "click-help-colors";
   version = "0.9.4";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-9Mq+Us9VApm4iI9PLuTF81msJ+M7z+TWHbR3haXMk2w=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/click-contrib/click-help-colors";
     license = lib.licenses.mit;
   };
-}
+})

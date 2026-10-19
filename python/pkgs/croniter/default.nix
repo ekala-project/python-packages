@@ -7,13 +7,13 @@
   pytz,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "croniter";
   version = "6.0.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-N8UEsxOVYRSpg+ziwrB3kLHxCU/p2BzJRzkhR0glVXc=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/kiorky/croniter";
     license = lib.licenses.mit;
   };
-}
+})

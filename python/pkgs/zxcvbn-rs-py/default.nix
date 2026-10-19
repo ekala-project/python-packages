@@ -5,7 +5,7 @@
   rustPlatform,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "zxcvbn-rs-py";
   version = "0.3.0";
 
@@ -13,7 +13,7 @@ buildPythonPackage rec {
 
   src = fetchPypi {
     pname = "zxcvbn_rs_py";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-0nQmgII6F0gj8HCnNAdLvowWBPExPAgXCxWAJuNsc6A=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
   };
 
-}
+})

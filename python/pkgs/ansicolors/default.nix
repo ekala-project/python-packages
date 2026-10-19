@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ansicolors";
   version = "1.1.8";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     extension = "zip";
     hash = "sha256-mflPXjNIoLzUPILl/EQUATzMGdcL2TmtceATPOnDcuA=";
   };
@@ -25,4 +25,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/verigak/colors/";
     license = lib.licenses.isc;
   };
-}
+})

@@ -9,14 +9,14 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-extendedlocation";
   version = "3.0.0b1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_mgmt_extendedlocation";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-jO0iYpPCUwReAcdVPtRyhdh2UWK/YsP7fsFYGXX07hg=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/extendedlocation/azure-mgmt-extendedlocation";
     license = lib.licenses.mit;
   };
-}
+})

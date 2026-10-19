@@ -5,7 +5,7 @@
   pdm-backend,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "annotated-doc";
   version = "0.0.5";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "fastapi";
     repo = "annotated-doc";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-Khgub17TKjp6GmLLyppFzcxFHcu/EBTCrnabu3Km2Yo=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/fastapi/annotated-doc";
     license = lib.licenses.mit;
   };
-}
+})

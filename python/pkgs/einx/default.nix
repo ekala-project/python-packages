@@ -9,7 +9,7 @@
   frozendict,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "einx";
   version = "0.4.3";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "fferflo";
     repo = "einx";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-xYnlIN+O2s0tTBpqiGiiA6p6QpF5olPFbYaiLPT8B1s=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/fferflo/einx";
     license = lib.licenses.mit;
   };
-}
+})

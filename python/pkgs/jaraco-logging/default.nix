@@ -7,14 +7,14 @@
   tempora,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jaraco-logging";
   version = "3.4.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "jaraco_logging";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-59bcg2hHfOaesdbthR2AWJahypQs4/0Xc1gDEbC3dfs=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jaraco/jaraco.logging";
     license = lib.licenses.mit;
   };
-}
+})

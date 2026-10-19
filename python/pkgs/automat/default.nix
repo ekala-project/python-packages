@@ -7,13 +7,13 @@
   attrs,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "automat";
   version = "25.4.16";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-ABdZGlR3Bm6Q0msOaW3cFDuq/Ye1iM+sgQC8a+ljTeA=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     description = "Self-service finite-state machines for the programmer on the go";
     license = lib.licenses.mit;
   };
-}
+})

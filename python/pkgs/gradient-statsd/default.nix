@@ -13,14 +13,14 @@
   urllib3,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "gradient-statsd";
   version = "1.0.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "gradient_statsd";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-iWlNX43ZtvU73wz4+8DgDulQNOnssJGxTBkvAaLj530=";
   };
 
@@ -46,4 +46,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     platforms = lib.platforms.unix;
   };
-}
+})

@@ -8,13 +8,13 @@
   pyyaml,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   version = "0.2.14";
   pyproject = true;
   pname = "flask-swagger";
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     sha256 = "b4085f5bc36df4c20b6548cd1413adc9cf35719b0f0695367cd542065145294d";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     description = "Extract swagger specs from your flask project";
     mainProgram = "flaskswagger";
   };
-}
+})

@@ -7,13 +7,13 @@
   aiolifx,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aiolifx-effects";
   version = "0.3.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit version;
+    inherit (finalAttrs) version;
     pname = "aiolifx_effects";
     hash = "sha256-Mhxs5PNr2W9ych56WYUZTEGck4HVTQfkil3S3zHv6Qc=";
   };
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/amelchio/aiolifx_effects";
     license = lib.licenses.mit;
   };
-}
+})

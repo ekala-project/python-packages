@@ -9,13 +9,13 @@
   boto3,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "fs-s3fs";
   version = "1.1.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     sha256 = "b57f8c7664460ff7b451b4b44ca2ea9623a374d74e1284c2d5e6df499dc7976c";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     description = "Amazon S3 filesystem for PyFilesystem2";
   };
-}
+})

@@ -7,14 +7,14 @@
   rustPlatform,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "dbt-extractor";
   version = "0.6.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "dbt_extractor";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-1s8I7Hk7i8K9biYO+BgjCuaKT3FDb6SJ8I19saUuL/4=";
   };
 
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/dbt-labs/dbt-extractor";
     license = lib.licenses.asl20;
   };
-}
+})

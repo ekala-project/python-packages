@@ -7,7 +7,7 @@
   pythonAtLeast,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "docker-pycreds";
   version = "0.4.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "shin-";
     repo = "dockerpy-creds";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-yYsMsRW6Bb8vmwT0mPjs0pRqBbznGtHnGb3JNHjLjys=";
   };
 
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/shin-/dockerpy-creds";
     license = lib.licenses.asl20;
   };
-}
+})

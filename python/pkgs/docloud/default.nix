@@ -8,13 +8,13 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "docloud";
   version = "1.0.375";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     sha256 = "996d55407498fd01e6c6c480f367048f92255e9ca9db0e9ea19aaef91328a441";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://onboarding-oaas.docloud.ibmcloud.com/software/analytics/docloud/";
     license = lib.licenses.asl20;
   };
-}
+})

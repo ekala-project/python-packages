@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "tlv8";
   version = "0.10.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "jlusiardi";
     repo = "tlv8_python";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-G35xMFYasKD3LnGi9q8wBmmFvqgtg0HPdC+y82nxRWA=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jlusiardi/tlv8_python";
     license = lib.licenses.asl20;
   };
-}
+})

@@ -6,13 +6,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "kconfiglib";
   version = "14.1.1a4";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     sha256 = "sha256-16d+R4neiTfVZ6/KM8BfxYu3kyAB9dMDdJSy74UWekE=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ulfalizer/Kconfiglib";
     license = lib.licenses.isc;
   };
-}
+})

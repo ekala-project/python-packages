@@ -9,7 +9,7 @@
   lxml-html-clean,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "justext";
   version = "3.0.2";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "miso-belica";
     repo = "jusText";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-/7wp41jz/5nUFqZNg4O7yF2+eE+awAEXp6dhD+Loc0U=";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/miso-belica/jusText";
     license = lib.licenses.bsd2;
   };
-}
+})

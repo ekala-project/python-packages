@@ -34,7 +34,7 @@
   withRealtime ? true,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "openai";
   version = "2.48.0";
   pyproject = true;
@@ -42,7 +42,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "openai";
     repo = "openai-python";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-LB88y4psz1yxtNcw+MeDW3IRn4zGF8U9DRImLbT/Xxk=";
   };
 
@@ -89,4 +89,4 @@ buildPythonPackage rec {
     license = lib.licenses.asl20;
     mainProgram = "openai";
   };
-}
+})

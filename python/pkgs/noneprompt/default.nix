@@ -6,13 +6,13 @@
   prompt-toolkit,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "noneprompt";
   version = "0.1.11";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-aCJpGPKhVDqjgMqtpcOArlyjj1cpInjFv9O3KJ8axts=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     mainProgram = "noneprompt";
   };
-}
+})

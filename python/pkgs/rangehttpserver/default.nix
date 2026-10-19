@@ -6,7 +6,7 @@
   requests,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "rangehttpserver";
   version = "1.4.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "danvk";
     repo = "RangeHTTPServer";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-wvGJ5wHYLb7wJUGgurkdRTABV6kTH7/GXzXgpd0Ypbc=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/danvk/RangeHTTPServer";
     license = lib.licenses.asl20;
   };
-}
+})

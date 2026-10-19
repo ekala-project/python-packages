@@ -7,7 +7,7 @@
   zope-interface,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "zope-lifecycleevent";
   version = "6.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "zopefoundation";
     repo = "zope.lifecycleevent";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-HgxOUseRYc+mkwESUDqauoH2D2E4PL8XxM1C0FC35w8=";
   };
 
@@ -45,4 +45,4 @@ buildPythonPackage rec {
     description = "Object life-cycle events";
     license = lib.licenses.zpl21;
   };
-}
+})

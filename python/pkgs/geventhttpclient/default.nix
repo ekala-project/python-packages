@@ -11,7 +11,7 @@
   urllib3,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "geventhttpclient";
   version = "2.3.9";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "geventhttpclient";
     repo = "geventhttpclient";
-    tag = version;
+    tag = finalAttrs.version;
     # TODO: unvendor llhttp
     fetchSubmodules = true;
     hash = "sha256-SBrF/e36wO9W+tNzbe6nGQrRgl1w0X4X1lmkrJM1OLY=";
@@ -44,4 +44,4 @@ buildPythonPackage rec {
     description = "High performance, concurrent HTTP client library using gevent";
     license = lib.licenses.mit;
   };
-}
+})

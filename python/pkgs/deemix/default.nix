@@ -12,13 +12,13 @@
   deezer-py,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "deemix";
   version = "3.6.6";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-xEahzA1PIrGPfnnOcuXQLVQpSVOUFk6/0v9ViLgWCwk=";
   };
 
@@ -43,4 +43,4 @@ buildPythonPackage rec {
     homepage = "https://gitlab.com/RemixDev/deemix-py";
     license = lib.licenses.gpl3Plus;
   };
-}
+})

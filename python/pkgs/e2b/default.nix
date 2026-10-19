@@ -16,7 +16,7 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "e2b";
   version = "1.5.1";
   pyproject = true;
@@ -24,7 +24,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "e2b-dev";
     repo = "E2B";
-    tag = "@e2b/python-sdk@${version}";
+    tag = "@e2b/python-sdk@${finalAttrs.version}";
     hash = "sha256-6THRc4rv/mzOWbsN1FpUu56kjvHvVBssK2glNoGdSzI=";
   };
 
@@ -58,4 +58,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/e2b-dev/E2B/blob/main/packages/python-sdk";
     license = lib.licenses.asl20;
   };
-}
+})

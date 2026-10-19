@@ -10,7 +10,7 @@
   ppft,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pathos";
   version = "0.3.5";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "uqfoundation";
     repo = "pathos";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-9ejrHHgSbDrbuq1bktyiKPJnQ1l52ug/lnJJbac7x4s=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://pathos.readthedocs.io/";
     license = lib.licenses.bsd3;
   };
-}
+})

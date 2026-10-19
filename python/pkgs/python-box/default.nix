@@ -11,7 +11,7 @@
   tomli-w,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "python-box";
   version = "7.4.1";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "cdgriffith";
     repo = "Box";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-tzkTiuH9zBUFYXda6iv4Ohh72WBVcW/BykMS5W7BPPo=";
   };
 
@@ -48,4 +48,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/cdgriffith/Box";
     license = lib.licenses.mit;
   };
-}
+})

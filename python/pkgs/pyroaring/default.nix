@@ -8,7 +8,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyroaring";
   version = "1.1.0";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Ezibenroc";
     repo = "PyRoaringBitMap";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-hCllqGcyPRVC7Bh4gvXv0NYRCD7Hqh0OMB6Ab3miA6o=";
   };
 
@@ -35,7 +35,7 @@ buildPythonPackage rec {
   meta = {
     description = "Python library for handling efficiently sorted integer sets";
     homepage = "https://github.com/Ezibenroc/PyRoaringBitMap";
-    changelog = "https://github.com/Ezibenroc/PyRoaringBitMap/releases/tag/${version}";
+    changelog = "https://github.com/Ezibenroc/PyRoaringBitMap/releases/tag/${finalAttrs.version}";
     license = lib.licenses.mit;
   };
-}
+})

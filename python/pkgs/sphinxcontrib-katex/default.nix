@@ -6,14 +6,14 @@
   sphinx,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "sphinxcontrib-katex";
   version = "0.9.11";
   pyproject = true;
 
   src = fetchPypi {
     pname = "sphinxcontrib_katex";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-LTKyENILvuRRpR0ZZF9v719VaLmlTigTr/uW76ZhI4o=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/hagenw/sphinxcontrib-katex";
     license = lib.licenses.mit;
   };
-}
+})

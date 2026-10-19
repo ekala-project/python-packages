@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "hsluv";
   version = "5.0.4";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "hsluv";
     repo = "hsluv-python";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-bjivmPTU3Gp3pcC0ru4GSZANdhPqS1QSTMeiPGN8GCI=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/hsluv/hsluv-python";
     license = lib.licenses.mit;
   };
-}
+})

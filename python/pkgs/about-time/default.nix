@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "about-time";
   version = "4.2.2";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "rsalmei";
     repo = "about-time";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-a7jFVrxUvdR5UdeNNXSTsXC/Q76unedMLmcu0iTS3Tk=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/rsalmei/about-time";
     license = lib.licenses.mit;
   };
-}
+})

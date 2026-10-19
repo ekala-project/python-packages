@@ -8,13 +8,13 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "gflanguages";
   version = "0.7.7";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-JR+lmwGhPR/RoskpouNzGOE9kRgvSGgzx5Xa196k0eA=";
   };
 
@@ -43,4 +43,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/googlefonts/lang";
     license = lib.licenses.asl20;
   };
-}
+})

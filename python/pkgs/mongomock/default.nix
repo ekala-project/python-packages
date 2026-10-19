@@ -9,13 +9,13 @@
   sentinels,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mongomock";
   version = "4.3.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-MmZ7eQZvq8EtTxfxao/XNhtfRDUgizujLCJuUiEqjDA=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mongomock/mongomock";
     license = lib.licenses.bsd3;
   };
-}
+})

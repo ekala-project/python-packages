@@ -11,7 +11,7 @@
   pytest-httpserver,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ollama";
   version = "0.6.2";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ollama";
     repo = "ollama-python";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-kPFimI9h8BL3qQ+puZy70AYnX3zpbZ2nV5revmYPjIY=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ollama/ollama-python";
     license = lib.licenses.mit;
   };
-}
+})

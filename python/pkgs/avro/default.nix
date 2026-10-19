@@ -5,13 +5,13 @@
   fetchPypi,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "avro";
   version = "1.12.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-6QDntZpHgfY9npNeiPbsUMTWC+P0rfnGO1HtOdV4/gg=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     license = lib.licenses.asl20;
     mainProgram = "avro";
   };
-}
+})

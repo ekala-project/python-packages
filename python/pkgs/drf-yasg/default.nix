@@ -16,13 +16,13 @@
   pytest-django,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "drf-yasg";
   version = "1.21.15";
   pyproject = true;
 
   src = fetchPypi {
-    inherit version;
+    inherit (finalAttrs) version;
     pname = "drf_yasg";
     hash = "sha256-74aDjE7xDc06wevyvmAcvgKXi5mWccqkNmf3yduWFGg=";
   };
@@ -56,4 +56,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/axnsan12/drf-yasg";
     license = lib.licenses.bsd3;
   };
-}
+})

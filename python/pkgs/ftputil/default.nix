@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ftputil";
   version = "5.2.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-2IK6UcUDXPio+zMkCDYHVgbXYp5FasS9DoDA2jge720=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://ftputil.sschwarzer.net/";
     license = lib.licenses.bsd2;
   };
-}
+})

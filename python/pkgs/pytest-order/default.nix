@@ -8,7 +8,7 @@
   pytest-mock,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytest-order";
   version = "1.5.0";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pytest-dev";
     repo = "pytest-order";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-LLQy5dO3OWmm7W9eI8yfrOFVp9MQOU+pjoAyWl03tZ0=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pytest-dev/pytest-order";
     license = lib.licenses.mit;
   };
-}
+})

@@ -6,13 +6,13 @@
   cffi,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "atomiclong";
   version = "0.1.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-yxN4xM1nbW8kNkHFDid1BKv0X3Dx6nbkRu/Nu2liS74=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/dreid/atomiclong";
     license = lib.licenses.mit;
   };
-}
+})

@@ -7,13 +7,13 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "py";
   version = "1.11.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     sha256 = "51c75c4126074b472f746a24399ad32f6053d1b34b68d2fa41e558e6f4a98719";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://py.readthedocs.io/";
     license = lib.licenses.mit;
   };
-}
+})

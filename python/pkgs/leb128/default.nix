@@ -5,7 +5,7 @@
   lib,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "leb128";
   version = "1.0.9";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mohanson";
     repo = "leb128";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-X3iBYiANzM97M91dCyjEU/Onhqcid3MMsNzzKtcRcyA=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mohanson/leb128";
     license = lib.licenses.mit;
   };
-}
+})

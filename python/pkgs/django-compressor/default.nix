@@ -22,7 +22,7 @@
 
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-compressor";
   version = "4.6";
   pyproject = true;
@@ -30,7 +30,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "django-compressor";
     repo = "django-compressor";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-ymht/nl3UUFXLc54aqDADXArVG6jUNQppBJCNKp2P68=";
   };
 
@@ -56,4 +56,4 @@ buildPythonPackage rec {
     homepage = "https://django-compressor.readthedocs.org/";
     license = lib.licenses.mit;
   };
-}
+})

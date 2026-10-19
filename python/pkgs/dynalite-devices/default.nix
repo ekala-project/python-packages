@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "dynalite-devices";
   version = "0.47";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ziv1234";
     repo = "python-dynalite-devices";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-kJo4e5vhgWzijLUhQd9VBVk1URpg9SXhOA60dJYashM=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ziv1234/python-dynalite-devices";
     license = lib.licenses.mit;
   };
-}
+})

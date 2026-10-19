@@ -8,7 +8,7 @@
   flit-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "loguru";
   version = "0.7.3";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Delgan";
     repo = "loguru";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-tccEzzs9TtFAZM9s43cskF9llc81Ng28LqedjLiE1m4=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Delgan/loguru";
     license = lib.licenses.mit;
   };
-}
+})

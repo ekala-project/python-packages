@@ -6,7 +6,7 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "nexus-rpc";
   version = "1.4.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "nexus-rpc";
     repo = "sdk-python";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-il+zCyU0dOlqFHGedyeBKgwQlqx1FLNuriGIw3RV3Gs=";
     fetchSubmodules = true;
   };
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://temporal.io/";
     license = lib.licenses.mit;
   };
-}
+})

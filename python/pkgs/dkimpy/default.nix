@@ -9,13 +9,13 @@
   authres,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "dkimpy";
   version = "1.1.8";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-tfYPtHu/XY12LxNLzqDDiOumtJg0KmgqIfFoZUUJS3c=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://launchpad.net/dkimpy";
     license = lib.licenses.bsd3;
   };
-}
+})

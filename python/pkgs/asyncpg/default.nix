@@ -8,13 +8,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "asyncpg";
   version = "0.31.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-yYk4bIOUC/vXhxgPKxUZQV4tPWJ3pw2dDwFFrHNQBzU=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     '';
     license = lib.licenses.asl20;
   };
-}
+})

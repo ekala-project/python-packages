@@ -7,13 +7,13 @@
   vine,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "amqp";
   version = "5.3.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-zdwAxyVElSICO62Un3D/97SPCxredNFwpvEKsERzlDI=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/celery/py-amqp";
     license = lib.licenses.bsd3;
   };
-}
+})

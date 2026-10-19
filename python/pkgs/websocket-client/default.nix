@@ -5,14 +5,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "websocket-client";
   version = "1.9.2";
   pyproject = true;
 
   src = fetchPypi {
     pname = "websocket_client";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-D8tXVFhIvoaZLhKCGP2W3Yemdp/9salo3/eWMrhWBNA=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     license = lib.licenses.lgpl21Plus;
     mainProgram = "wsdump";
   };
-}
+})

@@ -40,7 +40,7 @@
   zope-interface,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "scrapy";
   version = "2.18.0";
   pyproject = true;
@@ -48,7 +48,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "scrapy";
     repo = "scrapy";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-c6rQ1ktpdHfwcA5zOGg/g9j614IWs0mlguZY1r3haLc=";
   };
 
@@ -106,4 +106,4 @@ buildPythonPackage rec {
     homepage = "https://scrapy.org/";
     license = lib.licenses.bsd3;
   };
-}
+})

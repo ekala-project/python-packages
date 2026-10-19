@@ -8,7 +8,7 @@
   vcrpy,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "libpyvivotek";
   version = "0.6.1";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "HarlemSquirrel";
     repo = "python-vivotek";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-ai+FlvyrdeLyg/PJU8T0fTtbdnlyGo6mE4AM2oRATj8=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/HarlemSquirrel/python-vivotek";
     license = lib.licenses.asl20;
   };
-}
+})

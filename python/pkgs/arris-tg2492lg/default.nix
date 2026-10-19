@@ -8,7 +8,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "arris-tg2492lg";
   version = "2.2.0";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "vanbalken";
     repo = "arris-tg2492lg";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-MQq9jMUoJgqaY0f9YIbhME2kO+ektPqBnT9REg3qDpg=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/vanbalken/arris-tg2492lg";
     license = lib.licenses.mit;
   };
-}
+})

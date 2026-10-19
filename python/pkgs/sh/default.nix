@@ -5,13 +5,13 @@
   hatchling,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "sh";
   version = "2.4.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-olCu9oUJ7ZNBnJodkLBkfNXL4mEHupTTcX71ttWV/9k=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://pypi.org/project/sh/";
     license = lib.licenses.mit;
   };
-}
+})

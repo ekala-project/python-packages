@@ -8,14 +8,14 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "azure-keyvault-administration";
   version = "4.7.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_keyvault_administration";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-yz702VYFhHp+07rdj2f92OpqiAyLZxLPRt4mnTOW6F4=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/master/sdk/keyvault/azure-keyvault-administration";
     license = lib.licenses.mit;
   };
-}
+})

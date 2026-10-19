@@ -10,7 +10,7 @@
   scipy,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "seaborn";
   version = "0.13.2";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mwaskom";
     repo = "seaborn";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-aGIVcdG/XN999nYBHh3lJqGa3QVt0j8kmzaxdkULznY=";
   };
 
@@ -63,4 +63,4 @@ buildPythonPackage rec {
     homepage = "https://seaborn.pydata.org/";
     license = with lib.licenses; [ bsd3 ];
   };
-}
+})

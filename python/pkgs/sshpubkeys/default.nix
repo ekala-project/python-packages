@@ -6,7 +6,7 @@
   cryptography,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   version = "3.3.1";
   pname = "sshpubkeys";
   pyproject = true;
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ojarva/python-sshpubkeys";
     license = lib.licenses.bsd3;
   };
-}
+})

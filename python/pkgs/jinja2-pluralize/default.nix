@@ -7,14 +7,14 @@
   inflect,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jinja2-pluralize";
   version = "0.3.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "jinja2_pluralize";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-31wtUBe5tUwKZst5DMqfwIlFg3w9v8MjWJID8f+3PBw=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/audreyr/jinja2_pluralize";
     license = lib.licenses.bsd3;
   };
-}
+})

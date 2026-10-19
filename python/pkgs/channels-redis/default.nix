@@ -10,7 +10,7 @@
   redis,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "channels-redis";
   version = "4.3.0";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "django";
     repo = "channels_redis";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-zn313s1rzypSR5D3iE/05PeBQkx/Se/yaA3NS9BY//Y=";
   };
 
@@ -45,4 +45,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/django/channels_redis/";
     license = lib.licenses.bsd3;
   };
-}
+})

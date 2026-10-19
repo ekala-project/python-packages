@@ -7,7 +7,7 @@
   pytest-cov-stub,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "uart-devices";
   version = "0.1.1";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "bdraco";
     repo = "uart-devices";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-vBwQXeXw9y7eETtlC4dcqGytIgrAm7iomnvoaxhl6JI=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     platforms = lib.platforms.linux;
   };
-}
+})

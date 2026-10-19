@@ -14,7 +14,7 @@
   pytest-xdist,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "autograd";
   version = "1.9.1";
   pyproject = true;
@@ -22,7 +22,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "HIPS";
     repo = "autograd";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-2sMOrhtNmp1dahN9SLRaAPZgaAnHzeviGIcXT617YDA=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/HIPS/autograd";
     license = lib.licenses.mit;
   };
-}
+})

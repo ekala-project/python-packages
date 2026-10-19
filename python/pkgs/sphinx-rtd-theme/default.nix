@@ -8,14 +8,14 @@
   sphinxcontrib-jquery,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "sphinx-rtd-theme";
   version = "3.1.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "sphinx_rtd_theme";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-tEJ28sJ26Qkjmk9slVqmZ6qv63hZeSOxxgurx223jkw=";
   };
 
@@ -45,4 +45,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/readthedocs/sphinx_rtd_theme";
     license = lib.licenses.mit;
   };
-}
+})

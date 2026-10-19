@@ -6,13 +6,13 @@
   humanfriendly,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "coloredlogs";
   version = "15.0.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-fJkapxpFd68vgmANj486ifk2uur5tQqcGX2gFOW/FrA=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/xolox/python-coloredlogs";
     license = lib.licenses.mit;
   };
-}
+})

@@ -6,14 +6,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "groestlcoin-hash";
   version = "1.0.3";
   pyproject = true;
 
   src = fetchPypi {
     pname = "groestlcoin_hash";
-    inherit version;
+    inherit (finalAttrs) version;
     sha256 = "31a8f6fa4c19db5258c3c73c071b71702102c815ba862b6015d9e4b75ece231e";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://pypi.org/project/groestlcoin_hash/";
     license = lib.licenses.mit;
   };
-}
+})

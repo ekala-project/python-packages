@@ -7,7 +7,7 @@
   py3dns,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyspf";
   version = "2.0.14";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "sdgathman";
     repo = "pyspf";
-    tag = "pyspf-${version}";
+    tag = "pyspf-${finalAttrs.version}";
     sha256 = "0bmimlmwrq9glnjc4i6pwch30n3y5wyqmkjfyayxqxkfrixqwydi";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     description = "Python API for Sendmail Milters (SPF)";
     license = lib.licenses.gpl2;
   };
-}
+})

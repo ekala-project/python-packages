@@ -8,7 +8,7 @@
   termcolor,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "yaspin";
   version = "3.5.0";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pavdmyt";
     repo = "yaspin";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-cNxIaATqLqtDa8ComUb9knuPpJ7hE06Gvnaf14yplmg=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pavdmyt/yaspin";
     license = lib.licenses.mit;
   };
-}
+})

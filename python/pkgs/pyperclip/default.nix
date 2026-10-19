@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   version = "1.11.0";
   pname = "pyperclip";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-JEA1lj5EKFMNnjphAaHvlyCcaCXtqxVnvqwUjMwdsbY=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     license = lib.licenses.bsd3;
     description = "Cross-platform clipboard module";
   };
-}
+})

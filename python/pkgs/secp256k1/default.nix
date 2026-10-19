@@ -13,13 +13,13 @@ let
   libsecp256k1 = pkgs.secp256k1;
 in
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "secp256k1";
   version = "0.14.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     sha256 = "82c06712d69ef945220c8b53c1a0d424c2ff6a1f64aee609030df79ad8383397";
   };
 
@@ -51,4 +51,4 @@ buildPythonPackage rec {
     description = "Python FFI bindings for secp256k1";
     license = lib.licenses.mit;
   };
-}
+})

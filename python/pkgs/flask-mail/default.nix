@@ -11,14 +11,14 @@
   flask,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "flask-mail";
   version = "0.10.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "flask_mail";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-RAg+ewK7zOeSIJwGJS+Fad1aMlp6qnav5zMEIr2XiB0=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pallets-eco/flask-mail";
     license = lib.licenses.bsd3;
   };
-}
+})

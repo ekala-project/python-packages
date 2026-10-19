@@ -12,13 +12,13 @@
   uharfbuzz,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "vharfbuzz";
   version = "0.3.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-zFVw8Nxh7cRJNk/S7D3uiIGShBMiZ/JeuSdX4hN94kc=";
   };
 
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     description = "A user-friendly wrapper around uharfbuzz";
     license = lib.licenses.asl20;
   };
-}
+})

@@ -6,7 +6,7 @@
   gitUpdater,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "precisely";
   version = "0.1.9";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mwilliamson";
     repo = "python-precisely";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-jvvRreSGpRgDk1bbqC8Z/UEfvxwKilfc/sm7nxdJU6k=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mwilliamson/python-precisely";
     license = lib.licenses.bsd2;
   };
-}
+})

@@ -11,7 +11,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "gassist-text";
   version = "0.1.0";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "tronikos";
     repo = "gassist_text";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-KrlStBYsE8PwAH7C7WzLezLffBFcmj/1cA0YJq/hkkU=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/tronikos/gassist_text";
     license = lib.licenses.asl20;
   };
-}
+})

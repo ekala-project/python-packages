@@ -19,14 +19,14 @@
   virtualenv,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "scikit-build";
   version = "0.19.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "scikit_build";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-uajQf8otXRDZMiC8V6aFFh1yrx/HYoXVXFZN2qhi5YQ=";
   };
 
@@ -57,4 +57,4 @@ buildPythonPackage rec {
       bsd2
     ]; # BSD due to reuses of PyNE code
   };
-}
+})

@@ -8,14 +8,14 @@
   sqlalchemy,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "marshmallow-sqlalchemy";
   version = "1.5.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "marshmallow_sqlalchemy";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-5RGSwgR3BkWi+rDXL0T4eJJy7vdZUfhLFgjWtLC/4OY=";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/marshmallow-code/marshmallow-sqlalchemy";
     license = lib.licenses.mit;
   };
-}
+})

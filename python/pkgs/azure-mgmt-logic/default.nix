@@ -8,13 +8,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-logic";
   version = "10.1.0b1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     extension = "zip";
     hash = "sha256-WCuNRE7pjNmecva6IE7Oez1KiQuMSWtRBC2ktzPWQk4=";
   };
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Azure/azure-sdk-for-python";
     license = lib.licenses.mit;
   };
-}
+})

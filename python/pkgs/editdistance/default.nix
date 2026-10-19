@@ -7,13 +7,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "editdistance";
   version = "0.8.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-0c34Cl1QFLDJEmpppCzlWkV7RX9phv9pypjk/k0tj+0=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/roy-ht/editdistance";
     license = lib.licenses.mit;
   };
-}
+})

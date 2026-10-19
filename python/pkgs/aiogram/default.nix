@@ -19,7 +19,7 @@
   uvloop,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aiogram";
   version = "3.31.0";
   pyproject = true;
@@ -27,7 +27,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "aiogram";
     repo = "aiogram";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-bW21mt1Vs4nDHopvd/fW7okRVI124CntXOxv1QCFWaY=";
   };
 
@@ -68,4 +68,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/aiogram/aiogram";
     license = lib.licenses.mit;
   };
-}
+})

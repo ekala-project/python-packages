@@ -8,13 +8,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pywikibot";
   version = "11.7.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-vX9MW1miCEPkbNVUCgPZKSL120bJ1hXOAJztVqHvaDs=";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     homepage = "https://www.mediawiki.org/wiki/Manual:Pywikibot";
     license = lib.licenses.mit;
   };
-}
+})

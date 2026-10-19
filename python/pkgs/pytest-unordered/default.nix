@@ -6,7 +6,7 @@
   pytest,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytest-unordered";
   version = "0.8.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "utapyngo";
     repo = "pytest-unordered";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-0Zh58qWKJIUL/7ELiZmyFNVKUyiJeckpYTQBnqKROo4=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/utapyngo/pytest-unordered";
     license = lib.licenses.mit;
   };
-}
+})

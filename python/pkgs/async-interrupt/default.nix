@@ -7,7 +7,7 @@
   pytest-cov-stub,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "async-interrupt";
   version = "1.2.2";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "bdraco";
     repo = "async_interrupt";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-M0ftyHstBP7+6M2b6yV33mSuO4B8QF3ixRvNJ/WeSEA=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/bdraco/async_interrupt";
     license = lib.licenses.asl20;
   };
-}
+})

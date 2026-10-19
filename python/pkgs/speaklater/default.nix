@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "speaklater";
   version = "1.3";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-Wf6jNtDu04wfC/MYHuEiLQ70Xzqd006+Zea//91qZak=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mitsuhiko/speaklater";
     license = lib.licenses.bsd0;
   };
-}
+})

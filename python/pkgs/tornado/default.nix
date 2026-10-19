@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "tornado";
   version = "6.5.4";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "tornadoweb";
     repo = "tornado";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-d6lKg8yrQqaCeKxdPjQNzv7Nc23U/v8d5x3sE3trRM4=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://www.tornadoweb.org/";
     license = lib.licenses.asl20;
   };
-}
+})

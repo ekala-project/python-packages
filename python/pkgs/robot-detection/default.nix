@@ -10,13 +10,13 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "robot-detection";
   version = "0.4";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-PY+3LKRxZLjOVeM73ak3QvYsNI3vfTzDtCsM60eVovU=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/rory/robot-detection";
     license = lib.licenses.gpl3Plus;
   };
-}
+})

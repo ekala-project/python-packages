@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mando";
   version = "0.8.2";
 
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "rubik";
     repo = "mando";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-FuQZ53ojrQO++0TN0C3hk0LXH+mcfRqtGq8VvfYDufg=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://mando.readthedocs.org";
     license = lib.licenses.mit;
   };
-}
+})

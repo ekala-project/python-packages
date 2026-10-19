@@ -20,7 +20,7 @@
   sybil,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "svcs";
   version = "26.2.0";
   pyproject = true;
@@ -28,7 +28,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "hynek";
     repo = "svcs";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-GgfuCZ1LvcPD3p9/YSrUUXZHS86GTMjLwmXivYmwgCQ=";
   };
 
@@ -56,4 +56,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/hynek/svcs";
     license = lib.licenses.mit;
   };
-}
+})

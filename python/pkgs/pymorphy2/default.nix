@@ -10,7 +10,7 @@
   pymorphy2-dicts-ru,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pymorphy2";
   version = "0.9.1";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   disabled = !isPy3k;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-hsRHFX3uLrI0HvvkU44SgadUdWuhqjLad6iWFMWLVgw=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/kmike/pymorphy2";
     license = lib.licenses.mit;
   };
-}
+})

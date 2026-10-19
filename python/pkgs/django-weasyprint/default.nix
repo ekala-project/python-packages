@@ -8,7 +8,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-weasyprint";
   version = "2.5.0";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "fdemmer";
     repo = "django-weasyprint";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-EwTEBIqAZGmtSXkSLZgNPCKA98IrymsUEaCHc1uQ2XE=";
   };
 
@@ -45,4 +45,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/fdemmer/django-weasyprint";
     license = lib.licenses.asl20;
   };
-}
+})

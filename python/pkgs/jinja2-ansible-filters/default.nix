@@ -8,13 +8,13 @@
   pyyaml,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jinja2-ansible-filters";
   version = "1.3.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-B8EM9E1wc/TwEQLKEtmi3DG0HUfkxh7ZLvam0mabNWs=";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     homepage = "https://pypi.org/project/jinja2-ansible-filters/";
     license = lib.licenses.gpl3Plus;
   };
-}
+})

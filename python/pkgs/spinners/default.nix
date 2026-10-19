@@ -5,14 +5,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "spinners";
   version = "0.0.24";
   pyproject = true;
 
   src = fetchPypi {
     pname = "spinners";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-HrautHgdcqtC7YoB3PIPMAK/UHQNcVTRL7jJdpv54n8=";
   };
 
@@ -25,4 +25,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/manrajgrover/py-spinners";
     license = lib.licenses.mit;
   };
-}
+})

@@ -12,7 +12,7 @@
   sqlalchemy,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "databases";
   version = "0.9.0";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "encode";
     repo = "databases";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-Zf9QqBgDhWAnHdNvzjXtri5rdT00BOjc4YTNzJALldM=";
   };
 
@@ -56,4 +56,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/encode/databases";
     license = lib.licenses.bsd3;
   };
-}
+})

@@ -7,13 +7,13 @@
   markdown,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "markdown-macros";
   version = "0.1.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     sha256 = "1lzvrb7nci22yp21ab2qqc9p0fhkazqj29vw0wln2r4ckb2nbawv";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/wnielson/markdown-macros";
     license = lib.licenses.mit;
   };
-}
+})

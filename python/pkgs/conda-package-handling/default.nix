@@ -5,13 +5,13 @@
   flit-core,
   conda-package-streaming,
 }:
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "conda-package-handling";
   version = "2.6.0";
   src = fetchFromGitHub {
     owner = "conda";
     repo = "conda-package-handling";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-VxnmG3ik6GJa/LiHqmyMVF/uBpx8JMCHBs7DVhC4gtU=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/conda/conda-package-handling";
     license = lib.licenses.bsd3;
   };
-}
+})

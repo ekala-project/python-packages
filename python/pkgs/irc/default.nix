@@ -13,13 +13,13 @@
   tempora,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "irc";
   version = "20.5.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-jdv9GfcSBM7Ount8cnJLFbP6h7q16B5Fp1vvc2oaPHY=";
   };
 
@@ -43,4 +43,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jaraco/irc";
     license = lib.licenses.mit;
   };
-}
+})

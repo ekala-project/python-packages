@@ -13,13 +13,13 @@
   trustme,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "unearth";
   version = "0.18.3";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-FAZ88RQckG94fW2dBwy8/dRD/RBYrsqmUM6VGaoQ29w=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/frostming/unearth";
     license = lib.licenses.mit;
   };
-}
+})

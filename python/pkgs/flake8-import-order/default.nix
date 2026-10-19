@@ -8,7 +8,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "flake8-import-order";
   version = "0.19.2";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "PyCQA";
     repo = "flake8-import-order";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-mXw3+pQMr2Ut1prj9sCZc4jyErDOyWJgq6OBPU1nZxs=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/PyCQA/flake8-import-order";
     license = lib.licenses.lgpl3Only;
   };
-}
+})

@@ -19,13 +19,13 @@
   virtualenv,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "tox";
   version = "4.34.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-7x6Cl0wvXqApVNWQ7guWf61QDDh5smTqGe+5pVTzzGA=";
   };
 
@@ -54,4 +54,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     mainProgram = "tox";
   };
-}
+})

@@ -6,7 +6,7 @@
   pyasyncore,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyasynchat";
   version = "1.0.5";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "simonrob";
     repo = "pyasynchat";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-KJmUou1llxUhDrMCOpJxqYNnPpJ0OoQv5VwYs/PJXbs=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/simonrob/pyasynchat";
     license = lib.licenses.psfl;
   };
-}
+})

@@ -6,7 +6,7 @@
   traitlets,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "comm";
   version = "0.2.3";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ipython";
     repo = "comm";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-gDggPu2h43lGyovTND9a3o9F2hWppV5uvAJa78JxJCo=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ipython/comm";
     license = lib.licenses.bsd3;
   };
-}
+})

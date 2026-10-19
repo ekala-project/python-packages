@@ -15,7 +15,7 @@
 let
   igraph-c = pkgs.igraph;
 in
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "igraph";
   version = "1.0.0";
 
@@ -24,7 +24,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "igraph";
     repo = "python-igraph";
-    tag = version;
+    tag = finalAttrs.version;
     postFetch = ''
       # export-subst prevents reproducability
       rm $out/.git_archival.json
@@ -66,4 +66,4 @@ buildPythonPackage rec {
     homepage = "https://igraph.org/python/";
     license = lib.licenses.gpl2Plus;
   };
-}
+})

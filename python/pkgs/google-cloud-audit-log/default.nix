@@ -7,14 +7,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "google-cloud-audit-log";
   version = "0.6.2";
   pyproject = true;
 
   src = fetchPypi {
     pname = "google_cloud_audit_log";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-6l3IkrGFjTRa7wxVY6coU0+odb0DiHZTkVdNPFf9jw4=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-audit-log";
     license = lib.licenses.asl20;
   };
-}
+})

@@ -8,13 +8,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mutesync";
   version = "0.0.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     sha256 = "1lz3q3q9lw8qxxb8jyrak77v6hkxwi39akyx96j8hd5jjaq2k5qc";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/currentoor/pymutesync";
     license = lib.licenses.asl20;
   };
-}
+})

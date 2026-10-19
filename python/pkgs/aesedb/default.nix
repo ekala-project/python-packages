@@ -10,7 +10,7 @@
   unicrypto,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aesedb";
   version = "0.1.8";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "skelsec";
     repo = "aesedb";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-YoeqxYkohAR6RaQYDXt7T00LCQDSb/o/ddxYRDGP/2s=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/skelsec/aesedb";
     license = lib.licenses.mit;
   };
-}
+})

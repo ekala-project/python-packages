@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "objgraph";
   version = "3.6.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-ALny9A90IuPH9FphxNr9r4HwP/BknW6uyGbwEDDlGtg=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     description = "Draws Python object reference graphs with graphviz";
     license = lib.licenses.mit;
   };
-}
+})

@@ -11,13 +11,13 @@
   unicrypto,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "minikerberos";
   version = "0.4.9";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-CVqYChl2rf9Iw94fc9de/ps52nIU3HyJGiNjJAcWqec=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/skelsec/minikerberos";
     license = lib.licenses.mit;
   };
-}
+})

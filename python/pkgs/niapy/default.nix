@@ -11,7 +11,7 @@
   pytest-xdist,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "niapy";
   version = "2.7.1";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "NiaOrg";
     repo = "NiaPy";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-g3B/jknzMIYP8VJayPktnYwq2WVA2KaCRS/ZzVwc88Q=";
   };
 
@@ -54,4 +54,4 @@ buildPythonPackage rec {
     homepage = "https://niapy.org/";
     license = lib.licenses.mit;
   };
-}
+})

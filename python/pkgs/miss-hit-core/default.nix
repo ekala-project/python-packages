@@ -8,7 +8,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "miss-hit-core";
   version = "0.9.44";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "florianschanda";
     repo = "miss_hit";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-dJZIleDWmdarhmxoKvQxWvI/Tmx9pSCNlgFXj5NFIUc=";
   };
 
@@ -56,4 +56,4 @@ buildPythonPackage rec {
     homepage = "https://misshit.org/";
     license = lib.licenses.gpl3Plus;
   };
-}
+})

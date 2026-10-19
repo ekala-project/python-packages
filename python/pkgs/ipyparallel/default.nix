@@ -15,13 +15,13 @@
   traitlets,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ipyparallel";
   version = "9.2.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-KzG7TpRwjn/7TuZQHX9fZk334cTFcukeng0SSExqaRA=";
   };
 
@@ -57,4 +57,4 @@ buildPythonPackage rec {
     homepage = "https://ipyparallel.readthedocs.io/";
     license = lib.licenses.bsd3;
   };
-}
+})

@@ -11,7 +11,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "actron-neo-api";
   version = "0.5.14";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "kclif9";
     repo = "actronneoapi";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-5ijykxSZmCUInMezP/8GCuOXIxwOb7Kc9Zqr9/+ZPvU=";
   };
 
@@ -46,4 +46,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/kclif9/actronneoapi";
     license = lib.licenses.mit;
   };
-}
+})

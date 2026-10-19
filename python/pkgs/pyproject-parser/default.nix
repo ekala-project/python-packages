@@ -19,14 +19,14 @@
   shippinglabel,
   typing-extensions,
 }:
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyproject-parser";
   version = "0.14.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "pyproject_parser";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-QEe9miURXkABmeZyzZ2Pi6QF2BSNZadsvzr7z3fpZuI=";
   };
 
@@ -66,4 +66,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/repo-helper/pyproject-parser";
     license = lib.licenses.mit;
   };
-}
+})

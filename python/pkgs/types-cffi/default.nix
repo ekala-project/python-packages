@@ -6,14 +6,14 @@
   types-setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "types-cffi";
   version = "2.1.0.20260827";
   pyproject = true;
 
   src = fetchPypi {
     pname = "types_cffi";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-U9FgR3GtT/CaGpDW9pgKs2vrtsOUdtzFu/SJb6UQ1zY=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/python/typeshed";
     license = lib.licenses.asl20;
   };
-}
+})

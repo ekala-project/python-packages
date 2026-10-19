@@ -9,7 +9,7 @@
   nix-update-script,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-postgres-partition";
   version = "0.1.4";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitLab {
     owner = "burke-software";
     repo = "django-postgres-partition";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-Wk+m75gO9iClN9/vXGBl27VcmqyE6c1xpQX+X1qcKuU=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://gitlab.com/burke-software/django-postgres-partition";
     license = lib.licenses.mit;
   };
-}
+})

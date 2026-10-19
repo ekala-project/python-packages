@@ -19,7 +19,7 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "panel";
   version = "1.9.4";
 
@@ -29,7 +29,7 @@ buildPythonPackage rec {
   # artifacts using npm, the bundling invoked in setup.py
   # tries to fetch even more artifacts
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     format = "wheel";
     hash = "sha256-yJxMHnKCl9rwYo6lBw+w2orXd4HioxQtMCR5U3wd5qQ=";
     dist = "py3";
@@ -74,4 +74,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/holoviz/panel";
     license = lib.licenses.bsd3;
   };
-}
+})

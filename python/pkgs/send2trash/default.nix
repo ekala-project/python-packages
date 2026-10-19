@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "send2trash";
   version = "2.1.0";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "hsoft";
     repo = "send2trash";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-dBILb1tz3/X3/MnhSKujVX9pMFrTAyntQ+GQsscklQU=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/hsoft/send2trash";
     license = lib.licenses.bsd3;
   };
-}
+})

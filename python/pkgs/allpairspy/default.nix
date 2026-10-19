@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "allpairspy";
   version = "2.5.1";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "thombashi";
     repo = "allpairspy";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-0wzoQDHB7Tt80ZTlKrNxFutztsgUuin5D2eb80c4PBI=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/thombashi/allpairspy";
     license = lib.licenses.mit;
   };
-}
+})

@@ -6,12 +6,12 @@
   cmake,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "kuzu";
   version = "0.11.3";
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-576jyjDEu0Ynku7cqn8hJcgAskO7SocuHu3BaRfBlno=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://kuzudb.com/";
     license = lib.licenses.mit;
   };
-}
+})

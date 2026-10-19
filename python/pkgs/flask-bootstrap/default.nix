@@ -10,7 +10,7 @@
   requests,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "flask-bootstrap";
   version = "3.3.7.1";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mbr";
     repo = "flask-bootstrap";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-TsRSNhrI1jZU/beX3G7LM64IrFagD6AYiluoGzy12jE=";
   };
 
@@ -49,4 +49,4 @@ buildPythonPackage rec {
     description = "Ready-to-use Twitter-bootstrap for use in Flask";
     license = lib.licenses.asl20;
   };
-}
+})

@@ -5,14 +5,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-environ";
   version = "0.14.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "django_environ";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-tsSNk7nS/4o+oUCZ6Qw1qk8QHBtNXyYt/uDSewZ0Ltc=";
   };
 
@@ -25,4 +25,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/joke2k/django-environ/";
     license = lib.licenses.mit;
   };
-}
+})

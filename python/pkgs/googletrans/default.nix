@@ -6,13 +6,13 @@
   httpx,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "googletrans";
   version = "4.0.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-2e8Sa12S+r7sC7ndzb7s1Dhl/ADhfx36B3F4N4J6F94=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     mainProgram = "translate";
   };
-}
+})

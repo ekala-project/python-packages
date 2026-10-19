@@ -6,7 +6,7 @@
   celery,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "celery-batches";
   version = "0.11";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "clokep";
     repo = "celery-batches";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-+1cpauali+MjDox0esw0+bveOEroIQ0DkuHQuwm/i4Q=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/clokep/celery-batches";
     license = lib.licenses.bsd3;
   };
-}
+})

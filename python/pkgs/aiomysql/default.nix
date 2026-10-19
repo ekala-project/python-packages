@@ -8,7 +8,7 @@
   wheel,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aiomysql";
   version = "0.3.2";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "aio-libs";
     repo = "aiomysql";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-DBNLmroR1W/gsYtW0iGNpki6EYUq6MyHI2pCRdyapU4=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/aio-libs/aiomysql";
     license = lib.licenses.mit;
   };
-}
+})

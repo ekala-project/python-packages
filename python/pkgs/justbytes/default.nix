@@ -9,7 +9,7 @@
   hypothesis,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "justbytes";
   version = "0.15.2";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mulkieran";
     repo = "justbytes";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-+jwIK1ZU+j58VoOfZAm7GdFy7KHU28khwzxhYhcws74=";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mulkieran/justbytes";
     license = lib.licenses.lgpl2Plus;
   };
-}
+})

@@ -15,7 +15,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "cloudsplaining";
   version = "0.8.2";
   pyproject = true;
@@ -23,7 +23,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "salesforce";
     repo = "cloudsplaining";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-Abp/uvH1IYO/rb2o+7uI0Ef6q7K6T0kN1mo+Qit438E=";
   };
 
@@ -51,4 +51,4 @@ buildPythonPackage rec {
     license = lib.licenses.bsd3;
     mainProgram = "cloudsplaining";
   };
-}
+})

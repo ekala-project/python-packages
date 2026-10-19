@@ -8,14 +8,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "crownstone-cloud";
   version = "1.4.11";
   pyproject = true;
 
   src = fetchPypi {
     pname = "crownstone_cloud";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-s84pK52uMupxQfdMldV14V3nj+yVku1Vw13CRX4o08U=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Crownstone-Community/crownstone-lib-python-cloud";
     license = lib.licenses.mit;
   };
-}
+})

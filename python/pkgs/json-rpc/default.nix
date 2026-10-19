@@ -7,14 +7,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "json-rpc";
   version = "1.15.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "json-rpc";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-5kQdVsHc1UJByTfQotzRk73wvcU5tTFlJHE/VUt/hbk=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pavlov99/json-rpc";
     license = lib.licenses.mit;
   };
-}
+})

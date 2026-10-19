@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "zodbpickle";
   version = "4.5";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-Z9QpXdtoskEP5BcJT/4aiw7UGDTuMIAg9Y7htjPh91E=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
       zpl21
     ];
   };
-}
+})

@@ -7,13 +7,13 @@
   gunicorn,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "gevent-websocket";
   version = "0.10.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-fq7zKWgpDJEh98Nblz4swwL/sHbQGMkGjS9cqLLYX7A=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://www.gitlab.com/noppo/gevent-websocket";
     license = lib.licenses.asl20;
   };
-}
+})

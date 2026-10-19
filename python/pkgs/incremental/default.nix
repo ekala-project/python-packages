@@ -6,13 +6,13 @@
   packaging,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "incremental";
   version = "24.11.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-h9NIDbsIPB1zYiJRGozzgAEqgXbCRW0B70gyQqu7z4w=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     description = "Small library that versions your Python projects";
     license = lib.licenses.mit;
   };
-}
+})

@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyahocorasick";
   version = "2.3.1";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "WojciechMula";
     repo = "pyahocorasick";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-lExpRJlRoYS45Bw9FQwa7GKELBljKA83ZhXg7e5vPwM=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/WojciechMula/pyahocorasick";
     license = lib.licenses.bsd3;
   };
-}
+})

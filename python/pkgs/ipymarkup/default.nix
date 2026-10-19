@@ -7,13 +7,13 @@
   intervaltree,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ipymarkup";
   version = "0.9.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-P0v6EP1mKTIBr4SEp+a8tyO/LjPZpqoAiCZxr5yiaRE=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/natasha/ipymarkup";
     license = lib.licenses.mit;
   };
-}
+})

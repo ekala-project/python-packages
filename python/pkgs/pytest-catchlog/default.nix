@@ -8,13 +8,13 @@
   unzip,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytest-catchlog";
   version = "1.2.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     sha256 = "1w7wxh27sbqwm4jgwrjr9c2gy384aca5jzw9c0wzhl0pmk2mvqab";
     extension = "zip";
   };
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://pypi.org/project/pytest-catchlog/";
     description = "py.test plugin to catch log messages. This is a fork of pytest-capturelog";
   };
-}
+})

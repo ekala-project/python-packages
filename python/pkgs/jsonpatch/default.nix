@@ -7,7 +7,7 @@
   jsonpointer,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jsonpatch";
   version = "1.33";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "stefankoegl";
     repo = "python-json-patch";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-JHBB64LExzHQVoFF2xcsqGlNWX/YeEBa1M/TmfeQLWI=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/stefankoegl/python-json-patch";
     license = lib.licenses.bsd3;
   };
-}
+})

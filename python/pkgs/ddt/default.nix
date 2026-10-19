@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ddt";
   version = "1.7.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-0hXWsIOWMBPEoZseTc1qlugOQ6t3UZWXpqz88umj4Es=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/txels/ddt";
     license = lib.licenses.mit;
   };
-}
+})

@@ -7,7 +7,7 @@
   ninja,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "cysignals";
   version = "1.12.6";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "sagemath";
     repo = "cysignals";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-uZNKmnn1Jf1pERdG4bywpAUClKMw3og+7Q5B0yPlqEY=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/sagemath/cysignals/";
     license = lib.licenses.lgpl3Plus;
   };
-}
+})

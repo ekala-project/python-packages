@@ -6,7 +6,7 @@
   callPackage,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pluggy";
   version = "1.6.0";
 
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pytest-dev";
     repo = "pluggy";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-pkQjPJuSASWmzwzp9H/UTJBQDr2r2RiofxpF135lAgc=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pytest-dev/pluggy";
     license = lib.licenses.mit;
   };
-}
+})

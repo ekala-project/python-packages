@@ -10,13 +10,13 @@
   hatchling,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyfxa";
   version = "0.8.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-gq/OfpKjw6BSbGKTXbRa2crxleJJoj0BN4Ful1npWlw=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mozilla/PyFxA";
     license = lib.licenses.mpl20;
   };
-}
+})

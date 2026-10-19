@@ -12,7 +12,7 @@
   pytest-xdist,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jschon";
   version = "0.11.1";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "marksparkza";
     repo = "jschon";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-uOvEIEUEILsoLuV5U9AJCQAlT4iHQhsnSt65gfCiW0k=";
     fetchSubmodules = true;
   };
@@ -76,4 +76,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/marksparkza/jschon";
     license = lib.licenses.mit;
   };
-}
+})

@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "funcy";
   version = "2.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-OWMxXVnUHG8wwEvJEOEKtQo6xKIlhov6lv7tEz3wdcs=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     description = "Collection of fancy functional tools focused on practicality";
     license = lib.licenses.bsd3;
   };
-}
+})

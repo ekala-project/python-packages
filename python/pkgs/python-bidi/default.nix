@@ -6,7 +6,7 @@
   libiconv,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "python-bidi";
   version = "0.6.11";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "MeirKriheli";
     repo = "python-bidi";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-sDr/i7MC3aNAzl/+cDbstS5QBdQqVtaLlG09qsl7krU=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
       gpl3Only
     ];
   };
-}
+})

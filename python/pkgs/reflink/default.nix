@@ -7,13 +7,13 @@
   lib,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "reflink";
   version = "0.2.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-iCN17nMZJ1rl9qahKHQGNl2sHpZDuRrRDlGH0/hCU70=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://gitlab.com/rubdos/pyreflink";
     license = lib.licenses.mit;
   };
-}
+})

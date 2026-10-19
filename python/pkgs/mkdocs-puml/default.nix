@@ -12,7 +12,7 @@
   pytest-httpx,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mkdocs-puml";
   version = "2.3.0";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "MikhailKravets";
     repo = "mkdocs_puml";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-DOGS2lnFIpFdpJxIw9PJ/kvtAOhVtAJOQeMR+CVjkE0=";
   };
 
@@ -57,4 +57,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/MikhailKravets/mkdocs_puml";
     license = lib.licenses.mit;
   };
-}
+})

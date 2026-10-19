@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pdfrw";
   version = "0.4";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-DcBJSg5lYbJoVCso7eIoA4fCcoEU8RfTu12OR4e5PvQ=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     description = "Pure Python library that reads and writes PDFs";
     license = lib.licenses.mit;
   };
-}
+})

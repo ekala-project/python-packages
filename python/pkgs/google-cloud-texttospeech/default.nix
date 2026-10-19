@@ -8,14 +8,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "google-cloud-texttospeech";
   version = "2.37.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "google_cloud_texttospeech";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-23JjgvOTzrazYALDWr1itTxNjhf8LzHfiwf9D6u+T4s=";
   };
 
@@ -45,4 +45,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-texttospeech";
     license = lib.licenses.asl20;
   };
-}
+})

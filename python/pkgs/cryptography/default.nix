@@ -16,7 +16,7 @@
   rustPlatform,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "cryptography";
   version = "49.0.0";
   pyproject = true;
@@ -24,7 +24,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pyca";
     repo = "cryptography";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-yHUIGauFZYnjcoROvocT1UqQ0B8ZuVTaJ0ZAfri6T1E=";
   };
 
@@ -83,4 +83,4 @@ buildPythonPackage rec {
       psfl
     ];
   };
-}
+})

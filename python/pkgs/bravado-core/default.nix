@@ -19,7 +19,7 @@
   mock,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "bravado-core";
   version = "6.4.1";
   pyproject = true;
@@ -27,7 +27,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Yelp";
     repo = "bravado-core";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-P6R1Pmhddyy1iwQuem8YVDFFrQ4qxHzASZQbqpMZXeI=";
   };
 
@@ -66,4 +66,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Yelp/bravado-core";
     license = lib.licenses.bsd3;
   };
-}
+})

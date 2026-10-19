@@ -8,7 +8,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "epion";
   version = "0.0.3";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "devenzo-com";
     repo = "epion_python";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-9tE/SqR+GHZXeE+bOtXkLu+4jy1vO8WoiLjb6MJazxQ=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/devenzo-com/epion_python";
     license = lib.licenses.mit;
   };
-}
+})

@@ -6,7 +6,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "crc";
   version = "8.0.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Nicoretti";
     repo = "crc";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-yEjYME2WhYdPcdbGplBaXXfppPTpNwz6jQm5CIJrrzY=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     license = lib.licenses.bsd2;
     mainProgram = "crc";
   };
-}
+})

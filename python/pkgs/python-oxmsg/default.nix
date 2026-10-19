@@ -8,7 +8,7 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "python-oxmsg";
   version = "0.0.2";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "scanny";
     repo = "python-oxmsg";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-ramM27+SylBeJyb3kkRm1xn3qAefiLuBOvI/iucK2wM=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     mainProgram = "oxmsg";
   };
-}
+})

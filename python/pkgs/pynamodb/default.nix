@@ -10,7 +10,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pynamodb";
   version = "6.1.0";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pynamodb";
     repo = "PynamoDB";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-i4oxZO3gBVc2PMFSISeytaO8YrzYR9YuUMxrEqrg2c4=";
   };
 
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     homepage = "http://jlafon.io/pynamodb.html";
     license = lib.licenses.mit;
   };
-}
+})

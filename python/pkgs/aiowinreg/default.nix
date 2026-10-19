@@ -7,7 +7,7 @@
   winacl,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aiowinreg";
   version = "0.0.13";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "skelsec";
     repo = "aiowinreg";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-vY5SrGTFH/xsv9k2WciE0xNx9r3W53sxxLGXFX34EuE=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     mainProgram = "awinreg";
   };
-}
+})

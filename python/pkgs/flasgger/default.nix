@@ -12,13 +12,13 @@
   werkzeug,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "flasgger";
   version = "0.9.7.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-ygmOEL+7EvBHrMYpnMcKM4UZQ6dG5VDYbmXmDU3yRfs=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/flasgger/flasgger";
     license = lib.licenses.mit;
   };
-}
+})

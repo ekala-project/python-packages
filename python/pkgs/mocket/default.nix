@@ -15,13 +15,13 @@
   pook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mocket";
   version = "3.14.4";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-lfEO2gUKkVDNiX4Tz8C2kIXEVdIUmMvdefh2+lHPmtA=";
   };
 
@@ -50,4 +50,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mindflayer/python-mocket";
     license = lib.licenses.bsd3;
   };
-}
+})

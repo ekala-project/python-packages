@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "scrypt";
   version = "0.9.4";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "holgern";
     repo = "py-scrypt";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-4jVXaPD57RMe4ef1PVgZwPGAhEHL3RGlu2DSC6lGuR4=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/holgern/py-scrypt";
     license = lib.licenses.bsd2;
   };
-}
+})

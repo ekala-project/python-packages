@@ -11,14 +11,14 @@
   pytest-benchmark,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ahocorasick-rs";
   version = "1.0.3";
 
   pyproject = true;
 
   src = fetchPypi {
-    inherit version;
+    inherit (finalAttrs) version;
     pname = "ahocorasick_rs";
     hash = "sha256-V503Bwp8Idqc2ZiLn7RxKXJztgy0EmWG1tzZn6r8XKU=";
   };
@@ -52,4 +52,4 @@ buildPythonPackage rec {
     license = lib.licenses.asl20;
   };
 
-}
+})

@@ -11,7 +11,7 @@
   prometheus-client,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "karton-dashboard";
   version = "1.7.0";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "CERT-Polska";
     repo = "karton-dashboard";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-DYfL//i1gJ0ci7jVPtrMKC8j+i5/L8rvmbs8zz6Eq2M=";
   };
 
@@ -48,4 +48,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/CERT-Polska/karton-dashboard";
     license = lib.licenses.bsd3;
   };
-}
+})

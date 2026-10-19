@@ -6,13 +6,13 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "path";
   version = "17.1.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-Lfy/7ItNlg80acUqzxMxE8KovxKse5jWKfqRr4ckjUI=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jaraco/path";
     license = lib.licenses.mit;
   };
-}
+})

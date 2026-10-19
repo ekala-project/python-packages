@@ -7,7 +7,7 @@
   requests,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "nc-dnsapi";
   version = "0.1.6";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "nbuchwitz";
     repo = "nc_dnsapi";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-OE4+wJbJbUZ+YB5J5OyvytLFCcrnXCeZEqmphHKKprQ=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/nbuchwitz/nc_dnsapi";
     license = lib.licenses.gpl3;
   };
-}
+})

@@ -9,13 +9,13 @@
   pkgs,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "zstd";
   version = "1.5.7.3";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-QD5SBfSsBLkuawzaZUvi9R3iaCKKDbAGe8CH+qzy9JU=";
   };
 
@@ -39,7 +39,7 @@ buildPythonPackage rec {
   env = {
     ZSTD_EXTERNAL = 1;
     VERSION = pkgs.zstd.version;
-    PKG_VERSION = version;
+    PKG_VERSION = finalAttrs.version;
   };
 
   pythonImportsCheck = [ "zstd" ];
@@ -49,4 +49,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/sergey-dryabzhinsky/python-zstd";
     license = lib.licenses.bsd2;
   };
-}
+})

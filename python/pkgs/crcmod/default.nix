@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "crcmod";
   version = "1.7";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-3HBRoNtfK9SGZamQ0+wcwwWkZqdzWMpEkoJvQfKDYB4=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://crcmod.sourceforge.net/";
     license = lib.licenses.mit;
   };
-}
+})

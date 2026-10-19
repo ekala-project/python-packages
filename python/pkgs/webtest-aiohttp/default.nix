@@ -8,7 +8,7 @@
   webtest,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "webtest-aiohttp";
   version = "2.0.0";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "sloria";
     repo = "webtest-aiohttp";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-UuAz/k/Tnumupv3ybFR7PkYHwG3kH7M5oobZykEP+ao=";
   };
 
@@ -47,4 +47,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/sloria/webtest-aiohttp";
     license = lib.licenses.mit;
   };
-}
+})

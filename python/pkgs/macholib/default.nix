@@ -14,7 +14,7 @@
 let
   coreutils' = coreutils.override { singleBinary = false; };
 in
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "macholib";
   version = "1.16.4";
   pyproject = true;
@@ -22,7 +22,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ronaldoussoren";
     repo = "macholib";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-+7dFPwzwKmvtDY/blLNyrNDEATcgo+BUceoSGg55gbo=";
   };
 
@@ -49,4 +49,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ronaldoussoren/macholib";
     license = lib.licenses.mit;
   };
-}
+})

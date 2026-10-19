@@ -9,7 +9,7 @@
   xmltodict,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pymatreader";
   version = "1.0.0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitLab {
     owner = "obob";
     repo = "pymatreader";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-cDEGEvBSj3gmjA+8aXULwuBVk09BLQbA91CNAxgtiLA=";
   };
 
@@ -43,4 +43,4 @@ buildPythonPackage rec {
     homepage = "https://gitlab.com/obob/pymatreader/";
     license = lib.licenses.bsd2;
   };
-}
+})

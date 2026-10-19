@@ -12,7 +12,7 @@
   ubelt,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "line-profiler";
   version = "5.0.2";
   pyproject = true;
@@ -21,7 +21,7 @@ buildPythonPackage rec {
 
   src = fetchPypi {
     pname = "line_profiler";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-jYqZDITGS83kWvIq9QLRe8CuEHvkBc5Bu6kq9cOcAAA=";
   };
 
@@ -49,4 +49,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pyutils/line_profiler";
     license = lib.licenses.bsd3;
   };
-}
+})

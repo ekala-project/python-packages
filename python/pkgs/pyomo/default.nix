@@ -8,7 +8,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyomo";
   version = "6.10.1";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     repo = "pyomo";
     owner = "pyomo";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-+LMjvUFGlRsWl8TaGC4ist63Gzwi+xfpeAnNY8Fws/M=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     license = lib.licenses.bsd3;
     mainProgram = "pyomo";
   };
-}
+})

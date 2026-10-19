@@ -6,14 +6,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "import-expression";
   version = "2.2.1.post1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "import_expression";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-HIMb8mvvft82qXs0xoe5Yuer4GEWxm8A4U+aMhhiPU8=";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     ];
     mainProgram = "import-expression";
   };
-}
+})

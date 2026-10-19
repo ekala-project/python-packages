@@ -9,7 +9,7 @@
   pyyaml,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mkdocs-get-deps";
   version = "0.2.0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mkdocs";
     repo = "get-deps";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-DahmSYWYhVch950InYBiCh6qz1pH2Kibf5ixwCNdsTg=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mkdocs/get-deps";
     license = lib.licenses.mit;
   };
-}
+})

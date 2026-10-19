@@ -7,7 +7,7 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "fnvhash";
   version = "0.2.1";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "znerol";
     repo = "py-fnvhash";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-vAflKSvi0PD5r1q6GCTt6a4vTCsdBIebecRCKbbBphE=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/znerol/py-fnvhash";
     license = lib.licenses.mit;
   };
-}
+})

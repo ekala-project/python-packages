@@ -6,13 +6,13 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "uritools";
   version = "6.1.3";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-OkmOfoXvMkk0PVcQYY1kGkFNoPuubSMFOtp5du6D6l8=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/tkem/uritools/";
     license = lib.licenses.mit;
   };
-}
+})

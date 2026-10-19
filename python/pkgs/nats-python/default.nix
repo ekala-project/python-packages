@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "nats-python";
   version = "0.8.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Gr1N";
     repo = "nats-python";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-7/AGQfPEuSeoRGUXeyDZNbLhapfQa7vhrSPHRruf+sg=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Gr1N/nats-python";
     license = lib.licenses.mit;
   };
-}
+})

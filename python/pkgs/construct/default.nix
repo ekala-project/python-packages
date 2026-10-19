@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "construct";
   version = "2.10.70";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-TSRy+WhHMeWMycVsRjvmO6oUR9Z04NZq61Ynsi9RLCk=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     description = "Powerful declarative parser (and builder) for binary data";
     license = lib.licenses.mit;
   };
-}
+})

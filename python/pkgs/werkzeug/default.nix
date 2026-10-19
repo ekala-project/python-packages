@@ -13,13 +13,13 @@
   watchdog,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "werkzeug";
   version = "3.1.8";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-m61hpCaNrBEvHFzUYwpW7eYBtu1CAwBneoaQg9cKTEQ=";
   };
 
@@ -44,4 +44,4 @@ buildPythonPackage rec {
     '';
     license = lib.licenses.bsd3;
   };
-}
+})

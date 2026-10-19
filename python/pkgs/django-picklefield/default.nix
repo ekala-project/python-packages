@@ -6,14 +6,14 @@
   django,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-picklefield";
   version = "3.4.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "django_picklefield";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-Oh90BTbA5g0NukOqiczb6Gdg1MP47Ed5nq4SK6p0HQo=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/gintas/django-picklefield";
     license = lib.licenses.mit;
   };
-}
+})

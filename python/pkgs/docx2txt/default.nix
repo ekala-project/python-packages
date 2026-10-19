@@ -6,13 +6,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "docx2txt";
   version = "0.9";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-GAE/YimxSQkCixmqe/T489bkYy17CJqyn38KTR9mDig=";
   };
 
@@ -25,4 +25,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ankushshah89/python-docx2txt";
     license = lib.licenses.mit;
   };
-}
+})

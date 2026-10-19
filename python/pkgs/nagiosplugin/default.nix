@@ -9,13 +9,13 @@
   twine,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "nagiosplugin";
   version = "1.4.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-IxabBKI8StRBnvm3Zm1AH0jfMkez38P4dL4sFP0ttAE=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mpounsett/nagiosplugin";
     license = lib.licenses.zpl21;
   };
-}
+})

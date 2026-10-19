@@ -11,7 +11,7 @@
   pathspec, # for .gitignore support
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "lizard";
   version = "1.24.0";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "terryyin";
     repo = "lizard";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-npxnl9QrsAMLgrSDGsmWTb17VLwJ9sYCi9dhROCblhg=";
   };
 
@@ -50,4 +50,4 @@ buildPythonPackage rec {
     homepage = "http://www.lizard.ws";
     license = lib.licenses.mit;
   };
-}
+})

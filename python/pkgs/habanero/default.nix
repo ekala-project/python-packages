@@ -10,7 +10,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "habanero";
   version = "2.9.2";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "sckott";
     repo = "habanero";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-XRqMq0L0fedFt4hX6p4XzNeRxg8JL/xdIfuqLdpVnzo=";
   };
 
@@ -47,4 +47,4 @@ buildPythonPackage rec {
     homepage = "https://habanero.readthedocs.io/";
     license = lib.licenses.mit;
   };
-}
+})

@@ -5,14 +5,14 @@
   poetry-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "krfzf-py";
   version = "0.0.6";
   pyproject = true;
 
   src = fetchPypi {
     pname = "krfzf_py";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-/M9Atu9MLAGmnEdx6tknMJAit2o4Xt971uQ7pb0CBCk=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://pypi.org/project/krfzf-py/";
     license = lib.licenses.gpl3Only;
   };
-}
+})

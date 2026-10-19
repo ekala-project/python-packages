@@ -9,7 +9,7 @@
   rustPlatform,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ua-parser-rs";
   version = "0.1.4";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ua-parser";
     repo = "uap-rust";
-    tag = "ua-parser-rs-${version}";
+    tag = "ua-parser-rs-${finalAttrs.version}";
     hash = "sha256-8IU4NNW0v2zl6COtL6o7FALxqYNVKBGhERugxpXIN5g=";
     fetchSubmodules = true;
   };
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ua-parser/uap-rust/tree/main/ua-parser-py";
     license = lib.licenses.asl20;
   };
-}
+})

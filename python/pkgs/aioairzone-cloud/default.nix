@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aioairzone-cloud";
   version = "0.7.2";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Noltari";
     repo = "aioairzone-cloud";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-fWd5feCWE2o0HqvzGhGngWsIkXtS+VdZJ0d6B10Jq1E=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Noltari/aioairzone-cloud";
     license = lib.licenses.asl20;
   };
-}
+})

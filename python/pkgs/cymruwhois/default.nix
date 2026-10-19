@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "cymruwhois";
   version = "1.6";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "JustinAzoff";
     repo = "python-cymruwhois";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-d9m668JYI9mxUycoVWyaDCR7SOca+ebymZxWtgSPWNU=";
   };
 
@@ -44,4 +44,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/JustinAzoff/python-cymruwhois";
     license = lib.licenses.mit;
   };
-}
+})

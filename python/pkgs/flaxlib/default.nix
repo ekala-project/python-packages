@@ -14,7 +14,7 @@
   pkg-config,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "flaxlib";
   version = "0.12.9";
   pyproject = true;
@@ -49,4 +49,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/google/flax/tree/main/flaxlib";
     license = lib.licenses.asl20;
   };
-}
+})

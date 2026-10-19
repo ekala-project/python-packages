@@ -15,7 +15,7 @@
   pytz,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ormsgpack";
   version = "1.12.2";
   pyproject = true;
@@ -23,7 +23,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "aviramha";
     repo = "ormsgpack";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-a2PgCCIPPJt6YNW7UFl9urYZkAoVj5Np0lbv4QfzMAs=";
   };
 
@@ -57,4 +57,4 @@ buildPythonPackage rec {
       mit
     ];
   };
-}
+})

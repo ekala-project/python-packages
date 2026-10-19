@@ -10,7 +10,7 @@
   fonttools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   version = "1.4.3";
   pname = "ezdxf";
 
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mozman";
     repo = "ezdxf";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-v/xW/Tg3OgzwvSNy3cfkxzf6R33ZvW4VE8k7MB+rM+w=";
   };
 
@@ -47,4 +47,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     platforms = lib.platforms.unix;
   };
-}
+})

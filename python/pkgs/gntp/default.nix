@@ -7,13 +7,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "gntp";
   version = "1.0.3";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-9KTyAJ7Li7QaGq3dX7fAMIeyoUysLAOvApugS5Fm2uA=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/kfdm/gntp/";
     license = lib.licenses.mit;
   };
-}
+})

@@ -13,13 +13,13 @@
   sphinx-issues,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jinja2";
   version = "3.1.6";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-ATf7BZkNNfEnWlh+mu5tVtqCH8g0kaD7g4GDvkP2bW0=";
   };
 
@@ -81,4 +81,4 @@ buildPythonPackage rec {
       syntax. Then the template is passed data to render the final document.
     '';
   };
-}
+})

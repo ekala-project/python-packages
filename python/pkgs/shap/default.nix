@@ -18,7 +18,7 @@
   tqdm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "shap";
   version = "0.50.0";
   pyproject = true;
@@ -26,7 +26,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "slundberg";
     repo = "shap";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-sf9EYa15/5xEOtHSesuq97dFP4frtteoGSpHE8kGP9Q=";
   };
 
@@ -74,4 +74,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/slundberg/shap";
     license = lib.licenses.mit;
   };
-}
+})

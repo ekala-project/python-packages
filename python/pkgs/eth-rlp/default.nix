@@ -9,7 +9,7 @@
   rlp,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "eth-rlp";
   version = "3.0.0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ethereum";
     repo = "eth-rlp";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-0D/1PS4Q4BrypE9QFJBj6jDJNVAVhgqXJeGCk86zYRk=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ethereum/eth-rlp";
     license = lib.licenses.mit;
   };
-}
+})

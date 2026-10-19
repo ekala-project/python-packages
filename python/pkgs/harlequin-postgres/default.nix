@@ -8,14 +8,14 @@
   pythonAtLeast,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "harlequin-postgres";
   version = "1.4.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "harlequin_postgres";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-41LHQxJ1Lyeaozv5coTjIu8UR/GFlbC1gyZa2EPfe6s=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://pypi.org/project/harlequin-postgres/";
     license = lib.licenses.mit;
   };
-}
+})

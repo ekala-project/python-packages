@@ -15,7 +15,7 @@
   urllib3,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "gtts";
   version = "2.5.4";
   pyproject = true;
@@ -23,7 +23,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pndurette";
     repo = "gTTS";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-ryTR7cESDO9pH5r2FBz+6JuNMEQr39hil/FSklgaIGg=";
   };
 
@@ -54,4 +54,4 @@ buildPythonPackage rec {
     homepage = "https://gtts.readthedocs.io";
     license = lib.licenses.mit;
   };
-}
+})

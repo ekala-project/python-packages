@@ -9,7 +9,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "open-hypergraphs";
   version = "0.1.3";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "statusfailed";
     repo = "open-hypergraphs";
-    tag = "pypi-${version}";
+    tag = "pypi-${finalAttrs.version}";
     hash = "sha256-sBF/+VENDajLN72UJ6iHekmk11pOqfxeKs8Kqszy6mQ=";
   };
 
@@ -49,4 +49,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/statusfailed/open-hypergraphs";
     license = lib.licenses.mit;
   };
-}
+})

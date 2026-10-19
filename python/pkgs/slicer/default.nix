@@ -6,13 +6,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "slicer";
   version = "0.0.8";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-LnVTr3PwwMLTVfSvzD7Pl8byFW/PRZOVXD9Wz2xNbrc=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     platforms = lib.platforms.unix;
   };
-}
+})

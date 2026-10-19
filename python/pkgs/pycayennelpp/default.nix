@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pycayennelpp";
   version = "2.4.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     sha256 = "1cc6lz28aa57gs74767xyd3i370lwx046yb5a1nfch6fk3kf7xdx";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/smlng/pycayennelpp";
     license = lib.licenses.mit;
   };
-}
+})

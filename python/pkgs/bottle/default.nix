@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "bottle";
   version = "0.13.4";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-eH54Mn4SsieTjeAiSDM9eIz+RZh+3Kc1+PiOA0csP0c=";
   };
 
@@ -25,4 +25,4 @@ buildPythonPackage rec {
     mainProgram = "bottle.py";
     license = lib.licenses.mit;
   };
-}
+})

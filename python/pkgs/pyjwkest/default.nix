@@ -8,7 +8,7 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyjwkest";
   version = "1.4.4";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "IdentityPython";
     repo = "pyjwkest";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-G4/qLOOQHsNSMVndUdYBhrrk8uEufbI8Od3ziQiY0XI=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/IdentityPython/pyjwkest";
     license = lib.licenses.asl20;
   };
-}
+})

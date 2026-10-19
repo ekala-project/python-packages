@@ -20,7 +20,7 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "social-auth-core";
   version = "5.1.0";
   pyproject = true;
@@ -28,7 +28,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "python-social-auth";
     repo = "social-core";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-1cpVyKi/MLaABzWZiCW5yNEq49Md0NCZ+0zWUvbjlss=";
   };
 
@@ -59,4 +59,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/python-social-auth/social-core";
     license = lib.licenses.bsd3;
   };
-}
+})

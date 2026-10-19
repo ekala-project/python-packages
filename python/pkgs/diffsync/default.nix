@@ -10,7 +10,7 @@
   structlog,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "diffsync";
   version = "2.2.3";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "networktocode";
     repo = "diffsync";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-SFPWz1A0Dpy1dzKaPp2Hx/1Supy0/PFwztm/NK0psHQ=";
   };
 
@@ -46,4 +46,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/networktocode/diffsync";
     license = lib.licenses.asl20;
   };
-}
+})

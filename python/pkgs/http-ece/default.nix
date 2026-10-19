@@ -7,7 +7,7 @@
   pytest-cov-stub,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "http-ece";
   version = "1.2.1";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "web-push-libs";
     repo = "encrypted-content-encoding";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-HjXJWoOvCVOdEto4Ss4HPUuf+uNcQkfvj/cxJGHOhQ8=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/web-push-libs/encrypted-content-encoding";
     license = lib.licenses.mit;
   };
-}
+})

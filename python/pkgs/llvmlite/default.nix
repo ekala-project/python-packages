@@ -19,7 +19,7 @@ let
   llvm = llvmPackages.llvm;
 in
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "llvmlite";
   version = "0.49.0";
   pyproject = true;
@@ -29,7 +29,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "numba";
     repo = "llvmlite";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-AUte9llrcPl2z4ipkZ3PGeryDveZ9vj5oaBQtzGaT+w=";
   };
 
@@ -61,4 +61,4 @@ buildPythonPackage rec {
     homepage = "http://llvmlite.pydata.org/";
     license = lib.licenses.bsd2;
   };
-}
+})

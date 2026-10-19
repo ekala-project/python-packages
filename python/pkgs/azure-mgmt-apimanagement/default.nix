@@ -8,14 +8,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-apimanagement";
   version = "6.0.0b1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_mgmt_apimanagement";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-/8ZPGH8pNwd2JLoFxwWelHYa8yyWBfyTRYCJ35duuU8=";
   };
 
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/apimanagement/azure-mgmt-apimanagement";
     license = lib.licenses.mit;
   };
-}
+})

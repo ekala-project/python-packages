@@ -10,14 +10,14 @@
   msrest,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-cognitiveservices";
   version = "15.0.0b1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_mgmt_cognitiveservices";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-3ydbAI1IkiIuwnQbd6829kZv9IgFkqTFwG155l58JFQ=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/cognitiveservices/azure-mgmt-cognitiveservices";
     license = lib.licenses.mit;
   };
-}
+})

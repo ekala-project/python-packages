@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyleri";
   version = "1.5.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-mY1bDMRTlA4XU/waz4ORJWh4bm3G/kXzwlpvTqcqOCY=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/cesbit/pyleri";
     license = lib.licenses.mit;
   };
-}
+})

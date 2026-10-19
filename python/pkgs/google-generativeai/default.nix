@@ -13,7 +13,7 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "google-generativeai";
   version = "0.8.6";
   pyproject = true;
@@ -21,7 +21,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "google";
     repo = "generative-ai-python";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-zUNgQqpGgMyCBhW+Z9EiSJIyuIQh2XhwlCdgrTymCVk=";
   };
 
@@ -49,4 +49,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/google/generative-ai-python";
     license = lib.licenses.asl20;
   };
-}
+})

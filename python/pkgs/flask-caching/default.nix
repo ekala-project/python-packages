@@ -7,14 +7,14 @@
   flask,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "flask-caching";
   version = "2.5.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "flask_caching";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-91tFH94/qsDieNpyJjgYE03sqMS6a7B7mzsjiZE2ja4=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pallets-eco/flask-caching";
     license = lib.licenses.bsd3;
   };
-}
+})

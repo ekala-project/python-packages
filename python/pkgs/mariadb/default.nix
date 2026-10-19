@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mariadb";
   version = "1.1.14";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mariadb-corporation";
     repo = "mariadb-connector-python";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-BPyEBQ5M/kqTKpZX/incgTX/+E1dMZW98GuywsBeCJw=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mariadb-corporation/mariadb-connector-python";
     license = lib.licenses.lgpl21Plus;
   };
-}
+})

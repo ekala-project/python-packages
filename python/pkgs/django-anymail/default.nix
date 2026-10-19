@@ -14,7 +14,7 @@
   urllib3,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-anymail";
   version = "15.2";
   pyproject = true;
@@ -22,7 +22,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "anymail";
     repo = "django-anymail";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-ITCFmw4oZXWgFBMiKUcJPgxEp9t/Jg+sOFTMw/kcDac=";
   };
 
@@ -51,4 +51,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/anymail/django-anymail";
     license = lib.licenses.bsd3;
   };
-}
+})

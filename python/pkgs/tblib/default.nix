@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "tblib";
   version = "3.2.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-6aZSaS2Rv090PUoVvBdMC3avx1D+jHttGVzBwdbSzOw=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ionelmc/python-tblib";
     license = lib.licenses.bsd2;
   };
-}
+})

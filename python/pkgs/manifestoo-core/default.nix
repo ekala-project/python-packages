@@ -6,13 +6,13 @@
   hatch-vcs,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "manifestoo-core";
   version = "1.15.5";
   pyproject = true;
 
   src = fetchPypi {
-    inherit version;
+    inherit (finalAttrs) version;
     pname = "manifestoo_core";
     hash = "sha256-K1STpYG4m6JojWEAevB/VkP0fkSbbE5eaxINL0UfxPg=";
   };
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/acsone/manifestoo-core";
     license = lib.licenses.lgpl3Only;
   };
-}
+})

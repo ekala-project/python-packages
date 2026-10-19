@@ -7,13 +7,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "npyscreen";
   version = "5.0.4";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-PWxyB8zNCNkmmATu7ZYLQGeOmeiRiAov2TbyPGbVwVY=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://www.npcole.com/npyscreen/";
     license = lib.licenses.bsd3;
   };
-}
+})

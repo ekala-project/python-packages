@@ -7,13 +7,13 @@
   pkg-config,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pysmbc";
   version = "1.0.25.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-IvFxXfglif2cxCU/6rOQtO8Lq/FPZFE82NB7N4mWMiY=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/hamano/pysmbc";
     license = lib.licenses.gpl2Plus;
   };
-}
+})

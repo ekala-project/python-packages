@@ -5,14 +5,14 @@
   flit-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "diff-match-patch";
   version = "20241021";
   pyproject = true;
 
   src = fetchPypi {
     pname = "diff_match_patch";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-vq5XqZ+kgIRTKTXuKWi4Zh24YYYuyCxvIfSs3W2DUHM=";
   };
 
@@ -25,4 +25,4 @@ buildPythonPackage rec {
     description = "Diff, Match and Patch libraries for Plain Text";
     license = lib.licenses.asl20;
   };
-}
+})

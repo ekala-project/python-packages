@@ -8,7 +8,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "lacrosse-view";
   version = "1.1.2";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "IceBotYT";
     repo = "lacrosse_view";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-KU3/w/LpbDNmrE70wj7j1ztKn+k4wP6RzvUU1p50i2A=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/IceBotYT/lacrosse_view";
     license = lib.licenses.mit;
   };
-}
+})

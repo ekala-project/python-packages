@@ -18,13 +18,13 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "iminuit";
   version = "2.32.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-oys00YZllZvnWta9sd2ARZu5RGbGK0VWMcAFaKzN99I=";
   };
 
@@ -51,4 +51,4 @@ buildPythonPackage rec {
       lgpl2Only
     ];
   };
-}
+})

@@ -11,7 +11,7 @@
   nix-update-script,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "edge-tts";
   version = "7.2.8";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "rany2";
     repo = "edge-tts";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-Zjng/7ALTjmDS4ubSFWoBJQ8TNsc2Ijl9V3jSyKifMc=";
   };
 
@@ -54,4 +54,4 @@ buildPythonPackage rec {
     ];
     mainProgram = "edge-tts";
   };
-}
+})

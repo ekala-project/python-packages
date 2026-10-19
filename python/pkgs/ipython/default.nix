@@ -18,7 +18,7 @@
   psutil,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ipython";
   version = "9.17.1";
   outputs = [
@@ -28,7 +28,7 @@ buildPythonPackage rec {
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-iRm+jCfyCm9EIxRQKAY/Zje0KgPOV2ZbsSAV7h8HNSk=";
   };
 
@@ -60,4 +60,4 @@ buildPythonPackage rec {
     homepage = "https://ipython.readthedocs.io/en/stable/";
     license = lib.licenses.bsd3;
   };
-}
+})

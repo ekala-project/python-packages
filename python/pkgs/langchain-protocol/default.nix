@@ -10,14 +10,14 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "langchain-protocol";
   version = "0.0.18";
   pyproject = true;
 
   src = fetchPypi {
     pname = "langchain_protocol";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-7D4ReC8e0MnbOOWp7QGw56DT+6QG+qiu9llLc8VqY+Y=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://pypi.org/project/langchain-protocol";
     license = lib.licenses.mit;
   };
-}
+})

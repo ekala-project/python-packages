@@ -15,13 +15,13 @@
   tenacity,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyathena";
   version = "3.36.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-AN2Y/6d/HKMLMLNVXru04vccVdMt2LJKCDioE1k/J94=";
   };
 
@@ -56,4 +56,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/laughingman7743/PyAthena/";
     license = lib.licenses.mit;
   };
-}
+})

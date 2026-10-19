@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "argparse-dataclass";
   version = "2.0.0";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mivade";
     repo = "argparse_dataclass";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-ASdP6LOEeTszyppYV6vRQX8BKOHYUimI36tMSZTQfTk=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mivade/argparse_dataclass";
     license = lib.licenses.mit;
   };
-}
+})

@@ -8,13 +8,13 @@
   pytest,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytest-forked";
   version = "1.6.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-Ta/UappgD2XYIrj2BRM+z1s+GUHrs1iOlDtOPrcaWj8=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pytest-dev/pytest-forked";
     license = lib.licenses.mit;
   };
-}
+})

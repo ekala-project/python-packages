@@ -8,7 +8,7 @@
   djangocms-admin-style,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "djangocms-admin-style";
   version = "3.3.1";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "django-cms";
     repo = "djangocms-admin-style";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-cDbmC7IJTT3NuVXBnbUVqC7dUfusMdntDGu2tSvxIdQ=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://django-cms.org";
     license = lib.licenses.bsd3;
   };
-}
+})

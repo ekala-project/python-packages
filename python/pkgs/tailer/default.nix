@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "tailer";
   version = "0.4.1";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "six8";
     repo = "pytailer";
-    tag = version;
+    tag = finalAttrs.version;
     sha256 = "1s5p5m3q9k7r1m0wx5wcxf20xzs0rj14qwg1ydwhf6adr17y2w5y";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/six8/pytailer";
     license = lib.licenses.mit;
   };
-}
+})

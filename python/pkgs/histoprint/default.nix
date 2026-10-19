@@ -9,7 +9,7 @@
   uhi,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "histoprint";
   version = "2.7.1";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "scikit-hep";
     repo = "histoprint";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-yYPFGFrw4JV5Abu2kbNcwsnVtCNvnqhCl4cbX95wzQ8=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/scikit-hep/histoprint";
     license = lib.licenses.mit;
   };
-}
+})

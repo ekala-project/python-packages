@@ -6,13 +6,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "quantile-python";
   version = "1.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-VYYp6IxJfvO5sQgTScGuamG1NZDjF3JCmP9UxnTbeWk=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/matttproud/python_quantile_estimation";
     license = lib.licenses.asl20;
   };
-}
+})

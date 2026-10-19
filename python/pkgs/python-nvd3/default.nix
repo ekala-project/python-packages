@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "python-nvd3";
   version = "0.16.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "areski";
     repo = "python-nvd3";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-+J0lHAOjX3hbymjESQ6WpEnly+1Lv9o0ucIpBxTuS6s=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     mainProgram = "nvd3";
   };
-}
+})

@@ -8,13 +8,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-databricks";
   version = "2.0.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     extension = "zip";
     hash = "sha256-cNETYtwtF/X7HbDP5lwa9VuPE28aDbmltR56z3YM9bk=";
   };
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/databricks/azure-mgmt-databricks";
     license = lib.licenses.mit;
   };
-}
+})

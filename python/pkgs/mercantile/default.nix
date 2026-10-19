@@ -13,7 +13,7 @@
   hypothesis,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mercantile";
   version = "1.2.1";
   pyproject = true;
@@ -21,7 +21,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mapbox";
     repo = "mercantile";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-DiDXO2XnD3We6NhP81z7aIHzHrHDi/nkqy98OT9986w=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mapbox/mercantile";
     license = lib.licenses.bsd3;
   };
-}
+})

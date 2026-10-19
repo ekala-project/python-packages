@@ -5,14 +5,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "types-colorama";
   version = "0.4.15.20260508";
   pyproject = true;
 
   src = fetchPypi {
     pname = "types_colorama";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-OokWA55XRSvSH1fmdOHyIcqeTzGYk8Xju9N7hFwn2OY=";
   };
 
@@ -23,4 +23,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/python/typeshed";
     license = lib.licenses.asl20;
   };
-}
+})

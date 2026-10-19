@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pickleshare";
   version = "0.7.5";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-h2g9R5ZcHaZc2srzHIRB0SuARM3smspQDNePwsaDr8o=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     description = "Tiny 'shelve'-like database with concurrency support";
     license = lib.licenses.mit;
   };
-}
+})

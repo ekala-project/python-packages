@@ -9,13 +9,13 @@
   requests-oauthlib,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "lmnotify";
   version = "0.0.6";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-cCP7BU2f7QJe9gAI298cvkp3OGijvBv8G1RN7qfZ5PE=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/keans/lmnotify";
     license = lib.licenses.mit;
   };
-}
+})

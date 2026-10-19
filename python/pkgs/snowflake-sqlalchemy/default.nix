@@ -7,7 +7,7 @@
   sqlalchemy,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "snowflake-sqlalchemy";
   version = "1.11.1";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "snowflakedb";
     repo = "snowflake-sqlalchemy";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-TleMhXTtUAcgZ0oE4wrfcJUE2c3/x10tqm3T8SwS5x0=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/snowflakedb/snowflake-sqlalchemy";
     license = lib.licenses.asl20;
   };
-}
+})

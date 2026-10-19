@@ -11,7 +11,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytest-randomly";
   version = "4.0.1";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     repo = "pytest-randomly";
     owner = "pytest-dev";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-UQ1G9o4dsVEEo4y2u1TYYurJPfih7QlbilkwPqi39H0=";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pytest-dev/pytest-randomly";
     license = lib.licenses.mit;
   };
-}
+})

@@ -8,7 +8,7 @@
   click,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytest-click";
   version = "1.1.0";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Stranger6667";
     repo = "pytest-click";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-A/RF+SgPu2yYF3eHEFiZwKJW2VwQ185Ln6S3wn2cS0k=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Stranger6667/pytest-click";
     license = lib.licenses.mit;
   };
-}
+})

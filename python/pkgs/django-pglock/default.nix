@@ -7,7 +7,7 @@
   django-pgactivity,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-pglock";
   version = "1.8.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "AmbitionEng";
     repo = "django-pglock";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-IXP7iZmGx0Odn73Tje/UkIpEkHCLhz42kLJppgy2nuU=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/AmbitionEng/django-pglock";
     license = lib.licenses.bsd3;
   };
-}
+})

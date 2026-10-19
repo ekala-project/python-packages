@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "georss-generic-client";
   version = "2026.6.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "exxamalte";
     repo = "python-georss-generic-client";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-1sEDkME4x0SK+5H9uenjfFDhnLUxUJMNEmtTx+VZ2I4=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/exxamalte/python-georss-generic-client";
     license = lib.licenses.asl20;
   };
-}
+})

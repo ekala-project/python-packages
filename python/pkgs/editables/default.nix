@@ -5,13 +5,13 @@
   flit-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "editables";
   version = "0.6";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-EWODSQI4HEYTeHlRxZFIAP3xVa4IhIo3O46lAGeAl3w=";
   };
 
@@ -25,4 +25,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pfmoore/editables";
     license = lib.licenses.mit;
   };
-}
+})

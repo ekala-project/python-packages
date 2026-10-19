@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "itanium_demangler";
   version = "1.1";
   format = "wheel";
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/whitequark/python-itanium_demangler";
     license = lib.licenses.bsd0;
   };
-}
+})

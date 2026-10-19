@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "stem";
   version = "1.8.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-g/sZ/9TJ+CIHwAYFFIA4n4CvIhp+R4MACu3sTjhOtYI=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://stem.torproject.org/";
     license = lib.licenses.lgpl3Only;
   };
-}
+})

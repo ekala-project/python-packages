@@ -9,7 +9,7 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytest-harvest";
   version = "1.10.5";
   pyproject = true;
@@ -17,14 +17,14 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "smarie";
     repo = "python-pytest-harvest";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-s8QiuUFRTTRhSpLa0DHScKFC9xdu+w2rssWCg8sIjsg=";
   };
 
   # create file, that is created by setuptools_scm
   # we disable this file creation as it touches internet
   postPatch = ''
-    echo "version = '${version}'" > pytest_harvest/_version.py
+    echo "version = '${finalAttrs.version}'" > pytest_harvest/_version.py
 
     substituteInPlace pytest_harvest/tests/test_lazy_and_harvest.py \
       --replace-fail "from distutils.version import LooseVersion" "from packaging.version import parse" \
@@ -50,4 +50,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/smarie/python-pytest-harvest";
     license = lib.licenses.bsd3;
   };
-}
+})

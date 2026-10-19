@@ -14,7 +14,7 @@
   wrapt,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "smart-open";
   version = "8.0.1";
   pyproject = true;
@@ -22,7 +22,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "RaRe-Technologies";
     repo = "smart_open";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-Qr2GzmRDCCvR6Q/msSC8F2i8EDYmCIuQP8f593aIisI=";
   };
 
@@ -53,4 +53,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/piskvorky/smart_open";
     license = lib.licenses.mit;
   };
-}
+})

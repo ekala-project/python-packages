@@ -5,13 +5,13 @@
   flit-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "multipart";
   version = "2.0.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-1gdlZ7SJJwJx2ewQPUBHRdoVAa1bcOOn8fB/ViPYKFA=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/defnull/multipart";
     license = lib.licenses.mit;
   };
-}
+})

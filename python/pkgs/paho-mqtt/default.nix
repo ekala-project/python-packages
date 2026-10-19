@@ -5,14 +5,14 @@
   hatchling,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "paho-mqtt";
   version = "2.1.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "paho_mqtt";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-EtbnUR1BN1VaP26hZ66EavLHNXsQvG+k98OWj8FyODQ=";
   };
 
@@ -25,4 +25,4 @@ buildPythonPackage rec {
     homepage = "https://eclipse.org/paho";
     license = lib.licenses.epl20;
   };
-}
+})

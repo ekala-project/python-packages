@@ -11,7 +11,7 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "fastnumbers";
   version = "5.1.1";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "SethMMorton";
     repo = "fastnumbers";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-7UjUkZPGsrtdQhgisI5IA37WvgGGiEXsey9NhATy064=";
   };
 
@@ -49,4 +49,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/SethMMorton/fastnumbers";
     license = lib.licenses.mit;
   };
-}
+})

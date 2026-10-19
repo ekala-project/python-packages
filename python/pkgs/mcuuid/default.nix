@@ -7,7 +7,7 @@
   requests,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mcuuid";
   version = "1.1.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "clerie";
     repo = "mcuuid";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-YwM7CdZVXpUXKXUzFL3AtoDhekLDIvZ/q8taLsHihNk=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/clerie/mcuuid";
     license = lib.licenses.mit;
   };
-}
+})

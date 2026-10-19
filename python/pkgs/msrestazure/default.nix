@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "msrestazure";
   version = "0.6.4";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Azure";
     repo = "msrestazure-for-python";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-ZZVZi0v1ucD2g5FpLaNhfNBf6Ab10fUEcEdkY4ELaEY=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://azure.microsoft.com/en-us/develop/python/";
     license = lib.licenses.mit;
   };
-}
+})

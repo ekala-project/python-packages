@@ -5,7 +5,7 @@
   flit-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "threadpoolctl";
   version = "3.6.0";
 
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "joblib";
     repo = "threadpoolctl";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-yICErKIHc9XKiWg9C9EH0il9zhbbkGntw6mlYDibr9g=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     description = "Helpers to limit number of threads used in native libraries";
     license = lib.licenses.bsd3;
   };
-}
+})

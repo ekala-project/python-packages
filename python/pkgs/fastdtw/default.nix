@@ -12,7 +12,7 @@
   python,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "fastdtw";
   version = "0.3.4";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "slaypni";
     repo = "fastdtw";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "0irc5x4ahfp7f7q4ic97qa898s2awi0vdjznahxrfjirn8b157dw";
   };
 
@@ -61,4 +61,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/slaypni/fastdtw";
     license = lib.licenses.mit;
   };
-}
+})

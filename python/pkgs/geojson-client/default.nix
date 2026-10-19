@@ -11,7 +11,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "geojson-client";
   version = "0.8";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "exxamalte";
     repo = "python-geojson-client";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-nzM5P1ww6yWM3e2v3hRw0ECoYmRPhTs0Q7Wwicl+IpU=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/exxamalte/python-geojson-client";
     license = lib.licenses.asl20;
   };
-}
+})

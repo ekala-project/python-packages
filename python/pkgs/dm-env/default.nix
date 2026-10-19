@@ -10,13 +10,13 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "dm-env";
   version = "1.6";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-pDbrHGVMOeDJhqUWzuIYvqcUC1EPzv9j+X60/P89k94=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/dpkp/kafka-python";
     license = lib.licenses.asl20;
   };
-}
+})

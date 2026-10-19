@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "packaging-legacy";
   version = "23.0.post0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "di";
     repo = "packaging_legacy";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-2TnJjxasC8+c+qHY60e6Jyqhf1nQJfj/tmIA/LvUsT8=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/di/packaging_legacy";
     license = lib.licenses.bsd2;
   };
-}
+})

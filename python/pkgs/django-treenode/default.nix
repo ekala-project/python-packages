@@ -6,7 +6,7 @@
   django,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-treenode";
   version = "0.25.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "fabiocaccamo";
     repo = "django-treenode";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-MsMNKptwxBNHgW+0juIkJCD8qdXvXzorwL/DnL+FqgQ=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/fabiocaccamo/django-treenode";
     license = lib.licenses.mit;
   };
-}
+})

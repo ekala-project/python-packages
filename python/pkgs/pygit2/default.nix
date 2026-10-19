@@ -12,13 +12,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pygit2";
   version = "1.20.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-clNzVinCL/9BKnLEjCBLGcIG/an8sB5RET2WiRlMsc8=";
   };
 
@@ -48,4 +48,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/libgit2/pygit2";
     license = lib.licenses.gpl2Only;
   };
-}
+})

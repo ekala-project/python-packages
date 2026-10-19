@@ -9,7 +9,7 @@
   ua-parser-rs,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ua-parser";
   version = "1.0.2";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ua-parser";
     repo = "uap-python";
-    tag = version;
+    tag = finalAttrs.version;
     fetchSubmodules = true;
     hash = "sha256-KKQlM1AonRqanhWlWIqPMoD+AzDCdwAzBsAbhqpZ4cs=";
   };
@@ -43,4 +43,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ua-parser/uap-python";
     license = lib.licenses.asl20;
   };
-}
+})

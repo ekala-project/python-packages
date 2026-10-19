@@ -6,13 +6,13 @@
   docopt,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "num2words";
   version = "0.5.14";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-sGbsGOVrZhajs4CGtXR9qvuqiGiyJqNhJ+BFHAzzecY=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/savoirfairelinux/num2words";
     license = lib.licenses.lgpl21;
   };
-}
+})

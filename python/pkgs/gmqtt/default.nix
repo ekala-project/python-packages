@@ -11,13 +11,13 @@
   pytest-asyncio,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "gmqtt";
   version = "0.7.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-vt/se6wmtrTOHwxMMs/z1mNSalTIgtMj1BVg/DubRKI=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/wialon/gmqtt";
     license = lib.licenses.mit;
   };
-}
+})

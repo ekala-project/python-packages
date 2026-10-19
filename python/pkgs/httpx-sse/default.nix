@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "httpx-sse";
   version = "0.4.3";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "florimondmanca";
     repo = "httpx-sse";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-6DPbfJlbLmws9GkQ2zePGp4g0at4M32vrIDtmUPDkX4=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/florimondmanca/httpx-sse";
     license = lib.licenses.mit;
   };
-}
+})

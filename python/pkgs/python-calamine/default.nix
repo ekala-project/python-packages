@@ -10,7 +10,7 @@
   rustPlatform,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "python-calamine";
   version = "0.6.0";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "dimastbk";
     repo = "python-calamine";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-vPI2SWOMwEpN0w7BWvFFz1eeXiU9t4xhdl3TpO39l/Q=";
   };
 
@@ -46,4 +46,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     mainProgram = "python-calamine";
   };
-}
+})

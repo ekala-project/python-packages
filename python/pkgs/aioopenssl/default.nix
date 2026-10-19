@@ -15,7 +15,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aioopenssl";
   version = "0.6.0";
   pyproject = true;
@@ -23,7 +23,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "horazont";
     repo = "aioopenssl";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-7Q+4/DlP+kUnC3YNk7woJaxLEEiuVmolUOajepM003Q=";
   };
 
@@ -71,4 +71,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/horazont/aioopenssl";
     license = lib.licenses.asl20;
   };
-}
+})

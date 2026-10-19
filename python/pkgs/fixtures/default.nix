@@ -8,13 +8,13 @@
   hatch-vcs,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "fixtures";
   version = "4.3.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-t9tkAUcyUT8j0SsMSa5Se6DAwfJmfsl9kTbWcVfrzl0=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/testing-cabal/fixtures";
     license = lib.licenses.asl20;
   };
-}
+})

@@ -38,7 +38,7 @@
   zstandard,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pandas";
   version = "3.0.5";
   pyproject = true;
@@ -46,7 +46,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pandas-dev";
     repo = "pandas";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-6Oo6086DAmgONadGyNLg9RvtibsSlR0EJmjoKTbRtM0=";
   };
 
@@ -139,4 +139,4 @@ buildPythonPackage rec {
       objects, statistical functions, and much more.
     '';
   };
-}
+})

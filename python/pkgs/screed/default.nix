@@ -6,13 +6,13 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "screed";
   version = "1.2.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-Dk5q4fPDy0CXa7vCvn4ZGCFhZmbl94QGxAziy/0jqtc=";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     homepage = "https://pypi.org/project/screed/";
     license = lib.licenses.bsd3;
   };
-}
+})

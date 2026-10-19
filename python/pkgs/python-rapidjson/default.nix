@@ -7,7 +7,7 @@
   replaceVars,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   version = "1.23";
   pname = "python-rapidjson";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "python-rapidjson";
     repo = "python-rapidjson";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-BlEmEvwGAm3Ix2YwJSwrxgqqANqmgiWRiRWP91JITio=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     description = "Python wrapper around rapidjson";
     license = lib.licenses.mit;
   };
-}
+})

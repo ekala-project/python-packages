@@ -10,7 +10,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mypermobil";
   version = "0.1.9";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Permobil-Software";
     repo = "mypermobil";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-u/A+UcDXQvqwAaUkVVpj/w5BJn5Oocb5IAzTU0dIuyQ=";
   };
 
@@ -50,4 +50,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Permobil-Software/mypermobil";
     license = lib.licenses.mit;
   };
-}
+})

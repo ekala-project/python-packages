@@ -7,7 +7,7 @@
   hatchling,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "librehardwaremonitor-api";
   version = "1.11.1";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Sab44";
     repo = "librehardwaremonitor-api";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-GAJgLrfYhkdafk0DSgcNgXQ2vjtBf/kOEkkRw7i9rlE=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Sab44/librehardwaremonitor-api";
     license = lib.licenses.mit;
   };
-}
+})

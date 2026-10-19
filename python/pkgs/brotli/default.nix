@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "brotli";
   version = "1.2.0";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "google";
     repo = "brotli";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-kl8ZHt71v17QR2bDP+ad/5uixf+GStEPLQ5ooFoC5i8=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     description = "Generic-purpose lossless compression algorithm";
     license = lib.licenses.mit;
   };
-}
+})

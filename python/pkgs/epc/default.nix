@@ -10,13 +10,13 @@
   sexpdata,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "epc";
   version = "0.0.5";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-oU0up0gXlVog6wCBLjpGMKEyiX602XZCAkDxFSwNfSU=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/tkf/python-epc";
     license = lib.licenses.gpl3;
   };
-}
+})

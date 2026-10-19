@@ -8,7 +8,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aiowmi";
   version = "1.1.3";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "cesbit";
     repo = "aiowmi";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-5pXMNufMdlB2FAQwsODA7S8PL/OhPFzFzpU9KB+Jtgc=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/cesbit/aiowmi";
     license = lib.licenses.gpl3Only;
   };
-}
+})

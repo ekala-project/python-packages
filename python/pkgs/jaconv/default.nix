@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jaconv";
   version = "0.5.0";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ikegami-yukino";
     repo = "jaconv";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-W8vQsMcpsozPdYGFXZyka/8f9XXF3r+yR7qHkNZOhVI=";
   };
 
@@ -25,4 +25,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ikegami-yukino/jaconv";
     license = lib.licenses.mit;
   };
-}
+})

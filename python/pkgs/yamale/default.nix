@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "yamale";
   version = "6.1.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "23andMe";
     repo = "yamale";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-+UZJhZLJEZVGPF9D9B8blGh4pLszQnDoOl5xQMpvVl0=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     mainProgram = "yamale";
   };
-}
+})

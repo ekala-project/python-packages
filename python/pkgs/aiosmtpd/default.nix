@@ -13,7 +13,7 @@
   aiosmtplib,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aiosmtpd";
   version = "1.4.6";
   pyproject = true;
@@ -21,7 +21,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "aio-libs";
     repo = "aiosmtpd";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-Ih/xbWM9O/fFQiZezydlPlIr36fLRc2lLgdfxD5Jviw=";
   };
 
@@ -58,4 +58,4 @@ buildPythonPackage rec {
     '';
     license = lib.licenses.asl20;
   };
-}
+})

@@ -6,13 +6,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "command_runner";
   version = "1.7.6";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-raJ/6bZOYTxDfw61b064hoipeiNAKQOZ3/yB9kEhDMo=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/netinvent/command_runner";
     license = lib.licenses.bsd3;
   };
-}
+})

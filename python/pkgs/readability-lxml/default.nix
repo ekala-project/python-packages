@@ -9,7 +9,7 @@
   lxml-html-clean,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "readability-lxml";
   version = "0.9";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "buriy";
     repo = "python-readability";
-    tag = "${version}";
+    tag = "${finalAttrs.version}";
     hash = "sha256-N7f4PYwuTP5MSRw3xXm3lopZfKe6UHkSOJbUMeL5VBU=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/buriy/python-readability";
     license = lib.licenses.asl20;
   };
-}
+})

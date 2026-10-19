@@ -7,7 +7,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "bite-parser";
   version = "0.2.5";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "jgosmann";
     repo = "bite-parser";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-C508csRbjCeLgkp66TwDuxUtMITTmub5/TFv8x80HLA=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jgosmann/bite-parser";
     license = lib.licenses.mit;
   };
-}
+})

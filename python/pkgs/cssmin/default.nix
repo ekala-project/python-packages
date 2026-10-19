@@ -6,13 +6,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "cssmin";
   version = "0.2.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-4BLwzIQB788mIDMjOQEVZHOK4yvoyEsuQ86L6uwQZ7Y=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/zacharyvoase/cssmin";
     license = lib.licenses.bsd3;
   };
-}
+})

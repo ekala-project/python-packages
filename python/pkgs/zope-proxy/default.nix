@@ -6,7 +6,7 @@
   zope-interface,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "zope-proxy";
   version = "7.1";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "zopefoundation";
     repo = "zope.proxy";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-p5uDHNF7kZJkFibNbM0JLrw5BYqs+qnNH3t0UBt0Krg=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     description = "Generic Transparent Proxies";
     license = lib.licenses.zpl21;
   };
-}
+})

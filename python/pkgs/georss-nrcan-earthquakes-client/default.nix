@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "georss-nrcan-earthquakes-client";
   version = "2026.6.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "exxamalte";
     repo = "python-georss-nrcan-earthquakes-client";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-JRU+ncPRbkA/fQ6aIOX6J09ErMpgH2Rk8AF+eWR5WXg=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/exxamalte/python-georss-nrcan-earthquakes-client";
     license = lib.licenses.asl20;
   };
-}
+})

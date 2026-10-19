@@ -8,7 +8,7 @@
   unstableGitUpdater,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "curio";
   version = "1.6-unstable-2024-04-11";
   pyproject = true;
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/dabeaz/curio";
     license = lib.licenses.bsd3;
   };
-}
+})

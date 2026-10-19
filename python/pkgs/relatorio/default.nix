@@ -7,13 +7,13 @@
   lxml,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "relatorio";
   version = "0.11.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-e6CvclFrRfXR5fL2ZG1LZxTTsTRouLsDicCwvXtySGE=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://relatorio.tryton.org/";
     license = lib.licenses.gpl2Plus;
   };
-}
+})

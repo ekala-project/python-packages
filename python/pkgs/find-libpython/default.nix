@@ -7,7 +7,7 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "find-libpython";
   version = "0.5.1";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ktbarrett";
     repo = "find_libpython";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-g2Gl+usa1mJMvvumynnoy/ckFTSrFA57o339t2j9lWQ=";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     mainProgram = "find_libpython";
   };
-}
+})

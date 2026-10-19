@@ -11,14 +11,14 @@
   traittypes,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
 
   pname = "ipydatawidgets";
   version = "4.3.5";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-OU8kiVdlh8/XVTd6CaBn9GytIggZZQkgIf0avL54Uqg=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/vidartf/ipydatawidgets";
     license = lib.licenses.bsd3;
   };
-}
+})

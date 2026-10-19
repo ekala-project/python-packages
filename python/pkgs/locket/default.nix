@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "locket";
   version = "1.0.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-XA1MBSqLu/dQ4Fao5lzNMJCG9PDxii6sMGqN+kESpjI=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     description = "Library which provides a lock that can be used by multiple processes";
     license = lib.licenses.bsd2;
   };
-}
+})

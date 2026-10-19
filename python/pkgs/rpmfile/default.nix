@@ -6,13 +6,13 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "rpmfile";
   version = "2.1.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-CsK7qJJ3xxhcuGHJxtfQyaJovlFpUW28amjxVWqeP5k=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/srossross/rpmfile";
     license = lib.licenses.mit;
   };
-}
+})

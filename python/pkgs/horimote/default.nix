@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "horimote";
   version = "0.4.1";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "benleb";
     repo = "horimote";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-rEtE0Z/PV/n9pz2mLbHeREv/sl4SexTSOq2yx4LDnAo=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/benleb/horimote";
     license = lib.licenses.mit;
   };
-}
+})

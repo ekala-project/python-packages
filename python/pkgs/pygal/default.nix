@@ -6,13 +6,13 @@
   importlib-metadata,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pygal";
   version = "3.1.3";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-3RGcFM3rVr64UoLj4mh+zjBWEiXUEKgi5rtoaZqm57E=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "http://www.pygal.org";
     license = lib.licenses.lgpl3Plus;
   };
-}
+})

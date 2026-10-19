@@ -9,7 +9,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "elkoep-aio-mqtt";
   version = "0.1.0.beta.4";
   pyproject = true;
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/epdevlab/elkoep-aio-mqtt";
     license = lib.licenses.mit;
   };
-}
+})

@@ -5,14 +5,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "json-merge-patch";
   version = "0.3.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "json_merge_patch";
-    inherit version;
+    inherit (finalAttrs) version;
     sha256 = "sha256-SgItePwvCctJ2Wxkbvw4DTterStcfaviLDkowsLpxOA=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/open-contracting/json-merge-patch";
     license = lib.licenses.bsd3;
   };
-}
+})

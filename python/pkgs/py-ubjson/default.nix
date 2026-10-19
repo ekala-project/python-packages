@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "py-ubjson";
   version = "0.16.1";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Iotic-Labs";
     repo = "py-ubjson";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "1frn97xfa88zrfmpnvdk1pc03yihlchhph99bhjayvzlfcrhm5v3";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Iotic-Labs/py-ubjson";
     license = lib.licenses.asl20;
   };
-}
+})

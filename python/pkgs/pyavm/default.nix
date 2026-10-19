@@ -7,13 +7,13 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyavm";
   version = "0.9.8";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-zhHCeex1vfgj0MOGEkoVKKXns2+l3U0mSZInk58Rf4g=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://astrofrog.github.io/pyavm/";
     license = lib.licenses.mit;
   };
-}
+})

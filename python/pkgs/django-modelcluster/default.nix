@@ -17,7 +17,7 @@
   pytest-django,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-modelcluster";
   version = "6.5";
   pyproject = true;
@@ -25,7 +25,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "wagtail";
     repo = "django-modelcluster";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-jIEiwWuC+sudUHsHuG975nxrlC2yKZN/QjdvMKEeL6s=";
   };
 
@@ -46,4 +46,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/torchbox/django-modelcluster/";
     license = lib.licenses.bsd2;
   };
-}
+})

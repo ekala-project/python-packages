@@ -9,7 +9,7 @@
   recurring-ical-events,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "icalendar-searcher";
   version = "1.0.6";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "python-caldav";
     repo = "icalendar-searcher";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-HkiKy38B5+i6Lb+0Teu/YqvrE1gqy/x3u1GRUWAHNes=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/python-caldav/icalendar-searcher";
     license = lib.licenses.agpl3Only;
   };
-}
+})

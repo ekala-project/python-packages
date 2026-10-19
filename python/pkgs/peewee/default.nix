@@ -14,7 +14,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "peewee";
   version = "4.5.1";
   pyproject = true;
@@ -22,7 +22,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "coleifer";
     repo = "peewee";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-VT0WBsTs+mSMeJGwDEFQQrtYLsU3q9UlqxOoZiNYSr0=";
   };
 
@@ -53,4 +53,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     mainProgram = "pwiz.py";
   };
-}
+})

@@ -18,7 +18,7 @@
   aiohttp,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "opensearch-py";
   version = "3.0.0";
   pyproject = true;
@@ -26,7 +26,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "opensearch-project";
     repo = "opensearch-py";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-IAEh+rB26Zqv7j5g2YIRZRCAtFbBngoh+w8Z4e2bY+M=";
   };
 
@@ -48,4 +48,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/opensearch-project/opensearch-py";
     license = lib.licenses.asl20;
   };
-}
+})

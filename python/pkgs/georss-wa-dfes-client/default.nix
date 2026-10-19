@@ -7,7 +7,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "georss-wa-dfes-client";
   version = "2026.6.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "exxamalte";
     repo = "python-georss-wa-dfes-client";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-9wkGwuO8FV3ZJWq0LqdUFFwW4WQw+f826mTPFp+LMpw=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/exxamalte/python-georss-wa-dfes-client";
     license = lib.licenses.asl20;
   };
-}
+})

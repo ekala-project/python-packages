@@ -8,7 +8,7 @@
   scipy,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "scikit-fuzzy";
   version = "0.5.0";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "scikit-fuzzy";
     repo = "scikit-fuzzy";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-02aIYBdbQXQD9S1R/gZZeKTn5LxloE0GGGRttxJnR/o=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     description = "Fuzzy logic toolkit for scientific Python";
     license = lib.licenses.bsd3;
   };
-}
+})

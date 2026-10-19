@@ -7,13 +7,13 @@
   pytz,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "dateutils";
   version = "0.6.12";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-A92QvLIVQb1OtLATY35PG1+USIHEbMbktnpgWeNw4/E=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jmcantrell/python-dateutils";
     license = lib.licenses.bsd0;
   };
-}
+})

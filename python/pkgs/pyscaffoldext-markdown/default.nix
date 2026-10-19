@@ -18,13 +18,13 @@
   virtualenv,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyscaffoldext-markdown";
   version = "0.5";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-fycTscq9rjUNFidWyeoH4QwedthdCdqqjXDO9DC4tds=";
   };
 
@@ -62,4 +62,4 @@ buildPythonPackage rec {
     homepage = "https://pypi.org/project/pyscaffoldext-markdown/";
     license = lib.licenses.mit;
   };
-}
+})

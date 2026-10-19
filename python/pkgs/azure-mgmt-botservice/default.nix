@@ -8,13 +8,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-botservice";
   version = "2.0.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-hsBNJ8UnwZ2WAKiCFfriulJNxnRFU4ew0OUXIrWm1ro=";
     extension = "zip";
   };
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/botservice/azure-mgmt-botservice";
     license = lib.licenses.mit;
   };
-}
+})

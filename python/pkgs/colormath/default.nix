@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "colormath";
   # Switch to unstable which fixes an deprecation issue with newer numpy
   # versions, should be included in versions > 3.0
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/gtaylor/python-colormath";
     license = lib.licenses.bsd2;
   };
-}
+})

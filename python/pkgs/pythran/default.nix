@@ -14,7 +14,7 @@
 let
   inherit (python) stdenv;
 in
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pythran";
   version = "0.18.1";
   pyproject = true;
@@ -22,7 +22,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "serge-sans-paille";
     repo = "pythran";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-H13FGApWCgBLWOtoZ5yEIV4Z+KAOK3Xs4KFM4oLmKmk=";
   };
 
@@ -69,4 +69,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/serge-sans-paille/pythran";
     license = lib.licenses.bsd3;
   };
-}
+})

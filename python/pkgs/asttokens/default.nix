@@ -5,7 +5,7 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "asttokens";
   version = "3.0.2";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "gristlabs";
     repo = "asttokens";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-qdjfhcU1Of07hEY9HZ8qUofPoYBixE4RnIohYMQWsqU=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/gristlabs/asttokens";
     license = lib.licenses.asl20;
   };
-}
+})

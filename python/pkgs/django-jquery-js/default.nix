@@ -7,7 +7,7 @@
   django,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-jquery-js";
   version = "3.1.1";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromBitbucket {
     owner = "tim_heap";
     repo = "django-jquery";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-TzMo31jFhcvlrmq2TJgQyds9n8eATaChnyhnQ7bwdzs=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://bitbucket.org/tim_heap/django-jquery";
     license = lib.licenses.mit;
   };
-}
+})

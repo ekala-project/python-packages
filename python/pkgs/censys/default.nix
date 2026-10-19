@@ -17,7 +17,7 @@
   writableTmpDirAsHomeHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "censys";
   version = "2.3.0";
   pyproject = true;
@@ -25,7 +25,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "censys";
     repo = "censys-python";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-GBFsAVecUN49vousqnB6enqRsAg1aBrjaA/Q7XXnOUE=";
   };
 
@@ -68,4 +68,4 @@ buildPythonPackage rec {
     license = lib.licenses.asl20;
     mainProgram = "censys";
   };
-}
+})

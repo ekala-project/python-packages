@@ -11,7 +11,7 @@
   tzlocal,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "apscheduler";
   version = "4.0.0a6";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "agronholm";
     repo = "apscheduler";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-1Gv8Cm0YA6/z2onJu1pSJj0v4lrBLeEfGo+qkJLUwWY=";
   };
 
@@ -45,4 +45,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/agronholm/apscheduler";
     license = lib.licenses.mit;
   };
-}
+})

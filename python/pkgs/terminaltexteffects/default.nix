@@ -5,13 +5,13 @@
   hatchling,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "terminaltexteffects";
   version = "0.15.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-9LMchr+pQ9W/Oyxey/rqDeZe1KlRAoxA+OTLVO/QZDk=";
   };
 
@@ -25,4 +25,4 @@ buildPythonPackage rec {
     mainProgram = "tte";
     license = lib.licenses.mit;
   };
-}
+})

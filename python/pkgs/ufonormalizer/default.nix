@@ -7,13 +7,13 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ufonormalizer";
   version = "0.6.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     sha256 = "sha256-TFcVu5SDgfLGQa+CuUk4rSQtm1Nl3RxbfOPXVVaibDo=";
     extension = "zip";
   };
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/unified-font-object/ufoNormalizer";
     license = lib.licenses.bsd3;
   };
-}
+})

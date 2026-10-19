@@ -14,7 +14,7 @@
   tabulate,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytoolconfig";
   version = "1.3.1";
   pyproject = true;
@@ -22,7 +22,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "bagel897";
     repo = "pytoolconfig";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-h21SDgVsnCDZQf5GS7sFE19L/p+OlAFZGEYKc0RHn30=";
   };
 
@@ -30,7 +30,7 @@ buildPythonPackage rec {
     "out"
   ];
 
-  env.PDM_PEP517_SCM_VERSION = version;
+  env.PDM_PEP517_SCM_VERSION = finalAttrs.version;
 
   nativeBuildInputs = [
     pdm-backend
@@ -59,4 +59,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/bagel897/pytoolconfig";
     license = lib.licenses.lgpl3Plus;
   };
-}
+})

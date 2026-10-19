@@ -13,7 +13,7 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "nasdaq-data-link";
   version = "1.0.4";
   pyproject = true;
@@ -21,7 +21,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Nasdaq";
     repo = "data-link-python";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-Q3Ay9FpJsvSVu0WU2bxFyo3ODKP/ZUo3SqsBtOGrIIE=";
   };
 
@@ -44,4 +44,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Nasdaq/data-link-python";
     license = lib.licenses.mit;
   };
-}
+})

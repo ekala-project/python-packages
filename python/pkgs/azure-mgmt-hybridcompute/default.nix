@@ -9,14 +9,14 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-hybridcompute";
   version = "10.0.0";
   format = "wheel";
 
   src = fetchPypi {
     pname = "azure_mgmt_hybridcompute";
-    inherit version;
+    inherit (finalAttrs) version;
     format = "wheel";
     python = "py3";
     dist = "py3";
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Azure/azure-sdk-for-python";
     license = lib.licenses.mit;
   };
-}
+})

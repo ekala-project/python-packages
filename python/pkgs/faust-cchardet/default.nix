@@ -7,7 +7,7 @@
   python,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "faust-cchardet";
   version = "3.2.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "faust-streaming";
     repo = "cChardet";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     fetchSubmodules = true;
     hash = "sha256-jXMf553NsgXgjuvEMKEst8s8k6nE5868DvUPV3Udvvk=";
   };
@@ -28,7 +28,7 @@ buildPythonPackage rec {
   postFixup = ''
     # fake cchardet distinfo, so packages that depend on cchardet
     # accept it as a drop-in replacement
-    ln -s $out/${python.sitePackages}/{faust_,}cchardet-${version}.dist-info
+    ln -s $out/${python.sitePackages}/{faust_,}cchardet-${finalAttrs.version}.dist-info
   '';
 
   pythonImportsCheck = [ "cchardet" ];
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/faust-streaming/cChardet";
     license = lib.licenses.mpl11;
   };
-}
+})

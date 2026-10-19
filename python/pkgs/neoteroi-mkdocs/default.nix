@@ -14,7 +14,7 @@
   setuptools,
   stdenv,
 }:
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "neoteroi-mkdocs";
   version = "1.2.0";
   pyproject = true;
@@ -22,7 +22,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Neoteroi";
     repo = "mkdocs-plugins";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-l5jJCmsBns1bGv+yBA0R6TDlfQuweFr92kNnQalWB7k=";
   };
 
@@ -61,4 +61,4 @@ buildPythonPackage rec {
     description = "Plugins for MkDocs";
     license = lib.licenses.mit;
   };
-}
+})

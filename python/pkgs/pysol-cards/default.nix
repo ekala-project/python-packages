@@ -8,13 +8,13 @@
   random2,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pysol-cards";
   version = "0.24.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit version;
+    inherit (finalAttrs) version;
     pname = "pysol_cards";
     hash = "sha256-qYVJLagaoViN/AVtmnxsqD9mJUwLkPJa/GgqcHE9TUs=";
   };
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/shlomif/pysol_cards";
     license = lib.licenses.mit;
   };
-}
+})

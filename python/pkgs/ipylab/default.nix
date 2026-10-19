@@ -9,7 +9,7 @@
   jupyterlab,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ipylab";
   version = "1.1.0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   # This needs to be fetched from Pypi, as we rely on the nodejs build to be skipped,
   # which only happens if ipylab/labextension/style.js is present.
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-85hYpNnvbsuC+O/uufa1oBo6ZNTzxPKl/i1YrllN4hI=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jtpio/ipylab";
     license = lib.licenses.bsd3;
   };
-}
+})

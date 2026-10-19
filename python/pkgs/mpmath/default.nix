@@ -6,7 +6,7 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mpmath";
   version = "1.4.1";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mpmath";
     repo = "mpmath";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-ykfKrpDri+4n9Y26S7nFl6nF0CV6V0A11ijmt8/apvg=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     license = lib.licenses.bsd3;
     platforms = lib.platforms.unix;
   };
-}
+})

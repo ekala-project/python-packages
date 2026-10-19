@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "motionblinds";
   version = "0.6.30";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "starkillerOG";
     repo = "motion-blinds";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-xV9od7xTKBBE4f4Mqg57Mp0MXO8/lG+bBKzG+jv6gf4=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/starkillerOG/motion-blinds";
     license = lib.licenses.mit;
   };
-}
+})

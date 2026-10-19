@@ -7,7 +7,7 @@
   mdit-py-plugins,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mdformat-footnote";
   version = "0.1.3";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "executablebooks";
     repo = "mdformat-footnote";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-KPxPDKG3aC5zLdrJRL3kzFMpLJ0Yk5UZXW4CamC1/NQ=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/executablebooks/mdformat-footnote";
     license = lib.licenses.mit;
   };
-}
+})

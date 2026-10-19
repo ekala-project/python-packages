@@ -10,7 +10,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aioasuswrt";
   version = "1.5.4";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "kennedyshead";
     repo = "aioasuswrt";
-    tag = "V${version}";
+    tag = "V${finalAttrs.version}";
     hash = "sha256-tsvtOe3EX/Z7g6Z0MM2npYOTEJoKV9wUbhkhcROILxE=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/kennedyshead/aioasuswrt";
     license = lib.licenses.mit;
   };
-}
+})

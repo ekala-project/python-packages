@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aioamqp";
   version = "0.15.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Polyconseil";
     repo = "aioamqp";
-    tag = "aioamqp-${version}";
+    tag = "aioamqp-${finalAttrs.version}";
     hash = "sha256-fssPknJn1tLtzb+2SFyZjfdhUdD8jqkwlInoi5uaplk=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/polyconseil/aioamqp";
     license = lib.licenses.bsd3;
   };
-}
+})

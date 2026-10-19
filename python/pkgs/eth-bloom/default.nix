@@ -7,7 +7,7 @@
   eth-hash,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "eth-bloom";
   version = "4.0.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ethereum";
     repo = "eth-bloom";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-zz0os8+Du5nFSQqOIS42X1h3j4MGgLsRUvvjVTTfKG4=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ethereum/eth-bloom";
     license = lib.licenses.mit;
   };
-}
+})

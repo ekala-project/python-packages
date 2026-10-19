@@ -29,7 +29,7 @@
   requests,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "certomancer";
   version = "0.14.0";
   pyproject = true;
@@ -37,7 +37,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "MatthiasValvekens";
     repo = "certomancer";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-rsugn1g8iYESrC+IUSbxCAbwnKXWG+ubbUj9QdZB+Ow=";
   };
 
@@ -69,4 +69,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/MatthiasValvekens/certomancer";
     license = lib.licenses.mit;
   };
-}
+})

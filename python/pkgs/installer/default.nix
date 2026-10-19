@@ -5,7 +5,7 @@
   flit-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "installer";
   version = "1.0.1";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pypa";
     repo = "installer";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-GkHLZfzHfTcBL8wQmIGlNkVodEw9Pih4i1SS36mSfBo=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pypa/installer";
     license = lib.licenses.mit;
   };
-}
+})

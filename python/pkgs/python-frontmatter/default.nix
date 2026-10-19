@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "python-frontmatter";
   version = "1.3.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "eyeseast";
     repo = "python-frontmatter";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-b/ruWPPiKvDzMjcVhxiBtnAaMNWnWvy1v8GZxGeibyY=";
   };
 
@@ -47,4 +47,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     platforms = lib.platforms.unix;
   };
-}
+})

@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "websockets";
   version = "17.0.1";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "aaugustin";
     repo = "websockets";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-7qY2u0rIHnwQNZtgZ59YOcO2EKCV++/lc9q1BHRdJr0=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://websockets.readthedocs.io/";
     license = lib.licenses.bsd3;
   };
-}
+})

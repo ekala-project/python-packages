@@ -10,7 +10,7 @@
   svgwrite,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "irm-kmi-api";
   version = "1.1.1";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "jdejaegh";
     repo = "irm-kmi-api";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-RJMIXisgG4ybynsm7kCrN8zOU0EJv7a1Q74l+edxH/E=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jdejaegh/irm-kmi-api";
     license = lib.licenses.mit;
   };
-}
+})

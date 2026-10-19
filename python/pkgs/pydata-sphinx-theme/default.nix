@@ -10,14 +10,14 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pydata-sphinx-theme";
   version = "0.21.0";
 
   format = "wheel";
 
   src = fetchPypi {
-    inherit version;
+    inherit (finalAttrs) version;
     format = "wheel";
     dist = "py3";
     python = "py3";
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pydata/pydata-sphinx-theme";
     license = lib.licenses.bsd3;
   };
-}
+})

@@ -7,13 +7,13 @@
   plantuml,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "sphinxcontrib-plantuml";
   version = "0.31";
   pyproject = true;
 
   src = fetchPypi {
-    inherit version;
+    inherit (finalAttrs) version;
     pname = "sphinxcontrib_plantuml";
     hash = "sha256-/XR1L46gcOZBw/ikAvzPodSkBW4JZ7VgM9KnYoLZ+VY=";
   };
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/sphinx-contrib/plantuml/";
     license = lib.licenses.bsd2;
   };
-}
+})

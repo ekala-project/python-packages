@@ -6,13 +6,13 @@
   tinycss2,
   lib,
 }:
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "dict2css";
   version = "0.6.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit version;
+    inherit (finalAttrs) version;
     pname = "dict2css";
     hash = "sha256-FD5Vy3HJiojHnyxB4IpfpNh1ZZJ1dW95TjHM1pk2zog=";
   };
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/sphinx-toolbox/dict2css";
     license = lib.licenses.mit;
   };
-}
+})

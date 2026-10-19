@@ -22,7 +22,7 @@
   flaky,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "holoviews";
   version = "1.22.1";
   pyproject = true;
@@ -30,7 +30,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "holoviz";
     repo = "holoviews";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-rZZQgM8gchWTsgA47BVWblzWiWMuHK2vAZD/1Z8BHAk=";
   };
 
@@ -91,4 +91,4 @@ buildPythonPackage rec {
     homepage = "https://www.holoviews.org/";
     license = lib.licenses.bsd3;
   };
-}
+})

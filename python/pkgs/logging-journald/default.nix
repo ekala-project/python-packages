@@ -5,7 +5,7 @@
   hatchling,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "logging-journald";
   version = "0.6.12";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mosquito";
     repo = "logging-journald";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-kR/ter0hr9t+f1yFG9dhE/CZz92ve64nBAMnvLosG9E=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mosquito/logging-journald";
     license = lib.licenses.mit;
   };
-}
+})

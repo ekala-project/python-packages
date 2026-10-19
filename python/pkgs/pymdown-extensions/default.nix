@@ -36,7 +36,7 @@ let
     "tilde"
   ];
 in
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pymdown-extensions";
   version = "11.0.2";
   pyproject = true;
@@ -44,7 +44,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "facelessuser";
     repo = "pymdown-extensions";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-AmKt9KNBvT5yGyKfYmS3BE5XQHZVAP+UJGMBCR3jbLI=";
   };
 
@@ -64,4 +64,4 @@ buildPythonPackage rec {
       bsd2
     ];
   };
-}
+})

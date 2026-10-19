@@ -32,7 +32,7 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "snowflake-connector-python";
   version = "4.7.3";
   pyproject = true;
@@ -40,7 +40,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "snowflakedb";
     repo = "snowflake-connector-python";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-Th2fMBia+367o1QM0odt9rC/j9ta56b58VO+VNP9MEc=";
   };
 
@@ -94,4 +94,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/snowflakedb/snowflake-connector-python";
     license = lib.licenses.asl20;
   };
-}
+})

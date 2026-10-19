@@ -8,7 +8,7 @@
   unixodbc,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyodbc";
   version = "5.3.0";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   disabled = isPyPy; # use pypypdbc instead
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-L+DgY9j7Zu/QrG3DkjbE3hpF8Xwz6t7Q1VPSHBmfTQU=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     platforms = lib.platforms.unix;
   };
-}
+})

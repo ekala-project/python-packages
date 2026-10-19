@@ -7,13 +7,13 @@
   python-dotenv,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytest-dotenv";
   version = "0.5.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-LcbDrG2HZMccbSgE6QLQ/4EPoZaS6V/hOK78mxqnNzI=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/quiqua/pytest-dotenv";
     license = lib.licenses.mit;
   };
-}
+})

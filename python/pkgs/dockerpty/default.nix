@@ -10,13 +10,13 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "dockerpty";
   version = "0.4.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-aanWnVc6DaoxvNHAd07u1cFcKV/nGcYaylUO0TkxVs4=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/d11wtq/dockerpty";
     license = lib.licenses.asl20;
   };
-}
+})

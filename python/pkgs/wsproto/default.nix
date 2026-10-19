@@ -6,13 +6,13 @@
   h11,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "wsproto";
   version = "1.3.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-uGiF3PKU4VIEkZlQ9mbgb/xsfBFMqQCwYNbhYpNSgpQ=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/python-hyper/wsproto/";
     license = lib.licenses.mit;
   };
-}
+})

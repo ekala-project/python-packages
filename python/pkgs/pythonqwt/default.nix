@@ -9,7 +9,7 @@
   qtpy,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pythonqwt";
   version = "0.16.3";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "PlotPyStack";
     repo = "PythonQwt";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-uCCbKlyqeXUcmFYz/0b/+vpL7vivO8qn0L2PHgfN1H8=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/PlotPyStack/PythonQwt";
     license = lib.licenses.lgpl21Only;
   };
-}
+})

@@ -5,7 +5,7 @@
   poetry-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aiohappyeyeballs";
   version = "2.7.1";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "bdraco";
     repo = "aiohappyeyeballs";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-smpdmmut4wYekVew13KZXluI71lSUdZriPejUumkLNU=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/bdraco/aiohappyeyeballs";
     license = lib.licenses.psfl;
   };
-}
+})

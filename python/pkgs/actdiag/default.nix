@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "actdiag";
   version = "3.0.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "blockdiag";
     repo = "actdiag";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-WmprkHOgvlsOIg8H77P7fzEqxGnj6xaL7Df7urRkg3o=";
   };
 
@@ -44,4 +44,4 @@ buildPythonPackage rec {
     mainProgram = "actdiag";
     platforms = lib.platforms.unix;
   };
-}
+})

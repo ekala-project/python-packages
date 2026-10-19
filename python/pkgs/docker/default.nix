@@ -17,7 +17,7 @@
   websocket-client,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "docker";
   version = "7.2.0";
   pyproject = true;
@@ -25,7 +25,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "docker";
     repo = "docker-py";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-4LmmWAmwoFroV4Ez0r1X72jCpBt69upQMrsA4eP5K6o=";
   };
 
@@ -53,4 +53,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/docker/docker-py";
     license = lib.licenses.asl20;
   };
-}
+})

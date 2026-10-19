@@ -11,13 +11,13 @@
   versioneer,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "tableauserverclient";
   version = "0.41";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-5JGXW58OGUZ/tkI7gUURqfVJwivOeMhoB5ol++gaDpU=";
   };
 
@@ -46,4 +46,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/tableau/server-client-python";
     license = lib.licenses.mit;
   };
-}
+})

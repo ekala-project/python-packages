@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aiohttp-retry";
   version = "2.9.1";
   pyproject = true;
@@ -14,13 +14,13 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "inyutin";
     repo = "aiohttp_retry";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-8S4gjeN8ktdDNd8GUsejaZdCaG/VXYPo0RJpwrrttGQ=";
   };
 
   postPatch = ''
     substituteInPlace setup.py \
-      --replace-fail 'version="2.9.0"' 'version="${version}"'
+      --replace-fail 'version="2.9.0"' 'version="${finalAttrs.version}"'
   '';
 
   build-system = [ setuptools ];
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/inyutin/aiohttp_retry";
     license = lib.licenses.mit;
   };
-}
+})

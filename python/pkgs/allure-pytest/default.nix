@@ -7,7 +7,7 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "allure-pytest";
   version = "2.15.3";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "allure-framework";
     repo = "allure-python";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-06SKodvyoT0mYn4RmAIryZc+VyTI79KXFK+2/zuhzQ0=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/allure-framework/allure-python";
     license = lib.licenses.asl20;
   };
-}
+})

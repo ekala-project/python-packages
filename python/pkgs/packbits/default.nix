@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "packbits";
   version = "0.6";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-vGs3C7NOBKyM+oNeBsBIQ4Cv/G1ZOtuACd1sD3v/8DQ=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     description = "PackBits encoder/decoder for Python";
     license = lib.licenses.mit;
   };
-}
+})

@@ -5,7 +5,7 @@
   poetry-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aiolimiter";
   version = "1.2.1";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mjpieters";
     repo = "aiolimiter";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-wgHR0GzaPXlhL4ErklFqmWNFO49dvd5X5MgyYHVH4Eo=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mjpieters/aiolimiter";
     license = lib.licenses.mit;
   };
-}
+})

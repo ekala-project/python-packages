@@ -6,7 +6,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "timeago";
   version = "1.0.16";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "hustcc";
     repo = "timeago";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-PqORJKAVrjezU/yP2ky3gb1XsM8obDI3GQzi+mok/OM=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/hustcc/timeago";
     license = lib.licenses.mit;
   };
-}
+})

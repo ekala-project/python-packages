@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyunormalize";
   version = "17.0.0";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mlodewijck";
     repo = "pyunormalize";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-JDcMWaA6r8YRZYJseyKUyPAInrqHHYhQXYmw9rr3ls4=";
   };
 
@@ -25,4 +25,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mlodewijck/pyunormalize";
     license = lib.licenses.mit;
   };
-}
+})

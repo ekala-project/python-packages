@@ -13,7 +13,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pycognito";
   version = "2024.5.1";
   pyproject = true;
@@ -21,7 +21,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pvizeli";
     repo = "pycognito";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-U23fFLru4j6GnWMcYtsCW9BVJkVcCoefPH6oMijYGew=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pvizeli/pycognito";
     license = lib.licenses.asl20;
   };
-}
+})

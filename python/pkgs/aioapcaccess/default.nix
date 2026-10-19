@@ -8,7 +8,7 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aioapcaccess";
   version = "1.0.0";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "yuxincs";
     repo = "aioapcaccess";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-gCi0vo4w3jr4w5neQS9v821rdfE+SqnUkrOrEQUET7E=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/yuxincs/aioapcaccess";
     license = lib.licenses.mit;
   };
-}
+})

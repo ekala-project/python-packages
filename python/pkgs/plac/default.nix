@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "plac";
   version = "1.4.7";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-lX/7q46oq4wLnyaU2qKpXzVgFRzRYry8kel/+U1FxPk=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ialbert/plac";
     license = lib.licenses.bsdOriginal;
   };
-}
+})

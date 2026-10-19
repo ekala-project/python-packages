@@ -10,7 +10,7 @@
   # tests
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "paginate";
   version = "0.5.7";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Pylons";
     repo = "paginate";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-+zX9uGNWcV4BWbD2lcd1u9zZ4m7CnbsYZnc99HNaF8I=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Pylons/paginate";
     license = lib.licenses.mit;
   };
-}
+})

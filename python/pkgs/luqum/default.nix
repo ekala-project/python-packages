@@ -9,7 +9,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "luqum";
   version = "1.0.0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "jurismarches";
     repo = "luqum";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-X1P7sACcp2yVjW3xWmD88iDT4T9dSDi8yxwDFaRbEsc=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jurismarches/luqum";
     license = lib.licenses.asl20;
   };
-}
+})

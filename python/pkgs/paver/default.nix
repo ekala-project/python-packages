@@ -10,14 +10,14 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "paver";
   version = "1.3.4";
   pyproject = true;
 
   src = fetchPypi {
     pname = "Paver";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-0+ZJiIFIWrdQ7+QMUniYKpNDvGJ+E3sRrc7WJ3GTCMc=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/paver/paver";
     license = lib.licenses.bsd3;
   };
-}
+})

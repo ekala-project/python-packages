@@ -8,13 +8,13 @@
   wrapt,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "debtcollector";
   version = "3.1.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-J4pFYIzxbnnArhCFHYaRhca3j4ZhDfjyekUaGMH+xzI=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/openstack/debtcollector";
     license = lib.licenses.asl20;
   };
-}
+})

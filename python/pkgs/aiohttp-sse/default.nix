@@ -10,7 +10,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aiohttp-sse";
   version = "2.2.0";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "aio-libs";
     repo = "aiohttp-sse";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-iCjWuECUQukCtlQPjztEwawqSzd3LvvWRGXnhZem22w=";
   };
 
@@ -56,4 +56,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/aio-libs/aiohttp-sse";
     license = lib.licenses.asl20;
   };
-}
+})

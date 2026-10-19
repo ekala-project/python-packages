@@ -12,14 +12,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "google-cloud-dataproc";
   version = "5.30.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "google_cloud_dataproc";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-KjxEzD1qPXpoDckzHx+XzVfFk0oTV67negdgcnZkTm0=";
   };
 
@@ -47,4 +47,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-dataproc";
     license = lib.licenses.asl20;
   };
-}
+})

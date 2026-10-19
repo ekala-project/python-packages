@@ -15,7 +15,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "html-sanitizer";
   version = "2.6";
   pyproject = true;
@@ -23,7 +23,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "matthiask";
     repo = "html-sanitizer";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-egBGhv7vudH32jwh9rAXuXfMzPDxJ60S5WKbc4kzCTU=";
   };
 
@@ -52,4 +52,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/matthiask/html-sanitizer";
     license = lib.licenses.bsd3;
   };
-}
+})

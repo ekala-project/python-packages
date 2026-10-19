@@ -14,7 +14,7 @@
   tinycss2,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "cairosvg";
   version = "2.9.0";
   pyproject = true;
@@ -22,7 +22,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Kozea";
     repo = "CairoSVG";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-WtMFOYaN/cRrL1Q4ma/UkR3kNFObNhp0Gm7i9NQAqz8=";
   };
 
@@ -45,4 +45,4 @@ buildPythonPackage rec {
     description = "SVG converter based on Cairo";
     mainProgram = "cairosvg";
   };
-}
+})

@@ -6,14 +6,14 @@
   regex,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "re-assert";
   version = "1.1.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "re_assert";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-UXLfvSBHoV3/I0dzXep+SVR5zH5YhBGZpKSXMlayBGQ=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/asottile/re-assert";
     license = lib.licenses.mit;
   };
-}
+})

@@ -6,13 +6,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "environmental-override";
   version = "0.1.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     sha256 = "1vhd37i6f8xh6kd61yxc2ynzgcln7v2p7fyzjmhbkdnws6gwfs6s";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/coddingtonbear/environmental-override";
     license = lib.licenses.mit;
   };
-}
+})

@@ -26,7 +26,7 @@ let
     pythonImportsCheck = [ ];
   };
 in
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "trio";
   version = "0.34.0";
   pyproject = true;
@@ -34,7 +34,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "python-trio";
     repo = "trio";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-5ooFU1TP9CU0+dpIWs8cw+gHvBzntCnxejpBQn/QffE=";
   };
 
@@ -56,4 +56,4 @@ buildPythonPackage rec {
       asl20
     ];
   };
-}
+})

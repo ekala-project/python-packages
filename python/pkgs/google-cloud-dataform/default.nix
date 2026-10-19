@@ -11,14 +11,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "google-cloud-dataform";
   version = "0.11.3";
   pyproject = true;
 
   src = fetchPypi {
     pname = "google_cloud_dataform";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-UTuLDr7LU6LwgJmRsQrNP11tHwbXd9OjZTAPBZi6u2k=";
   };
 
@@ -50,4 +50,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-dataform";
     license = lib.licenses.asl20;
   };
-}
+})

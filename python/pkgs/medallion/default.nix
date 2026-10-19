@@ -11,7 +11,7 @@
   pymongo,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "medallion";
   version = "3.0.0";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "oasis-open";
     repo = "cti-taxii-server";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-+fWifWi/XR6MSOLhWXn2CFpItVdkOpzQItlrZkjapAk=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://medallion.readthedocs.io/en/latest/";
     license = lib.licenses.bsd3;
   };
-}
+})

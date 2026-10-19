@@ -7,13 +7,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mergedict";
   version = "1.0.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-4ZkrNqVCKQFPvLx6nIwo0fSuEx6h2NNFyTlz+fDcb9w=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     description = "Python dict with a merge() method";
     license = lib.licenses.mit;
   };
-}
+})

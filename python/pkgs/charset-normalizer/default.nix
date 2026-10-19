@@ -9,7 +9,7 @@
   withMypyc ? false,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "charset-normalizer";
   version = "3.5.1";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "jawah";
     repo = "charset_normalizer";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-zIN1y9HVwaCqixjRFLn6g/tz95E41m7t7j4eY5jNZMs=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://charset-normalizer.readthedocs.io/";
     license = lib.licenses.mit;
   };
-}
+})

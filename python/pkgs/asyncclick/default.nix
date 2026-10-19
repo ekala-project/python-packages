@@ -8,7 +8,7 @@
   trio,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "asyncclick";
   version = "8.3.0.5";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "python-trio";
     repo = "asyncclick";
-    tag = "${version}+async";
+    tag = "${finalAttrs.version}+async";
     hash = "sha256-gKtxwI/vDB2pDrhiA+e1TClwW5nXvBRCMF3oCNoLaDo=";
   };
 
@@ -48,4 +48,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/python-trio/asyncclick";
     license = lib.licenses.bsd3;
   };
-}
+})

@@ -7,13 +7,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "homeconnect";
   version = "0.8.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-W475a+TlGiKRR1EDYiFVmApmQfmft85iBQLRnbEmcuA=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/DavidMStraub/homeconnect";
     license = lib.licenses.mit;
   };
-}
+})

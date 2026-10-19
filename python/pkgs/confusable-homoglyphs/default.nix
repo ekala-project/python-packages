@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "confusable_homoglyphs";
   version = "3.3.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-uZUAHJsuG0zqDPXzhAp8eRiKjLutBT1pNXK9jBwexGA=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://sr.ht/~valhalla/confusable_homoglyphs/";
     license = lib.licenses.mit;
   };
-}
+})

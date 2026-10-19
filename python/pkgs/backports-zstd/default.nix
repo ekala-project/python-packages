@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "backports-zstd";
   version = "1.3.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "rogdham";
     repo = "backports.zstd";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     fetchSubmodules = true;
     postFetch = ''
       rm -r "$out/src/c/zstd"
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/rogdham/backports.zstd";
     license = lib.licenses.psfl;
   };
-}
+})

@@ -15,7 +15,7 @@
   openapi-spec-validator,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "prance";
   version = "26.07.19.0";
   pyproject = true;
@@ -23,7 +23,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "RonnyPfannschmidt";
     repo = "prance";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     fetchSubmodules = true;
     hash = "sha256-kUPGSG8ZLJlke0X/Vj3s6USNGIW3xtF8/N2ZUZ7KKoI=";
   };
@@ -53,4 +53,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     mainProgram = "prance";
   };
-}
+})

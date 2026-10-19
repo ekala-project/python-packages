@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "expects";
   version = "0.9.0";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "jaimegildesagredo";
     repo = "expects";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-3j9LMt/IakIyFz4I+OoGwZnEg/0KzjyBQJ4miyCsYVY=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://expects.readthedocs.io/";
     license = lib.licenses.asl20;
   };
-}
+})

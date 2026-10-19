@@ -15,7 +15,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "lomond";
   version = "0.3.3";
   pyproject = true;
@@ -62,4 +62,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/wildfoundry/dataplicity-lomond";
     license = lib.licenses.bsd3;
   };
-}
+})

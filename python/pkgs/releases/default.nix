@@ -8,7 +8,7 @@
   sphinx,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "releases";
   version = "2.1.1";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "bitprophet";
     repo = "releases";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-IgEKAUk97R3ZvqvexD/ptT8i0uf48K+DKkk4q3pn3G8=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/bitprophet/releases";
     license = lib.licenses.bsd2;
   };
-}
+})

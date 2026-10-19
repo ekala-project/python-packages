@@ -6,13 +6,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "python-axolotl-curve25519";
   version = "0.4.1.post2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     sha256 = "0705a66297ebd2f508a60dc94e22881c754301eb81db93963322f6b3bdcb63a3";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     description = "Curve25519 with ed25519 signatures";
     license = lib.licenses.gpl3;
   };
-}
+})

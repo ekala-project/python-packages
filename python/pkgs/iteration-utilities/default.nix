@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "iteration-utilities";
   version = "0.13.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "MSeifert04";
     repo = "iteration_utilities";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-SiqNUyuvsD5m5qz5ByYyVln3SSa4/D4EHpmM+pf8ngM=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/MSeifert04/iteration_utilities";
     license = lib.licenses.asl20;
   };
-}
+})

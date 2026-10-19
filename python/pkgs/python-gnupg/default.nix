@@ -5,14 +5,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "python-gnupg";
   version = "0.5.6";
   pyproject = true;
 
   src = fetchPypi {
     pname = "python_gnupg";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-V0PpYhLTiSP8GQg4EtwSeQfkTb07zw201lfikdPCHqw=";
   };
 
@@ -25,4 +25,4 @@ buildPythonPackage rec {
     description = "API for the GNU Privacy Guard (GnuPG)";
     license = lib.licenses.bsd3;
   };
-}
+})

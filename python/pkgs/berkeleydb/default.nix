@@ -8,13 +8,13 @@
   python,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "berkeleydb";
   version = "18.1.15";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-evpTFD11TGuyyFZWwTJeuuUYrc/NG1nhPMKruI3fdY4=";
   };
 
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     homepage = "https://www.jcea.es/programacion/pybsddb.htm";
     license = lib.licenses.bsd3;
   };
-}
+})

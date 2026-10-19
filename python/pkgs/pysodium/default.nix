@@ -7,7 +7,7 @@
   libsodium,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pysodium";
   version = "0.7.18";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "stef";
     repo = "pysodium";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-F2215AAI8UIvn6UbaJ/YxI4ZolCzlwY6nS5IafTs+i4=";
   };
 
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/stef/pysodium";
     license = lib.licenses.bsd2;
   };
-}
+})

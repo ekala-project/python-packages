@@ -8,14 +8,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "google-cloud-workflows";
   version = "1.23.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "google_cloud_workflows";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-vo4IpdE0GG2834Z8BbFZrYrH3jtkJbIb76q39PJY1Kg=";
   };
 
@@ -45,4 +45,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-workflows";
     license = lib.licenses.asl20;
   };
-}
+})

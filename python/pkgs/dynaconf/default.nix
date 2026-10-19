@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "dynaconf";
   version = "3.3.5";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "dynaconf";
     repo = "dynaconf";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-rIATIZLcvb8UtUFGjOSdNd0Wlb4CceDp9B1OdlnIlYc=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     mainProgram = "dynaconf";
     license = lib.licenses.mit;
   };
-}
+})

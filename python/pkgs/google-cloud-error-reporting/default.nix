@@ -19,7 +19,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "google-cloud-error-reporting";
   version = "1.14.0";
   pyproject = true;
@@ -27,7 +27,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "googleapis";
     repo = "python-error-reporting";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-do/pxm+Bo2c57ehg1cRlpax+UggSUMv8WSK30sXhHpo=";
   };
 
@@ -73,4 +73,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/googleapis/python-error-reporting";
     license = lib.licenses.asl20;
   };
-}
+})

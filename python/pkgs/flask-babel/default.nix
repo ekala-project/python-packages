@@ -9,14 +9,14 @@
   pytz,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "flask-babel";
   version = "4.0.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "flask_babel";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-2+q0Ano/SodnihFoZJbpjhSS63k8vdd6tQ9OmiYCpZM=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     description = "Adds i18n/l10n support to Flask applications";
     license = lib.licenses.bsd2;
   };
-}
+})

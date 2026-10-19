@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "linknlink";
   version = "0.2.4";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "xuanxuan000";
     repo = "python-linknlink";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-ObPEcdDHi+SPFjuVKBtu7/5/IgHcam+IWblxxS3+mmI=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/xuanxuan000/python-linknlink";
     license = lib.licenses.mit;
   };
-}
+})

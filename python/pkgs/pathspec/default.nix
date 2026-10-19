@@ -5,13 +5,13 @@
   flit-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pathspec";
   version = "1.1.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-F9tezVJBBKEg4XOBTJA2epapjQfEWy4QwvORn/+Rv1o=";
   };
 
@@ -23,4 +23,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/cpburnz/python-path-specification";
     license = lib.licenses.mpl20;
   };
-}
+})

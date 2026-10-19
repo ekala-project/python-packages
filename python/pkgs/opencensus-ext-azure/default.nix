@@ -10,7 +10,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "opencensus-ext-azure";
   version = "1.1.15";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "census-instrumentation";
     repo = "opencensus-python";
-    tag = "opencensus-ext-azure@${version}";
+    tag = "opencensus-ext-azure@${finalAttrs.version}";
     hash = "sha256-fnqflSyNnkEy9XYoirk4iDZI1zYTRMbrYMyQ/4ge3Rs=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     description = "OpenCensus Azure Monitor Exporter";
     license = lib.licenses.asl20;
   };
-}
+})

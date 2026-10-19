@@ -9,7 +9,7 @@
   pytest,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytest-freezegun";
   version = "0.4.2";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ktosiek";
     repo = "pytest-freezegun";
-    tag = version;
+    tag = finalAttrs.version;
     sha256 = "10c4pbh03b4s1q8cjd75lr0fvyf9id0zmdk29566qqsmaz28npas";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ktosiek/pytest-freezegun";
     license = lib.licenses.mit;
   };
-}
+})

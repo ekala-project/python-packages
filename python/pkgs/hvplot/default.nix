@@ -25,7 +25,7 @@
   plotly,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "hvplot";
   version = "0.12.2";
   pyproject = true;
@@ -33,7 +33,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "holoviz";
     repo = "hvplot";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-hJ9lgpM3AVyDeFxobUKDNYO39NKEejSDywOgnHPEm2c=";
   };
 
@@ -96,4 +96,4 @@ buildPythonPackage rec {
     homepage = "https://hvplot.pyviz.org";
     license = lib.licenses.bsd3;
   };
-}
+})

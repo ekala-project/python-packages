@@ -9,14 +9,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "numpy-stl";
   version = "3.2.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "numpy_stl";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-WiDD95zdqgq8akuZ9Uhqzu1PiBUvKbGaV6zIROGD/U0=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/WoLpH/numpy-stl/";
     license = lib.licenses.bsd3;
   };
-}
+})

@@ -6,13 +6,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "httptools";
   version = "0.8.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-ayoy8Y2X4W6Qgn16gZ/6jb2MwkX8Th+p0QlbVO9L2Zk=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/MagicStack/httptools";
     license = lib.licenses.mit;
   };
-}
+})

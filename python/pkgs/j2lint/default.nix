@@ -10,14 +10,14 @@
   pytest-cov-stub,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "j2lint";
   version = "1.3.0";
   pyproject = true;
   src = fetchFromGitHub {
     owner = "aristanetworks";
     repo = "j2lint";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-aT25Yq5GkQpZBgVNjYdV/afyqFanJkmqkDGMz2Yf+Ps=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     description = "Jinja2 Linter CLI";
     license = lib.licenses.mit;
   };
-}
+})

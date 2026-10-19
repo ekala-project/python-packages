@@ -5,7 +5,7 @@
   poetry-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "html-void-elements";
   version = "0.1.0";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Riverside-Healthcare";
     repo = "html-void-elements";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-Q5OEczTdgCCyoOsKv3MKRE3w4t/qyPG4YKbF19jlC88=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Riverside-Healthcare/html-void-elements";
     license = lib.licenses.gpl3Only;
   };
-}
+})

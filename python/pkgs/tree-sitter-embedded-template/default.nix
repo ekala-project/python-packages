@@ -9,7 +9,7 @@
   tree-sitter,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "tree-sitter-embedded-template";
   version = "0.25.0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "tree-sitter";
     repo = "tree-sitter-embedded-template";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-nBQain0Lc21jOgQFfvkyq615ZmT8qdMxtqIoUcOcO3A=";
   };
 
@@ -45,4 +45,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/tree-sitter/tree-sitter-embedded-template";
     license = lib.licenses.mit;
   };
-}
+})

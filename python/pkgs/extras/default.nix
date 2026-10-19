@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "extras";
   version = "1.0.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-Ey423hC5yR1dTMYgFgpHbgRoqI8WyUMYF6ZylhGoG04=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/testing-cabal/extras";
     license = lib.licenses.mit;
   };
-}
+})

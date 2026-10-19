@@ -10,13 +10,13 @@
   rdflib,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "prov";
   version = "3.1.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-4+y/Y0XkaxlYsoa9GwkMW6/6lCAV7PBLRKjMY4MPipI=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/trungdong/prov";
     license = lib.licenses.mit;
   };
-}
+})

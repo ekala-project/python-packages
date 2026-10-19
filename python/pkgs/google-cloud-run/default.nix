@@ -11,14 +11,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "google-cloud-run";
   version = "0.16.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "google_cloud_run";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-Vov3/Ouo+ESjm2mFio5kL2zKJ+q3JGxiHZ00HCibEVg=";
   };
 
@@ -46,4 +46,4 @@ buildPythonPackage rec {
     homepage = "https://pypi.org/project/google-cloud-run/";
     license = lib.licenses.asl20;
   };
-}
+})

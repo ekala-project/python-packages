@@ -16,7 +16,7 @@
   xxhash,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "evaluate";
   version = "0.4.6";
   pyproject = true;
@@ -24,7 +24,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "huggingface";
     repo = "evaluate";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-wK50bPJSwCNFJO0l6+15+GrbaFQNfAr/djn9JTOlwpw=";
   };
 
@@ -53,4 +53,4 @@ buildPythonPackage rec {
     license = lib.licenses.asl20;
     mainProgram = "evaluate-cli";
   };
-}
+})

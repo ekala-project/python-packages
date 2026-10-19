@@ -7,17 +7,17 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "metar";
   version = "2.0.1";
   pyproject = true;
 
-  env.SETUPTOOLS_SCM_PRETEND_VERSION = version;
+  env.SETUPTOOLS_SCM_PRETEND_VERSION = finalAttrs.version;
 
   src = fetchFromGitHub {
     owner = "python-metar";
     repo = "python-metar";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-MRcGUFcp3oL9rrGl3xGGttle5oXkJqxxZvkWVe0uWv8=";
   };
 
@@ -33,7 +33,7 @@ buildPythonPackage rec {
   meta = {
     description = "Python parser for coded METAR weather reports";
     homepage = "https://github.com/python-metar/python-metar";
-    changelog = "https://github.com/python-metar/python-metar/blob/v${version}/CHANGELOG.md";
+    changelog = "https://github.com/python-metar/python-metar/blob/v${finalAttrs.version}/CHANGELOG.md";
     license = with lib.licenses; [ bsd1 ];
   };
-}
+})

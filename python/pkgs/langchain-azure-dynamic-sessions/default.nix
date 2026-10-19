@@ -28,7 +28,7 @@
   gitUpdater,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "langchain-azure-dynamic-sessions";
   version = "0.2.0";
   pyproject = true;
@@ -36,7 +36,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "langchain-ai";
     repo = "langchain";
-    tag = "langchain-azure-dynamic-sessions==${version}";
+    tag = "langchain-azure-dynamic-sessions==${finalAttrs.version}";
     hash = "sha256-tgvoOSr4tpi+tFBan+kw8FZUfUJHcQXv9e1nyeGP0so=";
   };
 
@@ -79,4 +79,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/langchain-ai/langchain/tree/master/libs/partners/azure-dynamic-sessions";
     license = lib.licenses.mit;
   };
-}
+})

@@ -9,13 +9,13 @@
   chardet,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ghdiff";
   version = "0.4";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     sha256 = "17mdhi2sq9017nq8rkjhhc87djpi5z99xiil0xz17dyplr7nmkqk";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     description = "Generate Github-style HTML for unified diffs";
     mainProgram = "ghdiff";
   };
-}
+})

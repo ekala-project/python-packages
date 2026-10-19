@@ -6,14 +6,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "onetimepad";
   version = "1.4";
 
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     sha256 = "1eaade76d8036e1cb79e944b75874bfe5ee4046a571c0724564e1721565c73fd";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://jailuthra.in/onetimepad";
     license = lib.licenses.mit;
   };
-}
+})

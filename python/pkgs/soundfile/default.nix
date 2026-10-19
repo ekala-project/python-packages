@@ -11,14 +11,14 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "soundfile";
   version = "0.14.0";
   pyproject = true;
   disabled = isPyPy;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-uhwaLWGLylxAZkfIO4nwfMiBD6UGpQYippk7oTDB3hE=";
   };
 
@@ -45,4 +45,4 @@ buildPythonPackage rec {
     # https://github.com/bastibe/python-soundfile/issues/157
     broken = stdenv.hostPlatform.isi686;
   };
-}
+})

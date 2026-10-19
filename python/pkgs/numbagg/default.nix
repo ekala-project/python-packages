@@ -20,7 +20,7 @@
   tabulate,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   version = "0.9.4";
   pname = "numbagg";
   pyproject = true;
@@ -28,7 +28,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "numbagg";
     repo = "numbagg";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-JYgjeExpL+rbiaFPO9IHsm4Qh6GTLdTWB5dO3zIIPbs=";
   };
 
@@ -67,4 +67,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/numbagg/numbagg";
     license = lib.licenses.bsd3;
   };
-}
+})

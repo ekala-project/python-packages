@@ -7,13 +7,13 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "python-xlib";
   version = "0.33";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-Va95BqLHXObLKApYR3YIBgJET3WBWnr/TSh7stcBizI=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/python-xlib/python-xlib";
     license = lib.licenses.lgpl21Plus;
   };
-}
+})

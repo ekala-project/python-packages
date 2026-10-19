@@ -6,14 +6,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "flask-sslify";
   version = "0.1.5";
   pyproject = true;
 
   src = fetchPypi {
     pname = "Flask-SSLify";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-0z4dPAnNlRVBdqqKcxlBjlISn8SC3VbYqK18JFANVD4=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/kennethreitz42/flask-sslify";
     license = lib.licenses.bsd2;
   };
-}
+})

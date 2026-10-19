@@ -6,7 +6,7 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyscss";
   version = "1.4.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     repo = "pyScss";
     owner = "Kronuz";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-z0y4z+/JE6rZWHAvps/taDZvutyVhxxs2gMujV5rNu4=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://pyscss.readthedocs.org/en/latest/";
     license = lib.licenses.mit;
   };
-}
+})

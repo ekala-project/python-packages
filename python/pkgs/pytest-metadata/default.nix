@@ -11,14 +11,14 @@
   pytest,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytest-metadata";
   version = "3.1.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "pytest_metadata";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-0qKbA1X7wD8WiqltQf+IsaO0SjsCrL5JGAHJigSAF8g=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pytest-dev/pytest-metadata";
     license = lib.licenses.mpl20;
   };
-}
+})

@@ -7,7 +7,7 @@
   jinja2,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jinja2-humanize-extension";
   version = "0.4.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "metwork-framework";
     repo = "jinja2_humanize_extension";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-bSSwPCPLIWIRhIgaSwHnVTj5mpvwn259GXYeGr5NHBQ=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/metwork-framework/jinja2_humanize_extension";
     license = lib.licenses.bsd3;
   };
-}
+})

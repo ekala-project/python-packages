@@ -10,7 +10,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ldfparser";
   version = "0.26.0";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "c4deszes";
     repo = "ldfparser";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-SVl/O0/2k1Y4lta+3BFkddyBZfYO2vqh4Xx1ZXNwXN4=";
   };
 
@@ -48,4 +48,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     mainProgram = "ldfparser";
   };
-}
+})

@@ -6,14 +6,14 @@
   more-itertools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jaraco-stream";
   version = "3.0.4";
   pyproject = true;
 
   src = fetchPypi {
     pname = "jaraco_stream";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-4rxQKOch7SzIUrluyaM/K3Zk6bLb+H7vvmF9EmZBk0s=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jaraco/jaraco.stream";
     license = lib.licenses.mit;
   };
-}
+})

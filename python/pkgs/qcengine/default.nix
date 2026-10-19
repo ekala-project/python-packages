@@ -13,13 +13,13 @@
   packaging,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "qcengine";
   version = "0.51.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-I6Ei0TIylYWordjNAj0wXAxMH1Ayv4p6siJz4F18TA0=";
   };
 
@@ -47,4 +47,4 @@ buildPythonPackage rec {
     license = lib.licenses.bsd3;
     mainProgram = "qcengine";
   };
-}
+})

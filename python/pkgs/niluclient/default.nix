@@ -7,13 +7,13 @@
   requests,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "niluclient";
   version = "0.1.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     sha256 = "11ymn0cr4lchrcnf2xxlgljw223gwln01gxwr7mcgf95yc4006iq";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/hfurubotten/niluclient";
     license = lib.licenses.mit;
   };
-}
+})

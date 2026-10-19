@@ -7,7 +7,7 @@
   pyusb,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "usbtmc";
   version = "0.8";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "python-ivi";
     repo = "python-usbtmc";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-69kqBTqnVqdWC2mqlXylzb9VkdhwTGZI0Ykf6lqbypI=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "http://alexforencich.com/wiki/en/python-usbtmc/start";
     license = lib.licenses.mit;
   };
-}
+})

@@ -7,7 +7,7 @@
   selenium,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "branca";
   version = "0.8.2";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "python-visualization";
     repo = "branca";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-H5hHQI4r0QavygQZzEZAEp+cjra5R9m/OoGHQPtnBg0=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/python-visualization/branca";
     license = lib.licenses.mit;
   };
-}
+})

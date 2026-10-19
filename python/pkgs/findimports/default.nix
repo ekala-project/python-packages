@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "findimports";
   version = "3.0.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mgedmin";
     repo = "findimports";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-3MYHl35FfStmyhBNvedIHIZQYTyBuRyg5OI3d3Mi57I=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     ];
     mainProgram = "findimports";
   };
-}
+})

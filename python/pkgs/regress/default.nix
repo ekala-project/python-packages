@@ -7,14 +7,14 @@
   libiconv,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "regress";
   version = "2025.10.1";
 
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-3MCorwzbw9bg1HJfETM10KX/u6hq48oY0rWzUsXyyO0=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Julian/regress";
     license = lib.licenses.mit;
   };
-}
+})

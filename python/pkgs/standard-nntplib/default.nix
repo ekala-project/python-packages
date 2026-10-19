@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "standard-nntplib";
   version = "3.13.0";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "youknowone";
     repo = "python-deadlib";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-J8c55f527QGcK8p/QKJBZeZV0y9DU0iM1RUFVkWh2Hc=";
     sparseCheckout = [ "nntplib" ];
   };
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/youknowone/python-deadlib";
     license = lib.licenses.psfl;
   };
-}
+})

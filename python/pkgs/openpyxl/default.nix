@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "openpyxl";
   version = "3.1.5";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
     domain = "foss.heptapod.net";
     owner = "openpyxl";
     repo = "openpyxl";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-vp+TIWcHCAWlDaBcmC7w/kV7DZTZpa6463NusaJmqKo=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://openpyxl.readthedocs.org";
     license = lib.licenses.mit;
   };
-}
+})

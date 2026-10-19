@@ -8,13 +8,13 @@
   python-dateutil,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "guessit";
   version = "3.8.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-Zhn8u/mgUQ7IwsM3RMQlHK0FB7HVc9Bch13hftxe2+0=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://guessit-io.github.io/guessit/";
     license = lib.licenses.lgpl3Only;
   };
-}
+})

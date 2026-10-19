@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "fiscalyear";
   version = "0.4.0";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "adamjstewart";
     repo = "fiscalyear";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-2wejJRTmVHWiM8LoodyaOyMbMqCx5It6JHCQUWpGsxs=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/adamjstewart/fiscalyear";
     license = lib.licenses.mit;
   };
-}
+})

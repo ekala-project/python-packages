@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyflakes";
   version = "3.4.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "PyCQA";
     repo = "pyflakes";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-4UEJjn9Eey1vHeaG468x/nMlbfGu3ohZX1R7RR2R5ik=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     mainProgram = "pyflakes";
     license = lib.licenses.mit;
   };
-}
+})

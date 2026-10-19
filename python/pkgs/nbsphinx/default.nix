@@ -12,13 +12,13 @@
   traitlets,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "nbsphinx";
   version = "0.9.8";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-0HZZCDmajuK1e+euiBzy6ljWbbOve78z5utI+DvqVJU=";
   };
 
@@ -47,4 +47,4 @@ buildPythonPackage rec {
     homepage = "https://nbsphinx.readthedocs.io/";
     license = lib.licenses.mit;
   };
-}
+})

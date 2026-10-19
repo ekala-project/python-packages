@@ -19,7 +19,7 @@
   tzlocal,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "nidaqmx";
   version = "1.4.0";
   pyproject = true;
@@ -27,7 +27,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ni";
     repo = "nidaqmx-python";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-Khydb14+yJKWYcO4pROfbainXw3bHceXK5Gc9GCIYNo=";
   };
 
@@ -67,4 +67,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ni/nidaqmx-python";
     license = lib.licenses.mit;
   };
-}
+})

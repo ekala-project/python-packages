@@ -6,7 +6,7 @@
   mkdocs,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mkdocs-gen-files";
   version = "0.6.1";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "oprypin";
     repo = "mkdocs-gen-files";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-2TMQHn6eP+RMjtJ4o/6G8k1TEIlGgr7U/Fim14MJELg=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://oprypin.github.io/mkdocs-gen-files/";
     license = lib.licenses.mit;
   };
-}
+})

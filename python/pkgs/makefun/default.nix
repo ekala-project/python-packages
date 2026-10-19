@@ -6,13 +6,13 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "makefun";
   version = "1.16.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-4UYBgxVwv/H21+aIKLzTDS9YVvJLrV3gzLIpIc7ryUc=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     description = "Small library to dynamically create python functions";
     license = lib.licenses.bsd2;
   };
-}
+})

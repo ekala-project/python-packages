@@ -7,13 +7,13 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "stripe";
   version = "15.6.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-nzmGqpYEGQQaupx2GRdGvfLDQslYkqz79u21AKsAbTE=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/stripe/stripe-python";
     license = lib.licenses.mit;
   };
-}
+})

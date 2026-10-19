@@ -9,13 +9,13 @@
   yarl,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aiohttp-sse-client";
   version = "0.2.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-UATiknFiSvWGFY3HFmywaHp6WZeqtbgI9LU0AOG3Ljs=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://pypi.org/project/aiohttp-sse-client/";
     license = lib.licenses.asl20;
   };
-}
+})

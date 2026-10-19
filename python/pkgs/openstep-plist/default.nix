@@ -7,14 +7,14 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "openstep-plist";
   version = "0.5.2";
   pyproject = true;
 
   src = fetchPypi {
     pname = "openstep_plist";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-Kg1w/3oDzOZKcnBitkuy9cmvn9SmNqqkM5tqqiz2UZU=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/fonttools/openstep-plist";
     license = lib.licenses.mit;
   };
-}
+})

@@ -5,14 +5,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "alibabacloud-endpoint-util";
   version = "0.0.4";
   pyproject = true;
 
   src = fetchPypi {
     pname = "alibabacloud_endpoint_util";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-pZPrjd2BaNXcIhbNMxEbFE+RifzW6cog5I81inObv5A=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://pypi.org/project/alibabacloud-endpoint-util/";
     license = lib.licenses.asl20;
   };
-}
+})

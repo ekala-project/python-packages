@@ -9,14 +9,14 @@
   zope-interface,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyramid-chameleon";
   version = "0.3";
   pyproject = true;
 
   src = fetchPypi {
     pname = "pyramid_chameleon";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-0XZ5KlDrAV14ZbRL2bJKe9BIn6mlzrvRe54FBIzvkBc=";
   };
 
@@ -47,4 +47,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Pylons/pyramid_chameleon";
     license = lib.licenses.bsd0;
   };
-}
+})

@@ -8,14 +8,14 @@
   urllib3,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "requests-unixsocket";
   version = "0.4.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "requests_unixsocket";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-sllhWMNW7O5o0nukaaUiESMKxvsM3otmr7GfDtR6GZU=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/msabramo/requests-unixsocket";
     license = lib.licenses.asl20;
   };
-}
+})

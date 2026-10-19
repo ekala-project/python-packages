@@ -9,7 +9,7 @@
   websockets,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "livisi";
   version = "1.0.1";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "planbnet";
     repo = "livisi";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-5TRJfI4irg2/ZxpfgzShXE08HWU2aWLR8zGbrZKpwbc=";
   };
 
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/planbnet/livisi";
     license = lib.licenses.asl20;
   };
-}
+})

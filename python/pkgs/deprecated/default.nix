@@ -6,7 +6,7 @@
   wrapt,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "deprecated";
   version = "1.3.1";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "tantale";
     repo = "deprecated";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-1mB9aRZOsaW7Mqcu1SWIYTusQ7MlMvUucdTyfu++Nx8=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     description = "Python @deprecated decorator to deprecate old python classes, functions or methods";
     license = lib.licenses.mit;
   };
-}
+})

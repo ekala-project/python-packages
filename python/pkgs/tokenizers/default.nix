@@ -72,7 +72,7 @@ let
     };
   };
 in
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "tokenizers";
   version = "0.22.2";
   pyproject = true;
@@ -80,7 +80,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "huggingface";
     repo = "tokenizers";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-XAb3YBaW3hJHFHhRBBCt1KurCijn3O3FQQ/fBuvckVU=";
   };
 
@@ -126,4 +126,4 @@ buildPythonPackage rec {
     license = lib.licenses.asl20;
     platforms = lib.platforms.unix;
   };
-}
+})

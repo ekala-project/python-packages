@@ -9,7 +9,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "defusedcsv";
   version = "3.0.0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "raphaelm";
     repo = "defusedcsv";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-OEDZbltnh2tAM58Kk852W0so7oOSv7S+S046MjIOMfY=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/raphaelm/defusedcsv";
     license = lib.licenses.asl20;
   };
-}
+})

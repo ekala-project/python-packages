@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "hopcroftkarp";
   version = "1.2.5";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-KKeIfbga2ZXM02obUWSkxUKxbSeB6MSTNNydFBlowOc=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/sofiat-olaosebikan/hopcroftkarp";
     license = lib.licenses.gpl3Only;
   };
-}
+})

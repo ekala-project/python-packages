@@ -14,7 +14,7 @@
   python-dateutil,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "oslo-log";
   version = "8.1.0";
   pyproject = true;
@@ -22,13 +22,13 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "openstack";
     repo = "oslo.log";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-ThRJ2rfVStnVOwcu8ZaKDjqb4jT6YE+n+iOFtmR8rwQ=";
   };
 
   # Manually set version because prb wants to get it from the git upstream repository (and we are
   # installing from tarball instead)
-  env.PBR_VERSION = version;
+  env.PBR_VERSION = finalAttrs.version;
 
   build-system = [ setuptools ];
 
@@ -49,4 +49,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/openstack/oslo.log";
     license = lib.licenses.asl20;
   };
-}
+})

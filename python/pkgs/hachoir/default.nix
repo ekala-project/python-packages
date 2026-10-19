@@ -8,7 +8,7 @@
   urwid,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "hachoir";
   version = "3.3.0";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "vstinner";
     repo = "hachoir";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-sTUJx8Xyhw4Z6juRtREw/okuVjSTSVWpSLKeZ7T8IR8=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://hachoir.readthedocs.io/";
     license = lib.licenses.gpl2Only;
   };
-}
+})

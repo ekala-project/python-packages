@@ -5,14 +5,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "async-generator";
   version = "1.10";
   pyproject = true;
 
   src = fetchPypi {
     pname = "async_generator";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-brs9EGwSkgqq5CzLb3h+9e79zdFm6j1ij6hHar5xIUQ=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
       asl20
     ];
   };
-}
+})

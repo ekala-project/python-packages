@@ -10,7 +10,7 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "duo-client";
   version = "5.7.0";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "duosecurity";
     repo = "duo_client_python";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-TJ2ofRmAN6H3uvDSwpxSpll1IEwba8bYsx5nzaVlAlU=";
   };
 
@@ -57,4 +57,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/duosecurity/duo_client_python";
     license = lib.licenses.bsd3;
   };
-}
+})

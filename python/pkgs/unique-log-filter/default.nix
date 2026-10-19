@@ -5,7 +5,7 @@
   flit-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "unique-log-filter";
   version = "0.1.0";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "twizmwazin";
     repo = "unique_log_filter";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-av1pVPDsO2dto5fhBK74jKfVsVY2ChyUE5NNja2B1Qw=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/twizmwazin/unique_log_filter";
     license = lib.licenses.bsd2;
   };
-}
+})

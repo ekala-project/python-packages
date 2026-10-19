@@ -6,13 +6,13 @@
   portalocker,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "concurrent_log_handler";
   version = "0.9.29";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-vDenbT84TL9KmPaT69dwVD7cD0zVxqtrxw6eHX1YImU=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Preston-Landers/concurrent-log-handler";
     license = lib.licenses.asl20;
   };
-}
+})

@@ -15,12 +15,12 @@ let
   pname = "cu2qu";
   version = "1.6.7.post2";
 in
-buildPythonPackage rec {
-  inherit pname version;
+buildPythonPackage (finalAttrs: {
+  inherit (finalAttrs) pname version;
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-HfVi2ZvWBZImCI9ENwK/Uc/djMY2I/IxN0WaeNe/WAg=";
     extension = "zip";
   };
@@ -43,4 +43,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/googlefonts/cu2qu";
     license = lib.licenses.asl20;
   };
-}
+})

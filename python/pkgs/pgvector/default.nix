@@ -10,7 +10,7 @@
   numpy,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pgvector";
   version = "0.4.2";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pgvector";
     repo = "pgvector-python";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-jzUZK3zQxqajVqGbaQzLPzvK/k3Wck9jX95kkBH2IlY=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pgvector/pgvector-python";
     license = lib.licenses.mit;
   };
-}
+})

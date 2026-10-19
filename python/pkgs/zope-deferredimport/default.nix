@@ -6,7 +6,7 @@
   zope-proxy,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "zope-deferredimport";
   version = "6.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "zopefoundation";
     repo = "zope.deferredimport";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-7Q8+Cew5987+CjUOxqpwMFXWdw+/B28tOEXRYC0SRyI=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/zopefoundation/zope.deferredimport";
     license = lib.licenses.zpl21;
   };
-}
+})

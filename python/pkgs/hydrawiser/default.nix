@@ -11,7 +11,7 @@
   requests-mock,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "hydrawiser";
   version = "0.2";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ptcryan";
     repo = "hydrawiser";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "161hazlpvd71xcl2ja86560wm5lnrjv210ki3ji37l6c6gwmhjdj";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ptcryan/hydrawiser";
     license = lib.licenses.mit;
   };
-}
+})

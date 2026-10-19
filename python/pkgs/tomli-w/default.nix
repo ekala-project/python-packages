@@ -6,7 +6,7 @@
   tomli,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "tomli-w";
   version = "1.2.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "hukkin";
     repo = "tomli-w";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-Du37ySvAL9iwGec5wbWxwLTYm+kcDSOs5OJ5Sw7R87g=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/hukkin/tomli-w";
     license = lib.licenses.mit;
   };
-}
+})

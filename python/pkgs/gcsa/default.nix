@@ -14,7 +14,7 @@
   beautiful-date,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "gcsa";
   version = "2.7.0";
   pyproject = true;
@@ -22,7 +22,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "kuzmoyev";
     repo = "google-calendar-simple-api";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-lDmdV1F/EFtZEhq4ufH9nPvzNZ9msUGNZcmWiVTTTWc=";
   };
 
@@ -48,4 +48,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/kuzmoyev/google-calendar-simple-api";
     license = lib.licenses.mit;
   };
-}
+})

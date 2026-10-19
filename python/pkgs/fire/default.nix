@@ -11,7 +11,7 @@
   pythonAtLeast,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "fire";
   version = "0.7.1";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "google";
     repo = "python-fire";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-TZLL7pzX8xPtB/9k3l5395eHrNojmqTH7PfB1kf99Io=";
   };
 
@@ -59,4 +59,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/google/python-fire";
     license = lib.licenses.asl20;
   };
-}
+})

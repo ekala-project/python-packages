@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "python-hcl2";
   version = "8.1.4";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "amplify-education";
     repo = "python-hcl2";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-hqGl9H0qwqPhBWD/KUkLklMVuUCENdCOWs6QtePloyQ=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/amplify-education/python-hcl2";
     license = lib.licenses.mit;
   };
-}
+})

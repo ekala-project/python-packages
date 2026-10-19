@@ -6,7 +6,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "gentools";
   version = "1.2.2";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ariebovenberg";
     repo = "gentools";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-+6KTFxOpwvGOCqy6JU87gOZmDa6MvjR10qES5wIfrjI=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://gentools.readthedocs.io/";
     license = lib.licenses.mit;
   };
-}
+})

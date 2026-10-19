@@ -7,13 +7,13 @@
   flit-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "handy_archives";
   version = "0.3.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-Ko0SXNnEJDO5eDhINPSh3xhKnjuraL9EDfGEttrhL/M=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/domdfcoding/handy-archives";
     license = lib.licenses.mit;
   };
-}
+})

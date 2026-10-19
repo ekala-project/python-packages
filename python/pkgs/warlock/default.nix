@@ -7,13 +7,13 @@
   jsonschema,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "warlock";
   version = "2.1.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-gjGboBc0Hn/NyB78K+ndL4I3oNoHxxR2tUJWUbMXsck=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     description = "Python object model built on JSON schema and JSON patch";
     license = lib.licenses.asl20;
   };
-}
+})

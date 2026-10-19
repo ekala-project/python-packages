@@ -9,7 +9,7 @@
   trio,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jeepney";
   version = "0.9";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitLab {
     owner = "takluyver";
     repo = "jeepney";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-d8w/4PtDviTYDHO4EwaVbxlYk7CXtlv7vuR+o4LhfRs=";
   };
 
@@ -44,4 +44,4 @@ buildPythonPackage rec {
     description = "Pure Python DBus interface";
     license = lib.licenses.mit;
   };
-}
+})

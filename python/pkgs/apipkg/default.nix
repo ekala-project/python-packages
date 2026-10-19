@@ -6,13 +6,13 @@
   hatchling,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "apipkg";
   version = "3.0.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-x6phpPgml/2qZn5wrxUFrPH3QoscJ7iR0gS6eoo8Xg0=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     description = "Namespace control and lazy-import mechanism";
     license = lib.licenses.mit;
   };
-}
+})

@@ -5,7 +5,7 @@
   hatchling,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "bitmath";
   version = "2.1.1";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "timlnx";
     repo = "bitmath";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-9hiwIpDIAU+N+LhlJ9qlKBZQibbrwwhGM77fvEnABRI=";
   };
 
@@ -24,7 +24,7 @@ buildPythonPackage rec {
   meta = {
     description = "Module for representing and manipulating file sizes with different prefix";
     homepage = "https://github.com/timlnx/bitmath";
-    changelog = "https://github.com/timlnx/bitmath/releases/tag/v${version}";
+    changelog = "https://github.com/timlnx/bitmath/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
   };
-}
+})

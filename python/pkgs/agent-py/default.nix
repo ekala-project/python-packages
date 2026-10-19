@@ -8,7 +8,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "agent-py";
   version = "0.0.24";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ispysoftware";
     repo = "agent-py";
-    tag = "agent-py.${version}";
+    tag = "agent-py.${finalAttrs.version}";
     hash = "sha256-PP4gQ3AFYLJPUt9jhhiV9HkfBhIzd+JIsGpgK6FNmaE=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ispysoftware/agent-py";
     license = lib.licenses.asl20;
   };
-}
+})

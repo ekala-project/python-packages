@@ -7,13 +7,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ovh";
   version = "1.2.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-0xHwjsF7YsxhIWs9rPA+6J+VodqQNqWV2sKfydeYuCc=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ovh/python-ovh";
     license = lib.licenses.bsd2;
   };
-}
+})

@@ -7,7 +7,7 @@
   gitUpdater,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "livekit-protocol";
   version = "1.1.17";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "livekit";
     repo = "python-sdks";
-    tag = "protocol-v${version}";
+    tag = "protocol-v${finalAttrs.version}";
     hash = "sha256-XTBQi1ckwHw7bpd2jQWqwhDXO0iHQRirc2GjfDtYILA=";
   };
 
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     license = lib.licenses.asl20;
     platforms = lib.platforms.all;
   };
-}
+})

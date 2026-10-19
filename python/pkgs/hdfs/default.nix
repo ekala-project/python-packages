@@ -9,7 +9,7 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "hdfs";
   version = "2.7.3";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mtth";
     repo = "hdfs";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-Pm2E8hB0wbu7npi/sLt9D8jQsH69qNOHLji9CYqST/8=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     mainProgram = "hdfscli";
   };
-}
+})

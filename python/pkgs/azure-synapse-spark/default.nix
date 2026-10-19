@@ -8,13 +8,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "azure-synapse-spark";
   version = "0.7.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-hvopRjokt8NwJf8hUJtw42tNrOKOXZIAG8kgSINQrNU=";
     extension = "zip";
   };
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/synapse/azure-synapse-spark";
     license = lib.licenses.mit;
   };
-}
+})

@@ -12,14 +12,14 @@
   flask-sqlalchemy,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "flask-migrate";
   version = "4.1.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "flask_migrate";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-GjNrBussOs4AX18t7YZB1TTBh5jWQGH2/xH3nhQ0Em0=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/miguelgrinberg/Flask-Migrate";
     license = lib.licenses.mit;
   };
-}
+})

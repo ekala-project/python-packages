@@ -12,7 +12,7 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "libcst";
   version = "1.8.6";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Instagram";
     repo = "LibCST";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-AJm3grS+I/NXZ8ame4rmHPOxRHGO0Ofo35RtSDO2tyI=";
   };
 
@@ -64,4 +64,4 @@ buildPythonPackage rec {
       psfl
     ];
   };
-}
+})

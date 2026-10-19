@@ -7,7 +7,7 @@
   pyyaml,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "tinydb";
   version = "4.9.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "msiemens";
     repo = "tinydb";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-7YKqbBf+WrSVDZdPb6dT/22f5uggXy8uQ3lkxvWD5AI=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://tinydb.readthedocs.org/";
     license = lib.licenses.mit;
   };
-}
+})

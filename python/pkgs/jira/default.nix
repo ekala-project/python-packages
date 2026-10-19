@@ -17,7 +17,7 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jira";
   version = "3.10.5";
   pyproject = true;
@@ -25,7 +25,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pycontribs";
     repo = "jira";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-Gj9RmNJwmYQviXeNLL6WWFIO91jy6zY/s29Gy18lzyA=";
   };
 
@@ -67,4 +67,4 @@ buildPythonPackage rec {
     license = lib.licenses.bsd2;
     mainProgram = "jirashell";
   };
-}
+})

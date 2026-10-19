@@ -6,13 +6,13 @@
   requests,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "httmock";
   version = "1.4.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-ROr0u1nMZM1vXYv4cAtGqjCXzFZRubyFxSffvHF5L0E=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     description = "Mocking library for requests";
     license = lib.licenses.asl20;
   };
-}
+})

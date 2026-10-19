@@ -13,7 +13,7 @@
   libpcap,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "scapy";
   version = "2.7.0";
   pyproject = true;
@@ -23,7 +23,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "secdev";
     repo = "scapy";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-Pp7pPfaWyzJGf+soENfOPynN8logc5FM848hyVCcdKk=";
   };
 
@@ -32,7 +32,7 @@ buildPythonPackage rec {
   patches = lib.optional (!stdenv.hostPlatform.isStatic) ./find-library.patch;
 
   postPatch = ''
-    printf "${version}" > scapy/VERSION
+    printf "${finalAttrs.version}" > scapy/VERSION
   ''
   + lib.optionalString (!stdenv.hostPlatform.isStatic) ''
     libpcap_file="${lib.getLib libpcap}/lib/libpcap${stdenv.hostPlatform.extensions.sharedLibrary}"
@@ -63,4 +63,4 @@ buildPythonPackage rec {
     license = lib.licenses.gpl2Only;
     platforms = lib.platforms.unix;
   };
-}
+})

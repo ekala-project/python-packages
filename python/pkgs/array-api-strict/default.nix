@@ -8,7 +8,7 @@
   hypothesis,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "array-api-strict";
   version = "2.6.1";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "data-apis";
     repo = "array-api-strict";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-0ccyNbp6GheG1KtImpa/2uboAG6Q+rHdwKaqupBuoPg=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     description = "Strict, minimal implementation of the Python array API";
     license = lib.licenses.bsd3;
   };
-}
+})

@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "epicstore-api";
   version = "0.2.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "SD4RK";
     repo = "epicstore_api";
-    tag = "v_${version}";
+    tag = "v_${finalAttrs.version}";
     hash = "sha256-XSynUz8rAl/+jcPMCZoVKlGZLVcTCAr36VEWVhAydoM=";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/SD4RK/epicstore_api";
     license = lib.licenses.mit;
   };
-}
+})

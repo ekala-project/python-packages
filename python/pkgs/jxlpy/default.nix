@@ -7,14 +7,14 @@
   libjxl,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jxlpy";
   version = "0.9.5";
 
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-Kqdm8b3hgO0Q3zE68rSIM4Jd7upjG+SQywSseGwCFUI=";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/olokelo/jxlpy";
     license = lib.licenses.mit;
   };
-}
+})

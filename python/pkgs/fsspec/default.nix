@@ -17,7 +17,7 @@
   tqdm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "fsspec";
   version = "2026.3.0";
   pyproject = true;
@@ -25,7 +25,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "fsspec";
     repo = "filesystem_spec";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-K/qHc9uBYq/HkA6xhKAujdCBqH+0kcFnfD3a506A9Ns=";
   };
 
@@ -64,4 +64,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/fsspec/filesystem_spec";
     license = lib.licenses.bsd3;
   };
-}
+})

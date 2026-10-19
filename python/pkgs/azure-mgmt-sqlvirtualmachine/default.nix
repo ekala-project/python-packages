@@ -9,13 +9,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-sqlvirtualmachine";
   version = "0.5.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-talCNRKnsShErAFDZqHVPIEBehTzlna+7fAEpTKqKq0=";
     extension = "zip";
   };
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/sql/azure-mgmt-sqlvirtualmachine";
     license = lib.licenses.mit;
   };
-}
+})

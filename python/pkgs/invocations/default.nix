@@ -13,7 +13,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "invocations";
   version = "4.0.2";
   pyproject = true;
@@ -21,7 +21,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pyinvoke";
     repo = "invocations";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-G6EKypqP2/coPChLwwEKZ2WIEay0qfyM8M5jKb0oS2c=";
   };
 
@@ -52,4 +52,4 @@ buildPythonPackage rec {
     homepage = "https://invocations.readthedocs.io/";
     license = lib.licenses.bsd2;
   };
-}
+})

@@ -10,14 +10,14 @@
   werkzeug,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytest-localserver";
   version = "0.10.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "pytest_localserver";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-JgcZfzkJEqslUl0SmsQ8PIdQSSVzaLP+CbXNA9zFJq8=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pytest-dev/pytest-localserver";
     license = lib.licenses.mit;
   };
-}
+})

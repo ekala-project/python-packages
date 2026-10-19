@@ -8,7 +8,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "discovery30303";
   version = "0.3.3";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "bdraco";
     repo = "discovery30303";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-QIGLRe+nUV3tUOs+pu6Qk/2Amh9IVcQq89o2JeKiTvM=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/bdraco/discovery30303";
     license = lib.licenses.asl20;
   };
-}
+})

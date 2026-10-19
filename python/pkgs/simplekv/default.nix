@@ -12,7 +12,7 @@
   redis,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "simplekv";
   version = "0.14.1";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mbr";
     repo = "simplekv";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-seUGDj2q84+AjDFM1pxMLlHbe9uBgEhmqA96UHjnCmo=";
   };
 
@@ -47,4 +47,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mbr/simplekv";
     license = lib.licenses.mit;
   };
-}
+})

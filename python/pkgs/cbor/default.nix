@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "cbor";
   version = "1.0.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-EyJaJi3fVhXL2f1Vp2oNUwadGLB9Lp8Zw55qy4YJu7Y=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/brianolson/cbor_py";
     license = lib.licenses.asl20;
   };
-}
+})

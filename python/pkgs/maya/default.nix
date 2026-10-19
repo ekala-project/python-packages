@@ -14,7 +14,7 @@
   tzlocal,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "maya";
   version = "0.6.1";
   pyproject = true;
@@ -22,7 +22,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "timofurrer";
     repo = "maya";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-4fUyUqVQk/AcQL3xMnU1cQlF5yiD/N9NPAsUPuDTTNY=";
   };
 
@@ -61,4 +61,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/timofurrer/maya";
     license = lib.licenses.mit;
   };
-}
+})

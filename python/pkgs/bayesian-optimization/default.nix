@@ -22,7 +22,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "bayesian-optimization";
   version = "3.3.0";
   pyproject = true;
@@ -30,7 +30,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "bayesian-optimization";
     repo = "BayesianOptimization";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-tehmtySHiwXQBFZDcj87DAP0WMyp3kDXW0LZApkHZwY=";
   };
 
@@ -66,4 +66,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/bayesian-optimization/BayesianOptimization";
     license = lib.licenses.mit;
   };
-}
+})

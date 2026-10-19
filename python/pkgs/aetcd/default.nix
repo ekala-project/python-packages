@@ -12,7 +12,7 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aetcd";
   version = "1.0.0a4";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "martyanov";
     repo = "aetcd";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-g49ppfh8dyGpZeu/HdTDX8RAk5VTcZmqENRpNY12qkg=";
   };
 
@@ -60,4 +60,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/martyanov/aetcd";
     license = lib.licenses.asl20;
   };
-}
+})

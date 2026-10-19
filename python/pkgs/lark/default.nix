@@ -7,7 +7,7 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "lark";
   version = "1.3.1";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "lark-parser";
     repo = "lark";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-JDtLSbVjypaHqamkknHDSql1GTMf1LA4TgJXqTn4Q20=";
   };
 
@@ -24,7 +24,7 @@ buildPythonPackage rec {
     setuptools-scm
   ];
 
-  env.SETUPTOOLS_SCM_PRETEND_VERSION = version;
+  env.SETUPTOOLS_SCM_PRETEND_VERSION = finalAttrs.version;
 
   dependencies = [ regex ];
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://lark-parser.readthedocs.io/";
     license = lib.licenses.mit;
   };
-}
+})

@@ -9,14 +9,14 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "azure-storage-file-share";
   version = "12.26.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_storage_file_share";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-CM+LxDbfUyzbm/3857sQxfHYPVE2CVTNju9Wy8z0MAo=";
   };
 
@@ -45,4 +45,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/storage/azure-storage-file-share";
     license = lib.licenses.mit;
   };
-}
+})

@@ -8,13 +8,13 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "cookies";
   version = "2.2.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-1raYeIyuTPpOYu+GQ6nKMyt5vZbLMUKUuGSujX6z7o4=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/sashahart/cookies";
     license = lib.licenses.mit;
   };
-}
+})

@@ -9,13 +9,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ptpython";
   version = "3.0.32";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-EWUXeCNt6VxYK0JzcpTlCma6SiH6AcAJDqcIFa9Hj+A=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/prompt-toolkit/ptpython";
     license = lib.licenses.bsd3;
   };
-}
+})

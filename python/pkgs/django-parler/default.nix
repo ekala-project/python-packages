@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-parler";
   version = "2.4";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "django-parler";
     repo = "django-parler";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-vX8/0J3at97KVjWx4qxYq4wJma/QCUFHERCfXjkBieE=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/django-parler/django-parler";
     license = lib.licenses.asl20;
   };
-}
+})

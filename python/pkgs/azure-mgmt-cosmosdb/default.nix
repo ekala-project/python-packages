@@ -9,14 +9,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-cosmosdb";
   version = "10.0.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_mgmt_cosmosdb";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-+fXpy8mErTzz+b37hT7D6Giw6J6cJZfeTUKfpmAsqNk=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Azure/azure-sdk-for-python";
     license = lib.licenses.mit;
   };
-}
+})

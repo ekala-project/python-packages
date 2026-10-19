@@ -11,7 +11,7 @@
   uv-build,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-bootstrap5";
   version = "26.1";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "zostera";
     repo = "django-bootstrap5";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-kLq1BHN4PKwtAH/TqHn8B697K9Nk5mNMpjUsW5cCrj4=";
   };
 
@@ -61,4 +61,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/zostera/django-bootstrap5";
     license = lib.licenses.bsd3;
   };
-}
+})

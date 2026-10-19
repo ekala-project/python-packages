@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "simplejson";
   version = "4.1.2";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "simplejson";
     repo = "simplejson";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-fiuz78r0z2ZM2vVIPxhMwnJGiZGURwr1yGSe/uLgeCs=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
       afl21
     ];
   };
-}
+})

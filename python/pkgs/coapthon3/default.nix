@@ -7,7 +7,7 @@
   lib,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "coapthon3";
   version = "1.0.2";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Tanganelli";
     repo = "CoAPthon3";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-9QApoPUu3XFZY/lgjAsf5r2StFiRtUd1UXWDrzYUh6w=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     description = "Python3 library to the CoAP protocol compliant with the RFC";
     license = lib.licenses.mit;
   };
-}
+})

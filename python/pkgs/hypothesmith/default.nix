@@ -8,13 +8,13 @@
   libcst,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "hypothesmith";
   version = "0.3.3";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-lsFIAtbI6F2JdSZBdoeNtUso0u2SH9v+3C5rjOPIFxY=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Zac-HD/hypothesmith";
     license = lib.licenses.mpl20;
   };
-}
+})

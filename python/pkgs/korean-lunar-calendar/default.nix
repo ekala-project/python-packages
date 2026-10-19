@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "korean_lunar_calendar";
   version = "0.4.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-vlbye8BZT9u997vgD1BKn5KaMeMRvX2buTVhtkWvrec=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/usingsky/korean_lunar_calendar_py";
     license = lib.licenses.mit;
   };
-}
+})

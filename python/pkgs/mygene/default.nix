@@ -10,7 +10,7 @@
   pandas,
   requests,
 }:
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mygene";
   version = "3.2.2";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "biothings";
     repo = "mygene.py";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-/KxlzOTbZTN5BA0PrJyivVFh4cLtW90/EFwczda61Tg=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/biothings/mygene.py";
     license = lib.licenses.bsd3;
   };
-}
+})

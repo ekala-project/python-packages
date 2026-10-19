@@ -9,7 +9,7 @@
   rustPlatform,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "proton-vpn-local-agent";
   version = "1.6.3";
   pyproject = false;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ProtonVPN";
     repo = "local-agent-rs";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-y2FEfICwWa/GgaKkq8CR+lVDYIsk0HsuKuGUsUQZAFo=";
   };
 
@@ -65,4 +65,4 @@ buildPythonPackage rec {
     license = lib.licenses.gpl3Only;
     platforms = lib.platforms.linux;
   };
-}
+})

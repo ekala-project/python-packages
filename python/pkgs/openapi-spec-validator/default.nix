@@ -13,7 +13,7 @@
   openapi-schema-validator,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "openapi-spec-validator";
   version = "0.9.0";
   pyproject = true;
@@ -21,7 +21,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "python-openapi";
     repo = "openapi-spec-validator";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-ykcoSXXlhxmUpXx86mc8GT3UolmH/sjBpa5lEViwJrk=";
   };
 
@@ -50,4 +50,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/p1c2u/openapi-spec-validator";
     license = lib.licenses.asl20;
   };
-}
+})

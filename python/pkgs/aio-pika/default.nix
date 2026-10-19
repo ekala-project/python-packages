@@ -7,7 +7,7 @@
   yarl,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aio-pika";
   version = "9.6.2";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mosquito";
     repo = "aio-pika";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-N5MjFIolMRTTn4aV1NskBwonB/8FSuEZETumUrAa02Y=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mosquito/aio-pika";
     license = lib.licenses.asl20;
   };
-}
+})

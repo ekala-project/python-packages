@@ -7,13 +7,13 @@
   fastapi,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "imia";
   version = "0.5.3";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-4CzevO7xgo8Hb1JHe/eGEtq/KCrJM0hV/7SRV2wmux8=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/alex-oleshkevich/imia";
     license = lib.licenses.mit;
   };
-}
+})

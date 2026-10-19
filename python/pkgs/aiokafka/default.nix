@@ -12,7 +12,7 @@
   zlib,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aiokafka";
   version = "0.14.0";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "aio-libs";
     repo = "aiokafka";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-GkMIaMK6q8S0QcIcSQbiYPXGCLBS6V+rFZd5AYZlKbM=";
   };
 
@@ -57,4 +57,4 @@ buildPythonPackage rec {
     homepage = "https://aiokafka.readthedocs.org";
     license = lib.licenses.asl20;
   };
-}
+})

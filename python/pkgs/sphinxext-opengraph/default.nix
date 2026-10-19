@@ -7,7 +7,7 @@
   flit-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "sphinxext-opengraph";
   version = "0.13.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "wpilibsuite";
     repo = "sphinxext-opengraph";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-rdV6XWHfNj+TFgIfqFPWYxn6bGG5w/frUHl9+qMALi4=";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/wpilibsuite/sphinxext-opengraph";
     license = lib.licenses.mit;
   };
-}
+})

@@ -16,7 +16,7 @@
   requests-mock,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "locust-cloud";
   version = "1.30.0";
   pyproject = true;
@@ -24,7 +24,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "locustcloud";
     repo = "locust-cloud";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-GJS0+CUYMz3G98I7Edj2qEsIFTp5wzsuSMmN7DlZPjA=";
   };
 
@@ -48,4 +48,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/locustcloud/locust-cloud";
     license = lib.licenses.mit;
   };
-}
+})

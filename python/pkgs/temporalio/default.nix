@@ -19,7 +19,7 @@
   rustc,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "temporalio";
   version = "1.30.0";
   pyproject = true;
@@ -27,7 +27,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "temporalio";
     repo = "sdk-python";
-    tag = version;
+    tag = finalAttrs.version;
     fetchSubmodules = true;
     hash = "sha256-8bCkm2b66CUSfIri0PhDLCijFSQR82wzAQKjdlk8VBg=";
   };
@@ -80,4 +80,4 @@ buildPythonPackage rec {
     homepage = "https://temporal.io/";
     license = lib.licenses.mit;
   };
-}
+})

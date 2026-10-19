@@ -11,13 +11,13 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pywebpush";
   version = "2.5.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-gmD45C1w7ZWjvQBSf/y0O1s9+Jg6SkiwWf4psG3D2Sw=";
   };
 
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     license = lib.licenses.mpl20;
     mainProgram = "pywebpush";
   };
-}
+})

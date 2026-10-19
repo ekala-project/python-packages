@@ -42,7 +42,7 @@
   httpx,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "twisted";
   version = "26.4.0";
   pyproject = true;
@@ -50,7 +50,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "twisted";
     repo = "twisted";
-    tag = "twisted-${version}";
+    tag = "twisted-${finalAttrs.version}";
     hash = "sha256-D6vDa+8qwjryKnElPBZgXCNokMX2l3i2bMdtk4FhEp4=";
   };
 
@@ -235,4 +235,4 @@ buildPythonPackage rec {
     description = "Asynchronous networking framework written in Python";
     license = lib.licenses.mit;
   };
-}
+})

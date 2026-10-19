@@ -9,7 +9,7 @@
   pytest,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "names";
   version = "0.3.0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "treyhunner";
     repo = "names";
-    tag = version;
+    tag = finalAttrs.version;
     sha256 = "0jfn11bl05k3qkqw0f4vi2i2lhllxdrbb1732qiisdy9fbvv8611";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/treyhunner/names";
     license = lib.licenses.mit;
   };
-}
+})

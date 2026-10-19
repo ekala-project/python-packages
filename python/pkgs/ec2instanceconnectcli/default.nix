@@ -8,13 +8,13 @@
   cryptography,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ec2instanceconnectcli";
   version = "1.0.3";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-/U59a6od0JI27VHX+Bvue/7tQy+iwU+g8yt9/GgdoH4=";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/aws/aws-ec2-instance-connect-cli";
     license = lib.licenses.asl20;
   };
-}
+})

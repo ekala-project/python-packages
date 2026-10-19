@@ -8,7 +8,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "dufte";
   version = "0.2.29";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "nschloe";
     repo = "dufte";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256:0ccsmpj160xj6w503a948aw8icj55mw9414xnmijmmjvlwhm0p48";
   };
 
@@ -43,4 +43,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/nschloe/dufte";
     license = lib.licenses.gpl3Plus;
   };
-}
+})

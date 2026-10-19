@@ -18,7 +18,7 @@
   gitUpdater,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "bpython";
   version = "0.26";
   pyproject = true;
@@ -26,7 +26,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "bpython";
     repo = "bpython";
-    tag = "${version}-release";
+    tag = "${finalAttrs.version}-release";
     hash = "sha256-NmWM0fdzS9n5FSnNJOCdS1JE5ZHrmJXqCuHa54rT8GU=";
   };
 
@@ -40,7 +40,7 @@ buildPythonPackage rec {
 
   postPatch = ''
     substituteInPlace setup.py \
-      --replace-fail 'version = "unknown"' 'version = "${version}"'
+      --replace-fail 'version = "unknown"' 'version = "${finalAttrs.version}"'
   '';
 
   build-system = [ setuptools ];
@@ -82,4 +82,4 @@ buildPythonPackage rec {
     homepage = "https://bpython-interpreter.org/";
     license = lib.licenses.mit;
   };
-}
+})

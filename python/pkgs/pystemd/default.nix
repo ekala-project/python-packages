@@ -10,7 +10,7 @@
   cython,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pystemd";
   version = "0.15.3";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "systemd";
     repo = "pystemd";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-qFBa2hIcF0hyb+QyVpFG0qOpWsVVVTGCqgfChic6JCI=";
   };
 
@@ -49,4 +49,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/facebookincubator/pystemd";
     license = lib.licenses.lgpl21Plus;
   };
-}
+})

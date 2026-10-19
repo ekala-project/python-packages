@@ -7,14 +7,14 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "azure-cosmos";
   version = "4.16.4";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_cosmos";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-WpjTPObVOakm9HxnsUWH+7i6T9ZidR/4sOvn+dN2Wi4=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/cosmos/azure-cosmos";
     license = lib.licenses.mit;
   };
-}
+})

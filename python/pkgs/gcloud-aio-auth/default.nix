@@ -11,14 +11,14 @@
   tenacity,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "gcloud-aio-auth";
   version = "5.5.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "gcloud_aio_auth";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-VsP+8x3sbzhB9esMefr5oc0+R1+ix6GUv1FiJqo5/Rg=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/talkiq/gcloud-aio";
     license = lib.licenses.mit;
   };
-}
+})

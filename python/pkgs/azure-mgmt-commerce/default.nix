@@ -9,13 +9,13 @@
   azure-mgmt-nspkg,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-commerce";
   version = "6.0.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     extension = "zip";
     sha256 = "6f5447395503b2318f451d24f8021ee08db1cac44f1c3337ea690700419626b6";
   };
@@ -44,4 +44,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Azure/azure-sdk-for-python";
     license = lib.licenses.mit;
   };
-}
+})

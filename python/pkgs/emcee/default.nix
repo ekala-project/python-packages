@@ -9,7 +9,7 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "emcee";
   version = "3.1.6";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "dfm";
     repo = "emcee";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-JVZK3kvDwWENho0OxZ9OxATcm3XpGmX+e7alPclRsHY=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://emcee.readthedocs.io/";
     license = lib.licenses.mit;
   };
-}
+})

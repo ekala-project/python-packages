@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "intervals";
   version = "0.9.2";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "kvesteri";
     repo = "intervals";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-5SwbGF7RU+2wgGnqhhFCdV89tsEIum4w7RwPU7+3MRQ=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/kvesteri/intervals";
     license = lib.licenses.bsd3;
   };
-}
+})

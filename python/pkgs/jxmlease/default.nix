@@ -8,13 +8,13 @@
   unittestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jxmlease";
   version = "1.0.3";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     sha256 = "17l3w3ak07p72s8kv8hg0ilxs0kkxjn7bfwnl3g2cw58v1siab31";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Juniper/jxmlease";
     license = lib.licenses.mit;
   };
-}
+})

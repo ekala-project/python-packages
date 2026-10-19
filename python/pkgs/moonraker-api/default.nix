@@ -10,7 +10,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "moonraker-api";
   version = "4.0.0";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "cmroche";
     repo = "moonraker-api";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-I+/c3dVVuNGKWztVsEKi2AErACbhQoU8ZE3ye9B2HxM=";
   };
 
@@ -27,7 +27,7 @@ buildPythonPackage rec {
   postPatch = ''
     # see comment on https://github.com/cmroche/moonraker-api/commit/e5ca8ab60d2839e150a81182fbe65255d84b4e4e
     substituteInPlace setup.py \
-      --replace 'name="moonraker-api",' 'name="moonraker-api",version="${version}",'
+      --replace 'name="moonraker-api",' 'name="moonraker-api",version="${finalAttrs.version}",'
   '';
 
   dependencies = [
@@ -47,4 +47,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/cmroche/moonraker-api";
     license = lib.licenses.gpl3Only;
   };
-}
+})

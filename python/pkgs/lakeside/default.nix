@@ -9,7 +9,7 @@
   requests,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "lakeside";
   version = "0.13";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "nkgilley";
     repo = "python-lakeside";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-Y5g78trkwOF3jsbgTv0uVkvfB1HZN+w1T6xIorxGAhg=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/nkgilley/python-lakeside";
     license = lib.licenses.asl20;
   };
-}
+})

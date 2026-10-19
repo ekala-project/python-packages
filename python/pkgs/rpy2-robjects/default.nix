@@ -14,7 +14,7 @@
   tzlocal,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   version = "3.6.5";
   pyproject = true;
   pname = "rpy2-robjects";
@@ -23,7 +23,7 @@ buildPythonPackage rec {
   src = fetchurl {
     url = "mirror://pypi/${builtins.substring 0 1 pname}/${pname}/${
       builtins.replaceStrings [ "-" ] [ "_" ] pname
-    }-${version}.tar.gz";
+    }-${finalAttrs.version}.tar.gz";
     hash = "sha256-A9CZ9DagGotR+4+L9gJCCpnHzdqMP84OOg9TLja0r+Q=";
   };
 
@@ -58,4 +58,4 @@ buildPythonPackage rec {
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.unix;
   };
-}
+})

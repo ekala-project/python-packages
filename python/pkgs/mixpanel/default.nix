@@ -18,7 +18,7 @@
   respx,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mixpanel";
   version = "5.4.0";
   pyproject = true;
@@ -26,7 +26,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mixpanel";
     repo = "mixpanel-python";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-0O/VPE9i/ka/pDnSA4jmKriT/jR2l6wqUjLmIesytww=";
   };
 
@@ -47,4 +47,4 @@ buildPythonPackage rec {
     description = "Official Mixpanel Python library";
     license = lib.licenses.asl20;
   };
-}
+})

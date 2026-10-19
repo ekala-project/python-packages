@@ -18,7 +18,7 @@
   pytest-xdist,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "asn1tools";
   version = "0.167.0";
   pyproject = true;
@@ -26,7 +26,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "eerimoq";
     repo = "asn1tools";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-86bdBYlAVJfd3EY8s0t6ZDRA/qZVWuHD4Jxa1n1Ke5E=";
   };
 
@@ -47,4 +47,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     mainProgram = "asn1tools";
   };
-}
+})

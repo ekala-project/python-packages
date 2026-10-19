@@ -6,7 +6,7 @@
   unittestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "f90nml";
   version = "1.5";
   pyproject = true;
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://f90nml.readthedocs.io";
     license = lib.licenses.asl20;
   };
-}
+})

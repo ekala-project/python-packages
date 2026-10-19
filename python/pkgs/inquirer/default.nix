@@ -16,7 +16,7 @@
   pexpect,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "inquirer";
   version = "3.4.1";
   pyproject = true;
@@ -24,7 +24,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "magmax";
     repo = "python-inquirer";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-xVHmdJGN5yOxbEkZIiOLqeUwcfdj+o7jTTWBD75szII=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/magmax/python-inquirer";
     license = lib.licenses.mit;
   };
-}
+})

@@ -9,7 +9,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "cybox";
   version = "2.1.0.21";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "CybOXProject";
     repo = "python-cybox";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-Gn/gH7pvvOqLIGExgCNa5KswPazIZUZXdQe3LRAUVjw=";
   };
 
@@ -45,4 +45,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/CybOXProject/python-cybox/";
     license = lib.licenses.bsd3;
   };
-}
+})

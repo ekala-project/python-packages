@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytest-retry";
   version = "1.7.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "str0zzapreti";
     repo = "pytest-retry";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-Gf+L7zvC1FGAm0Wd6E6fV3KynassoGyHSD0CPgEJ02k=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/str0zzapreti/pytest-retry";
     license = lib.licenses.mit;
   };
-}
+})

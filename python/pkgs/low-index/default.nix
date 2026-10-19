@@ -7,7 +7,7 @@
   nix-update-script,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "low-index";
   version = "1.3";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "3-manifolds";
     repo = "low_index";
-    tag = "v${version}_as_released";
+    tag = "v${finalAttrs.version}_as_released";
     hash = "sha256-m3p05bqu70pMOsb9drW1B6+N893eBSZBFTNNS23OY6w=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/3-manifolds/low_index";
     license = lib.licenses.gpl2Plus;
   };
-}
+})

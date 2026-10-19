@@ -5,13 +5,13 @@
   poetry-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "terminaltables";
   version = "3.1.10";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-um7KXLW6ArukyfT5ha+AxU7D3M+Uz80ZAVQ4YlXkdUM=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     description = "Display simple tables in terminals";
     license = lib.licenses.mit;
   };
-}
+})

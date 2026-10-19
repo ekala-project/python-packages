@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "libusb1";
   version = "3.4.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-nPVjhQbVTyG/NlUNl+pjGJERojxNgHj2MBA6IFITX0U=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     description = "Python ctype-based wrapper around libusb1";
     license = lib.licenses.lgpl2Plus;
   };
-}
+})

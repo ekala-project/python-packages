@@ -9,7 +9,7 @@
   testfixtures,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytest-golden";
   version = "1.0.1";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "oprypin";
     repo = "pytest-golden";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-mjb8lBAoZxwUCN4AIMK/n70aC41Y4IV/+hrW11S9rcw=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/oprypin/pytest-golden";
     license = lib.licenses.mit;
   };
-}
+})

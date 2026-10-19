@@ -6,7 +6,7 @@
   flit-core,
   requests,
 }:
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "conda-package-streaming";
   version = "0.13.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "conda";
     repo = "conda-package-streaming";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-jrxp5f6rrrdvaT1Oq0l2j+k518LQ3zKi5ADMsKrYwXM=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/conda/conda-package-streaming";
     license = lib.licenses.bsd3;
   };
-}
+})

@@ -7,13 +7,13 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytest-helpers-namespace";
   version = "2021.12.29";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     sha256 = "792038247e0021beb966a7ea6e3a70ff5fcfba77eb72c6ec8fd6287af871c35b";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     description = "PyTest Helpers Namespace";
     license = lib.licenses.asl20;
   };
-}
+})

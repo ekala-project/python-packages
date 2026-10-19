@@ -6,13 +6,13 @@
   psutil,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "portpicker";
   version = "1.6.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-vVB/1vlvZe4CeB8uZ06dxsmbv6bjw5mS45FiBMnUMfo=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     description = "Library to choose unique available network ports";
     license = lib.licenses.asl20;
   };
-}
+})

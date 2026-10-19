@@ -11,13 +11,13 @@
   xmlschema,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pysaml2";
   version = "7.5.4";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-uCfcqrc8T3/gAclFQB60Qs/aXSIAHOpQwgwTjpre/+o=";
   };
 
@@ -44,4 +44,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/IdentityPython/pysaml2";
     license = lib.licenses.asl20;
   };
-}
+})

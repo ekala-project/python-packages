@@ -13,14 +13,14 @@
   fetchpatch,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "github3-py";
   version = "4.0.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "github3.py";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-MNVxB2dT78OJ7cf5qu8zik/LJLVNiWjV85sTQvRd3TY=";
   };
 
@@ -48,4 +48,4 @@ buildPythonPackage rec {
     description = "Wrapper for the GitHub API written in python";
     license = lib.licenses.bsd3;
   };
-}
+})

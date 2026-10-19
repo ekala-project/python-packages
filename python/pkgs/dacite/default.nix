@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "dacite";
   version = "1.9.2";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "konradhalas";
     repo = "dacite";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-mAPqWvBpkTbtzHpwtCSDXMNkoc8/hbRH3OIEeK2yStU=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/konradhalas/dacite";
     license = lib.licenses.mit;
   };
-}
+})

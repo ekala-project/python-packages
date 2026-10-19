@@ -8,7 +8,7 @@
   coincurve,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "bip32";
   version = "5.0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "darosior";
     repo = "python-bip32";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-QO1gS9bx/eQPaLuB1ZNZuXj4DmeO4/La2hG9NCXjd+4=";
   };
 
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/darosior/python-bip32";
     license = lib.licenses.bsd3;
   };
-}
+})

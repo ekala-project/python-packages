@@ -11,7 +11,7 @@
   wcwidth,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "prettytable";
   version = "3.18.0";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "jazzband";
     repo = "prettytable";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-Wx3mt6b+tg3yz0f6r9NVFduLKWr8GBXXJI99RBc1VO4=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jazzband/prettytable";
     license = lib.licenses.bsd3;
   };
-}
+})

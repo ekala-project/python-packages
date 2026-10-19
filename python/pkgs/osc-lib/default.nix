@@ -13,7 +13,7 @@
   stevedore,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "osc-lib";
   version = "4.6.0";
   pyproject = true;
@@ -21,7 +21,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "openstack";
     repo = "osc-lib";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-XwOJSd3k/74FvSZGveSTjH+KGLlQ2jNbk8GrTzFhbL0=";
   };
 
@@ -29,7 +29,7 @@ buildPythonPackage rec {
     ./fix-pyproject.diff
   ];
 
-  env.PBR_VERSION = version;
+  env.PBR_VERSION = finalAttrs.version;
 
   build-system = [
     pbr
@@ -55,4 +55,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/openstack/osc-lib";
     license = lib.licenses.asl20;
   };
-}
+})

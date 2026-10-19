@@ -25,14 +25,14 @@
   overrides,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jupyter-server";
   version = "2.21.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "jupyter_server";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-cNmhiD9X01duoX9M4GHsGnqtfvOI0AQoz7f15PACInE=";
   };
 
@@ -73,4 +73,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jupyter-server/jupyter_server";
     license = lib.licenses.bsdOriginal;
   };
-}
+})

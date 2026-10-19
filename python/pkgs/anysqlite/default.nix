@@ -8,7 +8,7 @@
   trio,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "anysqlite";
   version = "0.0.5";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "karpetrosyan";
     repo = "anysqlite";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-6kNN6kjkMHVNneMq/8zQxqMIXUxH/+eWLX8XhoHqFRU=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/karpetrosyan/anysqlite";
     license = lib.licenses.bsd3;
   };
-}
+})

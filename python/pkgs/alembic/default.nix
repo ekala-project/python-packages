@@ -12,13 +12,13 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "alembic";
   version = "1.19.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-KXlQqKkfZ3Drgr+86b6lXHKLkKU4bG6BQwGRoxnROLA=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     mainProgram = "alembic";
   };
-}
+})

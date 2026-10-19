@@ -7,7 +7,7 @@
   python-dotenv,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pydantic-settings";
   version = "2.15.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pydantic";
     repo = "pydantic-settings";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-bVZ0KOQ+YA2n4HZ/G7A8fmgQJMtcACRdz587du/z1s4=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pydantic/pydantic-settings";
     license = lib.licenses.mit;
   };
-}
+})

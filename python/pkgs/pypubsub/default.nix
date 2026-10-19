@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pypubsub";
   version = "4.0.3";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "schollii";
     repo = "pypubsub";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-i+7IR5s7A+kBApQ9OLCL8scnuQ+mRDRn361+jgQnRwo=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/schollii/pypubsub";
     license = lib.licenses.bsd2;
   };
-}
+})

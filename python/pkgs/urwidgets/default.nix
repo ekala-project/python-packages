@@ -6,7 +6,7 @@
   urwid,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "urwidgets";
   version = "0.2.1";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "AnonymouX47";
     repo = "urwidgets";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-RgY7m0smcdUspGkCdzepxruEMDq/mAsVFNjHMLoWAyc=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/AnonymouX47/urwidgets";
     license = lib.licenses.mit;
   };
-}
+})

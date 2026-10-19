@@ -6,13 +6,13 @@
   hatch-vcs,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyhamcrest";
   version = "2.1.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-xqy+wJI9DLfnLCKvGSbz58l7jo1p/HSY6rrK98l1vZw=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/hamcrest/PyHamcrest";
     license = lib.licenses.bsd3;
   };
-}
+})

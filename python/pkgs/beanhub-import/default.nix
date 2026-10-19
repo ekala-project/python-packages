@@ -13,7 +13,7 @@
   pyyaml,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "beanhub-import";
   version = "1.4.1";
   pyproject = true;
@@ -21,7 +21,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "LaunchPlatform";
     repo = "beanhub-import";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-TlRqIaxUeyNJHyH3FBNJLTroG3NRGUacY5ZrnaBaAb4=";
   };
 
@@ -51,4 +51,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/LaunchPlatform/beanhub-import/";
     license = lib.licenses.mit;
   };
-}
+})

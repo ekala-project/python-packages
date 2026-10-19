@@ -11,7 +11,7 @@
   requests-mock,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "openevsewifi";
   version = "1.1.2";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "miniconfig";
     repo = "python-openevse-wifi";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-7+BC5WG0JoyHNjgsoJBQRVDpmdXMJCV4bMf6pIaS5qo=";
   };
 
@@ -52,4 +52,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/miniconfig/python-openevse-wifi";
     license = lib.licenses.mit;
   };
-}
+})

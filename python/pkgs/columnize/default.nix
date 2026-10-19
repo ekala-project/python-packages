@@ -6,7 +6,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "columnize";
   version = "3.11";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "rocky";
     repo = "pycolumnize";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-YJEIujoRpLvUM4H4CB1nEJaYStFOSVKIGzchnptlt7M=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     changelog = "https://github.com/rocky/pycolumnize/blob/${src.tag}/ChangeLog";
     license = lib.licenses.mit;
   };
-}
+})

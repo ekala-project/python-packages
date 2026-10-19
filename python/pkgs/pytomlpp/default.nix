@@ -7,7 +7,7 @@
   pybind11,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytomlpp";
   version = "1.1.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "bobfang1992";
     repo = "pytomlpp";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     fetchSubmodules = true;
     hash = "sha256-RRsjnZK0FJiSkpWxurs9vJFyo2SUAKyFKXoJ8bcsHKI=";
   };
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/bobfang1992/pytomlpp";
     license = lib.licenses.mit;
   };
-}
+})

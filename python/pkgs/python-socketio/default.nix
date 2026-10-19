@@ -7,14 +7,14 @@
   python-engineio,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "python-socketio";
   version = "5.16.4";
   pyproject = true;
 
   src = fetchPypi {
     pname = "python_socketio";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-9/pKQ8yOaHkwtcbkTW4u/CBx7KS+9JuLs9wIJ/f5IjU=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/miguelgrinberg/python-socketio/";
     license = lib.licenses.mit;
   };
-}
+})

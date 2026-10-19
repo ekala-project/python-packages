@@ -8,7 +8,7 @@
   versionCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "files-to-prompt";
   version = "0.6";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "simonw";
     repo = "files-to-prompt";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-LWp/DNP3bsh7/goQGkpi4x2N11tRuhLVh2J8H6AUH0w=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/simonw/files-to-prompt";
     license = lib.licenses.asl20;
   };
-}
+})

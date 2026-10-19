@@ -5,7 +5,7 @@
   pytestCheckHook,
   hatchling,
 }:
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "dataclass-csv";
   version = "1.4.1";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "dfurtado";
     repo = "dataclass-csv";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-hDnuPg5xniybR2J91KnJxSlOI+dWzUPQJtYKfqsNCvw=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/dfurtado/dataclass-csv";
     license = lib.licenses.bsd3;
   };
-}
+})

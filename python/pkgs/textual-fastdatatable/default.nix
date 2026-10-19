@@ -11,7 +11,7 @@
   polars,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "textual-fastdatatable";
   version = "0.19.2";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "tconbeer";
     repo = "textual-fastdatatable";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-buOgvDFzK6wRrzm7AvT7BFFzHbCNEqX3OVsFS1FyJio=";
   };
 
@@ -47,4 +47,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/tconbeer/textual-fastdatatable";
     license = lib.licenses.mit;
   };
-}
+})

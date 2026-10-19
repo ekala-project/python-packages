@@ -7,7 +7,7 @@
   poetry-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pycountry";
   version = "26.2.16";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pycountry";
     repo = "pycountry";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-VmPCQszEaDNsSnMfAo5xyDZySJcC4TiWZrmQMfebKKQ=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pycountry/pycountry";
     license = lib.licenses.lgpl21Plus;
   };
-}
+})

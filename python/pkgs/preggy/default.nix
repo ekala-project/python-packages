@@ -11,13 +11,13 @@
   unidecode,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "preggy";
   version = "1.4.4";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-JbqAOv3k8171Q6YJFc7S5jSSYjUGTfcXw8s+Tj60Zww=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "http://heynemann.github.io/preggy/";
     license = lib.licenses.mit;
   };
-}
+})

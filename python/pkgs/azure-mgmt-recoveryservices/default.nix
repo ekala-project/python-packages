@@ -9,14 +9,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-recoveryservices";
   version = "4.2.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_mgmt_recoveryservices";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-qJJRGC8a0Mo5NZcOOptkHj6qVNhnaveYtYUeMes7bZg=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Azure/azure-sdk-for-python";
     license = lib.licenses.mit;
   };
-}
+})

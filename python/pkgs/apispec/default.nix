@@ -10,13 +10,13 @@
   packaging,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "apispec";
   version = "6.10.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-CoiFVc1KpftxdgQb4VaEFU/YlhBV4WcucDq/c36HYb8=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/marshmallow-code/apispec";
     license = lib.licenses.mit;
   };
-}
+})

@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "dbfread";
   version = "2.0.7";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-B8iprwb/rT9vA+j+ka19JzPjGibStyxN1M+64H7jtz0=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://dbfread.readthedocs.org/";
     license = lib.licenses.mit;
   };
-}
+})

@@ -6,14 +6,14 @@
   boolean-py,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "license-expression";
   version = "30.4.4";
   pyproject = true;
 
   src = fetchPypi {
     pname = "license_expression";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-c0SPCqzY0ICIlb3EssjgGo1nZG5BiPiHN1OYx2HzQP0=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/aboutcode-org/license-expression";
     license = lib.licenses.asl20;
   };
-}
+})

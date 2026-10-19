@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "binary2strings";
   version = "0.1.13";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "glmcdona";
     repo = "binary2strings";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-3UPT0PdnPAhOu3J2vU5NxE3f4Nb1zwuX3hJiy87nLD0=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/glmcdona/binary2strings";
     license = lib.licenses.mit;
   };
-}
+})

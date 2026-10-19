@@ -14,7 +14,7 @@
   pytest-cov-stub,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "convertertools";
   version = "1.1.0";
   pyproject = true;
@@ -22,7 +22,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "bluetooth-devices";
     repo = "convertertools";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-YLEZGTq3wtiLsqQkdxcdM4moUEYPN29Uai5o81FUtVc=";
   };
 
@@ -45,4 +45,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/bluetooth-devices/convertertools";
     license = lib.licenses.mit;
   };
-}
+})

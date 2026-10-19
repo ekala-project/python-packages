@@ -10,14 +10,14 @@
   rsa,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "gcloud-aio-storage";
   version = "9.6.4";
   pyproject = true;
 
   src = fetchPypi {
     pname = "gcloud_aio_storage";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-TadB6eRfCrX1eqm6LUYDLd5LgPPrCgPeMax0Gt1CBIU=";
   };
 
@@ -45,4 +45,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/talkiq/gcloud-aio";
     license = lib.licenses.mit;
   };
-}
+})

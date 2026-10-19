@@ -9,7 +9,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "fastremap";
   version = "1.19.0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "seung-lab";
     repo = "fastremap";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-fPDgCpCJrMomxr0dicM9NBqzH4s+/Ux37hTsnsGts2g=";
   };
 
@@ -32,7 +32,7 @@ buildPythonPackage rec {
     numpy
   ];
 
-  env.PBR_VERSION = version;
+  env.PBR_VERSION = finalAttrs.version;
 
   nativeCheckInputs = [
     pytestCheckHook
@@ -49,4 +49,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/seung-lab/fastremap";
     license = lib.licenses.lgpl3Only;
   };
-}
+})

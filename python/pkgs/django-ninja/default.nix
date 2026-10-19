@@ -10,7 +10,7 @@
   pytest-django,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-ninja";
   version = "1.7.0";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "vitalik";
     repo = "django-ninja";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-rfusPDZj056NX3lOs+hImuedknGR08Fkv+EuN9sTcIE=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://django-ninja.dev";
     license = lib.licenses.mit;
   };
-}
+})

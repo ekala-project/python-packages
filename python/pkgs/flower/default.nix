@@ -10,13 +10,13 @@
   tornado,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "flower";
   version = "2.1.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-7Oef0ZC/0ZiUfjBHDEsmptXfGGHVQwlDDdkm7VFjAv8=";
   };
 
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mher/flower";
     license = lib.licenses.bsdOriginal;
   };
-}
+})

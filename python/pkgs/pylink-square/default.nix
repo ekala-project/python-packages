@@ -9,7 +9,7 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pylink-square";
   version = "2.0.1";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "square";
     repo = "pylink";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-r0LqyyYKnwyabxuV4xRlr+0ix77zw519+VAat2it1G4=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/square/pylink";
     license = lib.licenses.asl20;
   };
-}
+})

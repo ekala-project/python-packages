@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jsonpath-ng";
   version = "1.7.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "h2non";
     repo = "jsonpath-ng";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-sfIqEc5SsNQYxK+Ur00fFdVoC0ysOkHrx4Cq/3SpGHw=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     license = lib.licenses.asl20;
     mainProgram = "jsonpath_ng";
   };
-}
+})

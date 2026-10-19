@@ -18,7 +18,7 @@
   pkgs,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "coincurve";
   version = "21.0.0";
   pyproject = true;
@@ -26,7 +26,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ofek";
     repo = "coincurve";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-+8/CsV2BTKZ5O2LIh5/kOKMfFrkt2Jsjuj37oiOgO6Y=";
   };
 
@@ -69,4 +69,4 @@ buildPythonPackage rec {
       mit
     ];
   };
-}
+})

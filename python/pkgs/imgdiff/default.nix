@@ -9,7 +9,7 @@
   unittestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "imgdiff";
   version = "1.8.0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mgedmin";
     repo = "imgdiff";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-Ko2m6rLKUmRveHIeIylGWFXyDwlf3E7mkNHKxk7HBbA=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mgedmin/imgdiff";
     license = lib.licenses.mit;
   };
-}
+})

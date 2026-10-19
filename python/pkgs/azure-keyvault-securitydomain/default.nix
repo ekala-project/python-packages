@@ -9,14 +9,14 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "azure-keyvault-securitydomain";
   version = "1.0.0b1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_keyvault_securitydomain";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-MpGhked4qUfkso7QEyeJKpOu3PjgoN1nTPEWyxEEN3Y=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://pypi.org/project/azure-keyvault-securitydomain/1.0.0b1/";
     license = lib.licenses.mit;
   };
-}
+})

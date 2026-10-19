@@ -5,14 +5,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "antlr4-python3-runtime";
   version = "4.13.2";
   pyproject = true;
 
   src = fetchPypi {
     pname = "antlr4_python3_runtime";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-kJtkfh0vwrcBgKxYbfOTPjiRnIX5jMxlapbNPyXvORY=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://www.antlr.org/";
     license = lib.licenses.bsd3;
   };
-}
+})

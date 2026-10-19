@@ -10,13 +10,13 @@
   mako,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyramid-mako";
   version = "1.1.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     sha256 = "0066c863441f1c3ddea60cee1ccc50d00a91a317a8052ca44131da1a12a840e2";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     description = "Mako template bindings for the Pyramid web framework";
     license = lib.licenses.bsd0;
   };
-}
+})

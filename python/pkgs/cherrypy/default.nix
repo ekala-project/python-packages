@@ -17,13 +17,13 @@
   simplejson,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "cherrypy";
   version = "18.10.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-bHDnjuETAOiyHAdnxUKuaxAqScrFz9Tj4xPXu5B8WJE=";
   };
 
@@ -49,4 +49,4 @@ buildPythonPackage rec {
     mainProgram = "cherryd";
     license = lib.licenses.bsd3;
   };
-}
+})

@@ -7,13 +7,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "Morfessor";
   version = "2.0.6";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-uzvqwjQ0FyTF9kD2WAMHH2I3OlDbqFTVo5hWf5rvurI=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/aalto-speech/morfessor";
     license = lib.licenses.bsd2;
   };
-}
+})

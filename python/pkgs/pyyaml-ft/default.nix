@@ -8,7 +8,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyyaml-ft";
   version = "8.0.0";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Quansight-Labs";
     repo = "pyyaml-ft";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-GiXYpcAccKgROw144eOPY0gS0xW+3K/jRUl+JnBEaO8=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Quansight-Labs/pyyaml-ft";
     license = lib.licenses.mit;
   };
-}
+})

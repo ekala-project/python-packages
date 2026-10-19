@@ -7,13 +7,13 @@
   cwcwidth,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "curtsies";
   version = "0.4.3";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-ECoP+/lSEk8b4iL9aYnaTsfM4E5J9hMAnl9UrTdhiCU=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/bpython/curtsies";
     license = lib.licenses.mit;
   };
-}
+})

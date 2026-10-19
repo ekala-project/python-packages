@@ -14,7 +14,7 @@
   # checks
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "flexcache";
   version = "0.3";
   pyproject = true;
@@ -22,7 +22,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "hgrecco";
     repo = "flexcache";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-MAbTe7NxzfRPzo/Wnb5SnPJvJWf6zVeYsaw/g9OJYSE=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/hgrecco/flexcache";
     license = lib.licenses.bsd3;
   };
-}
+})

@@ -4,7 +4,7 @@
   fetchPypi,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "unix-ar";
   version = "0.2.1";
   format = "wheel";
@@ -21,4 +21,4 @@ buildPythonPackage rec {
     license = lib.licenses.bsd3;
     platforms = with lib.platforms; linux ++ darwin;
   };
-}
+})

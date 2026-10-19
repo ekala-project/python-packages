@@ -6,7 +6,7 @@
   hatch-vcs,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "argcomplete";
   version = "3.7.2";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "kislyuk";
     repo = "argcomplete";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-WKIhWlftH9xgdklljAOmW4XYMbclGrCFTtsxws2FRzg=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     downloadPage = "https://github.com/kislyuk/argcomplete";
     license = lib.licenses.asl20;
   };
-}
+})

@@ -16,7 +16,7 @@
   packaging,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "sopel";
   version = "8.0.4";
   pyproject = true;
@@ -24,7 +24,7 @@ buildPythonPackage rec {
   disabled = isPyPy;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-16QDzsZCquAPH3FPyBjxeXGcvSdjYLZFTXN0ASneROU=";
   };
 
@@ -63,4 +63,4 @@ buildPythonPackage rec {
     license = lib.licenses.efl20;
     mainProgram = "sopel";
   };
-}
+})

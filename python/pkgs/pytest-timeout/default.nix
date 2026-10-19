@@ -6,7 +6,7 @@
   pytest,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytest-timeout";
   version = "2.4.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pytest-dev";
     repo = "pytest-timeout";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-NGTy3Hua6yEMWXQDJQO2Z5DD3clXTZXEH6DNQBMSGtQ=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pytest-dev/pytest-timeout/";
     license = lib.licenses.mit;
   };
-}
+})

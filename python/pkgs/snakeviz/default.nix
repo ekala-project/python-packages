@@ -8,7 +8,7 @@
   tornado,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "snakeviz";
   version = "2.2.2";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "jiffyclub";
     repo = "snakeviz";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-s/OATRnkooucRkLer5A66X9xDEA7aKNo+c10m1N7Guw=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://jiffyclub.github.io/snakeviz";
     license = lib.licenses.bsd3;
   };
-}
+})

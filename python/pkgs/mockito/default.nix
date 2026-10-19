@@ -6,13 +6,13 @@
   hatchling,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mockito";
   version = "2.0.4";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-00HyKMW1zPPEc3UfbG8J2Ng8XaSYRqbuMetgtlYH4O8=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/kaste/mockito-python";
     license = lib.licenses.mit;
   };
-}
+})

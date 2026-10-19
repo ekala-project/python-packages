@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "python-dotenv";
   version = "1.2.3";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "theskumar";
     repo = "python-dotenv";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-SfLmKAvMRbeNJOwTYiPf4dAXLxXLnwkDIRex4hai0j0=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/theskumar/python-dotenv";
     license = lib.licenses.bsdOriginal;
   };
-}
+})

@@ -28,7 +28,7 @@
   trustme,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "datasette";
   version = "0.65.3";
   pyproject = true;
@@ -36,7 +36,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "simonw";
     repo = "datasette";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-2YID5Y8gRppYAKBk8x0oHnxTxkeXrWDKL6olX3+uutA=";
   };
 
@@ -92,4 +92,4 @@ buildPythonPackage rec {
     homepage = "https://datasette.io/";
     license = lib.licenses.asl20;
   };
-}
+})

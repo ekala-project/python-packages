@@ -6,7 +6,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "apkinspector";
   version = "1.3.7";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "erev0s";
     repo = "apkInspector";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-6efXoiyjTEzadZ5aut4lFbjth03Uyw8REIYQYjvWS/c=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     license = lib.licenses.asl20;
     mainProgram = "apkInspector";
   };
-}
+})

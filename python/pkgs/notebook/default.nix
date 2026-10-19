@@ -20,7 +20,7 @@
   tornado,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "notebook";
   version = "7.5.6";
   pyproject = true;
@@ -28,7 +28,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "jupyter";
     repo = "notebook";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-xEwXiYQ7OiQ4dEL4ewP+yr3tGsWqa1hAUIl0Th48aiU=";
   };
 
@@ -77,4 +77,4 @@ buildPythonPackage rec {
     license = lib.licenses.bsd3;
     mainProgram = "jupyter-notebook";
   };
-}
+})

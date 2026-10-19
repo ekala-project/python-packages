@@ -7,7 +7,7 @@
   plum-py,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "exif";
   version = "1.6.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitLab {
     owner = "TNThieding";
     repo = "exif";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-uiHL3m0C6+YnAHRLwzMCSzffrQsSyVcuem6FBtTLxek=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://gitlab.com/TNThieding/exif";
     license = lib.licenses.mit;
   };
-}
+})

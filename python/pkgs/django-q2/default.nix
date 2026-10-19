@@ -9,7 +9,7 @@
   poetry-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-q2";
   version = "1.10.0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "django-q2";
     repo = "django-q2";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-VwB3pvDAGsMvcKblRnmCYHzvEBCz8E13Qov4LjWEqxc=";
   };
 
@@ -44,4 +44,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/django-q2/django-q2";
     license = lib.licenses.mit;
   };
-}
+})

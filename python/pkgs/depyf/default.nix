@@ -16,7 +16,7 @@
   pythonAtLeast,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "depyf";
   version = "0.20.0";
   pyproject = true;
@@ -24,7 +24,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "thuml";
     repo = "depyf";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-GFNlJeD7Nyxr7Ya3aSA6+0AZJSaeDyqXYPEsvhPN1wg=";
   };
 
@@ -54,4 +54,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/thuml/depyf";
     license = lib.licenses.mit;
   };
-}
+})

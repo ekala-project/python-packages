@@ -5,14 +5,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "cached-property";
   version = "2.0.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "cached_property";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-SE1hcQXj7g5PH1hyXnKo756T3u5GIiLb1RzZEjCJdkE=";
   };
 
@@ -23,7 +23,7 @@ buildPythonPackage rec {
   meta = {
     description = "Decorator for caching properties in classes";
     homepage = "https://github.com/pydanny/cached-property";
-    changelog = "https://github.com/pydanny/cached-property/releases/tag/${version}";
+    changelog = "https://github.com/pydanny/cached-property/releases/tag/${finalAttrs.version}";
     license = lib.licenses.bsd3;
   };
-}
+})

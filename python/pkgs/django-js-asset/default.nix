@@ -7,7 +7,7 @@
   pytest-django,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-js-asset";
   version = "4.0.1";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "matthiask";
     repo = "django-js-asset";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-TmoT+WuOw92wWW82CpKLy0Lr+oSKf+c2diG8Gs5rWg4=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/matthiask/django-js-asset";
     license = lib.licenses.bsd3;
   };
-}
+})

@@ -7,7 +7,7 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   version = "3.11.0";
   pname = "asgiref";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "django";
     repo = "asgiref";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-2ZaUIWGF5cQVNj95b7WiKGsn2wYsoJmJ/CfPhIEZdjc=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/django/asgiref";
     license = lib.licenses.bsd3;
   };
-}
+})

@@ -17,13 +17,13 @@
   wheel,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "recordlinkage";
   version = "0.16";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-7NoMEN/xOLFwaBXeMysShfZwrn6MzpJZYhNQHVieaqQ=";
   };
 
@@ -55,4 +55,4 @@ buildPythonPackage rec {
     homepage = "https://recordlinkage.readthedocs.io/";
     license = lib.licenses.bsd3;
   };
-}
+})

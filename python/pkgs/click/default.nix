@@ -5,7 +5,7 @@
   flit-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "click";
   version = "8.5.0";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pallets";
     repo = "click";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-VYdaEN9l2MRVz42I8t8IDOpG5XeDM8bf34dLZy3yf10=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     '';
     license = lib.licenses.bsd3;
   };
-}
+})

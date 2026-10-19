@@ -8,13 +8,13 @@
   zlib,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "indexed_gzip";
   version = "1.10.3";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-E0fztsVSLFxQ212eKAElfOqGY56HtGxmNfIgBe497SU=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pauldmccarthy/indexed_gzip";
     license = lib.licenses.zlib;
   };
-}
+})

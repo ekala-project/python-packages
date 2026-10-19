@@ -8,14 +8,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-kusto";
   version = "4.0.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_mgmt_kusto";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-osN6N5zsZQukc/81g1hzJ15lYnAv0VezEjGh3a2FLn0=";
   };
 
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Azure/azure-sdk-for-python";
     license = lib.licenses.mit;
   };
-}
+})

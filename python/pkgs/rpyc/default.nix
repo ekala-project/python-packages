@@ -7,7 +7,7 @@
   plumbum,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "rpyc";
   version = "6.0.2";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "tomerfiliba";
     repo = "rpyc";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-KLAOt0FStHV0senU/I4chxgn3PPM59CGhjTr/5U0sa8=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://rpyc.readthedocs.org";
     license = lib.licenses.mit;
   };
-}
+})

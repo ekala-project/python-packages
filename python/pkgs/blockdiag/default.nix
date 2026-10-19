@@ -14,7 +14,7 @@
   webcolors,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "blockdiag";
   version = "3.0.0";
   pyproject = true;
@@ -22,7 +22,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "blockdiag";
     repo = "blockdiag";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-j8FoNUIJJOaahaol1MRPyY2jcPCEIlaAD4bmM2QKFFI=";
   };
 
@@ -84,4 +84,4 @@ buildPythonPackage rec {
     mainProgram = "blockdiag";
     platforms = lib.platforms.unix;
   };
-}
+})

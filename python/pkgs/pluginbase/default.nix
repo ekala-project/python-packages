@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pluginbase";
   version = "1.0.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-/2wzqY/OIy6cc4QdeHpkPeV0k3Bp8NGBRwKNcNfe4oc=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mitsuhiko/pluginbase";
     license = lib.licenses.bsd3;
   };
-}
+})

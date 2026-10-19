@@ -6,13 +6,13 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aiostream";
   version = "0.7.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-JyqqDY+DvrkG9aqQIrtZBGu3oQP6N3D4B8MfkYWVrPY=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://aiostream.readthedocs.io";
     license = lib.licenses.gpl3Only;
   };
-}
+})

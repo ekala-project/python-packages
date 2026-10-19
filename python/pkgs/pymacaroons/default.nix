@@ -7,13 +7,13 @@
   pynacl,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pymacaroons";
   version = "0.13.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-Hmu6QqX2bCRa3zilpABqmdzAagcDeG6mNgmGZ9QpA7g=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ecordell/pymacaroons";
     license = lib.licenses.mit;
   };
-}
+})

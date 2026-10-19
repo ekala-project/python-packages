@@ -6,7 +6,7 @@
   normality,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "fingerprints";
   version = "1.3.1";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "alephdata";
     repo = "fingerprints";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-Q+XCsuGMHPtOqB0SauVuYInR5FGMuG6aNhqiAwTJvSI=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/alephdata/fingerprints";
     license = lib.licenses.mit;
   };
-}
+})

@@ -10,7 +10,7 @@
   shortuuid,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "dvc-objects";
   version = "5.2.0";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "iterative";
     repo = "dvc-objects";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-COrHD7RtmShdC7YWFc+S3xi/Xxt+Afrj3vaCLfE8t28=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/iterative/dvc-objects";
     license = lib.licenses.asl20;
   };
-}
+})

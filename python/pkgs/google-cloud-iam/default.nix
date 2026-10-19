@@ -14,7 +14,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "google-cloud-iam";
   version = "2.24.0";
   pyproject = true;
@@ -22,7 +22,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "googleapis";
     repo = "google-cloud-python";
-    tag = "google-cloud-iam-v${version}";
+    tag = "google-cloud-iam-v${finalAttrs.version}";
     hash = "sha256-ywRS1BfK6s+gcU8QRem0cSnfZq4BUQ2ABNcgnOa01LI=";
   };
 
@@ -59,4 +59,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-iam";
     license = lib.licenses.asl20;
   };
-}
+})

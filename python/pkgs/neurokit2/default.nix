@@ -26,7 +26,7 @@
   writableTmpDirAsHomeHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "neurokit2";
   version = "0.2.12";
   pyproject = true;
@@ -34,7 +34,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "neuropsychology";
     repo = "NeuroKit";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-gn02l0vYl+/7hXp4gFVlgblxC4dewXckW3JL3wPC89Y=";
   };
 
@@ -105,4 +105,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/neuropsychology/NeuroKit";
     license = lib.licenses.mit;
   };
-}
+})

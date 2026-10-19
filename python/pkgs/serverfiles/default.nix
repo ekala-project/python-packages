@@ -6,13 +6,13 @@
   requests,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "serverfiles";
   version = "0.3.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-XhD8MudYeR43NbwIvOLtRwKoOx5Fq5bF1ZzIruz76+E=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/biolab/serverfiles";
     license = lib.licenses.gpl3Plus;
   };
-}
+})

@@ -12,7 +12,7 @@
   testfixtures,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "easy-thumbnails";
   version = "2.10.1";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "SmileyChris";
     repo = "easy-thumbnails";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-GPZ99OaQRSogS8gJXz8rVUjUeNkEk019TYx0VWa0Q6I=";
   };
 
@@ -59,4 +59,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/SmileyChris/easy-thumbnails";
     license = lib.licenses.bsd3;
   };
-}
+})

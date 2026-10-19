@@ -6,7 +6,7 @@
   pytest-cov-stub,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "usb-devices";
   version = "0.5.1";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Bluetooth-Devices";
     repo = "usb-devices";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-W6RWm9x/emb1F8Oox927SnH3v8HWCXIFYivVJJh6ves=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Bluetooth-Devices/usb-devices";
     license = lib.licenses.mit;
   };
-}
+})

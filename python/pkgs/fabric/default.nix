@@ -12,7 +12,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "fabric";
   version = "3.2.3";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "fabric";
     repo = "fabric";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-GbZQ6rFKQyJZXYfe9b4j6yjKgAB0ct8AD1xYG0yGZl8=";
   };
 
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     license = lib.licenses.bsd2;
     mainProgram = "fab";
   };
-}
+})

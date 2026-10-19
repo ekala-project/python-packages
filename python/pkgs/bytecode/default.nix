@@ -8,13 +8,13 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "bytecode";
   version = "0.19.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-+3M5VzlsuCMB8/ec0yCu8mLNBZLJPWtP1lZ3FQaZliQ=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/vstinner/bytecode";
     license = lib.licenses.mit;
   };
-}
+})

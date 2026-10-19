@@ -11,7 +11,7 @@
   requests,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "inscriptis";
   version = "2.7.4";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "weblyzard";
     repo = "inscriptis";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-0EwnbzHEeFtRjsY3QR7LNrPPSPOxCkMzFbFy26umZvI=";
   };
 
@@ -47,4 +47,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/weblyzard/inscriptis";
     license = lib.licenses.asl20;
   };
-}
+})

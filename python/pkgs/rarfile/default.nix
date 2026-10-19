@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "rarfile";
   version = "4.5";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-dCXQr6GA8AktuQOrsVJqEws2hYmAqtkLNpT0jkFCAVU=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     description = "RAR archive reader for Python";
     license = lib.licenses.isc;
   };
-}
+})

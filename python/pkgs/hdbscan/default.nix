@@ -13,7 +13,7 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "hdbscan";
   version = "0.8.44";
   pyproject = true;
@@ -21,7 +21,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "scikit-learn-contrib";
     repo = "hdbscan";
-    tag = "release-${version}";
+    tag = "release-${finalAttrs.version}";
     hash = "sha256-mJz2CGiAgrz1M5w8XwCRjgQFBygQdVKyi2B8wFHWqGI=";
   };
 
@@ -44,4 +44,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/scikit-learn-contrib/hdbscan";
     license = lib.licenses.bsd3;
   };
-}
+})

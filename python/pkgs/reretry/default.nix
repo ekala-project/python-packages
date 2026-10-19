@@ -6,13 +6,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "reretry";
   version = "0.11.8";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-8nkfzr5RLqLx0VOih0d4UjqAZIYLWRzZCvwhqL7UMuM=";
   };
 
@@ -25,4 +25,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/leshchenko1979/reretry";
     license = lib.licenses.asl20;
   };
-}
+})

@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "tzdata";
   version = "2026.3";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-ShUYuJkwhqeYJSPgcWQ/PA5fIT51shMY54vKv/+dFBU=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/python/tzdata";
     license = lib.licenses.asl20;
   };
-}
+})

@@ -9,13 +9,13 @@
   freetype,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "freetype-py";
   version = "2.5.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-z+JoahdNDdPXGp2O6b9qLCP1hyOFz4zp8kr4PQduL70=";
     extension = "zip";
   };
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     description = "FreeType (high-level Python API)";
     license = lib.licenses.bsd3;
   };
-}
+})

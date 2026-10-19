@@ -13,7 +13,7 @@
   python,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "imageio-ffmpeg";
   version = "0.6.0";
   pyproject = true;
@@ -21,7 +21,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "imageio";
     repo = "imageio-ffmpeg";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-Yy2PTNBGPP/BAR7CZck/9qr2g/s4ntiuydqXz77hR7E=";
   };
 
@@ -46,4 +46,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/imageio/imageio-ffmpeg";
     license = lib.licenses.bsd2;
   };
-}
+})

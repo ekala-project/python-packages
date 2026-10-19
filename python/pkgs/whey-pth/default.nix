@@ -7,7 +7,7 @@
   whey,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "whey-pth";
   version = "0.0.6";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "repo-helper";
     repo = "whey-pth";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-A+bXB9F8FD+A1iRuETIxP12bkH/5NKcx01ERXJZAj+Q=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/repo-helper/whey-pth";
     license = lib.licenses.mit;
   };
-}
+})

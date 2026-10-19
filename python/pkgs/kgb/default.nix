@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "kgb";
   version = "7.2";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "beanbaginc";
     repo = "kgb";
-    tag = "release-${version}";
+    tag = "release-${finalAttrs.version}";
     hash = "sha256-hNJXoUIyrCB9PCWLCmN81F6pBRwZApDR6JWA0adyklw=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/beanbaginc/kgb";
     license = lib.licenses.mit;
   };
-}
+})

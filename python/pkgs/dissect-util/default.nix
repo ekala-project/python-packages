@@ -7,7 +7,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "dissect-util";
   version = "3.24";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "fox-it";
     repo = "dissect.util";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-AbkIVtUbQkkui7H1ZT/xHl1tCfZMvlrbZ2RD3YJAh0E=";
   };
 
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     license = lib.licenses.asl20;
     mainProgram = "dump-nskeyedarchiver";
   };
-}
+})

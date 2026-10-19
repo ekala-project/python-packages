@@ -9,7 +9,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "dingz";
   version = "0.5.0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "home-assistant-ecosystem";
     repo = "python-dingz";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-bCytQwLWw8D1UkKb/3LQ301eDCkVR4alD6NHjTs6I+4=";
   };
 
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/home-assistant-ecosystem/python-dingz";
     license = lib.licenses.mit;
   };
-}
+})

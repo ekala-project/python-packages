@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "geographiclib";
   version = "2.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-amVF5iYtDtNSLhPFFXE3GHl+N+2MZywxrXsknzcu8Qg=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     description = "Algorithms for geodesics (Karney, 2013) for solving the direct and inverse problems for an ellipsoid of revolution";
     license = lib.licenses.mit;
   };
-}
+})

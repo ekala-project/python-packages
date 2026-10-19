@@ -6,13 +6,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "tifffile";
   version = "2026.9.9";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-XloN+hbmN2vwYrxG4huJb7/olfy0dVmvnGS5std7tKA=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/cgohlke/tifffile/";
     license = lib.licenses.bsd3;
   };
-}
+})

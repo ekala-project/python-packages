@@ -6,13 +6,13 @@
   flit-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ptyprocess";
   version = "0.7.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-XF0KO0jO7gtISF4MJgN8Cs19KXZco/u1yzgx00dCMiA=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pexpect/ptyprocess";
     license = lib.licenses.isc;
   };
-}
+})

@@ -7,7 +7,7 @@
   wheel,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "cython-test-exception-raiser";
   version = "1.0.2";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "twisted";
     repo = "cython-test-exception-raiser";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-fwMq0pOrFUJnPndH/a6ghoo6mlcVSxtsWazqE9mCx3M=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
       mit
     ];
   };
-}
+})

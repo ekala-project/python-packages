@@ -10,14 +10,14 @@ let
   owner = "whtsky";
   repo = "pixelmatch-py";
 in
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pixelmatch";
   version = "0.4.0";
   pyproject = true;
 
   src = fetchgit {
     url = "https://github.com/whtsky/pixelmatch-py.git";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-tl1y8SASS8XR3ix4DLvwi5OoIs73oxYOF9Z90jPIU4o=";
     fetchLFS = true;
   };
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/whtsky/pixelmatch-py";
     license = lib.licenses.isc;
   };
-}
+})

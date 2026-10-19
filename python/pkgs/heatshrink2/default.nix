@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "heatshrink2";
   version = "0.14.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "eerimoq";
     repo = "pyheatshrink";
-    tag = version;
+    tag = finalAttrs.version;
     fetchSubmodules = true;
     hash = "sha256-2bCk9bS/6hjbBJ30fpTt750A3vAvq4HOXmbpxOLRuj4=";
   };
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/eerimoq/pyheatshrink";
     license = lib.licenses.isc;
   };
-}
+})

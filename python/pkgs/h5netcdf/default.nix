@@ -7,7 +7,7 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "h5netcdf";
   version = "1.8.1";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "h5netcdf";
     repo = "h5netcdf";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-g7cAUhIrTzWv/ELOWLNMKhm2rM7i+7o4iJS5d4vzal4=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/shoyer/h5netcdf";
     license = lib.licenses.bsd3;
   };
-}
+})

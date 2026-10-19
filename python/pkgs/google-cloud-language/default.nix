@@ -8,14 +8,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "google-cloud-language";
   version = "2.21.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "google_cloud_language";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-MPDmkVDJckVeJUOaCA97VjDyC9QE3O+KVq5QP5Skvm0=";
   };
 
@@ -45,4 +45,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-language";
     license = lib.licenses.asl20;
   };
-}
+})

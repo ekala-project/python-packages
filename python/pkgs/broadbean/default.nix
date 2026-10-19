@@ -12,13 +12,13 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "broadbean";
   version = "0.14.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-v+Ov6mlSnaJG98ooA9AhPGJflrFafKQoO5wi+PxcZVw=";
   };
 
@@ -51,4 +51,4 @@ buildPythonPackage rec {
     description = "Library for making pulses that can be leveraged with QCoDeS";
     license = lib.licenses.mit;
   };
-}
+})

@@ -8,7 +8,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "falcon";
   version = "4.3.1";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "falconry";
     repo = "falcon";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-f+UoGYyrg8OZow4qONqzXuDVnrZalqUNDyavDoQ7QHE=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://falconframework.org/";
     license = lib.licenses.asl20;
   };
-}
+})

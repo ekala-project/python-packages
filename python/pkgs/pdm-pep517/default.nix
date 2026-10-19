@@ -4,13 +4,13 @@
   fetchPypi,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pdm-pep517";
   version = "1.1.4";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-f0kSHnC0Lcopb6yWIhDdLaB6OVdfxWcxN61mFjOyzz8=";
   };
 
@@ -23,4 +23,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pdm-project/pdm-pep517";
     license = lib.licenses.mit;
   };
-}
+})

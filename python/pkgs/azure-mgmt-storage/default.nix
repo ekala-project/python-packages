@@ -8,14 +8,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-storage";
   version = "25.1.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_mgmt_storage";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-zEvSFY/Q3YBjkUKvBtxwwRm7/W951T2kSC4LLISa98o=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Azure/azure-sdk-for-python";
     license = lib.licenses.mit;
   };
-}
+})

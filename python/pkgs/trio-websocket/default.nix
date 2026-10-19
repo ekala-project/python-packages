@@ -7,7 +7,7 @@
   wsproto,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "trio-websocket";
   version = "0.12.2";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "HyperionGray";
     repo = "trio-websocket";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-TGFf4WUeZDrjp/UiQ9O/GoaK5BRC2aaGZVPfqZ4Ip9I=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/HyperionGray/trio-websocket";
     license = lib.licenses.mit;
   };
-}
+})

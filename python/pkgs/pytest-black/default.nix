@@ -7,14 +7,14 @@
   toml,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytest-black";
   version = "0.6.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "pytest_black";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-7Ld0VfN5gFy0vY9FqBOjdUw7vuMZmt8bNmXA39CGtRE=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/shopkeep/pytest-black";
     license = lib.licenses.mit;
   };
-}
+})

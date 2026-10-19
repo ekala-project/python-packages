@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "getkey";
   version = "0.6.5";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-aMfHAsOzTerPQn9sDx/WbFwqoS14AaoyRC/BpxyM4Fk=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/kcsaff/getkey";
     license = lib.licenses.mit;
   };
-}
+})

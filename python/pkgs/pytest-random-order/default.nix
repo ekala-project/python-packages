@@ -9,7 +9,7 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytest-random-order";
   version = "1.2.0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "jbasko";
     repo = "pytest-random-order";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-c282PrdXxG7WChnkpLWe059OmtTOl1Mn6yWgMRfCjBA=";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     description = "Randomise the order of tests with some control over the randomness";
     license = lib.licenses.mit;
   };
-}
+})

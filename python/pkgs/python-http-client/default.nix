@@ -7,7 +7,7 @@
   mock,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "python-http-client";
   version = "3.3.7";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "sendgrid";
     repo = "python-http-client";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-8Qs5Jw0LMV2UucLnlFKJQ2PUhYaQx6uJdIV/4gaPH3w=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/sendgrid/python-http-client";
     license = lib.licenses.mit;
   };
-}
+})

@@ -8,7 +8,7 @@
   websocket-client,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "binance-connector";
   version = "3.12.0";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "binance";
     repo = "${pname}-python";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-8O73+fli0HNbvGBcyg79ZGOTQvL0TF5SCfogI6btlrA=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/binance/binance-connector-python";
     license = lib.licenses.mit;
   };
-}
+})

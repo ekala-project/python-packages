@@ -7,13 +7,13 @@
   scipy,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "iapws";
   version = "1.5.5";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-yG4eFxVRh3/pzrA+5BXkpJBtLlJpj/nVZWeEYJc5300=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jjgomera/iapws";
     license = lib.licenses.gpl3;
   };
-}
+})

@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "propcache";
   version = "0.5.2";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "aio-libs";
     repo = "propcache";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-vn6FSdWEMk6c8Cu1mHyhZyH8ZlFK0kgYK8T7GKLHHwc=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/aio-libs/propcache";
     license = lib.licenses.asl20;
   };
-}
+})

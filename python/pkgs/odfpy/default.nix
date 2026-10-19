@@ -6,13 +6,13 @@
   defusedxml,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "odfpy";
   version = "1.4.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-23ZqblnFEDIS88yS7I3VCg86AnkCM+0LUhSLcNPEOOw=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     description = "Python API and tools to manipulate OpenDocument files";
     license = lib.licenses.asl20;
   };
-}
+})

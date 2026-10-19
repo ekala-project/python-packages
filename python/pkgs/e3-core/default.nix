@@ -19,7 +19,7 @@
   tqdm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "e3-core";
   version = "22.10.0";
   pyproject = true;
@@ -27,7 +27,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "AdaCore";
     repo = "e3-core";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-LHWtgIvbS1PaF85aOpdhR0rWQGRUtbY0Qg1SZxQOsSc=";
   };
 
@@ -67,4 +67,4 @@ buildPythonPackage rec {
     # upstream, but not by this package.
     platforms = lib.platforms.linux;
   };
-}
+})

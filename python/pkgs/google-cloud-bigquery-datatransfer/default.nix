@@ -10,14 +10,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "google-cloud-bigquery-datatransfer";
   version = "3.23.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "google_cloud_bigquery_datatransfer";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-LQEAqT9uiaEV1mjU/Cq8DwwiPqCZ9bfHNrzgECumI/k=";
   };
 
@@ -48,4 +48,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-bigquery-datatransfer";
     license = lib.licenses.asl20;
   };
-}
+})

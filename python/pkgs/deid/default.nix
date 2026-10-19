@@ -34,7 +34,7 @@ let
     };
   };
 in
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "deid";
   version = "0.4.6";
   pyproject = true;
@@ -70,4 +70,4 @@ buildPythonPackage rec {
     homepage = "https://pydicom.github.io/deid";
     license = lib.licenses.mit;
   };
-}
+})

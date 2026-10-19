@@ -7,13 +7,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "peppercorn";
   version = "0.6";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-ltdoHXoEVFz7ryxvtm3meynPxCQhqiY+THjyy7hb5MY=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://docs.pylonsproject.org/projects/peppercorn/en/latest/";
     license = lib.licenses.bsd3;
   };
-}
+})

@@ -20,7 +20,7 @@
   pytest-mock,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "redshift-connector";
   version = "2.1.16";
   pyproject = true;
@@ -28,7 +28,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "aws";
     repo = "amazon-redshift-python-driver";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-itcFWp5iWeCK628KBTgcbO1hgfyFkKUNS3S9/R7zEME=";
   };
 
@@ -59,4 +59,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/aws/amazon-redshift-python-driver";
     license = lib.licenses.asl20;
   };
-}
+})

@@ -7,7 +7,7 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyvisa";
   version = "1.16.2";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pyvisa";
     repo = "pyvisa";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-wxWva02nKkuFjralzVIrVTXfDHEeBYihckUcj8p44/k=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pyvisa/pyvisa";
     license = lib.licenses.mit;
   };
-}
+})

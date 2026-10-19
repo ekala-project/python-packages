@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyuca";
   version = "1.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-ijgv50Yn8IwNGJCMBxPKSiCq1ThfB3V55WIIvuook7I=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     description = "Python implementation of the Unicode Collation Algorithm";
     license = lib.licenses.mit;
   };
-}
+})

@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "parse";
   version = "1.22.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-06R0DsPaM44rJYstaXQbcx6t/dylniShS8TuX844yRE=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     description = "parse() is the opposite of format()";
     license = lib.licenses.bsdOriginal;
   };
-}
+})

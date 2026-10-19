@@ -8,7 +8,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "israel-rail-api";
   version = "0.1.5";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "sh0oki";
     repo = "israel-rail-api";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-kcux4IBA3FoNnsqNGHsEta9OAkvjYB40234VlidrNzM=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/sh0oki/israel-rail-api";
     license = lib.licenses.mit;
   };
-}
+})

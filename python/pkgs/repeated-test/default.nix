@@ -5,14 +5,14 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "repeated-test";
   version = "2.3.3";
   pyproject = true;
 
   src = fetchPypi {
     pname = "repeated_test";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-3YPU8SL9rud5s0pnwwH5TJk1MXsDhdkDnZp/Oj6sgXs=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/epsy/repeated_test";
     license = lib.licenses.mit;
   };
-}
+})

@@ -16,7 +16,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mapbox-earcut";
   version = "2.0.0";
   pyproject = true;
@@ -24,7 +24,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "skogler";
     repo = "mapbox_earcut_python";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-R5YDJbfDNf6jAvG3VJQMYay6i8dw616SUs0tPgrJt6I=";
   };
 
@@ -60,4 +60,4 @@ buildPythonPackage rec {
       polygons.
     '';
   };
-}
+})

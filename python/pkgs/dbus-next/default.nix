@@ -7,7 +7,7 @@
   dbus,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "dbus-next";
   version = "0.2.3";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "altdesktop";
     repo = "python-dbus-next";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-EKEQZFRUe+E65Z6DNCJFL5uCI5kbXrN7Tzd4O0X5Cqo=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/altdesktop/python-dbus-next";
     license = lib.licenses.mit;
   };
-}
+})

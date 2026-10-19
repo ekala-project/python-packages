@@ -18,7 +18,7 @@
   urllib3,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "auth0-python";
   version = "6.4.0";
   pyproject = true;
@@ -26,7 +26,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "auth0";
     repo = "auth0-python";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-T3JxjDbaM/33fzywHJs9mfj3Qn7/v/yzeK9IcMAL4ys=";
   };
 
@@ -55,4 +55,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/auth0/auth0-python";
     license = lib.licenses.mit;
   };
-}
+})

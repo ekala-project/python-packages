@@ -10,13 +10,13 @@
   jinja2,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jinja2-time";
   version = "0.2.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     sha256 = "0h0dr7cfpjnjj8bgl2vk9063a53649pn37wnlkd8hxjy656slkni";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     description = "Jinja2 Extension for Dates and Times";
     license = lib.licenses.mit;
   };
-}
+})

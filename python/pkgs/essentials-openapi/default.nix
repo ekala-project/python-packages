@@ -16,7 +16,7 @@
   setuptools,
   stdenv,
 }:
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "essentials-openapi";
   version = "1.4.0";
   pyproject = true;
@@ -24,7 +24,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Neoteroi";
     repo = "essentials-openapi";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-m2N6iOWfDBSRU99XqKs0T3a3iJWkPb2DuXW0Wm72r9g=";
   };
 
@@ -72,4 +72,4 @@ buildPythonPackage rec {
     description = "Functions to handle OpenAPI Documentation";
     license = lib.licenses.mit;
   };
-}
+})

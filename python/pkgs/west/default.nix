@@ -9,13 +9,13 @@
   pyyaml,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "west";
   version = "1.5.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-cIj+Dpr+Bxnr7pXFHFKRSfe8/JGdg6ggbTX6nGg+0KU=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/zephyrproject-rtos/west";
     license = lib.licenses.asl20;
   };
-}
+})

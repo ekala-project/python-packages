@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "altgraph";
   version = "0.17.5";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-yHs5XdEvq96cmVc6l0nWfajSnvneASXH9TZpm0qbyec=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://altgraph.readthedocs.io/";
     license = lib.licenses.mit;
   };
-}
+})

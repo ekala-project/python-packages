@@ -6,7 +6,7 @@
   hatch-vcs,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "binary";
   version = "1.0.2";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ofek";
     repo = "binary";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-dU+E6MxAmH8AEGTW2/lZmtgRTinKCv9gDiVeb4n78U4=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
       mit
     ];
   };
-}
+})

@@ -10,7 +10,7 @@
   electrum-ecc,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "electrum-aionostr";
   version = "0.1.0";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
 
   src = fetchPypi {
     pname = "electrum_aionostr";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-N3T46DEjiCcuEIUahpyfTT1KVNjVZIUcNuLcQCl77IQ=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/spesmilo/electrum-aionostr";
     license = lib.licenses.bsd3;
   };
-}
+})

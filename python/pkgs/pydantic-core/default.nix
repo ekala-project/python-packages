@@ -8,7 +8,7 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pydantic-core";
   version = "2.41.5";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pydantic";
     repo = "pydantic-core";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-oIYHLSep8tWOXEaUybXG8Gv9WBoPGQ1Aj7QyqYksvMw=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pydantic/pydantic-core";
     license = lib.licenses.mit;
   };
-}
+})

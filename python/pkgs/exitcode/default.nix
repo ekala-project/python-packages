@@ -5,7 +5,7 @@
   poetry-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "exitcode";
   version = "0.1.0";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "rumpelsepp";
     repo = "exitcode";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-MZeLwU1gODqH752y/nc9WkUArl48pyq9Vun7tX620No=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/rumpelsepp/exitcode";
     license = lib.licenses.mit;
   };
-}
+})

@@ -8,13 +8,13 @@
   wcwidth,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "urwid";
   version = "4.1.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-QL804H0FuC+zBggpJcQE+Pc4/Xbgr1SAEAXX86aa0Yo=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://urwid.org/";
     license = lib.licenses.lgpl21Plus;
   };
-}
+})

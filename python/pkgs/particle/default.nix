@@ -9,13 +9,13 @@
   hepunits,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "particle";
   version = "1.0.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-SRRd7By1BEsH8+jpAigPoFCVD6hFsFgAPmneUZu1BJI=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/scikit-hep/particle";
     license = lib.licenses.bsd3;
   };
-}
+})

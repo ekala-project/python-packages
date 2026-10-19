@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jsonformatter";
   version = "0.3.4";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-r3GuFTSoDW9g+NXue/pwwuRTie2APtlCOfQwW3xoEF0=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/MyColorfulDays/jsonformatter";
     license = lib.licenses.bsd2;
   };
-}
+})

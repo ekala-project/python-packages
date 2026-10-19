@@ -8,14 +8,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-datafactory";
   version = "10.0.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_mgmt_datafactory";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-yD7rKwksHx5bskmf+7pv14CaEnRzmTD52x4zYnNAVYc=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Azure/azure-sdk-for-python";
     license = lib.licenses.mit;
   };
-}
+})

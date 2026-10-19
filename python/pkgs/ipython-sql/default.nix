@@ -11,14 +11,14 @@
   sqlparse,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ipython-sql";
   version = "0.5.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "ipython-sql";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-PbPOf5qV369Dh2+oCxa9u5oE3guhIELKsT6fWW/P/b4=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/catherinedevlin/ipython-sql";
     license = lib.licenses.mit;
   };
-}
+})

@@ -9,7 +9,7 @@
   pylint-plugin-utils,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pylint-celery";
   version = "0.3";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "PyCQA";
     repo = "pylint-celery";
-    tag = version;
+    tag = finalAttrs.version;
     sha256 = "05fhwraq12c2724pn4py1bjzy5rmsrb1x68zck73nlp5icba6yap";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/PyCQA/pylint-celery";
     license = lib.licenses.gpl2;
   };
-}
+})

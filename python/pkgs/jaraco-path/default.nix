@@ -7,7 +7,7 @@
   stdenv,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jaraco-path";
   version = "3.7.2";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "jaraco";
     repo = "jaraco.path";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-uLkNMhB7aeDJ3fF0Ynjd8MD6+CTKKH8vsB5cH9RPcok=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     broken = stdenv.hostPlatform.isDarwin; # pyobjc is missing
   };
-}
+})

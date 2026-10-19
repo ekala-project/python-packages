@@ -6,7 +6,7 @@
   pygments,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ipython-pygments-lexers";
   version = "1.1.1";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ipython";
     repo = "ipython-pygments-lexers";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-p2WrFvCzHOuxPec9Wc1/xT6+fEUdcdDC1HTNmu5dm5Q=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ipython/ipython-pygments-lexers";
     license = lib.licenses.bsd3;
   };
-}
+})

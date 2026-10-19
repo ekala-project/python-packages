@@ -9,7 +9,7 @@
   pytest-xdist,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "eth-typing";
   version = "6.0.0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ethereum";
     repo = "eth-typing";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-bdZrrglsJGNsqD6ShsqPO6ljViZr9Ms9A8Km45pnEYA=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ethereum/eth-typing";
     license = lib.licenses.mit;
   };
-}
+})

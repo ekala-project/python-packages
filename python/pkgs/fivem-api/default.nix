@@ -8,13 +8,13 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "fivem-api";
   version = "0.1.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-6llrMGWbDRmysEw+B6B115hLS5xlktQEXiSHzPLbV5s=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Sander0542/fivem-api";
     license = lib.licenses.mit;
   };
-}
+})

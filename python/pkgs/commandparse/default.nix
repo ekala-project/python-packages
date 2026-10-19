@@ -7,13 +7,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "commandparse";
   version = "1.1.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-S9e90BtS6qMjFtYUmgC0w4IKQP8q1iR2tGqq5l2+n6o=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/flgy/commandparse";
     license = lib.licenses.mit;
   };
-}
+})

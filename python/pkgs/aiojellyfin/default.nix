@@ -16,7 +16,7 @@
   pytest-cov-stub,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aiojellyfin";
   version = "0.14.1";
   pyproject = true;
@@ -24,7 +24,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Jc2k";
     repo = "aiojellyfin";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-C2jIP2q+1z6iQoK18jRVaFKXtxyF1RXZMtXWakx7qO0=";
   };
 
@@ -48,4 +48,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Jc2k/aiojellyfin";
     license = lib.licenses.asl20;
   };
-}
+})

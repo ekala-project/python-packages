@@ -7,13 +7,13 @@
   flake8,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "hacking";
   version = "8.1.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-PHjOx8Wkq7SQmlJS1mq5PpswayGthmV+LCA8eLUiQx8=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/openstack/hacking";
     license = lib.licenses.asl20;
   };
-}
+})

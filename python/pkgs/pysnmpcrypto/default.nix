@@ -9,7 +9,7 @@
   pycryptodomex,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pysnmpcrypto";
   version = "0.1.0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "lextudio";
     repo = "pysnmpcrypto";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-gNRD8mSWVVLXwJjb3nT7IKnjTdwTutFDnQybgZTY2b0=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/lextudio/pysnmpcrypto";
     license = lib.licenses.bsd2;
   };
-}
+})

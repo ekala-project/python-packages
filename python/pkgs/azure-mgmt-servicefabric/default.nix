@@ -8,13 +8,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-servicefabric";
   version = "2.1.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-oIQzBJVUQ2yQhEvIqWgg6INplITm/8mQMv0lcfjF99Y=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/servicefabric/azure-mgmt-servicefabric";
     license = lib.licenses.mit;
   };
-}
+})

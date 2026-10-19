@@ -8,13 +8,13 @@
   decorator,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jsonpath-rw";
   version = "1.4.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-BcRxKBxFrhE/YQPRJo7HpIMaLpaqgN5F7cibEfrE++w=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/kennknowles/python-jsonpath-rw";
     license = lib.licenses.asl20;
   };
-}
+})

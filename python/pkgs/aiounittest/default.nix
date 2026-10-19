@@ -6,7 +6,7 @@
   wrapt,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aiounittest";
   version = "1.5.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "kwarunek";
     repo = "aiounittest";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-zX3KpDw7AaEwOLkiHX/ZD+rSMeN7qi9hOVAmVH6Jxgg=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/kwarunek/aiounittest";
     license = lib.licenses.mit;
   };
-}
+})

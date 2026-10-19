@@ -14,7 +14,7 @@
   yarl,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aiosyncthing";
   version = "0.7.1";
   pyproject = true;
@@ -22,7 +22,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "zhulik";
     repo = "aiosyncthing";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-0jx61zs6yQqAIwSOO1zCUOkoZES+K/POtIGoWzr29bI=";
   };
 
@@ -52,4 +52,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/zhulik/aiosyncthing";
     license = lib.licenses.mit;
   };
-}
+})

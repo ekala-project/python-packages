@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "hiredis";
   version = "3.4.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-2hkzE1RDOvaixUwh8tcLoISTPA19LENXjsXFtEZnStU=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/redis/hiredis-py";
     license = lib.licenses.bsd3;
   };
-}
+})

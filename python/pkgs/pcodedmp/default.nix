@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pcodedmp";
   version = "1.2.6";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "bontchev";
     repo = "pcodedmp";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-SYOFGMvrzxDPMACaCvqwU28Mh9LEuvFBGvAph4X+geo=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/bontchev/pcodedmp";
     license = lib.licenses.gpl3Only;
   };
-}
+})

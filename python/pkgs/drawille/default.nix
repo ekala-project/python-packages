@@ -6,14 +6,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "drawille";
   version = "0.2.0";
 
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-gVND4RYsWAUtTLZS75cPZ3Ht2QBC1UnsxuRTyXNqoa0=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     license = lib.licenses.agpl3Plus;
     platforms = lib.platforms.all;
   };
-}
+})

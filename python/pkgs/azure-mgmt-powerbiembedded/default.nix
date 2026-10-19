@@ -8,13 +8,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-powerbiembedded";
   version = "3.0.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-yz2D3WfQKEdkTm10ZKIhZMi4y6GF6yz+L1+nB/VFofo=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/powerbiembedded/azure-mgmt-powerbiembedded";
     license = lib.licenses.mit;
   };
-}
+})

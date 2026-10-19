@@ -7,7 +7,7 @@
   hatchling,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "traitlets";
   version = "5.16.1";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ipython";
     repo = "traitlets";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-lBVPRZU3fK1ha7tLi0d2wlBcoUVBZS8bjt+c16jDi/c=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ipython/traitlets";
     license = lib.licenses.bsd3;
   };
-}
+})

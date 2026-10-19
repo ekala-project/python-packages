@@ -9,14 +9,14 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "opentelemetry-resourcedetector-gcp";
   version = "1.14.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "opentelemetry_resourcedetector_gcp";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-ELQYAqz4FYOKhcn+Ha4C9dJ+vBdSe3dEERHAEL6tlbw=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://pypi.org/project/opentelemetry-resourcedetector-gcp";
     license = lib.licenses.asl20;
   };
-}
+})

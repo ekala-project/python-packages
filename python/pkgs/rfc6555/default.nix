@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "rfc6555";
   version = "0.1.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "sethmlarson";
     repo = "rfc6555";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-Lmwgusc4EQlF0GHmMTUxWzUCjBk19cvurNwbOnT+1jM=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/sethmlarson/rfc6555";
     license = lib.licenses.asl20;
   };
-}
+})

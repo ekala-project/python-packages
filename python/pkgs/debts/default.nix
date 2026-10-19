@@ -9,7 +9,7 @@
   pytest,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "debts";
   version = "0.5";
   pyproject = true;
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     mainProgram = "debts";
     license = lib.licenses.beerware;
   };
-}
+})

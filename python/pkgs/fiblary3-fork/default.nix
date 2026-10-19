@@ -16,13 +16,13 @@
   testtools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "fiblary3-fork";
   version = "0.1.12";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     sha256 = "001wqh7gx2dv3sf7a5xsbppz9r88f5qwrp05jzjsjcm6cbcvmsz0";
   };
 
@@ -51,4 +51,4 @@ buildPythonPackage rec {
     description = "Fibaro Home Center API Python Library";
     license = lib.licenses.asl20;
   };
-}
+})

@@ -9,14 +9,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "google-cloud-tasks";
   version = "2.24.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "google_cloud_tasks";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-qk+HZOWxV8urga9hnMT9nxTr7Oi2nlOUplfDKKg2Yig=";
   };
 
@@ -48,4 +48,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-tasks";
     license = lib.licenses.asl20;
   };
-}
+})

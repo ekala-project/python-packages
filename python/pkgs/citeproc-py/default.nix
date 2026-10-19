@@ -8,14 +8,14 @@
   lxml,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "citeproc-py";
   version = "0.11.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "citeproc_py";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-8vmmTNmAcGoMrF3rdXnm+KzIfOAUBSDMnzAmLSDDUwc=";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/citeproc-py/citeproc-py";
     license = lib.licenses.bsd2;
   };
-}
+})

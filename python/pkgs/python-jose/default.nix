@@ -9,7 +9,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "python-jose";
   version = "3.5.0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mpdavis";
     repo = "python-jose";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-8DQ0RBQ4ZgEIwcosgX3dzr928cYIQoH0obIOgk0+Ozs=";
   };
 
@@ -54,4 +54,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mpdavis/python-jose";
     license = lib.licenses.mit;
   };
-}
+})

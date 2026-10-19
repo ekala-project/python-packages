@@ -8,7 +8,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "opack2";
   version = "0.0.1";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "doronz88";
     repo = "opack2";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-7kRR4KOR3Wrya2YE8nL5laXrsnI1lSVZMBEij44J+T0=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/doronz88/opack2";
     license = lib.licenses.gpl3Plus;
   };
-}
+})

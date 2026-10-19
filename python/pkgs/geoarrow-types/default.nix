@@ -6,7 +6,7 @@
   pyarrow,
   setuptools-scm,
 }:
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "geoarrow-types";
   version = "0.3.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     repo = "geoarrow-python";
     owner = "geoarrow";
-    tag = "geoarrow-types-${version}";
+    tag = "geoarrow-types-${finalAttrs.version}";
     hash = "sha256-ciElwh94ukFyFdOBuQWyOUVpn4jBM1RKfxiBCcM+nmE=";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/geoarrow/geoarrow-python";
     license = lib.licenses.asl20;
   };
-}
+})

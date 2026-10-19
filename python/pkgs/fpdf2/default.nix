@@ -8,7 +8,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "fpdf2";
   version = "2.8.8";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "py-pdf";
     repo = "fpdf2";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-ff0wDhKtvPrqqjGBtUjg1b0iDWoesV+6KlgDICf3xck=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     description = "Simple PDF generation for Python";
     license = lib.licenses.lgpl3Only;
   };
-}
+})

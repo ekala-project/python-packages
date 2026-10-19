@@ -19,7 +19,7 @@
   websocket-client,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "kubernetes";
   version = "36.0.3";
   pyproject = true;
@@ -27,7 +27,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "kubernetes-client";
     repo = "python";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-e5fD5H33hkyVSbNTky2R4RbuIsR/MPNj2rYONKxyGOo=";
   };
 
@@ -55,4 +55,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/kubernetes-client/python";
     license = lib.licenses.asl20;
   };
-}
+})

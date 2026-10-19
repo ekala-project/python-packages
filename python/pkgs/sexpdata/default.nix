@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "sexpdata";
   version = "1.0.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-krZ7A2H2dm+PnkS5UZzz+8+vp1Xbhbv4k8Phz03awQk=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jd-boyd/sexpdata";
     license = lib.licenses.bsd2;
   };
-}
+})

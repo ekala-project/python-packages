@@ -9,13 +9,13 @@
   libusb1,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "nkdfu";
   version = "0.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-8l913dOCxHKFtpQ83p9RV3sUlu0oT5PVi14FSuYJ9fg=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Nitrokey/nkdfu";
     license = lib.licenses.gpl2Only;
   };
-}
+})

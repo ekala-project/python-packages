@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "captcha";
   version = "0.7.1";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "lepture";
     repo = "captcha";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-wMnfPkHexiRprtDL6Kkmh9dms4NtW3u37DKtDMPb2ZI=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/lepture/captcha";
     license = lib.licenses.bsd3;
   };
-}
+})

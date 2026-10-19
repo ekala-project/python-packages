@@ -11,7 +11,7 @@
   pandas,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "bokeh-sampledata";
   version = "2025.0";
   pyproject = true;
@@ -19,14 +19,14 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "bokeh";
     repo = "bokeh_sampledata";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-gAiiNm9t+4z0aFO6pr8FfYGF04pO7u6Wjsbou+I2blk=";
   };
 
   postPatch = ''
     substituteInPlace pyproject.toml \
       --replace-fail ', "setuptools-git-versioning"' "" \
-      --replace-fail 'dynamic = ["version"]' 'version = "${version}"'
+      --replace-fail 'dynamic = ["version"]' 'version = "${finalAttrs.version}"'
   '';
 
   build-system = [
@@ -47,4 +47,4 @@ buildPythonPackage rec {
     homepage = "https://pypi.org/project/bokeh-sampledata";
     license = lib.licenses.bsd3;
   };
-}
+})

@@ -8,13 +8,13 @@
   requests,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ebaysdk";
   version = "2.2.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-Lrh11wa0gfWcqN0wdFON9+UZaBT5zhLQ74RpA0Opx/M=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/timotheus/ebaysdk-python";
     license = lib.licenses.cddl;
   };
-}
+})

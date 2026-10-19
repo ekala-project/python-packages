@@ -7,7 +7,7 @@
   protobuf,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "grpc-interceptor";
   version = "0.15.4";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "d5h-foss";
     repo = "grpc-interceptor";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-GJkVCslPXShJNDrqhFtCsAK5+VaG8qFJo0RQTsiMIFY=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/d5h-foss/grpc-interceptor";
     license = lib.licenses.mit;
   };
-}
+})

@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "rope";
   version = "1.14.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-iAPjtmcxUET2JwsMaaEMBnn58yLtjv5iRak863ZY2mk=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/python-rope/rope";
     license = lib.licenses.gpl3Plus;
   };
-}
+})

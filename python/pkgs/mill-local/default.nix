@@ -7,7 +7,7 @@
   setuptools_80,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mill-local";
   version = "0.5.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Danielhiversen";
     repo = "pyMillLocal";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-t6nZ6KXX5GFIcdNIXyFxYtSjOuuUJmCekaBITNgcIkU=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Danielhiversen/pyMillLocal";
     license = lib.licenses.mit;
   };
-}
+})

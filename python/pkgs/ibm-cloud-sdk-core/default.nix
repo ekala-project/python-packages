@@ -9,7 +9,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ibm-cloud-sdk-core";
   version = "3.26.1";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "IBM";
     repo = "python-sdk-core";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-8gZrjPlvYY3KCDVDqjQUdGpgGo/XrxHS0Z7PMmHdh5g=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/IBM/python-sdk-core";
     license = lib.licenses.asl20;
   };
-}
+})

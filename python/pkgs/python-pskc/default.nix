@@ -10,7 +10,7 @@
   signxml,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "python-pskc";
   version = "1.4";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "arthurdejong";
     repo = "python-pskc";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-WBpS0EJA4arAn7O47ZHq3sBOd9D4tjYZKIi24xX5Hvs=";
   };
 
@@ -44,4 +44,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/arthurdejong/python-pskc";
     license = lib.licenses.lgpl21Plus;
   };
-}
+})

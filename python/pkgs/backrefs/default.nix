@@ -5,7 +5,7 @@
   hatchling,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "backrefs";
   version = "8.0";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "facelessuser";
     repo = "backrefs";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-SwZ/gam+/mK+Emm26G20SLmA4es9jZOKMxLgfNZKelM=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     changelog = "https://github.com/facelessuser/backrefs/releases/tag/${src.tag}";
     license = lib.licenses.mit;
   };
-}
+})

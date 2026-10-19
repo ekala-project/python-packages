@@ -8,7 +8,7 @@
   ujson,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "enterpriseattack";
   version = "1.0.4";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "xakepnz";
     repo = "enterpriseattack";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-OZ/nao2oiXzzWl/zQA5A3GpsRNobnHb4ubAsZvVITj0=";
   };
 
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/xakepnz/enterpriseattack";
     license = lib.licenses.mit;
   };
-}
+})

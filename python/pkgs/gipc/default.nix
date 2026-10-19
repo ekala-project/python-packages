@@ -8,7 +8,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "gipc";
   version = "1.8.0";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "jgehrcke";
     repo = "gipc";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-P3soMA/EBMuhkXQsiLv9gnDBfo9XGosKnSMi+EZ0gaM=";
   };
 
@@ -61,4 +61,4 @@ buildPythonPackage rec {
     homepage = "http://gehrcke.de/gipc";
     license = lib.licenses.mit;
   };
-}
+})

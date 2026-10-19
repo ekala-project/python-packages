@@ -13,7 +13,7 @@
   xlwt,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "canmatrix";
   version = "1.2";
   pyproject = true;
@@ -21,7 +21,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ebroecker";
     repo = "canmatrix";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-PfegsFha7ernSqnMeaDoLf1jLx1CiOoiYi34dESEgBY=";
   };
 
@@ -53,4 +53,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ebroecker/canmatrix";
     license = lib.licenses.bsd2;
   };
-}
+})

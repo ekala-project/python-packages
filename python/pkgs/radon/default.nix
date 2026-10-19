@@ -11,7 +11,7 @@
   poetry-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "radon";
   version = "6.0.1";
 
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "rubik";
     repo = "radon";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-yY+j9kuX0ou/uDoVI/Qfqsmq0vNHv735k+vRl22LwwY=";
   };
 
@@ -54,4 +54,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     mainProgram = "radon";
   };
-}
+})

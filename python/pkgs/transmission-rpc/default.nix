@@ -7,7 +7,7 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "transmission-rpc";
   version = "7.0.12";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Trim21";
     repo = "transmission-rpc";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-BxbaBUzu/KPn/4AoRmIEBI+v3+mjJAXF9lzm0wNb25c=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Trim21/transmission-rpc";
     license = lib.licenses.mit;
   };
-}
+})

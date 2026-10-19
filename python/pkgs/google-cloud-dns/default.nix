@@ -9,14 +9,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "google-cloud-dns";
   version = "0.37.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "google_cloud_dns";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-hOh+a74RhF41dkhPVb5apEq8vS5nfNV9P4Qed6uSdwI=";
   };
 
@@ -49,4 +49,4 @@ buildPythonPackage rec {
     homepage = "https://cloud.google.com/dns";
     license = lib.licenses.asl20;
   };
-}
+})

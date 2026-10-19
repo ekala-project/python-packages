@@ -10,13 +10,13 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "flake8-polyfill";
   version = "1.0.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     sha256 = "1nlf1mkqw856vi6782qcglqhaacb23khk9wkcgn55npnjxshhjz4";
   };
 
@@ -52,4 +52,4 @@ buildPythonPackage rec {
     description = "Polyfill package for Flake8 plugins";
     license = lib.licenses.mit;
   };
-}
+})

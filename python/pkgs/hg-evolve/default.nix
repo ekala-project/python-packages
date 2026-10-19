@@ -6,14 +6,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "hg-evolve";
   version = "12.0.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "hg_evolve";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-WQp1raCE+hpmjutvXVWDh5dUNy+fEI6vXJsthLiY9dA=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://www.mercurial-scm.org/doc/evolution/";
     license = lib.licenses.gpl2Plus;
   };
-}
+})

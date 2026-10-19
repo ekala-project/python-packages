@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyglm";
   version = "2.8.3";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Zuzu-Typ";
     repo = "PyGLM";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-7IN/kqFCwAMeVUrBB/CfCm9bSt1dHMbbLtqVInRFCk0=";
     fetchSubmodules = true;
   };
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     description = "OpenGL Mathematics (GLM) library for Python written in C++";
     license = lib.licenses.zlib;
   };
-}
+})

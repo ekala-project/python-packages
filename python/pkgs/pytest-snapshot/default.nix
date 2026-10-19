@@ -7,7 +7,7 @@
   pytest,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytest-snapshot";
   version = "0.9.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "joseph-roitman";
     repo = "pytest-snapshot";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-0PZu9wL29iEppLxxbl4D0E4WfOHe61KUUld003cRBRU=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/joseph-roitman/pytest-snapshot/";
     license = lib.licenses.mit;
   };
-}
+})

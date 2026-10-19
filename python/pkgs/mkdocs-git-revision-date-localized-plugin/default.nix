@@ -10,7 +10,7 @@
   pytz,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mkdocs-git-revision-date-localized-plugin";
   version = "1.5.4";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "timvink";
     repo = "mkdocs-git-revision-date-localized-plugin";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-0WLSQ2EmW4GUMtjdrUqZdcMt+695eSqxeVwBPCHXXhM=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/timvink/mkdocs-git-revision-date-localized-plugin";
     license = lib.licenses.mit;
   };
-}
+})

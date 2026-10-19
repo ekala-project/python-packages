@@ -5,12 +5,12 @@
   lib,
   pytest-benchmark,
 }:
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jsonpath-python";
   version = "1.1.6";
   pyproject = true;
   src = fetchPypi {
-    inherit version;
+    inherit (finalAttrs) version;
     pname = "jsonpath_python";
     hash = "sha256-3e2ZMrTsQfuHJuCcg6+k5r5hj5OMLbKHzCqBcjxjlnE=";
   };
@@ -22,4 +22,4 @@ buildPythonPackage rec {
     description = "More powerful JSONPath implementations in modern python";
     license = lib.licenses.mit;
   };
-}
+})

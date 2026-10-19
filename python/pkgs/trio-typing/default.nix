@@ -10,7 +10,7 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "trio-typing";
   version = "0.10.0";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "python-trio";
     repo = "trio-typing";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-6IhPdPj+bHzMyt3uyqfX2UOuCmV8lb6vmgdlc5+9/4g=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
       asl20
     ];
   };
-}
+})

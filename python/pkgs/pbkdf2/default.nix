@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pbkdf2";
   version = "1.3";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-rGOXNp8SghLEMGSitIeAONq3jatBh1NkVUqvKmhOaXk=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     description = "PBKDF2 password hashing";
     license = lib.licenses.mit;
   };
-}
+})

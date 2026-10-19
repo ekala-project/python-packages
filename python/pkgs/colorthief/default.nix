@@ -7,7 +7,7 @@
   pillow,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "colorthief";
   version = "0.2.1";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "fengsp";
     repo = "color-thief-py";
-    tag = version;
+    tag = finalAttrs.version;
     sha256 = "0lzpflal1iqbj4k7hayss5z024qf2sn8c3wxw03a0mgxg06ca2hm";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/fengsp/color-thief-py";
     license = lib.licenses.bsd3;
   };
-}
+})

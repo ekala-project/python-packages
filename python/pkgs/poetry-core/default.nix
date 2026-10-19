@@ -5,7 +5,7 @@
   fetchFromGitHub,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "poetry-core";
   version = "2.4.1";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "python-poetry";
     repo = "poetry-core";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-Io2VpLxnJesO4QohsunD7ogr87NiNjGeTmEl9wFswkw=";
   };
   pythonImportsCheck = [ "poetry.core" ];
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/python-poetry/poetry-core/";
     license = lib.licenses.mit;
   };
-}
+})

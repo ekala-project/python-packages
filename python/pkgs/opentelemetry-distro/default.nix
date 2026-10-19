@@ -13,7 +13,7 @@
   opentelemetry-test-utils,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "opentelemetry-distro";
   inherit (opentelemetry-instrumentation) src version;
   pyproject = true;
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     description = "OpenTelemetry Python Distro";
     homepage = "https://github.com/open-telemetry/opentelemetry-python/tree/main/opentelemetry-distro";
   };
-}
+})

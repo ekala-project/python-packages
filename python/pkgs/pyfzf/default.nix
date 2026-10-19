@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyfzf";
   version = "0.3.1";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "nk412";
     repo = "pyfzf";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-w+ZjQGFd/lR2TiTHc2uQSJXORmzJJZXsr9BO4PIw/Co=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/nk412/pyfzf";
     license = lib.licenses.mit;
   };
-}
+})

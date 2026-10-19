@@ -8,7 +8,7 @@
   stdenv,
   lib,
 }:
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "essentials";
   version = "1.1.9";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Neoteroi";
     repo = "essentials";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-kKAXCtcl6duVpuGDnSqVfJmfltv9ybU8Gmr3y32Dg9I=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     description = "General purpose classes and functions";
     license = lib.licenses.mit;
   };
-}
+})

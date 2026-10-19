@@ -12,14 +12,14 @@
   pytz,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "sqlalchemy-bigquery";
   version = "1.17.2";
   pyproject = true;
 
   src = fetchPypi {
     pname = "sqlalchemy_bigquery";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-MveJPBZUbVzF3JOft8909RUFdmoWQi8h3S5+eOqOyEk=";
   };
 
@@ -55,4 +55,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/googleapis/python-bigquery-sqlalchemy";
     license = lib.licenses.mit;
   };
-}
+})

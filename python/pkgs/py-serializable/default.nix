@@ -8,7 +8,7 @@
   xmldiff,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "py-serializable";
   version = "2.1.0";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "madpah";
     repo = "serializable";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-nou1/80t9d2iKOdZZbcN4SI3dlvuC8T55KMCP/cDEEU=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/madpah/serializable";
     license = lib.licenses.asl20;
   };
-}
+})

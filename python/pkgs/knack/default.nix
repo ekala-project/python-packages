@@ -12,13 +12,13 @@
   tabulate,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "knack";
   version = "0.14.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-Ld0y/WND7Jtu0NpymyEjYtDmsSCMAWJjPJDLb5SgWHc=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/microsoft/knack";
     license = lib.licenses.mit;
   };
-}
+})

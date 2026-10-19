@@ -15,7 +15,7 @@
   pyasn1-modules,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "service-identity";
   version = "26.1.0";
   pyproject = true;
@@ -23,7 +23,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pyca";
     repo = "service-identity";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-ujH0RdsdvbNbQVhlRfLnKSj3LbLE4RVwlaEsMNZmuLA=";
   };
 
@@ -47,4 +47,4 @@ buildPythonPackage rec {
     homepage = "https://service-identity.readthedocs.io";
     license = lib.licenses.mit;
   };
-}
+})

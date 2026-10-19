@@ -7,13 +7,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "first";
   version = "2.0.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-/yhbCMVfjJfOTqcBJ0OvJJXJ8SkXhfFjcivTb2r2078=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/hynek/first/";
     license = lib.licenses.mit;
   };
-}
+})

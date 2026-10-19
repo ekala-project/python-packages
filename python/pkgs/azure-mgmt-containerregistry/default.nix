@@ -9,14 +9,14 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-containerregistry";
   version = "15.1.0b1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_mgmt_containerregistry";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-h7sN4yuZ4aSTqlLUz083PvDaFoHdjmmhH4dhvpNAkLE=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/containerregistry/azure-mgmt-containerregistry";
     license = lib.licenses.mit;
   };
-}
+})

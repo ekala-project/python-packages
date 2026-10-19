@@ -6,7 +6,7 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "puremagic";
   version = "2.2.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "cdgriffith";
     repo = "puremagic";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-Mvhn/1xcgYgVkWok2qZXAe40pocfu6nJo5xuPruw2dc=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     changelog = "https://github.com/cdgriffith/puremagic/blob/${src.tag}/CHANGELOG.md";
     license = lib.licenses.mit;
   };
-}
+})

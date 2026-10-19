@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyxlsb";
   version = "1.0.10";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-gGLR6oYm0/GYDosc/pGkSDdHRJJC7LYQE7wt+FQ19oU=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/willtrnr/pyxlsb";
     license = lib.licenses.lgpl3Plus;
   };
-}
+})

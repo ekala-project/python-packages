@@ -7,7 +7,7 @@
   ninja,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pydemumble";
   version = "0.1.3";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "angr";
     repo = "pydemumble";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-Po19NXY4I97Aj1SY1KqpspEqYpVGIsAirOo6iAjBrbk=";
     fetchSubmodules = true;
   };
@@ -44,4 +44,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/angr/pydemumble";
     license = lib.licenses.bsd2;
   };
-}
+})

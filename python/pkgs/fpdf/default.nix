@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "fpdf";
   version = "1.7.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-ElhAeDKJ59ElUrHoaraSw3Mi56ZblqmeDqhsygQbZ3k=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/reingart/pyfpdf";
     license = lib.licenses.lgpl3;
   };
-}
+})

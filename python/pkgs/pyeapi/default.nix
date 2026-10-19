@@ -6,7 +6,7 @@
   netaddr,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyeapi";
   version = "1.0.4";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "arista-eosplus";
     repo = "pyeapi";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-eGNBQSnYMC9YVCw5mBRH6XRq139AcqFm6HnO2FUzLEE=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/arista-eosplus/pyeapi";
     license = lib.licenses.bsd3;
   };
-}
+})

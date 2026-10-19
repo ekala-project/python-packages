@@ -7,7 +7,7 @@
   zope-interface,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "zope-copy";
   version = "6.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "zopefoundation";
     repo = "zope.copy";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-hYeLUSwAq5rK4TRngvNQGR4Fdimb2k5dHtFdptMVqPo=";
   };
 
@@ -45,4 +45,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/zopefoundation/zope.copy";
     license = lib.licenses.zpl21;
   };
-}
+})

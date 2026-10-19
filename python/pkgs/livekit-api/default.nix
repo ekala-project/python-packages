@@ -10,7 +10,7 @@
   gitUpdater,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "livekit-api";
   version = "1.1.0";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "livekit";
     repo = "python-sdks";
-    tag = "api-v${version}";
+    tag = "api-v${finalAttrs.version}";
     hash = "sha256-Z9ZyzESPUR+j9s9LXSTDx3pB+bltbqTeb8WVKaKk80A=";
   };
 
@@ -44,4 +44,4 @@ buildPythonPackage rec {
     license = lib.licenses.asl20;
     platforms = lib.platforms.all;
   };
-}
+})

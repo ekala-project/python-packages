@@ -11,7 +11,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "alpha-vantage";
   version = "3.0.0";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "RomelTorres";
     repo = "alpha_vantage";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-Ae9WqEsAjJcD62NZOPh6a49g1wY4KMswzixDAZEtWkw=";
   };
 
@@ -58,4 +58,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/RomelTorres/alpha_vantage";
     license = lib.licenses.mit;
   };
-}
+})

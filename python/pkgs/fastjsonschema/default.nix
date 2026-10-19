@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "fastjsonschema";
   version = "2.21.2";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "horejsek";
     repo = "python-fastjsonschema";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     fetchSubmodules = true;
     hash = "sha256-EV7/vPYeJSG2uTLpENso9WhcR98/ZTbanKffJfmfZz4=";
   };
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://horejsek.github.io/python-fastjsonschema/";
     license = lib.licenses.bsd3;
   };
-}
+})

@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "setproctitle";
   version = "1.3.7";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "dvarrazzo";
     repo = "py-setproctitle";
-    tag = "version-${version}";
+    tag = "version-${finalAttrs.version}";
     hash = "sha256-dfOdtfOXRAoCQLW307+YMsFIWRv4CupbKUxckev1oUw=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/dvarrazzo/py-setproctitle";
     license = lib.licenses.bsd3;
   };
-}
+})

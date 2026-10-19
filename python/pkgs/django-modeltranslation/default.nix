@@ -12,7 +12,7 @@
   hatch-vcs,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-modeltranslation";
   version = "0.20.5";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "deschler";
     repo = "django-modeltranslation";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-qqBxsaEnTRkGx5WfggfAmxeyTdk8+KtFgoGYH7Ik6m8=";
   };
 
@@ -46,4 +46,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/deschler/django-modeltranslation";
     license = lib.licenses.bsd3;
   };
-}
+})

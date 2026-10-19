@@ -12,7 +12,7 @@
   stdenv,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "cocotb";
   version = "2.1.0";
   pyproject = true;
@@ -26,7 +26,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "cocotb";
     repo = "cocotb";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-MND6d+5ymlGT597kt6rWN9ylmoGvexIylzsgjY0NRe8=";
   };
 
@@ -72,4 +72,4 @@ buildPythonPackage rec {
     license = lib.licenses.bsd3;
     broken = stdenv.hostPlatform.isDarwin;
   };
-}
+})

@@ -6,13 +6,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   version = "1.16";
   pyproject = true;
   pname = "patch";
 
   src = fetchzip {
-    url = "mirror://pypi/p/${pname}/${pname}-${version}.zip";
+    url = "mirror://pypi/p/${pname}/${pname}-${finalAttrs.version}.zip";
     sha256 = "1nj55hvyvzax4lxq7vkyfbw91pianzr3hp7ka7j12pgjxccac50g";
     stripRoot = false;
   };
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/techtonik/python-patch/";
     license = lib.licenses.mit;
   };
-}
+})

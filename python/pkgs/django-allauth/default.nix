@@ -38,7 +38,7 @@
   dj-rest-auth,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-allauth";
   version = "65.18.0";
   pyproject = true;
@@ -46,7 +46,7 @@ buildPythonPackage rec {
   src = fetchFromCodeberg {
     owner = "allauth";
     repo = "django-allauth";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-OUU42yld3CTutgu7XOkC/f4U2Yo9HpQV8GCfZsM2P5w=";
   };
 
@@ -99,4 +99,4 @@ buildPythonPackage rec {
     homepage = "https://allauth.org";
     license = lib.licenses.mit;
   };
-}
+})

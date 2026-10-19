@@ -12,13 +12,13 @@
   webob,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "webtest";
   version = "3.0.7";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-euq1D5cNRsBo56Nt0WLLJCWR7fcqHQTv0hN0dyuTF0E=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://webtest.readthedocs.org/";
     license = lib.licenses.mit;
   };
-}
+})

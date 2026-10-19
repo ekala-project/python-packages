@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mt-940";
   version = "4.30.0";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "wolph";
     repo = "mt940";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-t6FOMu+KcEib+TZAv5uVAzvrUSt/k/RQn28jpdAY5Y0=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/WoLpH/mt940";
     license = lib.licenses.bsd3;
   };
-}
+})

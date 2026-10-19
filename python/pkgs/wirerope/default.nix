@@ -7,7 +7,7 @@
   nix-update-script,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "wirerope";
   version = "1.0.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "youknowone";
     repo = "wirerope";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-oojnv+2+nwL/TJhN+QZ5eiV6WGHC3SCxBQrCri0aHQc=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/youknowone/wirerope";
     license = lib.licenses.bsd2WithViews;
   };
-}
+})

@@ -13,7 +13,7 @@
   pexpect,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "lineedit";
   version = "0.1.6";
   pyproject = true;
@@ -21,7 +21,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "randy3k";
     repo = "lineedit";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "fq2NpjIQkIq1yzXEUxi6cz80kutVqcH6MqJXHtpTFsk=";
   };
 
@@ -47,4 +47,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/randy3k/lineedit";
     license = lib.licenses.mit;
   };
-}
+})

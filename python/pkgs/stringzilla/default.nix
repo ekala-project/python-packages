@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "stringzilla";
   version = "5.1.2";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ashvardanian";
     repo = "stringzilla";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-RENsISsEfDJaoQK9v9i6vM3OId7FREw5hixpEUETfEw=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ashvardanian/stringzilla";
     license = lib.licenses.asl20;
   };
-}
+})

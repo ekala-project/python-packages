@@ -19,7 +19,7 @@
   websockets,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "google-genai";
   version = "2.22.0";
   pyproject = true;
@@ -27,7 +27,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "googleapis";
     repo = "python-genai";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-cEeQVDAKHp8hFR9tJ5uIzv7+Es8xNHqG1EdR4U4Zvrg=";
   };
 
@@ -70,4 +70,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/googleapis/python-genai";
     license = lib.licenses.asl20;
   };
-}
+})

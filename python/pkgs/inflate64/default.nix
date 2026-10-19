@@ -7,7 +7,7 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "inflate64";
   version = "1.0.2";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromCodeberg {
     owner = "miurahr";
     repo = "inflate64";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-qYTkL37IzvrhYYwj6i6X8WRSQxprNKgBnQEYRnztzjA=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     license = lib.licenses.gpl2Plus;
   };
 
-}
+})

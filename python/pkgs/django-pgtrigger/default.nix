@@ -7,7 +7,7 @@
   psycopg2,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-pgtrigger";
   version = "4.17.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "AmbitionEng";
     repo = "django-pgtrigger";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-LBuqaFFHP18LPI26CcYMVO7rJsDrCBtuVKhwoTr6ACA=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Opus10/django-pgtrigger";
     license = lib.licenses.bsd3;
   };
-}
+})

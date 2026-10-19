@@ -10,7 +10,7 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytest-doctestplus";
   version = "1.7.1";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "scientific-python";
     repo = "pytest-doctestplus";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-5vvLnvE0dvLYBNx34gsyQEcWlr7Cd063+rRjlnHM7OE=";
   };
 
@@ -44,4 +44,4 @@ buildPythonPackage rec {
     homepage = "https://astropy.org";
     license = lib.licenses.bsd3;
   };
-}
+})

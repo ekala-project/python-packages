@@ -6,14 +6,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-leaflet";
   version = "0.34.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "django_leaflet";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-gzbnKnu/8LNjBUmC8CrB16O8srL6S8oyYBTd3q63xRU=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/makinacorpus/django-leaflet";
     license = lib.licenses.lgpl3Only;
   };
-}
+})

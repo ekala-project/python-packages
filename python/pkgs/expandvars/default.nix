@@ -7,13 +7,13 @@
   hatchling,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "expandvars";
   version = "1.1.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-bFgit7dWqZo1a5Fd0SZ/UquKTvqhNZY71/S9XTaPcdc=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/sayanarijit/expandvars";
     license = lib.licenses.mit;
   };
-}
+})

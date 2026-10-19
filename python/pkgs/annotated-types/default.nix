@@ -5,7 +5,7 @@
   hatchling,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "annotated-types";
   version = "0.8.0";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "annotated-types";
     repo = "annotated-types";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-3ztALuBF4zJ7Fc1UCWqWRMm/a8Y0I/al+M2B669D314=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/annotated-types/annotated-types";
     license = lib.licenses.mit;
   };
-}
+})

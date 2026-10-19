@@ -9,13 +9,13 @@
   toml,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytest-pylint";
   version = "0.21.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-iHZLjh1c+hiAkkjgzML8BQNfCMNfCwIi3c/qHDxOVT4=";
   };
 
@@ -51,4 +51,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/carsongee/pytest-pylint";
     license = lib.licenses.mit;
   };
-}
+})

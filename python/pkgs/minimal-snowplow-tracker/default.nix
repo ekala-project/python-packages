@@ -8,13 +8,13 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "minimal-snowplow-tracker";
   version = "0.0.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-rKv3Vy2w5/XL9pg9SV7vVAgfcb45IzDrOq25zLOdqqQ=";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/dbt-labs/snowplow-python-tracker";
     license = lib.licenses.asl20;
   };
-}
+})

@@ -6,7 +6,7 @@
   python,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "defusedxml";
   version = "0.8.0rc2";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "tiran";
     repo = "defusedxml";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-X88A5V9uXP3wJQ+olK6pZJT66LP2uCXLK8goa5bPARA=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/tiran/defusedxml";
     license = lib.licenses.psfl;
   };
-}
+})

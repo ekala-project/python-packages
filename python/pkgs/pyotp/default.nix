@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyotp";
   version = "2.9.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-NGtmQuDb3eO0/1qTC2ZMqCq/oRY1btSMxCx9ZZDTb2M=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     description = "Python One Time Password Library";
     license = lib.licenses.mit;
   };
-}
+})

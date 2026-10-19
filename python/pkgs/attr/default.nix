@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "attr";
   version = "0.3.2";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "denis-ryzhkov";
     repo = "attr";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-1gOAONDuZb7xEPFZJc00BRtFF06uX65S8b3RRRNGeSo=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/denis-ryzhkov/attr";
     license = lib.licenses.mit;
   };
-}
+})

@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aiohttp-cors";
   version = "0.8.1";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "aio-libs";
     repo = "aiohttp-cors";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-AbMuUeCNM8+oZj/hutG3zxHOwYN8uZlLFBeYTlu1fh4=";
   };
 
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/aio-libs/aiohttp-cors";
     license = lib.licenses.asl20;
   };
-}
+})

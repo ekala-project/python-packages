@@ -9,7 +9,7 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytest-asyncio";
   version = "1.4.0"; # N.B.: when updating, tests bleak and aioesphomeapi tests
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pytest-dev";
     repo = "pytest-asyncio";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-MuTLCRHCuD9TwJkMiFIC5Xv5Xz6NL8j4JZpW8BA45SI=";
   };
 
@@ -50,4 +50,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pytest-dev/pytest-asyncio";
     license = lib.licenses.asl20;
   };
-}
+})

@@ -14,7 +14,7 @@
   requests,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "freenub";
   version = "0.1.0";
   pyproject = true;
@@ -22,7 +22,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "bdraco";
     repo = "freenub";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-UkW/7KUQ4uCu3cxDSL+kw0gjKjs4KnmxRIOLVP4hwyA=";
   };
 
@@ -52,4 +52,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/bdraco/freenub";
     license = lib.licenses.mit;
   };
-}
+})

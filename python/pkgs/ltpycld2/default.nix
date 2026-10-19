@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ltpycld2";
   version = "0.42";
 
@@ -15,7 +15,7 @@ buildPythonPackage rec {
 
   src = fetchPypi {
     pname = "LTpycld2";
-    inherit version;
+    inherit (finalAttrs) version;
     sha256 = "948d0c1ab5518ab4efcbcc3cd73bb29f809f1dfb30f4d2fbd81b175a1ffeb516";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/LibreTranslate/pycld2";
     license = lib.licenses.asl20;
   };
-}
+})

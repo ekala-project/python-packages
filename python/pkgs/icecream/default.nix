@@ -13,13 +13,13 @@
   pygments,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "icecream";
   version = "2.2.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-nX8kQYfwChP0rHfRdpkOGH6cJ51srE91SOM4KRrZc0M=";
   };
 
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/gruns/icecream";
     license = lib.licenses.mit;
   };
-}
+})

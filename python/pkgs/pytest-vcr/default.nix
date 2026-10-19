@@ -8,7 +8,7 @@
   vcrpy,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytest-vcr";
   version = "1.0.2";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ktosiek";
     repo = "pytest-vcr";
-    tag = version;
+    tag = finalAttrs.version;
     sha256 = "1i6fin91mklvbi8jzfiswvwf1m91f43smpj36a17xrzk4gisfs6i";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ktosiek/pytest-vcr";
     license = lib.licenses.mit;
   };
-}
+})

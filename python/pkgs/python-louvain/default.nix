@@ -9,13 +9,13 @@
   numpy,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "python-louvain";
   version = "0.16";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-t7ot9QAv0o0+54mklTK6rRH+ZI5PIRfPB5jnUgodpWs=";
   };
 
@@ -43,4 +43,4 @@ buildPythonPackage rec {
     mainProgram = "community";
     license = lib.licenses.bsd3;
   };
-}
+})

@@ -7,13 +7,13 @@
   packaging,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "sip";
   version = "6.16.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-CnOcnNKSneTgiERW2Mrzz7IsEFNHV8d5e9jca9ntabw=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://riverbankcomputing.com/";
     license = lib.licenses.gpl3Only;
   };
-}
+})

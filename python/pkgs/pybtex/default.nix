@@ -7,13 +7,13 @@
   pyyaml,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pybtex";
   version = "0.26.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-LlVDvqQk5g6eQu73C/9Ze+SGSdj2i6Bhp6CSskd9VGQ=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://pybtex.org/";
     license = lib.licenses.mit;
   };
-}
+})

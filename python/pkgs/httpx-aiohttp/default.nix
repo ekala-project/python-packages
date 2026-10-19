@@ -7,7 +7,7 @@
   httpx,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "httpx-aiohttp";
   version = "0.2.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "karpetrosyan";
     repo = "httpx-aiohttp";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-STZyNPPeSaeINjylrT6FCdqnP41syBr2ZjZZ7LAUQ0c=";
     fetchSubmodules = true;
   };
@@ -44,4 +44,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/karpetrosyan/httpx-aiohttp/";
     license = lib.licenses.bsd3;
   };
-}
+})

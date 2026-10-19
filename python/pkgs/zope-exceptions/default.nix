@@ -6,7 +6,7 @@
   zope-interface,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "zope-exceptions";
   version = "6.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "zopefoundation";
     repo = "zope.exceptions";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-LLKS/O1sfrHRfEgbb3GO+/hBtIC9CvfNjorqiKTgujo=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://pypi.org/project/zope.exceptions/";
     license = lib.licenses.zpl21;
   };
-}
+})

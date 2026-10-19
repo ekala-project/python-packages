@@ -12,11 +12,11 @@ let
   pname = "image";
   version = "1.5.33";
 in
-buildPythonPackage rec {
-  inherit pname version;
+buildPythonPackage (finalAttrs: {
+  inherit (finalAttrs) pname version;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-uqLgkXgnfapQ8i/W0dUex48ZwSaIkhy5q1gIdD8JcSY=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/francescortiz/image";
     license = lib.licenses.bsd3;
   };
-}
+})

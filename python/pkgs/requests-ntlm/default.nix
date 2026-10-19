@@ -8,14 +8,14 @@
   requests,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "requests-ntlm";
   version = "1.3.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "requests_ntlm";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-spzCRiYj3/35uIxD4YDMtzW0AHIopUIiDogsWK5Wxmg=";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/requests/requests-ntlm";
     license = lib.licenses.isc;
   };
-}
+})

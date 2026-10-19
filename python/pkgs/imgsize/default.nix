@@ -6,7 +6,7 @@
   rustPlatform,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "imgsize";
   version = "4.0.2";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ojii";
     repo = "imgsize";
-    tag = version;
+    tag = finalAttrs.version;
     sha256 = "sha256-pHLYDC3UjrCKOdfgo2OreE5hGyIyWVSIsQR6piJZe6k=";
   };
 
@@ -44,4 +44,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ojii/imgsize";
     license = lib.licenses.bsd3;
   };
-}
+})

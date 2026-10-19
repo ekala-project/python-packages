@@ -14,7 +14,7 @@
   webauthn,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-two-factor-auth";
   version = "1.18.1";
   pyproject = true;
@@ -22,7 +22,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "jazzband";
     repo = "django-two-factor-auth";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-rhcEVmh5Am1TKO+01rb9VBKJdFVa8uRdTimEKq2pA7w=";
   };
 
@@ -66,4 +66,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jazzband/django-two-factor-auth";
     license = lib.licenses.mit;
   };
-}
+})

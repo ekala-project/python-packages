@@ -8,7 +8,7 @@
   pybind11,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "optree";
   version = "0.20.0";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "metaopt";
     repo = "optree";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-zV7DAzMXVk3xv3hL57EdxoJ89tgLm/O+9VoMKDMRnMI=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/metaopt/optree";
     license = lib.licenses.asl20;
   };
-}
+})

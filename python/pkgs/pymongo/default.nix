@@ -12,13 +12,13 @@
   dnspython,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pymongo";
   version = "4.18.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit version;
+    inherit (finalAttrs) version;
     pname = "pymongo";
     hash = "sha256-bzPNIDPo6iFtMGm16+p53tdO8qk/aak7Js8xAIL5tbk=";
   };
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mongodb/mongo-python-driver";
     license = lib.licenses.asl20;
   };
-}
+})

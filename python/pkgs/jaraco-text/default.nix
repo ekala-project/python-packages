@@ -13,14 +13,14 @@
   inflect,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jaraco-text";
   version = "4.0.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "jaraco_text";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-W3H+zqaatvk51MkGwE/uHtp2UA0WQRF99uxFuGXxDbA=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     description = "Module for text manipulation";
     license = lib.licenses.mit;
   };
-}
+})

@@ -6,7 +6,7 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "uri-template";
   version = "1.3.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "plinss";
     repo = "uri_template";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-38HFFqM6yfpsPrhIpE639ePy/NbLqKw7gbnE3y8sL3w=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/plinss/uri_template/";
     license = lib.licenses.mit;
   };
-}
+})

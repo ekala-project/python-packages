@@ -8,7 +8,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "nipreps-versions";
   version = "1.0.4";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "nipreps";
     repo = "version-schemes";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-B2wtLurzgk59kTooH51a2dewK7aEyA0dAm64Wp+tqhM=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/nipreps/version-schemes";
     license = lib.licenses.asl20;
   };
-}
+})

@@ -9,13 +9,13 @@
   pytest-mpl,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "colorcet";
   version = "3.2.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-SNmmfm5Z3FwKllqhtG/l1Zzclcw2qVlJ8pMT+VCsWfc=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://colorcet.pyviz.org";
     license = lib.licenses.cc-by-40;
   };
-}
+})

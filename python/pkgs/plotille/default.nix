@@ -5,7 +5,7 @@
   flit-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "plotille";
   version = "6.0.5";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "tammoippen";
     repo = "plotille";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-oT4zjnLT7umauXroNgffccYLtYsU5sFSG9qBtuGVsuU=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/tammoippen/plotille";
     license = lib.licenses.mit;
   };
-}
+})

@@ -11,7 +11,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "persist-queue";
   version = "1.1.0";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "peter-wangxu";
     repo = "persist-queue";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-8LtXTpwAk71sjxvZudwk+4P4ohlWC0zagr5F8PTkTwk=";
   };
 
@@ -45,4 +45,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/peter-wangxu/persist-queue";
     license = lib.licenses.bsd3;
   };
-}
+})

@@ -6,7 +6,7 @@
   requests,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "inwx-domrobot";
   version = "3.2.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "inwx";
     repo = "python-client";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-Nbs3xroJD61NbpaiTdjA3VFxzXIlnqmB1d7SJDj8VN8=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/inwx/python-client";
     license = lib.licenses.mit;
   };
-}
+})

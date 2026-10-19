@@ -6,13 +6,13 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "html2text";
   version = "2025.4.15";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-lIpkX48Lw6vn/VhwGaIZehJDbNc9DUkIr5W/yNozdYg=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     mainProgram = "html2text";
     license = lib.licenses.gpl3Only;
   };
-}
+})

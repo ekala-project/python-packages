@@ -7,7 +7,7 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "python-pkcs11";
   version = "0.10.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "danni";
     repo = "python-pkcs11";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-GhBpqVVdN1pD2zjlXxtHACIoP9Bw44rzT+w+sGO7PV0=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/danni/python-pkcs11";
     license = lib.licenses.mit;
   };
-}
+})

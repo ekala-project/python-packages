@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "msal-extensions";
   version = "1.3.1";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "AzureAD";
     repo = "microsoft-authentication-extensions-for-python";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-LRopszB8+8N9EajSmZvz0MTomp/qWZ5O3q00AHimZbY=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/AzureAD/microsoft-authentication-extensions-for-python";
     license = lib.licenses.mit;
   };
-}
+})

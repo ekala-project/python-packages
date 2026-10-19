@@ -7,7 +7,7 @@
   stdenv,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "invoke";
   version = "3.0.3";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   build-system = [ setuptools ];
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-Q3tqYiIjgkOAv7TmT2EnEaa2SMeV9WXvyGJa9m+1fww=";
   };
 
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     homepage = "https://www.pyinvoke.org/";
     license = lib.licenses.bsd2;
   };
-}
+})

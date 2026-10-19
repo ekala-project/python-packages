@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "uc-micro-py";
   version = "2.0.0";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "tsutsu3";
     repo = "uc.micro-py";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-o4rUK16skeB7+9gvOltYC6u1bIPvw44bVSMoB+BHvRk=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/tsutsu3/uc.micro-py";
     license = lib.licenses.mit;
   };
-}
+})

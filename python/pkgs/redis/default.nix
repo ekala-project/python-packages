@@ -17,7 +17,7 @@
   requests,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "redis";
   version = "8.1.0";
   pyproject = true;
@@ -25,7 +25,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "redis";
     repo = "redis-py";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-qKrJaI4IaqTzdeaxx7Q7vEvE6qmmtkrRKefkrhCy4Q4=";
   };
 
@@ -61,4 +61,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/redis/redis-py";
     license = lib.licenses.mit;
   };
-}
+})

@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "qt-material";
   version = "2.17";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "dunderlab";
     repo = "qt-material";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-ilrPA8SoVCo6FgwxWQ4sOjqURCFDQJLlTTkCZzTZQKI=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/dunderlab/qt-material";
     license = lib.licenses.bsd2;
   };
-}
+})

@@ -7,13 +7,13 @@
   flit-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "scripttest";
   version = "3.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-1A6IWdcbHUkY4dkYxme84FkoKG8svQnPt6bMHz8witA=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://pypi.org/project/scripttest/";
     license = lib.licenses.mit;
   };
-}
+})

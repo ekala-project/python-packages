@@ -6,14 +6,14 @@
   django,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-extensions";
   version = "4.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "django_extensions";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-e3Ck0o6bhA9EaU4/f+tU9V1JX4s/psXA5eEryyqjzes=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/django-extensions/django-extensions";
     license = lib.licenses.mit;
   };
-}
+})

@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "property-cached";
   version = "1.6.4";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "althonos";
     repo = "property-cached";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-8kityZ++1TS22Ff7a5x5bQi0QBaHsNaP4E/Man8A28A=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/althonos/property-cached";
     license = lib.licenses.bsd3;
   };
-}
+})

@@ -8,14 +8,14 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "textual-autocomplete";
   version = "4.0.6";
   pyproject = true;
 
   src = fetchPypi {
     pname = "textual_autocomplete";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-K6Lw12e+RIDsrLPksTDPBzQOAzw1APxCT+2RJdJ6RYY=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/darrenburns/textual-autocomplete";
     license = lib.licenses.mit;
   };
-}
+})

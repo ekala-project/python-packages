@@ -6,7 +6,7 @@
   aiohttp,
   voluptuous,
 }:
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "alphaessopenapi";
   version = "0.016";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "CharlesGillanders";
     repo = "alphaess-openAPI";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-kmKC3NWxu4Auphsc2RFkHVbJVFGrEpT7SeLk4bHl8N0=";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     description = "Library that uses the Alpha ESS Open API to retrieve data on your Alpha ESS inverter, photovoltaic panels, and battery";
     license = lib.licenses.mit;
   };
-}
+})

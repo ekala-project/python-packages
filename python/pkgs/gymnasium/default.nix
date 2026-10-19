@@ -13,7 +13,7 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "gymnasium";
   version = "1.3.0";
   pyproject = true;
@@ -21,7 +21,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Farama-Foundation";
     repo = "Gymnasium";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-asQ/RqnmGRoVdwBkp4RIkqzGtQ7PnISt8/mRcXrNbBc=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Farama-Foundation/Gymnasium";
     license = lib.licenses.mit;
   };
-}
+})

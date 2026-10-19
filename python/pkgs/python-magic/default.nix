@@ -6,13 +6,13 @@
   file,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "python-magic";
   version = "0.4.27";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-wboUsI5KX1wxowK3chI5aVsvDwWNElvVzh7ja52dPDs=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     description = "Python interface to the libmagic file type identification library";
     license = lib.licenses.mit;
   };
-}
+})

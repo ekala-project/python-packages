@@ -6,13 +6,13 @@
   requests,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "requests-toolbelt";
   version = "1.0.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-doGgo9BHAStb3A7jfX+PB+vnarCMrsz8OSHOI8iNW8Y=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://toolbelt.readthedocs.io/";
     license = lib.licenses.asl20;
   };
-}
+})

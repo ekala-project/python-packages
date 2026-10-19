@@ -26,7 +26,7 @@
   gitUpdater,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "langchain-community";
   version = "0.4.2";
   pyproject = true;
@@ -34,7 +34,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "langchain-ai";
     repo = "langchain-community";
-    tag = "libs/community/v${version}";
+    tag = "libs/community/v${finalAttrs.version}";
     hash = "sha256-I9xULsg+tlXM3Brh6Xa5xvFENx8zn4FRZ1/evNEh8UY=";
   };
 
@@ -72,4 +72,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/langchain-ai/langchain-community";
     license = lib.licenses.mit;
   };
-}
+})

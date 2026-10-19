@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "htmlmin";
   version = "0.1.12";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-UMHvRjA3Sl1yOQAJapYc/0Jt/0a0jzTRlKgbvhTsoXg=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mankyd/htmlmin";
     license = lib.licenses.bsd3;
   };
-}
+})

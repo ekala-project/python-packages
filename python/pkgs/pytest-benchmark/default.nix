@@ -7,14 +7,14 @@
   py-cpuinfo,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytest-benchmark";
   version = "5.2.3";
   pyproject = true;
 
   src = fetchPypi {
     pname = "pytest_benchmark";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-3rcxeZiiPGUP1P924SMAZqdstF3OzgrKVgcUPGGed3k=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ionelmc/pytest-benchmark";
     license = lib.licenses.bsd2;
   };
-}
+})

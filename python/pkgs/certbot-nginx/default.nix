@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "certbot-nginx";
   pyproject = true;
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
   meta = certbot.meta // {
     description = "Nginx plugin for Certbot";
   };
-}
+})

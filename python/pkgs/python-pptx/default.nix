@@ -9,7 +9,7 @@
   xlsxwriter,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "python-pptx";
   version = "1.0.2";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "scanny";
     repo = "python-pptx";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-KyBttTAtP8sVPjYdrY0XReB+4Xfru8GdyYWuiyNZ67w=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/scanny/python-pptx";
     license = lib.licenses.mit;
   };
-}
+})

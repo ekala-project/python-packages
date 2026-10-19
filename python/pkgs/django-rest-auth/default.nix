@@ -12,7 +12,7 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-rest-auth";
   version = "0.9.5";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Tivix";
     repo = "django-rest-auth";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-rCChUHv8sTEFErDCZnPN5b5XVtMJ7JNVZwBYF3d99mY=";
   };
 
@@ -45,4 +45,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Tivix/django-rest-auth";
     license = lib.licenses.mit;
   };
-}
+})

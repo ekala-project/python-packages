@@ -7,13 +7,13 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytest-astropy-header";
   version = "0.2.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     sha256 = "77891101c94b75a8ca305453b879b318ab6001b370df02be2c0b6d1bb322db10";
   };
 
@@ -25,4 +25,4 @@ buildPythonPackage rec {
     homepage = "https://astropy.org";
     license = lib.licenses.bsd3;
   };
-}
+})

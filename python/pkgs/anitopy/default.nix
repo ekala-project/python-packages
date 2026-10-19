@@ -5,7 +5,7 @@
   # build-system
   setuptools,
 }:
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "anitopy";
   version = "2.1.1";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "igorcmoura";
     repo = "anitopy";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-xXEf7AJKg7grDmkKfFuC4Fk6QYFJtezClyfA3vq8TfQ=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/igorcmoura/anitopy";
     license = lib.licenses.mpl20;
   };
-}
+})

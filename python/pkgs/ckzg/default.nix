@@ -11,7 +11,7 @@
   python,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ckzg";
   version = "2.1.8";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ethereum";
     repo = "c-kzg-4844";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-i7m1oFQ4WmY+TfETfQuznvQINt6+JfWztoRFnI/pV/s=";
   };
 
@@ -45,4 +45,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ethereum/c-kzg-4844";
     license = lib.licenses.asl20;
   };
-}
+})

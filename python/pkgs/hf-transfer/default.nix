@@ -15,7 +15,7 @@
   libiconv,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "hf-transfer";
   version = "0.1.9";
   pyproject = true;
@@ -23,7 +23,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "huggingface";
     repo = "hf_transfer";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-mcU3YuJVfuwBvtLfqceV3glcJcpjSX7M3VjvbvLCxZg=";
   };
 
@@ -58,4 +58,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/huggingface/hf_transfer";
     license = lib.licenses.asl20;
   };
-}
+})

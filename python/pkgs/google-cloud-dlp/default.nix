@@ -8,14 +8,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "google-cloud-dlp";
   version = "3.39.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "google_cloud_dlp";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-dabUewER8SFoc4QYyGy1V71IqxYpzUsnNyRNUfgZH04=";
   };
 
@@ -44,4 +44,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-dlp";
     license = lib.licenses.asl20;
   };
-}
+})

@@ -7,13 +7,13 @@
   numpy,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "javaobj-py3";
   version = "0.4.4";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-5OMlfvLPgaMzl4ek1c+STlTJHwlacj9tJYTa5h1Dlu0=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/tcalmant/python-javaobj";
     license = lib.licenses.asl20;
   };
-}
+})

@@ -5,7 +5,7 @@
   hatchling,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "nonestorage";
   version = "0.1.0";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "nonebot";
     repo = "nonestorage";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-Y8Ywpp5/FRT8jIhSaMtuzMXs3UJROh5SrFdIZD7ysBA=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/nonebot/nonestorage";
     license = lib.licenses.mit;
   };
-}
+})

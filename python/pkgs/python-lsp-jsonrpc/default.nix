@@ -8,7 +8,7 @@
   ujson,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "python-lsp-jsonrpc";
   version = "1.1.2";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "python-lsp";
     repo = "python-lsp-jsonrpc";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-5WN/31e6WCgXVzevMuQbNjyo/2jjWDF+m48nrLKS+64=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/python-lsp/python-lsp-jsonrpc";
     license = lib.licenses.mit;
   };
-}
+})

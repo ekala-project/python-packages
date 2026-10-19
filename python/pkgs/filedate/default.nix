@@ -6,7 +6,7 @@
   python-dateutil,
   setuptools,
 }:
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "filedate";
   version = "3.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "kubinka0505";
     repo = "filedate";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-HvuGP+QlUlfAUfFmaVVvtPHGdrbWVxghQipnqTTvAQc=";
   };
 
@@ -54,4 +54,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/kubinka0505/filedate";
     license = lib.licenses.gpl3Only;
   };
-}
+})

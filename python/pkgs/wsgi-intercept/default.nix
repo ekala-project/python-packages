@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "wsgi-intercept";
   version = "1.13.1";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "cdent";
     repo = "wsgi-intercept";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-hs5yB0+eDlh/pNPaqYIU9C+RBpyrdPOAscQGIoqzmvU=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/cdent/wsgi-intercept";
     license = lib.licenses.mit;
   };
-}
+})

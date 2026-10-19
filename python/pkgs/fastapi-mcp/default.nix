@@ -19,7 +19,7 @@
   uvicorn,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "fastapi-mcp";
   version = "0.4.0";
   pyproject = true;
@@ -27,7 +27,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "tadata-org";
     repo = "fastapi_mcp";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-TCmM5n6BF3CWEuGVSZnUL2rTYitKtn4vSCkiQvKFLKw=";
   };
 
@@ -55,4 +55,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/tadata-org/fastapi_mcp";
     license = lib.licenses.mit;
   };
-}
+})

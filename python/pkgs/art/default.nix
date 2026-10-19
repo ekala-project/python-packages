@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "art";
   version = "6.5";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "sepandhaghighi";
     repo = "art";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-ub+hvxYRZznql/GZjA6QXrdHUbM+QCVEYiQfQ6IOJKE=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/sepandhaghighi/art";
     license = lib.licenses.mit;
   };
-}
+})

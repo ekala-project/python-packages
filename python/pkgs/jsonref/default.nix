@@ -6,7 +6,7 @@
   pdm-pep517,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jsonref";
   version = "1.1.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "gazpachoking";
     repo = "jsonref";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-tOhabmqCkktJUZjCrzjOjUGgA/X6EVz0KqehyLtigfc=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/gazpachoking/jsonref";
     license = lib.licenses.mit;
   };
-}
+})

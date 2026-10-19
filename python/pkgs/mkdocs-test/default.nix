@@ -12,7 +12,7 @@
   super-collections,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mkdocs-test";
   version = "0.6.0";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "fralau";
     repo = "mkdocs-test";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-IP6qL+qR8uYSV5eG7/spiiNtdNghApdiuHBF+8OjPPg=";
   };
 
@@ -46,4 +46,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/fralau/mkdocs-test";
     license = lib.licenses.mit;
   };
-}
+})

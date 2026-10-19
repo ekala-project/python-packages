@@ -7,13 +7,13 @@
   cython,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyclipper";
   version = "1.4.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-mIK9iJ8n2nit1N1viB0laX78dAv4QCdOdJmI0lSWyOE=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/fonttools/pyclipper";
     license = lib.licenses.mit;
   };
-}
+})

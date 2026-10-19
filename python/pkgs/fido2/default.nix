@@ -6,13 +6,13 @@
   cryptography,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "fido2";
   version = "2.2.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-hXh0KKlMP46vcvD/MK+6mDtVmhsbeVyTMYyBtK1AYsQ=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     description = "Provides library functionality for FIDO 2.0, including communication with a device over USB";
     license = lib.licenses.bsd2;
   };
-}
+})

@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "json2html";
   version = "1.3.0";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "softvar";
     repo = "json2html";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-Y+mwJ0p4Q2TKMU8qQvuvo08RiMdsReO7psgXaiW9ntk=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/softvar/json2html";
     license = lib.licenses.mit;
   };
-}
+})

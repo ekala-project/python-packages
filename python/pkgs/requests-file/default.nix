@@ -7,7 +7,7 @@
   requests,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "requests-file";
   version = "2.1.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "dashea";
     repo = "requests-file";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-JtdtE44yiw2mLMZ0bJv0QiGWb7f8ywPLF7+BUufh/g4=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/dashea/requests-file";
     license = lib.licenses.asl20;
   };
-}
+})

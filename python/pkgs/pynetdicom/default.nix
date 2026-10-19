@@ -6,7 +6,7 @@
   pydicom,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pynetdicom";
   version = "3.0.4";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pydicom";
     repo = "pynetdicom";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-4LISckHH+fVBmPcBr8rM62E6r3IkKAgdUneVHyc5Vm8=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pydicom/pynetdicom";
     license = lib.licenses.mit;
   };
-}
+})

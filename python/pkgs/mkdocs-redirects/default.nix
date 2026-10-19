@@ -6,7 +6,7 @@
   mkdocs,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mkdocs-redirects";
   version = "1.2.2";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mkdocs";
     repo = "mkdocs-redirects";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-YsMA00yajeGSqSB6CdKxGqyClC9Cgc3ImRBTucHEHhs=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mkdocs/mkdocs-redirects";
     license = lib.licenses.mit;
   };
-}
+})

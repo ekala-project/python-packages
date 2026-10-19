@@ -6,7 +6,7 @@
   lib,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pa-ringbuffer";
   version = "0.1.4";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "spatialaudio";
     repo = "python-pa-ringbuffer";
-    tag = version;
+    tag = finalAttrs.version;
     sha256 = "1d4k6z13mc1f88m6wbhfx8hillb7q78n33ws5bmyblsdkv1gx607";
   };
 
@@ -25,4 +25,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/spatialaudio/python-pa-ringbuffer";
     license = lib.licenses.mit;
   };
-}
+})

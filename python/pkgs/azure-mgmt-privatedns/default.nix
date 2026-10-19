@@ -9,14 +9,14 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-privatedns";
   version = "2.0.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_mgmt_privatedns";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-4GTSIhFTgkk8dr4QluTYMA6zGp70XBmKoZGZM8uQoSQ=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/network/azure-mgmt-privatedns";
     license = lib.licenses.mit;
   };
-}
+})

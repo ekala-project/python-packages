@@ -20,7 +20,7 @@
   syrupy,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aioazuredevops";
   version = "2.2.2";
   pyproject = true;
@@ -30,7 +30,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "timmo001";
     repo = "aioazuredevops";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-0KQHL9DmNeRvEs51XPcncxNzXb+SqYM5xPDvOdKSQMI=";
   };
 
@@ -81,4 +81,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/timmo001/aioazuredevops";
     license = lib.licenses.mit;
   };
-}
+})

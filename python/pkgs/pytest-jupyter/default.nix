@@ -14,44 +14,41 @@
   nbformat,
 }:
 
-let
-  self = buildPythonPackage rec {
-    pname = "pytest-jupyter";
-    version = "0.11.0";
-    pyproject = true;
+buildPythonPackage (finalAttrs: {
+  pname = "pytest-jupyter";
+  version = "0.11.0";
+  pyproject = true;
 
-    src = fetchFromGitHub {
-      owner = "jupyter-server";
-      repo = "pytest-jupyter";
-      tag = "v${version}";
-      hash = "sha256-x3Q9Ei4WIMDjjrYfWees30eooWep60EljGYyUyypxqQ=";
-    };
-
-    nativeBuildInputs = [ hatchling ];
-
-    buildInputs = [ pytest ];
-
-    dependencies = [ jupyter-core ];
-
-    optional-dependencies = {
-      client = [
-        jupyter-client
-        nbformat
-        ipykernel
-      ];
-      server = [
-        jupyter-server
-        jupyter-client
-        nbformat
-        ipykernel
-      ];
-    };
-
-    meta = {
-      description = "Pytest plugin for testing Jupyter core libraries and extensions";
-      homepage = "https://github.com/jupyter-server/pytest-jupyter";
-      license = lib.licenses.bsd3;
-    };
+  src = fetchFromGitHub {
+    owner = "jupyter-server";
+    repo = "pytest-jupyter";
+    tag = "v${finalAttrs.version}";
+    hash = "sha256-x3Q9Ei4WIMDjjrYfWees30eooWep60EljGYyUyypxqQ=";
   };
-in
-self
+
+  nativeBuildInputs = [ hatchling ];
+
+  buildInputs = [ pytest ];
+
+  dependencies = [ jupyter-core ];
+
+  optional-dependencies = {
+    client = [
+      jupyter-client
+      nbformat
+      ipykernel
+    ];
+    server = [
+      jupyter-server
+      jupyter-client
+      nbformat
+      ipykernel
+    ];
+  };
+
+  meta = {
+    description = "Pytest plugin for testing Jupyter core libraries and extensions";
+    homepage = "https://github.com/jupyter-server/pytest-jupyter";
+    license = lib.licenses.bsd3;
+  };
+})

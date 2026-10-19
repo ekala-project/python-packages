@@ -10,7 +10,7 @@
   pytestCheckHook,
   moto,
 }:
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "environ-config";
   version = "26.1.0";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     repo = "environ-config";
     owner = "hynek";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-baj61mS4rSLMngrAdmSwupN/2ewo/GDwbZqFTr8fVuE=";
   };
 
@@ -45,4 +45,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/hynek/environ-config";
     license = lib.licenses.apsl20;
   };
-}
+})

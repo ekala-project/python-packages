@@ -6,13 +6,13 @@
   tornado,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "sockjs-tornado";
   version = "1.0.7";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-Av8lRms6RrGn2+R3NAsEJ3CsB43n6kdaYoWiinXrH6s=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mrjoes/sockjs-tornado/";
     license = lib.licenses.mit;
   };
-}
+})

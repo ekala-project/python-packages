@@ -6,13 +6,13 @@
   chardet,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "encutils";
   version = "1.0.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-OOylrxjOur2L5DwX8UydP7uoPMX3rI46schuJMSyuRo=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/coherent-oss/encutils";
     license = lib.licenses.lgpl3Plus;
   };
-}
+})

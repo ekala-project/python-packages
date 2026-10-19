@@ -6,13 +6,13 @@
   pyyaml,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "kaptan";
   version = "0.6.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-EBMwpE/e3oiFhvMBC9FFwOxIpIBrxWQp+lSHpndAIfg=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     description = "Configuration manager for python applications";
     license = lib.licenses.bsd3;
   };
-}
+})

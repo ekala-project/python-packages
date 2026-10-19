@@ -10,7 +10,7 @@
   jsmin,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mkdocs-minify-plugin";
   version = "0.7.1";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "byrnereese";
     repo = "mkdocs-minify-plugin";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-LDCAWKVbFsa6Y/tmY2Zne4nOtxe4KvNplZuWxg4e4L8=";
   };
 
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/byrnereese/mkdocs-minify-plugin";
     license = lib.licenses.mit;
   };
-}
+})

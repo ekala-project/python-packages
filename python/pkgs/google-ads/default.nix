@@ -13,14 +13,14 @@
   pyyaml,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "google-ads";
   version = "31.4.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "google_ads";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-A45QJgivweiIiOLkrjZ7x6eHi1wyBpEHU8agifC0Y8w=";
   };
 
@@ -46,4 +46,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/googleads/google-ads-python";
     license = lib.licenses.asl20;
   };
-}
+})

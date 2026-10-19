@@ -9,7 +9,7 @@
   cmake,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "amazon-ion";
   version = "0.13.0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "amazon-ion";
     repo = "ion-python";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     # Test vectors require git submodule
     fetchSubmodules = true;
     leaveDotGit = true; # During ion-c submodule build git history/hash used to infer version
@@ -93,4 +93,4 @@ buildPythonPackage rec {
     ];
     license = lib.licenses.asl20;
   };
-}
+})

@@ -7,13 +7,13 @@
   aiohttp,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aioresponses";
   version = "0.7.9";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-Hc+iiTj8AG8Eapg4OnwHrBgL56SSwe1Vf1zXsIBTV9M=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     description = "Helper to mock/fake web requests in python aiohttp package";
     license = lib.licenses.mit;
   };
-}
+})

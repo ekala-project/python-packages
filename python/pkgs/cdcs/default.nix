@@ -12,7 +12,7 @@
   tqdm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "cdcs";
   version = "0.2.7";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "usnistgov";
     repo = "pycdcs";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-UpPoTdcDDCmombeScFgjsFX+//Yfnn+ClDwYsZh0dxI=";
   };
 
@@ -52,4 +52,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/usnistgov/pycdcs";
     license = lib.licenses.mit;
   };
-}
+})

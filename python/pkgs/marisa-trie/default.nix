@@ -8,7 +8,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "marisa-trie";
   version = "1.4.1";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pytries";
     repo = "marisa-trie";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-U3gntlvJ0IaWoK+2V0OQ/XoDLfQsSbrrsSj95VR1m+4=";
   };
 
@@ -46,4 +46,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/kmike/marisa-trie";
     license = lib.licenses.mit;
   };
-}
+})

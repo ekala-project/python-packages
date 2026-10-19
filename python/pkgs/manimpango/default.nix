@@ -8,7 +8,7 @@
   cython,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "manimpango";
   version = "0.6.1";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ManimCommunity";
     repo = "manimpango";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-8eQmhVsW440/zxOwjngnPTGT7iFbdSvBV7tnI332piE=";
   };
 
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ManimCommunity/ManimPango";
     license = lib.licenses.mit;
   };
-}
+})

@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "assertpy";
   version = "1.1";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "assertpy";
     repo = "assertpy";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-TmDnwYvOQIpjwBpMCCn+qg68HnKc0qzVP9fjygqBzkI=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/assertpy/assertpy";
     license = lib.licenses.bsd3;
   };
-}
+})

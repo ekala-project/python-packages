@@ -8,14 +8,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-search";
   version = "10.0.0b1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_mgmt_search";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-mtiAjukojtK5hqYfmzTNz142ul6R6qPbfQ5mQpvtsaQ=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Azure/azure-sdk-for-python";
     license = lib.licenses.mit;
   };
-}
+})

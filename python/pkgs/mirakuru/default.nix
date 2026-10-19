@@ -12,7 +12,7 @@
   python-daemon,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mirakuru";
   version = "3.0.1";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ClearcodeHQ";
     repo = "mirakuru";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-3WyjvHxr+6kG+cLSCEZkHoA70mSoT66ubmp0W9g2yJM=";
   };
 
@@ -48,4 +48,4 @@ buildPythonPackage rec {
     description = "Process orchestration tool designed for functional and integration tests";
     license = lib.licenses.lgpl3Plus;
   };
-}
+})

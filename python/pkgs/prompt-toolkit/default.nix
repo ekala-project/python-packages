@@ -6,7 +6,7 @@
   wcwidth,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "prompt-toolkit";
   version = "3.0.53";
   pyproject = true;
@@ -14,14 +14,14 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "prompt-toolkit";
     repo = "python-prompt-toolkit";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-MvGwFmu4kxTFsUsaFJu6FuQ+qd4VWBP6a+2N+eANbCg=";
   };
 
   postPatch = ''
     # https://github.com/prompt-toolkit/python-prompt-toolkit/issues/1988
     substituteInPlace src/prompt_toolkit/__init__.py \
-      --replace-fail 'metadata.version("prompt_toolkit")' '"${version}"'
+      --replace-fail 'metadata.version("prompt_toolkit")' '"${finalAttrs.version}"'
   '';
 
   build-system = [ setuptools ];
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jonathanslenders/python-prompt-toolkit";
     license = lib.licenses.bsd3;
   };
-}
+})

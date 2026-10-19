@@ -8,7 +8,7 @@
   pyjwt,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "globus-sdk";
   version = "4.9.0";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "globus";
     repo = "globus-sdk-python";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-i0cvhZaz1ANeOzRFsxYj9PNJAf2SwauX1omJ/fVmgwI=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     changelog = "https://github.com/globus/globus-sdk-python/releases/tag/${src.tag}";
     license = lib.licenses.asl20;
   };
-}
+})

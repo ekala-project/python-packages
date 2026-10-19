@@ -5,14 +5,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "reparser";
   version = "1.4.3";
   pyproject = true;
 
   src = fetchPypi {
     pname = "ReParser";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-5pyvWKKdbgRyP2p6RW0wS3rPz0E5V9r82Q7knszC0Vo=";
   };
 
@@ -25,4 +25,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/xmikos/reparser";
     license = lib.licenses.mit;
   };
-}
+})

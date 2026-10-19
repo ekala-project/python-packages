@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "empy";
   version = "4.2.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-uDHWQvypVQeCC1N3TAUYAxQrhEG4xCv4AAEdoGukJBs=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     description = "Templating system for Python";
     license = lib.licenses.bsd3;
   };
-}
+})

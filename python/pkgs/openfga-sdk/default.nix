@@ -15,7 +15,7 @@
   urllib3,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "openfga-sdk";
   version = "0.10.4";
   pyproject = true;
@@ -23,7 +23,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "openfga";
     repo = "python-sdk";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-+LVlA+YPDCULpV+1jA+GTNh2YBLD7UrtbYVZemfB0kM=";
   };
 
@@ -51,4 +51,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/openfga/python-sdk";
     license = lib.licenses.asl20;
   };
-}
+})

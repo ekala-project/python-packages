@@ -10,7 +10,7 @@
   py-ecc,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "eth-keyfile";
   version = "0.9.1";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ethereum";
     repo = "eth-keyfile";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     fetchSubmodules = true;
     hash = "sha256-DR17EupRDnviN6OXF+B+RlCVdG8cfcvnIgIEKxrXFKs=";
   };
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ethereum/eth-keyfile";
     license = lib.licenses.mit;
   };
-}
+})

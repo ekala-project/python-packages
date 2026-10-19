@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "plum-py";
   version = "0.8.7";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitLab {
     owner = "dangass";
     repo = "plum";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-q9UNRZYBLBm0mf/r3cktGnGG9LzmTDrSVgXDgGDBMok=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://plum-py.readthedocs.io/";
     license = lib.licenses.mit;
   };
-}
+})

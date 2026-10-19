@@ -12,7 +12,7 @@
   python-dotenv,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aiopvpc";
   version = "4.3.1";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "azogue";
     repo = "aiopvpc";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-1xeXfhoXRfJ7vrpRPeYmwcAGjL09iNCOm/f4pPvuZLU=";
   };
 
@@ -46,4 +46,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/azogue/aiopvpc";
     license = lib.licenses.mit;
   };
-}
+})

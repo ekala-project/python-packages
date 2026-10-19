@@ -7,7 +7,7 @@
   toml,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "toml-adapt";
   version = "0.3.4";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "firefly-cpp";
     repo = "toml-adapt";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-GtwE8P4uP3F6wOrzv/vZ4CJR4tzF7CxpWV/8X/hBZhc=";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     mainProgram = "toml-adapt";
   };
-}
+})

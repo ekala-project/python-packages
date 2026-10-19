@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "commonregex";
   version = "1.5.4";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-JxUwZ4rYr1PA6MIzp2JZeWnoRtACnxIhWsF4eR894KU=";
   };
 
@@ -22,4 +22,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/madisonmay/CommonRegex";
     license = lib.licenses.mit;
   };
-}
+})

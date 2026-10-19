@@ -8,14 +8,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "azure-eventgrid";
   version = "4.22.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_eventgrid";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-IHc4dE4B4HPgR1trO8EuMDfg5W2AaPQ+783tbeTeZ7U=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/eventgrid/azure-eventgrid";
     license = lib.licenses.mit;
   };
-}
+})

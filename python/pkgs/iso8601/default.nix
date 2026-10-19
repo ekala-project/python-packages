@@ -5,13 +5,13 @@
   poetry-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "iso8601";
   version = "2.1.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-ax04Ke6JIcQwGZjJCfeCn6ntPL2sDTsWry10Ou0bqN8=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://pyiso8601.readthedocs.io/";
     license = with lib.licenses; [ mit ];
   };
-}
+})

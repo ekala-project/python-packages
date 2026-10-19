@@ -5,7 +5,7 @@
   rustPlatform,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "minify-html";
   version = "0.18.1";
 
@@ -13,7 +13,7 @@ buildPythonPackage rec {
 
   # Fetching from Pypi, because there is no Cargo.lock in the GitHub repo.
   src = fetchPypi {
-    inherit version;
+    inherit (finalAttrs) version;
     pname = "minify_html";
     hash = "sha256-Q5mFMO9TdwHwA6jpCLdW147/MDyGsEGpWFXikFGLp5w=";
   };
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/wilsonzlin/minify-html/tree/master/minify-html-python";
     license = lib.licenses.mit;
   };
-}
+})

@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "circuitbreaker";
   version = "2.1.3";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "fabfuel";
     repo = "circuitbreaker";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-7BpYGhha0PTYzsE9CsN4KxfJW/wm2i6V+uAeamBREBQ=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/fabfuel/circuitbreaker";
     license = lib.licenses.bsd3;
   };
-}
+})

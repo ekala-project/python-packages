@@ -9,7 +9,7 @@
   python,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-simple-history";
   version = "3.13.0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "jazzband";
     repo = "django-simple-history";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-5hYpA2ZRJVCbl47QCZY9TMB6QAFC4k7m/Y81Z2VWsf4=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jazzband/django-simple-history/";
     license = lib.licenses.bsd3;
   };
-}
+})

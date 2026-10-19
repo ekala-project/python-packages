@@ -6,7 +6,7 @@
   pexpect,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   version = "0.1.1";
   pname = "delegator-py";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "amitt001";
     repo = "delegator.py";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-i9OZkXcDqrKnCFJBBxP8PrHxPGF7DEgZr91p+fuAyZ4=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/amitt001/delegator.py";
     license = lib.licenses.mit;
   };
-}
+})

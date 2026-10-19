@@ -10,7 +10,7 @@
   typepy,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "dataproperty";
   version = "1.1.1";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "thombashi";
     repo = "dataproperty";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-PLXF9g0VIkmsRLl5+KvXcbbwVwaJSYjWB7l8xz1mPZM=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/thombashi/DataProperty";
     license = lib.licenses.mit;
   };
-}
+})

@@ -10,7 +10,7 @@
   pytest-gitconfig,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "griffe";
   version = "1.15.0";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mkdocstrings";
     repo = "griffe";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-AMMTAqsJfj2MltTgAxfvjUTVzi+ZFmx+J9pzhMp28Z4=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     license = lib.licenses.isc;
     mainProgram = "griffe";
   };
-}
+})

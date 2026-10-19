@@ -6,13 +6,13 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "scour";
   version = "0.38.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-aIHsJmYMEwxezZlqxvawOTndV0GY9Qdz8lCLgaaODa8=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/scour-project/scour";
     license = lib.licenses.asl20;
   };
-}
+})

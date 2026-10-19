@@ -11,7 +11,7 @@
   numpy,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ml-dtypes";
   version = "0.5.4";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "jax-ml";
     repo = "ml_dtypes";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-vGCDLs7Te/3fBZmCQVp2Zm5NnP7K/KCkTod0oFVVKN4=";
     # Since this upstream patch (https://github.com/jax-ml/ml_dtypes/commit/1bfd097e794413b0d465fa34f2eff0f3828ff521),
     # the attempts to use the nixpkgs packaged eigen dependency have failed.
@@ -51,4 +51,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jax-ml/ml_dtypes";
     license = lib.licenses.asl20;
   };
-}
+})

@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jupyter-highlight-selected-word";
   version = "0.2.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "jcb91";
     repo = "jupyter_highlight_selected_word";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-KgM//SIfES46uZySwNR4ZOcolnJORltvThsmEvxXoIs=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jcb91/jupyter_highlight_selected_word";
     license = lib.licenses.bsd3;
   };
-}
+})

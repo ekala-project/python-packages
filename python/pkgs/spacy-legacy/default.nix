@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "spacy-legacy";
   version = "3.0.12";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-s31uDJtuHXyhz1vHFSq2SkxGcfWcha2vej/LhwNXp3Q=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/explosion/spacy-legacy";
     license = lib.licenses.asl20;
   };
-}
+})

@@ -7,13 +7,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pymetar";
   version = "1.4";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-SNvmxJKZYQIcth5Ju54GBbVMS2G5+5reUQdnBaCOzVQ=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/klausman/pymetar";
     license = lib.licenses.gpl2Plus;
   };
-}
+})

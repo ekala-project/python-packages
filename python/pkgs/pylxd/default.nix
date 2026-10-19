@@ -12,7 +12,7 @@
   ws4py,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pylxd";
   version = "2.4.2";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "canonical";
     repo = "pylxd";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-lLVo8qcOh+KnoKpxLg36uzymOkgOzC+TcDe5yqy9TH4=";
   };
 
@@ -45,4 +45,4 @@ buildPythonPackage rec {
     homepage = "https://pylxd.readthedocs.io/";
     license = lib.licenses.asl20;
   };
-}
+})

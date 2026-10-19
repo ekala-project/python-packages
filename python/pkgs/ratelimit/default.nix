@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ratelimit";
   version = "2.2.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-r4qbZLghUprKCeuvbY0nkQDXZvGekLUFmsanGMpt7kI=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/tomasbasham/ratelimit";
     license = lib.licenses.mit;
   };
-}
+})

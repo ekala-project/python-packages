@@ -5,7 +5,7 @@
   hatchling,
   httpx,
 }:
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "gotenberg-client";
   version = "1.0.0";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "stumpylog";
     repo = "gotenberg-client";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-NgfqUgtD70XvpFee8e32rTPe3TOS+JdmCnefzFY4gNY=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/stumpylog/gotenberg-client";
     license = lib.licenses.mpl20;
   };
-}
+})

@@ -7,7 +7,7 @@
   sly,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "quantiphy-eval";
   version = "0.5";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "KenKundert";
     repo = "quantiphy_eval";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-7VHcuINhe17lRNkHUnZkVOEtD6mVWk5gu0NbrLZwprg=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/KenKundert/quantiphy_eval/";
     license = lib.licenses.mit;
   };
-}
+})

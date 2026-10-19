@@ -12,7 +12,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jupyter-sphinx";
   version = "0.5.3";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "jupyter";
     repo = "jupyter-sphinx";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-o/i3WravKZPf7uw2H4SVYfAyaZGf19ZJlkmeHCWcGtE=";
   };
 
@@ -62,4 +62,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jupyter/jupyter-sphinx/";
     license = lib.licenses.bsd3;
   };
-}
+})

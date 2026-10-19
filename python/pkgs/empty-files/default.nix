@@ -7,7 +7,7 @@
   requests,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "empty-files";
   version = "0.0.9";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "approvals";
     repo = "EmptyFiles.Python";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-P/woyAN9cYdxryX1iM36C53c9dL6lo4eoTzBWT2cd3A=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/approvals/EmptyFiles.Python";
     license = lib.licenses.asl20;
   };
-}
+})

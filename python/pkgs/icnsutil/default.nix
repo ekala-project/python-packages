@@ -8,7 +8,7 @@
   pillow,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "icnsutil";
   version = "1.1.0";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "relikd";
     repo = "icnsutil";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-tiq8h6s2noWLBIOIWcj8jfSqJFN01ee2uoHN4aFwn7s=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/relikd/icnsutil";
     license = lib.licenses.mit;
   };
-}
+})

@@ -7,7 +7,7 @@
   numpy,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pcodec";
   version = "1.0.2";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pcodec";
     repo = "pcodec";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-fL+UCaQ8GdIe7e4Y7VeaWkjoNwuXXqaW2fHkaWs+1Lw=";
   };
 
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pcodec/pcodec";
     license = lib.licenses.asl20;
   };
-}
+})

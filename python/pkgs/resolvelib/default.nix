@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "resolvelib";
   version = "1.2.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-fQiiAi9uFs5AXWC2jDkPBU78/QR31Lm9AZzJQcKPrRw=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     description = "Resolve abstract dependencies into concrete ones";
     license = lib.licenses.isc;
   };
-}
+})

@@ -7,13 +7,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "strict-rfc3339";
   version = "0.7";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-XK0Xvt/Dr1ezmdsP7TJ3Hxj8VLvZF+hVRgiGB6xeEnc=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/danielrichman/strict-rfc3339";
     license = lib.licenses.gpl3;
   };
-}
+})

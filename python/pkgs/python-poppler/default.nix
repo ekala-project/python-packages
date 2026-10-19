@@ -9,13 +9,13 @@
   pybind11,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "python-poppler";
   version = "0.4.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit version;
+    inherit (finalAttrs) version;
     pname = "python_poppler";
     hash = "sha256-5spcI+wCNQvyzvhaa/nxsmF5ZDbbR4F2+dJPsU7uzGo=";
   };
@@ -48,4 +48,4 @@ buildPythonPackage rec {
     # https://github.com/cbrunet/python-poppler/issues/90
     license = lib.licenses.gpl2Plus;
   };
-}
+})

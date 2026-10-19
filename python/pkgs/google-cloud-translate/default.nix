@@ -13,14 +13,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "google-cloud-translate";
   version = "3.27.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "google_cloud_translate";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-KueO8aqNu17JdnoI6rzjT9p7tFoHumeubg6tjP1flfc=";
   };
 
@@ -49,4 +49,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-translate";
     license = lib.licenses.asl20;
   };
-}
+})

@@ -5,14 +5,14 @@
   flit-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "stdlib-list";
   version = "0.12.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "stdlib_list";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-UXgk8n7onlkdiufB3Z/zT2curlDuiG6jG7iBbXdTVnU=";
   };
 
@@ -25,4 +25,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jackmaney/python-stdlib-list";
     license = lib.licenses.mit;
   };
-}
+})

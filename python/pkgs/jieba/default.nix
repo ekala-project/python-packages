@@ -8,7 +8,7 @@
   isPy3k,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jieba";
   version = "0.42.1";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "fxsjy";
     repo = "jieba";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "028vmd6sj6wn9l1ilw7qfmlpyiysnlzdgdlhwxs6j4fvq0gyrwxk";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/fxsjy/jieba";
     license = lib.licenses.mit;
   };
-}
+})

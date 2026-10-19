@@ -9,7 +9,7 @@
   rustPlatform,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "modern-colorthief";
   version = "0.3.0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "baseplate-admin";
     repo = "modern_colorthief";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-oQ0ZAL8GyzKfFoSBJS2LIck2Z1IzZCYrkOc9nXfqyyg=";
   };
 
@@ -51,4 +51,4 @@ buildPythonPackage rec {
     homepage = "https://modern-colorthief.readthedocs.io/";
     license = lib.licenses.mit;
   };
-}
+})

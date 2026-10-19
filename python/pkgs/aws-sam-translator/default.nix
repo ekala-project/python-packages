@@ -15,7 +15,7 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aws-sam-translator";
   version = "1.113.0";
   pyproject = true;
@@ -23,7 +23,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "aws";
     repo = "serverless-application-model";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-gEW7oOysAD9Czk8MDziyrnW5bDw4GCYpA0aZOHXnEEI=";
   };
 
@@ -52,4 +52,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/aws/serverless-application-model";
     license = lib.licenses.asl20;
   };
-}
+})

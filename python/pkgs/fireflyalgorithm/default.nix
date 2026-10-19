@@ -7,7 +7,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "fireflyalgorithm";
   version = "0.4.7";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "firefly-cpp";
     repo = "FireflyAlgorithm";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-Zq1XaiEqfL+SmJu55rzVDXYBF2qyziviqw6qL+dcIb0=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/firefly-cpp/FireflyAlgorithm";
     license = lib.licenses.mit;
   };
-}
+})

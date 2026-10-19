@@ -6,7 +6,7 @@
   webencodings,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "tinyhtml5";
   version = "2.1.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "CourtBouillon";
     repo = "tinyhtml5";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-PSDlCLPK3JVMq5dyt6xzNb4xx3F8Jwf8HAgYLKoXH+E=";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/CourtBouillon/tinyhtml5";
     license = lib.licenses.mit;
   };
-}
+})

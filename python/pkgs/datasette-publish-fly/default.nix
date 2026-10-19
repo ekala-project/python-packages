@@ -10,7 +10,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "datasette-publish-fly";
   version = "1.3.1";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "simonw";
     repo = "datasette-publish-fly";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-diaxr+fNNgkJvLGkLo+lK0ThTsXYDePFsvTetMbDRMk=";
   };
 
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     homepage = "https://datasette.io/plugins/datasette-publish-fly";
     license = lib.licenses.asl20;
   };
-}
+})

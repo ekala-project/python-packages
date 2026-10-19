@@ -8,13 +8,13 @@
   poppler-utils,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pdf2image";
   version = "1.17.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-6qlZvBFrQg3X7EFfyuSbmBAN2j3RjNL9+obQnxEvbVc=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     platforms = lib.platforms.all;
   };
-}
+})

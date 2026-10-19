@@ -10,7 +10,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "acme";
   inherit (certbot) version src;
   pyproject = true;
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/certbot/certbot";
     license = lib.licenses.asl20;
   };
-}
+})

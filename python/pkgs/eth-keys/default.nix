@@ -12,7 +12,7 @@
   isPyPy,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "eth-keys";
   version = "0.8.0";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ethereum";
     repo = "eth-keys";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-mREmzckOddTUB6E/UIMNP+u520hDxAqLNQdbxqoisfI=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ethereum/eth-keys";
     license = lib.licenses.mit;
   };
-}
+})

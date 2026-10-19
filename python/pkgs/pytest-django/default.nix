@@ -8,14 +8,14 @@
   django,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytest-django";
   version = "4.14.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "pytest_django";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-Jnh90/Qiz7q49VuAp3bi7ep6EQkst06WC+8TElFXCO8=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://pytest-django.readthedocs.org/en/latest/";
     license = lib.licenses.bsd3;
   };
-}
+})

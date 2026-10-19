@@ -8,14 +8,14 @@
   isodate,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-keyvault";
   version = "14.0.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_mgmt_keyvault";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-0UGoCErkx8W9HK/spJqPP768WNxbxSkPMi6nPYswfvc=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Azure/azure-sdk-for-python";
     license = lib.licenses.mit;
   };
-}
+})

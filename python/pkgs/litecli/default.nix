@@ -12,7 +12,7 @@
   cli-helpers,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "litecli";
   version = "1.17.1";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "dbcli";
     repo = "litecli";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-YSPNtDL5rNgRh5lJBKfL1jjWemlmf3eesBMSLyJVRLY=";
   };
 
@@ -48,4 +48,4 @@ buildPythonPackage rec {
     license = lib.licenses.bsd3;
     mainProgram = "litecli";
   };
-}
+})

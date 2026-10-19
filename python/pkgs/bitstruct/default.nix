@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "bitstruct";
   version = "8.22.1";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "eerimoq";
     repo = "bitstruct";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-Egiac+1x3HaaGV6ThjChfjKbT0WvQDb1EMuyOxLY7Kg=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/eerimoq/bitstruct";
     license = lib.licenses.mit;
   };
-}
+})

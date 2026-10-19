@@ -13,7 +13,7 @@
   wheel,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pip-tools";
   version = "7.6.1";
   pyproject = true;
@@ -21,7 +21,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "jazzband";
     repo = "pip-tools";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-gh1oe4Ghz492LofyT2ZLRBuQ9DKn+tYVc2EpkWJ4bfc=";
   };
 
@@ -50,4 +50,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jazzband/pip-tools/";
     license = lib.licenses.bsd3;
   };
-}
+})

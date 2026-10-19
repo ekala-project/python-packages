@@ -7,14 +7,14 @@
   ollama,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "llama-index-llms-ollama";
   version = "0.11.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "llama_index_llms_ollama";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-5rjKwgCp/2fK6lMf7OCmJyqJ41BrK5ZI7HCaz/5KeYA=";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/run-llama/llama_index/tree/main/llama-index-integrations/llms/llama-index-llms-ollama";
     license = lib.licenses.mit;
   };
-}
+})

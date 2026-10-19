@@ -14,14 +14,14 @@
   writableTmpDirAsHomeHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mkdocs-jupyter";
   version = "0.26.3";
   pyproject = true;
 
   src = fetchPypi {
     pname = "mkdocs_jupyter";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-4ei9SKG5ZULoTjAo4wZhErrHuU2Vq2n4uRMFyEADyiY=";
   };
 
@@ -59,4 +59,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/danielfrg/mkdocs-jupyter";
     license = lib.licenses.asl20;
   };
-}
+})

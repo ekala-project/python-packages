@@ -9,7 +9,7 @@
   toml,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "librouteros";
   version = "3.4.1";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "luqasz";
     repo = "librouteros";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-vN12LYqFOU7flD6bTFtGw5VhPJ238pZ0MStM3ljwDU4=";
   };
 
@@ -48,4 +48,4 @@ buildPythonPackage rec {
     homepage = "https://librouteros.readthedocs.io/";
     license = lib.licenses.gpl2Only;
   };
-}
+})

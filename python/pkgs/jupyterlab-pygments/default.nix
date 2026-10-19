@@ -8,14 +8,14 @@
   pygments,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jupyterlab-pygments";
   version = "0.3.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "jupyterlab_pygments";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-chrKTZApJSsRz6nRheW1r01Udyu4By+bcDb0FwBU010=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jupyterlab/jupyterlab_pygments";
     license = lib.licenses.bsd3;
   };
-}
+})

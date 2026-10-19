@@ -9,7 +9,7 @@
   asn1crypto,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   version = "0.3.31";
   pyproject = true;
   pname = "pyaxmlparser";
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "appknox";
     repo = "pyaxmlparser";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-ZV2PyWQfK9xidzGUz7XPAReaVjlB8tMUKQiXoGcFCGs=";
   };
 
@@ -39,4 +39,4 @@ buildPythonPackage rec {
       asl20
     ];
   };
-}
+})

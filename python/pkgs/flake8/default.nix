@@ -9,7 +9,7 @@
   pyflakes,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "flake8";
   version = "7.3.0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "PyCQA";
     repo = "flake8";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-dZFIGyjqkd+MRz9NoOEcMuR9ZshFb/h+zO2OJZsQajc=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     mainProgram = "flake8";
   };
-}
+})

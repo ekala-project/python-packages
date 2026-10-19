@@ -19,13 +19,13 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "asyncssh";
   version = "2.24.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-QGTFkOWc4ujYKi9m018xINdlgotN9ePb+we0qMJGhsk=";
   };
 
@@ -58,4 +58,4 @@ buildPythonPackage rec {
       gpl2Plus
     ];
   };
-}
+})

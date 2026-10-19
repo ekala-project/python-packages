@@ -7,7 +7,7 @@
   mock,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "python-decouple";
   version = "3.8";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "HBNetwork";
     repo = "python-decouple";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-F9Gu7Y/dJhwOJi/ZaoVclF3+4U/N5JdvpXwgGB3SF3Q=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/HBNetwork/python-decouple";
     license = lib.licenses.mit;
   };
-}
+})

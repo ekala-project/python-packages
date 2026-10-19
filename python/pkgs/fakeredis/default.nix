@@ -7,13 +7,13 @@
   sortedcontainers,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "fakeredis";
   version = "2.37.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-kEWFGwqf5WMSaWqtyCQ1FBqkOhk8q0YtNyyPtYOnwIc=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/cunla/fakeredis-py";
     license = lib.licenses.bsd3;
   };
-}
+})

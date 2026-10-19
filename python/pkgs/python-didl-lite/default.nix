@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "python-didl-lite";
   version = "1.5.1";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "StevenLooman";
     repo = "python-didl-lite";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-kzE3k1GXn+6dZTiywr4YYBrjmWY13ZQSRWL4N882+7U=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/StevenLooman/python-didl-lite";
     license = lib.licenses.asl20;
   };
-}
+})

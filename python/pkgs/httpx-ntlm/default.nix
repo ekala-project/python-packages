@@ -8,14 +8,14 @@
   pyspnego,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "httpx-ntlm";
   version = "1.4.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "httpx_ntlm";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-Qb6KK6hRQ0hOYX3LkX1LGeOuEq/caIYipJAQNJk7U+Q=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ulodciv/httpx-ntlm";
     license = lib.licenses.isc;
   };
-}
+})

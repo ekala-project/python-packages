@@ -11,7 +11,7 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "furl";
   version = "2.1.4";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "gruns";
     repo = "furl";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-NRkOJlluZjscM4ZhxHoXIzV2A0+mrkaw7rcxfklGCHs=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/gruns/furl";
     license = lib.licenses.unlicense;
   };
-}
+})

@@ -5,13 +5,13 @@
   buildPythonPackage,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ipv8-rust-tunnels";
   version = "0.1.44";
   pyproject = true;
 
   src = fetchPypi {
-    inherit version;
+    inherit (finalAttrs) version;
     pname = "ipv8_rust_tunnels";
     hash = "sha256-eHk8aCrcnyVGd3JRGQ950Bwryqt+TYx84MHAM2kWTis=";
   };
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Tribler/ipv8-rust-tunnels";
     license = lib.licenses.lgpl3Only;
   };
-}
+})

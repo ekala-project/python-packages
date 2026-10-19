@@ -7,7 +7,7 @@
   cython,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "knot-floer-homology";
   version = "1.2.2";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "3-manifolds";
     repo = "knot_floer_homology";
-    tag = "${version}_as_released";
+    tag = "${finalAttrs.version}_as_released";
     hash = "sha256-Gw9k9AaUVTBzE+ERUH8VgS//aVT03DdKozpL8xLG4No=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/3-manifolds/knot_floer_homology";
     license = lib.licenses.gpl2Plus;
   };
-}
+})

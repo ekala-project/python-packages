@@ -9,13 +9,13 @@
   unittestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mmtf-python";
   version = "1.1.3";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-EqAv4bcTHworjORbRvHgzdKLmBj+RJlVTCaISYfqDDI=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/rcsb/mmtf-python";
     license = lib.licenses.asl20;
   };
-}
+})

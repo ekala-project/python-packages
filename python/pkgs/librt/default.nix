@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "librt";
   version = "0.9.0";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mypyc";
     repo = "librt";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-RZGaOq8hmkwekCs1fKshDrx3vmHdJl/wI3IO9ZLH5rc=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mypyc/librt";
     license = lib.licenses.mit;
   };
-}
+})

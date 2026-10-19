@@ -7,13 +7,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "managesieve";
   version = "0.8.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-LVwe0Pn6YPIAuoIaxXMfvCbOfS4NAjozkrdMNZDq+uU=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     description = "ManageSieve client library for remotely managing Sieve scripts";
     license = lib.licenses.psfl;
   };
-}
+})

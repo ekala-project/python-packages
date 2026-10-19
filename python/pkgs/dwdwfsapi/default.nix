@@ -7,13 +7,13 @@
   ciso8601,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "dwdwfsapi";
   version = "1.1.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-7dIVD+4MiYtsjAM5j67MlbiUN2Q5DpK6bUU0ZuHN2rk=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/stephan192/dwdwfsapi";
     license = lib.licenses.mit;
   };
-}
+})

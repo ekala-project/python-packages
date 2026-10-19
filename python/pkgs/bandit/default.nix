@@ -10,13 +10,13 @@
   stevedore,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "bandit";
   version = "1.9.4";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-tYnl3ir+cL1NU/oMHaYZn0CFr2Zv3gDooDTxUqUs1ig=";
   };
 
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     homepage = "https://bandit.readthedocs.io/";
     license = lib.licenses.asl20;
   };
-}
+})

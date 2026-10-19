@@ -15,13 +15,13 @@
   pyqrcode,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "discum";
   version = "1.4.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-/8TaAmfSPv/7kuymockSvC2uxXgHfuP+FXN8vuA9WHY=";
   };
 
@@ -54,4 +54,4 @@ buildPythonPackage rec {
     homepage = "https://pypi.org/project/discum/";
     license = lib.licenses.mit;
   };
-}
+})

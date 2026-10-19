@@ -6,14 +6,14 @@
   hatch-jupyter-builder,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jupyterlab-widgets";
   version = "3.0.16";
   pyproject = true;
 
   src = fetchPypi {
     pname = "jupyterlab_widgets";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-Qj2gUHHVXPJ6nmAiFtNaOmWj5BzfnF07ZDuBTOOMGeA=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jupyter-widgets/ipywidgets";
     license = lib.licenses.bsd3;
   };
-}
+})

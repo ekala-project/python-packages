@@ -7,7 +7,7 @@
   requests,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "gtts-token";
   version = "1.1.4";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "boudewijn26";
     repo = "gTTS-token";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "0vr52zc0jqyfvsccl67j1baims3cdx2is1y2lpx2kav9gadkn8hp";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/boudewijn26/gTTS-token";
     license = lib.licenses.mit;
   };
-}
+})

@@ -30,7 +30,7 @@
   python-multipart,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "gitingest";
   version = "0.3.1";
   pyproject = true;
@@ -38,7 +38,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "coderamp-labs";
     repo = "gitingest";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-drsncGneZyOCC2GJbrDM+bf4QGI2luacxMhrmdk03l4=";
   };
 
@@ -103,4 +103,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     mainProgram = "gitingest";
   };
-}
+})

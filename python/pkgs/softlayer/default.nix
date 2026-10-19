@@ -14,7 +14,7 @@
   urllib3,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "softlayer";
   version = "6.2.9";
   pyproject = true;
@@ -22,7 +22,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "softlayer";
     repo = "softlayer-python";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-kGgCW9N2NZi8PHcfpN+8L2bg7v1edP8ZXYaoSt9545M=";
   };
 
@@ -47,4 +47,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/softlayer/softlayer-python";
     license = lib.licenses.mit;
   };
-}
+})

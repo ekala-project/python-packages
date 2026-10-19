@@ -8,14 +8,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-scheduler";
   version = "7.0.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_mgmt_scheduler";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-hzabrRKnOzxk2e0/HlJvS7QvWnibgLfqn8EW+vsFH6U=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Azure/azure-sdk-for-python/blob/azure-mgmt-scheduler_7.0.0/sdk/scheduler/azure-mgmt-scheduler/CHANGELOG.md";
     license = lib.licenses.mit;
   };
-}
+})

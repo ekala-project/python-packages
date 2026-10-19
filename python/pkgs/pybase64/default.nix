@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pybase64";
   version = "1.5.0";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mayeut";
     repo = "pybase64";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     fetchSubmodules = true;
     hash = "sha256-7cUgvY/RLpkl6EfDCnki299m+KD2EpDLwIt4ut1hs38=";
   };
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mayeut/pybase64";
     license = lib.licenses.bsd2;
   };
-}
+})

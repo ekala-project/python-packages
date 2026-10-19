@@ -9,7 +9,7 @@
   pytest-mock,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "luddite";
   version = "1.0.4";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "jumptrading";
     repo = "luddite";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-iJ3h1XRBzLd4cBKFPNOlIV5Z5XJ/miscfIdkpPIpbJ8=";
   };
 
@@ -44,4 +44,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jumptrading/luddite";
     license = lib.licenses.asl20;
   };
-}
+})

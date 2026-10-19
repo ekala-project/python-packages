@@ -14,7 +14,7 @@
   pyyaml,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "astropy";
   version = "8.0.1";
   pyproject = true;
@@ -22,7 +22,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "astropy";
     repo = "astropy";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-q6GZp7gIDilSflUnFiBXhzlIBXsCPeUa/vGop3JXbK4=";
   };
 
@@ -53,4 +53,4 @@ buildPythonPackage rec {
     license = lib.licenses.bsd3;
     platforms = lib.platforms.all;
   };
-}
+})

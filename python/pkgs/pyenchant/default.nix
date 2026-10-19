@@ -8,13 +8,13 @@
   enchant_2,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyenchant";
   version = "3.3.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     sha256 = "sha256-glKIJGtd68lDb5GWdlCXTvDVY2RYUCYZ4yLEdvEoOJE=";
   };
 
@@ -45,4 +45,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pyenchant/pyenchant";
     license = lib.licenses.lgpl21;
   };
-}
+})

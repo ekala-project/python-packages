@@ -7,7 +7,7 @@
   httpx,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "tika-client";
   version = "1.0.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "stumpylog";
     repo = "tika-client";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-ZXtNHjdbAzur6lRZIom+wDMhXgpqQxvHPQMxjXJDwlw=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/stumpylog/tika-client";
     license = lib.licenses.mpl20;
   };
-}
+})

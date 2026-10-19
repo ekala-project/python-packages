@@ -12,7 +12,7 @@
   sklearn-compat,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "imbalanced-learn";
   version = "0.14.2";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "scikit-learn-contrib";
     repo = "imbalanced-learn";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-uWln6+r9QsGnH4I4JQm2/y80zTQkAflVPlIN9KQNzy0=";
   };
 
@@ -45,4 +45,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/scikit-learn-contrib/imbalanced-learn";
     license = lib.licenses.mit;
   };
-}
+})

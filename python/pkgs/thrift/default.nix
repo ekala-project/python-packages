@@ -6,13 +6,13 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "thrift";
   version = "0.24.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-nvYBxJ6YhHX/DnQdjhtF/uwjtIUU5SQ0HvwnQZHxeJw=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://thrift.apache.org/";
     license = lib.licenses.asl20;
   };
-}
+})

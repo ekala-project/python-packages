@@ -15,7 +15,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "flask-api";
   version = "3.1";
   pyproject = true;
@@ -23,7 +23,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "flask-api";
     repo = "flask-api";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-nHgeI5FLKkDp4uWO+0eaT4YSOMkeQ0wE3ffyJF+WzTM=";
   };
 
@@ -49,4 +49,4 @@ buildPythonPackage rec {
     description = "Browsable web APIs for Flask";
     license = lib.licenses.bsd2;
   };
-}
+})

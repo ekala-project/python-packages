@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "voluptuous";
   version = "0.16.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-AGU14i/tlErsF7726HJUckdhlHQ8h70jPpEutGP4/wU=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     description = "Python data validation library";
     license = lib.licenses.bsd3;
   };
-}
+})

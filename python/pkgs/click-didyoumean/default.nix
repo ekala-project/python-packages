@@ -6,7 +6,7 @@
   click,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "click-didyoumean";
   version = "0.3.1";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "click-contrib";
     repo = "click-didyoumean";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-C8OrJUfBFiDM/Jnf1iJo8pGEd0tUhar1vu4fVIfGzq8=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/click-contrib/click-didyoumean";
     license = lib.licenses.mit;
   };
-}
+})

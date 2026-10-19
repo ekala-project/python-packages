@@ -6,14 +6,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "myhdl";
   version = "0.11.51";
   pyproject = true;
 
   # No recent tags on GitHub
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-nZEdYLRjk2rgS3byc4iu9oJazodnoNg63MBUMasGZiw=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://www.myhdl.org/";
     license = lib.licenses.lgpl21;
   };
-}
+})

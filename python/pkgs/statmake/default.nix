@@ -9,7 +9,7 @@
   hatch-vcs,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "statmake";
   version = "2.0.1";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "daltonmaag";
     repo = "statmake";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-PlMbJuJUkUjKXhkcCfLO5G3R1z9Zwf9qKYj9olOANno=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/daltonmaag/statmake";
     license = lib.licenses.mit;
   };
-}
+})

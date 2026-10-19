@@ -7,13 +7,13 @@
   numpy,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "biopython";
   version = "1.88";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-mqoxwL2k0Fn3su4Av9tcu3Ot4wV6pLc3p8wBhwkdBxo=";
   };
 
@@ -45,4 +45,4 @@ buildPythonPackage rec {
     homepage = "https://biopython.org/wiki/Documentation";
     license = lib.licenses.bsd3;
   };
-}
+})

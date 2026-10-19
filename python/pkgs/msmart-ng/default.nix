@@ -15,7 +15,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "msmart-ng";
   version = "2026.8.1";
   pyproject = true;
@@ -23,7 +23,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mill1000";
     repo = "midea-msmart";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-WiHUQgiRyrro6uFCfZCiozlF2jFdtdGZP+2ud8LzHGw=";
   };
 
@@ -49,4 +49,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     mainProgram = "msmart-ng";
   };
-}
+})

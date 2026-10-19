@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "markupsafe";
   version = "3.0.3";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pallets";
     repo = "markupsafe";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-2d64cItemqVM25WJIKrjExKz6v4UW2wVxM6phH1g1sE=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://palletsprojects.com/p/markupsafe/";
     license = lib.licenses.bsd3;
   };
-}
+})

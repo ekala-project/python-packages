@@ -6,7 +6,7 @@
   poetry-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "graphlib-backport";
   version = "1.1.0";
 
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mariushelf";
     repo = "graphlib_backport";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-ssJLtBQH8sSnccgcAKLKfYpPyw5U0RIm1F66/Er81lo=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mariushelf/graphlib_backport";
     license = lib.licenses.psfl;
   };
-}
+})

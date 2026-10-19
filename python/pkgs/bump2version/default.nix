@@ -7,7 +7,7 @@
   testfixtures,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "bump2version";
   version = "1.0.1";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "c4urself";
     repo = "bump2version";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-j6HKi3jTwSgGBrA8PCJJNg+yQqRMo1aqaLgPGf4KAKU=";
   };
 
@@ -44,4 +44,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/c4urself/bump2version";
     license = lib.licenses.mit;
   };
-}
+})

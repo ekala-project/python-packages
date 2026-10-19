@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "smartypants";
   version = "2.0.2";
   pyproject = true;
@@ -15,10 +15,10 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "leohemsted";
     repo = "smartypants.py";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-jSGiT36Rr0P6eEWZIHtMj4go3KGDRaF2spLxLNruDec=";
   };
 
   build-system = [ setuptools ];
 
-}
+})

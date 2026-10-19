@@ -5,13 +5,13 @@
   hatchling,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "testfixtures";
   version = "12.3.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-2AfOub3W6nzAZjNw3VVoM5BWs13BXCbv/RriZ+MjrPE=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Simplistix/testfixtures";
     license = lib.licenses.mit;
   };
-}
+})

@@ -11,14 +11,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "google-cloud-automl";
   version = "2.20.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "google_cloud_automl";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-PIZ21kxcBgQXcJL77jNzy04qfaNsfBYy6WNAhIN+Bk0=";
   };
 
@@ -52,4 +52,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-automl";
     license = lib.licenses.asl20;
   };
-}
+})

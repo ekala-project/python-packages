@@ -9,7 +9,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jmp";
   version = "0.0.4";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "deepmind";
     repo = "jmp";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-+PefZU1209vvf1SfF8DXiTvKYEnZ4y8iiIr8yKikx9Y=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/deepmind/jmp";
     license = lib.licenses.asl20;
   };
-}
+})

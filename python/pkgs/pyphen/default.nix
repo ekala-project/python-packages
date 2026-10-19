@@ -5,13 +5,13 @@
   flit-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyphen";
   version = "0.18.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-265vu+TwHLIGEItDVz2FfGcQe+nQ446xsI1voiEGNKc=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Kozea/Pyphen";
     license = lib.licenses.lgpl21;
   };
-}
+})

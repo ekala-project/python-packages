@@ -6,13 +6,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "cwcwidth";
   version = "0.1.12";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-v8FlMdEkbdJVjrmzpjqjepl4ZyuVaGDcVCbaI0Pr82Y=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/sebastinas/cwcwidth";
     license = lib.licenses.mit;
   };
-}
+})

@@ -13,13 +13,13 @@
   terminaltables3,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "keep";
   version = "2.11";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-Brwvu/Zevr8sOE3KAwakDDzVMc2VoFxIb1orXAes2U0=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     mainProgram = "keep";
   };
-}
+})

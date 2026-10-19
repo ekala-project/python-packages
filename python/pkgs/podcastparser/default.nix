@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "podcastparser";
   version = "0.6.11";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "gpodder";
     repo = "podcastparser";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-eF/YHKSCMZnavkoX3LcAFHPSPABijn+aPVzaeRYY3WI=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "http://gpodder.org/podcastparser/";
     license = lib.licenses.bsd2;
   };
-}
+})

@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "phonenumbers";
   version = "9.0.38";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-aAa+vUZjivL8JglnXqBGBnpAUS7Kgb8URhMuL9op0RM=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/daviddrysdale/python-phonenumbers";
     license = lib.licenses.asl20;
   };
-}
+})

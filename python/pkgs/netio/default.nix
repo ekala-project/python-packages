@@ -7,7 +7,7 @@
   requests,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "netio";
   version = "1.0.13";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "netioproducts";
     repo = "PyNetio";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-s/X2WGhQXYsbo+ZPpkVSF/vclaThYYNHu0UY0yCnfPA=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/netioproducts/PyNetio";
     license = lib.licenses.mit;
   };
-}
+})

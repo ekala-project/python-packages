@@ -8,7 +8,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mygpoclient";
   version = "1.10";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "gpodder";
     repo = "mygpoclient";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-g4iPw6i8Gy3kvIjHCyGLJNHNb+osaCmc46hIryrodi8=";
   };
 
@@ -44,4 +44,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/gpodder/mygpoclient";
     license = lib.licenses.gpl3Plus;
   };
-}
+})

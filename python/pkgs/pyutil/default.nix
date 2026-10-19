@@ -8,13 +8,13 @@
   versioneer,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyutil";
   version = "3.4.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-8RHsCEieQ3/uHPkNai+sUBR2hDJAVrYy5DMlp6YRw6c=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/tpltnt/pyutil";
     license = lib.licenses.gpl2Plus;
   };
-}
+})

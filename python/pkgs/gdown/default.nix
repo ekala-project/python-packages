@@ -16,13 +16,13 @@
   tqdm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "gdown";
   version = "6.2.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-C78l03YSYiY6LZ1KbLJuvH4PIlrY8TSDIJmSUIvM3FQ=";
   };
 
@@ -47,4 +47,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/wkentaro/gdown";
     license = lib.licenses.mit;
   };
-}
+})

@@ -11,14 +11,14 @@
   importlib-metadata,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "importlib-resources";
   version = "6.5.2";
   pyproject = true;
 
   src = fetchPypi {
     pname = "importlib_resources";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-GF+Hre9bzCiESdmPtPugfOp4vANkVd1ExfxKL+eP7Sw=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://importlib-resources.readthedocs.io/";
     license = lib.licenses.asl20;
   };
-}
+})

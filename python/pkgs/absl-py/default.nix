@@ -5,7 +5,7 @@
   hatchling,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "absl-py";
   version = "2.5.0";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "abseil";
     repo = "abseil-py";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-BnR9QnZ5AaSlboQuQnX4UKGjAVVpyzMLZ68Do3VZrE0=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/abseil/abseil-py";
     license = lib.licenses.asl20;
   };
-}
+})

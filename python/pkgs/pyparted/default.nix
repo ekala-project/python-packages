@@ -9,7 +9,7 @@
   pkgs,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyparted";
   version = "3.13.0";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     repo = "pyparted";
     owner = "dcantrell";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-AiUCCrEbDD0OxrvXs1YN3/1IE7SuVasC2YCirIG58iU=";
   };
 
@@ -49,4 +49,4 @@ buildPythonPackage rec {
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.linux;
   };
-}
+})

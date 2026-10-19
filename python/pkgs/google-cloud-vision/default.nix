@@ -8,14 +8,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "google-cloud-vision";
   version = "3.15.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "google_cloud_vision";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-7St5ygWlipKewRIlmpyqaYUJ9jSHYqjs7TMQ5lcqbHA=";
   };
 
@@ -49,4 +49,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-vision";
     license = lib.licenses.asl20;
   };
-}
+})

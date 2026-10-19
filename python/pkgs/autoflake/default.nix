@@ -5,13 +5,13 @@
   hatchling,
   pyflakes,
 }:
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "autoflake";
   version = "2.4.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-73xJbZvOnSzvBJ8k5ILR0wkMN/vUTl6F37ANs8eO4Ww=";
   };
 
@@ -25,4 +25,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/myint/autoflake";
     license = lib.licenses.mit;
   };
-}
+})

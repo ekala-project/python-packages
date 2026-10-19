@@ -11,7 +11,7 @@
   numpy,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "biocutils";
   version = "0.4.1";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "BiocPy";
     repo = "BiocUtils";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-CKIAJsWw9zCjhIpZpgFgakvszjO+1lZS8535LMfEH2Y=";
   };
 
@@ -44,4 +44,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/BiocPy/BiocUtils";
     license = lib.licenses.mit;
   };
-}
+})

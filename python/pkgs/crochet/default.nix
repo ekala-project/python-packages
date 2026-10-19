@@ -8,7 +8,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "crochet";
   version = "2.1.1";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "itamarst";
     repo = "crochet";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-grymhvCC9zDBKhNnQC0o07hdLPV5KMWb6HSz/ntSbq8=";
   };
 
@@ -43,4 +43,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/itamarst/crochet";
     license = lib.licenses.mit;
   };
-}
+})

@@ -7,13 +7,13 @@
   certifi,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "domeneshop";
   version = "0.4.4";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-UCxIDnhIAkxZ1oQXYRyAMdGgUsUZ6AlYXwsxL49TFAg=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://api.domeneshop.no/docs/";
     license = lib.licenses.mit;
   };
-}
+})

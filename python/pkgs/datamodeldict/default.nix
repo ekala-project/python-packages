@@ -7,14 +7,14 @@
   xmltodict,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "datamodeldict";
   version = "0.9.9";
   pyproject = true;
 
   src = fetchPypi {
     pname = "DataModelDict";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-DadBRsc8qEu9PWgMNllGS2ESKL7kgBLDhg4yDr87WRk=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/usnistgov/DataModelDict/";
     license = lib.licenses.mit;
   };
-}
+})

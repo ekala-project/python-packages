@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "httpagentparser";
   version = "1.9.9";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-I7yvCTJbF692NCg8pk2iP0hcXYO5SB/22IQTp8W8bek=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/shon/httpagentparser";
     license = lib.licenses.mit;
   };
-}
+})

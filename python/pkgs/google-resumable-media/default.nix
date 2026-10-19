@@ -9,14 +9,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "google-resumable-media";
   version = "2.10.2";
   pyproject = true;
 
   src = fetchPypi {
     pname = "google_resumable_media";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-HeRBcDzSmNdaQZv9wAZun8ewod5jDflu6ozo9cdZNYw=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/GoogleCloudPlatform/google-resumable-media-python";
     license = lib.licenses.asl20;
   };
-}
+})

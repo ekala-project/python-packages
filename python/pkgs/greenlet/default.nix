@@ -13,13 +13,13 @@
 }:
 
 let
-  greenlet = buildPythonPackage rec {
+  greenlet = buildPythonPackage (finalAttrs: {
     pname = "greenlet";
     version = "3.5.5";
     pyproject = true;
 
     src = fetchPypi {
-      inherit pname version;
+      inherit (finalAttrs) pname version;
       hash = "sha256-rbS64C6RqOhj5IsXfkAUvcrIprXgR+od9oemFTS4Xmw=";
     };
 

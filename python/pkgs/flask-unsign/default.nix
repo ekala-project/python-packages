@@ -11,7 +11,7 @@
   werkzeug,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "flask-unsign";
   version = "1.2.1";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Paradoxis";
     repo = "Flask-Unsign";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-/WK3g6Ef3mSKeT3aaSAh5J8estUN4sNmM9Tq9An/18A=";
   };
 
@@ -45,4 +45,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     mainProgram = "flask-unsign";
   };
-}
+})

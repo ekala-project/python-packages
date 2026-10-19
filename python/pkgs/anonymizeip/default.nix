@@ -6,7 +6,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "anonymizeip";
   version = "1.0.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "samuelmeuli";
     repo = "anonymize-ip";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-54q2R14Pdnw4FAmBufeq5NozsqC7C4W6QQPcjTSkM48=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/samuelmeuli/anonymize-ip";
     license = lib.licenses.mit;
   };
-}
+})

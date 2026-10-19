@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mutagen";
   version = "1.48.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-j5Vjern28wXOxr0SlOGX3r4geZjj4GhZZWPHT4awoXM=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://mutagen.readthedocs.io";
     license = lib.licenses.gpl2Plus;
   };
-}
+})

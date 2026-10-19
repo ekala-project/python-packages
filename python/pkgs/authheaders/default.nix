@@ -10,7 +10,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "authheaders";
   version = "0.16.3";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ValiMail";
     repo = "authentication-headers";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-BFMZpSJ4qCEL42xTiM/D5dkatxohiCrOWAkNZHFUhac=";
   };
 
@@ -47,4 +47,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     mainProgram = "dmarc-policy-find";
   };
-}
+})

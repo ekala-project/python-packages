@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "hjson";
   version = "3.0.2";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "hjson";
     repo = "hjson-py";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-VrCLHfXShF45IEhGVQpryBzjxreQEunyghazDNKRh8k=";
   };
 
@@ -35,8 +35,8 @@ buildPythonPackage rec {
   meta = {
     description = "User interface for JSON";
     homepage = "https://github.com/hjson/hjson-py";
-    changelog = "https://github.com/hjson/hjson-py/releases/tag/v${version}";
+    changelog = "https://github.com/hjson/hjson-py/releases/tag/v${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "hjson";
   };
-}
+})

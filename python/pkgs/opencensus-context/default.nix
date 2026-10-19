@@ -5,14 +5,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "opencensus-context";
   version = "0.1.3";
   pyproject = true;
 
   src = fetchPypi {
     pname = "opencensus-context";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-oDEIw8ENjIC7Xd9cih8DMWH6YZcqmRf5ubOhhRfwCIw=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/census-instrumentation/opencensus-python/tree/master/context/opencensus-context";
     license = lib.licenses.asl20;
   };
-}
+})

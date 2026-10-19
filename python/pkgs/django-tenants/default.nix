@@ -7,7 +7,7 @@
   psycopg,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-tenants";
   version = "3.14.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "django-tenants";
     repo = "django-tenants";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-3A4ClGinyN1t5bt441BVZncpw9Ie7b81M/5Tfsbz4kw=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/django-tenants/django-tenants";
     license = lib.licenses.mit;
   };
-}
+})

@@ -18,7 +18,7 @@
 # python-packages.nix. When it will be used to build wheels,
 # care should be taken that there is no mingling of PYTHONPATH.
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "flit";
   version = "3.12.0";
   pyproject = true;
@@ -26,7 +26,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pypa";
     repo = "flit";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-oWV+KK22+iK99iCOCKCV1OCLq2Ef1bcYRKXT5GHwiL8=";
   };
 
@@ -45,4 +45,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pypa/flit";
     license = lib.licenses.bsd3;
   };
-}
+})

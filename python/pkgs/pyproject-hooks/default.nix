@@ -6,14 +6,14 @@
   pyproject-hooks,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyproject-hooks";
   version = "1.2.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "pyproject_hooks";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-HoWb1cQPrpRIZC3Yca30WeXiCEGG6NLCp5qCTJcNofg=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pypa/pyproject-hooks";
     license = lib.licenses.mit;
   };
-}
+})

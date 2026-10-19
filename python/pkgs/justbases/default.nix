@@ -8,7 +8,7 @@
   hypothesis,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "justbases";
   version = "0.15.2";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mulkieran";
     repo = "justbases";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-XraUh3beI2JqKPRHYN5W3Tn3gg0GJCwhnhHIOFdzh6U=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mulkieran/justbases";
     license = lib.licenses.lgpl2Plus;
   };
-}
+})

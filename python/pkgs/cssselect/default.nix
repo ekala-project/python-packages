@@ -5,13 +5,13 @@
   hatchling,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "cssselect";
   version = "1.5.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-PL6C3XrL7pup5XI7X55HSYJpEvH7Mc1/kqq+1f3hWxU=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://cssselect.readthedocs.io/";
     license = lib.licenses.bsd3;
   };
-}
+})

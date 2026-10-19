@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyzabbix";
   version = "1.3.1";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "lukecyca";
     repo = "pyzabbix";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-2yCbxPUlbTrtjD9eKmkw0fKnjiwPzmjIo5vKGv4aerU=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/lukecyca/pyzabbix";
     license = lib.licenses.lgpl21Only;
   };
-}
+})

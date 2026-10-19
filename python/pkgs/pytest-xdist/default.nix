@@ -11,7 +11,7 @@
   setproctitle,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytest-xdist";
   version = "3.8.0";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pytest-dev";
     repo = "pytest-xdist";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-2x3znm92wo8DCshf5sYK0stnESg0oVXbxsWRAaTj6oQ=";
   };
 
@@ -58,4 +58,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pytest-dev/pytest-xdist";
     license = lib.licenses.mit;
   };
-}
+})

@@ -8,7 +8,7 @@
   poetry-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "bucketstore";
   version = "0.3.0";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "jpetrucciani";
     repo = "bucketstore";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-WjweYFnlDEoR+TYzNgjPMdCLdUUEbdPROubov6kancc=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jpetrucciani/bucketstore";
     license = lib.licenses.mit;
   };
-}
+})

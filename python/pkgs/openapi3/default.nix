@@ -13,7 +13,7 @@
   pydantic,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "openapi3";
   version = "1.8.2";
   pyproject = true;
@@ -21,7 +21,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Dorthu";
     repo = "openapi3";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-Crn+nRbptRycnWJzH8Tm/BBLcBSRCcNtLX8NoKnSDdA=";
   };
 
@@ -56,4 +56,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Dorthu/openapi3";
     license = lib.licenses.bsd3;
   };
-}
+})

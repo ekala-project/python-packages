@@ -6,14 +6,14 @@
   setuptools,
   pyrect,
 }:
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pygetwindow";
   version = "0.0.9";
   pyproject = true;
 
   src = fetchPypi {
     pname = "PyGetWindow";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-F4lDVefSswXNgy1xdwg4QBfBaYqQziT29/vwJC3Qpog=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/asweigart/PyGetWindow";
     license = lib.licenses.bsd3;
   };
-}
+})

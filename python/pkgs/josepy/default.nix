@@ -7,13 +7,13 @@
   pyopenssl,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "josepy";
   version = "2.2.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-dMAzFRM3yFT4Pv5TBaKRaGzvcjtLlwxDz+cnDPSmd6k=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     description = "JOSE protocol implementation in Python";
     license = lib.licenses.asl20;
   };
-}
+})

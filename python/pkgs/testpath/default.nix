@@ -6,13 +6,13 @@
   flit-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "testpath";
   version = "0.6.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-LxuX5kQsAmgevgG9hPUxAop8rqGvOCUAD1I0XDAoXg8=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     rm testpath/cli-32.exe testpath/cli-64.exe
   '';
 
-}
+})

@@ -13,7 +13,7 @@
   # checks
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "flexparser";
   version = "0.4";
   pyproject = true;
@@ -21,7 +21,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "hgrecco";
     repo = "flexparser";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-0Ocp4GsrnzkpSqnP+AK5OxJ3KyUf5Uc6CegDXpRYRqo=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/hgrecco/flexparser";
     license = lib.licenses.bsd3;
   };
-}
+})

@@ -16,7 +16,7 @@
   tzdata,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pendulum";
   version = "3.1.0-unstable-2025-10-28";
   pyproject = true;
@@ -55,4 +55,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/sdispater/pendulum";
     license = lib.licenses.mit;
   };
-}
+})

@@ -6,7 +6,7 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "msgspec";
   version = "0.21.1";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "jcrist";
     repo = "msgspec";
-    tag = version;
+    tag = finalAttrs.version;
     # Note that this hash changes after some time after release because they
     # use `$Format:%d$` in msgspec/_version.py, and GitHub produces different
     # tarballs depending on whether tagged commit is the last commit, see
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jcrist/msgspec";
     license = lib.licenses.bsd3;
   };
-}
+})

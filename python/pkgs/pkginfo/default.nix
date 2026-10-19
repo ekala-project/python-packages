@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pkginfo";
   version = "1.13";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-T3BHHGQ/cf6EoGIwwOM8XFsSozsv0hv/FN2u9al0rbE=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     '';
     license = lib.licenses.mit;
   };
-}
+})

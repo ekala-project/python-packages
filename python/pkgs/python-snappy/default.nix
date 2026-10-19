@@ -7,14 +7,14 @@
   snappy,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "python-snappy";
   version = "0.7.3";
   pyproject = true;
 
   src = fetchPypi {
     pname = "python_snappy";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-QCFsG637LTiseB7LFiodDsQPjul0fmELz+/fp5SGzuM=";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/intake/python-snappy";
     license = lib.licenses.bsd3;
   };
-}
+})

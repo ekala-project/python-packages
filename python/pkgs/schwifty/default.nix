@@ -12,7 +12,7 @@
   pydantic,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "schwifty";
   version = "2026.7.3";
   pyproject = true;
@@ -46,4 +46,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mdomke/schwifty";
     license = lib.licenses.mit;
   };
-}
+})

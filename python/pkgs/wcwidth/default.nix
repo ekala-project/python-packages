@@ -5,7 +5,7 @@
   hatchling,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "wcwidth";
   version = "0.8.3";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "jquast";
     repo = "wcwidth";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-4GzYqoXdYqZjyB/iIsuOnwSjJGSKY9LitVKVDT2aUCo=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jquast/wcwidth";
     license = lib.licenses.mit;
   };
-}
+})

@@ -13,7 +13,7 @@
   pytz,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-apscheduler";
   version = "0.7.0";
   pyproject = true;
@@ -21,7 +21,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "jcass77";
     repo = "django-apscheduler";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-2YSVX4FxE1OfJkSYV9IRKd2scV4BrMA/mBzJARQCX38=";
   };
 
@@ -52,4 +52,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jcass77/django-apscheduler";
     license = lib.licenses.mit;
   };
-}
+})

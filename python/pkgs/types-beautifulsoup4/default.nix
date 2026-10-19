@@ -6,14 +6,14 @@
   types-html5lib,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "types-beautifulsoup4";
   version = "4.12.0.20250516";
   pyproject = true;
 
   src = fetchPypi {
     pname = "types_beautifulsoup4";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-qhndc7M7cNYpat+S2oq4oMlFxQfm+31dtVNBXMd7QX4=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://pypi.org/project/types-beautifulsoup4/";
     license = lib.licenses.asl20;
   };
-}
+})

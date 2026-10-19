@@ -8,13 +8,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "tinycss";
   version = "0.4";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-EjBvtQ5enn6u74S4Au2HdIi6gONcZyhn9UjAkkp2cW4=";
   };
 
@@ -46,4 +46,4 @@ buildPythonPackage rec {
     homepage = "https://tinycss.readthedocs.io";
     license = lib.licenses.bsd3;
   };
-}
+})

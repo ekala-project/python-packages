@@ -11,7 +11,7 @@
   opentelemetry-util-http,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   inherit (opentelemetry-instrumentation) version src;
   pname = "opentelemetry-instrumentation-django";
   pyproject = true;
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/open-telemetry/opentelemetry-python-contrib/blob/main/instrumentation/opentelemetry-instrumentation-django";
     description = "OpenTelemetry Instrumentation for Django";
   };
-}
+})

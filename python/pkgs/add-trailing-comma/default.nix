@@ -7,7 +7,7 @@
   tokenize-rt,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "add-trailing-comma";
   version = "4.0.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "asottile";
     repo = "add-trailing-comma";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-Ts04kjhGE0lgrHyT+EuJsVLIYU/842azG1ZUHTyFijc=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     mainProgram = "add-trailing-comma";
   };
-}
+})

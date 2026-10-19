@@ -8,7 +8,7 @@
   eth-utils,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "py-ecc";
   version = "8.0.0";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ethereum";
     repo = "py_ecc";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-4nmmX4TuErHxIDrBi+Ppr+4vuE7dSeqf8OqOxtqb3sY=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ethereum/py_ecc";
     license = lib.licenses.mit;
   };
-}
+})

@@ -7,7 +7,7 @@
   scipy, # optional, allows spline-related features (see patsy's docs)
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "patsy";
   version = "1.0.3";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pydata";
     repo = "patsy";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-tR+mNSLAOmumJNmVwnHvKefAOeYWMhhBjRh40bAQWkw=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pydata/patsy";
     license = lib.licenses.bsd2;
   };
-}
+})

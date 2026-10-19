@@ -20,7 +20,7 @@
   opentelemetry-resourcedetector-gcp,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "google-cloud-spanner";
   version = "3.63.0";
   pyproject = true;
@@ -28,7 +28,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "googleapis";
     repo = "python-spanner";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-QWBl7X/cKGds617IrHKaIteOnqgwB83jgfi8j/ESUws=";
   };
 
@@ -73,4 +73,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/googleapis/python-spanner";
     license = lib.licenses.asl20;
   };
-}
+})

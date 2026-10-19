@@ -11,7 +11,7 @@
   vcrpy,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "tweepy";
   version = "4.17.0";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "tweepy";
     repo = "tweepy";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-Jr/62vXxBIiZGQeM5bbqnHDP9GCxrbJmCF2oiYglLbE=";
   };
 
@@ -44,4 +44,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/tweepy/tweepy";
     license = lib.licenses.mit;
   };
-}
+})

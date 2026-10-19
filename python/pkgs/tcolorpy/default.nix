@@ -6,7 +6,7 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "tcolorpy";
   version = "0.1.7";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "thombashi";
     repo = "tcolorpy";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-0AXpwRQgBisO4360J+Xd4+EWzDtDJ64UpSUmDnSYjKE=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     description = "Library to apply true color for terminal text";
     license = lib.licenses.mit;
   };
-}
+})

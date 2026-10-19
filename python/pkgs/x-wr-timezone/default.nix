@@ -8,7 +8,7 @@
   tzdata,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "x-wr-timezone";
   version = "2.0.1";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "niccokunzmann";
     repo = "x-wr-timezone";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-Llpe3Z0Yfd0vRgx95D4YVrnNJk0g/VqPuNvtUrUpFk0=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/niccokunzmann/x-wr-timezone";
     license = lib.licenses.lgpl3Plus;
   };
-}
+})

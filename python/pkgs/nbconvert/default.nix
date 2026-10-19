@@ -18,13 +18,13 @@
   traitlets,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "nbconvert";
   version = "7.17.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-NNDQp+c848urbFquj09Gh5coCwH9i9LKdG2oVp7d19I=";
   };
 
@@ -60,4 +60,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jupyter/nbconvert";
     license = lib.licenses.bsd3;
   };
-}
+})

@@ -14,13 +14,13 @@
   requests,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "onlykey-solo-python";
   version = "0.0.32";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-88DuhgX4FCwzIKzw4RqWgMtjRdf5huVlKEHAAEminuQ=";
   };
 
@@ -58,4 +58,4 @@ buildPythonPackage rec {
     mainProgram = "solo";
     license = lib.licenses.asl20;
   };
-}
+})

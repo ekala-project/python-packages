@@ -11,7 +11,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "messagebird";
   version = "2.2.0";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "messagebird";
     repo = "python-rest-api";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-OiLhnmZ725VbyoOHvSf4nKQRA7JsxqcOv0VKBL6rUtU=";
   };
 
@@ -48,4 +48,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/messagebird/python-rest-api";
     license = lib.licenses.bsd2;
   };
-}
+})

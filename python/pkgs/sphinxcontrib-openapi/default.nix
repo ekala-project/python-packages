@@ -13,13 +13,13 @@
   sphinxcontrib-httpdomain,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "sphinxcontrib-openapi";
   version = "0.8.4";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-34g4CKW15LQROtaXGFxDo/Qt89znBFOveLpwdpB+miA=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     description = "OpenAPI (fka Swagger) spec renderer for Sphinx";
     license = lib.licenses.bsd0;
   };
-}
+})

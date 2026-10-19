@@ -9,7 +9,7 @@
   setuptools-rust,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "patiencediff";
   version = "0.2.19";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "breezy-team";
     repo = "patiencediff";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-xynrYf5oCIPk22jqjvXNYTyaXzVaUjRpn35vbx+t8vU=";
   };
 
@@ -48,4 +48,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/breezy-team/patiencediff";
     license = lib.licenses.gpl2Plus;
   };
-}
+})

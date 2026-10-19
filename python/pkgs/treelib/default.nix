@@ -6,7 +6,7 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "treelib";
   version = "1.8.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "caesar0301";
     repo = "treelib";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-jvaZVy+FUcCcIdvWK6zFL8IBVH+hMiPMmv5shFXLo0k=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/caesar0301/treelib";
     license = lib.licenses.asl20;
   };
-}
+})

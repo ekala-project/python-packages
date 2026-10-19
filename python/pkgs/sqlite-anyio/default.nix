@@ -6,7 +6,7 @@
   anyio,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "sqlite-anyio";
   version = "0.2.4";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "davidbrochart";
     repo = "sqlite-anyio";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-1riZiLBccg7Vqq+a8xT5Lr4vxjkeMbf1wqXnTTgY8iY=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/davidbrochart/sqlite-anyio";
     license = lib.licenses.mit;
   };
-}
+})

@@ -9,14 +9,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "google-cloud-appengine-logging";
   version = "1.10.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "google_cloud_appengine_logging";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-tVY+dgEKNuat8cxIliDCnuT7O5hrAG0jfpoGHrDwq7c=";
   };
 
@@ -46,4 +46,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/googleapis/python-appengine-logging";
     license = lib.licenses.asl20;
   };
-}
+})

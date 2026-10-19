@@ -5,7 +5,7 @@
   hatchling,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "awesomeversion";
   version = "25.8.0";
   pyproject = true;
@@ -13,13 +13,13 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ludeeus";
     repo = "awesomeversion";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-2CEuJagUkYwtjzpQLYLlz+V5e2feEU6di3wI0+uWuy4=";
   };
 
   postPatch = ''
     substituteInPlace pyproject.toml \
-      --replace-fail 'version = "0"' 'version = "${version}"'
+      --replace-fail 'version = "0"' 'version = "${finalAttrs.version}"'
   '';
 
   build-system = [ hatchling ];
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     changelog = "https://github.com/ludeeus/awesomeversion/releases/tag/${src.tag}";
     license = lib.licenses.mit;
   };
-}
+})

@@ -16,13 +16,13 @@
   ipykernel,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "myst-nb";
   version = "1.4.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit version;
+    inherit (finalAttrs) version;
     pname = "myst_nb";
     hash = "sha256-wUVZjeYkRqb9AJdz3QcaQNO3YQas54DeGr38aWH2FMI=";
   };
@@ -53,4 +53,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/executablebooks/MyST-NB";
     license = lib.licenses.mit;
   };
-}
+})

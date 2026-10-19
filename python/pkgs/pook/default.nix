@@ -12,7 +12,7 @@
   xmltodict,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pook";
   version = "2.1.6";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "h2non";
     repo = "pook";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-pStAlxhyZ1eDER17yLYc1r+kGpEZFW+mi0y3nrPA1CQ=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/h2non/pook";
     license = lib.licenses.mit;
   };
-}
+})

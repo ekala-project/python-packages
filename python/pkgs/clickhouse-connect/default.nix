@@ -21,7 +21,7 @@
   # not in tests_require, but should be
   pytest-dotenv,
 }:
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "clickhouse-connect";
   version = "1.8.0";
 
@@ -30,7 +30,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     repo = "clickhouse-connect";
     owner = "ClickHouse";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-CtFOHy/pBtjRx2alKfYSipHsaDEht7xPig0J5yxQvoQ=";
   };
 
@@ -70,4 +70,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ClickHouse/clickhouse-connect";
     license = lib.licenses.asl20;
   };
-}
+})

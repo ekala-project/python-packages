@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "playsound";
   version = "1.3.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "TaylorSMarks";
     repo = "playsound";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "0jbq641lmb0apq4fy6r2zyag8rdqgrz8c4wvydzrzmxrp6yx6wyd";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     platforms = lib.platforms.all;
   };
-}
+})

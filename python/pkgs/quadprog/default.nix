@@ -7,7 +7,7 @@
   numpy,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "quadprog";
   version = "0.1.13";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "quadprog";
     repo = "quadprog";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-8gPuqDY3ajw/+B6kJdtpq+HL+Oq2Nsy/O7m+IWzxP38=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     description = "Quadratic Programming Solver";
     license = lib.licenses.gpl2Plus;
   };
-}
+})

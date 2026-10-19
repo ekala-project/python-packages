@@ -8,7 +8,7 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "sqltrie";
   version = "0.11.3";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "iterative";
     repo = "sqltrie";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-sBu82SDOBqlQLONYgQ4eCw6MVFsLIs5/LfevP4cUDTo=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/iterative/sqltrie";
     license = lib.licenses.asl20;
   };
-}
+})

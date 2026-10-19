@@ -7,7 +7,7 @@
   toml,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pylint-plugin-utils";
   version = "0.9.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "PyCQA";
     repo = "pylint-plugin-utils";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-8C6vJDu60uSb6G0kvwiO0RAY9dU0yf955mAJAKhIkaQ=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/PyCQA/pylint-plugin-utils";
     license = lib.licenses.gpl2Only;
   };
-}
+})

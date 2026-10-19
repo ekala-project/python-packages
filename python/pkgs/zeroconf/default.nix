@@ -8,13 +8,13 @@
   ifaddr,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "zeroconf";
   version = "0.151.3";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-zmxUjmZXWbYVDO9Nuaude92JhX6QxROr1rc0C919vWo=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/python-zeroconf/python-zeroconf";
     license = lib.licenses.lgpl21Only;
   };
-}
+})

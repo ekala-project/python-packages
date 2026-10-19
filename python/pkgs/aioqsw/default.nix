@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aioqsw";
   version = "0.4.3";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Noltari";
     repo = "aioqsw";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-2v3PhhlVeQs/jMnOzji/aKeWD7pWfqXVf4iBOgXD7kc=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Noltari/aioqsw";
     license = lib.licenses.asl20;
   };
-}
+})

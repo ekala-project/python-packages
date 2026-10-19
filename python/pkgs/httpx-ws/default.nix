@@ -13,7 +13,7 @@
   wsproto,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "httpx-ws";
   version = "0.9.0";
   pyproject = true;
@@ -21,7 +21,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "frankie567";
     repo = "httpx-ws";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-e6D3sU6eWjsZnURIv1WfkSr54AMdDP9kHd263awzNsI=";
   };
 
@@ -47,4 +47,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/frankie567/httpx-ws";
     license = lib.licenses.mit;
   };
-}
+})

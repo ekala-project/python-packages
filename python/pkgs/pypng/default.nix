@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pypng";
   version = "0.20220715.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-c5xDO6lvB4MV3lTA25da7lN8vD4dCuTtmqsMoeQn4sE=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     description = "Pure Python library for PNG image encoding/decoding";
     license = lib.licenses.mit;
   };
-}
+})

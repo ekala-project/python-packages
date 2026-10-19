@@ -7,7 +7,7 @@
   zope-interface,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "zope-schema";
   version = "8.1";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "zopefoundation";
     repo = "zope.schema";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-pO3yL0gej2PGD01ySiPJPU66P/9hW73T2n/ZnUPa3C0=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     description = "zope.interface extension for defining data schemas";
     license = lib.licenses.zpl21;
   };
-}
+})

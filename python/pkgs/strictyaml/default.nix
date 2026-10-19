@@ -7,13 +7,13 @@
   python-dateutil,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "strictyaml";
   version = "1.7.3";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-IvhUpfyrQrXduoAwoOS+UcqJrwJnlhyNbPqGOVWGxAc=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://hitchdev.com/strictyaml/";
     license = lib.licenses.mit;
   };
-}
+})

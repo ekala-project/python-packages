@@ -16,7 +16,7 @@
   importlib-metadata,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   version = "0.8.1";
   pyproject = true;
   pname = "django-raster";
@@ -24,7 +24,7 @@ buildPythonPackage rec {
   disabled = !isPy3k;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     sha256 = "213758fe96d74be502f69f2620f7666961a85caa0551d14573637315035a9745";
   };
 
@@ -49,4 +49,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/geodesign/django-raster";
     license = lib.licenses.mit;
   };
-}
+})

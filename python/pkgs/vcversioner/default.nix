@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "vcversioner";
   version = "2.16.0.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-2uYMF6R5eB9EpAEHAYM/GCkUCx7szSWHYqdJdKoG4Zs=";
   };
 
@@ -22,4 +22,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/habnabit/vcversioner";
     license = lib.licenses.isc;
   };
-}
+})

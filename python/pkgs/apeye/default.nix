@@ -8,13 +8,13 @@
   requests,
   lib,
 }:
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "apeye";
   version = "1.4.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit version;
+    inherit (finalAttrs) version;
     pname = "apeye";
     hash = "sha256-FOpUL61onjv9vaIYmjVKSQjpCu5L+EwVq3XWhFPXajY=";
   };
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/domdfcoding/apeye";
     license = lib.licenses.gpl3Plus;
   };
-}
+})

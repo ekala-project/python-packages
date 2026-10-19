@@ -7,13 +7,13 @@
   beautifulsoup4,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "google";
   version = "3.0.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-FDUwEi7lEwUJrV6YnwUS98shiy1O3br7rUD9EOjYzL4=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://pypi.org/project/google/";
     license = lib.licenses.bsd3;
   };
-}
+})

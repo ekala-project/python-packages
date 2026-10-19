@@ -25,7 +25,7 @@
   pytest-console-scripts,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jupyter-events";
   version = "0.12.1";
   pyproject = true;
@@ -33,7 +33,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "jupyter";
     repo = "jupyter_events";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-OTZW3Ax5y4cO/q9UA6k6an2E+HfYctuNNDvKmch8Etg=";
   };
 
@@ -63,4 +63,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jupyter/jupyter_events";
     license = lib.licenses.bsd3;
   };
-}
+})

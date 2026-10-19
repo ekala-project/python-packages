@@ -24,7 +24,7 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pillow";
   version = "12.3.0";
   pyproject = true;
@@ -32,7 +32,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "python-pillow";
     repo = "pillow";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-kmUlgR+f75Y8DAKKPdEbchLLgg0m95oyVP53WTQni88=";
   };
 
@@ -75,4 +75,4 @@ buildPythonPackage rec {
     description = "Friendly PIL fork (Python Imaging Library)";
     license = lib.licenses.mit-cmu;
   };
-}
+})

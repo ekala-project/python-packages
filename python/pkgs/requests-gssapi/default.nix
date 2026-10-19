@@ -7,13 +7,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "requests-gssapi";
   version = "1.4.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit version;
+    inherit (finalAttrs) version;
     pname = "requests_gssapi";
     hash = "sha256-uifrMp9IQNllvI+l02DGJ8dDSe+mFWylAa2Jr8ahNPQ=";
   };
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pythongssapi/requests-gssapi";
     license = lib.licenses.isc;
   };
-}
+})

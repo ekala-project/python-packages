@@ -8,7 +8,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ecos";
   version = "2.0.14";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "embotech";
     repo = "ecos-python";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-nfu1FicWr233r+VHxkQf1vqh2y4DGymJRmik8RJYJkA=";
     fetchSubmodules = true;
   };
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/embotech/ecos-python";
     license = lib.licenses.gpl3Only;
   };
-}
+})

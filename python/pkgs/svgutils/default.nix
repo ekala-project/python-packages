@@ -7,7 +7,7 @@
   lxml,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "svgutils";
   version = "0.3.4";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "btel";
     repo = "svg_utils";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-ITvZx+3HMbTyaRmCb7tR0LKqCxGjqDdV9/2taziUD0c=";
   };
 
@@ -46,4 +46,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/btel/svg_utils";
     license = lib.licenses.mit;
   };
-}
+})

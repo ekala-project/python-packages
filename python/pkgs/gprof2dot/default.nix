@@ -8,7 +8,7 @@
   graphviz,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "gprof2dot";
   version = "2025.04.14";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "jrfonseca";
     repo = "gprof2dot";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-kX/DCXO/qwm1iF44gG7aBSUpG4Vf2Aer0zwrtq4YNHo=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jrfonseca/gprof2dot";
     license = lib.licenses.lgpl3Plus;
   };
-}
+})

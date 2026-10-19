@@ -6,13 +6,13 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "paste";
   version = "3.10.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-HD0SBlpeinoYwMe+FlOpfPOMw+mloMgzSp3ZktOgXko=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     description = "Tools for using a Web Server Gateway Interface stack";
     license = lib.licenses.mit;
   };
-}
+})

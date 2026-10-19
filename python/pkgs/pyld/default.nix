@@ -24,7 +24,7 @@ let
   };
 in
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyld";
   version = "1.0.5";
   pyproject = true;
@@ -32,7 +32,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "digitalbazaar";
     repo = "pyld";
-    tag = version;
+    tag = finalAttrs.version;
     sha256 = "0z2vkllw8bvzxripwb6l757r7av5qwhzsiy4061gmlhq8z8gq961";
   };
 
@@ -47,4 +47,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/digitalbazaar/pyld";
     license = lib.licenses.bsd3;
   };
-}
+})

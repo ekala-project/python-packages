@@ -12,7 +12,7 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "fortiosapi";
   version = "1.0.5";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "fortinet-solutions-cse";
     repo = "fortiosapi";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-M71vleEhRYnlf+RSGT1GbCy5NEZaG0hWmJo01n9s6Rg=";
   };
 
@@ -44,4 +44,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/fortinet-solutions-cse/fortiosapi";
     license = lib.licenses.asl20;
   };
-}
+})

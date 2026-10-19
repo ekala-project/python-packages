@@ -16,7 +16,7 @@
   sqlalchemy,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "filedepot";
   version = "0.12.0";
   pyproject = true;
@@ -24,7 +24,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "amol-";
     repo = "depot";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-oDnGA2prxYUkC90ewryeJXTXED59vcZGHU9D0QiopFM=";
   };
 
@@ -65,4 +65,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/amol-/depot";
     license = lib.licenses.mit;
   };
-}
+})

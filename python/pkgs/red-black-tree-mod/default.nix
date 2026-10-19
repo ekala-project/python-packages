@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "red-black-tree-mod";
   version = "1.22";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-OONlKQOiv5Y3nCfCCCygt7kFFYZi3X7wyX9P2TqaqQg=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://stromberg.dnsalias.org/~strombrg/red-black-tree-mod/";
     license = lib.licenses.mit;
   };
-}
+})

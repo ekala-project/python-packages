@@ -6,13 +6,13 @@
   versioneer,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "constantly";
   version = "23.10.4";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-qpK3CjPirAuzPNdF62F3ZZTcSHZLBsNeDv0FC38cfL0=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/twisted/constantly";
     license = lib.licenses.mit;
   };
-}
+})

@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "icmplib";
   version = "3.0.4";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ValentinBELYN";
     repo = "icmplib";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-PnBcGiUvftz/KYg9Qd2GaIcF3OW4lYH301uI5/M5CBI=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ValentinBELYN/icmplib";
     license = lib.licenses.lgpl3Plus;
   };
-}
+})

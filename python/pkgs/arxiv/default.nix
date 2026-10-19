@@ -15,7 +15,7 @@
   # tests
   mock,
 }:
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "arxiv";
   version = "4.0.1";
   pyproject = true;
@@ -23,7 +23,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "lukasschwab";
     repo = "arxiv.py";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-nZhi0dPEiv6VLpacvcGvZhvvDkLalrs4IJvMVzb5MJI=";
   };
 
@@ -44,4 +44,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/lukasschwab/arxiv.py";
     license = lib.licenses.mit;
   };
-}
+})

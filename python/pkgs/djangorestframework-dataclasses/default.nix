@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "djangorestframework-dataclasses";
   version = "1.4.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "oxan";
     repo = "djangorestframework-dataclasses";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-nUkR5xTyeBv7ziJ6Mej9TKvMOa5/k+ELBqt4BVam/wk=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/oxan/djangorestframework-dataclasses";
     license = lib.licenses.bsd3;
   };
-}
+})

@@ -8,7 +8,7 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mplleaflet";
   version = "0.0.5";
   pyproject = true;
@@ -21,7 +21,7 @@ buildPythonPackage rec {
   # No tests in archive
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     sha256 = "049e0b91797ce5b462853395138161fed9e8dfc1f4723f482ebb0739a0bbd289";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jwass/mplleaflet";
     license = lib.licenses.bsd3;
   };
-}
+})

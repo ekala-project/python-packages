@@ -7,13 +7,13 @@
   numpy,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "isosurfaces";
   version = "0.1.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-+lHr6GTqk1WyaDDif91qQdWli0GfqNS0fjuLgHGNbiE=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     '';
     license = lib.licenses.mit;
   };
-}
+})

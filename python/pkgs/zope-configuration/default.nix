@@ -8,7 +8,7 @@
   zope-schema,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "zope-configuration";
   version = "7.0";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "zopefoundation";
     repo = "zope.configuration";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-G87VAEqMxF5Y3LuDJnDcOox5+ngJuRhUGSj9K8c3mYY=";
   };
 
@@ -44,4 +44,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/zopefoundation/zope.configuration";
     license = lib.licenses.zpl21;
   };
-}
+})

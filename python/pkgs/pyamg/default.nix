@@ -11,13 +11,13 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyamg";
   version = "5.3.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-UyPQ8aTNmZviRqkNWAyeHptYS5iIf2KY05dhEIfvhgs=";
   };
 
@@ -48,4 +48,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     broken = stdenv.hostPlatform.isDarwin && lib.versionAtLeast python.version "3.14";
   };
-}
+})

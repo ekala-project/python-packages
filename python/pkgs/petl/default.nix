@@ -6,7 +6,7 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "petl";
   version = "1.7.24";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "petl-developers";
     repo = "petl";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-0YIaA/0VaQ1dgKC0NrLTkAsn8kkEHIJ4W9sdZHYQeMM=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     mainProgram = "petl";
   };
-}
+})

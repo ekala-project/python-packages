@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mutf8";
   version = "1.1.1";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "TkTech";
     repo = "mutf8";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-Vtfdik+g2jnadslfthGXJWJidzR1BJibod10Wla6lSg=";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/TkTech/mutf8";
     license = lib.licenses.mit;
   };
-}
+})

@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jdcal";
   version = "1.4.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-Ryhy4JbrjfIZwj8mifwzZmi9tD0ZQJS1zBcH4WQKz8g=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     description = "Module containing functions for converting between Julian dates and calendar dates";
     license = lib.licenses.bsd2;
   };
-}
+})

@@ -10,14 +10,14 @@
   tomli,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytest-cov";
   version = "7.1.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "pytest_cov";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-MGdPK19jUaoJcCqcjDZPagHCeq4ME2augBYWDR78VrI=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pytest-dev/pytest-cov";
     license = lib.licenses.mit;
   };
-}
+})

@@ -6,13 +6,13 @@
   requests,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "youtube_search";
   version = "2.2.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-U5inzWXZt1qLrCfvaJ7ARKurPL+h8g0Z2wJ3ZZrHDZg=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/joetats/youtube_search";
     license = lib.licenses.mit;
   };
-}
+})

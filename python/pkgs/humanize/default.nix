@@ -8,7 +8,7 @@
   gettext,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "humanize";
   version = "4.16.0";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "python-humanize";
     repo = "humanize";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-Ht4lK+Qd6pU4i6MUycaT3j69ldkTRtQ21QzKuLGgrLY=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/python-humanize/humanize";
     license = lib.licenses.mit;
   };
-}
+})

@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "zope-dottedname";
   version = "7.0";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "zopefoundation";
     repo = "zope.dottedname";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-bWURUr+BCQsMNBYqJD2+YPdfA+FWrJuBGypQ/c8w6kA=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     description = "Resolver for Python dotted names";
     license = lib.licenses.zpl21;
   };
-}
+})

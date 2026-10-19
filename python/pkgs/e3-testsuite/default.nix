@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "e3-testsuite";
   version = "27.2";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "AdaCore";
     repo = "e3-testsuite";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-qG8SHwogBle3demgFJCqcfCh5ktLvOqh2XSwxPCANFk=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     license = lib.licenses.gpl3Only;
     platforms = lib.platforms.linux;
   };
-}
+})

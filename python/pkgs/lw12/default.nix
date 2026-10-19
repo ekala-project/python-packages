@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "lw12";
   version = "0.9.2";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "jaypikay";
     repo = "python-lw12";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-6zZolUfs1SzCH0DT2YYuP4eXt8Hxv+TYIDgLnR51MAQ=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jaypikay/python-lw12";
     license = lib.licenses.mit;
   };
-}
+})

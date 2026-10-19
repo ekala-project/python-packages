@@ -8,7 +8,7 @@
   versionCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ffmpeg-progress-yield";
   version = "1.1.3";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "slhck";
     repo = "ffmpeg-progress-yield";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-OEE23gzPYcjKjrar+aV2zZuZyhrvqkYPhnWC3GzefUI=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/slhck/ffmpeg-progress-yield";
     license = lib.licenses.mit;
   };
-}
+})

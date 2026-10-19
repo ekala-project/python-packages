@@ -10,13 +10,13 @@
   docutils,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "statistics";
   version = "3.4.0b3";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-0jSF2WZoBIALeUOXdsFvWxi5bt9WGC7otfLLXHra0MU=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/digitalemagine/py-statistics";
     license = lib.licenses.asl20;
   };
-}
+})

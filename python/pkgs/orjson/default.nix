@@ -12,7 +12,7 @@
   libiconv,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "orjson";
   version = "3.11.7";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ijl";
     repo = "orjson";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-4a8vNQEe1P1t2BcqSL+d+GLHi1lhUtbA7p5/vj/J0Lc=";
   };
 
@@ -55,4 +55,4 @@ buildPythonPackage rec {
     ];
     platforms = lib.platforms.unix;
   };
-}
+})

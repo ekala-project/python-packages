@@ -13,13 +13,13 @@
   testpath,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "nbformat";
   version = "5.11.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-MtRSHGjG59WynHbe+u7Z9C6nMxQrmxn4gnfOEDkLnE0=";
   };
 
@@ -43,4 +43,4 @@ buildPythonPackage rec {
     homepage = "https://jupyter.org/";
     license = lib.licenses.bsd3;
   };
-}
+})

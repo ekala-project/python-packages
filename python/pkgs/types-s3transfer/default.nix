@@ -5,14 +5,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "types-s3transfer";
   version = "0.16.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "types_s3transfer";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-tGNkcgJMXitiJ4xbdZZh7+tSqBhRzeXwkvJBALHstEM=";
   };
 
@@ -25,4 +25,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/youtype/types-s3transfer";
     license = lib.licenses.mit;
   };
-}
+})

@@ -6,13 +6,13 @@
   pytest,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytest-instafail";
   version = "0.5.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-M6YG9+DI5kbcO/7g1eOkt7eO98NhaM+h89k698pwbJ4=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pytest-dev/pytest-instafail";
     license = lib.licenses.bsd3;
   };
-}
+})

@@ -11,14 +11,14 @@
   blinker,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "flask-principal";
   version = "0.4.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "Flask-Principal";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-9dYTS1yuv9u4bzLVbRjuRLCAh2onJpVgqW6jX3XJlFM=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "http://packages.python.org/Flask-Principal/";
     license = lib.licenses.mit;
   };
-}
+})

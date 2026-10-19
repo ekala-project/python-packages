@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "libgravatar";
   version = "1.0.4";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pabluk";
     repo = "libgravatar";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-rJv/jfdT+JldxR0kKtXQLOI5wXQYSQRWJnqwExwWjTA=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pabluk/libgravatar";
     license = lib.licenses.gpl3Plus;
   };
-}
+})

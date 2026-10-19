@@ -8,7 +8,7 @@
   paramiko,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ncclient";
   version = "0.7.1";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ncclient";
     repo = "ncclient";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     # Upstream uses .gitattributes to inject information about the revision
     # hash and the refname into `ncclient/_version.py`, see:
     #
@@ -44,4 +44,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ncclient/ncclient";
     license = lib.licenses.asl20;
   };
-}
+})

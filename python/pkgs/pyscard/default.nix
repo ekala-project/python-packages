@@ -9,7 +9,7 @@
   swig,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyscard";
   version = "2.3.1";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "LudovicRousseau";
     repo = "pyscard";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-MW/Cg7Ta/LdY/pOomsEecVIt62rc5qSAGjpJl4m+ruM=";
   };
 
@@ -43,4 +43,4 @@ buildPythonPackage rec {
     homepage = "https://pyscard.sourceforge.io/";
     license = lib.licenses.lgpl21Plus;
   };
-}
+})

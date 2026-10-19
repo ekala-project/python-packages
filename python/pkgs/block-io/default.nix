@@ -9,13 +9,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "block-io";
   version = "2.0.6";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-M7czfpagXqoWWSu4enB3Z2hc2GtAaskI6cnJzJdpC8I=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/BlockIo/block_io-python";
     license = lib.licenses.mit;
   };
-}
+})

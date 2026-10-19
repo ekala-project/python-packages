@@ -7,13 +7,13 @@
   django,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-ranged-response";
   version = "0.2.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     sha256 = "11gr3jpmb5rvg3scv026kjwwkmnxwivgq5ypxadnnc9p58szy7zp";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/wearespindle/django-ranged-fileresponse";
     license = lib.licenses.mit;
   };
-}
+})

@@ -8,14 +8,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-batch";
   version = "19.0.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_mgmt_batch";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-J1SD+jlAkzxzwipCtZ0bWwUxkdjwH2wsCa8O71LzGlw=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/batch/azure-mgmt-batch";
     license = lib.licenses.mit;
   };
-}
+})

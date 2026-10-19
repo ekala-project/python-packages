@@ -9,14 +9,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "google-cloud-secret-manager";
   version = "2.30.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "google_cloud_secret_manager";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-JuyHc3cxtIP3+VwmqMereeIstmMXyVAG5/aYXbxDyKI=";
   };
 
@@ -47,4 +47,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-secret-manager";
     license = lib.licenses.asl20;
   };
-}
+})

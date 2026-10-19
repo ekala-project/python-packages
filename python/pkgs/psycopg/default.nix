@@ -24,7 +24,7 @@ let
   src = fetchFromGitHub {
     owner = "psycopg";
     repo = "psycopg";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-hHgswbqaoQRQrUxhNFG6tfmlap1mVUo/OkNsWF686U4=";
   };
 
@@ -94,7 +94,7 @@ let
   };
 in
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   inherit
     pname
     version
@@ -132,4 +132,4 @@ buildPythonPackage rec {
   meta = baseMeta // {
     description = "PostgreSQL database adapter for Python";
   };
-}
+})

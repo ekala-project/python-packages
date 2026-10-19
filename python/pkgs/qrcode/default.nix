@@ -10,7 +10,7 @@
   pillow,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "qrcode";
   version = "8.2";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "lincolnloop";
     repo = "python-qrcode";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-qLIYUFnBJQGidnfC0bQAkO/aUmT94uXFMeMhnUgUnfQ=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/lincolnloop/python-qrcode";
     license = lib.licenses.bsd3;
   };
-}
+})

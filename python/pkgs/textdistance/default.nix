@@ -7,13 +7,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "textdistance";
   version = "4.6.3";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-1tq8ULTqgyzc8OHmAhvQx/zZreFViI15u2o8Mfzi3G8=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/life4/textdistance";
     license = lib.licenses.mit;
   };
-}
+})

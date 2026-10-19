@@ -7,13 +7,13 @@
   python-xlib,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ewmh";
   version = "0.1.6";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     sha256 = "0g9l14my3v8zlgq1yd8wh5gpara0qcapsfmvg7lq2lapglzhjsy5";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     description = "Implementation of EWMH (Extended Window Manager Hints), based on Xlib";
     license = lib.licenses.lgpl3Plus;
   };
-}
+})

@@ -11,7 +11,7 @@
   pyopenssl,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "webauthn";
   version = "3.0.0";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "duo-labs";
     repo = "py_webauthn";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-rT/B95ILb2cI/HH01IC5b4319zdKnrf4ZLUIpAeC3fM=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/duo-labs/py_webauthn";
     license = lib.licenses.bsd3;
   };
-}
+})

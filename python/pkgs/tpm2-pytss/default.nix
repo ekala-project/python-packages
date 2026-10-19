@@ -23,13 +23,13 @@
 let
   isCross = (stdenv.buildPlatform != stdenv.hostPlatform);
 in
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "tpm2-pytss";
   version = "2.3.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-IAcRKTeWVvXzw7wW02RhJnKxR9gRkftOufn/n77khBA=";
   };
 
@@ -96,4 +96,4 @@ buildPythonPackage rec {
     description = "TPM2 TSS Python bindings for Enhanced System API (ESYS)";
     license = lib.licenses.bsd2;
   };
-}
+})

@@ -6,13 +6,13 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "littleutils";
   version = "0.2.4";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-x4NbAQIM7ULikRGLfXj7FrwtmhtPP0LzyzeHu02lPRk=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/alexmojaki/littleutils";
     license = lib.licenses.mit;
   };
-}
+})

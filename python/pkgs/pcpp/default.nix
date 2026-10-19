@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pcpp";
   version = "1.30";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ned14";
     repo = "pcpp";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-Fs+CMV4eRKcB+KdV93ncgcqaMnO5etnMY/ivmSJh3Wc=";
     fetchSubmodules = true;
   };
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     mainProgram = "pcpp";
     license = lib.licenses.bsd0;
   };
-}
+})

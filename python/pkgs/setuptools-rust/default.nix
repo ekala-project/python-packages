@@ -11,14 +11,14 @@
   targetPackages,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "setuptools-rust";
   version = "1.13.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "setuptools_rust";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-8q/PS67uaJkQzknPqKrU4IzOcvQXRJvMMokbhmT9xyY=";
   };
 
@@ -53,4 +53,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/PyO3/setuptools-rust";
     license = lib.licenses.mit;
   };
-}
+})

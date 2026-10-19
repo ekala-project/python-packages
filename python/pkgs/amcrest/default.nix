@@ -14,7 +14,7 @@
   urllib3,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "amcrest";
   version = "1.9.9";
   pyproject = true;
@@ -22,7 +22,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "tchellomello";
     repo = "python-amcrest";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-UPxs/sL8ZpUf29fpQFnLY4tV7qSQIxm0UVSl6Pm1dAY=";
   };
 
@@ -58,4 +58,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/tchellomello/python-amcrest";
     license = lib.licenses.gpl2Only;
   };
-}
+})

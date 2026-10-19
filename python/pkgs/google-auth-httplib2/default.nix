@@ -7,7 +7,7 @@
   httplib2,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "google-auth-httplib2";
   version = "0.3.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "googleapis";
     repo = "google-auth-library-python-httplib2";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-NXz2oqbNVGTWOECH+Ly9v/CMxbhygFZhlHRHrnYLhCg=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/GoogleCloudPlatform/google-auth-library-python-httplib2";
     license = lib.licenses.asl20;
   };
-}
+})

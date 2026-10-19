@@ -6,7 +6,7 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pygobject-stubs";
   version = "2.16.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pygobject";
     repo = "pygobject-stubs";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-3gWz/mWAMoXAHMfCFv3ri680iuMm0WLtGyMODujq31M=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pygobject/pygobject-stubs";
     license = lib.licenses.lgpl21Plus;
   };
-}
+})

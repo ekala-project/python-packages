@@ -7,7 +7,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "in-place";
   version = "1.0.1";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "jwodder";
     repo = "inplace";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-PyOSuHHtftEPwL3mTwWYStZNXYX3EhptKfTu0PJjOZ8=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jwodder/inplace";
     license = lib.licenses.mit;
   };
-}
+})

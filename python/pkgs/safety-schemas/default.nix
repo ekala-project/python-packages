@@ -10,14 +10,14 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "safety-schemas";
   version = "0.0.20";
   pyproject = true;
 
   src = fetchPypi {
     pname = "safety_schemas";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-D9FHrnxlyLucCGEo9VHuhPrzEUALYQmmTkyiQSCw5WM=";
   };
 
@@ -49,4 +49,4 @@ buildPythonPackage rec {
     homepage = "https://pypi.org/project/safety-schemas/";
     license = lib.licenses.mit;
   };
-}
+})

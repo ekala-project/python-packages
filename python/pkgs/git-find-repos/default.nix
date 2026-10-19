@@ -4,7 +4,7 @@
   lib,
   setuptools-scm,
 }:
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "git-find-repos";
   version = "2.1.1";
   pyproject = true;
@@ -12,7 +12,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "acroz";
     repo = "git-find-repos";
-    tag = version;
+    tag = finalAttrs.version;
     sha256 = "sha256-+MiCMgIakpJaWWdN2grerlPbPAnfIXuclvRw8XQ1YiI=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     mainProgram = "git-find-repos";
   };
-}
+})

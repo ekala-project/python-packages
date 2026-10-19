@@ -7,13 +7,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "hupper";
   version = "1.12.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-Br9UFw/07PTIStXxiN7jkBFzq0ScJgitBbm/1rE+Mus=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Pylons/hupper";
     license = lib.licenses.mit;
   };
-}
+})

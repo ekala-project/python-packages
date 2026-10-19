@@ -11,7 +11,7 @@
   tornado,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "thriftpy2";
   version = "0.7.0";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Thriftpy";
     repo = "thriftpy2";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-vbNCPYWO/D+7/UJU/0ATdLzZ4lIPOKeBZ1sgWCdxx/c=";
   };
 
@@ -45,4 +45,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Thriftpy/thriftpy2";
     license = lib.licenses.mit;
   };
-}
+})

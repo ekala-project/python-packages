@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aiopvapi";
   version = "3.4.1";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "sander76";
     repo = "aio-powerview-api";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-JXQTxHWMg/biWEQssk4KCIcTJ1JOG+UIRBI8xw4WfJ8=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/sander76/aio-powerview-api";
     license = lib.licenses.bsd3;
   };
-}
+})

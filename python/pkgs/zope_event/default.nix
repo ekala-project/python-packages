@@ -5,14 +5,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "zope.event";
   version = "6.2";
   pyproject = true;
 
   src = fetchPypi {
     pname = "zope_event";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-uX1dYycGfua538vfYGremt5wmR4ZwWLoCOo55fzw+NM=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/zopefoundation/zope.event";
     license = lib.licenses.zpl21;
   };
-}
+})

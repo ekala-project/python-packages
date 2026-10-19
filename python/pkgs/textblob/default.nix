@@ -10,13 +10,13 @@
   nltk,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "textblob";
   version = "0.20.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-+9GjMHUy6d3bj1AoSHRVngECDnm1/lrkwdpwmp4gh+o=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://textblob.readthedocs.io/";
     license = lib.licenses.mit;
   };
-}
+})

@@ -7,13 +7,13 @@
   jupyter-server,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jupyter-server-mathjax";
   version = "0.2.6";
   pyproject = true;
 
   src = fetchPypi {
-    inherit version;
+    inherit (finalAttrs) version;
     pname = "jupyter_server_mathjax";
     hash = "sha256-ux5rbcBobB/jhqIrWIYWPbVIiTqZwoEMNjmenEyiOUM=";
   };
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jupyter-server/jupyter_server_mathjax";
     license = lib.licenses.bsd3;
   };
-}
+})

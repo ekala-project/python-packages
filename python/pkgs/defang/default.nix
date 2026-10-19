@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "defang";
   version = "0.5.3";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromBitbucket {
     owner = "johannestaas";
     repo = "defang";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-OJfayJeVf2H1/jg7/fu2NiHhRHNCaLGI29SY8BnJyxI=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://bitbucket.org/johannestaas/defang";
     license = lib.licenses.gpl2Only;
   };
-}
+})

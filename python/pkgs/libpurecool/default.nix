@@ -11,13 +11,13 @@
   zeroconf,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "libpurecool";
   version = "0.6.4";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     sha256 = "1kwbinbg0i4fca1bpx6jwa1fiw71vg0xa89jhq4pmnl5cn9c8kqx";
   };
 
@@ -47,4 +47,4 @@ buildPythonPackage rec {
     homepage = "http://libpurecool.readthedocs.io";
     license = lib.licenses.asl20;
   };
-}
+})

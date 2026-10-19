@@ -6,13 +6,13 @@
   pyyaml,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyaml";
   version = "26.7.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-Ec2jp5bvxtvODVaDa+Vs/SYona0HvNeOmQQIZymSnJM=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mk-fg/pretty-yaml";
     license = lib.licenses.wtfpl;
   };
-}
+})

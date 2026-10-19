@@ -6,7 +6,7 @@
   aiohttp,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aiohttp-wsgi";
   version = "0.10.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "etianen";
     repo = "aiohttp-wsgi";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-3Q00FidZWV1KueuHyHKQf1PsDJGOaRW6v/kBy7lzD4Q=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/etianen/aiohttp-wsgi";
     license = lib.licenses.bsd3;
   };
-}
+})

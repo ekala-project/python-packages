@@ -8,14 +8,14 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "setuptools-declarative-requirements";
   version = "1.3.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "setuptools-declarative-requirements";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-V6W5u5rTUMJ46Kpr5M3rvNklubpx1qcSoXimGM+4mPc=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/s0undt3ch/setuptools-declarative-requirements";
     license = lib.licenses.asl20;
   };
-}
+})

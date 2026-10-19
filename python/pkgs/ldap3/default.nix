@@ -6,13 +6,13 @@
   pyasn1,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ldap3";
   version = "2.9.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-8+f8Rxjj8J3aVotXEACV4M5YYzvKu+2GZ84/j7qkIp8=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/cannatag/ldap3";
     license = lib.licenses.lgpl3Plus;
   };
-}
+})

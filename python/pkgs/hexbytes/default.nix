@@ -9,7 +9,7 @@
   pydantic,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "hexbytes";
   version = "2.0.0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ethereum";
     repo = "hexbytes";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-R0Ucrq/E+g5IaiGTNllslwQOQxgNcSGLcyt6+t14uPM=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ethereum/hexbytes";
     license = lib.licenses.mit;
   };
-}
+})

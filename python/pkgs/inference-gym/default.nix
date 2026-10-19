@@ -4,7 +4,7 @@
   fetchPypi,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "inference-gym";
   version = "0.0.5";
   format = "wheel";
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/tensorflow/probability/tree/main/spinoffs/inference_gym";
     license = lib.licenses.asl20;
   };
-}
+})

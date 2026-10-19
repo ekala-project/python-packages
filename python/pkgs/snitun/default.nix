@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "snitun";
   version = "0.47.0";
   pyproject = true;
@@ -15,13 +15,13 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "NabuCasa";
     repo = "snitun";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-l7iXTXY6Dq1LV4ju6/WlipTSeybne33tiFYiwgy+DuM=";
   };
 
   postPatch = ''
     substituteInPlace pyproject.toml \
-      --replace-fail 'version = "0.0.0"' 'version = "${version}"'
+      --replace-fail 'version = "0.0.0"' 'version = "${finalAttrs.version}"'
   '';
 
   build-system = [ setuptools ];
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     license = lib.licenses.gpl3Only;
     platforms = lib.platforms.linux;
   };
-}
+})

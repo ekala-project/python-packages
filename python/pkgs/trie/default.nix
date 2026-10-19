@@ -11,7 +11,7 @@
   sortedcontainers,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "trie";
   version = "4.0.0";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ethereum";
     repo = "py-trie";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-njjIvBYavpMKr1DsBeWzHQzeP+3ACwpItUySxMcTlNY=";
   };
 
@@ -43,4 +43,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ethereum/py-trie";
     license = lib.licenses.mit;
   };
-}
+})

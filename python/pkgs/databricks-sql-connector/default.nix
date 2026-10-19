@@ -18,7 +18,7 @@
   urllib3,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "databricks-sql-connector";
   version = "4.2.4";
   pyproject = true;
@@ -26,7 +26,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "databricks";
     repo = "databricks-sql-python";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-QoauhA2Zx2UvlCuKe9mxaOFJKpglVHQmPVVS56np4A0=";
   };
 
@@ -62,4 +62,4 @@ buildPythonPackage rec {
     homepage = "https://docs.databricks.com/dev-tools/python-sql-connector.html";
     license = lib.licenses.asl20;
   };
-}
+})

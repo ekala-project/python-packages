@@ -10,7 +10,7 @@
   pytest-cov-stub,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "keyrings-cryptfile";
   version = "1.4.1";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "frispete";
     repo = "keyrings.cryptfile";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-cDXx0s3o8hNqgzX4oNkjGhNcaUX5vi1uN2d9sdbiZwk=";
   };
 
@@ -50,4 +50,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/frispete/keyrings.cryptfile";
     license = lib.licenses.mit;
   };
-}
+})

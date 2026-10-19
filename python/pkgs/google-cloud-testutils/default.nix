@@ -8,7 +8,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "google-cloud-testutils";
   version = "1.7.0";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "googleapis";
     repo = "python-test-utils";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-g7XwDQp4c+duKfUWqhnI8T001fu6cM22oWLriyCZZag=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/googleapis/python-test-utils";
     license = lib.licenses.asl20;
   };
-}
+})

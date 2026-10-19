@@ -22,7 +22,7 @@
   pytest,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "locust";
   version = "2.43.1";
   pyproject = true;
@@ -30,7 +30,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "locustio";
     repo = "locust";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-+0B4S524UjvaYl7VTZ1IY7UuBuDjUBqOvjHu0UVOi6A=";
   };
 
@@ -43,7 +43,7 @@ buildPythonPackage rec {
   '';
 
   webui = callPackage ./webui.nix {
-    inherit version;
+    inherit (finalAttrs) version;
     src = "${src}/locust/webui";
   };
 
@@ -87,4 +87,4 @@ buildPythonPackage rec {
     homepage = "https://docs.locust.io/";
     license = lib.licenses.mit;
   };
-}
+})

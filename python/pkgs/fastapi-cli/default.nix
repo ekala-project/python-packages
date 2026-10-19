@@ -11,54 +11,51 @@
   rich,
 }:
 
-let
-  self = buildPythonPackage rec {
-    pname = "fastapi-cli";
-    version = "0.0.32";
-    pyproject = true;
+buildPythonPackage (finalAttrs: {
+  pname = "fastapi-cli";
+  version = "0.0.32";
+  pyproject = true;
 
-    src = fetchFromGitHub {
-      owner = "fastapi";
-      repo = "fastapi-cli";
-      tag = version;
-      hash = "sha256-SHhCjpah0VWpPPEu2mjVx0lCjuZM00KQFgEpiRtOH2E=";
-    };
+  src = fetchFromGitHub {
+    owner = "fastapi";
+    repo = "fastapi-cli";
+    tag = finalAttrs.version;
+    hash = "sha256-SHhCjpah0VWpPPEu2mjVx0lCjuZM00KQFgEpiRtOH2E=";
+  };
 
-    build-system = [ pdm-backend ];
+  build-system = [ pdm-backend ];
 
-    dependencies = [
-      rich-toolkit
-      typer
+  dependencies = [
+    rich-toolkit
+    typer
+    uvicorn
+  ]
+  ++ uvicorn.optional-dependencies.standard;
+
+  optional-dependencies = {
+    standard = [
+      uvicorn
+      # FIXME package fastapi-cloud-cli
+    ]
+    ++ uvicorn.optional-dependencies.standard;
+    standard-no-fastapi-cloud-cli = [
       uvicorn
     ]
     ++ uvicorn.optional-dependencies.standard;
-
-    optional-dependencies = {
-      standard = [
-        uvicorn
-        # FIXME package fastapi-cloud-cli
-      ]
-      ++ uvicorn.optional-dependencies.standard;
-      standard-no-fastapi-cloud-cli = [
-        uvicorn
-      ]
-      ++ uvicorn.optional-dependencies.standard;
-    };
-
-    passthru.tests.pytest = self.overridePythonAttrs { doCheck = true; };
-    # coverage
-    pythonImportsCheck = [ "fastapi_cli" ];
-
-    meta = {
-      description = "Run and manage FastAPI apps from the command line with FastAPI CLI";
-      homepage = "https://github.com/fastapi/fastapi-cli";
-      mainProgram = "fastapi";
-      license = lib.licenses.mit;
-      # This package provides a `fastapi`-executable that is in conflict with the one from
-      # python3Packages.fastapi. Because this package is primarily used for the purpose of
-      # implementing the CLI for python3Packages.fastapi, we reduce the executable's priority
-      priority = 10;
-    };
   };
-in
-self
+
+  passthru.tests.pytest = finalAttrs.finalPackage.overridePythonAttrs { doCheck = true; };
+  # coverage
+  pythonImportsCheck = [ "fastapi_cli" ];
+
+  meta = {
+    description = "Run and manage FastAPI apps from the command line with FastAPI CLI";
+    homepage = "https://github.com/fastapi/fastapi-cli";
+    mainProgram = "fastapi";
+    license = lib.licenses.mit;
+    # This package provides a `fastapi`-executable that is in conflict with the one from
+    # python3Packages.fastapi. Because this package is primarily used for the purpose of
+    # implementing the CLI for python3Packages.fastapi, we reduce the executable's priority
+    priority = 10;
+  };
+})

@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "capstone";
   version = lib.getVersion pkgs.capstone;
   pyproject = true;
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     license = lib.licenses.bsdOriginal;
     description = "Python bindings for Capstone disassembly engine";
   };
-}
+})

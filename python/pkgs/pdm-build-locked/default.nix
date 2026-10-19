@@ -6,7 +6,7 @@
   build,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pdm-build-locked";
   version = "0.3.7";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pdm-project";
     repo = "pdm-build-locked";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-ONDKW3KIOKnrOWD/T/W7Do/4/CfgET4TpfYcLha5mVg=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pdm-project/pdm-build-locked";
     license = lib.licenses.mit;
   };
-}
+})

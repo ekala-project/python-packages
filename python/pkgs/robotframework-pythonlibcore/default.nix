@@ -6,7 +6,7 @@
   robotframework,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "robotframework-pythonlibcore";
   version = "4.6.0";
 
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "robotframework";
     repo = "PythonLibCore";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-H13b25M4vEymXZzhAm/EXMx7v5u/9rgkBXv7nBaxAvo=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/robotframework/PythonLibCore";
     license = lib.licenses.asl20;
   };
-}
+})

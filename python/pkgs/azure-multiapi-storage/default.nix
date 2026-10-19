@@ -11,14 +11,14 @@
   python-dateutil,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "azure-multiapi-storage";
   version = "1.7.0b1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_multiapi_storage";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-yM6mFM2XBkar1KUxsEzKs4h/OK8jFrYlUWH/S/gpn1w=";
   };
 
@@ -47,4 +47,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Azure/azure-multiapi-storage-python";
     license = lib.licenses.mit;
   };
-}
+})

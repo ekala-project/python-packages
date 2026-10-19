@@ -18,13 +18,13 @@
   wrapt,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "nameko";
   version = "2.14.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-J1NXi7Tca5KAGuozTSkwuX37dEhucF7daRmDBqlGjIg=";
   };
 
@@ -60,4 +60,4 @@ buildPythonPackage rec {
     homepage = "https://www.nameko.io/";
     license = lib.licenses.asl20;
   };
-}
+})

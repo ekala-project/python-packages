@@ -7,13 +7,13 @@
   lxml,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyquery";
   version = "2.1.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-dSODiHUPxuJUt6UvdxAnub6zpiAriASL71KgCwq+rbs=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/gawel/pyquery";
     license = lib.licenses.bsd3;
   };
-}
+})

@@ -11,7 +11,7 @@
   wheel,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "extension-helpers";
   version = "1.4.0";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "astropy";
     repo = "extension-helpers";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-coSgaPoz93CqJRb65xYs1sNOwoGhcxWGJF7Jc9N2W1I=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/astropy/extension-helpers";
     license = lib.licenses.bsd3;
   };
-}
+})

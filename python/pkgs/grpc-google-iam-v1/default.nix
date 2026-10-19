@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "grpc-google-iam-v1";
   version = "3.31.3";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "googleapis";
     repo = "google-cloud-python";
-    tag = "google-cloud-build-v${version}";
+    tag = "google-cloud-build-v${finalAttrs.version}";
     hash = "sha256-qQ+8X6I8lt4OTgbvODsbdab2dYUk0wxWsbaVT2T651U=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/googleapis/google-cloud-python/tree/main/packages/grpc-google-iam-v1";
     license = lib.licenses.asl20;
   };
-}
+})

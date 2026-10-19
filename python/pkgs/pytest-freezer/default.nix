@@ -7,7 +7,7 @@
   pytest,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytest-freezer";
   version = "0.4.9";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pytest-dev";
     repo = "pytest-freezer";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-WJGwkON/RAiUiGzNkeqjzch4CEr6mPXij5dqz1ncRXs=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pytest-dev/pytest-freezer";
     license = lib.licenses.mit;
   };
-}
+})

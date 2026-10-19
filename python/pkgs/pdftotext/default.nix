@@ -7,13 +7,13 @@
   poppler,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pdftotext";
   version = "3.0.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     sha256 = "sha256-w2UrGRVOFFUVqL+pU/xhNjOO2SM3vcy7U/4NiAE7Gqo=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jalan/pdftotext";
     license = lib.licenses.mit;
   };
-}
+})

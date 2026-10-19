@@ -6,7 +6,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "fitfile";
   version = "1.0.1";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "tcgoetz";
     repo = "fit";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-NIshX/IkPmqviYRPT4wRF7evZwn9e7BdCI5x+2Pz7II=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     license = lib.licenses.gpl2Only;
     homepage = "https://github.com/tcgoetz/fit";
   };
-}
+})

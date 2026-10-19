@@ -12,7 +12,7 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytest-subprocess";
   version = "1.6.0";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "aklajnert";
     repo = "pytest-subprocess";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-zPKExIrCt8ZwhKGU0l3tyTcDhRIGPSiM8OWy5cpmsuE=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/aklajnert/pytest-subprocess";
     license = lib.licenses.mit;
   };
-}
+})

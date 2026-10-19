@@ -6,7 +6,7 @@
   flit-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "laces";
   version = "0.1.2";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "tbrlpld";
     repo = "laces";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-ELpPq7pqcLfAqUuHh8NOAOOiGPDImTFsA7WUHvVfMiI=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/tbrlpld/laces";
     license = lib.licenses.bsd3;
   };
-}
+})

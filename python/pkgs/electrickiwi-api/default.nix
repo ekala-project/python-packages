@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "electrickiwi-api";
   version = "0.10.1";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mikey0000";
     repo = "EK-API";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-3wT33oEbvfEdsNXqzFLPsn+ZfA/Qr3EwgZPfuZfm7XY=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mikey0000/EK-API";
     license = lib.licenses.gpl3Only;
   };
-}
+})

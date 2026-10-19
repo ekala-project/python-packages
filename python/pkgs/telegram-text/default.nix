@@ -7,13 +7,13 @@
   poetry-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "telegram_text";
   version = "0.2.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-7ilaNfLHckbdmoDF4ajezMWYlY3/NXQGl5AcYyxhIfo=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://telegram-text.alinsky.tech/";
     license = lib.licenses.mit;
   };
-}
+})

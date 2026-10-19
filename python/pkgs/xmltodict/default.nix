@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "xmltodict";
   version = "1.0.4";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "martinblech";
     repo = "xmltodict";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-G7hVtS6toUJC0YY1AXBOJSc3wnAZyWilLnT/5vvFRRw=";
   };
 
@@ -25,4 +25,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/martinblech/xmltodict";
     license = lib.licenses.mit;
   };
-}
+})

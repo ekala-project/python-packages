@@ -10,14 +10,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "google-cloud-os-login";
   version = "2.22.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "google_cloud_os_login";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-xyDUE2/5BvAF4nKqH1sNcfszq/fMGlr0oiaB7ZSdt+I=";
   };
 
@@ -48,4 +48,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-os-login";
     license = lib.licenses.asl20;
   };
-}
+})

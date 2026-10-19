@@ -10,7 +10,7 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-currentuser";
   version = "0.10.0";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "zsoldosp";
     repo = "django-currentuser";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-1fg1KRu685hnAyHCOKKqvwU/K8Sm4D7/TRKLBI2tBu0=";
   };
 
@@ -47,4 +47,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/zsoldosp/django-currentuser";
     license = lib.licenses.bsd3;
   };
-}
+})

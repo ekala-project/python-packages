@@ -15,7 +15,7 @@
   responses,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "monero";
   version = "1.1.1";
   pyproject = true;
@@ -23,7 +23,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "monero-ecosystem";
     repo = "monero-python";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-WIF3pFBOLgozYTrQHLzIRgSlT3dTZTe+7sF/dVjVdTo=";
   };
 
@@ -54,4 +54,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/monero-ecosystem/monero-python";
     license = lib.licenses.bsd3;
   };
-}
+})

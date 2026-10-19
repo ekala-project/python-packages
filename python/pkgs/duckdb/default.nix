@@ -22,7 +22,7 @@ let
   };
 in
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "duckdb";
   version = duckdbVersion;
   pyproject = true;
@@ -30,7 +30,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "duckdb";
     repo = "duckdb-python";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-B14dXW5pPnToiKbSD9ACzNksIhBG+ui1P9l67Qyke8o=";
   };
 
@@ -76,7 +76,7 @@ buildPythonPackage rec {
   };
 
   cmakeFlags = [
-    (lib.cmakeFeature "OVERRIDE_GIT_DESCRIBE" "v${version}-0-g${duckdbRev}")
+    (lib.cmakeFeature "OVERRIDE_GIT_DESCRIBE" "v${finalAttrs.version}-0-g${duckdbRev}")
   ];
 
   pythonImportsCheck = [ "duckdb" ];
@@ -86,4 +86,4 @@ buildPythonPackage rec {
     homepage = "https://duckdb.org/";
     license = lib.licenses.mit;
   };
-}
+})

@@ -10,14 +10,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "july";
   version = "0.1.3";
   pyproject = true;
 
   # No tags on GitHub
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-0xXCSSEKf2COJ9IHfuy+vpC/Zieg+q6TTabEFmUspCM=";
   };
 
@@ -47,4 +47,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/e-hulten/july";
     license = lib.licenses.mit;
   };
-}
+})

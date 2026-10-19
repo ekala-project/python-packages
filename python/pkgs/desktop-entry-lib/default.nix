@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "desktop-entry-lib";
   version = "3.1";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromCodeberg {
     owner = "JakobDev";
     repo = "desktop-entry-lib";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-+c+FuLv88wc4yVw3iyFFtfbocnWzTCIe2DS0SWoj+VI=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://codeberg.org/JakobDev/desktop-entry-lib";
     license = lib.licenses.bsd2;
   };
-}
+})

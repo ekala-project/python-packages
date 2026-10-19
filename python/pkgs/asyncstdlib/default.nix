@@ -5,13 +5,13 @@
   flit-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "asyncstdlib";
   version = "3.14.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-+ZOWmSo7unSV2M9sgyv+jIcn9hITIz01aaWpy9HAQ4U=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://asyncstdlib.readthedocs.io/";
     license = lib.licenses.mit;
   };
-}
+})

@@ -13,14 +13,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "google-cloud-logging";
   version = "3.16.3";
   pyproject = true;
 
   src = fetchPypi {
     pname = "google_cloud_logging";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-XXkku7M8Bmu0P3DTO6ZnSf8cKbIH3kyAsrzhqs1T9nY=";
   };
 
@@ -54,4 +54,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/googleapis/python-logging";
     license = lib.licenses.asl20;
   };
-}
+})

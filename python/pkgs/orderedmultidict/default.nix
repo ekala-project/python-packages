@@ -6,13 +6,13 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "orderedmultidict";
   version = "1.0.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-FqeuhDLgLMmH0tbVry31k4JY+HyHBnXHPud6CSDm9KY=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     description = "Ordered Multivalue Dictionary";
     license = lib.licenses.unlicense;
   };
-}
+})

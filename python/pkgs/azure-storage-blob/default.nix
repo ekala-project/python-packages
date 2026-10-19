@@ -9,14 +9,14 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "azure-storage-blob";
   version = "12.30.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_storage_blob";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-eiT5eMUdVqA3W+6//L6EU+Wa45DSaVcFhI7cdQg+QYQ=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Azure/azure-sdk-for-python";
     license = lib.licenses.mit;
   };
-}
+})

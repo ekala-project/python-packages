@@ -9,7 +9,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "flux-led";
   version = "1.2.0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Danielhiversen";
     repo = "flux_led";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-+i+/WMHdz4HPKDlRPV1Aq9QqrTo5gZiulSc7Hinn+kI=";
   };
 
@@ -48,4 +48,4 @@ buildPythonPackage rec {
     license = lib.licenses.lgpl3Plus;
     mainProgram = "flux_led";
   };
-}
+})

@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aiosomecomfort";
   version = "0.0.38";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mkmer";
     repo = "AIOSomecomfort";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-tjJazA5MFIr3Z3I8l9g6SngH6U616e9jWXfMrim2wPo=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mkmer/AIOSomecomfort";
     license = lib.licenses.gpl3Only;
   };
-}
+})

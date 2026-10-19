@@ -10,13 +10,13 @@
   spinners,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "halo";
   version = "0.0.31";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-e2ejUh7pHVO3FS1O40UoEeHSpjIZdRN3Yus9cAY8ydY=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/manrajgrover/halo";
     license = lib.licenses.mit;
   };
-}
+})

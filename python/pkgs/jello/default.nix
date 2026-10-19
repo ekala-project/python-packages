@@ -9,7 +9,7 @@
   unittestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jello";
   version = "1.6.1";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "kellyjonbrazil";
     repo = "jello";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-RAQ04R1zDL9hk1q19GSFvdkxse5rJZXpboAondOoHEc=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/kellyjonbrazil/jello";
     license = lib.licenses.mit;
   };
-}
+})

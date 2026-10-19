@@ -7,13 +7,13 @@
   psutil,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aiopulse";
   version = "0.5.3";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-acUcJM5ghUKezpYTncDADQTZa6NMyteG6Yu7GFPbuLs=";
   };
 
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/atmurray/aiopulse";
     license = lib.licenses.asl20;
   };
-}
+})

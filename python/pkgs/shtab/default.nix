@@ -6,13 +6,13 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "shtab";
   version = "1.12.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-BjczhyOo/AjtHC/YJthDIimSRknCbjJHu0jFPWDKO/k=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://docs.iterative.ai/shtab/";
     license = lib.licenses.asl20;
   };
-}
+})

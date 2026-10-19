@@ -10,7 +10,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "automx2";
   version = "2026.2";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "rseichter";
     repo = "automx2";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-MT295HIcYJSsBmGaAK6V1yH49pj2A7e2E9H4QB955yc=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://rseichter.github.io/automx2/";
     license = lib.licenses.gpl3Plus;
   };
-}
+})

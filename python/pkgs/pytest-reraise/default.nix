@@ -6,7 +6,7 @@
   pytest,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytest-reraise";
   version = "2.1.2";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "bjoluc";
     repo = "pytest-reraise";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-mgNKoZ+2sinArTZhSwhLxzBTb4QfiT1LWBs7w5MHXWA=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/bjoluc/pytest-reraise";
     license = lib.licenses.mit;
   };
-}
+})

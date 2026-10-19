@@ -34,13 +34,13 @@ let
     activate = 1
   '';
 in
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "impacket";
   version = "0.13.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-7ZHIAra+/2VGr9ImKUK8GhiLRnH7kex1HUah1m0ows8=";
   };
 
@@ -75,4 +75,4 @@ buildPythonPackage rec {
     # Modified Apache Software License, Version 1.1
     license = lib.licenses.free;
   };
-}
+})

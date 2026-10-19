@@ -7,7 +7,7 @@
   gitUpdater,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "funk";
   version = "0.5.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mwilliamson";
     repo = "funk";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-dEq3zyA8rtNt0sui2TfQ3OUSCZ0XDMOdthcqt/QrCsU=";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mwilliamson/funk";
     license = lib.licenses.bsd2;
   };
-}
+})

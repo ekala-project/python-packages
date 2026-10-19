@@ -15,13 +15,13 @@
   sympy,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "networkx";
   version = "3.6.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-JrfDV6zMDIzeVYrUhig3KLZbapXYXuHNZrr6tMgWhQk=";
   };
 
@@ -46,4 +46,4 @@ buildPythonPackage rec {
     description = "Library for the creation, manipulation, and study of the structure, dynamics, and functions of complex networks";
     license = lib.licenses.bsd3;
   };
-}
+})

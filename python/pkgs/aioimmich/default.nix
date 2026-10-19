@@ -12,7 +12,7 @@
   syrupy,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aioimmich";
   version = "0.17.0";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mib1185";
     repo = "aioimmich";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-2T92WPGyeTb0mOzbBnKMhnIbDWRc2ZSVyL3uBdG1Zhw=";
   };
 
@@ -51,4 +51,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mib1185/aioimmich";
     license = lib.licenses.asl20;
   };
-}
+})

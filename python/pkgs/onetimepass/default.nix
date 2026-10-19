@@ -6,7 +6,7 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "onetimepass";
   version = "1.0.1";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "tadeck";
     repo = "onetimepass";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-cHJg3vdUpWp5+HACIeTGrqkHKUDS//aQICSjPKgwu3I=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/tadeck/onetimepass";
     license = lib.licenses.mit;
   };
-}
+})

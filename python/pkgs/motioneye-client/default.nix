@@ -11,7 +11,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "motioneye-client";
   version = "0.3.14";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "dermotduffy";
     repo = "motioneye-client";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-kgFSd5RjO+OtnPeAOimPTDVEfJ47rXh2Ku5xEYStHv8=";
   };
 
@@ -47,4 +47,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     broken = stdenv.hostPlatform.isDarwin;
   };
-}
+})

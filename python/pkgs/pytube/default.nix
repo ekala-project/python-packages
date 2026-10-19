@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytube";
   version = "15.0.0";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pytube";
     repo = "pytube";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-Nvs/YlOjk/P5nd1kpUnCM2n6yiEaqZP830UQI0Ug1rk=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/nficano/pytube";
     license = lib.licenses.mit;
   };
-}
+})

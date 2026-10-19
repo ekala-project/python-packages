@@ -6,7 +6,7 @@
   aiohttp,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aiomusiccast";
   version = "0.15.0";
   pyproject = true;
@@ -14,13 +14,13 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "vigonotion";
     repo = "aiomusiccast";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-oFA8i/cdDqOQ9Fq0VWd8eiOg8F1+MNxWanNqoao5+pM=";
   };
 
   postPatch = ''
     substituteInPlace aiomusiccast/__init__.py \
-      --replace-fail '__version__ = "0.0.0"' '__version__ = "${version}"'
+      --replace-fail '__version__ = "0.0.0"' '__version__ = "${finalAttrs.version}"'
   '';
 
   build-system = [ hatchling ];
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/vigonotion/aiomusiccast";
     license = lib.licenses.mit;
   };
-}
+})

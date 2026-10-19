@@ -18,13 +18,13 @@
   versioningit,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "bumps";
   version = "1.0.3";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-O5GUoyDlB0X2Z/O3JprN3omoOBDIhv0xrKfUSHTgGpM=";
   };
 
@@ -63,4 +63,4 @@ buildPythonPackage rec {
     homepage = "https://bumps.readthedocs.io/";
     license = lib.licenses.publicDomain;
   };
-}
+})

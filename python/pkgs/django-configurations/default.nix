@@ -13,13 +13,13 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-configurations";
   version = "2.5.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-blCDdX4rvfm7eFBWdTa5apNRX2sXUD10ko/2KNsuDpQ=";
   };
 
@@ -54,4 +54,4 @@ buildPythonPackage rec {
     homepage = "https://django-configurations.readthedocs.io/";
     license = lib.licenses.bsd0;
   };
-}
+})

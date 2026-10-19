@@ -6,14 +6,14 @@
   packaging,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "lazy-loader";
   version = "0.5";
   pyproject = true;
 
   src = fetchPypi {
     pname = "lazy_loader";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-cX+ReaDb7TVwEt2tUKWtPV5NmguHEmgNTmh/Xm5u2bM=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     description = "Populate library namespace without incurring immediate import costs";
     license = lib.licenses.bsd3;
   };
-}
+})

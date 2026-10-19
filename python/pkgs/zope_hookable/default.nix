@@ -5,14 +5,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "zope.hookable";
   version = "8.3";
   pyproject = true;
 
   src = fetchPypi {
     pname = "zope_hookable";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-oFyfiks/IRhMxCPa1hFjQsHFmBjuseTL34QfQkOVLU8=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/zopefoundation/zope.hookable";
     license = lib.licenses.zpl21;
   };
-}
+})

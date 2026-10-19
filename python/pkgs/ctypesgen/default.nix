@@ -8,7 +8,7 @@
   wheel,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ctypesgen";
   version = "1.1.1";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ctypesgen";
     repo = "ctypesgen";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-TwIWPellmjMpTGQ+adJBLNMdAqB0kLOMl4YAubvXKqo=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ctypesgen/ctypesgen";
     license = lib.licenses.bsd2;
   };
-}
+})

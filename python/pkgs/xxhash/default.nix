@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "xxhash";
   version = "3.8.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-sN5L86pmNjVS1SxqiQA8R5kR8SCYzUilPUSg96JffEY=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ifduyue/python-xxhash";
     license = lib.licenses.bsd2;
   };
-}
+})

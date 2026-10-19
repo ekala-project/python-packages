@@ -25,7 +25,7 @@
   xmlsec,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "zeep";
   version = "4.3.3";
   pyproject = true;
@@ -33,7 +33,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mvantellingen";
     repo = "python-zeep";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-0Mzvb86f1r07PCJqTy9CGUq9Zk2PtAsFfd3SmFlOayk=";
   };
 
@@ -63,4 +63,4 @@ buildPythonPackage rec {
     homepage = "http://docs.python-zeep.org";
     license = lib.licenses.mit;
   };
-}
+})

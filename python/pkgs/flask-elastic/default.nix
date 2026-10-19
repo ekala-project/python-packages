@@ -8,14 +8,14 @@
   elasticsearch,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "flask-elastic";
   version = "0.2";
   pyproject = true;
 
   src = fetchPypi {
     pname = "Flask-Elastic";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-XwGm/FQbXSV2qbAlHyAbT4DLcQnIseDm1Qqdb5zjE0M=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     license = lib.licenses.bsd3;
     homepage = "https://github.com/marceltschoppch/flask-elastic";
   };
-}
+})

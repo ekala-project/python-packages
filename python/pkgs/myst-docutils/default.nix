@@ -18,7 +18,7 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "myst-docutils";
   version = "5.1.0";
   pyproject = true;
@@ -26,7 +26,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "executablebooks";
     repo = "MyST-Parser";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-fZ0ZrzGKQhH3h2BHaAz6gpiMLmgvkLOl4Gu2qROKQ8U=";
   };
 
@@ -73,4 +73,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/executablebooks/MyST-Parser";
     license = lib.licenses.mit;
   };
-}
+})

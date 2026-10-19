@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "tree-sitter";
   version = "0.26.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "tree-sitter";
     repo = "py-tree-sitter";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-f1D7MdAWqVaYY0M0d+mR+AGNJjXOc41NGqbYG6ruLR4=";
     fetchSubmodules = true;
   };
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/tree-sitter/py-tree-sitter";
     license = lib.licenses.mit;
   };
-}
+})

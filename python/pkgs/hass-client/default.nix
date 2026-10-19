@@ -10,7 +10,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "hass-client";
   version = "1.3.1";
   pyproject = true;
@@ -18,13 +18,13 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "music-assistant";
     repo = "python-hass-client";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-WpsdvwRICAllrmpuhOUEAPq2kdtcKK/XgE+0+PY+lUo=";
   };
 
   postPatch = ''
     substituteInPlace pyproject.toml \
-      --replace-fail "1.0.0" "${version}"
+      --replace-fail "1.0.0" "${finalAttrs.version}"
   '';
 
   build-system = [
@@ -55,4 +55,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/music-assistant/python-hass-client";
     license = lib.licenses.asl20;
   };
-}
+})

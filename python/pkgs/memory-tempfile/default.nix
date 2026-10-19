@@ -6,7 +6,7 @@
   poetry-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "memory-tempfile";
   version = "2.2.3";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mbello";
     repo = "memory-tempfile";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-4fz2CLkZdy2e1GwGw/afG54LkUVJ4cza70jcbX3rVlQ=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mbello/memory-tempfile";
     license = lib.licenses.mit;
   };
-}
+})

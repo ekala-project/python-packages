@@ -6,13 +6,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "dbus-client-gen";
   version = "0.5.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-vRXo72aWoreH/VwzdEAOgoGSRzRf7vy8Z/IA+lnLoWw=";
   };
 
@@ -23,4 +23,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/stratis-storage/dbus-client-gen";
     license = lib.licenses.mpl20;
   };
-}
+})

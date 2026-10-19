@@ -11,7 +11,7 @@
   pycryptodome,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "joserfc";
   version = "1.7.5";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "authlib";
     repo = "joserfc";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-xwCUn8Hy9xWG5QRt3MYuUvq56PI+HBNLBNf1brOnDDY=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/authlib/joserfc";
     license = lib.licenses.bsd3;
   };
-}
+})

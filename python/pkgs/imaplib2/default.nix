@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "imaplib2";
   version = "3.6";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "jazzband";
     repo = "imaplib2";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-daQDQZelKzWN/1zdcnKue2vj12BIlknSWIu4bfuIWpE=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jazzband/imaplib2";
     license = lib.licenses.mit;
   };
-}
+})

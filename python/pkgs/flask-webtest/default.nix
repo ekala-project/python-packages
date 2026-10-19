@@ -10,7 +10,7 @@
   greenlet,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "flask-webtest";
   version = "0.1.6";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "level12";
     repo = "flask-webtest";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-wcEc9j62bQXAmXczsunITQP3sU040d6Ws8cz0w7+5r4=";
   };
 
@@ -43,4 +43,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/level12/flask-webtest";
     license = lib.licenses.bsd3;
   };
-}
+})

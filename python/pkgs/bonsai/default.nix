@@ -10,7 +10,7 @@
   trio,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "bonsai";
   version = "1.5.5";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "noirello";
     repo = "bonsai";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-q0BE1TuxiS01Z83dqDH54XzRgdF3ZszRBJsMIfsvTeU=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/noirello/bonsai";
     license = lib.licenses.mit;
   };
-}
+})

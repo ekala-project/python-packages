@@ -29,7 +29,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "minari";
   version = "0.5.3";
   pyproject = true;
@@ -37,7 +37,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Farama-Foundation";
     repo = "Minari";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-LvJwp2dZdGPazJPWQtrk+v7zaPjOlomBu5j9avVdCcA=";
   };
 
@@ -107,4 +107,4 @@ buildPythonPackage rec {
     ];
     mainProgram = "minari";
   };
-}
+})

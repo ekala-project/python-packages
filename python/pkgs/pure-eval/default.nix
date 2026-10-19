@@ -6,7 +6,7 @@
   toml,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pure-eval";
   version = "0.2.3";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "alexmojaki";
     repo = "pure_eval";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-gdP8/MkzTyjkZaWUG5PoaOtBqzbCXYNYBX2XBLWLh18=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/alexmojaki/pure_eval";
     license = lib.licenses.mit;
   };
-}
+})

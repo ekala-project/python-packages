@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pprintpp";
   version = "0.4.0-unstable-2022-05-31";
   pyproject = true;
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     license = lib.licenses.bsd2;
     mainProgram = "pypprint";
   };
-}
+})

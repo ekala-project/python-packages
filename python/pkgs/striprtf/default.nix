@@ -5,13 +5,13 @@
   hatchling,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "striprtf";
   version = "0.0.32";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-fzdaN12ZonAIQhcxaMkMm1RcskQkH/xdho7Z9rr5FV8=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/joshy/striprtf";
     license = lib.licenses.bsd3;
   };
-}
+})

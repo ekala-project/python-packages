@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "wrapt";
   version = "2.4.0";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "GrahamDumpleton";
     repo = "wrapt";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-LzHiX23w6idv7xV7N2XA3vcaV2tzaivP7Dut/EkvzFE=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/GrahamDumpleton/wrapt";
     license = lib.licenses.bsd2;
   };
-}
+})

@@ -12,7 +12,7 @@
   tablib,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-import-export";
   version = "4.4.1";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "django-import-export";
     repo = "django-import-export";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-6/I5GI2fcD48IOwtbhgqpNn5RHU7Z4PeqMBZUEtiE9g=";
   };
 
@@ -48,4 +48,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/django-import-export/django-import-export";
     license = lib.licenses.bsd2;
   };
-}
+})

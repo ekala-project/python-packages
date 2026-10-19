@@ -12,7 +12,7 @@
   urllib3,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pygithub";
   version = "2.10.0";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "PyGithub";
     repo = "PyGithub";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-qn/2IgzkVgjGMLHB2kd5n2reigBWVLuJTzYfB6BEu80=";
   };
 
@@ -48,4 +48,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/PyGithub/PyGithub";
     license = lib.licenses.lgpl3Plus;
   };
-}
+})

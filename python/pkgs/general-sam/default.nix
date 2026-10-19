@@ -8,7 +8,7 @@
   rustc,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "general-sam";
   version = "1.0.4.post0";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ModelTC";
     repo = "general-sam-py";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-bpJL6kpcpMWNNUOSLUnRLsAi7yp3fl0WKzvfXiGwYeE=";
   };
 
@@ -50,4 +50,4 @@ buildPythonPackage rec {
       mit
     ];
   };
-}
+})

@@ -9,7 +9,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aiousbwatcher";
   version = "1.1.2";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Bluetooth-Devices";
     repo = "aiousbwatcher";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-kCuY4+pdfnO8BuYSQjZEyGxSaCwVYXRHWYhnbzxlDzM=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Bluetooth-Devices/aiousbwatcher";
     license = lib.licenses.mit;
   };
-}
+})

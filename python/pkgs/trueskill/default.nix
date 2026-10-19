@@ -6,13 +6,13 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "trueskill";
   version = "0.4.5";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-nWK0jSQoNp1xK9m+z/n5osqjJeGiq1+TktNL/3V4Z7s=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://trueskill.org";
     license = lib.licenses.bsd3;
   };
-}
+})

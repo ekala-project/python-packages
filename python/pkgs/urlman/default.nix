@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "urlman";
   version = "2.0.3";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-QP4bGBkUph8FR+ZoYjW2D9dPMlOWvK8c3QtjJg4phK4=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/andrewgodwin/urlman";
     license = lib.licenses.asl20;
   };
-}
+})

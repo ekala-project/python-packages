@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "forbiddenfruit";
   version = "0.1.4";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "clarete";
     repo = "forbiddenfruit";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-yHIZsVn2UVmWeBNIzWDE6AOwAXZilPqXo+bVtXqGkJk=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
       gpl3Plus
     ];
   };
-}
+})

@@ -10,7 +10,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "help2man";
   version = "0.0.9";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Freed-Wu";
     repo = "help2man";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-BIDn+LQzBtDHUtFvIRL3NMXNouO3cMLibuYBoFtCUxI=";
   };
 
@@ -48,4 +48,4 @@ buildPythonPackage rec {
     license = lib.licenses.gpl3Only;
     mainProgram = "help2man";
   };
-}
+})

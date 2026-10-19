@@ -12,7 +12,7 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "inline-snapshot";
   version = "0.35.4";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "15r10nk";
     repo = "inline-snapshot";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-IgGnh96Xu6790UyqEv/S8CxSXCt12FeZH8gYAPUTzN4=";
   };
 
@@ -49,4 +49,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/15r10nk/inline-snapshot/";
     license = lib.licenses.mit;
   };
-}
+})

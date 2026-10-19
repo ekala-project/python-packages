@@ -9,7 +9,7 @@
   glibcLocales,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "seekpath";
   version = "2.2.1";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "materialscloud-org";
     repo = "seekpath";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-yz9IX68AmFP8P8uzZMKa4d/pdzbOm0IcQsZMvC7MuSU=";
   };
 
@@ -43,4 +43,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/materialscloud-org/seekpath";
     license = lib.licenses.mit;
   };
-}
+})

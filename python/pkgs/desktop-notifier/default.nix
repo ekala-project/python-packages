@@ -8,7 +8,7 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "desktop-notifier";
   version = "6.2.0";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "SamSchott";
     repo = "desktop-notifier";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-VVbBKhGCtdsNOfRJPpDk9wwsTtdEwbTSZjheXLydO70=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/samschott/desktop-notifier";
     license = lib.licenses.mit;
   };
-}
+})

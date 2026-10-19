@@ -7,13 +7,13 @@
   numpy,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jplephem";
   version = "2.24";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-NU/hra4CImSrRvGK+2ryYhEnfP17PvkEAHVfyr6TvBE=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     description = "Python version of NASA DE4xx ephemerides, the basis for the Astronomical Alamanac";
     license = lib.licenses.mit;
   };
-}
+})

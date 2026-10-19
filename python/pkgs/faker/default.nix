@@ -8,13 +8,13 @@
   tzdata,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "faker";
   version = "40.38.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-cuQhCYZk7fOEePQmml1aU5M33l2hiIPOZ8sea7lrCzo=";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     homepage = "http://faker.rtfd.org";
     license = lib.licenses.mit;
   };
-}
+})

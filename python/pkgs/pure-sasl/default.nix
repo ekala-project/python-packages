@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pure-sasl";
   version = "0.6.2";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "thobbs";
     repo = "pure-sasl";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-AHoZ3QZLr0JLE8+a2zkB06v2wRknxhgm/tcEPXaJX/U=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "http://github.com/thobbs/pure-sasl";
     license = lib.licenses.mit;
   };
-}
+})

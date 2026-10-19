@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "flaky";
   version = "3.8.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-RyBKgeyQXz1az71h2uq8raj51AMWFtm8sGGEYXKWmfU=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     description = "Plugin for nose or py.test that automatically reruns flaky tests";
     license = lib.licenses.asl20;
   };
-}
+})

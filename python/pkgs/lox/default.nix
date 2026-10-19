@@ -10,7 +10,7 @@
   tqdm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "lox";
   version = "1.0.0";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "BrianPugh";
     repo = "lox";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-PZKs+D1TmrBr+1M4ni7kKLywQ8Z6YCVjH2HFF6QjHdY=";
   };
 
@@ -49,4 +49,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/BrianPugh/lox";
     license = lib.licenses.asl20;
   };
-}
+})

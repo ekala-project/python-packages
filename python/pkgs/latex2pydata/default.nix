@@ -6,13 +6,13 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "latex2pydata";
   version = "0.5.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-vMrSCDw6btcEkmU9XYGczZNgo6/Dwxnb7PSW+6BXQok=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     license = lib.licenses.bsd3;
     platforms = lib.platforms.unix;
   };
-}
+})

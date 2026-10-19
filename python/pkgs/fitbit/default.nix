@@ -12,7 +12,7 @@
   requests-oauthlib,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "fitbit";
   version = "0.3.1";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "orcasgit";
     repo = "python-fitbit";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-1u3h47lRBrJ7EUWBl5+RLGW4KHHqXqqrXbboZdy7VPA=";
   };
 
@@ -50,4 +50,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/orcasgit/python-fitbit";
     license = lib.licenses.asl20;
   };
-}
+})

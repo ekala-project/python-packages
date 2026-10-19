@@ -11,7 +11,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "credstash";
   version = "1.17.1";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "fugue";
     repo = "credstash";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-a6OzffGt5piHgi0AWEXJED0R/+8RETh/9hYJi/lUVu0=";
   };
 
@@ -61,4 +61,4 @@ buildPythonPackage rec {
     license = lib.licenses.asl20;
     mainProgram = "credstash";
   };
-}
+})

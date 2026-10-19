@@ -8,14 +8,14 @@
   pygments,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "readme-renderer";
   version = "46.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "readme_renderer";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-rz6WSRT2MQoz/2e3KkvdlAvtjXw73s0tFPQO3yhL/pA=";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pypa/readme_renderer";
     license = lib.licenses.asl20;
   };
-}
+})

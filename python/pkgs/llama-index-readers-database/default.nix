@@ -6,14 +6,14 @@
   hatchling,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "llama-index-readers-database";
   version = "0.7.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "llama_index_readers_database";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-5Ffw3Ro7+vmskRI8xr1gRTxgEyMCn7GWHn6I4mEcnoY=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/run-llama/llama_index/tree/main/llama-index-integrations/readers/llama-index-readers-database";
     license = lib.licenses.mit;
   };
-}
+})

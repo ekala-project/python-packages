@@ -9,13 +9,13 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "vertica-python";
   version = "1.4.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-VCB4ri/t7mlK3tsE2Bxu3Cd7h+10QDApQhB9hqC81EU=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/vertica/vertica-python";
     license = lib.licenses.asl20;
   };
-}
+})

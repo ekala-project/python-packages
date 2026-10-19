@@ -7,14 +7,14 @@
   lxml,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "sphinx-argparse";
   version = "0.6.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "sphinx_argparse";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-+L4Weu31ZwvXyBLvUVlo/0cXxjz8nLTfXzS1T9VknDc=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ashb/sphinx-argparse";
     license = lib.licenses.mit;
   };
-}
+})

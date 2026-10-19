@@ -11,7 +11,7 @@
   django,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-countries";
   version = "9.0.0";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "SmileyChris";
     repo = "django-countries";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-Lq2wXnC/0sT96AA0eW1TsrIm6qencXE4/3bHSni9nlQ=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/SmileyChris/django-countries";
     license = lib.licenses.mit;
   };
-}
+})

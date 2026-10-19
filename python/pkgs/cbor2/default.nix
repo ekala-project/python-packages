@@ -7,13 +7,13 @@
   withCExtensions ? true,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "cbor2";
   version = "5.8.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-sZw1/K6WiKwB73W61dsnMAwlN+tO4A7QfgXYRWoNSTE=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     mainProgram = "cbor2";
   };
-}
+})

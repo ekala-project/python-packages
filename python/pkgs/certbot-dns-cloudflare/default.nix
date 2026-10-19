@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "certbot-dns-cloudflare";
   pyproject = true;
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
   meta = certbot.meta // {
     description = "Cloudflare DNS Authenticator plugin for Certbot";
   };
-}
+})

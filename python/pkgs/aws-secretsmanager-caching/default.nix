@@ -9,14 +9,14 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aws-secretsmanager-caching";
   version = "1.1.3";
   pyproject = true;
 
   src = fetchPypi {
     pname = "aws_secretsmanager_caching";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-9tbsnUPg2+T21d6982tMtpHRWpZ7NYsldfXZGXSmwP8=";
   };
 
@@ -56,4 +56,4 @@ buildPythonPackage rec {
     '';
     license = lib.licenses.asl20;
   };
-}
+})

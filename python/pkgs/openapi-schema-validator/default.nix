@@ -15,7 +15,7 @@
   rfc3339-validator,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "openapi-schema-validator";
   version = "0.9.0";
   pyproject = true;
@@ -23,7 +23,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "p1c2u";
     repo = "openapi-schema-validator";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-fqVmVdlZsHPH/C0LWXyeGDpSYVoIf63qIj1R7JeFi4I=";
   };
 
@@ -45,4 +45,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/python-openapi/openapi-schema-validator";
     license = lib.licenses.bsd3;
   };
-}
+})

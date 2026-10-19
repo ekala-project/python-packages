@@ -9,7 +9,7 @@
   urllib3,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "myhome";
   version = "0.2.1";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "speijnik";
     repo = "myhome";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-DJzwvgvSA9Q0kpueUoQV64pdDDNA7WzGu7r+g5aqutk=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/speijnik/myhome";
     license = lib.licenses.bsd3;
   };
-}
+})

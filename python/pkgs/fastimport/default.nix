@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "fastimport";
   version = "0.9.16";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-agpvtWqjYH3nGtTnq9VRr+m9rJS6uNLddNjg+Y9S414=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     description = "VCS fastimport/fastexport parser";
     license = lib.licenses.gpl2Plus;
   };
-}
+})

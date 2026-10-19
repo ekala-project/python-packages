@@ -5,7 +5,7 @@
   hatchling,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "simpleeval";
   version = "1.0.7";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "danthedeckie";
     repo = "simpleeval";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-w3Ukb1W5DV9LVcV4IyraBsaFjOgoOoxzQ62N3BBxk1M=";
   };
 
@@ -25,4 +25,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/danthedeckie/simpleeval";
     license = lib.licenses.mit;
   };
-}
+})

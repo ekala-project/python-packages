@@ -5,13 +5,13 @@
   hatchling,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pykka";
   version = "4.4.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-VPz7ntXvkuuYv5lhz977xz3fvyQGDjGdUP3m7GbQDYo=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     description = "Python implementation of the actor model";
     license = lib.licenses.asl20;
   };
-}
+})

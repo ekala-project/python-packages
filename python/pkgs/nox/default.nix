@@ -13,13 +13,13 @@
   virtualenv,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "nox";
   version = "2026.8.17";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-jZxpybmWpZ2x6yxpaN6uvC7bxVMX0gWYG7xKNzUdPy4=";
   };
 
@@ -43,4 +43,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/wntrblm/nox";
     license = lib.licenses.asl20;
   };
-}
+})

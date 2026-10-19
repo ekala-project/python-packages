@@ -6,13 +6,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "requestsexceptions";
   version = "1.4.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-sJXLx3YY8GbUWaArE3sCDDfan0bZsFdwQBnJ9326MGU=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     description = "Import exceptions from potentially bundled packages in requests";
     license = lib.licenses.asl20;
   };
-}
+})

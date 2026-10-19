@@ -8,13 +8,13 @@
   toml,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "vulture";
   version = "2.16";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-+Nn24q8DARZko8bCQMl2Wz85KRfTE1/dym1qaNNZ9xc=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     mainProgram = "vulture";
   };
-}
+})

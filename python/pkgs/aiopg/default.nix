@@ -8,7 +8,7 @@
   psycopg2,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aiopg";
   version = "1.4.0";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "aio-libs";
     repo = "aiopg";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-GD5lRSUjASTwBk5vEK8v3xD8eNyxpwSrO3HHvtwubmk=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     homepage = "https://aiopg.readthedocs.io/";
     license = lib.licenses.bsd2;
   };
-}
+})

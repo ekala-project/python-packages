@@ -19,14 +19,14 @@
   url-normalize,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aiohttp-client-cache";
   version = "0.14.3";
   pyproject = true;
 
   src = fetchPypi {
     pname = "aiohttp_client_cache";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-Mp9AOMao7QtBACOYC20aLEhK8z5meonOJFyJnWLB+6E=";
   };
 
@@ -83,4 +83,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/requests-cache/aiohttp-client-cache";
     license = lib.licenses.mit;
   };
-}
+})

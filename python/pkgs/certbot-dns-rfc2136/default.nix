@@ -8,7 +8,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "certbot-dns-rfc2136";
   pyproject = true;
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
   meta = certbot.meta // {
     description = "RFC 2136 DNS Authenticator plugin for Certbot";
   };
-}
+})

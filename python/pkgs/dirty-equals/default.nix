@@ -9,7 +9,7 @@
 }:
 
 let
-  dirty-equals = buildPythonPackage rec {
+  dirty-equals = buildPythonPackage (finalAttrs: {
     pname = "dirty-equals";
     version = "0.11.0";
     pyproject = true;
@@ -17,7 +17,7 @@ let
     src = fetchFromGitHub {
       owner = "samuelcolvin";
       repo = "dirty-equals";
-      tag = "v${version}";
+      tag = "v${finalAttrs.version}";
       hash = "sha256-JFKWrbMdxhvSBbjQ+S9HPW87CK+5ZZiXHg8Wltlv2YY=";
     };
 

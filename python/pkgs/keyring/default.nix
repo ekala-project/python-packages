@@ -15,7 +15,7 @@
   secretstorage,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "keyring";
   version = "25.7.0";
   pyproject = true;
@@ -23,7 +23,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "jaraco";
     repo = "keyring";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-v9s28vwx/5DJRa3dQyS/mdZppfvFcfBtafjBRi2c1oQ=";
   };
 
@@ -68,4 +68,4 @@ buildPythonPackage rec {
     mainProgram = "keyring";
     platforms = lib.platforms.unix;
   };
-}
+})

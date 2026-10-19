@@ -7,13 +7,13 @@
   requests,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pysolr";
   version = "3.11.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-u9DnRng1MWiA+ZS1U4bJvDwUZzPBfYWj/tMXdVl2xAo=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/toastdriven/pysolr/";
     license = lib.licenses.bsd3;
   };
-}
+})

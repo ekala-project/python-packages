@@ -22,7 +22,7 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyocd";
   version = "0.45.1";
   pyproject = true;
@@ -30,7 +30,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pyocd";
     repo = "pyOCD";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-4a9XfdRfd6Co33eCoW6rBA0okS2lvUoQfNwr4KnAjM8=";
   };
 
@@ -67,4 +67,4 @@ buildPythonPackage rec {
     homepage = "https://pyocd.io";
     license = lib.licenses.asl20;
   };
-}
+})

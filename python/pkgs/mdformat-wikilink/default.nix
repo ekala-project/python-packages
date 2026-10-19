@@ -9,7 +9,7 @@
   pytest-cov-stub,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mdformat-wikilink";
   version = "0.3.0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "tmr232";
     repo = "mdformat-wikilink";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-tYUF5gNmXjzlf0jQg0tL2ayFGCSFFeYJHkWA6cYLpvI=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/tmr232/mdformat-wikilink";
     license = lib.licenses.mit;
   };
-}
+})

@@ -5,13 +5,13 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "devgoldyutils";
   version = "3.0.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     sha256 = "2kGu9QPP5WqKv2gO9DAkE9SNDerzNaEDRt5DrrYD9nQ=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/THEGOLDENPRO/devgoldyutils";
     license = lib.licenses.gpl3Only;
   };
-}
+})

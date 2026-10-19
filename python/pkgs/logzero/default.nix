@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "logzero";
   version = "1.7.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-f3Pd0645NFcjbwgf/r0ESjqi5COkeubdtReauQ0K0II=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     description = "Robust and effective logging for Python 2 and 3";
     license = lib.licenses.mit;
   };
-}
+})

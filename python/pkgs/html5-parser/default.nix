@@ -12,7 +12,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "html5-parser";
   version = "0.4.12";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "kovidgoyal";
     repo = "html5-parser";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-0Qn+To/d3+HMx+KhhgJBEHVYPOfIeBnngBraY7r4uSs=";
   };
 
@@ -49,4 +49,4 @@ buildPythonPackage rec {
     homepage = "https://html5-parser.readthedocs.io";
     license = lib.licenses.asl20;
   };
-}
+})

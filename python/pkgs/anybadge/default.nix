@@ -9,7 +9,7 @@
   sh,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "anybadge";
   version = "1.16.0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "jongracecox";
     repo = "anybadge";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-9qGmiIGzVdWHMyurMqTqEz+NKYlc/5zt6HPsssCH4Pk=";
   };
 
@@ -57,4 +57,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jongracecox/anybadge";
     license = lib.licenses.mit;
   };
-}
+})

@@ -12,7 +12,7 @@
   syrupy,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "connect-box";
   version = "0.4.0";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "home-assistant-ecosystem";
     repo = "python-connect-box";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-zUvZRnxVzg9izvUbp7QVcyu6Bw3dUXHOr0kOQRWEZVc=";
   };
 
@@ -57,4 +57,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/home-assistant-ecosystem/python-connect-box";
     license = lib.licenses.mit;
   };
-}
+})

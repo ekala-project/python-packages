@@ -7,7 +7,7 @@
   twisted,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "txredisapi";
   version = "1.5.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "IlyaSkriblovsky";
     repo = "txredisapi";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-PXWw2AGeEbaxh9PG7MqTnhU5/5S90GQuq5PNwGIoKxY=";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     description = "Non-blocking redis client for python";
     license = lib.licenses.asl20;
   };
-}
+})

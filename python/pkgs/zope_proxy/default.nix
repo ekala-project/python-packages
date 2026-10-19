@@ -6,14 +6,14 @@
   zope_interface,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "zope.proxy";
   version = "7.3";
   pyproject = true;
 
   src = fetchPypi {
     pname = "zope_proxy";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-osAP+E1Ba1AIu83XM364AK3ovAgzEui14OzX0MDRHPY=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/zopefoundation/zope.proxy";
     license = lib.licenses.zpl21;
   };
-}
+})

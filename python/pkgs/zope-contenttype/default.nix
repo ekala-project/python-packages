@@ -5,14 +5,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "zope.contenttype";
   version = "6.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "zope_contenttype";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-/OWKMz2blKEo3ajO2kdcl20Toa+KOxI7bHaOr+HpL2M=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/zopefoundation/zope.contenttype";
     license = lib.licenses.zpl21;
   };
-}
+})

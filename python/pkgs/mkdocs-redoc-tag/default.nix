@@ -9,7 +9,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mkdocs-redoc-tag";
   version = "0.2.0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Blueswen";
     repo = "mkdocs-redoc-tag";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-pgJMcK8LZOj0niyRcbHi8Szsro2iNTj6hz6r24jrtVw=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/blueswen/mkdocs-redoc-tag";
     license = lib.licenses.mit;
   };
-}
+})

@@ -6,13 +6,13 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "configparser";
   version = "7.2.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-tinMiukW46+9NtGz0JPzQZPYUeEZmJIP3PxFUiGLe3A=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jaraco/configparser";
     license = lib.licenses.mit;
   };
-}
+})

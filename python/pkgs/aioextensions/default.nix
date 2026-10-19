@@ -10,13 +10,13 @@
   pytest,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aioextensions";
   version = "21.7.2261349";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     sha256 = "2eacc52692495f331437e8c8e9782ca71f4617ec84f174ca17acdd77631efc47";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://kamadorueda.github.io/aioextensions";
     license = lib.licenses.mit;
   };
-}
+})

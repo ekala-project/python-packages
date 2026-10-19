@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mistune";
   version = "3.3.4";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "lepture";
     repo = "mistune";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-7N1Kz2lN6GyDVKUhuGrEkbinV8Vpc4aahal/7KhnIXo=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/lepture/mistune";
     license = lib.licenses.bsd3;
   };
-}
+})

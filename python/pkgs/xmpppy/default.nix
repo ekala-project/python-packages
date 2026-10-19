@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "xmpppy";
   version = "0.7.4";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "xmpppy";
     repo = "xmpppy";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-wg7mxNHQ1+cFDLmHNafwQ2+45Jiqy36uZh28Ksu0k7Y=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/xmpppy/xmpppy";
     license = lib.licenses.gpl3Only;
   };
-}
+})

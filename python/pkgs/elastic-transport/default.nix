@@ -8,7 +8,7 @@
   urllib3,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "elastic-transport";
   version = "9.4.2";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "elastic";
     repo = "elastic-transport-python";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-LoaZRmHgYE6wndBuTwDqXDh/eqqWGCticY2xX9sIKVw=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/elastic/elastic-transport-python";
     license = lib.licenses.asl20;
   };
-}
+})

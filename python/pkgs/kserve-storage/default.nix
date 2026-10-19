@@ -21,14 +21,14 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "kserve-storage";
   version = "0.20.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "kserve_storage";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-8tBFGx++hMQkZfptV0EuFePZrlN1Tn5TlefzGop9aU0=";
   };
 
@@ -67,4 +67,4 @@ buildPythonPackage rec {
     homepage = "https://pypi.org/project/kserve-storage";
     license = lib.licenses.asl20;
   };
-}
+})

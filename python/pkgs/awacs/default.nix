@@ -6,13 +6,13 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "awacs";
   version = "2.6.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-eRmxXir9X08+YEVE+Bxa+OuasPokgcUoc1SJWGeRJ58=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/cloudtools/awacs";
     license = lib.licenses.bsd2;
   };
-}
+})

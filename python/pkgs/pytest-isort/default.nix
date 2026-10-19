@@ -7,7 +7,7 @@
   pytest,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytest-isort";
   version = "4.0.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "stephrdev";
     repo = "pytest-isort";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-fMt2tYc+Ngb57T/VJYxI2UN25qvIrgIsEoImVIitDK4=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/moccu/pytest-isort/";
     license = lib.licenses.bsd3;
   };
-}
+})

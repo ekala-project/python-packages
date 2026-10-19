@@ -9,13 +9,13 @@
   watchdog,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytest-watch";
   version = "4.2.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-BhNvA9WzYXGLjQ0jQEL3svIDkQ2FaPY98vhmtUez1Lk=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/joeyespo/pytest-watch";
     license = lib.licenses.mit;
   };
-}
+})

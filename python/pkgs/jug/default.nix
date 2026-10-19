@@ -10,7 +10,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jug";
   version = "2.5.0";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "luispedro";
     repo = "jug";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-YjBhA+yEdMQ/4yYf25kkXwbvw+ta9Nb4CX8Rnr0du6k=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://jug.readthedocs.io/";
     license = lib.licenses.mit;
   };
-}
+})

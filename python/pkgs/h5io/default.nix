@@ -17,7 +17,7 @@
   tables,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "h5io";
   version = "0.2.5";
   pyproject = true;
@@ -25,7 +25,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "h5io";
     repo = "h5io";
-    tag = "h5io-${version}";
+    tag = "h5io-${finalAttrs.version}";
     hash = "sha256-ZkG9e7KtDvoRq9XCExYseE+Z7tMQTWcSiwsSrN5prdI=";
   };
 
@@ -55,4 +55,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/h5io/h5io";
     license = lib.licenses.bsd3;
   };
-}
+})

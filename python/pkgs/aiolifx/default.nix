@@ -10,7 +10,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aiolifx";
   version = "1.2.2";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "aiolifx";
     repo = "aiolifx";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-v2001UY12HTi1pgugfRQSUg1R6uZAfVpwCASZZW9S0o=";
   };
 
@@ -44,4 +44,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     mainProgram = "aiolifx";
   };
-}
+})

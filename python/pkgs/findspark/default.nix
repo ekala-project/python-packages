@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "findspark";
   version = "2.0.1";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "minrk";
     repo = "findspark";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-/+b1Pf+ySwlv6XP1wtHx1tx4WfYdu6GuxJVQkcX3MY8=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/minrk/findspark";
     license = lib.licenses.bsd3;
   };
-}
+})

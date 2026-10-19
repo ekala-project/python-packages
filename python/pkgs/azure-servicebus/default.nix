@@ -8,14 +8,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "azure-servicebus";
   version = "7.15.0b2";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_servicebus";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-HsPFicWRz7UfBuWDKT5+D6OxxJ1snBXY9qie7cvFZF8=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/servicebus/azure-servicebus";
     license = lib.licenses.mit;
   };
-}
+})

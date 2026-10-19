@@ -17,7 +17,7 @@
   pytest-rerunfailures,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "gilknocker";
   version = "0.4.2";
   pyproject = true;
@@ -25,7 +25,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "milesgranger";
     repo = "gilknocker";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-RFLThZRxAXqF/Yzjpmafn2dVavOGJrM9U258FfLej/I=";
   };
 
@@ -84,4 +84,4 @@ buildPythonPackage rec {
       unlicense
     ];
   };
-}
+})

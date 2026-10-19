@@ -14,7 +14,7 @@
   typer,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyannote-database";
   version = "6.1.1";
   pyproject = true;
@@ -22,7 +22,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pyannote";
     repo = "pyannote-database";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-72H1tVLtDSYHAgjHWmI7pPQhKGchHz5VP0eRU6NRj2g=";
   };
 
@@ -46,4 +46,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     mainProgram = "pyannote-database";
   };
-}
+})

@@ -6,7 +6,7 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "eval-type-backport";
   version = "0.4.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "alexmojaki";
     repo = "eval_type_backport";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-ipo0atAAz0LhUwsO5Hm8fAG6lfjoKXZjF0bH7p2u63k=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/alexmojaki/eval_type_backport";
     license = lib.licenses.mit;
   };
-}
+})

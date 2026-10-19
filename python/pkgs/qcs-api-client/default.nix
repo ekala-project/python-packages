@@ -14,7 +14,7 @@
   toml,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "qcs-api-client";
   version = "0.27.8";
   pyproject = true;
@@ -22,7 +22,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "rigetti";
     repo = "qcs-api-client-python";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-9BRmfgRp/nyiqM6P/WjnaovsrZrZx6Pcg7sFJjdcWlo=";
   };
 
@@ -67,4 +67,4 @@ buildPythonPackage rec {
     homepage = "https://qcs-api-client-python.readthedocs.io/";
     license = lib.licenses.asl20;
   };
-}
+})

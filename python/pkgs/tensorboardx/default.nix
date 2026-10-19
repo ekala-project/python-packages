@@ -11,7 +11,7 @@
   tensorboard,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "tensorboardx";
   version = "2.6.5";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "lanpa";
     repo = "tensorboardX";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-VTekZSfD2oZUQe7B2NwePlljGdrZNQMdjJ4K66hS4Ps=";
   };
 
@@ -45,4 +45,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     platforms = lib.platforms.all;
   };
-}
+})

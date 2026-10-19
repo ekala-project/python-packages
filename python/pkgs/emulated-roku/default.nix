@@ -6,7 +6,7 @@
   aiohttp,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "emulated-roku";
   version = "0.5.1";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mindigmarton";
     repo = "emulated_roku";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-KwDEajkrEEgobORetM/rROMDLZvw9AJmmr1jmXAJJbk=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mindigmarton/emulated_roku";
     license = lib.licenses.mit;
   };
-}
+})

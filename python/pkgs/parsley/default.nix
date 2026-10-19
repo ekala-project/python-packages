@@ -7,14 +7,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "parsley";
   version = "1.3";
   pyproject = true;
 
   src = fetchPypi {
     pname = "Parsley";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-lEQnjUcWHV8r52p2eAmjy+bbTbgi9GpP10gdQFcgjUE=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://launchpad.net/parsley";
     license = lib.licenses.mit;
   };
-}
+})

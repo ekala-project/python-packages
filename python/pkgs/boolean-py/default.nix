@@ -5,14 +5,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "boolean-py";
   version = "5.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "boolean_py";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-YMvEutB5dTch0yZJVFUFNix1ThIVcK2kZYuFKjoxjZU=";
   };
 
@@ -25,4 +25,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/bastikr/boolean.py";
     license = lib.licenses.bsd2;
   };
-}
+})

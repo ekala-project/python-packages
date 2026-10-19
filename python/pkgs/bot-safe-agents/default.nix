@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "bot-safe-agents";
   version = "1.2";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ivan-sincek";
     repo = "bot-safe-agents";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-b4X3z8jX8kF3G1CEYxWl2jhWid3fRl7WfIMRfvAWlko=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ivan-sincek/bot-safe-agents";
     license = lib.licenses.mit;
   };
-}
+})

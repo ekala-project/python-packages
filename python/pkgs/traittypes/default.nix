@@ -6,7 +6,7 @@
   traitlets,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "traittypes";
   version = "0.2.3";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "jupyter-widgets";
     repo = "traittypes";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-RwEZs4QFK+IrPFPBI7+jnQSFQryQFzEbrnOF8OyExuk=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jupyter-widgets/traittypes";
     license = lib.licenses.bsd3;
   };
-}
+})

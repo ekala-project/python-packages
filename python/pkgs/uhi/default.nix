@@ -10,13 +10,13 @@
   uhi,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "uhi";
   version = "1.1.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-05xNwWLWkby0Q1KanPX+mbEeFKOHzfgoQVTMJYcNL/A=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://uhi.readthedocs.io/";
     license = lib.licenses.bsd3;
   };
-}
+})

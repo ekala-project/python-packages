@@ -8,7 +8,7 @@
   zstandard,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "fastavro";
   version = "1.12.2";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "fastavro";
     repo = "fastavro";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-UeOfYM03Htqrh+lpBKWiAPgZTv63jpO/FZZRMSgW5Ug=";
   };
 
@@ -46,4 +46,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/fastavro/fastavro";
     license = lib.licenses.mit;
   };
-}
+})

@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "dynalite-panel";
   version = "0.0.4";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-m7nQzbxRe2qXUWAMeQlDZtc9F01DsbTzF/kI0ci3TFE=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ziv1234/dynalitepanel";
     license = lib.licenses.asl20;
   };
-}
+})

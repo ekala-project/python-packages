@@ -9,7 +9,7 @@
   voluptuous,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "dvc-studio-client";
   version = "0.23.0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "iterative";
     repo = "dvc-studio-client";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-Zc6DQ/memnEwxHkSMPi1/fLBgvinqaMpWSOBfAI4sUk=";
   };
 
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/iterative/dvc-studio-client";
     license = lib.licenses.asl20;
   };
-}
+})

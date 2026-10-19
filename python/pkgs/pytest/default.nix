@@ -24,13 +24,13 @@
   xmlschema,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytest";
   version = "9.1.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-EIj73o8rSdlaVJoZVwevp6dqPOm8rcJrbXHw/9pf4xM=";
   };
 
@@ -98,4 +98,4 @@ buildPythonPackage rec {
     homepage = "https://docs.pytest.org";
     license = lib.licenses.mit;
   };
-}
+})

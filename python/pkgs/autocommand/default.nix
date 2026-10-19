@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "autocommand";
   version = "2.2.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-h43pQjxVlkkRZyJcKkVQQ8MTD7W3KGrINEPUXnSVXzQ=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     description = "Autocommand turns a python function into a CLI program";
     license = lib.licenses.lgpl3Only;
   };
-}
+})

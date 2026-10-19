@@ -6,13 +6,13 @@
   hatch-vcs,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "hepunits";
   version = "2.4.6";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-vKatqTcUcWbWbp+hUlZvI3iGjXmCEcrWmQCAOZVg+jQ=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/scikit-hep/hepunits";
     license = lib.licenses.bsd3;
   };
-}
+})

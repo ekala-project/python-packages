@@ -8,13 +8,13 @@
   wheel,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyee";
   version = "14.0.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-dt0PQxTs0n8C3HNYnep/04U/m2F22O+bEihgZX42At4=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jfhbrook/pyee";
     license = lib.licenses.mit;
   };
-}
+})

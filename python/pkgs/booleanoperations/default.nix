@@ -8,13 +8,13 @@
   pyclipper,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "booleanoperations";
   version = "0.10.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-bXGfVg0qHdZ2yBK4ROzOtpPJZ5HHZXkImrfQ9dtc7b4=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/typemytype/booleanOperations";
     license = lib.licenses.mit;
   };
-}
+})

@@ -10,7 +10,7 @@
   requests,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "coreapi";
   version = "2.3.3";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     repo = "python-client";
     owner = "core-api";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-nNUzQbBaT7woI3fmvPvIM0SVDnt4iC2rQ9bDgUeFzLA=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/core-api/python-client";
     license = lib.licenses.bsd3;
   };
-}
+})

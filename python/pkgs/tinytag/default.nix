@@ -8,13 +8,13 @@
   flit-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "tinytag";
   version = "2.3.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-Ah1xHNvb+EDTtnuXbLNNrcWNL8/UkOt075YCs3uZFBQ=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/tinytag/tinytag";
     license = lib.licenses.mit;
   };
-}
+})

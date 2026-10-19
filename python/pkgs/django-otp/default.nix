@@ -10,7 +10,7 @@
   python,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-otp";
   version = "1.7.0";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "django-otp";
     repo = "django-otp";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-Tqi6FHXJToOJsGETgIRl8rOUTfkn3kBkG5/bI8CxT24=";
   };
 
@@ -46,4 +46,4 @@ buildPythonPackage rec {
     description = "Pluggable framework for adding two-factor authentication to Django using one-time passwords";
     license = lib.licenses.bsd2;
   };
-}
+})

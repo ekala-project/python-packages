@@ -17,7 +17,7 @@
   standard-imghdr,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "tensorboard";
   version = "2.21.0";
   format = "wheel";
@@ -25,7 +25,7 @@ buildPythonPackage rec {
   # tensorflow/tensorboard is built from a downloaded wheel, because
   # https://github.com/tensorflow/tensorboard/issues/719 blocks buildBazelPackage.
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     format = "wheel";
     dist = "py3";
     python = "py3";
@@ -71,4 +71,4 @@ buildPythonPackage rec {
     mainProgram = "tensorboard";
     sourceProvenance = with lib.sourceTypes; [ binaryNativeCode ];
   };
-}
+})

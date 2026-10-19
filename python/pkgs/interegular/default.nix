@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "interegular";
   version = "0.3.3";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-2baXshs0iEcROZug8DdpFLgYmc5nADJIbQ0Eg0SnZgA=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/MegaIng/interegular";
     license = lib.licenses.mit;
   };
-}
+})

@@ -6,13 +6,13 @@
   hatch-vcs,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "param";
   version = "2.4.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-QMqUtyyXvxmYMlc44ALVic4xp8+0zFZUnwXapsz5gEM=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     description = "Declarative Python programming using Parameters";
     license = lib.licenses.bsd3;
   };
-}
+})

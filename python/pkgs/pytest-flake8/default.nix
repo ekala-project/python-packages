@@ -7,7 +7,7 @@
   flake8,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytest-flake8";
   version = "1.3.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "coherent-oss";
     repo = "pytest-flake8";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-uc5DOqqdoLfhzI2ogDOqhbJOHzdu+uqSOojIH+S1LZI=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/coherent-oss/pytest-flake8";
     license = lib.licenses.bsd2;
   };
-}
+})

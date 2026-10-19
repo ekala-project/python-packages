@@ -9,14 +9,14 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "azure-storage-file-datalake";
   version = "12.25.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_storage_file_datalake";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-NIE8bz6b8WNomM7GJSndLO0YnNLGdxYOxp74jDty2n8=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/storage/azure-storage-file-datalake";
     license = lib.licenses.mit;
   };
-}
+})

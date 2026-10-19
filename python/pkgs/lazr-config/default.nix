@@ -8,7 +8,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "lazr-config";
   version = "3.1";
   pyproject = true;
@@ -43,4 +43,4 @@ buildPythonPackage rec {
     homepage = "https://launchpad.net/lazr.config";
     license = lib.licenses.lgpl3Only;
   };
-}
+})

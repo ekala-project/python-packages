@@ -5,7 +5,7 @@
   poetry-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "decli";
   version = "0.6.3";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "woile";
     repo = "decli";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-W4GURqlkHzDwrPAlmiBjc2ZqN//nUK084uRMM7GIme0=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Woile/decli";
     license = lib.licenses.mit;
   };
-}
+})

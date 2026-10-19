@@ -8,7 +8,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytest-httpbin";
   version = "2.1.0";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "kevin1024";
     repo = "pytest-httpbin";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-gESU1SDpqSQs8GRcGJclWM0WpS4DZicfdtwxk2sQubQ=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/kevin1024/pytest-httpbin";
     license = lib.licenses.mit;
   };
-}
+})

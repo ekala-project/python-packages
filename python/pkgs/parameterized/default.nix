@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "parameterized";
   version = "0.9.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-f8kFJyzvpPNkwaNCnLvpwPmLeTmI77W/kKrIDwjbCbE=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/wolever/parameterized";
     license = lib.licenses.bsd2;
   };
-}
+})

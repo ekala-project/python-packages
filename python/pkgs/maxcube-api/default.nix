@@ -7,7 +7,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "maxcube-api";
   version = "0.4.3";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "hackercowboy";
     repo = "python-${pname}";
-    tag = "V${version}";
+    tag = "V${finalAttrs.version}";
     sha256 = "10k61gfpnqljf3p3qxr97xq7j67a9cr4ivd9v72hdni0znrbx6ym";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/hackercowboy/python-maxcube-api";
     license = lib.licenses.mit;
   };
-}
+})

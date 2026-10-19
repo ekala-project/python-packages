@@ -12,7 +12,7 @@
   tornado,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "python-telegram-bot";
   version = "22.8";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "python-telegram-bot";
     repo = "python-telegram-bot";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-BfNERx2AuzXi7H3NR5jvaaqTQdnSALo2pf4c/Aen+ao=";
   };
 
@@ -48,4 +48,4 @@ buildPythonPackage rec {
     homepage = "https://python-telegram-bot.org";
     license = lib.licenses.lgpl3Only;
   };
-}
+})

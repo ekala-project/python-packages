@@ -7,7 +7,7 @@
   httpx2,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pylast";
   version = "7.1.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pylast";
     repo = "pylast";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-Vo916wcaEkrKftBoe+6P7DpYsyILoAcZLt3rpIGKu/c=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pylast/pylast";
     license = lib.licenses.asl20;
   };
-}
+})

@@ -8,7 +8,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "georss-ign-sismologia-client";
   version = "2026.6.0";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "exxamalte";
     repo = "python-georss-ign-sismologia-client";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-qAgV6w+wsZ3sJwegrWuZ8cp7ZlRws04Qjn1frZ334IU=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/exxamalte/python-georss-ign-sismologia-client";
     license = lib.licenses.asl20;
   };
-}
+})

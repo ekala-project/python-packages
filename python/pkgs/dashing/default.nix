@@ -7,13 +7,13 @@
   blessed,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "dashing";
   version = "0.1.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-JRRgjg8pp3Xb0bERFWEhnOg9U8+kuqL+QQH6uE/Vbxs=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     description = "Terminal dashboards for Python";
     license = lib.licenses.gpl3;
   };
-}
+})

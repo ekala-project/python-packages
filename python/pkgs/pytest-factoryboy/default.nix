@@ -17,7 +17,7 @@
   # tests
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytest-factoryboy";
   version = "2.8.1";
   pyproject = true;
@@ -25,7 +25,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pytest-dev";
     repo = "pytest-factoryboy";
-    tag = version;
+    tag = finalAttrs.version;
     sha256 = "sha256-9dMsUujMCk89Ze4H9VJRS+ihjk0PAxKb8xqlw0+ROEI=";
   };
 
@@ -45,4 +45,4 @@ buildPythonPackage rec {
     homepage = "https://pytest-factoryboy.readthedocs.io/en/latest/";
     license = lib.licenses.mit;
   };
-}
+})

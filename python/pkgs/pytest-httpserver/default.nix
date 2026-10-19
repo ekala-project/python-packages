@@ -8,7 +8,7 @@
   werkzeug,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytest-httpserver";
   version = "1.1.5";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "csernazs";
     repo = "pytest-httpserver";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-6GU7LwCy5BacgdT1owrzN1NYazRE4zHSVl4hxPhrYSo=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://www.github.com/csernazs/pytest-httpserver";
     license = lib.licenses.mit;
   };
-}
+})

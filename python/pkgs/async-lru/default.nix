@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "async-lru";
   version = "2.3.0";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "aio-libs";
     repo = "async-lru";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-ytmh6tY6AS2VHajCnnRBSi0i57DUu+ikpbil/RwFyYA=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/wikibusiness/async_lru";
     license = lib.licenses.mit;
   };
-}
+})

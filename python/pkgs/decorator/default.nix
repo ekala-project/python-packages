@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "decorator";
   version = "5.2.1";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "micheles";
     repo = "decorator";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-UBjZ8LdgJ6iLBjNTlA3up0qAVBqTSZMJt7oEhUo3ZEo=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     description = "Better living through Python with decorators";
     license = lib.licenses.bsd2;
   };
-}
+})

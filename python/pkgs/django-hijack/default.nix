@@ -16,7 +16,7 @@
   pytest-django,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-hijack";
   version = "3.7.8";
   pyproject = true;
@@ -24,7 +24,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "django-hijack";
     repo = "django-hijack";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-91ziHv39GmXrbswqOyVHmSv11LqKNT318/8mx5iIdHg=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/django-hijack/django-hijack";
     license = lib.licenses.mit;
   };
-}
+})

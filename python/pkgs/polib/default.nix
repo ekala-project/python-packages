@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "polib";
   version = "1.2.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-8++Urv7W4YPjQqiiaa4fxHQroZMYatdvF1k4Yh2/wms=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://bitbucket.org/izi/polib/";
     license = lib.licenses.mit;
   };
-}
+})

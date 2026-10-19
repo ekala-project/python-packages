@@ -8,14 +8,14 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "azure-keyvault-secrets";
   version = "4.11.2";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_keyvault_secrets";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-wNhtsBqK400duS7Gue+S2aKu9/uxpnwJVlE9Rrhdets=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/keyvault/azure-keyvault-secrets";
     license = lib.licenses.mit;
   };
-}
+})

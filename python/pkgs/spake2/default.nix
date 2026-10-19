@@ -6,13 +6,13 @@
   cryptography,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "spake2";
   version = "0.9";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-Qh/EqNWsOVr3rwIG/9nmzfGIwQXLG4g9nWgzErtakzQ=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     description = "SPAKE2 password-authenticated key exchange library";
     license = lib.licenses.mit;
   };
-}
+})

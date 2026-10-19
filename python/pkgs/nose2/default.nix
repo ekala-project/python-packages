@@ -14,13 +14,13 @@
   unittestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "nose2";
   version = "0.16.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-Gdta0g4mRQGo7mTj4VejdmpedEFw5Uzuy05coJsIZVo=";
   };
 
@@ -44,4 +44,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/nose-devs/nose2";
     license = lib.licenses.bsd0;
   };
-}
+})

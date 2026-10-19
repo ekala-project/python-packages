@@ -5,14 +5,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "arpeggio";
   version = "2.0.3";
   pyproject = true;
 
   src = fetchPypi {
     pname = "Arpeggio";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-noWtNc/GyThnaBfHrpoQAKfHKjTHHbDGhxNsRg0SuF4=";
   };
 
@@ -25,4 +25,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/textX/Arpeggio";
     license = lib.licenses.mit;
   };
-}
+})

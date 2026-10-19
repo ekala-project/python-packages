@@ -9,7 +9,7 @@
   requests-mock,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "liblistenbrainz";
   version = "0.7.0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "metabrainz";
     repo = "liblistenbrainz";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-fZgIVGDUJ4Dh/7CIOugvpRP7FoijpsgA3bBKJMmDd7o=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/metabrainz/liblistenbrainz";
     license = lib.licenses.gpl3Plus;
   };
-}
+})

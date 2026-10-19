@@ -5,14 +5,14 @@
   setuptools_80,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "xstatic-font-awesome";
   version = "6.2.1.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "XStatic-Font-Awesome";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-8HWHEJYShjjy4VOQINgid1TD2IXdaOfubemgEjUHaCg=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     description = "Font Awesome packaged for python";
     license = lib.licenses.ofl;
   };
-}
+})

@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "hlk-sw16";
   version = "0.0.9";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "jameshilliard";
     repo = "hlk-sw16";
-    tag = version;
+    tag = finalAttrs.version;
     sha256 = "010s85nr6xn89i8yvdagg72a97dh1v2pyfqa33v76p9p8xbgh8dz";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jameshilliard/hlk-sw16";
     license = lib.licenses.mit;
   };
-}
+})

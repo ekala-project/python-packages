@@ -10,14 +10,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "google-cloud-memcache";
   version = "1.16.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "google_cloud_memcache";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-5zs8e/S97VbLYnyO/CKn8P2vdUiSit6X+QTLa/qDfz8=";
   };
 
@@ -48,4 +48,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-memcache";
     license = lib.licenses.asl20;
   };
-}
+})

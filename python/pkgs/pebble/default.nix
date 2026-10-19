@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pebble";
   version = "5.2.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-60mg9oYvfnXfSkAQfxyMJnz4rfvW0poNrCnResGIyHg=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/noxdafox/pebble";
     license = lib.licenses.lgpl3Plus;
   };
-}
+})

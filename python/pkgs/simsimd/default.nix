@@ -8,7 +8,7 @@
   tabulate,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "simsimd";
   version = "7.8.2";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ashvardanian";
     repo = "SimSIMD";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-Wn1qpPKdbWUJ5Gy4hnX9XcEneFvgrijGuI+v1F9+9EE=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
       bsd3
     ];
   };
-}
+})

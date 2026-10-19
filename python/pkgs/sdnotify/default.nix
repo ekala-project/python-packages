@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "sdnotify";
   version = "0.3.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-c5d/x0azbMQRhN1Dw/6BMj57iwbCuwgmxPWaIMVrufE=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/bb4242/sdnotify";
     license = lib.licenses.mit;
   };
-}
+})

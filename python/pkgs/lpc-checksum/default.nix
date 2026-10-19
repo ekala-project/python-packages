@@ -7,7 +7,7 @@
   intelhex,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "lpc-checksum";
   version = "3.0.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "basilfx";
     repo = "lpc_checksum";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-POgV0BdkMLmdjBh/FToPPmJTAxsPASB7ZE32SqGGKHk=";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     homepage = "https://pypi.org/project/lpc-checksum/";
     license = lib.licenses.mit;
   };
-}
+})

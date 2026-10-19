@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mergedeep";
   version = "1.3.4";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "clarketm";
     repo = "mergedeep";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-yRB0GqoIFu6BHuijAaR0J+qsaUPaEb39+12PMX/bW9c=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     description = "Deep merge function for python";
     license = lib.licenses.mit;
   };
-}
+})

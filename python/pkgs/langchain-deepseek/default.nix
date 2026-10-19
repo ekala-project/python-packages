@@ -20,7 +20,7 @@
   gitUpdater,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "langchain-deepseek";
   version = "1.1.0";
   pyproject = true;
@@ -28,7 +28,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "langchain-ai";
     repo = "langchain";
-    tag = "langchain-deepseek==${version}";
+    tag = "langchain-deepseek==${finalAttrs.version}";
     hash = "sha256-IHWTArtJB/CLIk0tKirRxUPcdJiqf1NDXn5Y+HBYv/g=";
   };
 
@@ -65,4 +65,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/langchain-ai/langchain/tree/master/libs/partners/deepseek";
     license = lib.licenses.mit;
   };
-}
+})

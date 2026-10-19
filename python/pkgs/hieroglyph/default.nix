@@ -11,14 +11,14 @@
   sphinx,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "hieroglyph";
   version = "2.1.0";
 
   src = fetchFromGitHub {
     owner = "nyergler";
     repo = "hieroglyph";
-    tag = "hieroglyph-${version}";
+    tag = "hieroglyph-${finalAttrs.version}";
     hash = "sha256-nr5cHF0Lg2mjQvnOoM5HCmMUiGh1QOeTD0nc8BvCBOE=";
   };
 
@@ -62,4 +62,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/nyergler/hieroglyph/";
     license = lib.licenses.bsd3;
   };
-}
+})

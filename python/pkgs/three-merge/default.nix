@@ -6,13 +6,13 @@
   diff-match-patch,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "three-merge";
   version = "0.1.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-YPav4URZVWDWOuMmJTUbzvO5RzO1Trl4AKn+sPPZ2XA=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/spyder-ide/three-merge";
     license = lib.licenses.mit;
   };
-}
+})

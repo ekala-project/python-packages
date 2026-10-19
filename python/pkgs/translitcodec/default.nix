@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "translitcodec";
   version = "0.7.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-O+eXXGMOwPHdWzcSFgyZGpd2EymFrtJYjLoIO6APo8g=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     description = "Unicode to 8-bit charset transliteration codec";
     license = lib.licenses.mit;
   };
-}
+})

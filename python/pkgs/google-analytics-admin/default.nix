@@ -10,14 +10,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "google-analytics-admin";
   version = "0.30.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "google_analytics_admin";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-zIsVAhfb7EVwiGfZ2BIW6KEOD21DLl5qxm2iqD1BGbY=";
   };
 
@@ -48,4 +48,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/googleapis/google-cloud-python/tree/main/packages/google-analytics-admin";
     license = lib.licenses.asl20;
   };
-}
+})

@@ -30,7 +30,7 @@ let
   miniexprRev = "37bf6982bf9619036b47f095b7005bc3c87a7447";
   tinyccRev = "41208bdc85612042f363f425cda4601b3ed90d64";
 in
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "blosc2";
   version = "4.1.2";
   pyproject = true;
@@ -39,7 +39,7 @@ buildPythonPackage rec {
     (fetchFromGitHub {
       owner = "Blosc";
       repo = "python-blosc2";
-      tag = "v${version}";
+      tag = "v${finalAttrs.version}";
       hash = "sha256-z5g3OXSKKR/2yQ5n1hb+br009xaX8C7HxbDDLVfSYNw=";
     })
     (fetchFromGitHub {
@@ -130,4 +130,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Blosc/python-blosc2";
     license = lib.licenses.bsd3;
   };
-}
+})

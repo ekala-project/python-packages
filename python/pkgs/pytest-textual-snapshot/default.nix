@@ -14,7 +14,7 @@
   textual,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytest-textual-snapshot";
   version = "1.1.0";
   pyproject = true;
@@ -22,7 +22,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Textualize";
     repo = "pytest-textual-snapshot";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-ItwwaODnlya/T0Fk5DOPRLoBOwkUN5wq69cELuvy/Js=";
   };
 
@@ -66,4 +66,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Textualize/pytest-textual-snapshot";
     license = lib.licenses.mit;
   };
-}
+})

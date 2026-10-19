@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "biplist";
   version = "1.0.3";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-TAVJdkxf5QsoBC7CGqLhT+GiIk4jmh2ud9nn85MqpMY=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://bitbucket.org/wooster/biplist/src/master/";
     license = lib.licenses.bsd3;
   };
-}
+})

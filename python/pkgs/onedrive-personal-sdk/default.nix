@@ -8,7 +8,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "onedrive-personal-sdk";
   version = "0.1.7";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "zweckj";
     repo = "onedrive-personal-sdk";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-V95lfq8GnuitdFbY8MPpX0kyvj8Gx24W2NFeKp0FsSo=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/zweckj/onedrive-personal-sdk";
     license = lib.licenses.mit;
   };
-}
+})

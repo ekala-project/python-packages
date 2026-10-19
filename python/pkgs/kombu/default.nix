@@ -20,7 +20,7 @@
   vine,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "kombu";
   version = "5.6.2";
   pyproject = true;
@@ -28,7 +28,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "celery";
     repo = "kombu";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-J0cEQsMHKethrfDVDDvIjc/iZpoCYLH9INHtgKmH9Pk=";
   };
 
@@ -66,4 +66,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/celery/kombu";
     license = lib.licenses.bsd3;
   };
-}
+})

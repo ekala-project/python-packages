@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "xmlschema";
   version = "4.3.2";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "sissaschool";
     repo = "xmlschema";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-OEQUq98n9dUKR8tWokboDhozBCczYCUlqI2qUGaTHtw=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/sissaschool/xmlschema";
     license = lib.licenses.mit;
   };
-}
+})

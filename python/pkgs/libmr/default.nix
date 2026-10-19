@@ -8,13 +8,13 @@
   cython,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "libmr";
   version = "0.1.9";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     extension = "zip";
     sha256 = "43ccd86693b725fa3abe648c8cdcef17ba5fa46b5528168829e5f9b968dfeb70";
   };
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Vastlab/libMR";
     license = lib.licenses.bsd3;
   };
-}
+})

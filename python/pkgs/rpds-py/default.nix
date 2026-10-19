@@ -9,14 +9,14 @@
   libiconv,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "rpds-py";
   version = "0.30.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "rpds_py";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-3Y/3z5ABSvDA94fuo0eU6/ZBUkLuHW+pHqunJcxEHoQ=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/crate-py/rpds";
     license = lib.licenses.mit;
   };
-}
+})

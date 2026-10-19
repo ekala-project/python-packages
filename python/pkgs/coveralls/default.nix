@@ -10,7 +10,7 @@
   typer,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "coveralls";
   version = "4.1.0";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "TheKevJames";
     repo = "coveralls-python";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-9gvQDGutOGf1SxfgDS0t28MjO/WPt4iv1HeqPLrfgw8=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/coveralls-clients/coveralls-python";
     license = lib.licenses.mit;
   };
-}
+})

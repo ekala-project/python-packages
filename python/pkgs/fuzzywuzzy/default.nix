@@ -10,13 +10,13 @@
   levenshtein,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "fuzzywuzzy";
   version = "0.18.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-RQFukiZHgOWJctyhs9k5rIZLeEN0Ir7s67MJX479AOg=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/seatgeek/fuzzywuzzy";
     license = lib.licenses.gpl2Only;
   };
-}
+})

@@ -14,7 +14,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "declinate";
   version = "0.0.6";
   pyproject = true;
@@ -22,7 +22,7 @@ buildPythonPackage rec {
   src = fetchFromGitLab {
     owner = "ternaris";
     repo = "declinate";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-JEO/GtbG/yQuj8vJJaWex9mGy6qpWOPHGlKrdG9vt28=";
   };
 
@@ -48,4 +48,4 @@ buildPythonPackage rec {
     homepage = "https://gitlab.com/ternaris/declinate";
     license = lib.licenses.asl20;
   };
-}
+})

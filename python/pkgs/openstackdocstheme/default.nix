@@ -8,13 +8,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "openstackdocstheme";
   version = "3.5.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-3h1dXtIMk1/CgbUP30ppUo+Q8qdb7PQtGIRD9eGWwJ8=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/openstack/openstackdocstheme";
     license = lib.licenses.asl20;
   };
-}
+})

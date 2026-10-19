@@ -7,13 +7,13 @@
   numpy,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "iisignature";
   version = "0.24";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-C5MUxui4BIf68yMZH7NZhq1CJuhrDGfPCjspObaVucY=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://pypi.org/project/iisignature";
     license = lib.licenses.mit;
   };
-}
+})

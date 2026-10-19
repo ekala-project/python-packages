@@ -7,7 +7,7 @@
   requests,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "notify-events";
   version = "1.1.3";
 
@@ -15,7 +15,7 @@ buildPythonPackage rec {
 
   src = fetchPypi {
     pname = "notify_events";
-    inherit version;
+    inherit (finalAttrs) version;
     sha256 = "e63ba935c3300ff7f48cba115f7cb4474906e83c2e9b60b95a0881eb949701e7";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/notify-events/python";
     license = lib.licenses.mit;
   };
-}
+})

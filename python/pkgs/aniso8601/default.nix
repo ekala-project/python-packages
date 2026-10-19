@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aniso8601";
   version = "10.0.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-JUiPhmPdFSiuH1T5SsHqUa4ltNUxU5uLxwf+0YTRaEU=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://bitbucket.org/nielsenb/aniso8601";
     license = lib.licenses.bsd3;
   };
-}
+})

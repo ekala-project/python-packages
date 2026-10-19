@@ -30,7 +30,7 @@
   boto3,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "papermill";
   version = "2.6.0";
   pyproject = true;
@@ -38,7 +38,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "nteract";
     repo = "papermill";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-NxC5+hRDdMCl/7ZIho5ml4hdENrgO+wzi87GRPeMv8Q=";
   };
 
@@ -75,4 +75,4 @@ buildPythonPackage rec {
     license = lib.licenses.bsd3;
     mainProgram = "papermill";
   };
-}
+})

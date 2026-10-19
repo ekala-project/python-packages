@@ -7,7 +7,7 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pypugjs";
   version = "7.0.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "kakulukia";
     repo = "pypugjs";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-L4vE0INrSsjtMQ2Psx2YUDdfMoetGd1rFgmeP5bSUVo=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/kakulukia/pypugjs";
     license = lib.licenses.mit;
   };
-}
+})

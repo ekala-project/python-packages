@@ -13,7 +13,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jc";
   version = "1.25.7";
   pyproject = true;
@@ -21,7 +21,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "kellyjonbrazil";
     repo = "jc";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-aufAR+Y5ocJNWSr8CLIb0TZM6a3B6jqS3Ji1WIOLzBU=";
   };
 
@@ -57,4 +57,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     mainProgram = "jc";
   };
-}
+})

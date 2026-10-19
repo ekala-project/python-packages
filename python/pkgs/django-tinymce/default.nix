@@ -8,13 +8,13 @@
   pytest-django,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-tinymce";
   version = "5.0.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit version;
+    inherit (finalAttrs) version;
     pname = "django_tinymce";
     hash = "sha256-YldmntWWrM9fqWf/MGEnayxTUrqsG7xlj82CUrEso4o=";
   };
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jazzband/django-tinymce";
     license = lib.licenses.mit;
   };
-}
+})

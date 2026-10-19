@@ -6,14 +6,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "func-timeout";
   version = "4.3.5";
   pyproject = true;
 
   src = fetchPypi {
     pname = "func_timeout";
-    inherit version;
+    inherit (finalAttrs) version;
     sha256 = "74cd3c428ec94f4edfba81f9b2f14904846d5ffccc27c92433b8b5939b5575dd";
   };
 
@@ -25,4 +25,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/kata198/func_timeout";
     license = lib.licenses.lgpl3Only;
   };
-}
+})

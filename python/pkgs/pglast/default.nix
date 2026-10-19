@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pglast";
   version = "7.13";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "lelit";
     repo = "pglast";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     fetchSubmodules = true;
     hash = "sha256-q5QiP8UPQQnG2Ehgj9hngXnhCKvZyCy8mKA0rzWM7EY=";
   };
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     license = lib.licenses.gpl3Plus;
     mainProgram = "pgpp";
   };
-}
+})

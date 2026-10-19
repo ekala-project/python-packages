@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "uritemplate";
   version = "4.2.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-SAwu0YCHiVWGMyPuoxsO3maHld4YJhf++cbKCebsnQ4=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
       bsd3
     ];
   };
-}
+})

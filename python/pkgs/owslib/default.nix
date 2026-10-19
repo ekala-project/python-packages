@@ -9,7 +9,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "owslib";
   version = "0.36.0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "geopython";
     repo = "OWSLib";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-Of/CSLcNnpTYHRm4toQK4/HXTWNcuEMkW6obWpg96Tc=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://www.osgeo.org/projects/owslib/";
     license = lib.licenses.bsd3;
   };
-}
+})

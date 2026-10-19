@@ -8,7 +8,7 @@
   httmock,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "freesms";
   version = "0.3.0";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "bfontaine";
     repo = "freesms";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-5f5amXH6VVppX9/9DhILdBU8w/6n67EUgBy/zgTEUCM=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/bfontaine/freesms";
     license = lib.licenses.mit;
   };
-}
+})

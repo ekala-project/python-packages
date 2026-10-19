@@ -6,13 +6,13 @@
   sphinx,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "sphinxcontrib-moderncmakedomain";
   version = "3.29.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit version;
+    inherit (finalAttrs) version;
     pname = "sphinxcontrib_moderncmakedomain";
     hash = "sha256-NYfe8kH/JXfQu+8RgQoILp3sG3ij1LSgZiQLXz3BtbI=";
   };
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/scikit-build/moderncmakedomain";
     license = lib.licenses.bsd3;
   };
-}
+})

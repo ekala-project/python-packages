@@ -6,7 +6,7 @@
   numpy,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "nbtlib";
   version = "2.0.4";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "vberlier";
     repo = "nbtlib";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-L8eX6/0qiQ4UxbmDicLedzj+oBjYmlK96NpljE/A3eI=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/vberlier/nbtlib";
     license = lib.licenses.mit;
   };
-}
+})

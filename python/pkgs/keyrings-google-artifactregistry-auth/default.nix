@@ -10,14 +10,14 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "keyrings-google-artifactregistry-auth";
   version = "1.1.2";
   pyproject = true;
 
   src = fetchPypi {
     pname = "keyrings.google-artifactregistry-auth";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-vWq7cnQNLf60pcA8OxBcb326FpyqKd7jlZaU8fAsd94=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/GoogleCloudPlatform/artifact-registry-python-tools";
     license = lib.licenses.asl20;
   };
-}
+})

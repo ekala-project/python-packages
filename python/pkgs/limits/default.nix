@@ -22,7 +22,7 @@
   valkey,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "limits";
   version = "5.8.0";
   pyproject = true;
@@ -30,7 +30,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "alisaifee";
     repo = "limits";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-svCvfQcidmfTPpe/GPrPxDhIPbmyoeIlXBR2vttTyHI=";
     postFetch = ''
       rm "$out/limits/_version.pyi"
@@ -88,4 +88,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/alisaifee/limits";
     license = lib.licenses.mit;
   };
-}
+})

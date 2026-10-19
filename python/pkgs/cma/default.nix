@@ -13,7 +13,7 @@
   python,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "cma";
   version = "4.4.4";
   pyproject = true;
@@ -21,7 +21,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "CMA-ES";
     repo = "pycma";
-    tag = "r${version}";
+    tag = "r${finalAttrs.version}";
     hash = "sha256-GQ4aXkfohVAeMjyf24g37ExhDrGSi6ZVXGhw6NYEAuk=";
   };
 
@@ -52,4 +52,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/CMA-ES/pycma";
     license = lib.licenses.bsd3;
   };
-}
+})
