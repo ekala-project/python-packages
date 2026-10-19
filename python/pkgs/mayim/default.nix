@@ -45,7 +45,7 @@ buildPythonPackage (finalAttrs: {
     pytest-cov-stub
   ]
   ++ (
-    with optional-dependencies;
+    with finalAttrs.optional-dependencies;
     lib.concatLists [
       postgres
       mysql

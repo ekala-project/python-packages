@@ -53,7 +53,7 @@ buildPythonPackage (finalAttrs: {
     pytest-django
     pytestCheckHook
   ]
-  ++ lib.concatAttrValues optional-dependencies;
+  ++ lib.concatAttrValues finalAttrs.optional-dependencies;
 
   meta = {
     description = "Django app for creating HTML tables";

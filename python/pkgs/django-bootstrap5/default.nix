@@ -43,7 +43,7 @@ buildPythonPackage (finalAttrs: {
     pytest-django
     pytestCheckHook
   ]
-  ++ lib.concatAttrValues optional-dependencies;
+  ++ lib.concatAttrValues finalAttrs.optional-dependencies;
 
   preCheck = ''
     export DJANGO_SETTINGS_MODULE=tests.app.settings

@@ -59,7 +59,7 @@ buildPythonPackage (finalAttrs: {
     pytestCheckHook
     syrupy
   ]
-  ++ lib.concatAttrValues optional-dependencies;
+  ++ lib.concatAttrValues finalAttrs.optional-dependencies;
 
   pythonImportsCheck = [ "gotailwind" ];
 

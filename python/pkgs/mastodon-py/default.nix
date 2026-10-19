@@ -56,7 +56,7 @@ buildPythonPackage (finalAttrs: {
     pytest-vcr
     requests-mock
   ]
-  ++ lib.concatAttrValues optional-dependencies;
+  ++ lib.concatAttrValues finalAttrs.optional-dependencies;
 
   pythonImportsCheck = [ "mastodon" ];
 

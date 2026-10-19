@@ -30,7 +30,7 @@ buildPythonPackage (finalAttrs: {
   # make sense without either of the two optional dependencies. Since, in
   # Nixpkgs, phonenumberslite depends on phonenumbers, add the latter
   # unconditionally.
-  dependencies = [ django ] ++ optional-dependencies.phonenumbers;
+  dependencies = [ django ] ++ finalAttrs.optional-dependencies.phonenumbers;
   nativeBuildInputs = [ gettext ];
 
   pythonImportsCheck = [ "phonenumber_field" ];

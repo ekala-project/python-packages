@@ -32,7 +32,7 @@ buildPythonPackage (finalAttrs: {
     pytest-aiohttp
     pytest-cov-stub
   ]
-  ++ lib.concatAttrValues optional-dependencies;
+  ++ lib.concatAttrValues finalAttrs.optional-dependencies;
 
   pythonImportsCheck = [ "aiojobs" ];
 

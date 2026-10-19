@@ -46,7 +46,7 @@ buildPythonPackage (finalAttrs: {
   build-system = [ flit-core ];
 
   optional-dependencies = {
-    all = optional-dependencies.azure ++ optional-dependencies.gs ++ optional-dependencies.s3;
+    all = finalAttrs.optional-dependencies.azure ++ finalAttrs.optional-dependencies.gs ++ finalAttrs.optional-dependencies.s3;
     azure = [
       azure-storage-blob
       azure-storage-file-datalake

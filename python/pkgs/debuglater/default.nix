@@ -36,7 +36,7 @@ buildPythonPackage (finalAttrs: {
     pandas
     pytestCheckHook
   ]
-  ++ optional-dependencies.all;
+  ++ finalAttrs.optional-dependencies.all;
 
   pythonImportsCheck = [ "debuglater" ];
 
