@@ -48,8 +48,8 @@ buildPythonPackage (finalAttrs: {
     # Forge look and feel of multi-output derivation as best as we can.
     #
     # Using 'outputs = [ "doc" ];' breaks a lot of assumptions.
-    pname = "${pname}-doc";
-    inherit src version;
+    pname = "${finalAttrs.pname}-doc";
+    inherit (finalAttrs) src version meta;
 
     patches = [
       # Fix import of "sphinxcontrib-log-cabinet"
@@ -68,7 +68,6 @@ buildPythonPackage (finalAttrs: {
     ];
 
     inherit (python) pythonVersion;
-    inherit meta;
   };
   meta = {
     description = "Very fast and expressive template engine";
