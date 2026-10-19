@@ -20,14 +20,13 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     h2
     pyopenssl
     pyjwt
   ];
 
   # Project has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "aioapns" ];
 

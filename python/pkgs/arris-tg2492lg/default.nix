@@ -22,7 +22,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [ aiohttp ];
+  dependencies = [ aiohttp ];
 
   nativeCheckInputs = [
     pytest-aiohttp

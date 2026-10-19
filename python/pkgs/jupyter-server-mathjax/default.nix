@@ -23,7 +23,7 @@ buildPythonPackage rec {
     setuptools
   ];
 
-  propagatedBuildInputs = [ jupyter-server ];
+  dependencies = [ jupyter-server ];
 
   pythonImportsCheck = [ "jupyter_server_mathjax" ];
 

@@ -20,7 +20,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "latexrestricted" ];
 
   # upstream has no tests
-  doCheck = false;
 
   meta = {
     homepage = "https://github.com/gpoore/latexrestricted";

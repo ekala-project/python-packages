@@ -22,7 +22,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ hatchling ];
 
-  propagatedBuildInputs = [ requests ];
+  dependencies = [ requests ];
 
   nativeCheckInputs = [
     pytestCheckHook

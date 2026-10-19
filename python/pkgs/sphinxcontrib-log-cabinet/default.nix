@@ -17,7 +17,7 @@ buildPythonPackage (finalAttrs: {
     sha256 = "03cxspgqsap9q74sqkdx6r6b4gs4hq6dpvx4j58hm50yfhs06wn1";
   };
 
-  propagatedBuildInputs = [ sphinx ];
+  dependencies = [ sphinx ];
 
   pythonImportsCheck = [ "sphinxcontrib.log_cabinet" ];
 

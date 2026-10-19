@@ -16,7 +16,7 @@ buildPythonPackage rec {
     sha256 = "sha256-glKIJGtd68lDb5GWdlCXTvDVY2RYUCYZ4yLEdvEoOJE=";
   };
 
-  propagatedBuildInputs = [ enchant_2 ];
+  dependencies = [ enchant_2 ];
 
   postPatch =
     let

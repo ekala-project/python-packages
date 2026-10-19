@@ -30,11 +30,11 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "digitalbazaar";
     repo = "pyld";
-    rev = version;
+    tag = version;
     sha256 = "0z2vkllw8bvzxripwb6l757r7av5qwhzsiy4061gmlhq8z8gq961";
   };
 
-  propagatedBuildInputs = [ requests ];
+  dependencies = [ requests ];
 
   # Unfortunately PyLD does not pass all testcases in the JSON-LD corpus. We
   # getting worse, at least.

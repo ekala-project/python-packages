@@ -11,13 +11,12 @@ buildPythonPackage rec {
   version = "0.0.5";
   format = "setuptools";
 
-  propagatedBuildInputs = [
+  dependencies = [
     jinja2
     six
   ];
 
   # No tests in archive
-  doCheck = false;
 
   src = fetchPypi {
     inherit pname version;

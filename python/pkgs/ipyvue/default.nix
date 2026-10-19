@@ -21,7 +21,6 @@ buildPythonPackage rec {
 
   dependencies = [ ipywidgets ];
 
-  doCheck = false; # No tests in package or GitHub
   pythonImportsCheck = [ "ipyvue" ];
 
   meta = {

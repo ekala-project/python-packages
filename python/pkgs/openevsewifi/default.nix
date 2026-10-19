@@ -19,13 +19,13 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "miniconfig";
     repo = "python-openevse-wifi";
-    rev = "v${version}";
+    tag = "v${version}";
     hash = "sha256-7+BC5WG0JoyHNjgsoJBQRVDpmdXMJCV4bMf6pIaS5qo=";
   };
 
   nativeBuildInputs = [ poetry-core ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     deprecated
     requests
   ];

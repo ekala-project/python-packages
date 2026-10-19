@@ -15,7 +15,6 @@ buildPythonPackage rec {
   };
 
   # Fails with "error: invalid command 'test'"
-  doCheck = false;
 
   meta = {
     homepage = "https://github.com/google/gdata-python-client";

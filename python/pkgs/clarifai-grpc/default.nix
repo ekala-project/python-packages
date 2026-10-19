@@ -35,7 +35,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # almost all tests require network access
-  doCheck = false;
 
   pythonImportsCheck = [ "clarifai_grpc" ];
 

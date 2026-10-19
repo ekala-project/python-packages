@@ -17,7 +17,6 @@ buildPythonPackage {
   };
 
   # tests require cocotb, disable for now to avoid circular dependency
-  doCheck = false;
 
   # checkPhase = ''
   #   export PATH=$out/bin:$PATH

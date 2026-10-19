@@ -34,8 +34,6 @@ buildPythonPackage (finalAttrs: {
 
   pythonImportsCheck = [ "moddb" ];
 
-  doCheck = false; # Tests try to access the internet.
-
   meta = {
     description = "Python scrapper to access ModDB mods, games and more as objects";
     homepage = "https://github.com/ClementJ18/moddb";

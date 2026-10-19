@@ -24,7 +24,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "findspark" ];
 
   # No tests
-  doCheck = false;
 
   meta = {
     description = "Find pyspark to make it importable";

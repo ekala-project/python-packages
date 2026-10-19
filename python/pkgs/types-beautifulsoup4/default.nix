@@ -22,7 +22,6 @@ buildPythonPackage rec {
   dependencies = [ types-html5lib ];
 
   # Module has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "bs4-stubs" ];
 

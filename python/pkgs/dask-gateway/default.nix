@@ -32,7 +32,6 @@ buildPythonPackage rec {
   ];
 
   # tests requires cluster for testing
-  doCheck = false;
 
   pythonImportsCheck = [ "dask_gateway" ];
 

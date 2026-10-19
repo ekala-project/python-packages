@@ -38,7 +38,7 @@ buildPythonPackage rec {
 
   pythonRelaxDeps = [ "greenlet" ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     brotlicffi
     decorator
     flask

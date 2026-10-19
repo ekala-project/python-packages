@@ -14,13 +14,13 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Stranger6667";
     repo = "pytest-click";
-    rev = "v${version}";
+    tag = "v${version}";
     hash = "sha256-A/RF+SgPu2yYF3eHEFiZwKJW2VwQ185Ln6S3wn2cS0k=";
   };
 
   buildInputs = [ pytest ];
 
-  propagatedBuildInputs = [ click ];
+  dependencies = [ click ];
 
   meta = {
     description = "Pytest plugin for click";

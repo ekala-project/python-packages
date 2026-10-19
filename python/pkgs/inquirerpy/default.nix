@@ -21,7 +21,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ poetry-core ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     pfzy
     prompt-toolkit
   ];

@@ -22,7 +22,6 @@ buildPythonPackage rec {
   dependencies = [ flask ];
 
   # no tests
-  doCheck = false;
   pythonImportsCheck = [ "flask_sslify" ];
 
   meta = {

@@ -43,7 +43,7 @@ buildPythonPackage rec {
 
   buildInputs = lib.optionals stdenv.hostPlatform.isDarwin [ iconv ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     python-dateutil
     tzdata
   ];

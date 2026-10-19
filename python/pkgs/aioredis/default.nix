@@ -29,14 +29,13 @@ buildPythonPackage rec {
     })
   ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     async-timeout
     typing-extensions
   ]
   ++ lib.optional (!isPyPy) hiredis;
 
   # Wants to run redis-server, hardcoded FHS paths, too much trouble.
-  doCheck = false;
 
   meta = {
     description = "Asyncio (PEP 3156) Redis client library";

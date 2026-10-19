@@ -83,7 +83,7 @@ buildPythonPackage rec {
 
   buildInputs = [ tpm2-tss ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     cffi
     asn1crypto
     cryptography

@@ -19,7 +19,7 @@ buildPythonPackage rec {
     hash = "sha256-TVq/6dHttDGIUFzn8KTVeDTwcBMmphz3zrsGK7ux4aU=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     msrest
     msrestazure
     azure-common
@@ -27,7 +27,6 @@ buildPythonPackage rec {
   ];
 
   # has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "azure.mgmt.media" ];
 

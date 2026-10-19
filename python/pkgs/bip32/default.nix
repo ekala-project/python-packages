@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "darosior";
     repo = "python-bip32";
-    rev = version;
+    tag = version;
     hash = "sha256-QO1gS9bx/eQPaLuB1ZNZuXj4DmeO4/La2hG9NCXjd+4=";
   };
 
@@ -25,7 +25,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     base58
     coincurve
   ];

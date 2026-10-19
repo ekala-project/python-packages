@@ -25,8 +25,6 @@ buildPythonPackage rec {
     werkzeug
   ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "flask_login" ];
 
   meta = {

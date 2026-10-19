@@ -26,7 +26,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # tests require network ..
-  doCheck = false;
 
   meta = {
     description = "Tools for removing the tedious nature of creating nixpkgs derivations";

@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "python-hyper";
     repo = "hpack";
-    rev = "v${version}";
+    tag = "v${version}";
     hash = "sha256-gZe/ABRLXoBAeH/mp/yIgDj56jalyiYgs4EP2qK17Ig=";
   };
 

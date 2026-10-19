@@ -29,7 +29,7 @@ buildPythonPackage (finalAttrs: {
 
   buildInputs = [ pytest ];
 
-  propagatedBuildInputs = [ requests ];
+  dependencies = [ requests ];
   pythonImportsCheck = [ "pytest_base_url" ];
 
   meta = {

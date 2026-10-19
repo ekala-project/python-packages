@@ -23,7 +23,7 @@ buildPythonPackage rec {
                      'poppler_path: Union[str, PurePath] = "${poppler-utils}/bin"'
   '';
 
-  propagatedBuildInputs = [ pillow ];
+  dependencies = [ pillow ];
 
   pythonImportsCheck = [ "pdf2image" ];
 

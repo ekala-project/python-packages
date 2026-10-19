@@ -15,10 +15,9 @@ buildPythonPackage rec {
     sha256 = "11ymn0cr4lchrcnf2xxlgljw223gwln01gxwr7mcgf95yc4006iq";
   };
 
-  propagatedBuildInputs = [ requests ];
+  dependencies = [ requests ];
 
   # Project has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "niluclient" ];
 

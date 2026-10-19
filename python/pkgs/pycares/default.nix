@@ -34,7 +34,6 @@ buildPythonPackage (finalAttrs: {
   propagatedNativeBuildInputs = [ cffi ];
 
   # Requires network access
-  doCheck = false;
 
   pythonImportsCheck = [ "pycares" ];
 

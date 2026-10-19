@@ -13,11 +13,11 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "sdgathman";
     repo = "pyspf";
-    rev = "pyspf-${version}";
+    tag = "pyspf-${version}";
     sha256 = "0bmimlmwrq9glnjc4i6pwch30n3y5wyqmkjfyayxqxkfrixqwydi";
   };
 
-  propagatedBuildInputs = [ py3dns ];
+  dependencies = [ py3dns ];
 
   # requires /etc/resolv.conf to exist
   meta = {

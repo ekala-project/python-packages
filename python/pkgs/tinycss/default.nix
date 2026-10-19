@@ -22,7 +22,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ cython ];
 
-  propagatedBuildInputs = [ cssutils ];
+  dependencies = [ cssutils ];
 
   preBuild = ''
     # Force Cython to re-generate this file. If it is present, Cython will

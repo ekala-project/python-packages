@@ -30,7 +30,6 @@ buildPythonPackage rec {
   ];
 
   # Module has no tests
-  doCheck = false;
 
   meta = {
     description = "Client library for Microsoft Azure Storage services containing the blob service APIs";

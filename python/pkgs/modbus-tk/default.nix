@@ -22,7 +22,6 @@ buildPythonPackage rec {
   dependencies = [ pyserial ];
 
   # Source no tagged anymore and PyPI doesn't ship tests
-  doCheck = false;
 
   pythonImportsCheck = [ "modbus_tk" ];
 

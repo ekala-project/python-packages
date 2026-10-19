@@ -19,7 +19,7 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-CtToztLVvSb91pMpPNL8RysQJzlRkeXuQbpvbkX3jfM=";
   };
 
-  propagatedBuildInputs = [ django ];
+  dependencies = [ django ];
 
   nativeCheckInputs = [
     pytest-django

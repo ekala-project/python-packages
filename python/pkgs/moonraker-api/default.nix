@@ -26,7 +26,7 @@ buildPythonPackage rec {
       --replace 'name="moonraker-api",' 'name="moonraker-api",version="${version}",'
   '';
 
-  propagatedBuildInputs = [
+  dependencies = [
     aiohttp
     async-timeout
   ];

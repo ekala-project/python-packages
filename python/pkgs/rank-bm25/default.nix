@@ -25,7 +25,7 @@ buildPythonPackage {
     substituteInPlace setup.py --replace "get_version()" "'${version}'"
   '';
 
-  propagatedBuildInputs = [ numpy ];
+  dependencies = [ numpy ];
 
   pythonImportsCheck = [ "rank_bm25" ];
 

@@ -23,7 +23,7 @@ buildPythonPackage (finalAttrs: {
 
   build-system = [ setuptools ];
 
-  propagatedBuildInputs = [ m2crypto ];
+  dependencies = [ m2crypto ];
 
   # Patches necessary for Python 3 compatibility plus bugfixes
   patches =

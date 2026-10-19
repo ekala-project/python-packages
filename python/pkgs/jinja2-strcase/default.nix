@@ -29,8 +29,6 @@ buildPythonPackage rec {
 
   pythonImportsCheck = [ "jinja2_strcase" ];
 
-  doCheck = false; # no tests
-
   meta = {
     homepage = "https://github.com/marchmiel/jinja2-strcase";
     description = "Library for converting string case in Jinja2 templates";

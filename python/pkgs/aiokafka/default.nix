@@ -49,7 +49,6 @@ buildPythonPackage rec {
   };
 
   # Checks require running Kafka server
-  doCheck = false;
 
   pythonImportsCheck = [ "aiokafka" ];
 

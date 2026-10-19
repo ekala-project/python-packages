@@ -32,7 +32,6 @@ buildPythonPackage {
   ];
 
   # fails in various ways
-  doCheck = false;
   pythonImportsCheck = [
     "pytest_pook"
   ];

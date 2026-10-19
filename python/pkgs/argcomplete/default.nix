@@ -24,7 +24,6 @@ buildPythonPackage rec {
   ];
 
   # Tries to build and install test packages which fails
-  doCheck = false;
 
   pythonImportsCheck = [ "argcomplete" ];
 

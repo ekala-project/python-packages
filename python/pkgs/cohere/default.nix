@@ -60,7 +60,6 @@ buildPythonPackage rec {
   };
 
   # tests require CO_API_KEY
-  doCheck = false;
 
   pythonImportsCheck = [ "cohere" ];
 

@@ -40,8 +40,6 @@ buildPythonPackage rec {
     pynacl = [ pynacl ];
   };
 
-  doCheck = false; # runs redis in docker
-
   pythonImportsCheck = [ "aiohttp_session" ];
 
   meta = {

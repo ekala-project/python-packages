@@ -54,7 +54,6 @@ buildPythonPackage rec {
   };
 
   # Bunch of failures.
-  doCheck = false;
 
   pythonImportsCheck = [
     "gevent"

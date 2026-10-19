@@ -29,7 +29,7 @@ buildPythonPackage (finalAttrs: {
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     certifi
     chardet
     idna
@@ -38,7 +38,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # Project has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "frigidaire" ];
 

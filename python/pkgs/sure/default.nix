@@ -24,8 +24,6 @@ buildPythonPackage rec {
     six
   ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "sure" ];
 
   meta = {

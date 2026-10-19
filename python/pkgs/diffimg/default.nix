@@ -30,7 +30,7 @@ buildPythonPackage {
       --replace-warn "3503192421617232" "3503192421617233"
   '';
 
-  propagatedBuildInputs = [ pillow ];
+  dependencies = [ pillow ];
 
   pythonImportsCheck = [ "diffimg" ];
 

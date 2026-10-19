@@ -24,8 +24,6 @@ buildPythonPackage rec {
     webencodings
   ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "cssselect2" ];
 
   meta = {

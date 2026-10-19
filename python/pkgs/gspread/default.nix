@@ -22,7 +22,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ flit-core ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     google-auth
     google-auth-oauthlib
     strenum

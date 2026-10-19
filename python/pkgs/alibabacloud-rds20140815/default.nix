@@ -14,8 +14,6 @@ buildPythonPackage (finalAttrs: {
   version = "15.9.1";
   pyproject = true;
 
-  __structuredAttrs = true;
-
   src = fetchPypi {
     pname = "alibabacloud_rds20140815";
     inherit (finalAttrs) version;
@@ -34,7 +32,6 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [ "alibabacloud_rds20140815" ];
 
   # Module has no tests
-  doCheck = false;
 
   meta = {
     description = "Alibaba Cloud rds (20140815) SDK Library for Python";

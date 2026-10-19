@@ -17,11 +17,10 @@ buildPythonPackage rec {
     hash = "sha256-XwGm/FQbXSV2qbAlHyAbT4DLcQnIseDm1Qqdb5zjE0M=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     flask
     elasticsearch
   ];
-  doCheck = false; # no tests
 
   meta = {
     description = "Integrates official client for Elasticsearch into Flask";

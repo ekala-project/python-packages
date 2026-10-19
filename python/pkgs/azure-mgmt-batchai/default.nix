@@ -13,8 +13,6 @@ buildPythonPackage (finalAttrs: {
   version = "7.0.0";
   pyproject = true;
 
-  __structuredAttrs = true;
-
   src = fetchPypi {
     inherit (finalAttrs) version;
     pname = "azure_mgmt_batchai";
@@ -32,7 +30,6 @@ buildPythonPackage (finalAttrs: {
   pythonNamespaces = [ "azure.mgmt" ];
 
   # has no tests
-  doCheck = false;
 
   meta = {
     description = "This is the Microsoft Azure Batch AI Management Client Library";

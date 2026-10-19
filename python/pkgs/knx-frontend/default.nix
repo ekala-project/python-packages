@@ -22,7 +22,6 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [ "knx_frontend" ];
 
   # no tests
-  doCheck = false;
 
   meta = {
     description = "Home Assistant Panel for managing the KNX integration";

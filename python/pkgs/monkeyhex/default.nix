@@ -15,10 +15,9 @@ buildPythonPackage rec {
     sha256 = "a646096dd3114ee8a7c6f30363f38c288ec56c4e032c8fc7e681792b604dd122";
   };
 
-  propagatedBuildInputs = [ future ];
+  dependencies = [ future ];
 
   # No tests in repo.
-  doCheck = false;
 
   # Verify import still works.
   pythonImportsCheck = [ "monkeyhex" ];

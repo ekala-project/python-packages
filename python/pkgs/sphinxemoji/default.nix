@@ -29,7 +29,7 @@ buildPythonPackage rec {
     sphinxHook
   ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     sphinx
     # sphinxemoji.py imports pkg_resources directly
     setuptools

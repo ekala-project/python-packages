@@ -20,7 +20,6 @@ buildPythonPackage rec {
   build-system = [ setuptools ];
 
   # Most tests require network access
-  doCheck = false;
 
   pythonImportsCheck = [ "pytube" ];
 

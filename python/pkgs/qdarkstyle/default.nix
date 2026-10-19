@@ -19,7 +19,7 @@ buildPythonPackage rec {
 
   # No tests available
 
-  propagatedBuildInputs = [
+  dependencies = [
     helpdev
     qtpy
   ];

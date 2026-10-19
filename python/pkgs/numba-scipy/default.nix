@@ -17,7 +17,7 @@ buildPythonPackage rec {
     hash = "sha256-RDZF1mNcZnrcOzjQpjbZq8yXHnjeLAeAjYmvzXvFhEQ=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     scipy
     numba
   ];

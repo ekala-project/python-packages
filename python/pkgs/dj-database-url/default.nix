@@ -29,7 +29,6 @@ buildPythonPackage rec {
   dependencies = [ django ];
 
   # Tests access a DB via network
-  doCheck = false;
 
   pythonImportsCheck = [ "dj_database_url" ];
 

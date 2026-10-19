@@ -23,8 +23,6 @@ buildPythonPackage rec {
     six
   ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "paste" ];
 
   meta = {

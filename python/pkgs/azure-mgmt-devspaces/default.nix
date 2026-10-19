@@ -13,8 +13,6 @@ buildPythonPackage (finalAttrs: {
   version = "0.2.0";
   pyproject = true;
 
-  __structuredAttrs = true;
-
   src = fetchPypi {
     inherit (finalAttrs) pname version;
     extension = "zip";
@@ -30,7 +28,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "azure.mgmt.devspaces" ];
 

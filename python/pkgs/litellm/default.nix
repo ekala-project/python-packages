@@ -151,8 +151,6 @@ buildPythonPackage rec {
     "python-dotenv"
   ];
 
-  doCheck = false;
-
   meta = {
     description = "Use any LLM as a drop in replacement for gpt-3.5-turbo";
     mainProgram = "litellm";

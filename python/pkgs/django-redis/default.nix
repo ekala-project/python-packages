@@ -4,7 +4,7 @@
   buildPythonPackage,
   setuptools,
 
-  # propagated
+  # dependencies
   django,
   redis,
 }:

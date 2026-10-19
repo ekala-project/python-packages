@@ -23,7 +23,6 @@ buildPythonPackage rec {
   dependencies = [ django ];
 
   # Test requires postgres database
-  doCheck = false;
 
   pythonImportsCheck = [ "model_utils" ];
 

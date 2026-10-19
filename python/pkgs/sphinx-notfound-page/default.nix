@@ -44,7 +44,7 @@ buildPythonPackage rec {
 
   buildInputs = [ sphinx ];
 
-  propagatedBuildInputs = [ setuptools ];
+  dependencies = [ setuptools ];
 
   pythonImportsCheck = [ "notfound" ];
 

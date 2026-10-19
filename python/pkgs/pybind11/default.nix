@@ -88,7 +88,6 @@ buildPythonPackage (finalAttrs: {
     # derivation that doesn't depend on pybind11, and use it for pybind11's
     # build-system.
     scikit-build-core-no-tests = scikit-build-core.overridePythonAttrs {
-      doCheck = false;
     };
   };
 

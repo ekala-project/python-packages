@@ -26,7 +26,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ poetry-core ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     appdirs
     certifi
     importlib-metadata

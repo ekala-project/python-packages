@@ -29,7 +29,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ pkg-config ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     cffi
     libsecp256k1
   ];

@@ -25,7 +25,6 @@ buildPythonPackage rec {
   ++ httpx.optional-dependencies.http2;
 
   # requires running gotenberg service
-  doCheck = false;
 
   pythonImportsCheck = [ "gotenberg_client" ];
 

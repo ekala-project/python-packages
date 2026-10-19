@@ -21,7 +21,6 @@ buildPythonPackage rec {
   dependencies = [ httpx ] ++ httpx.optional-dependencies.http2;
 
   # Majority of tests just try to ping Google's Translate API endpoint
-  doCheck = false;
 
   pythonImportsCheck = [ "googletrans" ];
 

@@ -58,7 +58,6 @@ buildPythonPackage rec {
   };
 
   # Tests require internet connection
-  doCheck = false;
 
   pythonImportsCheck = [ "two_factor" ];
 

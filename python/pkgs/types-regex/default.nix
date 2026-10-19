@@ -21,7 +21,6 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [ "regex-stubs" ];
 
   # Module has no tests
-  doCheck = false;
 
   meta = {
     description = "Typing stubs for regex";

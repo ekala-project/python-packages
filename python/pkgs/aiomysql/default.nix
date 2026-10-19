@@ -26,10 +26,9 @@ buildPythonPackage rec {
     wheel
   ];
 
-  propagatedBuildInputs = [ pymysql ];
+  dependencies = [ pymysql ];
 
   # Tests require MySQL database
-  doCheck = false;
 
   pythonImportsCheck = [ "aiomysql" ];
 

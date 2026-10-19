@@ -41,7 +41,6 @@ buildPythonPackage (finalAttrs: {
   pythonRelaxDeps = [ "azure-datalake-store" ];
 
   # Tests require a running Docker instance
-  doCheck = false;
 
   pythonImportsCheck = [ "adlfs" ];
 

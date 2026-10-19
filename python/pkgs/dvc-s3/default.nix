@@ -39,7 +39,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # Network access is needed for tests
-  doCheck = false;
 
   # Circular dependency
   # pythonImportsCheck = [

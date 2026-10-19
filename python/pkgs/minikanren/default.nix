@@ -20,7 +20,6 @@ buildPythonPackage (finalAttrs: {
   pname = "minikanren";
   version = "1.0.5";
   pyproject = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "pythological";

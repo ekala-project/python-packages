@@ -12,8 +12,6 @@ buildPythonPackage (finalAttrs: {
   version = "3.0.0";
   pyproject = true;
 
-  __structuredAttrs = true;
-
   src = fetchFromGitHub {
     owner = "williballenthin";
     repo = "ida-netnode";
@@ -26,7 +24,6 @@ buildPythonPackage (finalAttrs: {
   dependencies = [ six ];
 
   # Module has no test and requires IDA to be installed
-  doCheck = false;
 
   # pythonImportsCheck = [ "netnode"];
 

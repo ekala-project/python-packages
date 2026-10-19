@@ -24,7 +24,6 @@ buildPythonPackage rec {
   build-system = [ setuptools ];
 
   # Tests require local socket connection which is forbidden in the sandbox
-  doCheck = false;
 
   nativeCheckInputs = [
     pytestCheckHook

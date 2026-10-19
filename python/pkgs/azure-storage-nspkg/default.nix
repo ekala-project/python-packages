@@ -11,8 +11,6 @@ buildPythonPackage (finalAttrs: {
   version = "3.1.0";
   pyproject = true;
 
-  __structuredAttrs = true;
-
   src = fetchPypi {
     inherit (finalAttrs) pname version;
     hash = "sha256-bzu+hlLV9UJ2fYQz5/lrjff1GHdAVax8ku18qF9lOBE=";
@@ -23,7 +21,6 @@ buildPythonPackage (finalAttrs: {
   dependencies = [ azure-nspkg ];
 
   # has no tests
-  doCheck = false;
 
   meta = {
     description = "Client library for Microsoft Azure Storage services owning the azure.storage namespace, user should not use this directly";

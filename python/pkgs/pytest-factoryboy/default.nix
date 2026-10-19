@@ -9,7 +9,7 @@
   # unpropagated
   pytest,
 
-  # propagated
+  # dependencies
   inflection,
   factory-boy,
   typing-extensions,
@@ -25,7 +25,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pytest-dev";
     repo = "pytest-factoryboy";
-    rev = version;
+    tag = version;
     sha256 = "sha256-9dMsUujMCk89Ze4H9VJRS+ihjk0PAxKb8xqlw0+ROEI=";
   };
 

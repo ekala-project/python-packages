@@ -19,7 +19,6 @@ buildPythonPackage (finalAttrs: {
   build-system = [ setuptools ];
 
   # No tests implemented
-  doCheck = false;
 
   pythonImportsCheck = [ "ecpy" ];
 

@@ -35,7 +35,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "datashaper" ];
 
   # pypi tarball has no tests
-  doCheck = false;
 
   meta = {
     description = "Collection of utilities for doing lightweight data wrangling";

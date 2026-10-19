@@ -19,7 +19,6 @@ buildPythonPackage (finalAttrs: {
   pname = "lance-namespace-urllib3-client";
   version = "0.12.0";
   pyproject = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "lancedb";

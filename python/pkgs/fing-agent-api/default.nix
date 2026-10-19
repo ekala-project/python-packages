@@ -23,7 +23,6 @@ buildPythonPackage (finalAttrs: {
   dependencies = [ httpx ];
 
   # upstream has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "fing_agent_api" ];
 

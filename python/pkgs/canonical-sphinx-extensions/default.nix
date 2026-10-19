@@ -33,8 +33,6 @@ buildPythonPackage rec {
     sphinx
   ];
 
-  doCheck = false;
-
   meta = {
     description = "Collection of Sphinx extensions used by Canonical documentation";
     homepage = "https://pypi.org/project/canonical-sphinx-extensions";

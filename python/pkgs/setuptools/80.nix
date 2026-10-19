@@ -37,7 +37,6 @@ buildPythonPackage (finalAttrs: {
   '';
 
   # Requires pytest, causing infinite recursion.
-  doCheck = false;
 
   passthru.tests = {
     inherit distutils_80;

@@ -31,8 +31,6 @@ buildPythonPackage rec {
 
   pythonImportsCheck = [ "flask_babel" ];
 
-  doCheck = false;
-
   meta = {
     homepage = "https://github.com/python-babel/flask-babel";
     description = "Adds i18n/l10n support to Flask applications";

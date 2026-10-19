@@ -29,7 +29,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "jupyterlab_vim" ];
 
   # has no tests
-  doCheck = false;
 
   meta = {
     description = "Vim notebook cell bindings for JupyterLab";

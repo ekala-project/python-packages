@@ -45,7 +45,7 @@ buildPythonPackage (finalAttrs: {
     ormsgpack
   ];
 
-  propagatedBuildInputs = [ msgpack ];
+  dependencies = [ msgpack ];
 
   pythonImportsCheck = [ "langgraph.checkpoint" ];
   passthru = {

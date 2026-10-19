@@ -25,7 +25,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     beautifulsoup4
     google-auth
     grpcio
@@ -33,7 +33,7 @@ buildPythonPackage rec {
     requests
   ];
 
-  checkInputs = [ pytestCheckHook ];
+  nativeCheckInputs = [ pytestCheckHook ];
 
   pythonImportsCheck = [ "gassist_text" ];
 

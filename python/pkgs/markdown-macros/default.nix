@@ -35,8 +35,6 @@ buildPythonPackage rec {
 
   dependencies = [ markdown ];
 
-  doCheck = false;
-
   meta = {
     description = "Extension for python-markdown that makes writing trac-like macros easy";
     homepage = "https://github.com/wnielson/markdown-macros";

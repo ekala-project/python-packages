@@ -95,8 +95,6 @@ buildPythonPackage rec {
     b_lto = false;
   };
 
-  doCheck = false;
-
   pythonImportsCheck = [ "matplotlib" ];
 
   meta = {

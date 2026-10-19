@@ -17,8 +17,6 @@ buildPythonPackage rec {
 
   build-system = [ hatchling ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "sh" ];
 
   meta = {

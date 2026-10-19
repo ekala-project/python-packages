@@ -30,8 +30,6 @@ buildPythonPackage rec {
     protobuf
   ];
 
-  doCheck = false; # no tests
-
   pythonRelaxDeps = [ "protobuf" ];
 
   meta = {

@@ -23,7 +23,7 @@ buildPythonPackage rec {
     python-ldap
   ];
   pythonImportsCheck = [ "pki" ];
-  propagatedBuildInputs = [
+  dependencies = [
     requests
     six
   ];

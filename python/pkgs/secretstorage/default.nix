@@ -27,7 +27,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # Needs a D-Bus session
-  doCheck = false;
 
   pythonImportsCheck = [ "secretstorage" ];
 

@@ -48,7 +48,6 @@ buildPythonPackage rec {
   ];
   env.DJANGO_SETTINGS_MODULE = "testproj.settings.local";
   # a lot of libraries are missing
-  doCheck = false;
 
   pythonImportsCheck = [ "drf_yasg" ];
 

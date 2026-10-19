@@ -32,7 +32,6 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [ "gerbonara" ];
 
   # Test environment is exceptionally tricky to get set up, so skip for now.
-  doCheck = false;
 
   passthru.updateScript = gitUpdater { rev-prefix = "v"; };
 

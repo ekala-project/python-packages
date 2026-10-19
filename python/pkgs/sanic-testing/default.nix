@@ -31,7 +31,6 @@ buildPythonPackage rec {
   ];
 
   # Tests require circular dependency with sanic
-  doCheck = false;
 
   pythonImportsCheck = [ "sanic_testing" ];
 

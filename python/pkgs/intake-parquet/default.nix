@@ -42,8 +42,6 @@ buildPythonPackage rec {
     pyarrow
   ];
 
-  doCheck = false;
-
   #pythonImportsCheck = [ "intake_parquet" ];
 
   meta = {

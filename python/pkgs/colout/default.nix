@@ -21,7 +21,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools-scm ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     babel
     pygments
   ];
@@ -29,7 +29,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "colout" ];
 
   # This project does not have a unit test
-  doCheck = false;
 
   meta = {
     description = "Color Up Arbitrary Command Output";

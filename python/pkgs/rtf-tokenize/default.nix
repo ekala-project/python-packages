@@ -9,7 +9,6 @@
 }:
 
 buildPythonPackage (finalAttrs: {
-  __structuredAttrs = true;
 
   pname = "rtf-tokenize";
   version = "1.0.1";
@@ -29,7 +28,7 @@ buildPythonPackage (finalAttrs: {
     which
   ];
 
-  versionCheckProgramArg = "${placeholder "out"}/${python.sitePackages}";
+  versionCheckProgramArg = "$(out)/${python.sitePackages}";
 
   preInstallCheck = ''
     versionCheckProgram="$(which ls)"

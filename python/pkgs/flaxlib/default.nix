@@ -44,8 +44,6 @@ buildPythonPackage rec {
 
   pythonImportsCheck = [ "flaxlib" ];
 
-  doCheck = false;
-
   meta = {
     description = "Rust library used internally by flax";
     homepage = "https://github.com/google/flax/tree/main/flaxlib";

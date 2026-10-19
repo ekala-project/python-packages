@@ -51,7 +51,6 @@ buildPythonPackage rec {
 
   # tests depend on RabbitMQ being installed - https://nameko.readthedocs.io/en/stable/contributing.html#running-the-tests
   # and most of the tests are network based
-  doCheck = false;
 
   pythonImportsCheck = [ "nameko" ];
 

@@ -42,7 +42,6 @@ buildPythonPackage rec {
   ];
 
   # No tests available
-  doCheck = false;
 
   meta = {
     description = "Embedding files of Diagrams.net (Draw.io) into MkDocs";

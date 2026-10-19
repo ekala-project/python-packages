@@ -18,7 +18,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [ numpy ];
+  dependencies = [ numpy ];
 
   pythonImportsCheck = [ "stanio" ];
 

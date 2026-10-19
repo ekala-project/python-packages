@@ -18,7 +18,6 @@ buildPythonPackage rec {
   build-system = [ setuptools ];
 
   # No tests
-  doCheck = false;
 
   pythonImportsCheck = [ "namex" ];
 

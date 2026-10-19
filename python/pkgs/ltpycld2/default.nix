@@ -17,8 +17,6 @@ buildPythonPackage rec {
     sha256 = "948d0c1ab5518ab4efcbcc3cd73bb29f809f1dfb30f4d2fbd81b175a1ffeb516";
   };
 
-  doCheck = false; # completely broken tests
-
   pythonImportsCheck = [ "pycld2" ];
 
   # Fix build with gcc14

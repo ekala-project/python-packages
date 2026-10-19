@@ -22,7 +22,6 @@ buildPythonPackage (finalAttrs: {
   dependencies = [ aiohttp ];
 
   # No tests
-  doCheck = false;
 
   pythonImportsCheck = [ "advantage_air" ];
 

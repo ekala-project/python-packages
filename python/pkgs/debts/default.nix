@@ -21,7 +21,7 @@ buildPythonPackage rec {
     sha256 = "1d66nka81mv9c07mki78lp5hdajqv4cq6aq2k7bh3mhkc5hwnwlg";
   };
 
-  propagatedBuildInputs = [ jinja2 ];
+  dependencies = [ jinja2 ];
 
   nativeCheckInputs = [ pytest ];
 

@@ -34,7 +34,6 @@ buildPythonPackage (finalAttrs: {
   pname = "mistralai";
   version = "2.9.4";
   pyproject = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "mistralai";

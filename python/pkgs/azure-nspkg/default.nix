@@ -9,7 +9,6 @@ buildPythonPackage (finalAttrs: {
   version = "3.0.2";
   pyproject = true;
 
-  __structuredAttrs = true;
   pname = "azure-nspkg";
 
   src = fetchPypi {
@@ -19,8 +18,6 @@ buildPythonPackage (finalAttrs: {
   };
 
   build-system = [ setuptools ];
-
-  doCheck = false;
 
   meta = {
     description = "Microsoft Azure SDK for Python";

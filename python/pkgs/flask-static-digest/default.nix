@@ -17,7 +17,6 @@ buildPythonPackage (finalAttrs: {
   pname = "flask-static-digest";
   version = "0.4.1";
   pyproject = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "nickjj";
@@ -35,7 +34,6 @@ buildPythonPackage (finalAttrs: {
   optional-dependencies.brotli = [ brotli ];
 
   # Upstream does not provide tests.
-  doCheck = false;
 
   pythonImportsCheck = [ "flask_static_digest" ];
 

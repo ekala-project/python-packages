@@ -31,7 +31,6 @@ buildPythonPackage {
   ];
 
   # tests are based on nose, which is not supported anymore
-  doCheck = false;
 
   meta = {
     description = "Simple library for mocking certain Django behavior, such as the ORM";

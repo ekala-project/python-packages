@@ -40,7 +40,6 @@ buildPythonPackage rec {
 
   # Tests are currently broken
   # https://github.com/robmarkcole/London-tube-status/issues/7
-  doCheck = false;
 
   pythonImportsCheck = [
     "london_tube_status"

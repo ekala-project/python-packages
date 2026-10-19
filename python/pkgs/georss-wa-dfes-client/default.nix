@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "exxamalte";
     repo = "python-georss-wa-dfes-client";
-    rev = "v${version}";
+    tag = "v${version}";
     hash = "sha256-9wkGwuO8FV3ZJWq0LqdUFFwW4WQw+f826mTPFp+LMpw=";
   };
 

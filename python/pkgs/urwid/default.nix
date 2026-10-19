@@ -28,8 +28,6 @@ buildPythonPackage rec {
     wcwidth
   ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "urwid" ];
 
   meta = {

@@ -17,7 +17,7 @@ buildPythonPackage rec {
     hash = "sha256-JHBB64LExzHQVoFF2xcsqGlNWX/YeEBa1M/TmfeQLWI=";
   };
 
-  propagatedBuildInputs = [ jsonpointer ];
+  dependencies = [ jsonpointer ];
 
   pythonImportsCheck = [ "jsonpatch" ];
 

@@ -16,13 +16,12 @@ buildPythonPackage rec {
     sha256 = "996d55407498fd01e6c6c480f367048f92255e9ca9db0e9ea19aaef91328a441";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     requests
     six
   ];
 
   # Pypi's tarball doesn't contain tests. Source not available.
-  doCheck = false;
   pythonImportsCheck = [ "docloud" ];
 
   meta = {

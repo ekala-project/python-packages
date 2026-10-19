@@ -13,8 +13,6 @@ buildPythonPackage (finalAttrs: {
   version = "0.23.1";
   pyproject = true;
 
-  __structuredAttrs = true;
-
   # no git tags
   src = fetchPypi {
     inherit (finalAttrs) pname version;
@@ -30,7 +28,6 @@ buildPythonPackage (finalAttrs: {
     jsonschema
   ];
 
-  doCheck = false; # sdist does not include everything to run the tests
   pythonImportsCheck = [
     "hypothesis_jsonschema"
   ];

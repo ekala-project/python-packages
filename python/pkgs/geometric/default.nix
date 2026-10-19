@@ -21,7 +21,7 @@ buildPythonPackage rec {
     hash = "sha256-LY5eNKocJL/Ty8tLup6q2o5RkGfIp6P6Hmju4wF3cDw=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     networkx
     numpy
     scipy

@@ -22,14 +22,13 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     docopt
     pytz
     requests
   ];
 
   # Module has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "epion" ];
 

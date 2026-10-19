@@ -16,7 +16,7 @@ buildPythonPackage rec {
     hash = "sha256-Kso2y64LXAzv7ZVlQW7EQjNXZ/sxRb/xHlhiL8ZTza0=";
   };
 
-  propagatedBuildInputs = [ django-classy-tags ];
+  dependencies = [ django-classy-tags ];
   pythonImportsCheck = [ "sekizai" ];
 
   env.DJANGO_SETTINGS_MODULE = "tests.settings";

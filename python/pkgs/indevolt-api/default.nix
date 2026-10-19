@@ -23,7 +23,6 @@ buildPythonPackage (finalAttrs: {
   dependencies = [ aiohttp ];
 
   # no tests in upstream repository
-  doCheck = false;
 
   pythonImportsCheck = [ "indevolt_api" ];
 

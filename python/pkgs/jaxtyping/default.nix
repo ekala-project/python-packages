@@ -14,7 +14,6 @@ buildPythonPackage (finalAttrs: {
   pname = "jaxtyping";
   version = "0.3.11";
   pyproject = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "patrick-kidger";
@@ -30,8 +29,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   pythonImportsCheck = [ "jaxtyping" ];
-
-  doCheck = false;
 
   meta = {
     description = "Type annotations and runtime checking for JAX arrays and PyTrees";

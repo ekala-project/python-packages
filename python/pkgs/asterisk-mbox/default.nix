@@ -29,10 +29,9 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [ packaging ];
+  dependencies = [ packaging ];
 
   # no tests implemented
-  doCheck = false;
 
   pythonImportsCheck = [ "asterisk_mbox" ];
 

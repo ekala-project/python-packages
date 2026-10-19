@@ -17,7 +17,6 @@ buildPythonPackage (finalAttrs: {
   pname = "sparsediffpy";
   version = "0.6.1";
   pyproject = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "SparseDifferentiation";
@@ -48,7 +47,6 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [ "sparsediffpy" ];
 
   # No tests
-  doCheck = false;
 
   meta = {
     description = "Python bindings for SparseDiffEngine, a C library for computing sparse Jacobians and Hessians";

@@ -43,7 +43,7 @@ buildPythonPackage rec {
     setuptools-scm
   ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     importlib-metadata
     requests
     requests-toolbelt
@@ -65,7 +65,6 @@ buildPythonPackage rec {
   # nonetheless, the client library should remain in nixpkgs - since
   # the client library will talk to arangodb across the network and
   # architecture issues will be irrelevant.
-  doCheck = false;
 
   #preCheck = lib.optionalString doCheck ''
   #  # Start test DB

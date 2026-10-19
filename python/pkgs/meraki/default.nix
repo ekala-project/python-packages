@@ -25,7 +25,6 @@ buildPythonPackage rec {
   ];
 
   # All tests require an API key
-  doCheck = false;
 
   pythonImportsCheck = [ "meraki" ];
 

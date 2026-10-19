@@ -33,7 +33,6 @@ buildPythonPackage rec {
 
   # Tests require running a RabbitMQ server.
   # They rely on having AMQP_URL set or running Docker.
-  doCheck = false;
 
   pythonImportsCheck = [ "aio_pika" ];
 

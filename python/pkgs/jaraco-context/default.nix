@@ -30,7 +30,6 @@ buildPythonPackage rec {
   dependencies = lib.optionals (pythonOlder "3.12") [ backports-tarfile ];
 
   # Module has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "jaraco.context" ];
 

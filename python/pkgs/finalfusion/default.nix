@@ -19,13 +19,13 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "finalfusion";
     repo = "finalfusion-python";
-    rev = version;
+    tag = version;
     sha256 = "0pwzflamxqvpl1wcz0zbhhd6aa4xn18rmza6rggaic3ckidhyrh4";
   };
 
   nativeBuildInputs = [ cython ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     numpy
     toml
   ];

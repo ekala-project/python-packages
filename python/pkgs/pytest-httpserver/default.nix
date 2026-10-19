@@ -22,7 +22,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ poetry-core ];
 
-  propagatedBuildInputs = [ werkzeug ];
+  dependencies = [ werkzeug ];
   pythonImportsCheck = [ "pytest_httpserver" ];
 
   meta = {

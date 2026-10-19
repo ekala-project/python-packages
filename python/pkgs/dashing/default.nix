@@ -15,7 +15,7 @@ buildPythonPackage rec {
     hash = "sha256-JRRgjg8pp3Xb0bERFWEhnOg9U8+kuqL+QQH6uE/Vbxs=";
   };
 
-  propagatedBuildInputs = [ blessed ];
+  dependencies = [ blessed ];
 
   meta = {
     homepage = "https://github.com/FedericoCeratto/dashing";

@@ -11,8 +11,6 @@ buildPythonPackage (finalAttrs: {
   version = "0.0.4";
   pyproject = true;
 
-  __structuredAttrs = true;
-
   src = fetchPypi {
     pname = "alibabacloud_gateway_spi";
     inherit (finalAttrs) version;
@@ -26,7 +24,6 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [ "alibabacloud_gateway_spi" ];
 
   # Module has only tests in the untagged upstream repo
-  doCheck = false;
 
   meta = {
     description = "Aliyun Gateway SPI Library for Python";

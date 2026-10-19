@@ -18,8 +18,6 @@ buildPythonPackage rec {
 
   build-system = [ hatchling ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "paho.mqtt" ];
 
   meta = {

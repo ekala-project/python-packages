@@ -12,7 +12,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "acroz";
     repo = "git-find-repos";
-    rev = version;
+    tag = version;
     sha256 = "sha256-+MiCMgIakpJaWWdN2grerlPbPAnfIXuclvRw8XQ1YiI=";
   };
 

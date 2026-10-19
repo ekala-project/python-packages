@@ -20,13 +20,12 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ flit-core ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     betterproto
     pydantic
   ];
 
   # Module has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "sigstore_protobuf_specs" ];
 

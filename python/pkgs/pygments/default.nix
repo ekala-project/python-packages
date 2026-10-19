@@ -21,7 +21,6 @@ let
     build-system = [ hatchling ];
 
     # circular dependencies if enabled by default
-    doCheck = false;
     pythonImportsCheck = [ "pygments" ];
     meta = {
       homepage = "https://pygments.org/";

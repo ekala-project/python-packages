@@ -15,11 +15,10 @@ buildPythonPackage rec {
     hash = "sha256-P0v6EP1mKTIBr4SEp+a8tyO/LjPZpqoAiCZxr5yiaRE=";
   };
 
-  propagatedBuildInputs = [ intervaltree ];
+  dependencies = [ intervaltree ];
   pythonImportsCheck = [ "ipymarkup" ];
 
   # Upstream has no tests:
-  doCheck = false;
 
   meta = {
     description = "Collection of NLP visualizations for NER and syntax tree markup";

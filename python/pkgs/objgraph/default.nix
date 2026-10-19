@@ -19,8 +19,6 @@ buildPythonPackage rec {
 
   pythonImportsCheck = [ "objgraph" ];
 
-  doCheck = false;
-
   meta = {
     homepage = "https://mg.pov.lt/objgraph/";
     description = "Draws Python object reference graphs with graphviz";

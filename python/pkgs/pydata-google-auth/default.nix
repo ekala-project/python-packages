@@ -36,7 +36,6 @@ buildPythonPackage rec {
   ];
 
   # tests require network access
-  doCheck = false;
 
   pythonImportsCheck = [ "pydata_google_auth" ];
 

@@ -20,7 +20,7 @@ buildPythonPackage rec {
     hash = "sha256-diaxr+fNNgkJvLGkLo+lK0ThTsXYDePFsvTetMbDRMk=";
   };
 
-  propagatedBuildInputs = [ datasette ];
+  dependencies = [ datasette ];
 
   nativeCheckInputs = [
     cogapp

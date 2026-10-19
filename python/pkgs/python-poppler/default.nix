@@ -37,7 +37,7 @@ buildPythonPackage rec {
     pkg-config
   ];
 
-  propagatedBuildInputs = [ poppler ];
+  dependencies = [ poppler ];
 
   pythonImportsCheck = [ "poppler" ];
 

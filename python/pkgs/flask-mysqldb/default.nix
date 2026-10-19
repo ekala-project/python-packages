@@ -16,13 +16,13 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "alexferl";
     repo = "flask-mysqldb";
-    rev = "v${version}";
+    tag = "v${version}";
     hash = "sha256-RHAB9WGRzojH6eAOG61QguwF+4LssO9EcFjbWxoOtF4=";
   };
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     flask
     mysqlclient
   ];

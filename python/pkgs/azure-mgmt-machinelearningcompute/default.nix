@@ -15,8 +15,6 @@ buildPythonPackage (finalAttrs: {
   version = "0.4.1";
   pyproject = true;
 
-  __structuredAttrs = true;
-
   src = fetchPypi {
     inherit (finalAttrs) pname version;
     extension = "zip";
@@ -34,7 +32,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # has no tests
-  doCheck = false;
 
   meta = {
     description = "This is the Microsoft Azure Machine Learning Compute Management Client Library";

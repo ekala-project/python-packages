@@ -41,7 +41,6 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [ "choreographer" ];
 
   # Tests require running chrome
-  doCheck = false;
 
   meta = {
     description = "Devtools Protocol implementation for chrome";

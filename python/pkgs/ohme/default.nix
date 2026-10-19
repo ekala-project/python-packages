@@ -25,7 +25,6 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [ "ohme" ];
 
   # Module has no tests
-  doCheck = false;
 
   meta = {
     description = "Module for interacting with the Ohme API";

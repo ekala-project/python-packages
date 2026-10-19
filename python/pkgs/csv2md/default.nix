@@ -13,7 +13,7 @@ buildPythonPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "lzakharov";
     repo = "csv2md";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-UgX05ObIG3+Cucb0lC/+5w1WRB8eZbOeBpJoYHTotiw=";
   };
 

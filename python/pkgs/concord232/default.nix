@@ -33,7 +33,6 @@ buildPythonPackage rec {
   ];
 
   # Package has no tests
-  doCheck = false;
 
   meta = {
     description = "GE Concord 4 RS232 Serial Interface Library and Server";

@@ -16,7 +16,7 @@ buildPythonPackage rec {
     sha256 = "0srg0b89aikzinw72s433994k5gv5lfyarq1adhas11kz6yjm2hk";
   };
 
-  propagatedBuildInputs = [ six ];
+  dependencies = [ six ];
 
   pythonImportsCheck = [ "rfc3339_validator" ];
 

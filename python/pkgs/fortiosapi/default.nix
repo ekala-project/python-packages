@@ -22,7 +22,7 @@ buildPythonPackage rec {
     hash = "sha256-M71vleEhRYnlf+RSGT1GbCy5NEZaG0hWmJo01n9s6Rg=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     pexpect
     requests
     paramiko
@@ -32,7 +32,6 @@ buildPythonPackage rec {
   ];
 
   # Tests require a local VM
-  doCheck = false;
 
   pythonImportsCheck = [ "fortiosapi" ];
 

@@ -46,8 +46,6 @@ buildPythonPackage rec {
     virtualenv
   ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "tox" ];
 
   meta = {

@@ -10,8 +10,6 @@ buildPythonPackage (finalAttrs: {
   version = "1.26.25.14";
   pyproject = true;
 
-  __structuredAttrs = true;
-
   src = fetchPypi {
     inherit (finalAttrs) pname version;
     hash = "sha256-Ipt/V3yVG4wbksG8Ky/bC0mEe9KvbRzCouPdNA872o8=";
@@ -20,7 +18,6 @@ buildPythonPackage (finalAttrs: {
   build-system = [ setuptools ];
 
   # Module doesn't have tests
-  doCheck = false;
 
   pythonImportsCheck = [ "urllib3-stubs" ];
 

@@ -19,11 +19,11 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "randy3k";
     repo = "lineedit";
-    rev = "v${version}";
+    tag = "v${version}";
     sha256 = "fq2NpjIQkIq1yzXEUxi6cz80kutVqcH6MqJXHtpTFsk=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     pygments
     six
     wcwidth

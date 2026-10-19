@@ -22,7 +22,7 @@ buildPythonPackage {
     hash = "sha256-vJV0c+dCFO0wOHahKJ8DbwT2Thx3YjkNLVSpQv9H69g=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     tqdm
     portalocker
   ];

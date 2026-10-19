@@ -20,7 +20,6 @@ buildPythonPackage (finalAttrs: {
   build-system = [ setuptools ];
 
   # no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "hegel_ip_client" ];
 

@@ -21,8 +21,6 @@ buildPythonPackage rec {
 
   dependencies = [ simple-websocket ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "engineio" ];
 
   meta = {

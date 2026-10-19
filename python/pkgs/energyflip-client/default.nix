@@ -21,7 +21,7 @@ buildPythonPackage rec {
     hash = "sha256-neuZ6pZWW/Rgexu/iCEymjnxi5l/IuLKPFn6S9U4DgU=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     aiohttp
     async-timeout
     yarl

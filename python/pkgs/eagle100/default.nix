@@ -15,10 +15,9 @@ buildPythonPackage rec {
     hash = "sha256-eyYY1x8IjIfUx5OiaOomiWunsO1++seFwXlI/iKDDLw=";
   };
 
-  propagatedBuildInputs = [ requests ];
+  dependencies = [ requests ];
 
   # Project has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "eagle100" ];
 

@@ -25,7 +25,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "delegator" ];
 
   # no tests in github or pypi
-  doCheck = false;
 
   meta = {
     description = "Subprocesses for Humans 2.0";

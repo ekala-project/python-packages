@@ -28,7 +28,6 @@ buildPythonPackage rec {
   dependencies = [ aiohttp ];
 
   # Module doesn't have tests
-  doCheck = false;
 
   pythonImportsCheck = [ "aiowebostv" ];
 

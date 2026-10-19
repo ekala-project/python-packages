@@ -15,10 +15,9 @@ buildPythonPackage rec {
     hash = "sha256-cCvwOw64S47y2NrFy5JeHmhdzpj3exJVabxv0rO1gig=";
   };
 
-  propagatedBuildInputs = [ pyserial ];
+  dependencies = [ pyserial ];
 
   # Project has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "aioserial" ];
 

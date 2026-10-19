@@ -21,7 +21,6 @@ buildPythonPackage rec {
 
   # The package only has some "interactive" tests where a user must check for
   # the correct output and hit enter after every check
-  doCheck = false;
   pythonImportsCheck = [ "bottombar" ];
 
   meta = {

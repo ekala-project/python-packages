@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pypa";
     repo = "installer";
-    rev = version;
+    tag = version;
     hash = "sha256-GkHLZfzHfTcBL8wQmIGlNkVodEw9Pih4i1SS36mSfBo=";
   };
 
@@ -22,8 +22,6 @@ buildPythonPackage rec {
   ];
 
   nativeBuildInputs = [ flit-core ];
-
-  doCheck = false;
 
   meta = {
     description = "Low-level library for installing a Python package from a wheel distribution";

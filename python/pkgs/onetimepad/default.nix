@@ -16,7 +16,6 @@ buildPythonPackage rec {
   };
 
   # upstream has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "onetimepad" ];
 

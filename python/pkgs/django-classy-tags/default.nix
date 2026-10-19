@@ -15,10 +15,9 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-yNnRqi+m5xxNhm303RHSOmm40lu7dQskkKF7Fhd07lk=";
   };
 
-  propagatedBuildInputs = [ django ];
+  dependencies = [ django ];
 
   # pypi version doesn't include runtest.py, needed to run tests
-  doCheck = false;
 
   pythonImportsCheck = [ "classytags" ];
 

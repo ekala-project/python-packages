@@ -33,7 +33,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "livisi" ];
 
   # upstream has no tests
-  doCheck = false;
 
   meta = {
     description = "Connection library for the abandoned Livisi Smart Home system";

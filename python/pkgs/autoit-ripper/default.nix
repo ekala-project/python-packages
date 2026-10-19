@@ -18,10 +18,9 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [ pefile ];
+  dependencies = [ pefile ];
 
   # Project has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "autoit_ripper" ];
 

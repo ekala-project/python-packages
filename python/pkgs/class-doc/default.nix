@@ -31,7 +31,7 @@ buildPythonPackage {
 
   nativeBuildInputs = [ poetry-core ];
 
-  propagatedBuildInputs = [ more-itertools ];
+  dependencies = [ more-itertools ];
 
   nativeCheckInputs = [ pytestCheckHook ];
 

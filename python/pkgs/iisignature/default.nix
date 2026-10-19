@@ -22,10 +22,9 @@ buildPythonPackage rec {
     wheel
   ];
 
-  propagatedBuildInputs = [ numpy ];
+  dependencies = [ numpy ];
 
   # PyPI tarball has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "iisignature" ];
 

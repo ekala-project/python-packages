@@ -23,10 +23,9 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools-scm ];
 
-  propagatedBuildInputs = [ six ];
+  dependencies = [ six ];
 
   # cyclic dependency: tests need freezegun, which depends on python-dateutil
-  doCheck = false;
 
   pythonImportsCheck = [
     "dateutil.easter"

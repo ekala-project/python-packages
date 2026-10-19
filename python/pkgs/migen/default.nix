@@ -26,7 +26,7 @@ buildPythonPackage {
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [ colorama ];
+  dependencies = [ colorama ];
 
   pythonImportsCheck = [ "migen" ];
 

@@ -19,7 +19,7 @@ buildPythonPackage rec {
   datasrc = fetchFromGitHub {
     owner = "hadiasghari";
     repo = "pyasn";
-    rev = version;
+    tag = version;
     hash = "sha256-7zpaxDe5qHUy/ekOJLxKawjaPQnByrOVj+m2bsUqfdg=";
   };
 

@@ -35,7 +35,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "energyid_webhooks" ];
 
   # upstream has no tests
-  doCheck = false;
 
   meta = {
     description = "Light weight Python package to interface with EnergyID Webhooks";

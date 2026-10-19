@@ -19,7 +19,7 @@ buildPythonPackage (finalAttrs: {
 
   build-system = [ setuptools ];
 
-  propagatedBuildInputs = [ httpx ];
+  dependencies = [ httpx ];
 
   nativeCheckInputs = [ pytestCheckHook ];
 

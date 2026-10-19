@@ -18,7 +18,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [ psutil ];
+  dependencies = [ psutil ];
 
   pythonImportsCheck = [ "portpicker" ];
 

@@ -19,7 +19,7 @@ buildPythonPackage rec {
     hash = "sha256-UTtK+aKxBFkqKuHrt1ox8vdHyFz/9HiKFl7U4UQcG88=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     jupyter-core
     notebook
   ];

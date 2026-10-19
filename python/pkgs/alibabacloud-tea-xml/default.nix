@@ -24,7 +24,6 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [ "alibabacloud_tea_xml" ];
 
   # Module has only tests in the untagged upstream repo
-  doCheck = false;
 
   meta = {
     description = "Aliyun Tea XML Library for Python";

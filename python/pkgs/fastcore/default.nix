@@ -23,7 +23,6 @@ buildPythonPackage (finalAttrs: {
   dependencies = [ packaging ];
 
   # Module has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "fastcore" ];
 

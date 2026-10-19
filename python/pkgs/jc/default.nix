@@ -23,7 +23,7 @@ buildPythonPackage rec {
     hash = "sha256-aufAR+Y5ocJNWSr8CLIb0TZM6a3B6jqS3Ji1WIOLzBU=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     ruamel-yaml
     xmltodict
     pygments
@@ -46,7 +46,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "jc" ];
 
   # tests require timezone to set America/Los_Angeles
-  doCheck = false;
 
   meta = {
     description = "This tool serializes the output of popular command line tools and filetypes to structured JSON output";

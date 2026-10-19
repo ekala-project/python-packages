@@ -23,7 +23,6 @@ buildPythonPackage (finalAttrs: {
   dependencies = [ aiohttp ];
 
   # upstream tests are empty
-  doCheck = false;
 
   pythonImportsCheck = [ "aiolichess" ];
 

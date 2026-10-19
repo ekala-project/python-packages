@@ -20,7 +20,6 @@ buildPythonPackage rec {
   nativeBuildInputs = [ flit-core ];
 
   # No tests in archive
-  doCheck = false;
 
   pythonImportsCheck = [ "wheel" ];
 

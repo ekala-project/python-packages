@@ -32,7 +32,6 @@ buildPythonPackage (finalAttrs: {
 
   # Unable to import test module
   # https://github.com/awslabs/aws-crt-python/issues/281
-  doCheck = false;
 
   meta = {
     homepage = "https://github.com/awslabs/aws-crt-python";

@@ -46,7 +46,6 @@ buildPythonPackage (finalAttrs: {
   pname = "osqp";
   version = "1.1.3";
   pyproject = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "osqp";

@@ -24,7 +24,7 @@ buildPythonPackage rec {
     setuptools-scm
   ];
 
-  propagatedBuildInputs = [ typing-extensions ];
+  dependencies = [ typing-extensions ];
 
   meta = {
     description = "Python package for support of the Virtual Instrument Software Architecture (VISA)";

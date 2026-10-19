@@ -16,7 +16,7 @@ buildPythonPackage rec {
     sha256 = "f25e9307fbb5960cb035394c26e37731b64cc465b197c4344cee85ec450ab92f";
   };
 
-  propagatedBuildInputs = [ jpype1 ];
+  dependencies = [ jpype1 ];
 
   meta = {
     homepage = "https://github.com/baztian/jaydebeapi";

@@ -13,8 +13,6 @@ buildPythonPackage (finalAttrs: {
   version = "0.8.0";
   pyproject = true;
 
-  __structuredAttrs = true;
-
   requiredSystemFeatures = [ "big-parallel" ];
 
   src = fetchFromGitHub {

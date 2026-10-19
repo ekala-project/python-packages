@@ -28,7 +28,6 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [ "llama_index.vector_stores.milvus" ];
 
   # Module has no tests
-  doCheck = false;
 
   meta = {
     description = "Llama-index vector_stores milvus integration";

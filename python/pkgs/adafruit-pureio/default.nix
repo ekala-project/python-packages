@@ -19,7 +19,6 @@ buildPythonPackage rec {
   build-system = [ setuptools-scm ];
 
   # Physical SMBus is not present
-  doCheck = false;
 
   pythonImportsCheck = [ "Adafruit_PureIO" ];
 

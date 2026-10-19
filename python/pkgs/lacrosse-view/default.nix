@@ -29,7 +29,6 @@ buildPythonPackage rec {
   ];
 
   # No tests
-  doCheck = false;
 
   pythonImportsCheck = [ "lacrosse_view" ];
 

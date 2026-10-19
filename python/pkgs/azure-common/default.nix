@@ -28,8 +28,6 @@ buildPythonPackage (finalAttrs: {
     echo "__import__('pkg_resources').declare_namespace(__name__)" >> "$out/${python.sitePackages}"/azure/__init__.py
   '';
 
-  doCheck = false;
-
   meta = {
     description = "This is the Microsoft Azure common code";
     homepage = "https://github.com/Azure/azure-sdk-for-python";

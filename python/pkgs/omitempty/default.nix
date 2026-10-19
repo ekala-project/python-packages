@@ -22,7 +22,6 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [ "omitempty" ];
 
   # Tests are outdated
-  doCheck = false;
 
   meta = {
     description = "Go's omitempty for Python";

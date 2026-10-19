@@ -33,8 +33,6 @@ buildPythonPackage rec {
 
   dependencies = [ aiohttp ];
 
-  doCheck = false; # only test is outdated
-
   nativeCheckInputs = [ pytestCheckHook ];
 
   pythonImportsCheck = [ "agent" ];

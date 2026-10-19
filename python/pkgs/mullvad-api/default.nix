@@ -16,10 +16,9 @@ buildPythonPackage rec {
     sha256 = "0r0hc2d6vky52hxdqxn37w0y42ddh1zal6zz2cvqlxamc53wbiv1";
   };
 
-  propagatedBuildInputs = [ requests ];
+  dependencies = [ requests ];
 
   # Project has no tests
-  doCheck = false;
   pythonImportsCheck = [ "mullvad_api" ];
 
   meta = {

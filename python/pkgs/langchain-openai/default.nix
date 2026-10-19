@@ -22,7 +22,6 @@ buildPythonPackage (finalAttrs: {
   pname = "langchain-openai";
   version = "1.3.5";
   pyproject = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "langchain-ai";

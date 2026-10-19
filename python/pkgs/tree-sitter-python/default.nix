@@ -29,7 +29,6 @@ buildPythonPackage (finalAttrs: {
   };
 
   # There are no tests
-  doCheck = false;
   pythonImportsCheck = [ "tree_sitter_python" ];
 
   meta = {

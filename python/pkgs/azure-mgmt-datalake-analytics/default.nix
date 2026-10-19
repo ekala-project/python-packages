@@ -14,8 +14,6 @@ buildPythonPackage (finalAttrs: {
   version = "1.0.0b2";
   pyproject = true;
 
-  __structuredAttrs = true;
-
   src = fetchPypi {
     inherit (finalAttrs) pname version;
     extension = "zip";
@@ -34,7 +32,6 @@ buildPythonPackage (finalAttrs: {
   pythonNamespaces = [ "azure.mgmt.datalake" ];
 
   # has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "azure.mgmt.datalake.analytics" ];
 

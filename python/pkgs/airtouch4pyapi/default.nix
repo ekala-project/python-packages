@@ -17,10 +17,9 @@ buildPythonPackage rec {
     hash = "sha256-RiRwebumidn0nijL/e9J74ZYx0DASi1up5BTNxYoGEA=";
   };
 
-  propagatedBuildInputs = [ numpy ];
+  dependencies = [ numpy ];
 
   # Project has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "airtouch4pyapi" ];
 

@@ -15,8 +15,6 @@ buildPythonPackage rec {
     sha256 = "1wswxrn4givsm917mfl39rafgadimf1sldpbjdjws00g1wx36hf0";
   };
 
-  doCheck = false;
-
   pythonImportsCheck = [ "ruamel.base" ];
 
   pythonNamespaces = [ "ruamel" ];

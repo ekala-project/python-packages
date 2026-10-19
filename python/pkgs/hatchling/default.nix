@@ -42,7 +42,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # tries to fetch packages from the internet
-  doCheck = false;
 
   # listed in /backend/tests/downstream/requirements.txt
   checkPhase = ''

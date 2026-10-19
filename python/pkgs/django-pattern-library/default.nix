@@ -32,7 +32,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ poetry-core ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     django
     pyyaml
     markdown

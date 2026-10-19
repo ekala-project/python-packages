@@ -26,7 +26,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ hatchling ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     ipykernel
     ipython
     ipywidgets

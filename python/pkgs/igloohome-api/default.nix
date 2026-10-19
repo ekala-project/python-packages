@@ -31,7 +31,6 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [ "igloohome_api" ];
 
   # upstream has no tests
-  doCheck = false;
 
   meta = {
     description = "Python package for using igloohome's API";

@@ -21,7 +21,7 @@ buildPythonPackage {
 
   buildInputs = [ bluez ];
 
-  propagatedBuildInputs = [ gattlib ];
+  dependencies = [ gattlib ];
 
   # there are no tests
 

@@ -18,7 +18,6 @@ buildPythonPackage rec {
   build-system = [ setuptools ];
 
   # PyPI release don't contain tests
-  doCheck = false;
 
   pythonImportsCheck = [ "noise" ];
 

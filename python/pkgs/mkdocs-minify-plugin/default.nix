@@ -20,14 +20,13 @@ buildPythonPackage rec {
     hash = "sha256-LDCAWKVbFsa6Y/tmY2Zne4nOtxe4KvNplZuWxg4e4L8=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     csscompressor
     htmlmin
     jsmin
     mkdocs
   ];
   # Some tests fail with an assertion error failure
-  doCheck = false;
 
   pythonImportsCheck = [ "mkdocs" ];
 

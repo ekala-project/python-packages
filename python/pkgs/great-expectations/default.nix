@@ -70,8 +70,6 @@ buildPythonPackage (finalAttrs: {
 
   pythonImportsCheck = [ "great_expectations" ];
 
-  doCheck = false;
-
   meta = {
     description = "Library for writing unit tests for data validation";
     homepage = "https://docs.greatexpectations.io";

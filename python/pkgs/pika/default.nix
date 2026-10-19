@@ -19,8 +19,6 @@ buildPythonPackage rec {
 
   pythonImportsCheck = [ "pika" ];
 
-  doCheck = false;
-
   meta = {
     description = "Pure-Python implementation of the AMQP 0-9-1 protocol";
     homepage = "https://pika.readthedocs.org";

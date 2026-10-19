@@ -21,8 +21,6 @@ buildPythonPackage rec {
 
   dependencies = [ wsproto ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "simple_websocket" ];
 
   meta = {

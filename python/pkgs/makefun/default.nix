@@ -28,8 +28,6 @@ buildPythonPackage rec {
 
   pythonImportsCheck = [ "makefun" ];
 
-  doCheck = false;
-
   meta = {
     homepage = "https://github.com/smarie/python-makefun";
     description = "Small library to dynamically create python functions";

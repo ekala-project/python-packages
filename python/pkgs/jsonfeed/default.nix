@@ -27,7 +27,6 @@ buildPythonPackage rec {
   dependencies = [ requests ];
 
   # Module has no tests, only a placeholder
-  doCheck = false;
 
   pythonImportsCheck = [ "jsonfeed" ];
 

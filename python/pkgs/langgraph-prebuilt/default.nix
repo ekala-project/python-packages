@@ -24,7 +24,6 @@ buildPythonPackage (finalAttrs: {
   pname = "langgraph-prebuilt";
   version = "1.1.0";
   pyproject = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "langchain-ai";

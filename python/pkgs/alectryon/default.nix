@@ -34,8 +34,6 @@ buildPythonPackage (finalAttrs: {
 
   pythonImportsCheck = [ "alectryon" ];
 
-  doCheck = false;
-
   meta = {
     homepage = "https://github.com/cpitclaudel/alectryon";
     description = "Collection of tools for writing technical documents that mix Coq code and prose";

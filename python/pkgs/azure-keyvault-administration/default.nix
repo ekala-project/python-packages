@@ -21,14 +21,13 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     azure-core
     typing-extensions
     isodate
   ];
 
   # Tests require checkout from mono-repo
-  doCheck = false;
 
   pythonNamespaces = [ "azure.keyvault" ];
 

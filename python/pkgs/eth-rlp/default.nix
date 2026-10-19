@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ethereum";
     repo = "eth-rlp";
-    rev = "v${version}";
+    tag = "v${version}";
     hash = "sha256-0D/1PS4Q4BrypE9QFJBj6jDJNVAVhgqXJeGCk86zYRk=";
   };
 
@@ -26,7 +26,7 @@ buildPythonPackage rec {
     setuptools-scm
   ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     hexbytes
     eth-utils
     rlp

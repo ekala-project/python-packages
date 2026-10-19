@@ -23,7 +23,6 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [ "colorscript" ];
 
   # Module has no tests
-  doCheck = false;
 
   meta = {
     description = "Module for functionality with text, escape codes, octal and hexadecimal codes, and other data";

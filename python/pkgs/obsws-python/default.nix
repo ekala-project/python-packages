@@ -25,8 +25,6 @@ buildPythonPackage (finalAttrs: {
     websocket-client
   ];
 
-  doCheck = false; # attempts to connect to OBS
-
   meta = {
     description = "Python SDK for OBS Studio WebSocket v5.0";
     homepage = "https://github.com/aatikturk/obsws-python";

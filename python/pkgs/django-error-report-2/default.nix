@@ -24,7 +24,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # There are no tests on upstream
-  doCheck = false;
 
   pythonImportsCheck = [ "error_report" ];
 

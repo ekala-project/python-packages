@@ -32,7 +32,6 @@ buildPythonPackage (finalAttrs: {
   };
 
   # Too many un-packaged dependencies
-  doCheck = false;
 
   pythonImportsCheck = [ "dal" ];
 

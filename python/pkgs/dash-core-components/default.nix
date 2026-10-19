@@ -16,7 +16,6 @@ buildPythonPackage (finalAttrs: {
   };
 
   # No tests in archive
-  doCheck = false;
 
   meta = {
     description = "Dash component starter pack";

@@ -60,8 +60,6 @@ buildPythonPackage (finalAttrs: {
 
   pythonImportsCheck = [ "pipx" ];
 
-  __structuredAttrs = true;
-
   meta = {
     description = "Install and run Python applications in isolated environments";
     mainProgram = "pipx";

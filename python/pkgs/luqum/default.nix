@@ -28,7 +28,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [ ply ];
+  dependencies = [ ply ];
   pythonImportsCheck = [ "luqum" ];
   meta = {
     description = "Lucene query parser generating ElasticSearch queries";

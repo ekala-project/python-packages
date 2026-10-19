@@ -19,7 +19,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [ pandas ];
+  dependencies = [ pandas ];
 
   pythonImportsCheck = [ "vega_datasets" ];
 

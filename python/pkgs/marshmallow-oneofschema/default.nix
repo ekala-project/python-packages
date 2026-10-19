@@ -20,7 +20,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ flit-core ];
 
-  propagatedBuildInputs = [ marshmallow ];
+  dependencies = [ marshmallow ];
   pythonImportsCheck = [ "marshmallow_oneofschema" ];
 
   meta = {

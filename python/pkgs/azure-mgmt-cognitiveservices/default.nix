@@ -32,7 +32,6 @@ buildPythonPackage rec {
   ];
 
   # Module has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "azure.mgmt.cognitiveservices" ];
 

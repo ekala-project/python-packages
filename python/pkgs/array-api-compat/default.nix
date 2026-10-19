@@ -11,7 +11,6 @@ buildPythonPackage (finalAttrs: {
   pname = "array-api-compat";
   version = "1.15";
   pyproject = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "data-apis";

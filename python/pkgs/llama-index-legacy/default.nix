@@ -24,7 +24,6 @@ buildPythonPackage rec {
   dependencies = [ llama-index-core ];
 
   # Tests are only available in the mono repo
-  doCheck = false;
 
   meta = {
     description = "LlamaIndex Readers Integration for files";

@@ -11,8 +11,6 @@ buildPythonPackage (finalAttrs: {
   version = "1.0.3";
   pyproject = true;
 
-  __structuredAttrs = true;
-
   src = fetchFromGitHub {
     owner = "cyberjunky";
     repo = "bitvavo-aio";
@@ -25,7 +23,6 @@ buildPythonPackage (finalAttrs: {
   dependencies = [ aiohttp ];
 
   # Project has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "bitvavo" ];
 

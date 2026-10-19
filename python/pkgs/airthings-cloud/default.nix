@@ -23,7 +23,6 @@ buildPythonPackage (finalAttrs: {
   dependencies = [ aiohttp ];
 
   # Project has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "airthings" ];
 

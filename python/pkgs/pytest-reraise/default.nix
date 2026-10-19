@@ -28,8 +28,6 @@ buildPythonPackage rec {
 
   dependencies = [ pytest ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "pytest_reraise" ];
 
   meta = {

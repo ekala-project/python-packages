@@ -15,7 +15,7 @@ buildPythonPackage {
     repo = "simplebayes";
     owner = "hickeroar";
     # NOTE: This is actually 1.5.8 but the tag is wrong!
-    rev = "1.5.7";
+    tag = "1.5.7";
     sha256 = "0mp7rvfdmpfxnka4czw3lv5kkh6gdxh6dm4r6hcln1zzfg9lxp4h";
   };
 

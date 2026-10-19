@@ -14,17 +14,16 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "cedadev";
     repo = "ndg_httpsclient";
-    rev = version;
+    tag = version;
     sha256 = "0lhsgs4am4xyjssng5p0vkfwqncczj1dpa0vss4lrhzq86mnn5rz";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     pyasn1
     pyopenssl
   ];
 
   # uses networking
-  doCheck = false;
 
   meta = {
     homepage = "https://github.com/cedadev/ndg_httpsclient/";

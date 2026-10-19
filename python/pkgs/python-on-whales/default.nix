@@ -28,8 +28,6 @@ buildPythonPackage rec {
     pydantic
   ];
 
-  doCheck = false; # majority of tests require Docker and/or network access
-
   pythonImportsCheck = [ "python_on_whales" ];
 
   meta = {

@@ -20,8 +20,6 @@ buildPythonPackage rec {
 
   pythonImportsCheck = [ "psycopg2-stubs" ];
 
-  doCheck = false;
-
   meta = {
     description = "Typing stubs for psycopg2";
     homepage = "https://github.com/python/typeshed";

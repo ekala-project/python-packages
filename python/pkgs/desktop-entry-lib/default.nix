@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromCodeberg {
     owner = "JakobDev";
     repo = "desktop-entry-lib";
-    rev = version;
+    tag = version;
     hash = "sha256-+c+FuLv88wc4yVw3iyFFtfbocnWzTCIe2DS0SWoj+VI=";
   };
 

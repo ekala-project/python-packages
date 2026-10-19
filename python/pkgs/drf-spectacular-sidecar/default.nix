@@ -23,7 +23,6 @@ buildPythonPackage rec {
   dependencies = [ django ];
 
   # no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "drf_spectacular_sidecar" ];
 

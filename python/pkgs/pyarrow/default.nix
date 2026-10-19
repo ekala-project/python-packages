@@ -66,8 +66,6 @@ buildPythonPackage rec {
     PARQUET_HOME = arrow-cpp;
   };
 
-  doCheck = false;
-
   dontUseCmakeConfigure = true;
 
   preBuild = ''

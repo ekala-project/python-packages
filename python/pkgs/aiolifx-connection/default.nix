@@ -16,10 +16,9 @@ buildPythonPackage rec {
     hash = "sha256:09fydp5fqqh1s0vav39mw98i1la6qcgk17gch0m5ihyl9q50ks13";
   };
 
-  propagatedBuildInputs = [ aiolifx ];
+  dependencies = [ aiolifx ];
 
   # tests are not implemented
-  doCheck = false;
 
   pythonImportsCheck = [ "aiolifx_connection" ];
 

@@ -10,8 +10,6 @@ buildPythonPackage (finalAttrs: {
   version = "0.0.1";
   pyproject = true;
 
-  __structuredAttrs = true;
-
   src = fetchPypi {
     pname = "alibabacloud_darabonba_time";
     inherit (finalAttrs) version;
@@ -23,7 +21,6 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [ "alibabacloud_darabonba_time" ];
 
   # Module has no tests
-  doCheck = false;
 
   meta = {
     description = "Alibaba Cloud Darabonba Time SDK Library for Python";

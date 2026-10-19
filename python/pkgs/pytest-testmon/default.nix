@@ -26,7 +26,6 @@ buildPythonPackage rec {
   dependencies = [ coverage ];
 
   # The project does not include tests since version 1.3.0
-  doCheck = false;
 
   pythonImportsCheck = [ "testmon" ];
 

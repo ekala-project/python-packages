@@ -14,8 +14,6 @@ buildPythonPackage (finalAttrs: {
   version = "3.3.0";
   pyproject = true;
 
-  __structuredAttrs = true;
-
   src = fetchFromGitHub {
     owner = "christopher-hesse";
     repo = "blobfile";
@@ -33,7 +31,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # Tests require a running Docker instance
-  doCheck = false;
 
   pythonImportsCheck = [ "blobfile" ];
 

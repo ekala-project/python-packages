@@ -25,8 +25,6 @@ buildPythonPackage rec {
 
   build-system = [ setuptools ];
 
-  doCheck = false;
-
   meta = {
     description = "Human friendly output for text interfaces using Python";
     mainProgram = "humanfriendly";

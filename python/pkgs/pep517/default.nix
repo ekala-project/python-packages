@@ -18,7 +18,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ flit-core ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     tomli
   ];
   meta = {

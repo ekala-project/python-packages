@@ -20,12 +20,11 @@ buildPythonPackage rec {
     hash = "sha256-27mHEv0siGnV3+16LKAGuVx3UP6aQ68SPvBU78fn67Q=";
   };
 
-  propagatedBuildInputs = [ boto3 ];
+  dependencies = [ boto3 ];
 
   pythonImportsCheck = [ "localstack_client" ];
 
   # All commands test `localstack` which is a downstream dependency
-  doCheck = false;
   nativeCheckInputs = [ pytestCheckHook ];
 
   disabledTests = [

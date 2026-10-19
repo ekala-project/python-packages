@@ -23,7 +23,6 @@ buildPythonPackage rec {
   dependencies = [ requests ];
 
   # No tests
-  doCheck = false;
 
   pythonImportsCheck = [ "INWX" ];
 

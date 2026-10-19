@@ -43,8 +43,6 @@ buildPythonPackage rec {
 
   pythonImportsCheck = [ "qdrant_client" ];
 
-  doCheck = false;
-
   meta = {
     description = "Python client for Qdrant vector search engine";
     homepage = "https://github.com/qdrant/qdrant-client";

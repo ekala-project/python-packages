@@ -21,8 +21,6 @@ buildPythonPackage rec {
     versioneer
   ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "constantly" ];
 
   meta = {

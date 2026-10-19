@@ -20,7 +20,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [ setuptools ];
+  dependencies = [ setuptools ];
 
   nativeCheckInputs = [ unittestCheckHook ];
 

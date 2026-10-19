@@ -31,7 +31,7 @@ buildPythonPackage rec {
     setuptools-scm
   ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     email-validator
     flask
     flask-wtf
@@ -51,7 +51,6 @@ buildPythonPackage rec {
   };
 
   # Tests require working mongodb connection
-  doCheck = false;
 
   pythonImportsCheck = [ "flask_mongoengine" ];
 

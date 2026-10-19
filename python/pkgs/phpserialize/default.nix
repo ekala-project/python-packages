@@ -15,7 +15,6 @@ buildPythonPackage rec {
   };
 
   # project does not have tests
-  doCheck = false;
 
   pythonImportsCheck = [ "phpserialize" ];
 

@@ -30,7 +30,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools-scm ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     numpy
     scipy
     pytest

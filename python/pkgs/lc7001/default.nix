@@ -22,10 +22,9 @@ buildPythonPackage rec {
     setuptools
   ];
 
-  propagatedBuildInputs = [ cryptography ];
+  dependencies = [ cryptography ];
 
   # Project has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "lc7001" ];
 

@@ -17,7 +17,7 @@ buildPythonPackage rec {
     hash = "sha256-uiHL3m0C6+YnAHRLwzMCSzffrQsSyVcuem6FBtTLxek=";
   };
 
-  propagatedBuildInputs = [ plum-py ];
+  dependencies = [ plum-py ];
 
   pythonImportsCheck = [ "exif" ];
 

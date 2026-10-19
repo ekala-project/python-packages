@@ -31,7 +31,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # No tests are available
-  doCheck = false;
 
   meta = {
     description = "";

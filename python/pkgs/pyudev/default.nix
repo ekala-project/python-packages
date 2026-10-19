@@ -27,8 +27,6 @@ buildPythonPackage rec {
 
   dependencies = [ six ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "pyudev" ];
 
   meta = {

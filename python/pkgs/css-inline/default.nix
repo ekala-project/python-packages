@@ -22,7 +22,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Stranger6667";
     repo = "css-inline";
-    rev = "python-v${version}";
+    tag = "python-v${version}";
     hash = "sha256-hXrcomE//BScA395zXSKQayeRn8G8ivfcIJkIKu+PUE=";
   };
 

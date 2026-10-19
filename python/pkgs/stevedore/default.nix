@@ -23,8 +23,6 @@ buildPythonPackage rec {
     setuptools
   ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "stevedore" ];
 
   meta = {

@@ -11,8 +11,6 @@ buildPythonPackage {
   version = "1.2.0-unstable-2023-05-04";
   pyproject = true;
 
-  __structuredAttrs = true;
-
   src = fetchFromGitHub {
     owner = "arvydas";
     repo = "blinkstick-python";
@@ -25,7 +23,6 @@ buildPythonPackage {
   dependencies = [ pyusb ];
 
   # Project has no tests
-  doCheck = false;
   pythonImportsCheck = [ "blinkstick" ];
 
   meta = {

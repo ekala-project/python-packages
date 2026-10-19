@@ -26,7 +26,7 @@ buildPythonPackage rec {
 
   build-system = [ setuptools ];
 
-  propagatedBuildInputs = [ python-dateutil ];
+  dependencies = [ python-dateutil ];
   pythonImportsCheck = [ "pystac" ];
 
   meta = {

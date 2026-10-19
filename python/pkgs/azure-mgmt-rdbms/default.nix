@@ -16,8 +16,6 @@ buildPythonPackage (finalAttrs: {
   version = "10.1.0";
   pyproject = true;
 
-  __structuredAttrs = true;
-
   src = fetchPypi {
     inherit (finalAttrs) pname version;
     extension = "zip";
@@ -35,7 +33,6 @@ buildPythonPackage (finalAttrs: {
   ++ lib.optionals (!isPy3k) [ azure-mgmt-nspkg ];
 
   # has no tests
-  doCheck = false;
   pythonImportsCheck = [ "azure.mgmt.rdbms" ];
 
   meta = {

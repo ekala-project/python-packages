@@ -28,7 +28,6 @@ buildPythonPackage rec {
   ];
 
   # Tests require dev-tools
-  doCheck = false;
 
   pythonImportsCheck = [ "azure.servicebus" ];
 

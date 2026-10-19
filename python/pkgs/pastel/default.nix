@@ -17,8 +17,6 @@ buildPythonPackage rec {
 
   build-system = [ poetry-core ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "pastel" ];
 
   meta = {

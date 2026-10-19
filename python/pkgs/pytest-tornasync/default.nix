@@ -22,7 +22,7 @@ buildPythonPackage {
 
   buildInputs = [ pytest ];
 
-  propagatedBuildInputs = [ tornado ];
+  dependencies = [ tornado ];
   checkPhase = ''
     pytest test
   '';

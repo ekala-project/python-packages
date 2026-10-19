@@ -19,7 +19,6 @@ buildPythonPackage (finalAttrs: {
   pname = "uproot";
   version = "5.7.5";
   pyproject = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "scikit-hep";

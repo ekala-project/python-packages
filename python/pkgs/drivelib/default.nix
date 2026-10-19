@@ -42,7 +42,6 @@ buildPythonPackage rec {
   ];
 
   # Tests depend on a google auth token
-  doCheck = false;
 
   pythonImportsCheck = [ "drivelib" ];
 

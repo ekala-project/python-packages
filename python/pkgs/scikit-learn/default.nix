@@ -21,7 +21,6 @@
 }:
 
 buildPythonPackage rec {
-  __structuredAttrs = true;
 
   pname = "scikit-learn";
   version = "1.9.0";
@@ -76,8 +75,6 @@ buildPythonPackage rec {
   ];
 
   env.LC_ALL = "en_US.UTF-8";
-
-  doCheck = false;
 
   pythonImportsCheck = [ "sklearn" ];
 

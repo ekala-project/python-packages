@@ -19,13 +19,12 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     azure-common
     msrestazure
   ];
 
   # Module has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "azure.batch" ];
 

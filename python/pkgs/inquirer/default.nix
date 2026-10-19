@@ -6,7 +6,7 @@
   # native
   poetry-core,
 
-  # propagated
+  # dependencies
   blessed,
   editor,
   readchar,

@@ -23,8 +23,6 @@ buildPythonPackage rec {
 
   pythonImportsCheck = [ "picklefield" ];
 
-  doCheck = false;
-
   meta = {
     description = "Pickled object field for Django";
     homepage = "https://github.com/gintas/django-picklefield";

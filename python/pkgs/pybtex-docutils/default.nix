@@ -28,8 +28,6 @@ buildPythonPackage rec {
     docutils
   ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "pybtex_docutils" ];
 
   meta = {

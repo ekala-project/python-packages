@@ -27,7 +27,6 @@ buildPythonPackage rec {
   ];
 
   # require internet
-  doCheck = false;
 
   pythonImportsCheck = [ "mercadopago" ];
 

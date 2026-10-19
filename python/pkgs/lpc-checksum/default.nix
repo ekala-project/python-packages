@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "basilfx";
     repo = "lpc_checksum";
-    rev = "v${version}";
+    tag = "v${version}";
     hash = "sha256-POgV0BdkMLmdjBh/FToPPmJTAxsPASB7ZE32SqGGKHk=";
   };
 
@@ -24,7 +24,7 @@ buildPythonPackage rec {
     pytestCheckHook
   ];
 
-  propagatedBuildInputs = [ intelhex ];
+  dependencies = [ intelhex ];
 
   pythonImportsCheck = [ "lpc_checksum" ];
 

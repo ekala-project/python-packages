@@ -49,7 +49,6 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [ "alexapy" ];
 
   # Module has no tests (only a websocket test which seems unrelated to the module)
-  doCheck = false;
 
   meta = {
     description = "Python Package for controlling Alexa devices (echo dot, etc) programmatically";

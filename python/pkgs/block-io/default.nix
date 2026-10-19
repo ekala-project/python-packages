@@ -33,7 +33,6 @@ buildPythonPackage rec {
 
   # Tests needs a BlockIO API key to run properly
   # https://github.com/BlockIo/block_io-python/blob/79006bc8974544b70a2d8e9f19c759941d32648e/test.py#L18
-  doCheck = false;
 
   pythonImportsCheck = [ "block_io" ];
 

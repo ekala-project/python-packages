@@ -18,7 +18,7 @@ buildPythonPackage rec {
     sha256 = "2eacc52692495f331437e8c8e9782ca71f4617ec84f174ca17acdd77631efc47";
   };
 
-  propagatedBuildInputs = [ uvloop ];
+  dependencies = [ uvloop ];
 
   nativeCheckInputs = [ pytest ];
   checkPhase = ''

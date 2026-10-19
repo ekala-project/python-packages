@@ -21,8 +21,6 @@ buildPythonPackage rec {
     setuptools-scm
   ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "jsonpickle" ];
 
   meta = {

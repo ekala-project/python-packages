@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ModelTC";
     repo = "general-sam-py";
-    rev = "v${version}";
+    tag = "v${version}";
     hash = "sha256-bpJL6kpcpMWNNUOSLUnRLsAi7yp3fl0WKzvfXiGwYeE=";
   };
 

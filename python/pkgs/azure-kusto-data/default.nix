@@ -33,7 +33,6 @@ buildPythonPackage (finalAttrs: {
   pname = "azure-kusto-data";
   version = "6.0.4";
   pyproject = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "Azure";

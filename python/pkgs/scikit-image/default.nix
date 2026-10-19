@@ -60,8 +60,6 @@ buildPythonPackage rec {
     tifffile
   ];
 
-  doCheck = false;
-
   pythonImportsCheck = [
     "skimage"
     "skimage._shared"

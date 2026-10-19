@@ -21,7 +21,6 @@ buildPythonPackage (finalAttrs: {
   dependencies = [ gitpython ];
 
   # Module has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "gitsweep" ];
 

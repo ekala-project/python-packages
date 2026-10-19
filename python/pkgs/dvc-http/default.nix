@@ -36,7 +36,6 @@ buildPythonPackage (finalAttrs: {
 
   # Currently it's not possible to run the tests
   # ModuleNotFoundError: No module named 'dvc.testing'
-  doCheck = false;
 
   pythonImportsCheck = [ "dvc_http" ];
 

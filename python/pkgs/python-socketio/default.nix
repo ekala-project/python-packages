@@ -25,8 +25,6 @@ buildPythonPackage rec {
     python-engineio
   ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "socketio" ];
 
   meta = {

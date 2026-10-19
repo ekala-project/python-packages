@@ -18,7 +18,6 @@ buildPythonPackage (finalAttrs: {
   build-system = [ setuptools ];
 
   # Module has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "MailChecker" ];
 

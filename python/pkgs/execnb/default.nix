@@ -27,7 +27,6 @@ buildPythonPackage rec {
   ];
 
   # no real tests
-  doCheck = false;
 
   pythonImportsCheck = [ "execnb" ];
 

@@ -29,8 +29,6 @@ buildPythonPackage rec {
 
   pythonRemoveDeps = [ "types-protobuf" ];
 
-  doCheck = false; # no tests
-
   pythonImportsCheck = [ "livekit" ];
 
   passthru.updateScript = gitUpdater { rev-prefix = "protocol-v"; };

@@ -34,12 +34,10 @@ buildPythonPackage rec {
 
   build-system = [ setuptools ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     brotli
     lz4
   ];
-
-  doCheck = false; # no tests in upstream
 
   pythonImportsCheck = [
     "kaitaistruct"

@@ -21,7 +21,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ flit-core ];
 
-  propagatedBuildInputs = [ pathspec ];
+  dependencies = [ pathspec ];
   pythonImportsCheck = [ "trailrunner" ];
 
   meta = {

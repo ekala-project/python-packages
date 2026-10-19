@@ -28,7 +28,6 @@ buildPythonPackage rec {
   pythonNamespaces = [ "azure" ];
 
   # Requires an active Azure Cosmos service
-  doCheck = false;
 
   pythonImportsCheck = [ "azure.cosmos" ];
 

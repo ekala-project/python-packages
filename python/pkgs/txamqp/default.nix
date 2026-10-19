@@ -16,7 +16,7 @@ buildPythonPackage rec {
     sha256 = "0jd9864k3csc06kipiwzjlk9mq4054s8kzk5q1cfnxj8572s4iv4";
   };
 
-  propagatedBuildInputs = [ twisted ];
+  dependencies = [ twisted ];
 
   meta = {
     homepage = "https://github.com/txamqp/txamqp";

@@ -31,7 +31,6 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [ "garden" ];
 
   # There are no tests
-  doCheck = false;
 
   meta = {
     description = "Kivy garden installation script, split into its own package for convenient use in buildozer";

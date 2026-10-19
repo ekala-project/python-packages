@@ -22,7 +22,6 @@ buildPythonPackage rec {
   ];
 
   # has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "indexed_bzip2" ];
 

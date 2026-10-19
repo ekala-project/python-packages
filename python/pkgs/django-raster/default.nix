@@ -27,9 +27,8 @@ buildPythonPackage rec {
   };
 
   # Tests require a postgresql + postgis server
-  doCheck = false;
 
-  propagatedBuildInputs = [
+  dependencies = [
     numpy
     django-colorful
     pillow

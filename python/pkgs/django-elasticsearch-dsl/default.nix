@@ -29,7 +29,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # Tests require running Elasticsearch daemon
-  doCheck = false;
 
   pythonImportsCheck = [ "django_elasticsearch_dsl" ];
 

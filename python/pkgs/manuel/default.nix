@@ -27,7 +27,7 @@ buildPythonPackage rec {
     })
   ];
 
-  propagatedBuildInputs = [ six ];
+  dependencies = [ six ];
 
   meta = {
     description = "Documentation builder";

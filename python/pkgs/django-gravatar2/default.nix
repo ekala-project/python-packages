@@ -18,8 +18,6 @@ buildPythonPackage rec {
 
   build-system = [ setuptools ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "django_gravatar" ];
 
   meta = {

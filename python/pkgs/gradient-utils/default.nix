@@ -25,7 +25,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ poetry-core ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     hyperopt
     prometheus-client
     numpy

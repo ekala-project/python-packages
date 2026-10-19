@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "byroot";
     repo = "pysrt";
-    rev = "v${version}";
+    tag = "v${version}";
     sha256 = "1f5hxyzlh5mdvvi52qapys9qcinffr6ghgivb6k4jxa92cbs3mfg";
   };
 
@@ -28,7 +28,7 @@ buildPythonPackage rec {
 
   build-system = [ setuptools ];
 
-  propagatedBuildInputs = [ chardet ];
+  dependencies = [ chardet ];
 
   meta = {
     homepage = "https://github.com/byroot/pysrt";

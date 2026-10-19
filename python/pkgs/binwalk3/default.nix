@@ -21,7 +21,6 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [ "binwalk" ];
 
   # Tests are not available on PyPI
-  doCheck = false;
 
   meta = {
     description = "Binwalk v3 with v2-compatible Python API";

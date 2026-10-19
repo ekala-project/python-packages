@@ -18,7 +18,6 @@ buildPythonPackage rec {
   build-system = [ setuptools ];
 
   # Requires networking
-  doCheck = false;
 
   pythonImportsCheck = [ "ntplib" ];
 

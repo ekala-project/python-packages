@@ -22,7 +22,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "openai";
     repo = "harmony";
-    rev = "v${version}";
+    tag = "v${version}";
     hash = "sha256-CaEldCrjBkjwsVeTzpiAFl/llAnUwJGTlU8Pt8YTV1E=";
   };
 
@@ -50,7 +50,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "openai_harmony" ];
 
   # Tests require internet access
-  doCheck = false;
 
   meta = {
     description = "Renderer for the harmony response format to be used with gpt-oss";

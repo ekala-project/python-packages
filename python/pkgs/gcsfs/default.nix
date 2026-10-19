@@ -22,7 +22,6 @@ buildPythonPackage (finalAttrs: {
   pname = "gcsfs";
   version = "2026.3.0";
   pyproject = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "fsspec";
@@ -47,7 +46,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # Tests require a running Docker instance
-  doCheck = false;
 
   pythonImportsCheck = [ "gcsfs" ];
 

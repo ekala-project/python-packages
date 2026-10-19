@@ -24,7 +24,6 @@ buildPythonPackage rec {
   ];
 
   # Module import recursion
-  doCheck = false;
 
   pythonImportsCheck = [ "pyinstrument" ];
 

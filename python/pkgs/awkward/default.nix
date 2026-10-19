@@ -16,7 +16,6 @@ buildPythonPackage (finalAttrs: {
   pname = "awkward";
   version = "2.13.0";
   pyproject = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "scikit-hep";

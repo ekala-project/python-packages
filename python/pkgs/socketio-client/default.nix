@@ -15,11 +15,11 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "invisibleroads";
     repo = "socketio-client";
-    rev = version;
+    tag = version;
     hash = "sha256-71sjiGJDDYElPGUNCH1HaVdvgMt8KeD/kXVDpF615ho=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     six
     websocket-client
     requests

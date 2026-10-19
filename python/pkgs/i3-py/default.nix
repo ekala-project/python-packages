@@ -18,7 +18,6 @@ buildPythonPackage (finalAttrs: {
   build-system = [ setuptools ];
 
   # no tests in tarball
-  doCheck = false;
 
   meta = {
     description = "Tools for i3 users and developers";

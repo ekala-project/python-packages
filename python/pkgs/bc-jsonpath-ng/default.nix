@@ -12,8 +12,6 @@ buildPythonPackage (finalAttrs: {
   version = "1.6.1";
   pyproject = true;
 
-  __structuredAttrs = true;
-
   src = fetchFromGitHub {
     owner = "bridgecrewio";
     repo = "jsonpath-ng";

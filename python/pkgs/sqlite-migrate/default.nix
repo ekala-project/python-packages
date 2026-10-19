@@ -11,7 +11,6 @@ buildPythonPackage (finalAttrs: {
   pname = "sqlite-migrate";
   version = "0.2";
   pyproject = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "simonw";
@@ -25,7 +24,7 @@ buildPythonPackage (finalAttrs: {
     uv-build
   ];
 
-  propagatedBuildInputs = [ sqlite-utils ];
+  dependencies = [ sqlite-utils ];
 
   pythonImportsCheck = [ "sqlite_migrate" ];
 

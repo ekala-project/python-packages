@@ -36,7 +36,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "dissect.xfs" ];
 
   # Archive files seems to be corrupt
-  doCheck = false;
 
   meta = {
     description = "Dissect module implementing a parser for the XFS file system";

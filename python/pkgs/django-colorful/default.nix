@@ -21,7 +21,6 @@ buildPythonPackage rec {
   buildInputs = [ django ];
 
   # Tests aren't run
-  doCheck = false;
 
   pythonImportsCheck = [ "colorful" ];
 

@@ -28,7 +28,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [ packaging ];
+  dependencies = [ packaging ];
 
   pythonImportsCheck = [ "luddite" ];
 

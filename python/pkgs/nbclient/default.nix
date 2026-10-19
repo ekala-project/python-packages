@@ -32,7 +32,6 @@ let
     ];
 
     # circular dependencies if enabled by default
-    doCheck = false;
     meta = {
       homepage = "https://github.com/jupyter/nbclient";
       description = "Client library for executing notebooks";

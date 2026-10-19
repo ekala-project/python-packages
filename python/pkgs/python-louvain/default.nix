@@ -26,7 +26,7 @@ buildPythonPackage rec {
     })
   ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     networkx
     numpy
   ];

@@ -21,7 +21,6 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [ "alibabacloud_credentials_api" ];
 
   # Module has only tests in the untagged upstream repo
-  doCheck = false;
 
   meta = {
     description = "Aliyun Credentials API Library for Python";

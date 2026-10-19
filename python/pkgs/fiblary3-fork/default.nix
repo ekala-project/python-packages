@@ -24,7 +24,7 @@ buildPythonPackage rec {
     sha256 = "001wqh7gx2dv3sf7a5xsbppz9r88f5qwrp05jzjsjcm6cbcvmsz0";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     jsonpatch
     netaddr
     prettytable

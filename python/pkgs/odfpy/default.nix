@@ -22,8 +22,6 @@ buildPythonPackage rec {
 
   pythonImportsCheck = [ "odf" ];
 
-  doCheck = false;
-
   meta = {
     homepage = "https://github.com/eea/odfpy";
     description = "Python API and tools to manipulate OpenDocument files";

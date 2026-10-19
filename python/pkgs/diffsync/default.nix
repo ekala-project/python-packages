@@ -31,7 +31,7 @@ buildPythonPackage rec {
     "structlog"
   ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     colorama
     packaging
     pydantic

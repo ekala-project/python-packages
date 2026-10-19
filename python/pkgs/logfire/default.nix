@@ -65,7 +65,6 @@ buildPythonPackage (finalAttrs: {
   pname = "logfire";
   version = "5.0.0";
   pyproject = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "pydantic";
@@ -129,7 +128,6 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [ "logfire" ];
 
   # Too many outdated snapshots that fail with inline-snapshot
-  doCheck = false;
   meta = {
     description = "Uncomplicated Observability for Python and beyond";
     downloadPage = "https://github.com/pydantic/logfire/releases/tag/${finalAttrs.src.tag}";

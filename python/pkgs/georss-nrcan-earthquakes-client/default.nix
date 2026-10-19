@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "exxamalte";
     repo = "python-georss-nrcan-earthquakes-client";
-    rev = "v${version}";
+    tag = "v${version}";
     hash = "sha256-JRU+ncPRbkA/fQ6aIOX6J09ErMpgH2Rk8AF+eWR5WXg=";
   };
 

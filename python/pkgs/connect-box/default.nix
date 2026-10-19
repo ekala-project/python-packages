@@ -26,7 +26,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     aiohttp
     attrs
     defusedxml

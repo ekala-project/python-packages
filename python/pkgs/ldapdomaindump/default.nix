@@ -29,7 +29,6 @@ buildPythonPackage rec {
   ];
 
   # Tests require LDAP server
-  doCheck = false;
 
   pythonImportsCheck = [ "ldapdomaindump" ];
 

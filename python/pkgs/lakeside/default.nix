@@ -19,14 +19,13 @@ buildPythonPackage rec {
     hash = "sha256-Y5g78trkwOF3jsbgTv0uVkvfB1HZN+w1T6xIorxGAhg=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     protobuf
     pycryptodome
     requests
   ];
 
   # Module has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "lakeside" ];
 

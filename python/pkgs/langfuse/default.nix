@@ -41,7 +41,6 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [ "langfuse" ];
 
   # tests require network access and openai api key
-  doCheck = false;
 
   meta = {
     description = "Instrument your LLM app with decorators or low-level SDK and get detailed tracing/observability";

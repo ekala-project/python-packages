@@ -20,7 +20,6 @@ buildPythonPackage rec {
   build-system = [ poetry-core ];
 
   # Module has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "liblp" ];
 

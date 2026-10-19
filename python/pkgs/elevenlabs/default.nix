@@ -42,7 +42,6 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [ "elevenlabs" ];
 
   # tests access the API on the internet
-  doCheck = false;
 
   meta = {
     description = "Official Python API for ElevenLabs Text to Speech";

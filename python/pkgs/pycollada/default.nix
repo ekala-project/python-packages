@@ -28,7 +28,6 @@ buildPythonPackage rec {
 
   # Some tests fail because they refer to test data files that don't exist
   # (upstream packaging issue)
-  doCheck = false;
 
   pythonImportsCheck = [
     "collada"

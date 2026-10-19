@@ -28,8 +28,6 @@ buildPythonPackage rec {
 
   dependencies = [ flake8 ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "hacking" ];
 
   meta = {

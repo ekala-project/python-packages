@@ -28,7 +28,6 @@ buildPythonPackage rec {
   ];
 
   # has no tests
-  doCheck = false;
 
   meta = {
     description = "This is the Microsoft Azure Reservations Client Library";

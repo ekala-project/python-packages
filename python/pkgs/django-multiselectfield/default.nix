@@ -22,7 +22,6 @@ buildPythonPackage rec {
   dependencies = [ django ];
 
   # No tests
-  doCheck = false;
 
   pythonImportsCheck = [ "multiselectfield" ];
 

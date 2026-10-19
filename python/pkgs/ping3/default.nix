@@ -20,7 +20,6 @@ buildPythonPackage rec {
   build-system = [ setuptools ];
 
   # Tests require additional permissions
-  doCheck = false;
 
   pythonImportsCheck = [ "ping3" ];
 

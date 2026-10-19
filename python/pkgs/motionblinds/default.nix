@@ -23,7 +23,6 @@ buildPythonPackage rec {
   dependencies = [ pycryptodomex ];
 
   # Module has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "motionblinds" ];
 

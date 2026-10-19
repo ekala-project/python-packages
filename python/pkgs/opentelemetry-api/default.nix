@@ -35,8 +35,6 @@ buildPythonPackage rec {
 
   pythonImportsCheck = [ "opentelemetry" ];
 
-  doCheck = false;
-
   meta = {
     homepage = "https://github.com/open-telemetry/opentelemetry-python/tree/main/opentelemetry-api";
     description = "OpenTelemetry Python API";

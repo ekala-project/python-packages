@@ -20,7 +20,7 @@ buildPythonPackage rec {
   };
 
   # Wheel requires only `numpy`, but the import needs `jax`.
-  propagatedBuildInputs = [ jax ];
+  dependencies = [ jax ];
 
   pythonImportsCheck = [ "jmp" ];
 

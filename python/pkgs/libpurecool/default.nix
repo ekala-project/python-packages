@@ -40,7 +40,6 @@ buildPythonPackage rec {
   ];
 
   # Tests are only present in repo, https://github.com/etheralm/libpurecool/issues/36
-  doCheck = false;
   pythonImportsCheck = [ "libpurecool" ];
 
   meta = {

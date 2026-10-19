@@ -23,7 +23,7 @@ buildPythonPackage rec {
     hash = "sha256-Q3Ay9FpJsvSVu0WU2bxFyo3ODKP/ZUo3SqsBtOGrIIE=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     inflection
     more-itertools
     numpy

@@ -27,7 +27,7 @@ buildPythonPackage (finalAttrs: {
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     html-text
     jstyleson
     lxml

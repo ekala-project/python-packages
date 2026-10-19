@@ -18,13 +18,12 @@ buildPythonPackage rec {
     hash = "sha256-CIBed8HzbUqUIzNy1lHxIgjneA6R8uKtmd43LU92M0Q=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     python-dateutil
     requests
   ];
 
   # Module has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "kiwiki" ];
 

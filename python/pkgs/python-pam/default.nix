@@ -30,7 +30,7 @@ buildPythonPackage rec {
 
   buildInputs = [ pam ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     six
     toml
   ];

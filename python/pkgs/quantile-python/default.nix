@@ -15,7 +15,6 @@ buildPythonPackage rec {
   };
 
   # package has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "quantile" ];
 

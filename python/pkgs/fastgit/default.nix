@@ -25,7 +25,6 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [ "fastgit" ];
 
   # Module has no tests
-  doCheck = false;
 
   meta = {
     description = "Module to use git";

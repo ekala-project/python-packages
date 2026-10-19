@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "wbond";
     repo = "oscrypto";
-    rev = version;
+    tag = version;
     hash = "sha256-CmDypmlc/kb6ONCUggjT1Iqd29xNSLRaGh5Hz36dvOw=";
   };
 
@@ -38,7 +38,7 @@ buildPythonPackage rec {
     done
   '';
 
-  propagatedBuildInputs = [ asn1crypto ];
+  dependencies = [ asn1crypto ];
   pythonImportsCheck = [ "oscrypto" ];
 
   doCheck = !stdenv.hostPlatform.isDarwin;

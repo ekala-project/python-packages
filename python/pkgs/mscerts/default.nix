@@ -22,7 +22,6 @@ buildPythonPackage (finalAttrs: {
   # extras_require contains signify -> circular dependency
 
   # Module has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "mscerts" ];
 

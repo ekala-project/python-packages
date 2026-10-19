@@ -39,8 +39,6 @@ buildPythonPackage (finalAttrs: {
 
   pythonImportsCheck = [ "aioaquacell" ];
 
-  doCheck = false; # no tests
-
   meta = {
     description = "Asynchronous library to retrieve details of your Aquacell water softener device";
     homepage = "https://github.com/Jordi1990/aioaquacell";

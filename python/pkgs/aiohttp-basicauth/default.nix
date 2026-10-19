@@ -10,7 +10,7 @@
 buildPythonPackage rec {
   pname = "aiohttp-basicauth";
   version = "1.2.0";
-  format = "pyproject";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "romis2012";

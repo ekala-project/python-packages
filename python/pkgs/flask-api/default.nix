@@ -37,7 +37,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [ flask ];
+  dependencies = [ flask ];
 
   nativeCheckInputs = [
     markdown

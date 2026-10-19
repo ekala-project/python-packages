@@ -16,10 +16,9 @@ buildPythonPackage rec {
     echo "from setuptools import setup; setup(name='${pname}', version='${version}', install_requires=['pycryptodome'])" > setup.py
   '';
 
-  propagatedBuildInputs = [ pycryptodome ];
+  dependencies = [ pycryptodome ];
 
   # Our dummy has no tests
-  doCheck = false;
 
   meta = {
     homepage = "https://www.pycrypto.org/";

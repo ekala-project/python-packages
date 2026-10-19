@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pretix";
     repo = "python-drafthorse";
-    rev = version;
+    tag = version;
     hash = "sha256-z8w1n/rjrVpL+3MFoTaKCI7NZpchIg4H80rNlm0sFgQ=";
   };
 

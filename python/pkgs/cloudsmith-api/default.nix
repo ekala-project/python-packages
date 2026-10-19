@@ -19,7 +19,7 @@ buildPythonPackage rec {
     hash = "sha256-CfNgISONtTrabCoNUzHbMMVKDwGj8fdmSwh1FfzH10g=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     certifi
     python-dateutil
     six
@@ -27,7 +27,6 @@ buildPythonPackage rec {
   ];
 
   # Wheels have no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "cloudsmith_api" ];
 

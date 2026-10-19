@@ -15,11 +15,10 @@ buildPythonPackage rec {
     hash = "sha256-F4lDVefSswXNgy1xdwg4QBfBaYqQziT29/vwJC3Qpog=";
   };
 
-  doCheck = false;
   # This lib officially only works completely on Windows and partially on MacOS but pyautogui requires it
   # pythonImportsCheck = [ "pygetwindow" ];
 
-  propagatedBuildInputs = [ pyrect ];
+  dependencies = [ pyrect ];
 
   meta = {
     description = "Simple, cross-platform module for obtaining GUI information on applications' windows";

@@ -17,7 +17,7 @@ buildPythonPackage rec {
     hash = "sha256-DzibvC8qr/5ync59cfFB7tBmZWkPs/hKh+e5OC4lcEw=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     base58
     ecdsa
     sympy
@@ -31,7 +31,6 @@ buildPythonPackage rec {
   '';
 
   # Project doesn't ship tests
-  doCheck = false;
 
   pythonImportsCheck = [ "bitcoinutils" ];
 

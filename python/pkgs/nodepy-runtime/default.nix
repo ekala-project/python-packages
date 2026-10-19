@@ -17,7 +17,7 @@ buildPythonPackage rec {
     hash = "sha256-6tSsD76EpCZxkdulv1BcUZtIXGWLG6PuII25J8STygE=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     localimport
     pathlib2
     six

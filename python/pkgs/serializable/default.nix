@@ -21,7 +21,7 @@ buildPythonPackage {
     hash = "sha256-AXlgIc1B7bkR+joXn6ZSxk/t848CWlgVZp8WIsSZFKQ=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     simplejson
     six
     typechecks

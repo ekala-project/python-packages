@@ -64,7 +64,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # Tests require pervasive internet access
-  doCheck = false;
 
   # Module import will attempt to create a cache directory
   postFixup = "export HF_MODULES_CACHE=$TMPDIR";

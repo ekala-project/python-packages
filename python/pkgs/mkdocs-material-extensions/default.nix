@@ -19,8 +19,6 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ hatchling ];
 
-  doCheck = false; # Circular dependency
-
   pythonImportsCheck = [ "materialx" ];
 
   meta = {

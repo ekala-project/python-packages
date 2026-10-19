@@ -20,7 +20,7 @@ buildPythonPackage rec {
   };
 
   nativeBuildInputs = [ setuptools ];
-  propagatedBuildInputs = [
+  dependencies = [
     beautifulsoup4
     html5lib
     requests
@@ -28,7 +28,6 @@ buildPythonPackage rec {
   ];
 
   # upstream has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "htmllistparse" ];
 

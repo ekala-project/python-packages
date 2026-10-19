@@ -19,7 +19,7 @@ buildPythonPackage {
     hash = "sha256-9qACTNMkO/CH/qB6WiggIKwSiFIccgU7CH0UeGUaFb4=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     requests
     six
     tqdm

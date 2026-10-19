@@ -19,7 +19,7 @@ buildPythonPackage rec {
     hash = "sha256-tyvHWBhanR7YH87MDWdXUsDEzZG6MgnbshezAbxWO+I=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     lark
     pydot
   ];

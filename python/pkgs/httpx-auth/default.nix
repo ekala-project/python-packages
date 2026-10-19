@@ -28,7 +28,7 @@ buildPythonPackage rec {
     setuptools-scm
   ];
 
-  propagatedBuildInputs = [ httpx ];
+  dependencies = [ httpx ];
   pythonImportsCheck = [ "httpx_auth" ];
   meta = {
     description = "Authentication classes to be used with httpx";

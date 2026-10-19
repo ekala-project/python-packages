@@ -39,8 +39,6 @@ buildPythonPackage rec {
       export PYTHONPATH="$TMPDIR/distutils-shim:${siteDir setuptools}:${extraPaths}''${PYTHONPATH:+:$PYTHONPATH}"
     '';
 
-  doCheck = false;
-
   pythonImportsCheck = [ "distorm3" ];
 
   meta = {

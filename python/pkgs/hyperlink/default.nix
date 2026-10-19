@@ -20,8 +20,6 @@ buildPythonPackage rec {
 
   dependencies = [ idna ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "hyperlink" ];
 
   meta = {

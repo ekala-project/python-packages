@@ -39,7 +39,6 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [ "envoy_data_plane" ];
 
   # No tests
-  doCheck = false;
 
   meta = {
     description = "Python dataclasses for the Envoy Data-Plane-API";

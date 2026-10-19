@@ -15,11 +15,11 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "appknox";
     repo = "pyaxmlparser";
-    rev = "v${version}";
+    tag = "v${version}";
     hash = "sha256-ZV2PyWQfK9xidzGUz7XPAReaVjlB8tMUKQiXoGcFCGs=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     asn1crypto
     click
     lxml

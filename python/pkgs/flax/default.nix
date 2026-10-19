@@ -25,7 +25,6 @@ buildPythonPackage (finalAttrs: {
   pname = "flax";
   version = "0.12.7";
   pyproject = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "google";
@@ -54,8 +53,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   pythonImportsCheck = [ "flax" ];
-
-  doCheck = false;
 
   meta = {
     description = "Neural network library for JAX";

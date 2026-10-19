@@ -26,7 +26,7 @@ buildPythonPackage rec {
 
   pythonRelaxDeps = [ "sqlparse" ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     click
     prompt-toolkit
     pygments

@@ -26,7 +26,6 @@ buildPythonPackage rec {
   dependencies = [ prompt-toolkit ];
 
   # no test
-  doCheck = false;
 
   pythonImportsCheck = [ "noneprompt" ];
 

@@ -34,7 +34,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ hatchling ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     comm
     ipython
     jupyter-client

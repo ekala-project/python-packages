@@ -22,7 +22,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "lightify" ];
 
   # tests access the network
-  doCheck = false;
 
   meta = {
     description = "Library to work with OSRAM Lightify";

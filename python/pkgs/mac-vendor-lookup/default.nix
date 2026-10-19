@@ -30,8 +30,6 @@ buildPythonPackage (finalAttrs: {
     aiohttp
   ];
 
-  doCheck = false; # no tests
-
   pythonImportsCheck = [ "mac_vendor_lookup" ];
 
   meta = {

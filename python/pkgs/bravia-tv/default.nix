@@ -11,8 +11,6 @@ buildPythonPackage (finalAttrs: {
   version = "1.0.11";
   pyproject = true;
 
-  __structuredAttrs = true;
-
   src = fetchFromGitHub {
     owner = "dcnielsen90";
     repo = "python-bravia-tv";
@@ -25,7 +23,6 @@ buildPythonPackage (finalAttrs: {
   dependencies = [ requests ];
 
   # Package does not include tests
-  doCheck = false;
 
   pythonImportsCheck = [ "bravia_tv" ];
 

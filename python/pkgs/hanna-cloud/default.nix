@@ -27,7 +27,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # upstream has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "hanna_cloud" ];
 

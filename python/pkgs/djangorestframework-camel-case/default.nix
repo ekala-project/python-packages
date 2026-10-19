@@ -16,10 +16,9 @@ buildPythonPackage rec {
     hash = "sha256-za51hGZIq7ZYXHRwY5odL7Bk3EX46LYqqlC+fxp6YfQ=";
   };
 
-  propagatedBuildInputs = [ djangorestframework ];
+  dependencies = [ djangorestframework ];
   # tests are only on GitHub but there are no tags
   # https://github.com/vbabiy/djangorestframework-camel-case/issues/116
-  doCheck = false;
 
   pythonImportsCheck = [ "djangorestframework_camel_case" ];
 

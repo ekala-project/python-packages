@@ -28,8 +28,6 @@ buildPythonPackage rec {
 
   dependencies = [ six ];
 
-  doCheck = false;
-
   meta = {
     description = "Stats for Python processes";
     homepage = "https://www.github.com/Cue/scales";

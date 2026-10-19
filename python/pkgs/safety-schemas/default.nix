@@ -43,7 +43,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "safety_schemas" ];
 
   # upstream has no tests
-  doCheck = false;
 
   meta = {
     description = "Schemas for Safety CLI";

@@ -35,7 +35,6 @@ buildPythonPackage rec {
   ];
 
   # Missing test files
-  doCheck = false;
 
   pythonImportsCheck = [ "brotli" ];
 

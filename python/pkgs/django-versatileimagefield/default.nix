@@ -16,7 +16,7 @@ buildPythonPackage rec {
     inherit pname version;
     hash = "sha256-M5DiAEgJjol78pmwNgdj0QzQiWZbeu+OupAO7Lrq0Ng=";
   };
-  propagatedBuildInputs = [
+  dependencies = [
     pillow
     python-magic
   ];
@@ -24,7 +24,6 @@ buildPythonPackage rec {
   nativeCheckInputs = [ django ];
 
   # tests not included with pypi release
-  doCheck = false;
 
   pythonImportsCheck = [ "versatileimagefield" ];
 

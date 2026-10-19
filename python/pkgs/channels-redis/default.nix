@@ -37,7 +37,6 @@ buildPythonPackage rec {
 
   # Fails with : ConnectionRefusedError: [Errno 111] Connect call failed ('127.0.0.1', 6379)
   # (even with a local Redis instance running)
-  doCheck = false;
 
   pythonImportsCheck = [ "channels_redis" ];
 

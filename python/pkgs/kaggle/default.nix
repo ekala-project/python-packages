@@ -20,7 +20,6 @@
 }:
 
 buildPythonPackage (finalAttrs: {
-  __structuredAttrs = true;
 
   pname = "kaggle";
   version = "2.2.3";

@@ -22,8 +22,6 @@ buildPythonPackage rec {
 
   dependencies = [ prompt-toolkit ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "aiocmd" ];
 
   meta = {

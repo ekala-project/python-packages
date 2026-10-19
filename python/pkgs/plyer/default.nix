@@ -58,7 +58,7 @@ buildPythonPackage rec {
     setuptools
   ];
 
-  propagatedBuildInputs = [ keyring ];
+  dependencies = [ keyring ];
 
   pythonImportsCheck = [ "plyer" ];
 

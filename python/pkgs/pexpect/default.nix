@@ -19,9 +19,8 @@ buildPythonPackage rec {
   nativeBuildInputs = [ setuptools ];
 
   # Wants to run pythonin a subprocess
-  doCheck = false;
 
-  propagatedBuildInputs = [ ptyprocess ];
+  dependencies = [ ptyprocess ];
   meta = {
     homepage = "http://www.noah.org/wiki/Pexpect";
     description = "Automate interactive console applications such as ssh, ftp, etc";

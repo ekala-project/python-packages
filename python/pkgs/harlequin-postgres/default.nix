@@ -31,7 +31,6 @@ buildPythonPackage rec {
 
   # To prevent circular dependency
   # as harlequin-postgres requires harlequin which requires harlequin-postgres
-  doCheck = false;
   pythonRemoveDeps = [
     "harlequin"
   ];

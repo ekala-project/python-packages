@@ -31,7 +31,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # Module doesn't have tests
-  doCheck = false;
 
   meta = {
     description = "PEP 561 based Type information for docutils";

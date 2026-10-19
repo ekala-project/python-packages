@@ -27,7 +27,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # All components are stored in a mono repo
-  doCheck = false;
 
   pythonImportsCheck = [ "aliyunsdkcore" ];
 

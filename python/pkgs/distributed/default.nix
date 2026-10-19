@@ -28,7 +28,6 @@ buildPythonPackage (finalAttrs: {
   pname = "distributed";
   version = "2026.8.0";
   pyproject = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "dask";
@@ -62,7 +61,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # When tested random tests would fail and not repeatably
-  doCheck = false;
 
   pythonImportsCheck = [ "distributed" ];
 

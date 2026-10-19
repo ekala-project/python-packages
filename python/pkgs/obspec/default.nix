@@ -39,9 +39,6 @@ buildPythonPackage (finalAttrs: {
   nativeCheckInputs = [
     pytestCheckHook
     mypy
-  ];
-
-  checkInputs = [
     pytest-mypy-plugins
   ];
 

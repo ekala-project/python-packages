@@ -23,8 +23,6 @@ buildPythonPackage {
 
   pythonImportsCheck = [ "opentelemetry.sdk" ];
 
-  doCheck = false;
-
   meta = opentelemetry-api.meta // {
     homepage = "https://github.com/open-telemetry/opentelemetry-python/tree/main/opentelemetry-sdk";
     description = "OpenTelemetry Python SDK";

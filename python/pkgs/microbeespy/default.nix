@@ -27,7 +27,6 @@ buildPythonPackage rec {
   ];
 
   # Package doesn't include tests
-  doCheck = false;
 
   pythonImportsCheck = [ "microBeesPy" ];
 

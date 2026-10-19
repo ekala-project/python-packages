@@ -23,7 +23,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "precisely" ];
 
   # Tests are outdated and based on Nose, which is not supported anymore.
-  doCheck = false;
 
   passthru.updateScript = gitUpdater { };
 

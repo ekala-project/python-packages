@@ -14,17 +14,16 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "crownstone";
     repo = "crownstone-lib-python-uart";
-    rev = version;
+    tag = version;
     hash = "sha256-Sc6BCIRbf1+GraTScmV4EAgwtSE/JXNe0f2XhKyACIY=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     crownstone-core
     pyserial
   ];
 
   # Project has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "crownstone_uart" ];
 

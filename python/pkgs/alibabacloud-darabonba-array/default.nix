@@ -10,8 +10,6 @@ buildPythonPackage (finalAttrs: {
   version = "0.1.0";
   pyproject = true;
 
-  __structuredAttrs = true;
-
   src = fetchPypi {
     pname = "alibabacloud_darabonba_array";
     inherit (finalAttrs) version;
@@ -23,7 +21,6 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [ "alibabacloud_darabonba_array" ];
 
   # Module has no tests
-  doCheck = false;
 
   meta = {
     description = "Alibaba Cloud Darabonba Array SDK Library for Python";

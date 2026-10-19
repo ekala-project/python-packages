@@ -16,7 +16,6 @@ buildPythonPackage (finalAttrs: {
   pname = "fastapi-pagination";
   version = "0.15.16";
   pyproject = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "uriyyo";
@@ -38,7 +37,6 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [ "fastapi_pagination" ];
 
   # Tests require network access
-  doCheck = false;
 
   meta = {
     description = "FastAPI pagination";

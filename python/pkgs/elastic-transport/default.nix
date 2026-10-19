@@ -28,8 +28,6 @@ buildPythonPackage rec {
     urllib3
   ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "elastic_transport" ];
 
   meta = {

@@ -29,7 +29,7 @@ buildPythonPackage rec {
     wheel
   ];
 
-  propagatedBuildInputs = [ typing-extensions ];
+  dependencies = [ typing-extensions ];
 
   pythonImportsCheck = [ "pyee" ];
 

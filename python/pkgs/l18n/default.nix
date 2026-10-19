@@ -16,13 +16,12 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-GVbokNZz0XE1zCCRMlPBVPa8HAAmbCK31QPMGlpC2Eg=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     pytz
     six
   ];
 
   # tests are not included in sdist and building from source is none trivial
-  doCheck = false;
 
   pythonImportsCheck = [ "l18n" ];
 

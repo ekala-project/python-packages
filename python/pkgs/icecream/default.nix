@@ -32,8 +32,6 @@ buildPythonPackage rec {
     pygments
   ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "icecream" ];
 
   meta = {

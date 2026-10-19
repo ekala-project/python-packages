@@ -30,7 +30,7 @@ buildPythonPackage rec {
 
   build-system = [ poetry-core ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     paho-mqtt
     psutil
     python-gnupg

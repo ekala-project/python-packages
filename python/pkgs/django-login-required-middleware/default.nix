@@ -22,9 +22,9 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools-scm ];
 
-  propagatedBuildInputs = [ django ];
+  dependencies = [ django ];
 
-  checkInputs = [ djangorestframework ];
+  nativeCheckInputs = [ djangorestframework ];
 
   pythonImportsCheck = [ "login_required" ];
 

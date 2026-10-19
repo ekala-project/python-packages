@@ -34,8 +34,6 @@ buildPythonPackage (finalAttrs: {
     types-protobuf
   ];
 
-  doCheck = false; # ModuleNotFoundError: No module named 'testproto'
-
   nativeCheckInputs = [ pytestCheckHook ];
 
   pythonImportsCheck = [ "mypy_protobuf" ];

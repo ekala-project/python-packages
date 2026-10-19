@@ -33,7 +33,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "dockerpycreds" ];
 
   # require docker-credential-helpers binaries
-  doCheck = false;
 
   meta = {
     description = "Python bindings for the docker credentials store API";

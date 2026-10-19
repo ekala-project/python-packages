@@ -37,7 +37,6 @@ buildPythonPackage rec {
   pythonNamespaces = [ "azure.multiapi" ];
 
   # no tests included
-  doCheck = false;
 
   pythonImportsCheck = [
     "azure.multiapi.storagev2"

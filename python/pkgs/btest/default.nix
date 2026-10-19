@@ -23,7 +23,6 @@ buildPythonPackage rec {
   dependencies = [ multiprocess ];
 
   # No tests available and no module to import
-  doCheck = false;
 
   meta = {
     description = "Generic Driver for Powerful System Tests";

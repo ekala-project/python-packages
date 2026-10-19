@@ -40,7 +40,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "grpc_testing" ];
 
   # Module has no tests
-  doCheck = false;
 
   meta = {
     description = "Testing utilities for gRPC Python";

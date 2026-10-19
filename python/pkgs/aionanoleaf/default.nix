@@ -17,10 +17,9 @@ buildPythonPackage rec {
     hash = "sha256-f0TyXhuAzI0s0n6sXH9mKWA4nad2YchZkQ0+jw/Bmv0=";
   };
 
-  propagatedBuildInputs = [ aiohttp ];
+  dependencies = [ aiohttp ];
 
   # Project has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "aionanoleaf" ];
 

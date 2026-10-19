@@ -31,8 +31,6 @@ buildPythonPackage rec {
     wtforms
   ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "flask_wtf" ];
 
   meta = {

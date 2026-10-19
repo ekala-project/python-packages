@@ -23,7 +23,7 @@ buildPythonPackage (finalAttrs: {
 
   buildInputs = [ poetry-core ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     beancount-parser
     click
   ];

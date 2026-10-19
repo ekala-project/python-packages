@@ -27,7 +27,7 @@ buildPythonPackage rec {
     wheel
   ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     sphinx
     pyenchant
   ];

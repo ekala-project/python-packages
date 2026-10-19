@@ -22,7 +22,7 @@ buildPythonPackage rec {
     runHook postPatch
   '';
 
-  propagatedBuildInputs = [ bottle ];
+  dependencies = [ bottle ];
 
   sourceRoot = ".";
 

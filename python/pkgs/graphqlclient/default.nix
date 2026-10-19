@@ -11,8 +11,6 @@ buildPythonPackage (finalAttrs: {
   version = "0.2.4";
   pyproject = true;
 
-  __structuredAttrs = true;
-
   src = fetchPypi {
     pname = "graphqlclient";
     inherit (finalAttrs) version;
@@ -24,7 +22,6 @@ buildPythonPackage (finalAttrs: {
   dependencies = [ six ];
 
   # Project has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "graphqlclient" ];
 

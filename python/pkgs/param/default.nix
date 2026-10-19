@@ -21,8 +21,6 @@ buildPythonPackage rec {
     hatch-vcs
   ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "param" ];
 
   meta = {

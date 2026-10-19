@@ -24,7 +24,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # touches network
-  doCheck = false;
 
   meta = {
     description = "Framework for writing webhooks for GitHub";

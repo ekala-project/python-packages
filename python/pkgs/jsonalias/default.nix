@@ -22,7 +22,6 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [ "jsonalias" ];
 
   # Module has no tests
-  doCheck = false;
 
   meta = {
     description = "Library that defines a Json type alias for Python";

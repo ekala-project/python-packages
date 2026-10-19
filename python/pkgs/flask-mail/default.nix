@@ -29,8 +29,6 @@ buildPythonPackage rec {
     flask
   ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "flask_mail" ];
 
   meta = {

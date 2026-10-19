@@ -45,8 +45,6 @@ buildPythonPackage rec {
     pyyaml
   ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "astropy" ];
 
   meta = {

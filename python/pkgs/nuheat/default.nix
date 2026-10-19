@@ -21,7 +21,7 @@ buildPythonPackage rec {
     hash = "sha256-EsPuwILfKc1Bpvu0Qos7yooC3dBaqf46lWhiSZdu3sc=";
   };
 
-  propagatedBuildInputs = [ requests ];
+  dependencies = [ requests ];
 
   nativeCheckInputs = [
     mock

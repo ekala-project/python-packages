@@ -36,7 +36,6 @@ buildPythonPackage (finalAttrs: {
   };
 
   # does not contain tests
-  doCheck = false;
 
   pythonImportsCheck = [
     "google.api"

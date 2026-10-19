@@ -21,7 +21,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     azure-core
     isodate
     typing-extensions
@@ -30,7 +30,6 @@ buildPythonPackage rec {
   pythonNamespaces = [ "azure.keyvault" ];
 
   # Tests require checkout from mono-repo
-  doCheck = false;
 
   meta = {
     description = "Microsoft Azure Key Vault Secrets Client Library for Python";

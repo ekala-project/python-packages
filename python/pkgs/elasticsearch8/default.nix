@@ -37,7 +37,6 @@ buildPythonPackage rec {
 
   # Check is disabled because running them destroy the content of the local cluster!
   # https://github.com/elasticsearch/elasticsearch-py/tree/main/test_elasticsearch
-  doCheck = false;
 
   pythonImportsCheck = [ "elasticsearch8" ];
 

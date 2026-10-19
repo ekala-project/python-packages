@@ -25,8 +25,6 @@ buildPythonPackage rec {
     zope_exceptions
   ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "zope.testrunner" ];
 
   pythonNamespaces = [ "zope" ];

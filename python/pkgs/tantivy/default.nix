@@ -16,7 +16,6 @@ buildPythonPackage (finalAttrs: {
   pname = "tantivy";
   version = "0.26.0";
   pyproject = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "quickwit-oss";

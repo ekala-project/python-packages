@@ -15,7 +15,6 @@ buildPythonPackage rec {
   };
 
   # No tests have been written for this library.
-  doCheck = false;
 
   pythonImportsCheck = [ "environmental_override" ];
 

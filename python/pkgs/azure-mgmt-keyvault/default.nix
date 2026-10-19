@@ -32,7 +32,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "azure.mgmt.keyvault" ];
 
   # Module has no tests
-  doCheck = false;
 
   meta = {
     description = "This is the Microsoft Azure Key Vault Management Client Library";

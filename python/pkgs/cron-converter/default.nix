@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Sonic0";
     repo = "cron-converter";
-    rev = "v${version}";
+    tag = "v${version}";
     hash = "sha256-bf25BccSCvx5p9U57DZEJ3pv9K15XuH5As832W1fXws=";
   };
 

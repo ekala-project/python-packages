@@ -35,7 +35,7 @@ buildPythonPackage rec {
     wheel
   ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     jinja2
     numpy
   ];

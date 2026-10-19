@@ -35,7 +35,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "ipylab" ];
 
   # There are no tests
-  doCheck = false;
 
   meta = {
     description = "Control JupyterLab from Python notebooks";

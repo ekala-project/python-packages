@@ -40,7 +40,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "eve" ];
 
   # Tests call a running mongodb instance
-  doCheck = false;
 
   meta = {
     description = "Open source Python REST API framework designed for human beings";

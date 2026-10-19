@@ -29,7 +29,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ flit-core ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     importlib-metadata
     ipython
     jupyter-cache

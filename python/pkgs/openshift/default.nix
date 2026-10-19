@@ -23,7 +23,7 @@ buildPythonPackage rec {
 
   pythonRelaxDeps = [ "kubernetes" ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     jinja2
     kubernetes
     python-string-utils

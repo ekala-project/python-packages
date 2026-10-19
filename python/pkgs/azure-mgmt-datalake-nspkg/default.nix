@@ -11,8 +11,6 @@ buildPythonPackage (finalAttrs: {
   version = "3.0.1";
   pyproject = true;
 
-  __structuredAttrs = true;
-
   src = fetchPypi {
     inherit (finalAttrs) pname version;
     extension = "zip";
@@ -24,7 +22,6 @@ buildPythonPackage (finalAttrs: {
   dependencies = [ azure-mgmt-nspkg ];
 
   # has no tests
-  doCheck = false;
 
   meta = {
     description = "This is the Microsoft Azure Data Lake Management namespace package";

@@ -24,7 +24,6 @@ buildPythonPackage rec {
   ];
 
   # No tests available on PyPi and Codeberg source.
-  doCheck = false;
 
   pythonImportsCheck = [ "dt8852" ];
 

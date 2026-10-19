@@ -33,7 +33,7 @@ buildPythonPackage rec {
     wheel
   ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     importlib-metadata
     pyscaffold
     pyscaffoldext-markdown

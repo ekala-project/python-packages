@@ -36,8 +36,6 @@ buildPythonPackage (finalAttrs: {
 
   pythonImportsCheck = [ "optax" ];
 
-  doCheck = false;
-
   meta = {
     description = "Gradient processing and optimization library for JAX";
     homepage = "https://github.com/deepmind/optax";

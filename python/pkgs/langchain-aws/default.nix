@@ -29,7 +29,6 @@ buildPythonPackage (finalAttrs: {
   pname = "langchain-aws";
   version = "1.7.5";
   pyproject = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "langchain-ai";

@@ -21,7 +21,7 @@ buildPythonPackage rec {
     hash = "sha256-nzM5P1ww6yWM3e2v3hRw0ECoYmRPhTs0Q7Wwicl+IpU=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     geojson
     haversine
     pytz

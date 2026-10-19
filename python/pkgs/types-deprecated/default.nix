@@ -25,7 +25,6 @@ buildPythonPackage (finalAttrs: {
   build-system = [ setuptools ];
 
   # Modules has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "deprecated-stubs" ];
 

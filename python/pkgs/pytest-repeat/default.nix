@@ -25,8 +25,6 @@ buildPythonPackage rec {
 
   buildInputs = [ pytest ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "pytest_repeat" ];
 
   meta = {

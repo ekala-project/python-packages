@@ -29,7 +29,6 @@ buildPythonPackage rec {
   buildInputs = [ pytest ];
 
   # pytest-socket require network for majority of tests
-  doCheck = false;
 
   pythonImportsCheck = [ "pytest_socket" ];
 

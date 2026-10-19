@@ -19,7 +19,7 @@ buildPythonPackage rec {
     hash = "sha256-eNQ3rbKFdPRIyDjtXwH5ztN4GWCYBh3rWdn3AxcEwX4=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     msrest
     msrestazure
     azure-common
@@ -27,7 +27,6 @@ buildPythonPackage rec {
   ];
 
   # has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "azure.mgmt.containerinstance" ];
 

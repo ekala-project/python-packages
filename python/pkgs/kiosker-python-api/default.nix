@@ -23,7 +23,6 @@ buildPythonPackage (finalAttrs: {
   dependencies = [ httpx ];
 
   # Tests require a live Kiosker device (HOST/TOKEN env vars).
-  doCheck = false;
 
   pythonImportsCheck = [ "kiosker" ];
 

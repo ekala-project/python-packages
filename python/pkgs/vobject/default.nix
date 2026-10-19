@@ -26,8 +26,6 @@ buildPythonPackage rec {
     six
   ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "vobject" ];
 
   meta = {

@@ -30,7 +30,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     aiofiles
     aiohttp
     backports-datetime-fromisoformat

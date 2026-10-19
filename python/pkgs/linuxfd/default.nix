@@ -15,7 +15,6 @@ buildPythonPackage rec {
   };
 
   # no tests
-  doCheck = false;
 
   meta = {
     description = "Python bindings for the Linux eventfd/signalfd/timerfd/inotify syscalls";

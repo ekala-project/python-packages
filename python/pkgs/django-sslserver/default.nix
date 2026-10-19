@@ -25,7 +25,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # No tests on upstream
-  doCheck = false;
 
   pythonImportsCheck = [ "sslserver" ];
 

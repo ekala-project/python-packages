@@ -24,7 +24,6 @@ buildPythonPackage (finalAttrs: {
 
   # Test fail with falcon >= 4
   # https://github.com/lwcolton/falcon-cors/issues/25
-  doCheck = false;
 
   pythonImportsCheck = [ "falcon_cors" ];
 

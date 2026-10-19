@@ -26,7 +26,6 @@ buildPythonPackage rec {
   ];
 
   # Tests require pervasive internet access
-  doCheck = false;
 
   pythonImportsCheck = [ "kernels" ];
 

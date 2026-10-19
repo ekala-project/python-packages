@@ -21,7 +21,6 @@ buildPythonPackage rec {
   dependencies = [ aiohttp ];
 
   # Tests require network access
-  doCheck = false;
 
   pythonImportsCheck = [ "hko" ];
 

@@ -41,8 +41,6 @@ buildPythonPackage rec {
 
   pythonImportsCheck = [ "elasticsearch" ];
 
-  doCheck = false;
-
   meta = {
     description = "Official low-level client for Elasticsearch";
     homepage = "https://github.com/elasticsearch/elasticsearch-py";

@@ -30,7 +30,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # PypI release does not include tests
-  doCheck = false;
 
   pythonImportsCheck = [ "docplex" ];
 

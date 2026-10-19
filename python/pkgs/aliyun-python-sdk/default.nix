@@ -25,7 +25,6 @@ let
       dependencies = [ aliyun-python-sdk-core ];
 
       # All components are stored in a mono repo
-      doCheck = false;
 
       pythonImportsCheck = [ "aliyunsdk${toUnderscore serviceName}" ];
 
@@ -51,8 +50,6 @@ let
       };
 
       dependencies = [ aliyun-python-sdk-core ];
-
-      doCheck = false;
 
       pythonImportsCheck = [ "aliyunsdk${toUnderscore serviceName}" ];
 

@@ -12,7 +12,6 @@ buildPythonPackage (finalAttrs: {
   pname = "openccu-loom-types";
   version = "0.1.53";
   pyproject = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "SukramJ";

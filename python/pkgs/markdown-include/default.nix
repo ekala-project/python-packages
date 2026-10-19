@@ -21,11 +21,9 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools-scm ];
 
-  propagatedBuildInputs = [ markdown ];
+  dependencies = [ markdown ];
 
   pythonImportsCheck = [ "markdown_include" ];
-
-  doCheck = false; # no tests
 
   meta = {
     description = "Extension to Python-Markdown which provides an include function";

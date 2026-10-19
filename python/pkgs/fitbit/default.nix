@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "orcasgit";
     repo = "python-fitbit";
-    rev = version;
+    tag = version;
     hash = "sha256-1u3h47lRBrJ7EUWBl5+RLGW4KHHqXqqrXbboZdy7VPA=";
   };
 
@@ -27,7 +27,7 @@ buildPythonPackage rec {
       --replace-fail assertRaisesRegexp assertRaisesRegex
   '';
 
-  propagatedBuildInputs = [
+  dependencies = [
     python-dateutil
     requests-oauthlib
   ];

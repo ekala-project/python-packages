@@ -16,7 +16,6 @@ buildPythonPackage (finalAttrs: {
   pname = "pyiceberg-core";
   version = "0.9.1";
   pyproject = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "apache";
@@ -44,7 +43,6 @@ buildPythonPackage (finalAttrs: {
 
   pythonImportsCheck = [ "pyiceberg_core" ];
   # Circular dependency on pyiceberg
-  doCheck = false;
 
   passthru.tests.pytest = pyiceberg-core.overridePythonAttrs {
   };

@@ -28,7 +28,6 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [ "alibabacloud_openapi_util" ];
 
   # Module has only tests in the untagged upstream repo
-  doCheck = false;
 
   meta = {
     description = "Aliyun Tea OpenApi Library for Python";

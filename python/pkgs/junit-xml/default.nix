@@ -20,8 +20,6 @@ buildPythonPackage rec {
 
   dependencies = [ six ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "junit_xml" ];
 
   meta = {

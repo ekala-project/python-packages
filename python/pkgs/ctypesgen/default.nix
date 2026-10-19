@@ -28,7 +28,6 @@ buildPythonPackage rec {
   ];
 
   # Various compiler errors
-  doCheck = false;
 
   pythonImportsCheck = [ "ctypesgen" ];
 

@@ -22,13 +22,12 @@ buildPythonPackage rec {
     sed -i '/tests_require=/d' setup.py
   '';
 
-  propagatedBuildInputs = [
+  dependencies = [
     celery
     django
   ];
 
   # Tests need access to a database.
-  doCheck = false;
 
   meta = {
     description = "Celery result back end with django";

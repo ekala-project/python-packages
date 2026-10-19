@@ -16,13 +16,13 @@ buildPythonPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "source-foundry";
     repo = "dehinter";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-l988SW6OWKXzJK0WGAJZR/QDFvgnSir+5TwMMvFcOxg=";
   };
 
   build-system = [ setuptools ];
 
-  propagatedBuildInputs = [ fonttools ];
+  dependencies = [ fonttools ];
 
   nativeCheckInputs = [ pytestCheckHook ];
 

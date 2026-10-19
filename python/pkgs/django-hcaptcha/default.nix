@@ -16,10 +16,9 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-slGerwzJeGWscvglMBEixc9h4eSFLWiVmUFgIirLbBo=";
   };
 
-  propagatedBuildInputs = [ django ];
+  dependencies = [ django ];
 
   # No tests
-  doCheck = false;
 
   pythonImportsCheck = [ "hcaptcha" ];
 

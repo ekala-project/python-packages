@@ -35,8 +35,6 @@ buildPythonPackage rec {
     "lark.grammars"
   ];
 
-  doCheck = false;
-
   meta = {
     description = "Modern parsing library for Python, implementing Earley & LALR(1) and an easy interface";
     homepage = "https://lark-parser.readthedocs.io/";

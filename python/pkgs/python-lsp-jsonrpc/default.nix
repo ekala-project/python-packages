@@ -25,7 +25,7 @@ buildPythonPackage rec {
     setuptools-scm
   ];
 
-  propagatedBuildInputs = [ ujson ];
+  dependencies = [ ujson ];
   pythonImportsCheck = [ "pylsp_jsonrpc" ];
 
   meta = {

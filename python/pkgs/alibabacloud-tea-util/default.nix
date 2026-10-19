@@ -11,8 +11,6 @@ buildPythonPackage (finalAttrs: {
   version = "0.3.15";
   pyproject = true;
 
-  __structuredAttrs = true;
-
   src = fetchPypi {
     pname = "alibabacloud_tea_util";
     inherit (finalAttrs) version;
@@ -26,7 +24,6 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [ "alibabacloud_tea_util" ];
 
   # Module has only tests in the untagged upstream repo
-  doCheck = false;
 
   meta = {
     description = "Aliyun Tea Util Library for Python";

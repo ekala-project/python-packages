@@ -13,11 +13,11 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "wbolster";
     repo = "jsonlines";
-    rev = version;
+    tag = version;
     hash = "sha256-KNEJdAxEgd0NGPnk9J51C3yUN2e6Cvvevth0iKOMlhE=";
   };
 
-  propagatedBuildInputs = [ attrs ];
+  dependencies = [ attrs ];
   pythonImportsCheck = [ "jsonlines" ];
 
   meta = {

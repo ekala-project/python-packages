@@ -12,7 +12,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "bontchev";
     repo = "pcodedmp";
-    rev = version;
+    tag = version;
     hash = "sha256-SYOFGMvrzxDPMACaCvqwU28Mh9LEuvFBGvAph4X+geo=";
   };
 
@@ -23,7 +23,6 @@ buildPythonPackage rec {
   '';
 
   # Module doesn't have tests
-  doCheck = false;
 
   pythonImportsCheck = [ "pcodedmp" ];
 

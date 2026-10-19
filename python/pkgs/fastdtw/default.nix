@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "slaypni";
     repo = "fastdtw";
-    rev = "v${version}";
+    tag = "v${version}";
     sha256 = "0irc5x4ahfp7f7q4ic97qa898s2awi0vdjznahxrfjirn8b157dw";
   };
 
@@ -33,7 +33,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ cython ];
 
-  propagatedBuildInputs = [ numpy ];
+  dependencies = [ numpy ];
 
   pythonImportsCheck = [ "fastdtw.fastdtw" ];
   nativeCheckInputs = [ pytestCheckHook ];

@@ -49,7 +49,6 @@ buildPythonPackage rec {
   ];
 
   # Requires access to cluster
-  doCheck = false;
 
   pythonImportsCheck = [ "ipyparallel" ];
 

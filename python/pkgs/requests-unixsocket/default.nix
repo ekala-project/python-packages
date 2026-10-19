@@ -29,8 +29,6 @@ buildPythonPackage rec {
     urllib3
   ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "requests_unixsocket" ];
 
   meta = {

@@ -39,8 +39,6 @@ buildPythonPackage rec {
 
   pythonImportsCheck = [ "setuptools_scm" ];
 
-  doCheck = false;
-
   setupHook = ./setup-hook.sh;
 
   meta = {

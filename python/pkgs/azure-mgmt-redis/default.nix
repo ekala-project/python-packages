@@ -13,8 +13,6 @@ buildPythonPackage (finalAttrs: {
   version = "15.0.0b1";
   pyproject = true;
 
-  __structuredAttrs = true;
-
   src = fetchPypi {
     inherit (finalAttrs) version;
     pname = "azure_mgmt_redis";
@@ -30,7 +28,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # Module has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "azure.mgmt.redis" ];
 

@@ -23,7 +23,6 @@ buildPythonPackage (finalAttrs: {
   dependencies = [ requests ];
 
   # Project has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "growattServer" ];
 

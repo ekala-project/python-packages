@@ -28,7 +28,6 @@ buildPythonPackage rec {
   dependencies = [ requests ];
 
   # no tests implemented
-  doCheck = false;
 
   pythonImportsCheck = [ "nextcloudmonitor" ];
 

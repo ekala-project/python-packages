@@ -43,7 +43,6 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [ "redisvl" ];
 
   # tests require a live Redis server with the search/vector module
-  doCheck = false;
 
   meta = {
     description = "Python client library and CLI for using Redis as a vector database";

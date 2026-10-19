@@ -31,7 +31,6 @@ buildPythonPackage rec {
   ];
 
   # Test require network access
-  doCheck = false;
 
   pythonImportsCheck = [ "elmax_api" ];
 

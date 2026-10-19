@@ -26,7 +26,7 @@ buildPythonPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "JeffLIrion";
     repo = "adb_shell";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-aMPlIPhTmE6imXNMJk2Uk4VGJS6PO+JcW/Pz/3sHrmY=";
   };
 

@@ -21,14 +21,13 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     azure-common
     azure-mgmt-core
     isodate
   ];
 
   # Tests are only available in mono repo
-  doCheck = false;
 
   pythonImportsCheck = [ "azure.mgmt.batch" ];
 

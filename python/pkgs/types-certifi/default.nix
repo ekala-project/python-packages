@@ -18,7 +18,6 @@ buildPythonPackage (finalAttrs: {
   build-system = [ setuptools ];
 
   # No tests
-  doCheck = false;
 
   meta = {
     description = "Typing stubs for certifi";

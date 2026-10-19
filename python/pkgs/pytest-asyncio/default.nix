@@ -41,7 +41,6 @@ buildPythonPackage rec {
     cp -R tests $testout/tests
   '';
 
-  doCheck = false;
   passthru.tests.pytest = callPackage ./tests.nix { };
 
   pythonImportsCheck = [ "pytest_asyncio" ];

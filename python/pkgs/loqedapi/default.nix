@@ -27,7 +27,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # Tests require network access
-  doCheck = false;
 
   pythonImportsCheck = [ "loqedAPI" ];
 

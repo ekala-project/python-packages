@@ -26,7 +26,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "hatch_deps_selector" ];
 
   # No tests
-  doCheck = false;
 
   meta = {
     description = "Select additional dependencies for pyproject.toml from the environment";

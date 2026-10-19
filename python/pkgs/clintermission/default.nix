@@ -11,8 +11,6 @@ buildPythonPackage (finalAttrs: {
   version = "0.3.1";
   pyproject = true;
 
-  __structuredAttrs = true;
-
   src = fetchFromGitHub {
     owner = "sebageek";
     repo = "clintermission";
@@ -25,7 +23,6 @@ buildPythonPackage (finalAttrs: {
   dependencies = [ prompt-toolkit ];
 
   # repo contains no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "clintermission" ];
 

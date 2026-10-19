@@ -17,14 +17,13 @@ buildPythonPackage rec {
     hash = "sha256-1g4FCSMyS8T6F/T8BOqak4h1nJis8g9jaOluA4FTNpA=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     lxml
     six
     xmltodict
   ];
 
   # no tests in sdist and no other download available
-  doCheck = false;
 
   pythonImportsCheck = [ "netapp_lib" ];
 

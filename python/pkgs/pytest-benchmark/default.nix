@@ -24,8 +24,6 @@ buildPythonPackage rec {
 
   dependencies = [ py-cpuinfo ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "pytest_benchmark" ];
 
   meta = {

@@ -37,7 +37,7 @@ buildPythonPackage rec {
     versioneer
   ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     locket
     toolz
   ];

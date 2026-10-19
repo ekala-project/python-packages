@@ -14,7 +14,7 @@ buildPythonPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "asottile";
     repo = "pyupgrade";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-u4iudzPhVuAOS9cL3z6FCVpWKJZHg7UGpe9aHnN7Byc=";
   };
 

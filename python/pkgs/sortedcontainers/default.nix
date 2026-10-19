@@ -13,11 +13,10 @@ let
     src = fetchFromGitHub {
       owner = "grantjenks";
       repo = "python-sortedcontainers";
-      rev = "v${version}";
+      tag = "v${version}";
       hash = "sha256-YRbSM2isWi7AzfquFvuZBlpEMNUnBJTBLBn0/XYVHKQ=";
     };
 
-    doCheck = false;
     pythonImportsCheck = [ "sortedcontainers" ];
     meta = {
       description = "Python Sorted Container Types: SortedList, SortedDict, and SortedSet";

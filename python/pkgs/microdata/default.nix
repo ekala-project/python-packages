@@ -14,11 +14,11 @@ buildPythonPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "edsu";
     repo = "microdata";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-BAygCLBLxZ033ZWRFSR52dSM2nPY8jXplDXQ8WW3KPo=";
   };
 
-  propagatedBuildInputs = [ html5lib ];
+  dependencies = [ html5lib ];
 
   nativeCheckInputs = [ unittestCheckHook ];
 

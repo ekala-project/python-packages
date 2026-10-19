@@ -25,7 +25,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "aioairzone_cloud" ];
 
   # Module has no tests
-  doCheck = false;
 
   meta = {
     description = "Library to control Airzone via Cloud API";

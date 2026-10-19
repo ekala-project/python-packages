@@ -23,7 +23,6 @@ buildPythonPackage rec {
   dependencies = [ traitlets ];
 
   # wants to import ipython, which creates a circular dependency
-  doCheck = false;
 
   meta = {
     description = "Matplotlib Inline Back-end for IPython and Jupyter";

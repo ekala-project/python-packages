@@ -18,7 +18,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "enochecker_core" ];
 
   # no tests upstream
-  doCheck = false;
 
   meta = {
     description = "Base library for enochecker libs";

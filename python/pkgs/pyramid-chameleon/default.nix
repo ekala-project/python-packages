@@ -31,7 +31,7 @@ buildPythonPackage rec {
     })
   ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     chameleon
     pyramid
     setuptools

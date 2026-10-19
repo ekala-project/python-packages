@@ -16,7 +16,7 @@ buildPythonPackage rec {
     hash = "sha256-db9MCxI7wiXiTKlfyhw1vjCxnmu4X+6ngUBNQ8QnbJE=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     pycrypto
     requests
   ];
@@ -31,7 +31,6 @@ buildPythonPackage rec {
   '';
 
   # requires a certificates file
-  doCheck = false;
 
   pythonImportsCheck = [ "libcloud" ];
 

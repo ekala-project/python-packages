@@ -19,7 +19,7 @@ buildPythonPackage rec {
     hash = "sha256-jEnrGTddSqs+W4NYYGFODLF+VrtaIOGHSAj6W+xno1g=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     passlib
     pyparsing
     six
@@ -33,7 +33,6 @@ buildPythonPackage rec {
   # Test creates an excessive amount of temporary files (order of millions).
   # Cleaning up those files already took over 15 hours already on my zfs
   # filesystem and is not finished yet.
-  doCheck = false;
 
   checkPhase = ''
     trial -j$NIX_BUILD_CORES ldaptor

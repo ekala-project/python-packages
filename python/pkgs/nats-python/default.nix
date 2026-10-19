@@ -33,7 +33,6 @@ buildPythonPackage rec {
   dependencies = [ setuptools ];
 
   # Tests require a running NATS server
-  doCheck = false;
 
   pythonImportsCheck = [ "pynats" ];
 

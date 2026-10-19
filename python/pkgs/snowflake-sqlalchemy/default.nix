@@ -27,7 +27,6 @@ buildPythonPackage rec {
   ];
 
   # Tests require a database
-  doCheck = false;
 
   pythonImportsCheck = [ "snowflake.sqlalchemy" ];
 

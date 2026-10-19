@@ -19,7 +19,7 @@ buildPythonPackage rec {
     hash = "sha256-hNCQQjqIeVIEZb/peECD7ay4014rpRH6Whve8B2Pce0=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     cached-property
     chevron
     frozendict
@@ -33,7 +33,6 @@ buildPythonPackage rec {
   '';
 
   # relies on upstream anki
-  doCheck = false;
 
   pythonImportsCheck = [ "genanki" ];
 

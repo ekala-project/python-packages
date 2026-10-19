@@ -41,7 +41,6 @@ buildPythonPackage (finalAttrs: {
   };
 
   # Missing dependencies
-  doCheck = false;
 
   pythonImportsCheck = [ "neo4j" ];
 

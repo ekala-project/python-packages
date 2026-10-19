@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "selectel";
     repo = "pyte";
-    rev = version;
+    tag = version;
     hash = "sha256-u24ltX/LEteiZ2a/ioKqxV2AZgrFmKOHXmySmw21sLE=";
   };
 
@@ -23,7 +23,7 @@ buildPythonPackage rec {
     sed -i '/pytest-runner/d' setup.py
   '';
 
-  propagatedBuildInputs = [ wcwidth ];
+  dependencies = [ wcwidth ];
   pythonImportsCheck = [ "pyte" ];
 
   meta = {

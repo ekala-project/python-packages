@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "skyfielders";
     repo = "python-skyfield";
-    rev = version;
+    tag = version;
     hash = "sha256-oZEmc8BVqs3eSaqrjyR/wQu1WTLv4A0a/dpEZduCXqk=";
   };
 

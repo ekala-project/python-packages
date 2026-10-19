@@ -18,13 +18,12 @@ buildPythonPackage rec {
     hash = "sha256-6/REvY5QxsAPV41Pvg8vrJPYbDrGUrpOPn0vzIcCu0k=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     setuptools
     websockets
   ];
 
   # no tests implemented
-  doCheck = false;
 
   pythonImportsCheck = [ "graphql_subscription_manager" ];
 

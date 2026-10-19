@@ -36,8 +36,6 @@ buildPythonPackage {
   nativeCheckInputs = [ pytestCheckHook ];
   pythonImportsCheck = [ "geoparquet" ];
 
-  doCheck = false; # no tests
-
   meta = {
     description = "API between Parquet files and GeoDataFrames for fast input/output of GIS data";
     homepage = "https://github.com/darcy-r/geoparquet-python";

@@ -12,8 +12,6 @@ buildPythonPackage (finalAttrs: {
   version = "7.11.1";
   pyproject = true;
 
-  __structuredAttrs = true;
-
   src = fetchPypi {
     pname = "alibabacloud_ecs20140526";
     inherit (finalAttrs) version;
@@ -30,7 +28,6 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [ "alibabacloud_ecs20140526" ];
 
   # Module has no tests
-  doCheck = false;
 
   meta = {
     description = "Alibaba Cloud Elastic Compute Service (20140526) SDK Library for Python";

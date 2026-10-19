@@ -37,7 +37,6 @@ buildPythonPackage rec {
   ];
 
   # No tests in sdist and no other download available
-  doCheck = false;
 
   pythonImportsCheck = [ "netapp_ontap" ];
 

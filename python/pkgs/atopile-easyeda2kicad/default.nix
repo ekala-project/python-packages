@@ -40,8 +40,6 @@ buildPythonPackage (finalAttrs: {
 
   pythonImportsCheck = [ "easyeda2kicad" ];
 
-  doCheck = false; # no tests
-
   meta = {
     description = "Convert any LCSC components (including EasyEDA) to KiCad library";
     homepage = "https://github.com/atopile/easyeda2kicad.py";

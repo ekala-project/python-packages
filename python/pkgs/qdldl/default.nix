@@ -44,7 +44,7 @@ buildPythonPackage rec {
     scipy
   ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     pkgs.qdldl
   ];
 

@@ -23,8 +23,6 @@ buildPythonPackage rec {
 
   pythonImportsCheck = [ "forbiddenfruit" ];
 
-  doCheck = false;
-
   meta = {
     description = "Patch python built-in objects";
     homepage = "https://github.com/clarete/forbiddenfruit";

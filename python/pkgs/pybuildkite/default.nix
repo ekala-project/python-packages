@@ -17,7 +17,6 @@ buildPythonPackage (finalAttrs: {
   pname = "pybuildkite";
   version = "1.3.0";
   pyproject = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "pyasi";

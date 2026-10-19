@@ -17,8 +17,6 @@ buildPythonPackage rec {
 
   build-system = [ setuptools ];
 
-  doCheck = false; # tests not in sdist, git not tagged
-
   pythonImportsCheck = [ "nanoid" ];
 
   meta = {

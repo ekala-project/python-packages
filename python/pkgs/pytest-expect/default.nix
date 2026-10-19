@@ -18,7 +18,7 @@ buildPythonPackage (finalAttrs: {
   };
 
   buildInputs = [ pytest ];
-  propagatedBuildInputs = [
+  dependencies = [
     u-msgpack-python
     six
   ];

@@ -32,7 +32,6 @@ buildPythonPackage rec {
   ];
 
   # tests don't work yet, see https://gitlab.com/burke-software/django-postgres-partition/-/issues/4
-  doCheck = false;
 
   pythonImportsCheck = [ "psql_partition" ];
 

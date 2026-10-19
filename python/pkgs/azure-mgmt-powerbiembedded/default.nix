@@ -27,7 +27,6 @@ buildPythonPackage rec {
   ];
 
   # Module has only tests in mono-repo
-  doCheck = false;
 
   meta = {
     description = "This is the Microsoft Azure Power BI Embedded Management Client Library";

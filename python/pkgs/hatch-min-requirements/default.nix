@@ -33,7 +33,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # As of v0.1.0 all tests attempt to use the network
-  doCheck = false;
 
   pythonImportsCheck = [ "hatch_min_requirements" ];
 

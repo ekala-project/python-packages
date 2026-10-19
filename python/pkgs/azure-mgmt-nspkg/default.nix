@@ -11,8 +11,6 @@ buildPythonPackage (finalAttrs: {
   version = "3.0.2";
   pyproject = true;
 
-  __structuredAttrs = true;
-
   src = fetchPypi {
     inherit (finalAttrs) pname version;
     extension = "zip";
@@ -22,8 +20,6 @@ buildPythonPackage (finalAttrs: {
   build-system = [ setuptools ];
 
   dependencies = [ azure-nspkg ];
-
-  doCheck = false;
 
   meta = {
     description = "Microsoft Azure SDK for Python";

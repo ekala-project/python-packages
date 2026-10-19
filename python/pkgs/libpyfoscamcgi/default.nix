@@ -27,7 +27,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "libpyfoscamcgi" ];
 
   # tests need access to a camera
-  doCheck = false;
 
   meta = {
     description = "Python Library for Foscam IP Cameras";

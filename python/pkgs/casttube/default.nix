@@ -20,8 +20,6 @@ buildPythonPackage rec {
 
   dependencies = [ requests ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "casttube" ];
 
   meta = {

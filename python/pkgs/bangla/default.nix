@@ -20,7 +20,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "bangla" ];
 
   # https://github.com/arsho/bangla/issues/5
-  doCheck = false;
 
   meta = {
     description = "Bangla is a package for Bangla language users with various functionalities including Bangla date and Bangla numeric conversation";

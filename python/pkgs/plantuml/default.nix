@@ -19,7 +19,7 @@ buildPythonPackage {
     hash = "sha256-aPXPqoKlu8VLi0Jn84brG7v3qM9L18Ut4sabYYGb3qQ=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     httplib2
     six
   ];

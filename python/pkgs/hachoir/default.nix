@@ -18,7 +18,7 @@ buildPythonPackage rec {
     hash = "sha256-sTUJx8Xyhw4Z6juRtREw/okuVjSTSVWpSLKeZ7T8IR8=";
   };
 
-  propagatedBuildInputs = [ urwid ];
+  dependencies = [ urwid ];
 
   nativeCheckInputs = [ pytestCheckHook ];
 

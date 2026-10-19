@@ -34,7 +34,7 @@ buildPythonPackage rec {
     sphinxHook
   ];
 
-  propagatedBuildInputs = [ colorzero ];
+  dependencies = [ colorzero ];
 
   pythonImportsCheck = [
     "gpiozero"

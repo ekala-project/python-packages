@@ -17,7 +17,6 @@ buildPythonPackage rec {
 
   build-system = [ flit-core ];
   # Tests not included in archive.
-  doCheck = false;
 
   pythonImportsCheck = [ "editables" ];
 

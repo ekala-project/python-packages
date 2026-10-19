@@ -21,7 +21,7 @@ buildPythonPackage rec {
     hash = "sha256-npxnl9QrsAMLgrSDGsmWTb17VLwJ9sYCi9dhROCblhg=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     jinja2
     pygments
     pathspec

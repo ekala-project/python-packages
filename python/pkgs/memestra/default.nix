@@ -20,7 +20,7 @@ buildPythonPackage rec {
     hash = "sha256-6shwf9BoDfZMy0itP8esNP4ov6fw6LJpO3Y5ZahwDZw=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     gast
     beniget
     frilouz
@@ -30,7 +30,6 @@ buildPythonPackage rec {
   ];
 
   # Tests are not detected and so the checkPhase fails
-  doCheck = false;
 
   pythonImportsCheck = [ "memestra" ];
 

@@ -29,7 +29,6 @@ buildPythonPackage rec {
   ];
 
   # no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "feedfinder2" ];
 

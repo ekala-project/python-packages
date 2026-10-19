@@ -25,7 +25,7 @@ buildPythonPackage rec {
 
   pythonRelaxDeps = [ "pyopenssl" ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     requests
     pyopenssl
   ];
@@ -33,7 +33,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "Netio" ];
 
   # Module has no tests
-  doCheck = false;
 
   meta = {
     description = "Module for interacting with NETIO devices";

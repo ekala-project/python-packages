@@ -20,7 +20,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [ uc-micro-py ];
+  dependencies = [ uc-micro-py ];
 
   pythonImportsCheck = [ "linkify_it" ];
 

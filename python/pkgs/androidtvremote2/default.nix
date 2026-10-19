@@ -31,7 +31,6 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [ "androidtvremote2" ];
 
   # Module only has a dummy test
-  doCheck = false;
 
   meta = {
     description = "Library to interact with the Android TV Remote protocol v2";

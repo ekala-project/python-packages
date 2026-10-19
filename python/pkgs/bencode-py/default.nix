@@ -11,8 +11,6 @@ buildPythonPackage (finalAttrs: {
   version = "4.0.0";
   pyproject = true;
 
-  __structuredAttrs = true;
-
   src = fetchPypi {
     inherit (finalAttrs) version;
     pname = "bencode.py";

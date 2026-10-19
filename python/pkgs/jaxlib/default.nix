@@ -91,8 +91,6 @@ buildPythonPackage {
   inherit version;
   format = "wheel";
 
-  __structuredAttrs = true;
-
   src = (
     srcs."${pythonVersion}-${stdenv.hostPlatform.system}"
       or (throw "jaxlib-bin is not supported on ${stdenv.hostPlatform.system}")

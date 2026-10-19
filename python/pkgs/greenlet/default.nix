@@ -26,7 +26,6 @@ let
     build-system = [ setuptools ];
 
     # tests in passthru, infinite recursion via objgraph/graphviz
-    doCheck = false;
     # https://github.com/python-greenlet/greenlet/issues/395
     env.NIX_CFLAGS_COMPILE = lib.optionalString (
       stdenv.hostPlatform.isPower64 || stdenv.hostPlatform.isLoongArch64

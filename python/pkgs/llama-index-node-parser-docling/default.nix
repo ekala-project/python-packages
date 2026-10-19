@@ -28,7 +28,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "llama_index.node_parser.docling" ];
 
   # Module has no tests
-  doCheck = false;
 
   meta = {
     description = "Llama-index node_parser docling integration";

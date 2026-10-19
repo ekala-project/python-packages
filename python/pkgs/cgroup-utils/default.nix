@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "peo3";
     repo = "cgroup-utils";
-    rev = "v${version}";
+    tag = "v${version}";
     sha256 = "0qnbn8cnq8m14s8s1hcv25xjd55dyb6yy54l5vc7sby5xzzp11fq";
   };
 
@@ -26,7 +26,6 @@ buildPythonPackage rec {
   # Upon running `from cgutils import cgroup`, it attempts to read a file in `/sys`.
   # Due to the Nix build sandbox, this is disallowed, and so all possible tests fail,
   # so we don't run them. Plain `import cgutils` works, so we run pythonImportsCheck below.
-  doCheck = false;
 
   pythonImportsCheck = [ "cgutils" ];
 

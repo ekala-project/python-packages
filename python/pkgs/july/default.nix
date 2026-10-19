@@ -41,7 +41,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "july" ];
 
   # No tests
-  doCheck = false;
 
   meta = {
     description = "Small library for creating pretty heatmaps of daily data";

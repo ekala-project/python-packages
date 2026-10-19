@@ -22,7 +22,6 @@ buildPythonPackage (finalAttrs: {
   pname = "pyinfra";
   version = "3.10.0";
   pyproject = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "pyinfra-dev";

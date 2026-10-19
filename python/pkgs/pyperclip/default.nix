@@ -18,7 +18,6 @@ buildPythonPackage rec {
   build-system = [ setuptools ];
 
   # https://github.com/asweigart/pyperclip/issues/263
-  doCheck = false;
 
   pythonImportsCheck = [ "pyperclip" ];
 

@@ -12,11 +12,10 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "SkyTemple";
     repo = "dungeon-eos";
-    rev = version;
+    tag = version;
     hash = "sha256-Z1fGtslXP8zcZmVeWjRrbcM2ZJsfbrWjpLWZ49uSCRY=";
   };
 
-  doCheck = false; # there are no tests
   pythonImportsCheck = [ "dungeon_eos" ];
 
   meta = {

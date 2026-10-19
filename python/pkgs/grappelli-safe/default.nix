@@ -19,7 +19,6 @@ buildPythonPackage rec {
   nativeBuildInputs = [ setuptools ];
 
   # upstream has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "grappelli_safe" ];
 

@@ -25,7 +25,6 @@ buildPythonPackage rec {
   ];
 
   # Module doesn't have tests
-  doCheck = false;
 
   pythonImportsCheck = [ "redis-stubs" ];
 

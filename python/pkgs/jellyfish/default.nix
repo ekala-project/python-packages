@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "jamesturk";
     repo = "jellyfish";
-    rev = "v${version}";
+    tag = "v${version}";
     hash = "sha256-jKz7FYzV66TUkJZfWDTy8GXmTZ6SU5jEdtkjYLDfS/8=";
   };
 
@@ -31,8 +31,6 @@ buildPythonPackage rec {
   ];
 
   pythonImportsCheck = [ "jellyfish" ];
-
-  doCheck = false;
 
   meta = {
     description = "Python library for doing approximate and phonetic matching of strings";

@@ -13,8 +13,6 @@ buildPythonPackage (finalAttrs: {
   version = "4.2.0";
   pyproject = true;
 
-  __structuredAttrs = true;
-
   src = fetchPypi {
     inherit (finalAttrs) pname version;
     extension = "zip";
@@ -30,7 +28,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # this is just a meta package, which contains keys and secrets packages
-  doCheck = false;
   doBuild = false;
 
   pythonImportsCheck = [

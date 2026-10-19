@@ -15,7 +15,7 @@ buildPythonPackage rec {
     sha256 = "03827a9fca8b5c540305c0844a62591cf35a0caec199cb0f2f0a4a0fb15d8f24";
   };
 
-  propagatedBuildInputs = [ opencv4 ];
+  dependencies = [ opencv4 ];
 
   # no tests
 

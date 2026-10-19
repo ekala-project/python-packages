@@ -19,7 +19,6 @@ buildPythonPackage (finalAttrs: {
   build-system = [ setuptools ];
 
   # no tests on PyPI, no tags on GitLab
-  doCheck = false;
 
   pythonImportsCheck = [ "asyncio_rlock" ];
 

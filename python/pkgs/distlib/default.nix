@@ -34,7 +34,6 @@ buildPythonPackage rec {
   ];
 
   # Tests use pypi.org.
-  doCheck = false;
 
   meta = {
     description = "Low-level components of distutils2/packaging";

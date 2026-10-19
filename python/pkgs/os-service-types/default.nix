@@ -30,8 +30,6 @@ buildPythonPackage rec {
 
   pythonImportsCheck = [ "os_service_types" ];
 
-  doCheck = false;
-
   meta = {
     description = "Python library for consuming OpenStack service-types-authority data";
     homepage = "https://github.com/openstack/os-service-types";

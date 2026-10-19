@@ -50,7 +50,6 @@ buildPythonPackage (finalAttrs: {
   # - LONG_TIMEOUT
   # When CI is in the env, LONG_TIMEOUT will be significantly increased.
   # Still, failures can occur and for that reason tests are disabled.
-  doCheck = false;
 
   passthru.tests.pytest = finalAttrs.finalPackage.overrideAttrs (_: {
     doInstallCheck = true;

@@ -19,13 +19,12 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-Fi4g1jAMUZP3th22TS/n8nIKz8yKgJDj4oJq0+5+W4I=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     django
     setuptools
   ];
 
   # FIXME: RuntimeError: Model class source.crispy_forms.tests.forms.CrispyTestModel doesn't declare an explicit app_label and isn't in an application in INSTALLED_APPS.
-  doCheck = false;
   pythonImportsCheck = [ "crispy_forms" ];
 
   meta = {

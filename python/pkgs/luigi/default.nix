@@ -40,7 +40,6 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [ "luigi" ];
 
   # Requires tox, hadoop, and google cloud
-  doCheck = false;
 
   # This enables accessing modules stored in cwd
   makeWrapperArgs = [ "--prefix PYTHONPATH . :" ];

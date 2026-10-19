@@ -20,7 +20,7 @@ buildPythonPackage rec {
     hash = "sha256-9ejrHHgSbDrbuq1bktyiKPJnQ1l52ug/lnJJbac7x4s=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     dill
     pox
     ppft
@@ -28,7 +28,6 @@ buildPythonPackage rec {
   ];
 
   # Require network
-  doCheck = false;
 
   pythonImportsCheck = [ "pathos" ];
 

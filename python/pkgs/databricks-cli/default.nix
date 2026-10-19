@@ -26,7 +26,7 @@ buildPythonPackage rec {
     hash = "sha256-dH95C2AY/B6F9BROr6rh+gVtKqxsg1gyEU5MzCd5aqs=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     click
     configparser
     oauthlib

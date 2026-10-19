@@ -26,7 +26,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "bosch_alarm_mode2" ];
 
   # upstream has no tests
-  doCheck = false;
 
   meta = {
     description = "Async Python library for interacting with Bosch Alarm Panels supporting the 'Mode 2' API";

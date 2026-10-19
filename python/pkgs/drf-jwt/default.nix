@@ -14,18 +14,17 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Styria-Digital";
     repo = "django-rest-framework-jwt";
-    rev = version;
+    tag = version;
     hash = "sha256-bbkk78uYTG+JTzY3AyOmEVtVSgout/TETfr5N5fUto4=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     pyjwt
     djangorestframework
   ]
   ++ pyjwt.optional-dependencies.crypto;
 
   # requires setting up a django instance
-  doCheck = false;
 
   pythonImportsCheck = [
     "rest_framework_jwt"

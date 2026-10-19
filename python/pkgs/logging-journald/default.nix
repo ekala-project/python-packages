@@ -20,7 +20,6 @@ buildPythonPackage rec {
   build-system = [ hatchling ];
 
   # Circular dependency with aiomisc
-  doCheck = false;
 
   pythonImportsCheck = [ "logging_journald" ];
 

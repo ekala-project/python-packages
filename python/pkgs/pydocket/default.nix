@@ -27,7 +27,6 @@ buildPythonPackage (finalAttrs: {
   pname = "pydocket";
   version = "0.23.0";
   pyproject = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "chrisguidry";

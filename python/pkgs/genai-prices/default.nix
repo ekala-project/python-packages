@@ -44,8 +44,6 @@ buildPythonPackage (finalAttrs: {
     "genai_prices"
   ];
 
-  doCheck = false; # no tests
-
   meta = {
     description = "Calculate prices for calling LLM inference APIs";
     homepage = "https://github.com/pydantic/genai-prices";

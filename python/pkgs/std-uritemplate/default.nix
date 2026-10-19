@@ -19,7 +19,6 @@ buildPythonPackage (finalAttrs: {
   build-system = [ poetry-core ];
 
   # Module doesn't have unittest, only functional tests
-  doCheck = false;
 
   pythonImportsCheck = [ "stduritemplate" ];
 

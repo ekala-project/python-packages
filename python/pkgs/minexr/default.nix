@@ -19,7 +19,7 @@ buildPythonPackage rec {
     hash = "sha256-p42rlhaHq0A9+zk6c0evRDjNR1H/ruWJqPF5+nCTR8o=";
   };
 
-  propagatedBuildInputs = [ numpy ];
+  dependencies = [ numpy ];
 
   pythonImportsCheck = [ "minexr" ];
   nativeCheckInputs = [

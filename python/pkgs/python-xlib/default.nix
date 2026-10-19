@@ -24,8 +24,6 @@ buildPythonPackage rec {
 
   dependencies = [ six ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "Xlib" ];
 
   meta = {

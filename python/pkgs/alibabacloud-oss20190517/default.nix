@@ -15,8 +15,6 @@ buildPythonPackage (finalAttrs: {
   version = "1.0.6";
   pyproject = true;
 
-  __structuredAttrs = true;
-
   src = fetchPypi {
     pname = "alibabacloud_oss20190517";
     inherit (finalAttrs) version;
@@ -36,7 +34,6 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [ "alibabacloud_oss20190517" ];
 
   # Module has no tests
-  doCheck = false;
 
   meta = {
     description = "Alibaba Cloud Object Storage Service (20190517) SDK Library for Python";

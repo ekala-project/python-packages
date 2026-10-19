@@ -20,7 +20,6 @@ buildPythonPackage (finalAttrs: {
   build-system = [ poetry-core ];
 
   # Module has no real tests
-  doCheck = false;
 
   pythonImportsCheck = [ "gitlike_commands" ];
 

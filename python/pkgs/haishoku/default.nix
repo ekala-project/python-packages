@@ -25,7 +25,6 @@ buildPythonPackage rec {
   dependencies = [ pillow ];
 
   # no test
-  doCheck = false;
 
   pythonImportsCheck = [ "haishoku" ];
 

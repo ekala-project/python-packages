@@ -19,7 +19,7 @@ buildPythonPackage rec {
     hash = "sha256-WidXaLwb2RjKoOZd+brii3Tm/fPcnqfiSu11/7SZy2Q=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     msrestazure
     azure-common
     azure-mgmt-core
@@ -29,7 +29,6 @@ buildPythonPackage rec {
   pythonNamespaces = [ "azure.mgmt.datalake" ];
 
   # has no tests
-  doCheck = false;
 
   meta = {
     description = "This is the Microsoft Azure Data Lake Store Management Client Library";

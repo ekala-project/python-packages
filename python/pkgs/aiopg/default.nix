@@ -14,11 +14,11 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "aio-libs";
     repo = "aiopg";
-    rev = "v${version}";
+    tag = "v${version}";
     hash = "sha256-GD5lRSUjASTwBk5vEK8v3xD8eNyxpwSrO3HHvtwubmk=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     async-timeout
     psycopg2
   ];
@@ -29,7 +29,6 @@ buildPythonPackage rec {
   '';
 
   # Tests requires a PostgreSQL Docker instance
-  doCheck = false;
 
   pythonImportsCheck = [ "aiopg" ];
 

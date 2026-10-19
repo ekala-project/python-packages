@@ -31,8 +31,6 @@ buildPythonPackage rec {
     flask-sqlalchemy
   ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "flask_migrate" ];
 
   meta = {

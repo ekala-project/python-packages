@@ -27,7 +27,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "momonga" ];
 
   # tests require access to the API
-  doCheck = false;
 
   meta = {
     description = "Python Route B Library: A Communicator for Low-voltage Smart Electric Energy Meters";

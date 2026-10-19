@@ -25,8 +25,6 @@ buildPythonPackage rec {
     python-socketio
   ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "flask_socketio" ];
 
   meta = {

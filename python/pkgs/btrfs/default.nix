@@ -18,7 +18,6 @@ buildPythonPackage (finalAttrs: {
   build-system = [ setuptools ];
 
   # currently no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "btrfs" ];
 

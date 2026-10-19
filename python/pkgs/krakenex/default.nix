@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "veox";
     repo = "python3-krakenex";
-    rev = "v${version}";
+    tag = "v${version}";
     hash = "sha256-htldEds3vf9bjFkJAew0e0fHDLD15OTcVYybSmIp3DI=";
   };
 
@@ -23,7 +23,6 @@ buildPythonPackage rec {
   dependencies = [ requests ];
 
   # no tests implemented
-  doCheck = false;
 
   pythonImportsCheck = [ "krakenex" ];
 

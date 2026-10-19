@@ -21,7 +21,7 @@ buildPythonPackage rec {
       --replace 'if any(arg.startswith("bdist") for arg in sys.argv):' 'if False:'
   '';
 
-  propagatedBuildInputs = [ click ];
+  dependencies = [ click ];
 
   nativeCheckInputs = [ pytestCheckHook ];
 

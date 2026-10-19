@@ -17,7 +17,7 @@ buildPythonPackage rec {
     hash = "sha256-XM1zG1JjbdEEV6i42FjLDQJv+qsePnUbr3kb+APjfXs=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     six
     pytz
     tzlocal

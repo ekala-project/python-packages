@@ -19,8 +19,6 @@ buildPythonPackage rec {
 
   pythonImportsCheck = [ "pykka" ];
 
-  doCheck = false;
-
   meta = {
     homepage = "https://www.pykka.org/";
     description = "Python implementation of the actor model";

@@ -33,8 +33,6 @@ buildPythonPackage rec {
 
   pythonImportsCheck = [ "zope.testrunner" ];
 
-  doCheck = false; # custom test modifies sys.path
-
   pythonNamespaces = [ "zope" ];
 
   meta = {

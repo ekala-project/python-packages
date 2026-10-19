@@ -12,8 +12,6 @@ buildPythonPackage (finalAttrs: {
   version = "0.1.2";
   pyproject = true;
 
-  __structuredAttrs = true;
-
   src = fetchPypi {
     pname = "caido_server_auth";
     inherit (finalAttrs) version;
@@ -36,7 +34,6 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [ "caido_server_auth" ];
 
   # Module has no tests
-  doCheck = false;
 
   passthru.updateScript = nix-update-script { };
 

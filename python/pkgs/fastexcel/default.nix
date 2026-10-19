@@ -21,7 +21,6 @@ buildPythonPackage (finalAttrs: {
   pname = "fastexcel";
   version = "0.20.2";
   pyproject = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "ToucanToco";

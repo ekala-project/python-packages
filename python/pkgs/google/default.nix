@@ -15,10 +15,9 @@ buildPythonPackage rec {
     hash = "sha256-FDUwEi7lEwUJrV6YnwUS98shiy1O3br7rUD9EOjYzL4=";
   };
 
-  propagatedBuildInputs = [ beautifulsoup4 ];
+  dependencies = [ beautifulsoup4 ];
 
   # Module has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "googlesearch" ];
 

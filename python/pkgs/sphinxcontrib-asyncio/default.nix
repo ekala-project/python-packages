@@ -15,7 +15,7 @@ buildPythonPackage rec {
     hash = "sha256-mf0m4P5+34ckSnGpnDFv0Mm1CFbCUZrMqSfr50EAci4=";
   };
 
-  propagatedBuildInputs = [ sphinx ];
+  dependencies = [ sphinx ];
 
   pythonImportsCheck = [ "sphinxcontrib.asyncio" ];
 

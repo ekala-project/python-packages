@@ -18,7 +18,7 @@ buildPythonPackage rec {
     hash = "sha256-i7B37Rj46ZVlN8vaMq7FoqS9dOoC680AqASdGk6pBJU=";
   };
 
-  propagatedBuildInputs = [ defusedxml ];
+  dependencies = [ defusedxml ];
 
   unittestFlagsArray = [
     "-s"

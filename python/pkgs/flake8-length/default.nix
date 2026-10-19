@@ -19,7 +19,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ flit-core ];
 
-  propagatedBuildInputs = [ flake8 ];
+  dependencies = [ flake8 ];
 
   nativeCheckInputs = [ pytestCheckHook ];
 

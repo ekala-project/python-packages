@@ -29,7 +29,6 @@ buildPythonPackage rec {
   ];
 
   # Test require additional setup
-  doCheck = false;
 
   pythonImportsCheck = [ "pkcs11" ];
 

@@ -27,7 +27,7 @@ buildPythonPackage rec {
 
   pythonRelaxDeps = [ "chardet" ];
 
-  propagatedBuildInputs = [ chardet ];
+  dependencies = [ chardet ];
   meta = {
     homepage = "https://github.com/thombashi/mbstrdecoder";
     description = "Library for decoding multi-byte character strings";

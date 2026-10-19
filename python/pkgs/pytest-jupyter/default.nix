@@ -31,7 +31,7 @@ let
 
     buildInputs = [ pytest ];
 
-    propagatedBuildInputs = [ jupyter-core ];
+    dependencies = [ jupyter-core ];
 
     optional-dependencies = {
       client = [

@@ -43,7 +43,7 @@ buildPythonPackage rec {
         hashes.${stdenv.hostPlatform.system} or (throw "Unsupported system: ${stdenv.hostPlatform.system}");
     };
 
-  propagatedBuildInputs = [
+  dependencies = [
     numpy
     python-rapidjson
     urllib3

@@ -16,10 +16,9 @@ buildPythonPackage rec {
 
   propagatedNativeBuildInputs = [ cffi ];
 
-  propagatedBuildInputs = [ cffi ];
+  dependencies = [ cffi ];
 
   # The tests require write access to $out
-  doCheck = false;
 
   meta = {
     description = "CFFI binding for Hoedown, a markdown parsing library";

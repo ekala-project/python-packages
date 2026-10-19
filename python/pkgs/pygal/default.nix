@@ -25,8 +25,6 @@ buildPythonPackage rec {
 
   dependencies = [ importlib-metadata ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "pygal" ];
 
   meta = {

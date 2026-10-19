@@ -22,7 +22,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "nonestorage" ];
 
   # no test
-  doCheck = false;
 
   meta = {
     description = "Simple library that provides local storage folder detect";

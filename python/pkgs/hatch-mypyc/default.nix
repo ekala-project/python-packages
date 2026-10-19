@@ -17,7 +17,7 @@ buildPythonPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "ofek";
     repo = "hatch-mypyc";
-    rev = "v${finalAttrs.version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-3bIi2tlAcBurWqqPDVTJ1/EU2KTd1XVU97jFOaYtW5U=";
   };
 
@@ -31,8 +31,6 @@ buildPythonPackage (finalAttrs: {
     pathspec
     setuptools
   ];
-
-  doCheck = false; # network access
 
   pythonImportsCheck = [
     "hatch_mypyc"

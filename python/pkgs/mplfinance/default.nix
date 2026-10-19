@@ -16,14 +16,13 @@ buildPythonPackage rec {
     hash = "sha256-faFQtYUapRGa1uBrVeSDOLYZu2dz8bhd9d5npf/ZF78=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     matplotlib
     pandas
   ];
 
   # tests are only included on GitHub where this version misses a tag
   # and half of them fail
-  doCheck = false;
 
   pythonImportsCheck = [ "mplfinance" ];
 

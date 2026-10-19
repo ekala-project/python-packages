@@ -25,7 +25,7 @@ buildPythonPackage rec {
     setuptools-scm
   ];
 
-  propagatedBuildInputs = [ importlib-metadata ];
+  dependencies = [ importlib-metadata ];
 
   pythonImportsCheck = [ "mockfs" ];
 

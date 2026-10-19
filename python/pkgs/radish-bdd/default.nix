@@ -25,7 +25,7 @@ buildPythonPackage rec {
     hash = "sha256-pnZ/vqjMd1Q/wF1W6joYrIulZSXAzS2G3E5Ke5VSAQg=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     colorful
     docopt
     humanize

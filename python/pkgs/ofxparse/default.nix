@@ -17,7 +17,7 @@ buildPythonPackage rec {
     sha256 = "19y4sp5l9jqiqzzlbqdfiab42qx7d84n4xm4s7jfq397666vcyh5";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     six
     beautifulsoup4
     lxml

@@ -24,7 +24,7 @@ buildPythonPackage rec {
       --replace "version=VERSION," 'version="${version}",'
   '';
 
-  propagatedBuildInputs = [ aiohttp ];
+  dependencies = [ aiohttp ];
 
   nativeCheckInputs = [ pytestCheckHook ];
 

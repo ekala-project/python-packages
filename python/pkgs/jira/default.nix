@@ -60,7 +60,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "jira" ];
 
   # impure tests because of connectivity attempts to jira servers
-  doCheck = false;
 
   meta = {
     description = "Library to interact with the JIRA REST API";

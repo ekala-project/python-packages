@@ -28,7 +28,6 @@ buildPythonPackage rec {
   dependencies = [ celery ];
 
   # requires a running celery
-  doCheck = false;
 
   pythonImportsCheck = [ "celery_batches" ];
 

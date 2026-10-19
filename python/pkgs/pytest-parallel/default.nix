@@ -22,7 +22,7 @@ buildPythonPackage {
     hash = "sha256-ddpoWBTf7Zor569p6uOMjHSTx3Qa551f4mSwyTLDdBU=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     tblib
     pytest
     py

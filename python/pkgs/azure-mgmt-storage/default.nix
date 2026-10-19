@@ -32,7 +32,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "azure.mgmt.storage" ];
 
   # Module has no tests
-  doCheck = false;
 
   meta = {
     description = "This is the Microsoft Azure Storage Management Client Library";

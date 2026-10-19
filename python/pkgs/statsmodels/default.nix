@@ -58,7 +58,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # Huge test suites with several test failures
-  doCheck = false;
 
   pythonImportsCheck = [ "statsmodels" ];
 

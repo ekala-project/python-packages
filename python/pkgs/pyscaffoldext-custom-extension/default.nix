@@ -33,7 +33,7 @@ buildPythonPackage rec {
     wheel
   ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     configupdater
     importlib-metadata
     packaging

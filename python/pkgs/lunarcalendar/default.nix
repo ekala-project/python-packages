@@ -22,7 +22,7 @@ buildPythonPackage {
     hash = "sha256-AhxCWWqCjlOroqs4pOSZTWoIQT8a1l/D2Rxuw1XUoU8=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     python-dateutil
     ephem
     pytz

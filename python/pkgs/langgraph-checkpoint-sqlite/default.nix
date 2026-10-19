@@ -17,7 +17,6 @@ buildPythonPackage (finalAttrs: {
   pname = "langgraph-checkpoint-sqlite";
   version = "3.1.0";
   pyproject = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "langchain-ai";

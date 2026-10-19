@@ -21,7 +21,6 @@ buildPythonPackage rec {
   dependencies = [ numpy ];
 
   # Module has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "gekko" ];
 

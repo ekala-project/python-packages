@@ -22,7 +22,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "alabaster" ];
 
   # No tests included
-  doCheck = false;
 
   meta = {
     homepage = "https://github.com/sphinx-doc/alabaster";

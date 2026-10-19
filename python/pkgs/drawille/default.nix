@@ -15,8 +15,6 @@ buildPythonPackage rec {
     hash = "sha256-gVND4RYsWAUtTLZS75cPZ3Ht2QBC1UnsxuRTyXNqoa0=";
   };
 
-  doCheck = false; # pypi package has no tests, git has no tags
-
   pythonImportsCheck = [ "drawille" ];
 
   meta = {

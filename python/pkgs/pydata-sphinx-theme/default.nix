@@ -25,7 +25,7 @@ buildPythonPackage rec {
     hash = "sha256-02p1S/lYCwF4nvqKAYafLXyH+mxUPsvK+xS2vdQ2T5A=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     sphinx
     accessible-pygments
     beautifulsoup4

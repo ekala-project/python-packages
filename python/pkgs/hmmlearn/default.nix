@@ -26,7 +26,7 @@ buildPythonPackage rec {
     pybind11
   ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     numpy
     scikit-learn
   ];

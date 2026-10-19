@@ -25,7 +25,7 @@ buildPythonPackage rec {
     sha256 = "sha256-bEkaZUAAtilHLuUUvKloeF25DuesAr8RpKcxZq8Tqts=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     simplejson
     snapshot-restore-py
   ];

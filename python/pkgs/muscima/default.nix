@@ -26,7 +26,7 @@ buildPythonPackage {
 
   format = "setuptools";
 
-  propagatedBuildInputs = [
+  dependencies = [
     lxml
     numpy
     scikit-image

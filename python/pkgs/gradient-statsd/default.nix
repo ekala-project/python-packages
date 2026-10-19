@@ -22,7 +22,7 @@ buildPythonPackage rec {
     hash = "sha256-iWlNX43ZtvU73wz4+8DgDulQNOnssJGxTBkvAaLj530=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     certifi
     chardet
     datadog
@@ -35,7 +35,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "gradient_statsd" ];
 
   # Pypi does not contain tests
-  doCheck = false;
 
   meta = {
     description = "Wrapper around the DogStatsd client";

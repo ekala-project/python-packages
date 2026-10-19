@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "bitprophet";
     repo = "releases";
-    rev = version;
+    tag = version;
     hash = "sha256-IgEKAUk97R3ZvqvexD/ptT8i0uf48K+DKkk4q3pn3G8=";
   };
 
@@ -22,7 +22,7 @@ buildPythonPackage rec {
     substituteInPlace setup.py --replace "semantic_version<2.7" "semantic_version"
   '';
 
-  propagatedBuildInputs = [
+  dependencies = [
     semantic-version
     sphinx
   ];

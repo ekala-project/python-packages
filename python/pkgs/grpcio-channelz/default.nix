@@ -36,7 +36,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "grpc_channelz" ];
 
   # no tests
-  doCheck = false;
 
   meta = {
     description = "Channel Level Live Debug Information Service for gRPC";

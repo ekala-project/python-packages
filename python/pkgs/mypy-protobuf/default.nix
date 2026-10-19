@@ -32,7 +32,6 @@ buildPythonPackage (finalAttrs: {
     types-protobuf
   ];
 
-  doCheck = false; # ModuleNotFoundError: No module named 'testproto'
   pythonImportsCheck = [ "mypy_protobuf" ];
 
   passthru.tests.version = testers.testVersion {

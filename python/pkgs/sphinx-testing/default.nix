@@ -25,7 +25,6 @@ buildPythonPackage rec {
   ];
 
   # Test failures https://github.com/sphinx-doc/sphinx-testing/issues/5
-  doCheck = false;
 
   meta = {
     description = "Testing utility classes and functions for Sphinx extensions";

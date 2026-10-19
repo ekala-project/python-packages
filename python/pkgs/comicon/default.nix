@@ -42,8 +42,6 @@ buildPythonPackage rec {
     "pypdf"
   ];
 
-  doCheck = false; # test artifacts are not public
-
   pythonImportsCheck = [ "comicon" ];
 
   passthru.updateScript = nix-update-script { };

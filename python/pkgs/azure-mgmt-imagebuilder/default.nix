@@ -20,14 +20,13 @@ buildPythonPackage (finalAttrs: {
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     azure-common
     azure-mgmt-core
     isodate
   ];
 
   # No tests included
-  doCheck = false;
 
   pythonImportsCheck = [
     "azure.common"

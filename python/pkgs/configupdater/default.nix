@@ -18,8 +18,6 @@ buildPythonPackage rec {
 
   build-system = [ setuptools-scm ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "configupdater" ];
 
   meta = {

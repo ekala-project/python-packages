@@ -17,7 +17,7 @@ buildPythonPackage rec {
     hash = "sha256-JiXNgUeY2booOp1zaWtCuEqdyp/CxXy4rUo5kKmq0eQ=";
   };
 
-  propagatedBuildInputs = [ fonttools ];
+  dependencies = [ fonttools ];
   nativeBuildInputs = [
     rustPlatform.cargoSetupHook
     rustPlatform.maturinBuildHook

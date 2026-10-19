@@ -23,7 +23,6 @@ buildPythonPackage (finalAttrs: {
   dependencies = [ typing-extensions ];
 
   # Tests require external data (https://github.com/httpwg/structured-field-tests)
-  doCheck = false;
 
   pythonImportsCheck = [ "http_sf" ];
 

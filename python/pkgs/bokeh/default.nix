@@ -61,8 +61,6 @@ buildPythonPackage rec {
     narwhals
   ];
 
-  doCheck = false; # need more work
-
   pythonImportsCheck = [ "bokeh" ];
 
   meta = {

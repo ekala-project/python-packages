@@ -19,13 +19,12 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     editorconfig
     jsbeautifier
   ];
 
   # Module has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "cssbeautifier" ];
 

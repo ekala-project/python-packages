@@ -55,7 +55,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "dazl" ];
 
   # daml: command not found
-  doCheck = false;
 
   nativeCheckInputs = [
     pytestCheckHook

@@ -26,7 +26,6 @@ buildPythonPackage rec {
   ];
 
   # No tests included
-  doCheck = false;
 
   meta = {
     description = "HTTP handler for `urllib` that supports HTTP 1.1 and keepalive";

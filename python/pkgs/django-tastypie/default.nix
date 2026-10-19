@@ -27,7 +27,6 @@ buildPythonPackage rec {
   ];
 
   # Tests requires a Django instance
-  doCheck = false;
 
   pythonImportsCheck = [ "tastypie" ];
 

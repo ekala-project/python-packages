@@ -29,8 +29,6 @@ buildPythonPackage {
   # the psycopg-pool version isn't updated in tandem with psycopg
   dontCheckPythonMetadata = true;
 
-  doCheck = false;
-
   meta = {
     description = "Connection Pool for Psycopg";
     homepage = "https://github.com/psycopg/psycopg";

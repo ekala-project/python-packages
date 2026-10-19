@@ -43,7 +43,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # Package has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "mozart_api" ];
 

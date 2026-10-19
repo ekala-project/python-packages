@@ -39,7 +39,6 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [ "onvif" ];
 
   # Tests are not shipped
-  doCheck = false;
 
   meta = {
     description = "ONVIF Client Implementation in Python";

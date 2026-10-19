@@ -18,13 +18,12 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-Imb4DVcNB3QiVSCLCI+eKpfl73aMn4NIItQVf7p0H+E=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     requests
     xmltodict
   ];
 
   # Tests require network access
-  doCheck = false;
 
   pythonImportsCheck = [ "meteoalertapi" ];
 

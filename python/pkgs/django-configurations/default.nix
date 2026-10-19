@@ -23,7 +23,7 @@ buildPythonPackage rec {
 
   buildInputs = [ setuptools-scm ];
 
-  propagatedBuildInputs = [ django ];
+  dependencies = [ django ];
 
   nativeCheckInputs = [
     mock
@@ -41,7 +41,6 @@ buildPythonPackage rec {
   '';
 
   # django.core.exceptions.ImproperlyConfigured: django-configurations settings importer wasn't correctly installed
-  doCheck = false;
 
   pythonImportsCheck = [ "configurations" ];
 

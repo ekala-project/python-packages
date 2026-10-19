@@ -23,7 +23,7 @@ buildPythonPackage rec {
 
   buildInputs = [ pytest ];
 
-  propagatedBuildInputs = [ ruamel-yaml ];
+  dependencies = [ ruamel-yaml ];
 
   pythonImportsCheck = [ "pytest_param_files" ];
   meta = {

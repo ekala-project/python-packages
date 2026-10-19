@@ -31,7 +31,6 @@ buildPythonPackage rec {
   ];
 
   # Module has no test
-  doCheck = false;
 
   pythonImportsCheck = [ "hakuin" ];
 

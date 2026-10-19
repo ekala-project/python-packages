@@ -31,7 +31,7 @@ buildPythonPackage {
       --replace-warn round_ round
   '';
 
-  propagatedBuildInputs = [
+  dependencies = [
     pyquaternion
     numpy
   ];

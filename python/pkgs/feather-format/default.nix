@@ -21,7 +21,6 @@ buildPythonPackage (finalAttrs: {
   dependencies = [ pyarrow ];
 
   pythonImportsCheck = [ "feather" ];
-  doCheck = false; # no tests
 
   meta = {
     description = "Simple wrapper library to the Apache Arrow-based Feather File Format";

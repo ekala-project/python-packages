@@ -19,7 +19,6 @@ buildPythonPackage rec {
   build-system = [ setuptools ];
 
   # Module doesn't have tests
-  doCheck = false;
 
   pythonImportsCheck = [ "tabulate-stubs" ];
 

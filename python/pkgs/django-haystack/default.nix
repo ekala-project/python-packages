@@ -33,8 +33,6 @@ buildPythonPackage rec {
     packaging
   ];
 
-  doCheck = false;
-
   # pythonImportsCheck is not possible because haystack requires Django settings
   # to be configured before any module can be imported
 

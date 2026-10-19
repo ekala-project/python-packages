@@ -26,8 +26,6 @@ buildPythonPackage rec {
     pycryptodome = [ pycryptodome ];
   };
 
-  __structuredAttrs = true;
-
   pythonImportsCheck = [ "eth_hash" ];
 
   meta = {

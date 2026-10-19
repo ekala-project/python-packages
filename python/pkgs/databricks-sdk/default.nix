@@ -23,7 +23,6 @@ buildPythonPackage (finalAttrs: {
   pname = "databricks-sdk";
   version = "0.136.0";
   pyproject = true;
-  __structuredAttrs = true;
 
   src = fetchFromGitHub {
     owner = "databricks";

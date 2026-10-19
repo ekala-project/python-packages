@@ -29,7 +29,6 @@ buildPythonPackage rec {
   nativeBuildInputs = [ flit-core ];
 
   # has no tests
-  doCheck = false;
 
   passthru.updateScript = nix-update-script { };
 

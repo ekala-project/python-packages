@@ -35,7 +35,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [ fields ];
+  dependencies = [ fields ];
 
   pythonImportsCheck = [
     "aspectlib"

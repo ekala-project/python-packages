@@ -32,7 +32,6 @@ buildPythonPackage rec {
   ];
 
   # circular deps
-  doCheck = false;
 
   pythonImportsCheck = [ "zope.exceptions" ];
 

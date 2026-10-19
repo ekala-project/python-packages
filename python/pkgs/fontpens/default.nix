@@ -27,7 +27,6 @@ buildPythonPackage (finalAttrs: {
   dependencies = [ fonttools ];
 
   # can't run normal tests due to circular dependency with fontParts
-  doCheck = false;
   pythonImportsCheck = [
     "fontPens"
   ]

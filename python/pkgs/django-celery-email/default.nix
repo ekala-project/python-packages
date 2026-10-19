@@ -18,11 +18,11 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pmclanahan";
     repo = "django-celery-email";
-    rev = version;
+    tag = version;
     hash = "sha256-LBavz5Nh2ObmIwLCem8nHvsuKgPwkzbS/OzFPmSje/M=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     django
     django-appconf
     celery

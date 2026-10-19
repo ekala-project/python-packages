@@ -13,11 +13,11 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "python-ivi";
     repo = "python-usbtmc";
-    rev = "v${version}";
+    tag = "v${version}";
     hash = "sha256-69kqBTqnVqdWC2mqlXylzb9VkdhwTGZI0Ykf6lqbypI=";
   };
 
-  propagatedBuildInputs = [ pyusb ];
+  dependencies = [ pyusb ];
 
   meta = {
     description = "Python implementation of the USBTMC instrument control protocol";

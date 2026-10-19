@@ -27,7 +27,6 @@ buildPythonPackage rec {
   ];
 
   # Tests requires algopy and other modules which are optional and/or not available
-  doCheck = false;
 
   pythonImportsCheck = [ "numdifftools" ];
 

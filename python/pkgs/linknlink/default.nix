@@ -25,7 +25,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "linknlink" ];
 
   # Module has no test
-  doCheck = false;
 
   meta = {
     description = "Module and CLI for controlling Linklink devices locally";

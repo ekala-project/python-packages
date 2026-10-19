@@ -25,13 +25,12 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ poetry-core ];
 
-  propagatedBuildInputs = [ httpx ];
+  dependencies = [ httpx ];
 
   pythonImportsCheck = [ "notifications_android_tv" ];
 
-  nativeCheckInputs = [ pytestCheckHook ];
-
-  checkInputs = [
+  nativeCheckInputs = [
+    pytestCheckHook
     pytest-asyncio
     pytest-httpx
   ];

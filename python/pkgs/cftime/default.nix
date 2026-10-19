@@ -21,7 +21,7 @@ buildPythonPackage rec {
     numpy
   ];
 
-  propagatedBuildInputs = [ numpy ];
+  dependencies = [ numpy ];
   pythonImportsCheck = [ "cftime" ];
 
   meta = {

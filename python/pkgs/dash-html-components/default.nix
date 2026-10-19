@@ -16,7 +16,6 @@ buildPythonPackage rec {
   };
 
   # No tests in archive
-  doCheck = false;
 
   meta = {
     description = "HTML components for Dash";

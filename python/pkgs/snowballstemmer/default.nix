@@ -16,9 +16,8 @@ buildPythonPackage (finalAttrs: {
   };
 
   # No tests included
-  doCheck = false;
 
-  propagatedBuildInputs = [ pystemmer ];
+  dependencies = [ pystemmer ];
 
   meta = {
     description = "16 stemmer algorithms (15 + Poerter English stemmer) generated from Snowball algorithms";

@@ -14,13 +14,13 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "JelteF";
     repo = "PyLaTeX";
-    rev = "v${version}";
+    tag = "v${version}";
     hash = "sha256-R6u2HDDLsli/omrtEKSRTH8Pd99gBI4iM+O0cZhoSJc=";
   };
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [ ordered-set ];
+  dependencies = [ ordered-set ];
 
   pythonImportsCheck = [
     "pylatex"

@@ -23,7 +23,6 @@ buildPythonPackage rec {
   dependencies = [ paramiko ];
 
   # Tests are running into a timeout on Hydra, they work locally
-  doCheck = false;
 
   pythonImportsCheck = [ "mockssh" ];
 

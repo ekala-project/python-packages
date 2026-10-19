@@ -27,8 +27,6 @@ buildPythonPackage (finalAttrs: {
     llama-index-llms-openai
   ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "llama_index.cli" ];
 
   meta = {

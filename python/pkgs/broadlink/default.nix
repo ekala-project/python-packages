@@ -21,7 +21,6 @@ buildPythonPackage rec {
   dependencies = [ cryptography ];
 
   # Module has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "broadlink" ];
 

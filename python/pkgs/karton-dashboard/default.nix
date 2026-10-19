@@ -28,7 +28,7 @@ buildPythonPackage rec {
     "prometheus-client"
   ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     flask
     karton-core
     mistune
@@ -37,7 +37,6 @@ buildPythonPackage rec {
   ];
 
   # Project has no tests. pythonImportsCheck requires MinIO configuration
-  doCheck = false;
 
   meta = {
     description = "Web application that allows for Karton task and queue introspection";

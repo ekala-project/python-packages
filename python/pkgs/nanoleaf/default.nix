@@ -27,7 +27,6 @@ buildPythonPackage rec {
   dependencies = [ requests ];
 
   # Module has no test
-  doCheck = false;
 
   pythonImportsCheck = [ "nanoleaf" ];
 

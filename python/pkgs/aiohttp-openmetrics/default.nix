@@ -25,7 +25,6 @@ buildPythonPackage rec {
   ];
 
   # no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "aiohttp_openmetrics" ];
 

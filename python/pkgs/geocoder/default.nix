@@ -39,7 +39,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # Tests are outdated
-  doCheck = false;
 
   pythonImportsCheck = [ "geocoder" ];
 

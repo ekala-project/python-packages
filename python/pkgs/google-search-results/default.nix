@@ -23,7 +23,6 @@ buildPythonPackage rec {
   dependencies = [ requests ];
 
   # almost all tests require an API key or network access
-  doCheck = false;
 
   pythonImportsCheck = [ "serpapi" ];
 

@@ -38,7 +38,6 @@ buildPythonPackage {
   '';
 
   # Some tests are broken and many require internet access
-  doCheck = false;
 
   meta = {
     description = "Package enabling color transfer across images";

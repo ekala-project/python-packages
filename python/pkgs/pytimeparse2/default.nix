@@ -17,7 +17,7 @@ buildPythonPackage rec {
     hash = "sha256-zWRbSohTvbVd3GcRRoxH/UReVGYHC0YmbNgbt8N0X48=";
   };
 
-  propagatedBuildInputs = [ dateutils ];
+  dependencies = [ dateutils ];
 
   # custom checks, see
   # https://github.com/onegreyonewhite/pytimeparse2/blob/e00df7506b6925f2c6a5783e89e9f239d128271a/tox.ini#L36C20-L36C78

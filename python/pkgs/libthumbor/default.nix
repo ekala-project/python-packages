@@ -19,12 +19,10 @@ buildPythonPackage rec {
 
   buildInputs = [ django ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     six
     pycrypto
   ];
-
-  doCheck = false;
 
   pythonImportsCheck = [ "libthumbor" ];
 

@@ -20,7 +20,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ setuptools ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     isodate
     azure-common
     azure-mgmt-core
@@ -29,7 +29,6 @@ buildPythonPackage rec {
   pythonNamespaces = [ "azure.mgmt" ];
 
   # Module has no tests
-  doCheck = false;
 
   meta = {
     description = "This is the Microsoft Azure Service Fabric Management Client Library";

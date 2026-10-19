@@ -23,7 +23,7 @@ buildPythonPackage rec {
     sha256 = "sha256-qnWVQEG1Ri0z4RYmmG/fxYrlIFFf/6PnP5Dnv0cZb5I=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     requests
     requests-oauthlib
     six

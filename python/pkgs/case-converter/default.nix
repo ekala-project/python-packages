@@ -22,8 +22,6 @@ buildPythonPackage (finalAttrs: {
 
   pythonImportsCheck = [ "caseconverter" ];
 
-  doCheck = true;
-
   nativeCheckInputs = [ pytestCheckHook ];
 
   meta = {

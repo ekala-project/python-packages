@@ -33,7 +33,7 @@ buildPythonPackage rec {
     setuptools-scm
   ];
 
-  propagatedBuildInputs = [ jinja2 ];
+  dependencies = [ jinja2 ];
 
   optional-dependencies = {
     reporting = [

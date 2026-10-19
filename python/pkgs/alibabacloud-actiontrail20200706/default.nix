@@ -13,8 +13,6 @@ buildPythonPackage (finalAttrs: {
   version = "2.6.0";
   pyproject = true;
 
-  __structuredAttrs = true;
-
   src = fetchPypi {
     pname = "alibabacloud_actiontrail20200706";
     inherit (finalAttrs) version;
@@ -31,7 +29,6 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [ "alibabacloud_actiontrail20200706" ];
 
   # Module has no tests
-  doCheck = false;
 
   passthru.updateScript = nix-update-script { };
 

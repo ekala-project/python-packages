@@ -36,7 +36,6 @@ buildPythonPackage rec {
   ];
 
   # Upstream has no tests
-  doCheck = false;
   pythonImportsCheck = [ "mkdocs_git_committers_plugin_2" ];
 
   meta = {

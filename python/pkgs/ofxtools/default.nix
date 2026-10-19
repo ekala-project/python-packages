@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "csingley";
     repo = "ofxtools";
-    rev = version;
+    tag = version;
     hash = "sha256-874xcs5M5K6JxYoz9xhbZM/VZICZshHe9nb2C3HAQLA=";
   };
 

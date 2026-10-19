@@ -37,7 +37,6 @@ buildPythonPackage rec {
   ];
 
   # The package has not tests
-  doCheck = false;
 
   env.JUPYTER_PATH = "${nbconvert}/share/jupyter";
 

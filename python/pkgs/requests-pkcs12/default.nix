@@ -14,11 +14,11 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "m-click";
     repo = "requests_pkcs12";
-    rev = version;
+    tag = version;
     hash = "sha256-4B7jL3OubIF8ZOYzsODltZCAHhb+PM18uJDOssuM6R4=";
   };
 
-  propagatedBuildInputs = [
+  dependencies = [
     requests
     pyopenssl
   ];

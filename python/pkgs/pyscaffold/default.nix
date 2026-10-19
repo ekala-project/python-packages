@@ -50,7 +50,7 @@ buildPythonPackage rec {
     substituteInPlace setup.cfg --replace "platformdirs>=2,<4" "platformdirs"
   '';
 
-  propagatedBuildInputs = [
+  dependencies = [
     colorama
     configupdater
     importlib-metadata

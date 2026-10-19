@@ -16,8 +16,6 @@ buildPythonPackage (finalAttrs: {
   version = "0.2.8";
   pyproject = true;
 
-  __structuredAttrs = true;
-
   src = fetchPypi {
     inherit (finalAttrs) version pname;
     hash = "sha256-WBasBhefgRkOdMdz2K/agvS+cY6m3/33wiu+Jl4d1Cg=";
@@ -34,7 +32,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # Tests try to access the network.
-  doCheck = false;
 
   nativeCheckInputs = [ pytestCheckHook ];
 

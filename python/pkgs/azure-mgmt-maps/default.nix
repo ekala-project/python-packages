@@ -14,8 +14,6 @@ buildPythonPackage (finalAttrs: {
   version = "2.1.0";
   pyproject = true;
 
-  __structuredAttrs = true;
-
   src = fetchPypi {
     inherit (finalAttrs) pname version;
     hash = "sha256-XVaml4UuVBanYYHxjB1YT/PvExzgAPbD4gI3Hbc0dI0=";
@@ -33,7 +31,6 @@ buildPythonPackage (finalAttrs: {
   pythonNamespaces = [ "azure.mgmt" ];
 
   # Module has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "azure.mgmt.maps" ];
 

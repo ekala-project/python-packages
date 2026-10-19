@@ -24,8 +24,6 @@ buildPythonPackage rec {
     jsonschema
   ];
 
-  doCheck = false;
-
   pythonImportsCheck = [ "warlock" ];
 
   meta = {

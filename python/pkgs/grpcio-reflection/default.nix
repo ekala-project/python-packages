@@ -36,7 +36,6 @@ buildPythonPackage rec {
   pythonImportsCheck = [ "grpc_reflection" ];
 
   # no tests
-  doCheck = false;
 
   meta = {
     description = "Standard Protobuf Reflection Service for gRPC";

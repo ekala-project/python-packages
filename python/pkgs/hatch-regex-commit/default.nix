@@ -22,7 +22,6 @@ buildPythonPackage rec {
   dependencies = [ hatchling ];
 
   # Module has no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "hatch_regex_commit" ];
 

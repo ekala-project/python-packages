@@ -14,7 +14,7 @@ buildPythonPackage rec {
 
   sourceRoot = "${src.name}/certbot-dns-rfc2136";
 
-  propagatedBuildInputs = [
+  dependencies = [
     acme
     certbot
     dnspython

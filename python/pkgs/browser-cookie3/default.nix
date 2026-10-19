@@ -33,7 +33,6 @@ buildPythonPackage rec {
   ];
 
   # No tests implemented
-  doCheck = false;
 
   pythonImportsCheck = [ "browser_cookie3" ];
 

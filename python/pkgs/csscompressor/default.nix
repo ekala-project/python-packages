@@ -19,8 +19,6 @@ buildPythonPackage rec {
 
   pythonImportsCheck = [ "csscompressor" ];
 
-  doCheck = false;
-
   meta = {
     homepage = "https://pypi.org/project/csscompressor/";
     description = "Python port of YUI CSS Compressor";

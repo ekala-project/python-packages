@@ -20,7 +20,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ flit-core ];
 
-  propagatedBuildInputs = [ django ];
+  dependencies = [ django ];
 
   pythonImportsCheck = [ "laces" ];
 

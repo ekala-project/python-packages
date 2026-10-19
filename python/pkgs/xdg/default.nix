@@ -21,7 +21,7 @@ buildPythonPackage rec {
 
   nativeBuildInputs = [ poetry-core ];
 
-  propagatedBuildInputs = [ clikit ];
+  dependencies = [ clikit ];
 
   # sdist has no tests
 

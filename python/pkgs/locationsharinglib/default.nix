@@ -36,7 +36,6 @@ buildPythonPackage rec {
   ];
 
   # There are no tests
-  doCheck = false;
 
   pythonImportsCheck = [ "locationsharinglib" ];
 

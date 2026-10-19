@@ -34,7 +34,7 @@ buildPythonPackage rec {
     wheel
   ];
 
-  propagatedBuildInputs = [
+  dependencies = [
     importlib-metadata
     myst-parser
     pyscaffold

@@ -23,7 +23,6 @@ buildPythonPackage (finalAttrs: {
   dependencies = [ requests ];
 
   # Test require network access
-  doCheck = false;
 
   pythonImportsCheck = [ "hibpwned" ];
 

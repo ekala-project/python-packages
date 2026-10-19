@@ -55,7 +55,6 @@ buildPythonPackage rec {
   ];
 
   # Tests require a running redis
-  doCheck = false;
 
   meta = {
     description = "Python client for Redis key-value store";
