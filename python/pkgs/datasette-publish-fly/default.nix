@@ -4,6 +4,8 @@
   cogapp,
   datasette,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   pytest-mock,
   pytestCheckHook,
 }:
@@ -11,7 +13,7 @@
 buildPythonPackage rec {
   pname = "datasette-publish-fly";
   version = "1.3.1";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "simonw";
@@ -19,6 +21,8 @@ buildPythonPackage rec {
     tag = version;
     hash = "sha256-diaxr+fNNgkJvLGkLo+lK0ThTsXYDePFsvTetMbDRMk=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ datasette ];
 

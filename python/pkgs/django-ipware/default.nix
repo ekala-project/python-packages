@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   django,
   python-ipware,
 }:
@@ -9,12 +11,14 @@
 buildPythonPackage rec {
   pname = "django-ipware";
   version = "7.0.1";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-2exD0r983yFv7Y1JSghN61dhpUhgpTsudDRqTzhM/0c=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     django

@@ -5,13 +5,15 @@
   buildPythonPackage,
   fetchFromGitHub,
   fetchpatch,
+  # build-system
+  setuptools,
   openssl,
 }:
 
 buildPythonPackage rec {
   pname = "oscrypto";
   version = "1.3.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "wbond";
@@ -19,6 +21,8 @@ buildPythonPackage rec {
     tag = version;
     hash = "sha256-CmDypmlc/kb6ONCUggjT1Iqd29xNSLRaGh5Hz36dvOw=";
   };
+
+  build-system = [ setuptools ];
 
   patches = [
     ./support-openssl-3.0.10.patch

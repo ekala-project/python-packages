@@ -2,12 +2,14 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
 }:
 
 buildPythonPackage rec {
   pname = "pkce";
   version = "1.0.3";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "RomeoDespres";
@@ -15,6 +17,8 @@ buildPythonPackage rec {
     tag = version;
     hash = "sha256-dOHCu0pDXk9LM4Yobaz8GAfVpBd8rXlty+Wfhx+WPME=";
   };
+
+  build-system = [ setuptools ];
   pythonImportsCheck = [ "pkce" ];
 
   meta = {

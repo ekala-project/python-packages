@@ -1,6 +1,8 @@
 {
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   lib,
 
   # Python dependencies
@@ -11,12 +13,14 @@
 buildPythonPackage rec {
   pname = "aioextensions";
   version = "21.7.2261349";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     sha256 = "2eacc52692495f331437e8c8e9782ca71f4617ec84f174ca17acdd77631efc47";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ uvloop ];
 

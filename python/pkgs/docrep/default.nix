@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   pytest,
   six,
 }:
@@ -9,12 +11,14 @@
 buildPythonPackage rec {
   pname = "docrep";
   version = "0.3.2";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     sha256 = "ed8a17e201abd829ef8da78a0b6f4d51fb99a4cbd0554adbed3309297f964314";
   };
+
+  build-system = [ setuptools ];
 
   nativeCheckInputs = [ pytest ];
   dependencies = [ six ];

@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   libusb1,
   mock,
   ndeflib,
@@ -15,7 +17,7 @@
 buildPythonPackage rec {
   pname = "nfcpy";
   version = "1.0.4";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "nfcpy";
@@ -23,6 +25,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     hash = "sha256-HFWOCiz6ISfxEeC6KPKNKGZoHvFjFGUn7QJWnwvJKYw=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     libusb1

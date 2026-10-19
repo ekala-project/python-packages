@@ -2,18 +2,22 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   six,
 }:
 
 buildPythonPackage rec {
   pname = "mongoquery";
   version = "1.4.3";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     sha256 = "sha256-6QH4buWvfvbtovLCb0vSz+g4DYHxeLfjYH27zc7pcjk=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ six ];
 

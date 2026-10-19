@@ -1,6 +1,8 @@
 {
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   lib,
   pytest,
   cryptography,
@@ -10,7 +12,7 @@
 buildPythonPackage rec {
   pname = "dissononce";
   version = "0.34.3";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "tgalal";
@@ -18,6 +20,8 @@ buildPythonPackage rec {
     tag = version;
     sha256 = "0hn64qfr0d5npmza6rjyxwwp12k2z2y1ma40zpl104ghac6g3mbs";
   };
+
+  build-system = [ setuptools ];
 
   nativeCheckInputs = [ pytest ];
   checkPhase = ''

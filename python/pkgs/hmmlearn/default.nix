@@ -1,6 +1,8 @@
 {
   lib,
   fetchPypi,
+  # build-system
+  setuptools,
   buildPythonPackage,
   numpy,
   scikit-learn,
@@ -13,12 +15,14 @@
 buildPythonPackage rec {
   pname = "hmmlearn";
   version = "0.3.3";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-HTxdxMUlfgwjjcH+U4dwC4y5h+q4CO2z4Mc4KfHMROw=";
   };
+
+  build-system = [ setuptools ];
 
   buildInputs = [
     setuptools-scm

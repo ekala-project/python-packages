@@ -2,17 +2,21 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
 }:
 
 buildPythonPackage rec {
   pname = "linuxfd";
   version = "1.5";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     sha256 = "b8c00109724b68e093f9b556edd78e41ed65fb8d969fd0e83186a97b5d3139b4";
   };
+
+  build-system = [ setuptools ];
 
   # no tests
 

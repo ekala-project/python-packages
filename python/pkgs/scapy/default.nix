@@ -3,6 +3,8 @@
   stdenv,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   isPyPy,
   cryptography,
   ipython,
@@ -14,7 +16,7 @@
 buildPythonPackage rec {
   pname = "scapy";
   version = "2.7.0";
-  format = "setuptools";
+  pyproject = true;
 
   disabled = isPyPy;
 
@@ -24,6 +26,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     hash = "sha256-Pp7pPfaWyzJGf+soENfOPynN8logc5FM848hyVCcdKk=";
   };
+
+  build-system = [ setuptools ];
 
   patches = lib.optional (!stdenv.hostPlatform.isStatic) ./find-library.patch;
 

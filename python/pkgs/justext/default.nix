@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   pytest-cov-stub,
   lxml,
   lxml-html-clean,
@@ -10,7 +12,7 @@
 buildPythonPackage rec {
   pname = "justext";
   version = "3.0.2";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "miso-belica";
@@ -18,6 +20,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     hash = "sha256-/7wp41jz/5nUFqZNg4O7yF2+eE+awAEXp6dhD+Loc0U=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     lxml

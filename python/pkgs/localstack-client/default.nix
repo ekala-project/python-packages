@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   boto3,
   pytestCheckHook,
 
@@ -12,13 +14,15 @@
 buildPythonPackage rec {
   pname = "localstack-client";
   version = "2.12";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     pname = "localstack_client";
     inherit version;
     hash = "sha256-27mHEv0siGnV3+16LKAGuVx3UP6aQ68SPvBU78fn67Q=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ boto3 ];
 

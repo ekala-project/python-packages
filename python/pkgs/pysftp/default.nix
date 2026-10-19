@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   isPyPy,
   paramiko,
 }:
@@ -9,13 +11,15 @@
 buildPythonPackage rec {
   pname = "pysftp";
   version = "0.2.9";
-  format = "setuptools";
+  pyproject = true;
   disabled = isPyPy;
 
   src = fetchPypi {
     inherit pname version;
     sha256 = "0jl5qix5cxzrv4lb8rfpjkpcghbkacnxkb006ikn7mkl5s05mxgv";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ paramiko ];
 

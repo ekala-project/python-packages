@@ -2,13 +2,15 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   pytest-asyncio,
 }:
 
 buildPythonPackage rec {
   pname = "sanic-routing";
   version = "23.12.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "sanic-org";
@@ -16,6 +18,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     hash = "sha256-IUubPd6mqtCfY4ruI/8wkFcAcS0xXHWbe9RzDac5kRc=";
   };
+
+  build-system = [ setuptools ];
   pythonImportsCheck = [ "sanic_routing" ];
 
   meta = {

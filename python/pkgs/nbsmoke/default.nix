@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   pytest,
   jupyter-client,
   ipykernel,
@@ -14,12 +16,14 @@
 buildPythonPackage rec {
   pname = "nbsmoke";
   version = "0.6.1a1";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     sha256 = "sha256-mIdr4mppQqKGBdlLwLECCvKgwYmGMY1zjq/gzV0urRQ=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     pytest

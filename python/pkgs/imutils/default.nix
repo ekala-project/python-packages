@@ -2,18 +2,22 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   opencv4,
 }:
 
 buildPythonPackage rec {
   version = "0.5.4";
-  format = "setuptools";
+  pyproject = true;
   pname = "imutils";
 
   src = fetchPypi {
     inherit pname version;
     sha256 = "03827a9fca8b5c540305c0844a62591cf35a0caec199cb0f2f0a4a0fb15d8f24";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ opencv4 ];
 

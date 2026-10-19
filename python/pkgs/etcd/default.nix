@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   simplejson,
   pytz,
   requests,
@@ -10,7 +12,7 @@
 buildPythonPackage rec {
   pname = "etcd";
   version = "2.0.8";
-  format = "setuptools";
+  pyproject = true;
 
   # PyPI package is incomplete
   src = fetchFromGitHub {
@@ -19,6 +21,8 @@ buildPythonPackage rec {
     tag = version;
     hash = "sha256-h+jYIRSNdrGkW3tBV1ifIDEXU46EQGyeJoz/Mxym4pI=";
   };
+
+  build-system = [ setuptools ];
 
   postPatch = ''
     sed -i -e '13,14d;37d' setup.py

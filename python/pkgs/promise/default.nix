@@ -3,6 +3,8 @@
   buildPythonPackage,
   fetchFromGitHub,
   fetchpatch,
+  # build-system
+  setuptools,
   mock,
   pytest-asyncio,
   six,
@@ -11,7 +13,7 @@
 buildPythonPackage rec {
   pname = "promise";
   version = "2.3.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "syrusakbary";
@@ -19,6 +21,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     hash = "sha256-5s6GMANSO4UpLOP/HAQxuNFSBSjPgvJCB9R1dOoKuJ4=";
   };
+
+  build-system = [ setuptools ];
 
   patches = [
     # Convert @asyncio.coroutine to async def, https://github.com/syrusakbary/promise/pull/99

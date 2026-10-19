@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   tqdm,
   spacy,
 }:
@@ -9,7 +11,7 @@
 buildPythonPackage rec {
   pname = "pysbd";
   version = "0.3.4";
-  format = "setuptools";
+  pyproject = true;
 
   # provides no sdist on pypi
   src = fetchFromGitHub {
@@ -18,6 +20,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     sha256 = "12p7qm237z56hw4zr03n8rycgfymhki2m9c4w3ib0mvqq122a5dp";
   };
+
+  build-system = [ setuptools ];
 
   pythonImportsCheck = [ "pysbd" ];
 

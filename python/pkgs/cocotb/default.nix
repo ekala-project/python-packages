@@ -15,7 +15,7 @@
 buildPythonPackage rec {
   pname = "cocotb";
   version = "2.1.0";
-  format = "setuptools";
+  pyproject = true;
 
   # RuntimeError: cocotb 2.0.1 only supports a maximum Python version of 3.13.
   # You can suppress this error by defining the environment variable COCOTB_IGNORE_PYTHON_REQUIRES
@@ -29,6 +29,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     hash = "sha256-MND6d+5ymlGT597kt6rWN9ylmoGvexIylzsgjY0NRe8=";
   };
+
+  build-system = [ setuptools ];
 
   nativeBuildInputs = [ setuptools-scm ];
 

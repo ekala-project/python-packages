@@ -2,12 +2,14 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
 }:
 
 buildPythonPackage rec {
   pname = "tailer";
   version = "0.4.1";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "six8";
@@ -15,6 +17,8 @@ buildPythonPackage rec {
     tag = version;
     sha256 = "1s5p5m3q9k7r1m0wx5wcxf20xzs0rj14qwg1ydwhf6adr17y2w5y";
   };
+
+  build-system = [ setuptools ];
 
   pythonImportsCheck = [ "tailer" ];
 

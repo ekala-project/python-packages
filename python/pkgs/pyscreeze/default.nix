@@ -3,11 +3,13 @@
   stdenv,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
 }:
 buildPythonPackage {
   pname = "pyscreeze";
   version = "0.1.26";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "asweigart";
@@ -15,6 +17,8 @@ buildPythonPackage {
     rev = "28ab707dceecbdd135a9491c3f8effd3a69680af";
     hash = "sha256-gn3ydjf/msdhIhngGlhK+jhEyFy0qGeDr58E7kM2YZs=";
   };
+
+  build-system = [ setuptools ];
 
   pythonImportsCheck = [ "pyscreeze" ];
   doCheck = stdenv.hostPlatform.isLinux;

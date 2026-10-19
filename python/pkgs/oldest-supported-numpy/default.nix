@@ -2,18 +2,22 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   numpy,
 }:
 
 buildPythonPackage rec {
   pname = "oldest-supported-numpy";
   version = "2023.12.21";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-cdicMbtWeBTkfi4mjrLpK2+Z9c529MPbMIM2JOnvKeA=";
   };
+
+  build-system = [ setuptools ];
 
   # The purpose of oldest-supported-numpy is to build a project against the
   # oldest version of numpy for a given Python distribution in order to build

@@ -3,12 +3,14 @@
   buildPythonPackage,
   datasette,
   fetchFromGitHub,
+  # build-system
+  setuptools,
 }:
 
 buildPythonPackage rec {
   pname = "datasette-template-sql";
   version = "1.0.2";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "simonw";
@@ -16,6 +18,8 @@ buildPythonPackage rec {
     tag = version;
     hash = "sha256-VmdIEDk3iCBFrTPMm6ud00Z5CWqO0Wk707IQ4oVx5ak=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ datasette ];
 

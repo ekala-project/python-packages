@@ -2,18 +2,22 @@
   lib,
   buildPythonPackage,
   fetchurl,
+  # build-system
+  setuptools,
   glibcLocales,
 }:
 
 buildPythonPackage rec {
   pname = "rpmfluff";
   version = "0.5.7.1";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchurl {
     url = "https://releases.pagure.org/${pname}/${pname}-${version}.tar.xz";
     sha256 = "19vnlzma8b0aghdiixk0q3wc10y6306hsnic0qvswaaiki94fss1";
   };
+
+  build-system = [ setuptools ];
 
   env.LC_ALL = "en_US.utf-8";
   buildInputs = [ glibcLocales ];

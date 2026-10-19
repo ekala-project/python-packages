@@ -2,12 +2,14 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
 }:
 
 buildPythonPackage {
   pname = "cocotb-bus";
   version = "unstable-2025-11-03";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "cocotb";
@@ -15,6 +17,8 @@ buildPythonPackage {
     rev = "f72b989bde036e677d5e9ebab3a6a21bdfe43d09";
     hash = "sha256-4j63kOjBd+iLA2EYqLTM0oKzKksOjH2UqNgDNFvWgYw=";
   };
+
+  build-system = [ setuptools ];
 
   # tests require cocotb, disable for now to avoid circular dependency
 

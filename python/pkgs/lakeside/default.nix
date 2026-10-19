@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   protobuf,
   pycryptodome,
   requests,
@@ -10,7 +12,7 @@
 buildPythonPackage rec {
   pname = "lakeside";
   version = "0.13";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "nkgilley";
@@ -18,6 +20,8 @@ buildPythonPackage rec {
     tag = version;
     hash = "sha256-Y5g78trkwOF3jsbgTv0uVkvfB1HZN+w1T6xIorxGAhg=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     protobuf

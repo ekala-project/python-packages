@@ -1,13 +1,15 @@
 {
   lib,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   buildPythonPackage,
 }:
 
 buildPythonPackage rec {
   pname = "pyclip";
   version = "0.7.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "spyoungtech";
@@ -15,6 +17,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     hash = "sha256-0nOkNgT8XCwtXI9JZntkhoMspKQU602rTKBFajVKBoM=";
   };
+
+  build-system = [ setuptools ];
 
   postPatch = ''
     substituteInPlace setup.py \

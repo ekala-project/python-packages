@@ -3,6 +3,8 @@
   buildPythonPackage,
   fetchPypi,
   fetchpatch,
+  # build-system
+  setuptools,
   python,
   six,
 }:
@@ -10,12 +12,14 @@
 buildPythonPackage rec {
   pname = "manuel";
   version = "1.13.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-XWMSDej6bZJ3gLaa4oqj6dFmmxCvPTJ4Xz+6EaW+iFo=";
   };
+
+  build-system = [ setuptools ];
 
   patches = lib.optionals (lib.versionAtLeast python.version "3.11") [
     # https://github.com/benji-york/manuel/pull/32

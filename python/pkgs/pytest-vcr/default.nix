@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   pytest,
   vcrpy,
 }:
@@ -9,7 +11,7 @@
 buildPythonPackage rec {
   pname = "pytest-vcr";
   version = "1.0.2";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "ktosiek";
@@ -17,6 +19,8 @@ buildPythonPackage rec {
     tag = version;
     sha256 = "1i6fin91mklvbi8jzfiswvwf1m91f43smpj36a17xrzk4gisfs6i";
   };
+
+  build-system = [ setuptools ];
 
   buildInputs = [ pytest ];
 

@@ -2,18 +2,22 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   sphinx,
 }:
 
 buildPythonPackage rec {
   pname = "sphinxcontrib-httpdomain";
   version = "1.8.1";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-bC3+bKKC119m3zM4absM5zMcAbR122gJ/50Qe3zf4Es=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ sphinx ];
 

@@ -10,7 +10,7 @@
 buildPythonPackage rec {
   pname = "pystemmer";
   version = "3.0.0";
-  format = "setuptools";
+  pyproject = true;
   pyproejct = true;
 
   src = fetchFromGitHub {

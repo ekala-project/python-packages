@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   django,
   django-appconf,
   celery,
@@ -13,7 +15,7 @@
 buildPythonPackage rec {
   pname = "django-celery-email";
   version = "3.0.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "pmclanahan";
@@ -21,6 +23,8 @@ buildPythonPackage rec {
     tag = version;
     hash = "sha256-LBavz5Nh2ObmIwLCem8nHvsuKgPwkzbS/OzFPmSje/M=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     django

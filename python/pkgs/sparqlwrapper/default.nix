@@ -2,19 +2,23 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   keepalive,
 }:
 
 buildPythonPackage rec {
   pname = "sparqlwrapper";
   version = "2.0.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     pname = "SPARQLWrapper";
     inherit version;
     hash = "sha256-P+0+vMd2F6SnTSZEuG/Yjg8y5/cAOseyszTAJiAXMfE=";
   };
+
+  build-system = [ setuptools ];
 
   # break circular dependency loop
   patchPhase = ''

@@ -4,6 +4,8 @@
   cached-property,
   chevron,
   fetchPypi,
+  # build-system
+  setuptools,
   frozendict,
   pystache,
   pyyaml,
@@ -12,12 +14,14 @@
 buildPythonPackage rec {
   pname = "genanki";
   version = "0.13.1";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-hNCQQjqIeVIEZb/peECD7ay4014rpRH6Whve8B2Pce0=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     cached-property

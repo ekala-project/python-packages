@@ -2,13 +2,15 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   python,
 }:
 
 buildPythonPackage rec {
   pname = "ibis";
   version = "3.3.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "dmulholl";
@@ -16,6 +18,8 @@ buildPythonPackage rec {
     tag = version;
     hash = "sha256-9ELOAQhD6KXyTN2U0lGmNxxSzx9o2QIt+CNa6i8o5xs=";
   };
+
+  build-system = [ setuptools ];
 
   checkPhase = ''
     ${python.interpreter} test_ibis.py

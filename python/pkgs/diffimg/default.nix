@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   pillow,
   unittestCheckHook,
   pythonAtLeast,
@@ -10,7 +12,7 @@
 buildPythonPackage {
   pname = "diffimg";
   version = "0.3.0"; # github recognized 0.1.3, there's a v0.1.5 tag and setup.py says 0.3.0
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "nicolashahn";
@@ -18,6 +20,8 @@ buildPythonPackage {
     rev = "b82f0bb416f100f9105ccccf1995872b29302461";
     hash = "sha256-H/UQsqyfdnlESBe7yRu6nK/0dakQkAfeFaZNwjCMvdM=";
   };
+
+  build-system = [ setuptools ];
 
   # it imports the wrong diff,
   # fix offered to upstream https://github.com/nicolashahn/diffimg/pull/6

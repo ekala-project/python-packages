@@ -3,6 +3,8 @@
   buildPythonPackage,
   fetchPypi,
   fetchpatch,
+  # build-system
+  setuptools,
   click,
   defusedxml,
   joblib,
@@ -13,12 +15,14 @@
 buildPythonPackage rec {
   pname = "nltk";
   version = "3.10.3";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-u5MnpGHDgRwvpJAOA4QEAfISat+zDABygnxDO9JETqQ=";
   };
+
+  build-system = [ setuptools ];
 
   patches = [
     # https://github.com/nltk/nltk/security/advisories/GHSA-jm6w-m3j8-898g

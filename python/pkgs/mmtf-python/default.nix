@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   msgpack,
   numpy,
   unittestCheckHook,
@@ -10,12 +12,14 @@
 buildPythonPackage rec {
   pname = "mmtf-python";
   version = "1.1.3";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-EqAv4bcTHworjORbRvHgzdKLmBj+RJlVTCaISYfqDDI=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     msgpack

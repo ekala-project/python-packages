@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   jupyter-core,
   notebook,
   pytestCheckHook,
@@ -10,7 +12,7 @@
 buildPythonPackage rec {
   pname = "jupyter-contrib-core";
   version = "0.4.2";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "jupyter-contrib";
@@ -18,6 +20,8 @@ buildPythonPackage rec {
     tag = version;
     hash = "sha256-UTtK+aKxBFkqKuHrt1ox8vdHyFz/9HiKFl7U4UQcG88=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     jupyter-core

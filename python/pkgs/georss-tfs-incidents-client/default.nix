@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   georss-client,
   pytestCheckHook,
 }:
@@ -9,7 +11,7 @@
 buildPythonPackage rec {
   pname = "georss-tfs-incidents-client";
   version = "0.4";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "exxamalte";
@@ -17,6 +19,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     hash = "sha256-Cz0PRcGReAE0mg04ktCUaoLqPTjvyU1TiB/Pdz7o7zo=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ georss-client ];
 

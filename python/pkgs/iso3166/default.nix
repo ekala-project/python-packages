@@ -1,13 +1,15 @@
 {
   lib,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   buildPythonPackage,
 }:
 
 buildPythonPackage rec {
   pname = "iso3166";
   version = "2.1.1";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "deactivated";
@@ -15,6 +17,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     hash = "sha256-qJYw1FlhQD9EI3xCRv3U6fkKxHoAqNfO8myItki1C0g=";
   };
+
+  build-system = [ setuptools ];
   pythonImportsCheck = [ "iso3166" ];
 
   meta = {

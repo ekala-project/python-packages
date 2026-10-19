@@ -1,6 +1,8 @@
 {
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   lib,
 }:
 
@@ -8,12 +10,14 @@ buildPythonPackage rec {
   pname = "py4j";
 
   version = "0.10.9.9";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-9pTK0Z76W9He5PPlJw60BmE8l0OUA15b/E7Bq6hwuHk=";
   };
+
+  build-system = [ setuptools ];
 
   # No tests in archive
 

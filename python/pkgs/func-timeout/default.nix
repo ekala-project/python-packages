@@ -2,18 +2,22 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
 }:
 
 buildPythonPackage rec {
   pname = "func-timeout";
   version = "4.3.5";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     pname = "func_timeout";
     inherit version;
     sha256 = "74cd3c428ec94f4edfba81f9b2f14904846d5ffccc27c92433b8b5939b5575dd";
   };
+
+  build-system = [ setuptools ];
   pythonImportsCheck = [ "func_timeout" ];
 
   meta = {

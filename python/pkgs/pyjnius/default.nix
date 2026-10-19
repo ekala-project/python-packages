@@ -3,18 +3,22 @@
   buildPythonPackage,
   cython,
   fetchPypi,
+  # build-system
+  setuptools,
   java,
 }:
 
 buildPythonPackage rec {
   pname = "pyjnius";
   version = "1.7.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-n4FwhISwqE6tPrC6hOU6xXnkxDyhDHRvmJip891Q9U0=";
   };
+
+  build-system = [ setuptools ];
 
   nativeBuildInputs = [
     java

@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   pillow,
   regex,
 }:
@@ -9,12 +11,14 @@
 buildPythonPackage rec {
   pname = "material-color-utilities-python";
   version = "0.1.5";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-PG8C585wWViFRHve83z3b9NijHyV+iGY2BdMJpyVH64=";
   };
+
+  build-system = [ setuptools ];
 
   pythonRelaxDeps = [ "Pillow" ];
 

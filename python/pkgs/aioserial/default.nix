@@ -2,18 +2,22 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   pyserial,
 }:
 
 buildPythonPackage rec {
   pname = "aioserial";
   version = "1.3.1";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-cCvwOw64S47y2NrFy5JeHmhdzpj3exJVabxv0rO1gig=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ pyserial ];
 

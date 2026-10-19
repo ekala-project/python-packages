@@ -2,13 +2,15 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   python-lsp-server,
 }:
 
 buildPythonPackage rec {
   pname = "pyls-spyder";
   version = "0.4.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "spyder-ide";
@@ -16,6 +18,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     sha256 = "11ajbsia60d4c9s6m6rbvaqp1d69fcdbq6a98lkzkkzv2b9pdhkk";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ python-lsp-server ];
 

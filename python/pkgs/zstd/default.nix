@@ -3,6 +3,8 @@
   buildPythonPackage,
   buildPackages,
   fetchPypi,
+  # build-system
+  setuptools,
   pkg-config,
   pkgs,
 }:
@@ -10,12 +12,14 @@
 buildPythonPackage rec {
   pname = "zstd";
   version = "1.5.7.3";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-QD5SBfSsBLkuawzaZUvi9R3iaCKKDbAGe8CH+qzy9JU=";
   };
+
+  build-system = [ setuptools ];
 
   postPatch = ''
     substituteInPlace setup.py \

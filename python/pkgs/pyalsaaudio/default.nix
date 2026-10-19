@@ -2,18 +2,22 @@
   alsa-lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   lib,
 }:
 
 buildPythonPackage rec {
   pname = "pyalsaaudio";
   version = "0.11.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-p4qdyjNSSyyQZLNOIfWrh0JyMTzzJKmndZLzlqXg/dw=";
   };
+
+  build-system = [ setuptools ];
 
   buildInputs = [
     alsa-lib

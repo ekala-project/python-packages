@@ -1,13 +1,15 @@
 {
   lib,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   buildPythonPackage,
 }:
 
 buildPythonPackage rec {
   pname = "json-tricks";
   version = "3.17.3";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "mverleg";
@@ -15,6 +17,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     hash = "sha256-xddMc4PvVI+mqB3eeVqECZmdeSKAURsdbOnUAXahqM0=";
   };
+
+  build-system = [ setuptools ];
 
   pythonImportsCheck = [ "json_tricks" ];
 

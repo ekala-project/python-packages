@@ -3,6 +3,8 @@
   buildPythonPackage,
   cython,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   oniguruma,
   pkgs,
 }:
@@ -13,7 +15,7 @@ in
 buildPythonPackage rec {
   pname = "jq";
   version = "1.12.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "mwilliamson";
@@ -21,6 +23,8 @@ buildPythonPackage rec {
     tag = version;
     hash = "sha256-glWEqoS+QaoIiBJu9DXd+VvhPnWOgRT4VaYfMpjbR5g=";
   };
+
+  build-system = [ setuptools ];
 
   env.JQPY_USE_SYSTEM_LIBS = 1;
 

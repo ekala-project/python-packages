@@ -3,6 +3,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   pytestCheckHook,
   six,
 }:
@@ -10,7 +12,7 @@
 buildPythonPackage rec {
   pname = "jsonstreams";
   version = "0.6.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "dcbaker";
@@ -18,6 +20,8 @@ buildPythonPackage rec {
     tag = version;
     sha256 = "0qw74wz9ngz9wiv89vmilbifsbvgs457yn1bxnzhrh7g4vs2wcav";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ six ];
 

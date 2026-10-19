@@ -3,6 +3,8 @@
   buildPythonPackage,
   fetchFromGitHub,
   fetchpatch,
+  # build-system
+  setuptools,
   freezegun,
   pytest,
 }:
@@ -10,7 +12,7 @@
 buildPythonPackage rec {
   pname = "pytest-freezegun";
   version = "0.4.2";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "ktosiek";
@@ -18,6 +20,8 @@ buildPythonPackage rec {
     tag = version;
     sha256 = "10c4pbh03b4s1q8cjd75lr0fvyf9id0zmdk29566qqsmaz28npas";
   };
+
+  build-system = [ setuptools ];
 
   patches = [
     (fetchpatch {

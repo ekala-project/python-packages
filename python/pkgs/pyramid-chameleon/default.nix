@@ -12,13 +12,15 @@
 buildPythonPackage rec {
   pname = "pyramid-chameleon";
   version = "0.3";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     pname = "pyramid_chameleon";
     inherit version;
     hash = "sha256-0XZ5KlDrAV14ZbRL2bJKe9BIn6mlzrvRe54FBIzvkBc=";
   };
+
+  build-system = [ setuptools ];
 
   patches = [
     # https://github.com/Pylons/pyramid_chameleon/pull/25

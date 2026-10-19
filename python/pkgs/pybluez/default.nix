@@ -3,6 +3,8 @@
   stdenv,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   bluez,
   gattlib,
 }:
@@ -10,7 +12,7 @@
 buildPythonPackage {
   pname = "pybluez";
   version = "unstable-2022-01-28";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "pybluez";
@@ -18,6 +20,8 @@ buildPythonPackage {
     rev = "5096047f90a1f6a74ceb250aef6243e144170f92";
     hash = "sha256-GA58DfCFaVzZQA1HYpGQ68bznrt4SX1ojyOVn8hyCGo=";
   };
+
+  build-system = [ setuptools ];
 
   buildInputs = [ bluez ];
 

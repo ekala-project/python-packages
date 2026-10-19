@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   # dependencies
   olefile,
   # test dependencies
@@ -13,7 +15,7 @@ let
 in
 buildPythonPackage {
   inherit pname version;
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "vikramarsid";
@@ -21,6 +23,8 @@ buildPythonPackage {
     rev = "4100b553b24895b489ebd414c771933fc1e558d3";
     hash = "sha256-srDk6w8nzt0dyGCFQWfVCnKb4LawHoqoHX6d1l1dAmM=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ olefile ];
 

@@ -2,18 +2,22 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   sphinx,
 }:
 
 buildPythonPackage rec {
   pname = "sphinx-jinja";
   version = "2.0.2";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-xiMrWaiUE5dwvh3G0LAKN55CiM54FXkE4fhHPeo+Bxg=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ sphinx ];
 

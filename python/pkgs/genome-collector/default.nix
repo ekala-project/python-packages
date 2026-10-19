@@ -4,18 +4,22 @@
   appdirs,
   biopython,
   fetchPypi,
+  # build-system
+  setuptools,
   proglog,
 }:
 
 buildPythonPackage rec {
   pname = "genome_collector";
   version = "0.1.6";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     sha256 = "0023ihrz0waxbhq28xh1ymvk51ih882y9psg4glm6s9d1zmqvdph";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     appdirs

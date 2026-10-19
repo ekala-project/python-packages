@@ -2,18 +2,22 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   vine,
 }:
 
 buildPythonPackage rec {
   pname = "amqp";
   version = "5.3.1";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-zdwAxyVElSICO62Un3D/97SPCxredNFwpvEKsERzlDI=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ vine ];
 

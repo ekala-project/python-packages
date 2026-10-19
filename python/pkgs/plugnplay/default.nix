@@ -2,17 +2,21 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
 }:
 
 buildPythonPackage rec {
   pname = "plugnplay";
   version = "0.5.4";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-h34tJQCkWq8x5Rdfn0YYIIjT4tZMHGuf9sd4rg7llMg=";
   };
+
+  build-system = [ setuptools ];
 
   # no tests
 

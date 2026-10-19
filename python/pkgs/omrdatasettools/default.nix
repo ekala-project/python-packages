@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   h5py,
   ipython,
   lxml,
@@ -22,12 +24,14 @@
 buildPythonPackage rec {
   pname = "omrdatasettools";
   version = "1.4.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-kUUcbti29uDnSEvCubMAUnptlaZGpEsW2IBGSAGnGyQ=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     pillow

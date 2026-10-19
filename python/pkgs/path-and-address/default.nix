@@ -1,11 +1,13 @@
 {
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
 }:
 
 buildPythonPackage rec {
   version = "2.0.1";
-  format = "setuptools";
+  pyproject = true;
   pname = "path-and-address";
 
   src = fetchFromGitHub {
@@ -14,5 +16,7 @@ buildPythonPackage rec {
     tag = "v${version}";
     sha256 = "0b0afpsaim06mv3lhbpm8fmawcraggc11jhzr6h72kdj1cqjk5h6";
   };
+
+  build-system = [ setuptools ];
 
 }

@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
 
   cython,
   numpy,
@@ -14,7 +16,7 @@
 buildPythonPackage rec {
   pname = "hdbscan";
   version = "0.8.44";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "scikit-learn-contrib";
@@ -22,6 +24,8 @@ buildPythonPackage rec {
     tag = "release-${version}";
     hash = "sha256-mJz2CGiAgrz1M5w8XwCRjgQFBygQdVKyi2B8wFHWqGI=";
   };
+
+  build-system = [ setuptools ];
 
   pythonRemoveDeps = [ "cython" ];
 

@@ -1,6 +1,8 @@
 {
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   lib,
 
   # pythonPackages
@@ -10,7 +12,7 @@
 buildPythonPackage rec {
   pname = "names";
   version = "0.3.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "treyhunner";
@@ -18,6 +20,8 @@ buildPythonPackage rec {
     tag = version;
     sha256 = "0jfn11bl05k3qkqw0f4vi2i2lhllxdrbb1732qiisdy9fbvv8611";
   };
+
+  build-system = [ setuptools ];
 
   nativeCheckInputs = [ pytest ];
 

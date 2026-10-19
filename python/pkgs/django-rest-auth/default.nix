@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   django,
   django-allauth,
   djangorestframework,
@@ -13,7 +15,7 @@
 buildPythonPackage rec {
   pname = "django-rest-auth";
   version = "0.9.5";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "Tivix";
@@ -21,6 +23,8 @@ buildPythonPackage rec {
     tag = version;
     hash = "sha256-rCChUHv8sTEFErDCZnPN5b5XVtMJ7JNVZwBYF3d99mY=";
   };
+
+  build-system = [ setuptools ];
 
   postPatch = ''
     substituteInPlace setup.py \

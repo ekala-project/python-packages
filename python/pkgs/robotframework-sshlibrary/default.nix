@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   robotframework,
   paramiko,
   scp,
@@ -9,13 +11,15 @@
 
 buildPythonPackage rec {
   version = "3.8.0";
-  format = "setuptools";
+  pyproject = true;
   pname = "robotframework-sshlibrary";
 
   src = fetchPypi {
     inherit pname version;
     sha256 = "aedf8a02bcb7344404cf8575d0ada25d6c7dc2fcb65de2113c4e07c63d2446c2";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     robotframework

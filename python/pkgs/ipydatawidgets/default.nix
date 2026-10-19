@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   jupyter-packaging,
   ipywidgets,
   numpy,
@@ -13,12 +15,14 @@ buildPythonPackage rec {
 
   pname = "ipydatawidgets";
   version = "4.3.5";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-OU8kiVdlh8/XVTd6CaBn9GytIggZZQkgIf0avL54Uqg=";
   };
+
+  build-system = [ setuptools ];
 
   nativeBuildInputs = [ jupyter-packaging ];
 

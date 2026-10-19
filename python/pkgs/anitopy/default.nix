@@ -2,11 +2,13 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
 }:
 buildPythonPackage rec {
   pname = "anitopy";
   version = "2.1.1";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "igorcmoura";
@@ -14,6 +16,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     hash = "sha256-xXEf7AJKg7grDmkKfFuC4Fk6QYFJtezClyfA3vq8TfQ=";
   };
+
+  build-system = [ setuptools ];
 
   pythonImportsCheck = [ "anitopy" ];
 

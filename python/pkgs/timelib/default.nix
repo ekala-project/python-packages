@@ -3,17 +3,21 @@
   buildPythonPackage,
   cython,
   fetchPypi,
+  # build-system
+  setuptools,
 }:
 
 buildPythonPackage rec {
   pname = "timelib";
   version = "0.3.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-0bInBlVxhuYFjaiLoPhYN0AbKuneFX9ZNT3JeNglGHo=";
   };
+
+  build-system = [ setuptools ];
 
   nativeBuildInputs = [ cython ];
 

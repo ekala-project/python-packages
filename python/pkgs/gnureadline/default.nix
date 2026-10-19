@@ -2,13 +2,15 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   isPyPy,
   pkgs,
 }:
 
 buildPythonPackage rec {
   version = "8.3.3";
-  format = "setuptools";
+  pyproject = true;
   pname = "gnureadline";
   disabled = isPyPy;
 
@@ -16,6 +18,8 @@ buildPythonPackage rec {
     inherit pname version;
     hash = "sha256-CXI5K9LzEkTi2YEXgkb+i3Kch2ZFT9rrJ1lGrEe36f0=";
   };
+
+  build-system = [ setuptools ];
 
   buildInputs = [ pkgs.ncurses ];
   patchPhase = ''

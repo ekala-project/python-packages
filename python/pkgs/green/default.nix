@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   colorama,
   coverage,
   unidecode,
@@ -11,12 +13,14 @@
 buildPythonPackage rec {
   pname = "green";
   version = "4.0.2";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-pAZ8P5/CpkTtNfU2ZJUGQzROxGLm0uu1vXS3YpcVprE=";
   };
+
+  build-system = [ setuptools ];
 
   patches = [ ./tests.patch ];
 

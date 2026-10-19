@@ -3,18 +3,22 @@
   buildPythonPackage,
   cffi,
   fetchPypi,
+  # build-system
+  setuptools,
   pytestCheckHook,
 }:
 
 buildPythonPackage rec {
   pname = "cmarkgfm";
   version = "2025.10.22";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-W+xhAHtluRlIhELIOMWKbIv0dB9RA8WTsu8YDTmBjto=";
   };
+
+  build-system = [ setuptools ];
 
   propagatedNativeBuildInputs = [ cffi ];
 

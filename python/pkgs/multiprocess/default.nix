@@ -3,12 +3,14 @@
   buildPythonPackage,
   dill,
   fetchFromGitHub,
+  # build-system
+  setuptools,
 }:
 
 buildPythonPackage rec {
   pname = "multiprocess";
   version = "0.70.19";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "uqfoundation";
@@ -16,6 +18,8 @@ buildPythonPackage rec {
     tag = version;
     hash = "sha256-dH6SWecBxBQYqLohCg1gPWu6cQ7iKtRmIet9UlDMkWs=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ dill ];
 

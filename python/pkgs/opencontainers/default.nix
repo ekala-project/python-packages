@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   pytestCheckHook,
   requests,
 }:
@@ -9,12 +11,14 @@
 buildPythonPackage rec {
   pname = "opencontainers";
   version = "0.0.15";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-o6QBJMxo7aVse0xauSTxi1UEW4RYrKlhH1v6g/fvrv4=";
   };
+
+  build-system = [ setuptools ];
 
   postPatch = ''
     sed -i "/pytest-runner/d" setup.py

@@ -2,12 +2,14 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   pyparsing,
 }:
 
 buildPythonPackage rec {
   pname = "asn1ate";
-  format = "setuptools";
+  pyproject = true;
   version = "0.6";
 
   src = fetchFromGitHub {
@@ -16,6 +18,8 @@ buildPythonPackage rec {
     owner = "schneider-electric";
     repo = "asn1ate";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ pyparsing ];
 

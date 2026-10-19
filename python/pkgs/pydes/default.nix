@@ -2,13 +2,15 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   python,
 }:
 
 buildPythonPackage {
   pname = "pydes";
   version = "unstable-2019-01-08";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "twhiteman";
@@ -16,6 +18,8 @@ buildPythonPackage {
     rev = "e988a5ffc9abb8010fc75dba54904d1c5dbe83db";
     sha256 = "0sic8wbyk5azb4d4m6zbc96lfqcw8s2pzcv9nric5yqc751613ww";
   };
+
+  build-system = [ setuptools ];
 
   checkPhase = ''
     ${python.interpreter} test_pydes.py

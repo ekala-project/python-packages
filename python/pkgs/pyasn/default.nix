@@ -3,18 +3,22 @@
   buildPythonPackage,
   fetchPypi,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   python,
 }:
 
 buildPythonPackage rec {
   pname = "pyasn";
   version = "1.6.2";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-otVfs+5HlHYJ9QIRylsLrEEahvPJNfuSyksLirfGaP8=";
   };
+
+  build-system = [ setuptools ];
 
   datasrc = fetchFromGitHub {
     owner = "hadiasghari";

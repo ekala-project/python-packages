@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchurl,
+  # build-system
+  setuptools,
   bottle,
   isPy3k,
 }:
@@ -9,12 +11,14 @@
 buildPythonPackage rec {
   pname = "grammalecte";
   version = "2.1.1";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchurl {
     url = "https://grammalecte.net/grammalecte/zip/Grammalecte-fr-v${version}.zip";
     sha256 = "076jv3ywdgqqzg92bfbagc7ypy08xjq5zn4vgna6j9350fkfqhzn";
   };
+
+  build-system = [ setuptools ];
 
   patchPhase = ''
     runHook prePatch

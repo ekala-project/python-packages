@@ -3,12 +3,14 @@
   requests,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
 }:
 
 buildPythonPackage rec {
   pname = "fordpass";
   version = "0.0.4";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "clarkd";
@@ -16,6 +18,8 @@ buildPythonPackage rec {
     tag = version;
     sha256 = "0i1dlswxc2bv1smc5d4r1adbxbl7sgr1swh2cjfajp73vs43xa0m";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ requests ];
 

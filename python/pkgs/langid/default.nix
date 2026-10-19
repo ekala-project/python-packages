@@ -3,14 +3,13 @@
   buildPythonPackage,
   fetchPypi,
   setuptools,
-  wheel,
   numpy,
 }:
 
 buildPythonPackage rec {
   pname = "langid";
   version = "1.1.6";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     # use PyPi as source, github repository does not contain tags or release branches
@@ -18,10 +17,7 @@ buildPythonPackage rec {
     hash = "sha256-BEvK4ZEtq4XDPY6Y8oEbj0/xIT5emp6VEBN7hNosspM=";
   };
 
-  nativeBuildInputs = [
-    setuptools
-    wheel
-  ];
+  build-system = [ setuptools ];
 
   dependencies = [ numpy ];
 

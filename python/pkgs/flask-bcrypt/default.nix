@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   flask,
   bcrypt,
   unittestCheckHook,
@@ -10,7 +12,7 @@
 buildPythonPackage rec {
   pname = "flask-bcrypt";
   version = "1.0.1";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "maxcountryman";
@@ -18,6 +20,8 @@ buildPythonPackage rec {
     tag = version;
     hash = "sha256-WlIholi/nzq6Ikc0LS6FhG0Q5Kz0kvvAlA2YJ7EksZ4=";
   };
+
+  build-system = [ setuptools ];
 
   postPatch = ''
     # Backport fix for test_long_password from upstream PR: https://github.com/maxcountryman/flask-bcrypt/pull/96

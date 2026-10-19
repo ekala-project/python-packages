@@ -9,7 +9,7 @@
 buildPythonPackage rec {
   pname = "pure-eval";
   version = "0.2.3";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "alexmojaki";

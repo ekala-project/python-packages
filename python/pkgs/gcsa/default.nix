@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   pytestCheckHook,
   pyfakefs,
   tzlocal,
@@ -15,7 +17,7 @@
 buildPythonPackage rec {
   pname = "gcsa";
   version = "2.7.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "kuzmoyev";
@@ -23,6 +25,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     hash = "sha256-lDmdV1F/EFtZEhq4ufH9nPvzNZ9msUGNZcmWiVTTTWc=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     tzlocal

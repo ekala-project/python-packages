@@ -3,6 +3,8 @@
   buildPythonPackage,
   fetchpatch,
   fetchPypi,
+  # build-system
+  setuptools,
   async-timeout,
   typing-extensions,
   hiredis,
@@ -12,12 +14,14 @@
 buildPythonPackage rec {
   pname = "aioredis";
   version = "2.0.1";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-6qUar5k/LXH1S3BSfEQEN7plNAWIr+t4bNh8Vcic2Y4=";
   };
+
+  build-system = [ setuptools ];
 
   patches = [
     # https://github.com/aio-libs-abandoned/aioredis-py/pull/1490

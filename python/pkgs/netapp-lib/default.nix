@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   lxml,
   six,
   xmltodict,
@@ -10,12 +12,14 @@
 buildPythonPackage rec {
   pname = "netapp-lib";
   version = "2021.6.25";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-1g4FCSMyS8T6F/T8BOqak4h1nJis8g9jaOluA4FTNpA=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     lxml

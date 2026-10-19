@@ -5,17 +5,21 @@
   pytz,
   tzlocal,
   fetchPypi,
+  # build-system
+  setuptools,
 }:
 
 buildPythonPackage rec {
   pname = "tasklib";
   version = "2.5.1";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-XM1zG1JjbdEEV6i42FjLDQJv+qsePnUbr3kb+APjfXs=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     six

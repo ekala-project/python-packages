@@ -2,12 +2,14 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
 }:
 
 buildPythonPackage rec {
   pname = "esprima";
   version = "4.0.1";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "Kronuz";
@@ -15,6 +17,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     sha256 = "WtkPCReXhxyr6pOzE9gsdIeBlLk+nSnbxkS3OowEaHo=";
   };
+
+  build-system = [ setuptools ];
 
   pythonImportsCheck = [ "esprima" ];
 

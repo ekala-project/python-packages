@@ -3,18 +3,22 @@
   fetchPypi,
   buildPythonPackage,
   fetchpatch,
+  # build-system
+  setuptools,
   setuptools-scm,
 }:
 
 buildPythonPackage rec {
   pname = "elevate";
   version = "0.1.3";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     sha256 = "53ad19fa1de301fb1de3f8768fb3a5894215716fd96a475690c4d0ff3b1de209";
   };
+
+  build-system = [ setuptools ];
 
   patches = [
     (fetchpatch {

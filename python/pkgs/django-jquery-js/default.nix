@@ -2,13 +2,15 @@
   lib,
   buildPythonPackage,
   fetchFromBitbucket,
+  # build-system
+  setuptools,
   django,
 }:
 
 buildPythonPackage rec {
   pname = "django-jquery-js";
   version = "3.1.1";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromBitbucket {
     owner = "tim_heap";
@@ -16,6 +18,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     hash = "sha256-TzMo31jFhcvlrmq2TJgQyds9n8eATaChnyhnQ7bwdzs=";
   };
+
+  build-system = [ setuptools ];
 
   buildInputs = [ django ];
 

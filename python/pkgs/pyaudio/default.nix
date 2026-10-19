@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   isPyPy,
   pkgs,
 }:
@@ -9,7 +11,7 @@
 buildPythonPackage rec {
   pname = "pyaudio";
   version = "0.2.14";
-  format = "setuptools";
+  pyproject = true;
   disabled = isPyPy;
 
   src = fetchPypi {
@@ -17,6 +19,8 @@ buildPythonPackage rec {
     inherit version;
     hash = "sha256-eN//OHm0mU0fT8ZIVkald1XG7jwZZHpJH3kKCJW9L4c=";
   };
+
+  build-system = [ setuptools ];
 
   buildInputs = [ pkgs.portaudio ];
 

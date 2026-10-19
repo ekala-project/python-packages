@@ -2,13 +2,15 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
 }:
 
 let
   sortedcontainers = buildPythonPackage rec {
     pname = "sortedcontainers";
     version = "2.4.0";
-    format = "setuptools";
+    pyproject = true;
 
     src = fetchFromGitHub {
       owner = "grantjenks";
@@ -16,6 +18,8 @@ let
       tag = "v${version}";
       hash = "sha256-YRbSM2isWi7AzfquFvuZBlpEMNUnBJTBLBn0/XYVHKQ=";
     };
+
+  build-system = [ setuptools ];
 
     pythonImportsCheck = [ "sortedcontainers" ];
     meta = {

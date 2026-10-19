@@ -1,6 +1,8 @@
 {
   lib,
   fetchPypi,
+  # build-system
+  setuptools,
   buildPythonPackage,
   django,
 }:
@@ -8,12 +10,14 @@
 buildPythonPackage rec {
   pname = "django-ranged-response";
   version = "0.2.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     sha256 = "11gr3jpmb5rvg3scv026kjwwkmnxwivgq5ypxadnnc9p58szy7zp";
   };
+
+  build-system = [ setuptools ];
 
   # tests not included in PyPi package, github source is not up to date with 0.2.0
 

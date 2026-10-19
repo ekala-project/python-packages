@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   click,
   pycryptodome,
   requests,
@@ -11,7 +13,7 @@
 buildPythonPackage rec {
   pname = "micloud";
   version = "0.6";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "Squachen";
@@ -19,6 +21,8 @@ buildPythonPackage rec {
     tag = "v_${version}";
     hash = "sha256-IsNXFs1N+rKwqve2Pjp+wRTZCxHF4acEo6KyhsSKuqI=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     click

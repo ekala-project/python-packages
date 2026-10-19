@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   grandalf,
   matplotlib,
   pytestCheckHook,
@@ -10,7 +12,7 @@
 buildPythonPackage rec {
   pname = "crysp";
   version = "1.2";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "bdcht";
@@ -18,6 +20,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     hash = "sha256-51SKS6OOXIFT1L3YICR6a4QGSz/rbB8V+Z0u0jMO474=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     grandalf

@@ -2,12 +2,14 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
 }:
 
 buildPythonPackage {
   pname = "gps3";
   version = "unstable-2017-11-01";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "wadda";
@@ -15,6 +17,8 @@ buildPythonPackage {
     rev = "91adcd7073b891b135b2a46d039ce2125cf09a09";
     hash = "sha256-sVK61l8YunKAGFTSAq/m5aUGFfnizwhqTYbdznBIKfk=";
   };
+
+  build-system = [ setuptools ];
 
   # Project has no tests
   pythonImportsCheck = [ "gps3" ];

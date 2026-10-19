@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   beniget,
   frilouz,
   gast,
@@ -13,12 +15,14 @@
 buildPythonPackage rec {
   pname = "memestra";
   version = "0.2.1";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-6shwf9BoDfZMy0itP8esNP4ov6fw6LJpO3Y5ZahwDZw=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     gast

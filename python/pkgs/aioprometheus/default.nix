@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   orjson,
   quantile-python,
   aiohttp,
@@ -16,7 +18,7 @@
 buildPythonPackage rec {
   pname = "aioprometheus";
   version = "unstable-2023-03-14";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "claws";
@@ -24,6 +26,8 @@ buildPythonPackage rec {
     rev = "4786678b413d166c0b6e0041558d11bc1a7097b2";
     hash = "sha256-2z68rQkMjYqkszg5Noj9owWUWQGOEp/91RGiWiyZVOY=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     orjson

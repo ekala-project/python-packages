@@ -4,18 +4,22 @@
   cymem,
   cython,
   fetchPypi,
+  # build-system
+  setuptools,
   murmurhash,
 }:
 
 buildPythonPackage rec {
   pname = "preshed";
   version = "3.0.13";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-119xi7/ZfpkveCfg+n+vapG92cki1bqktQ1icxOWy4k=";
   };
+
+  build-system = [ setuptools ];
 
   nativeBuildInputs = [ cython ];
 

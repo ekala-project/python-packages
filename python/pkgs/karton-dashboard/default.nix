@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   flask,
   karton-core,
   mistune,
@@ -12,7 +14,7 @@
 buildPythonPackage rec {
   pname = "karton-dashboard";
   version = "1.7.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "CERT-Polska";
@@ -20,6 +22,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     hash = "sha256-DYfL//i1gJ0ci7jVPtrMKC8j+i5/L8rvmbs8zz6Eq2M=";
   };
+
+  build-system = [ setuptools ];
 
   pythonRelaxDeps = [
     "Flask"

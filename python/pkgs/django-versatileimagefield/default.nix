@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   django,
   pillow,
   python-magic,
@@ -10,12 +12,14 @@
 buildPythonPackage rec {
   pname = "django-versatileimagefield";
   version = "3.1";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-M5DiAEgJjol78pmwNgdj0QzQiWZbeu+OupAO7Lrq0Ng=";
   };
+
+  build-system = [ setuptools ];
   dependencies = [
     pillow
     python-magic

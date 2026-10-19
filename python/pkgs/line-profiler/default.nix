@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   cython,
   isPyPy,
   ipython,
@@ -13,7 +15,7 @@
 buildPythonPackage rec {
   pname = "line-profiler";
   version = "5.0.2";
-  format = "setuptools";
+  pyproject = true;
 
   disabled = isPyPy;
 
@@ -22,6 +24,8 @@ buildPythonPackage rec {
     inherit version;
     hash = "sha256-jYqZDITGS83kWvIq9QLRe8CuEHvkBc5Bu6kq9cOcAAA=";
   };
+
+  build-system = [ setuptools ];
 
   nativeBuildInputs = [
     cython

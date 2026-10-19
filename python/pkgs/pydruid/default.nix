@@ -16,7 +16,7 @@
 buildPythonPackage rec {
   pname = "pydruid";
   version = "0.6.8";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     repo = "pydruid";
@@ -25,12 +25,12 @@ buildPythonPackage rec {
     hash = "sha256-em4UuNnGdfT6KC9XiWSkCmm4DxdvDS+DGY9kw25iepo=";
   };
 
+  build-system = [ setuptools ];
+
   # patch out the CLI because it doesn't work with newer versions of pygments
   postPatch = ''
     substituteInPlace setup.py --replace-fail '"console_scripts": ["pydruid = pydruid.console:main"],' ""
   '';
-
-  nativeBuildInputs = [ setuptools ];
 
   dependencies = [ requests ];
   optional-dependencies = {

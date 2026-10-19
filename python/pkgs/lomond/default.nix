@@ -1,6 +1,8 @@
 {
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   lib,
   pythonAtLeast,
 
@@ -16,7 +18,7 @@
 buildPythonPackage rec {
   pname = "lomond";
   version = "0.3.3";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "wildfoundry";
@@ -24,6 +26,8 @@ buildPythonPackage rec {
     rev = "b30dad3cc38d5ff210c5dd01f8c3c76aa6c616d1";
     sha256 = "0lydq0imala08wxdyg2iwhqa6gcdrn24ah14h91h2zcxjhjk4gv8";
   };
+
+  build-system = [ setuptools ];
 
   postPatch = ''
     substituteInPlace setup.py \

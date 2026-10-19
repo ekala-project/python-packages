@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   python,
   cffi,
   pkg-config,
@@ -12,12 +14,14 @@
 buildPythonPackage rec {
   pname = "pywayland";
   version = "0.4.18";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-WYreAng6rQWjKPZjtRtpTFq2i9XR4JJsDaPFISxWZTM=";
   };
+
+  build-system = [ setuptools ];
 
   depsBuildBuild = [ pkg-config ];
   nativeBuildInputs = [ wayland-scanner ];

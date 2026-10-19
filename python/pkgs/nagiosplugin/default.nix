@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   numpy,
   pytestCheckHook,
   twine,
@@ -10,12 +12,14 @@
 buildPythonPackage rec {
   pname = "nagiosplugin";
   version = "1.4.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-IxabBKI8StRBnvm3Zm1AH0jfMkez38P4dL4sFP0ttAE=";
   };
+
+  build-system = [ setuptools ];
 
   nativeBuildInputs = [ twine ];
 

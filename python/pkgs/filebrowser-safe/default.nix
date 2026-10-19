@@ -2,19 +2,23 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   django,
 }:
 
 buildPythonPackage rec {
   pname = "filebrowser-safe";
   version = "1.1.1";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     pname = "filebrowser_safe";
     inherit version;
     sha256 = "499c5dbd9e112dfc436cae7713b2fb664a59015021f6c9d131e3b7980aeb5c94";
   };
+
+  build-system = [ setuptools ];
 
   buildInputs = [ django ];
 

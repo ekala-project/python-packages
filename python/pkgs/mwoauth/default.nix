@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   oauthlib,
   pyjwt,
   requests,
@@ -12,12 +14,14 @@
 buildPythonPackage rec {
   pname = "mwoauth";
   version = "0.4.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-IuNAPnSOcBRvjszBQw/lQsn5xP9nfv9CSlLmRPbY98U=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     oauthlib

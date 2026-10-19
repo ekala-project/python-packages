@@ -2,13 +2,15 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   zlib,
 }:
 
 buildPythonPackage rec {
   pname = "pybigwig";
   version = "0.3.25";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "deeptools";
@@ -16,6 +18,8 @@ buildPythonPackage rec {
     tag = version;
     hash = "sha256-Vq/QdJg2qObJ49lHZ4RjULfI0f7pScLRWGW8NBZoMAw=";
   };
+
+  build-system = [ setuptools ];
 
   buildInputs = [ zlib ];
 

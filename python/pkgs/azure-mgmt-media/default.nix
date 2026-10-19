@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   msrest,
   msrestazure,
   azure-common,
@@ -11,13 +13,15 @@
 buildPythonPackage rec {
   pname = "azure-mgmt-media";
   version = "10.2.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     extension = "zip";
     hash = "sha256-TVq/6dHttDGIUFzn8KTVeDTwcBMmphz3zrsGK7ux4aU=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     msrest

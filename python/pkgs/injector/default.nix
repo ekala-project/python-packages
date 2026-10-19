@@ -2,13 +2,15 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   pytest-cov-stub,
 }:
 
 buildPythonPackage rec {
   pname = "injector";
   version = "0.24.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "python-injector";
@@ -16,6 +18,8 @@ buildPythonPackage rec {
     tag = version;
     hash = "sha256-Pv+3D2eyZiposXMsfhVniGNvlNGb3xSZfjIQBLMcbLA=";
   };
+
+  build-system = [ setuptools ];
   pythonImportsCheck = [ "injector" ];
 
   meta = {

@@ -4,6 +4,8 @@
   colorama,
   dill,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   numpy,
   pandas,
   pytestCheckHook,
@@ -12,7 +14,7 @@
 buildPythonPackage rec {
   pname = "debuglater";
   version = "1.4.4";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "ploomber";
@@ -20,6 +22,8 @@ buildPythonPackage rec {
     tag = version;
     hash = "sha256-o9IAk3EN8ghEft7Y7Xx+sEjWMNgoyiZ0eiBqnCyXkm8=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ colorama ];
 

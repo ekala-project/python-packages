@@ -10,7 +10,7 @@
 buildPythonPackage rec {
   pname = "warcio";
   version = "1.7.5";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "webrecorder";
@@ -18,6 +18,8 @@ buildPythonPackage rec {
     tag = "v${version}"; # Repo has no git tags, see https://github.com/webrecorder/warcio/issues/126
     hash = "sha256-i1bVbXf1RQoWCADFwlVEnFhb3sVZ91vijUtzVLWMc2Q=";
   };
+
+  build-system = [ setuptools ];
 
   patches = [
     (fetchpatch {

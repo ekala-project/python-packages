@@ -2,13 +2,15 @@
   buildPythonPackage,
   cachetools,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   lib,
 }:
 
 buildPythonPackage rec {
   pname = "coapthon3";
   version = "1.0.2";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "Tanganelli";
@@ -16,6 +18,8 @@ buildPythonPackage rec {
     tag = version;
     hash = "sha256-9QApoPUu3XFZY/lgjAsf5r2StFiRtUd1UXWDrzYUh6w=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ cachetools ];
 

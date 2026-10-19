@@ -2,13 +2,15 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   mock,
 }:
 
 buildPythonPackage rec {
   pname = "python-http-client";
   version = "3.3.7";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "sendgrid";
@@ -16,6 +18,8 @@ buildPythonPackage rec {
     tag = version;
     hash = "sha256-8Qs5Jw0LMV2UucLnlFKJQ2PUhYaQx6uJdIV/4gaPH3w=";
   };
+
+  build-system = [ setuptools ];
   pythonImportsCheck = [ "python_http_client" ];
 
   meta = {

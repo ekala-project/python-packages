@@ -3,18 +3,22 @@
   stdenv,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   enchant_2,
 }:
 
 buildPythonPackage rec {
   pname = "pyenchant";
   version = "3.3.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     sha256 = "sha256-glKIJGtd68lDb5GWdlCXTvDVY2RYUCYZ4yLEdvEoOJE=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ enchant_2 ];
 

@@ -1,6 +1,8 @@
 {
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   lib,
   # Runtime dependencies
   httplib2,
@@ -10,7 +12,7 @@
 buildPythonPackage {
   pname = "plantuml";
   version = "0.3.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "dougn";
@@ -18,6 +20,8 @@ buildPythonPackage {
     rev = "93e1aac25b17d896b0d05d0a1aa352c7bd11dd31";
     hash = "sha256-aPXPqoKlu8VLi0Jn84brG7v3qM9L18Ut4sabYYGb3qQ=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     httplib2

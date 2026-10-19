@@ -2,19 +2,23 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   isPy3k,
 }:
 
 buildPythonPackage rec {
   pname = "pythondialog";
   version = "3.5.3";
-  format = "setuptools";
+  pyproject = true;
   disabled = !isPy3k;
 
   src = fetchPypi {
     inherit pname version;
     sha256 = "b2a34a8af0a6625ccbdf45cd343b854fc6c1a85231dadc80b8805db836756323";
   };
+
+  build-system = [ setuptools ];
 
   patchPhase = ''
     substituteInPlace dialog.py --replace ":/bin:/usr/bin" ":$out/bin"

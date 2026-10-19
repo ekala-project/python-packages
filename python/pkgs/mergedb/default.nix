@@ -13,12 +13,14 @@
 buildPythonPackage rec {
   pname = "mergedb";
   version = "0.1.1";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     sha256 = "2034c18dca23456c5b166b63d94300bcd8ec9f386e6cd639c2f66e141c0313f9";
   };
+
+  build-system = [ setuptools ];
 
   nativeBuildInputs = [ setuptools-scm ];
 

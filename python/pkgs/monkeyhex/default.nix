@@ -1,6 +1,8 @@
 {
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   future,
   lib,
 }:
@@ -8,12 +10,14 @@
 buildPythonPackage rec {
   pname = "monkeyhex";
   version = "1.7.4";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     sha256 = "a646096dd3114ee8a7c6f30363f38c288ec56c4e032c8fc7e681792b604dd122";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ future ];
 

@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   markdown,
   setuptools-scm,
 }:
@@ -9,7 +11,7 @@
 buildPythonPackage rec {
   pname = "markdown-include";
   version = "0.8.1";
-  format = "setuptools";
+  pyproject = true;
 
   # only wheel on pypi
   src = fetchFromGitHub {
@@ -18,6 +20,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     hash = "sha256-1MEk0U00a5cpVhqnDZkwBIk4NYgsRXTVsI/ANNQ/OH0=";
   };
+
+  build-system = [ setuptools ];
 
   nativeBuildInputs = [ setuptools-scm ];
 

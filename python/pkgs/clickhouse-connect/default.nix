@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   cython,
   # install_requires
   certifi,
@@ -23,7 +25,7 @@ buildPythonPackage rec {
   pname = "clickhouse-connect";
   version = "1.8.0";
 
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     repo = "clickhouse-connect";
@@ -31,6 +33,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     hash = "sha256-CtFOHy/pBtjRx2alKfYSipHsaDEht7xPig0J5yxQvoQ=";
   };
+
+  build-system = [ setuptools ];
 
   nativeBuildInputs = [ cython ];
   setupPyBuildFlags = [ "--inplace" ];

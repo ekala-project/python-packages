@@ -3,12 +3,14 @@
   aiohttp,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
 }:
 
 buildPythonPackage rec {
   pname = "mbddns";
   version = "0.1.2";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "thinkl33t";
@@ -16,6 +18,8 @@ buildPythonPackage rec {
     tag = version;
     sha256 = "13xzkprqk1v0zlzx4a0n9zzpnlb1g2h6pc62ms66fj72lsmjynj7";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ aiohttp ];
 

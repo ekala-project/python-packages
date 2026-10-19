@@ -2,18 +2,22 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   poppler,
 }:
 
 buildPythonPackage rec {
   pname = "pdftotext";
   version = "3.0.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     sha256 = "sha256-w2UrGRVOFFUVqL+pU/xhNjOO2SM3vcy7U/4NiAE7Gqo=";
   };
+
+  build-system = [ setuptools ];
 
   buildInputs = [ poppler ];
 

@@ -1,6 +1,8 @@
 {
   lib,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   buildPythonPackage,
   socat,
   psutil,
@@ -16,7 +18,7 @@
 buildPythonPackage rec {
   version = "2.8.4";
   pname = "powerline";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "powerline";
@@ -24,6 +26,8 @@ buildPythonPackage rec {
     tag = version;
     hash = "sha256-snJrfUvP11lBIy6F0WtqJt9fiYm5jxMwm9u3u5XFO84=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     socat

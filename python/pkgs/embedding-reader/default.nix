@@ -1,6 +1,8 @@
 {
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   fsspec,
   lib,
   numpy,
@@ -13,7 +15,7 @@
 buildPythonPackage rec {
   pname = "embedding-reader";
   version = "1.8.1";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "rom1504";
@@ -21,6 +23,8 @@ buildPythonPackage rec {
     tag = version;
     hash = "sha256-D7yrvV6hDqzHaIMhCQ16DhY/8FEr3P4gcT5vV371whs=";
   };
+
+  build-system = [ setuptools ];
 
   pythonRelaxDeps = [ "pyarrow" ];
 

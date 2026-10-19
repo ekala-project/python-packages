@@ -2,13 +2,15 @@
   alsa-lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   lib,
 }:
 
 buildPythonPackage rec {
   pname = "simpleaudio";
   version = "1.0.4";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "hamiltron";
@@ -16,6 +18,8 @@ buildPythonPackage rec {
     tag = version;
     sha256 = "12nypzb1m14yip4zrbzin5jc5awyp1d5md5y40g5anj4phb4hx1i";
   };
+
+  build-system = [ setuptools ];
 
   patches = [ ./python312-fix.patch ];
 

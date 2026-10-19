@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   pyyaml,
   pytestCheckHook,
   mock,
@@ -10,7 +12,7 @@
 buildPythonPackage rec {
   pname = "helper";
   version = "2.5.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "gmr";
@@ -18,6 +20,8 @@ buildPythonPackage rec {
     tag = version;
     sha256 = "0zypjv8rncvrsgl200v7d3bn08gs48dwqvgamfqv71h07cj6zngp";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ pyyaml ];
 

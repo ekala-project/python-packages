@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   pyopenssl,
   requests,
 }:
@@ -9,7 +11,7 @@
 buildPythonPackage rec {
   pname = "requests-pkcs12";
   version = "1.27";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "m-click";
@@ -17,6 +19,8 @@ buildPythonPackage rec {
     tag = version;
     hash = "sha256-4B7jL3OubIF8ZOYzsODltZCAHhb+PM18uJDOssuM6R4=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     requests

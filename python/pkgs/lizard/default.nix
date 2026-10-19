@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   pytestCheckHook,
   mock,
   jinja2,
@@ -12,7 +14,7 @@
 buildPythonPackage rec {
   pname = "lizard";
   version = "1.24.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "terryyin";
@@ -20,6 +22,8 @@ buildPythonPackage rec {
     tag = version;
     hash = "sha256-npxnl9QrsAMLgrSDGsmWTb17VLwJ9sYCi9dhROCblhg=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     jinja2

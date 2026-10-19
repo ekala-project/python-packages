@@ -2,19 +2,23 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   flask,
   pyyaml,
 }:
 
 buildPythonPackage rec {
   version = "0.2.14";
-  format = "setuptools";
+  pyproject = true;
   pname = "flask-swagger";
 
   src = fetchPypi {
     inherit pname version;
     sha256 = "b4085f5bc36df4c20b6548cd1413adc9cf35719b0f0695367cd542065145294d";
   };
+
+  build-system = [ setuptools ];
 
   # No Tests
 

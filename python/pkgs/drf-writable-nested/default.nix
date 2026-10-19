@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   django,
   djangorestframework,
 }:
@@ -9,7 +11,7 @@
 buildPythonPackage (finalAttrs: {
   pname = "drf-writable-nested";
   version = "0.7.2";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "beda-software";
@@ -17,6 +19,8 @@ buildPythonPackage (finalAttrs: {
     tag = "v${finalAttrs.version}";
     hash = "sha256-VkQ3Di3vXxQAmvuMP8KpGVVdx7LMYcQFEF4ZsuA9KeA=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     django

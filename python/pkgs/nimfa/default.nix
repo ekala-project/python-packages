@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   isPy3k,
   numpy,
   scipy,
@@ -12,13 +14,15 @@
 buildPythonPackage rec {
   pname = "nimfa";
   version = "1.4.0";
-  format = "setuptools";
+  pyproject = true;
   setuptools = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-Oc/yuGhW0Dyoo9nDhZgDTs8adowyX9OnKLuerbjGuRk=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     numpy

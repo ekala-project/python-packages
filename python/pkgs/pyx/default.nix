@@ -2,19 +2,23 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   isPy3k,
 }:
 
 buildPythonPackage rec {
   pname = "pyx";
   version = "0.17";
-  format = "setuptools";
+  pyproject = true;
   disabled = !isPy3k;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-O8iqgJExVZ96XA4fESm0LHGt423wMyET9cV3k4SjmvE=";
   };
+
+  build-system = [ setuptools ];
 
   # No tests in archive
 

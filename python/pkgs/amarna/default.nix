@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   lark,
   pydot,
   pytestCheckHook,
@@ -10,7 +12,7 @@
 buildPythonPackage rec {
   pname = "amarna";
   version = "0.1.5";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "crytic";
@@ -18,6 +20,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     hash = "sha256-tyvHWBhanR7YH87MDWdXUsDEzZG6MgnbshezAbxWO+I=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     lark

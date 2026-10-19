@@ -2,13 +2,15 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   python,
 }:
 
 buildPythonPackage {
   pname = "fleep";
   version = "1.0.1";
-  format = "setuptools";
+  pyproject = true;
 
   # Pypi version does not have tests
   src = fetchFromGitHub {
@@ -17,6 +19,8 @@ buildPythonPackage {
     rev = "994bc2c274482d80ab13d89d8f7343eb316d3e44";
     hash = "sha256-TaU7njx98nxkhZawGMFqWj4g+yCtIX9aPWQHoamzfMY=";
   };
+
+  build-system = [ setuptools ];
 
   patches = [ ./0001-Fixing-paths-on-tests.patch ];
 

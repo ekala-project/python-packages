@@ -2,13 +2,15 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   python,
 }:
 
 buildPythonPackage {
   pname = "dlx";
   version = "1.0.4";
-  format = "setuptools";
+  pyproject = true;
 
   # untagged releases
   src = fetchFromGitHub {
@@ -17,6 +19,8 @@ buildPythonPackage {
     rev = "02d1ed534df60513095633da07e67a6593b9e9b4";
     sha256 = "0c6dblbypwmx6yrk9qxp157m3cd7lq3j411ifr3shscv1igxv5hk";
   };
+
+  build-system = [ setuptools ];
 
   # No test suite, so just run an example
   pythonImportsCheck = [ "dlx" ];

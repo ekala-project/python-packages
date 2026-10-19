@@ -2,12 +2,14 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
 }:
 
 buildPythonPackage rec {
   pname = "heatshrink2";
   version = "0.14.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "eerimoq";
@@ -16,6 +18,8 @@ buildPythonPackage rec {
     fetchSubmodules = true;
     hash = "sha256-2bCk9bS/6hjbBJ30fpTt750A3vAvq4HOXmbpxOLRuj4=";
   };
+
+  build-system = [ setuptools ];
 
   pythonImportsCheck = [ "heatshrink2" ];
 

@@ -2,18 +2,22 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
 }:
 
 buildPythonPackage rec {
   pname = "hexdump";
   version = "3.3";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-14GkOwwWrOP5Nmqt5z6K06e9UTfVjwtFqy0/VIdvINs=";
     extension = "zip";
   };
+
+  build-system = [ setuptools ];
 
   # the source zip has no prefix, so everything gets unpacked to /build otherwise
   unpackPhase = ''

@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   geojson,
   haversine,
   pytz,
@@ -12,7 +14,7 @@
 buildPythonPackage rec {
   pname = "geojson-client";
   version = "0.8";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "exxamalte";
@@ -20,6 +22,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     hash = "sha256-nzM5P1ww6yWM3e2v3hRw0ECoYmRPhTs0Q7Wwicl+IpU=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     geojson

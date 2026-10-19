@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   # build inputs
   tqdm,
   portalocker,
@@ -13,7 +15,7 @@ let
 in
 buildPythonPackage {
   inherit pname version;
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "facebookresearch";
@@ -21,6 +23,8 @@ buildPythonPackage {
     tag = "v${version}";
     hash = "sha256-vJV0c+dCFO0wOHahKJ8DbwT2Thx3YjkNLVSpQv9H69g=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     tqdm

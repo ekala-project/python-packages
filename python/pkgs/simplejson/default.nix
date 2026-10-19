@@ -2,12 +2,14 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
 }:
 
 buildPythonPackage rec {
   pname = "simplejson";
   version = "4.1.2";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "simplejson";
@@ -15,6 +17,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     hash = "sha256-fiuz78r0z2ZM2vVIPxhMwnJGiZGURwr1yGSe/uLgeCs=";
   };
+
+  build-system = [ setuptools ];
 
   pythonImportsCheck = [ "simplejson" ];
 

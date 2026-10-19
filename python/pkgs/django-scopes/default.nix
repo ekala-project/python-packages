@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   django,
   pytestCheckHook,
   pytest-django,
@@ -10,7 +12,7 @@
 buildPythonPackage (finalAttrs: {
   pname = "django-scopes";
   version = "2.0.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "raphaelm";
@@ -18,6 +20,8 @@ buildPythonPackage (finalAttrs: {
     tag = finalAttrs.version;
     hash = "sha256-CtToztLVvSb91pMpPNL8RysQJzlRkeXuQbpvbkX3jfM=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ django ];
 

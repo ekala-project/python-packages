@@ -2,12 +2,14 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
 }:
 
 buildPythonPackage rec {
   pname = "hlk-sw16";
   version = "0.0.9";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "jameshilliard";
@@ -15,6 +17,8 @@ buildPythonPackage rec {
     tag = version;
     sha256 = "010s85nr6xn89i8yvdagg72a97dh1v2pyfqa33v76p9p8xbgh8dz";
   };
+
+  build-system = [ setuptools ];
 
   # no tests implemented
 

@@ -2,17 +2,21 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
 }:
 
 buildPythonPackage rec {
   pname = "jsonpointer";
   version = "3.1.1";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-C4AcfbM6kEAk9gBNUm3MU7u4pKD04yv9EL6t9grfGQA=";
   };
+
+  build-system = [ setuptools ];
 
   meta = {
     description = "Resolve JSON Pointers in Python";

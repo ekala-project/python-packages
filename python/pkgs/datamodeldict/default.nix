@@ -2,19 +2,23 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   xmltodict,
 }:
 
 buildPythonPackage rec {
   pname = "datamodeldict";
   version = "0.9.9";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     pname = "DataModelDict";
     inherit version;
     hash = "sha256-DadBRsc8qEu9PWgMNllGS2ESKL7kgBLDhg4yDr87WRk=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ xmltodict ];
 

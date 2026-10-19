@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   gevent,
   gevent-websocket,
   versiontools,
@@ -10,12 +12,14 @@
 buildPythonPackage rec {
   pname = "gevent-socketio";
   version = "0.3.6";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-UzlKuT+9hNnbuyvvhTSfalA7/FPYapvoZTJQ8aBBKv8=";
   };
+
+  build-system = [ setuptools ];
 
   nativeBuildInputs = [ versiontools ];
 

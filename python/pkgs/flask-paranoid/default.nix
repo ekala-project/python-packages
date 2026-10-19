@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   flask,
   pytestCheckHook,
 }:
@@ -9,7 +11,7 @@
 buildPythonPackage rec {
   pname = "flask-paranoid";
   version = "0.3.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "miguelgrinberg";
@@ -17,6 +19,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     hash = "sha256-tikD8efc3Q3xIQnaC3SSBaCRQxMI1HzXxeupvYeNnE4=";
   };
+
+  build-system = [ setuptools ];
 
   postPatch = ''
     # tests have a typo in one of the assertions

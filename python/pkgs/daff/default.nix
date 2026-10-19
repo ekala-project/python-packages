@@ -2,17 +2,21 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
 }:
 
 buildPythonPackage rec {
   pname = "daff";
   version = "1.4.2";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-R/A5Htp+K1AR98ysAGuReKzLRlvLlKLJ8oQlf/9dJoY=";
   };
+
+  build-system = [ setuptools ];
 
   # there are no tests
 

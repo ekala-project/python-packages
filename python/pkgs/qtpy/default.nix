@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
 
   # propagates
   packaging,
@@ -10,12 +12,14 @@
 buildPythonPackage rec {
   pname = "qtpy";
   version = "2.4.3";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-23RPeDLm09qQVoumzLyj7is7SokMPW+7xjFC9uTN9bs=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ packaging ];
 

@@ -2,13 +2,15 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   requests,
 }:
 
 buildPythonPackage rec {
   pname = "gtts-token";
   version = "1.1.4";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "boudewijn26";
@@ -16,6 +18,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     sha256 = "0vr52zc0jqyfvsccl67j1baims3cdx2is1y2lpx2kav9gadkn8hp";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ requests ];
   # requires internet access

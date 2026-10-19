@@ -1,6 +1,8 @@
 {
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   gitUpdater,
   lib,
   pyyaml,
@@ -10,7 +12,7 @@
 buildPythonPackage rec {
   pname = "ua-parser-rs";
   version = "0.1.4";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "ua-parser";
@@ -19,6 +21,8 @@ buildPythonPackage rec {
     hash = "sha256-8IU4NNW0v2zl6COtL6o7FALxqYNVKBGhERugxpXIN5g=";
     fetchSubmodules = true;
   };
+
+  build-system = [ setuptools ];
 
   cargoDeps = rustPlatform.fetchCargoVendor {
     inherit pname version src;
