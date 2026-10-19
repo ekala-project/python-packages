@@ -22,7 +22,7 @@ buildPythonPackage (finalAttrs: {
   build-system = [ pdm-backend ];
 
   optional-dependencies = {
-    all = optional-dependencies.install ++ optional-dependencies.download;
+    all = finalAttrs.optional-dependencies.install ++ finalAttrs.optional-dependencies.download;
     download = [ httpx ];
     install = [ zstandard ];
   };
