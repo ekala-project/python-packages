@@ -10,14 +10,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "google-cloud-orchestration-airflow";
   version = "1.22.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "google_cloud_orchestration_airflow";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-GIMZWqhhZY62xTp5TQZYufYmvY7nXTAFW0yManQwQsw=";
   };
 
@@ -47,4 +47,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-orchestration-airflow";
     license = lib.licenses.asl20;
   };
-}
+})

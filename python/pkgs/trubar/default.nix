@@ -8,7 +8,7 @@
   pyyaml,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "trubar";
   version = "0.3.4";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "janezd";
     repo = "trubar";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-ChKmeACEMnFcMYSdkdVlFiE3td171ihUS2A+qsP5ASk=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/janezd/trubar";
     license = lib.licenses.mit;
   };
-}
+})

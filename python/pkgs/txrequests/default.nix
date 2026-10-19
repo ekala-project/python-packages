@@ -10,13 +10,13 @@
   unittestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "txrequests";
   version = "0.9.6";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     sha256 = "b452a1cafa4d005678f6fa47922a330feb4907d5b4732d1841ca98e89f1362e1";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/tardyp/txrequests";
     license = lib.licenses.asl20;
   };
-}
+})

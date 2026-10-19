@@ -7,7 +7,7 @@
   charset-normalizer,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aeidon";
   version = "2.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "otsaloma";
     repo = "gaupol";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-vMmDG9oQ6u9J4f972EdbsI5Z3faGumlkUzXVmqtd+O4=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     license = lib.licenses.gpl3Plus;
   };
 
-}
+})

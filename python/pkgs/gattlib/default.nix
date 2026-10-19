@@ -13,7 +13,7 @@
   glib,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "gattlib";
   version = "0.20210616";
   pyproject = true;
@@ -61,4 +61,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/oscaracena/pygattlib";
     license = lib.licenses.asl20;
   };
-}
+})

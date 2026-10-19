@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "tls-parser";
   version = "2.0.2";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "nabla-c0d3";
     repo = "tls_parser";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-nNQ5XLsZMUXmsTnaqiUeaaHtiVc5r4woRxeYVhO3ICY=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     platforms = with lib.platforms; linux ++ darwin;
     license = lib.licenses.mit;
   };
-}
+})

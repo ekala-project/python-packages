@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "utils";
   version = "1.0.1";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "haaksmash";
     repo = "pyutils";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-eb2trh3eawdAcPo3De9NgYN2HT1+FGju/F4V7lga+R4=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/haaksmash/pyutils";
     license = lib.licenses.lgpl3Only;
   };
-}
+})

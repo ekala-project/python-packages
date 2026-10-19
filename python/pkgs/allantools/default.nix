@@ -11,7 +11,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "allantools";
   version = "2024.06";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "aewallin";
     repo = "allantools";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-dF19aSpIioOm0BnwrLkMe/DtfgWSKFnX4c/Xs1O2Quw=";
   };
 
@@ -48,4 +48,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/aewallin/allantools";
     license = lib.licenses.lgpl3Plus;
   };
-}
+})

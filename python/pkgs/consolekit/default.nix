@@ -12,13 +12,13 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "consolekit";
   version = "2.0.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-wlZ3zaYnI2jgOF4ozlkx/8TbH51H38i2dYdBmSgt7T4=";
   };
 
@@ -44,4 +44,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/domdfcoding/consolekit";
     license = lib.licenses.mit;
   };
-}
+})

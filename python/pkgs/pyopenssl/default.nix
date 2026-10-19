@@ -11,7 +11,7 @@
   sphinx-rtd-theme,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyopenssl";
   version = "26.3.0";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pyca";
     repo = "pyopenssl";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-ASpF7CcakrPS4qg8XFGYgYb7Etjg7wcVyMBbtAZaKO0=";
   };
 
@@ -48,4 +48,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pyca/pyopenssl";
     license = lib.licenses.asl20;
   };
-}
+})

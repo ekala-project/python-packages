@@ -8,7 +8,7 @@
   requests,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ocifs";
   version = "1.3.1";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "oracle";
     repo = "ocifs";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-IGl9G4NyzhcqrfYfgeZin+wt1OwHmh6780MPfZBwsXA=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://ocifs.readthedocs.io";
     license = lib.licenses.upl;
   };
-}
+})

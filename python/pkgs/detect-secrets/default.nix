@@ -15,7 +15,7 @@
   withWordList ? true,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "detect-secrets";
   version = "1.5.0";
   pyproject = true;
@@ -23,7 +23,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Yelp";
     repo = "detect-secrets";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-Jkmx8gZIbyfjoZRbc+Hd4tDoZTZ/dhJwHfTIU9lt5jY=";
     leaveDotGit = true;
   };
@@ -52,4 +52,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Yelp/detect-secrets";
     license = lib.licenses.asl20;
   };
-}
+})

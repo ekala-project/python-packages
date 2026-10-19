@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "billiard";
   version = "4.2.4";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "celery";
     repo = "billiard";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-7DwS3fdYhMNVYR0RIoMFyxNpj56VrGlbF4mIgLKPrOQ=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/celery/billiard";
     license = lib.licenses.bsd3;
   };
-}
+})

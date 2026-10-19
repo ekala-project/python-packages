@@ -16,7 +16,7 @@
   yarl,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "gql";
   version = "4.0.0";
   pyproject = true;
@@ -24,7 +24,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "graphql-python";
     repo = "gql";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-bPdlFN6MRT6G9Mw2g2BBfsOGpQmT7pbRatpqa7CImSs=";
   };
 
@@ -67,4 +67,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     mainProgram = "gql-cli";
   };
-}
+})

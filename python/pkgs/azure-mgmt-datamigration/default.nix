@@ -9,14 +9,14 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-datamigration";
   version = "11.0.0b1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_mgmt_datamigration";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-m0NOmFDxtl+4my5ztq55XBxbRhMWinKomG5zl5odxLo=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/datamigration/azure-mgmt-datamigration";
     license = lib.licenses.mit;
   };
-}
+})

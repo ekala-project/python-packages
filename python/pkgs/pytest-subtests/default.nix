@@ -12,14 +12,14 @@
   pytest,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytest-subtests";
   version = "0.15.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "pytest_subtests";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-y0lb3gVVG3hLjwuK36on7bQTFGmifDObgP2Na6M/iHw=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pytest-dev/pytest-subtests";
     license = lib.licenses.mit;
   };
-}
+})

@@ -6,7 +6,7 @@
   cryptography,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyjwt";
   version = "2.13.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "jpadilla";
     repo = "pyjwt";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-q4ynXCJVDsyZh70439dloyWgRTLVm+elDOahUVOT5vA=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jpadilla/pyjwt";
     license = lib.licenses.mit;
   };
-}
+})

@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pycdlib";
   version = "1.16.0";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "clalancette";
     repo = "pycdlib";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-uJ9rMriRCLXpKekG8vGsIw+s0e6wlfX0soAYs6HGe0Y=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     license = lib.licenses.lgpl2Only;
     platforms = lib.platforms.all;
   };
-}
+})

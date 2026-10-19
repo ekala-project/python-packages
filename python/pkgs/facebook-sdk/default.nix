@@ -10,13 +10,13 @@
   requests,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "facebook-sdk";
   version = "3.1.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-yrzS5p6j2fBCkZyZs1PfeqHivobQQBIfbp9eY8HPD40=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pythonforfacebook/facebook-sdk";
     license = lib.licenses.asl20;
   };
-}
+})

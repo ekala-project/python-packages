@@ -7,7 +7,7 @@
   zhon,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "dragonmapper";
   version = "0.3.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "tsroten";
     repo = "dragonmapper";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-3SRSu/9cpg2YcEuPFxBXg6KHgRSX5SiMAFbyE40m6ks=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/tsroten/dragonmapper";
     license = lib.licenses.mit;
   };
-}
+})

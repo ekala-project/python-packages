@@ -8,14 +8,14 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-msi";
   version = "8.0.0b2";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_mgmt_msi";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-9m+tyMcIw94Lhn2UFsVaTcjgUD9dPEE374vE8DlPQDs=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/resources/azure-mgmt-msi";
     license = lib.licenses.mit;
   };
-}
+})

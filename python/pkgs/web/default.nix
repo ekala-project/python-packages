@@ -7,13 +7,13 @@
   legacy-cgi,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "web.py";
   version = "0.62";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-XOaEyqJAZUyuWVDai0t7wXiBIDHgj5kFGNByvUSrUl4=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://webpy.org/";
     license = lib.licenses.publicDomain;
   };
-}
+})

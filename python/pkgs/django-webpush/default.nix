@@ -7,7 +7,7 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-webpush";
   version = "0.3.4";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "safwanrahman";
     repo = "django-webpush";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-Mwp53apdPpBcn7VfDbyDlvLAVAG65UUBhT0w9OKjKbU=";
   };
 
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/safwanrahman/django-webpush/";
     license = lib.licenses.gpl3Plus;
   };
-}
+})

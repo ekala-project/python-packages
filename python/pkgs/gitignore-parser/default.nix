@@ -6,7 +6,7 @@
   unittestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "gitignore-parser";
   version = "0.1.13";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mherrmann";
     repo = "gitignore_parser";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-jd5C8whfdLuEC+ebDAAYso33o2H963P+8RWcm26koVM=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mherrmann/gitignore_parser";
     license = lib.licenses.mit;
   };
-}
+})

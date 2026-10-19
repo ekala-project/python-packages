@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "iglo";
   version = "1.2.7";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "jesserockz";
     repo = "python-iglo";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-torDjfQcQ+ytv/Qab7PNugt1eLQJ0pPPz6p4f4kcFws=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jesserockz/python-iglo";
     license = lib.licenses.mit;
   };
-}
+})

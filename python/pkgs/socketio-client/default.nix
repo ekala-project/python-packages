@@ -9,7 +9,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "socketio-client";
   version = "0.7.2";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "invisibleroads";
     repo = "socketio-client";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-71sjiGJDDYElPGUNCH1HaVdvgMt8KeD/kXVDpF615ho=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/invisibleroads/socketIO-client";
     license = lib.licenses.mit;
   };
-}
+})

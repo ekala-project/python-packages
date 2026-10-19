@@ -7,13 +7,13 @@
   python-dateutil,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pycollada";
   version = "0.9.3";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-w01tzw/i66WJb3HJbTehwP4aYfCEQPoM/Ow9woldMwI=";
   };
 
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     license = lib.licenses.bsd3;
     platforms = with lib.platforms; linux ++ darwin;
   };
-}
+})

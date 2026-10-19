@@ -9,13 +9,13 @@
   zope-testrunner,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "zconfig";
   version = "4.3";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-RyIz5RX6Kb5shz54uKK0UMLNJdATPLRZYIN/M/GrT+M=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/zopefoundation/ZConfig";
     license = lib.licenses.zpl21;
   };
-}
+})

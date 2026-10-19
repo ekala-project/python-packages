@@ -5,7 +5,7 @@
   hatchling,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyshp";
   version = "3.1.6";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "GeospatialPython";
     repo = "pyshp";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-N4+GkxMtfa+EoZaGuun3ZhYMb3QHP2enMdq5MSw7M9g=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/GeospatialPython/pyshp";
     license = lib.licenses.mit;
   };
-}
+})

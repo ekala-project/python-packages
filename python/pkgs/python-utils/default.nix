@@ -7,7 +7,7 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "python-utils";
   version = "3.9.1";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "WoLpH";
     repo = "python-utils";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-lzLzYI5jShfIwQqvfA8UtPjGawXE80ww7jb/gPzpeDo=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/WoLpH/python-utils";
     license = lib.licenses.bsd3;
   };
-}
+})

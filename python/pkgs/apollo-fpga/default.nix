@@ -14,7 +14,7 @@
   pyxdg,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "apollo-fpga";
   version = "1.1.1";
   pyproject = true;
@@ -22,14 +22,14 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "greatscottgadgets";
     repo = "apollo";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-EDI+bRDePEbkxfQKuDgRsJtlAE0jqcIoQHjpgW0jIoY=";
   };
 
   postPatch = ''
     substituteInPlace pyproject.toml \
       --replace-fail '"setuptools-git-versioning<2"' "" \
-      --replace-fail 'dynamic = ["version"]' 'version = "${version}"'
+      --replace-fail 'dynamic = ["version"]' 'version = "${finalAttrs.version}"'
   '';
 
   build-system = [
@@ -55,4 +55,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/greatscottgadgets/apollo";
     license = lib.licenses.bsd3;
   };
-}
+})

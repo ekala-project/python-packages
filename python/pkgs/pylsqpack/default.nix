@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pylsqpack";
   version = "0.3.24";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-jsRV9EYUIo+J441AwbHjeJViDiDsayHjtWL6i3miOJA=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/aiortc/pylsqpack";
     license = lib.licenses.bsd3;
   };
-}
+})

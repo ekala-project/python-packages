@@ -7,7 +7,7 @@
   hatchling,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pem";
   version = "23.1.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "hynek";
     repo = "pem";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-rVYlnvISGugh9qvf3mdrIyELmeOUU4g6291HeoMkoQc=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://pem.readthedocs.io/";
     license = lib.licenses.mit;
   };
-}
+})

@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ulid-transform";
   version = "2.2.9";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "bdraco";
     repo = "ulid-transform";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-j4nDvTR7qNpzYor6Pgfp+KNux7FRKdSc7jmuWj94WMM=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/bdraco/ulid-transform";
     license = lib.licenses.mit;
   };
-}
+})

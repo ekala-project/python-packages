@@ -15,7 +15,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-hierarkey";
   version = "2.0.1";
   pyproject = true;
@@ -23,7 +23,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "raphaelm";
     repo = "django-hierarkey";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-zIz7aokOGLGXV/xJnYcz8lBP7b2rxLrfaD3i/DLpFR8=";
   };
 
@@ -48,4 +48,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/raphaelm/django-hierarkey";
     license = lib.licenses.asl20;
   };
-}
+})

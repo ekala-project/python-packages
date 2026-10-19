@@ -6,7 +6,7 @@
   zope-interface,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "transaction";
   version = "5.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "zopefoundation";
     repo = "transaction";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-8yvA2dvB69+EqsAa+hc93rgg6D64lcajl6JgFabhjwY=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://transaction.readthedocs.io/";
     license = lib.licenses.zpl21;
   };
-}
+})

@@ -6,7 +6,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "cache";
   version = "1.0.3";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "jneen";
     repo = "python-cache";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-vfVNo2B9fnjyjgR7cGrcsi9srWcTs3s8fhmvNF8okN0=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jneen/python-cache";
     license = lib.licenses.mit;
   };
-}
+})

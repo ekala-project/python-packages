@@ -9,7 +9,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "greeclimate";
   version = "3.2.0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "cmroche";
     repo = "greeclimate";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-lDsMx08BDaUZwmT9afwj9SOMovOftNOlfNV5btSAW8E=";
   };
 
@@ -63,4 +63,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/cmroche/greeclimate";
     license = lib.licenses.gpl3Only;
   };
-}
+})

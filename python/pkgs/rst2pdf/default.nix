@@ -17,13 +17,13 @@
   pillow,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "rst2pdf";
   version = "0.105";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-hX6HQQFOxQFfegCq+13Mu1Y3jvTB2lWoKNRLz1/zrNs=";
   };
 
@@ -70,4 +70,4 @@ buildPythonPackage rec {
     homepage = "https://rst2pdf.org/";
     license = lib.licenses.mit;
   };
-}
+})

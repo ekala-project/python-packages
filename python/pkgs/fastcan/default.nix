@@ -19,7 +19,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "fastcan";
   version = "0.6.0";
   pyproject = true;
@@ -27,7 +27,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "scikit-learn-contrib";
     repo = "fastcan";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-SgvzmUY1GvSvbpyhwUpVwS8ZLVvtR2G1YwzS+mPo7ew=";
   };
 
@@ -59,4 +59,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/scikit-learn-contrib/fastcan";
     license = lib.licenses.mit;
   };
-}
+})

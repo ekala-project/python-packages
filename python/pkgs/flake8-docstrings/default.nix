@@ -11,14 +11,14 @@
   pydocstyle,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "flake8-docstrings";
   version = "1.7.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "flake8_docstrings";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-TIzHSNwW5oaXKGmeXQ1oXamhCw6nGOCQsboIjmepQa8=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pycqa/flake8-docstrings";
     license = lib.licenses.mit;
   };
-}
+})

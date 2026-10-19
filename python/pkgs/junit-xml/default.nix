@@ -6,13 +6,13 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "junit-xml";
   version = "1.9";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-3hagUZkNTiWjmCst2eidZxBnVIcYhmQW+uwU2d5W258=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     description = "Creates JUnit XML test result documents that can be read by tools such as Jenkins";
     license = lib.licenses.mit;
   };
-}
+})

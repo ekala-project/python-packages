@@ -5,13 +5,13 @@
   hatchling,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "xmod";
   version = "1.10.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-tAsqVNVmhLAeuWJ4krDBeZGOjvC9TX87rHo/26Ec1uY=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/rec/xmod";
     license = lib.licenses.mit;
   };
-}
+})

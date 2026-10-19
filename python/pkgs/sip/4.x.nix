@@ -11,7 +11,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = sip-module;
   version = "4.19.25";
   pyproject = false;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   disabled = isPyPy;
 
   src = fetchurl {
-    url = "https://www.riverbankcomputing.com/static/Downloads/sip/${version}/sip-${version}.tar.gz";
+    url = "https://www.riverbankcomputing.com/static/Downloads/sip/${finalAttrs.version}/sip-${finalAttrs.version}.tar.gz";
     sha256 = "04a23cgsnx150xq86w1z44b6vr2zyazysy9mqax0fy346zlr77dk";
   };
 
@@ -64,4 +64,4 @@ buildPythonPackage rec {
     license = lib.licenses.gpl2Plus;
     platforms = lib.platforms.all;
   };
-}
+})

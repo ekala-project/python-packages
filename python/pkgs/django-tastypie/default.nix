@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-tastypie";
   version = "0.15.1";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "django-tastypie";
     repo = "django-tastypie";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-KmBI8kHcmRfbNIfBEz5pHyseWcWnfP3tq6GAPi4tdhE=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/django-tastypie/django-tastypie";
     license = lib.licenses.gpl2Only;
   };
-}
+})

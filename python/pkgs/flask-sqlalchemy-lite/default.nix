@@ -7,7 +7,7 @@
   sqlalchemy,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "flask-sqlalchemy-lite";
   version = "0.2.1";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pallets-eco";
     repo = "flask-sqlalchemy-lite";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-KX4kpqgvNlcAe4NSWaSkcgtPQINmeQOx46/4uFM8q8A=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pallets-eco/flask-sqlalchemy-lite";
     license = lib.licenses.mit;
   };
-}
+})

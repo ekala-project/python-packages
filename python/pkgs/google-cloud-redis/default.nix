@@ -8,14 +8,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "google-cloud-redis";
   version = "2.22.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "google_cloud_redis";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-EFysFdIdh87u5BhHYY8A6mzKqjYLiws/0uQveaI9CGg=";
   };
 
@@ -45,4 +45,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-redis";
     license = lib.licenses.asl20;
   };
-}
+})

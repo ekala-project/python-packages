@@ -13,7 +13,7 @@
   hatchling,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "uvicorn";
   version = "0.52.4";
   pyproject = true;
@@ -21,7 +21,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "encode";
     repo = "uvicorn";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-XDhfyL2+L2Dfa01brCgqKibdtkGOI0Xv4Mx0foqHT3A=";
   };
 
@@ -49,4 +49,4 @@ buildPythonPackage rec {
     mainProgram = "uvicorn";
     license = lib.licenses.bsd3;
   };
-}
+})

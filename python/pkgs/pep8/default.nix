@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pep8";
   version = "1.7.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-/iSbUuIEmOWeC1xSVqpS7pn8KVsm7J6qhXdv/bn+Y3Q=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     description = "Python style guide checker";
     license = lib.licenses.mit;
   };
-}
+})

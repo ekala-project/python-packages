@@ -8,7 +8,7 @@
   etils,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "array-record";
   version = "0.8.3";
   format = "wheel";
@@ -20,7 +20,7 @@ buildPythonPackage rec {
       pyShortVersion = "cp${builtins.replaceStrings [ "." ] [ "" ] python.pythonVersion}";
     in
     fetchPypi {
-      inherit version;
+      inherit (finalAttrs) version;
       format = "wheel";
       pname = "array_record";
       dist = pyShortVersion;
@@ -51,4 +51,4 @@ buildPythonPackage rec {
     license = lib.licenses.asl20;
     platforms = [ "x86_64-linux" ];
   };
-}
+})

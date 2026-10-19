@@ -12,13 +12,13 @@
   pytest-xdist,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aiocron";
   version = "2.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-G7ZaNq7hN+iDNZJ4OVbgx9xHi8PpJz/ChB1dDGBF5NI=";
   };
 
@@ -48,4 +48,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/gawel/aiocron/";
     license = lib.licenses.mit;
   };
-}
+})

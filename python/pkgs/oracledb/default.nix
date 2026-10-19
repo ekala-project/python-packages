@@ -8,7 +8,7 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "oracledb";
   version = "4.0.2";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "oracle";
     repo = "python-oracledb";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     fetchSubmodules = true;
     hash = "sha256-xT2PWP6kQ0K+9kxe0vNWY5+kMyKZ1J7toiEZBxfsAGE=";
   };
@@ -43,4 +43,4 @@ buildPythonPackage rec {
       upl
     ];
   };
-}
+})

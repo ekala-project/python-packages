@@ -27,7 +27,7 @@
   pytest-cov-stub,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "quart";
   version = "0.20.0";
   pyproject = true;
@@ -35,7 +35,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pallets";
     repo = "quart";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-NApev3nRBS4QDMGq8++rSmK5YgeljkaVAsdezsTbZr4=";
   };
 
@@ -62,4 +62,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pallets/quart/";
     license = lib.licenses.mit;
   };
-}
+})

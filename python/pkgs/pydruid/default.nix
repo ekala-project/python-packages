@@ -13,7 +13,7 @@
   pycurl,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pydruid";
   version = "0.6.8";
   pyproject = true;
@@ -21,7 +21,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     repo = "pydruid";
     owner = "druid-io";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-em4UuNnGdfT6KC9XiWSkCmm4DxdvDS+DGY9kw25iepo=";
   };
 
@@ -45,4 +45,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/druid-io/pydruid";
     license = lib.licenses.asl20;
   };
-}
+})

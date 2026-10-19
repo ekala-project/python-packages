@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "namex";
   version = "0.1.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-EX8DzNMCzEjj9cWKKWg49ricg0VauGg6HoXypDCqQwY=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/fchollet/namex";
     license = lib.licenses.asl20;
   };
-}
+})

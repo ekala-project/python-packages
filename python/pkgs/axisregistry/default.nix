@@ -8,13 +8,13 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "axisregistry";
   version = "0.4.16";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-eohwtlFSTuttPv0PsOy1uezGT1NNlwm8ZunVJd1a9zo=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/googlefonts/axisregistry";
     license = lib.licenses.asl20;
   };
-}
+})

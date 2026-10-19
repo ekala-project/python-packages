@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "hwdata";
   version = "2.4.3-1";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "xsuchy";
     repo = "python-hwdata";
-    tag = "python-hwdata-${version}";
+    tag = "python-hwdata-${finalAttrs.version}";
     hash = "sha256-5bcdyCGv1sM8HThoSsvJe68LprDq0kI801F/aTH5FVs=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/xsuchy/python-hwdata";
     license = lib.licenses.gpl2Plus;
   };
-}
+})

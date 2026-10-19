@@ -13,13 +13,13 @@
   pyflakes,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "nbsmoke";
   version = "0.6.1a1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     sha256 = "sha256-mIdr4mppQqKGBdlLwLECCvKgwYmGMY1zjq/gzV0urRQ=";
   };
 
@@ -43,4 +43,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pyviz/nbsmoke";
     license = lib.licenses.bsd3;
   };
-}
+})

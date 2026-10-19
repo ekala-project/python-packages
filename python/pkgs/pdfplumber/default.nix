@@ -9,7 +9,7 @@
   pypdfium2,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pdfplumber";
   version = "0.11.10";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "jsvine";
     repo = "pdfplumber";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-0fdH8SKU8ude43x7tsWxeGFQeSCYrTGTELG6SimloLQ=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jsvine/pdfplumber";
     license = lib.licenses.mit;
   };
-}
+})

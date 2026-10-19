@@ -9,7 +9,7 @@
   requests,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mficlient";
   version = "0.5.0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "uilibs";
     repo = "mficlient";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-gr9E+3qYD3usK2AAk+autfFQVPL3RDtjG7vvsmZui80=";
   };
 
@@ -49,4 +49,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     mainProgram = "mfi";
   };
-}
+})

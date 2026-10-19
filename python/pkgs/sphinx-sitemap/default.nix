@@ -10,14 +10,14 @@ let
   pname = "sphinx-sitemap";
   version = "2.9.0";
 in
-buildPythonPackage rec {
-  inherit pname version;
+buildPythonPackage (finalAttrs: {
+  inherit (finalAttrs) pname version;
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "jdillard";
     repo = "sphinx-sitemap";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-TiR6F9wMWOGYexSKDzbSPPq0oiIDrZwSiO3a9DajL+0=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jdillard/sphinx-sitemap";
     license = lib.licenses.mit;
   };
-}
+})

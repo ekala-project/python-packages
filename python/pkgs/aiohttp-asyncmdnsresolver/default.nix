@@ -11,7 +11,7 @@
   zeroconf,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aiohttp-asyncmdnsresolver";
   version = "0.2.0";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "aio-libs";
     repo = "aiohttp-asyncmdnsresolver";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-wqeWK7IoX2o+4Cmjq9nKh3rod0Y2C5dxP0Cju9Uk6hE=";
   };
 
@@ -44,4 +44,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/aio-libs/aiohttp-asyncmdnsresolver";
     license = lib.licenses.asl20;
   };
-}
+})

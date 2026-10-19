@@ -7,13 +7,13 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "typeshed_client";
   version = "2.13.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-hc5zvpil46Ucr7LikhZT43Wc5+nRUwrcypNd7CARUvI=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/JelleZijlstra/typeshed_client";
     license = lib.licenses.mit;
   };
-}
+})

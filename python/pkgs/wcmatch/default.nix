@@ -6,13 +6,13 @@
   bracex,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "wcmatch";
   version = "11.0.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-HqK0+meLjKJoJTeY1ZY5Nd85Ey1Hw+JBwKBzIiQAXn0=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     description = "Wilcard File Name matching library";
     license = lib.licenses.mit;
   };
-}
+})

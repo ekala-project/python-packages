@@ -13,7 +13,7 @@
   langdetect,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "dateparser";
   version = "1.4.3";
 
@@ -22,7 +22,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "scrapinghub";
     repo = "dateparser";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-HaT+8aJ1qJ0irbDsv0nGn5Ln58lxfIIO6MnV+iOdEPM=";
   };
 
@@ -50,4 +50,4 @@ buildPythonPackage rec {
     license = lib.licenses.bsd3;
     mainProgram = "dateparser-download";
   };
-}
+})

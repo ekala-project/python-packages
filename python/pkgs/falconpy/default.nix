@@ -6,7 +6,7 @@
   requests,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "falconpy";
   version = "1.6.3";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "CrowdStrike";
     repo = "falconpy";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-tdok06CnjpzGrWOaNA0OrNFxWzlW23y/7Rg/LmZ93+k=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/CrowdStrike/falconpy";
     license = lib.licenses.unlicense;
   };
-}
+})

@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "simplegeneric";
   version = "0.8.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-3JcuBglLmvW4VbPfSmRjleQ9HJ0NOe00W3OTVg0LkXM=";
     extension = "zip";
   };
@@ -25,4 +25,4 @@ buildPythonPackage rec {
     homepage = "http://cheeseshop.python.org/pypi/simplegeneric";
     license = lib.licenses.zpl21;
   };
-}
+})

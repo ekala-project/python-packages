@@ -6,7 +6,7 @@
   httpx,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "meraki";
   version = "4.5.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "meraki";
     repo = "dashboard-api-python";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-SYILd5epeB/V/fa+yxZvT49eHapZnqxcTW1s8gH3fAY=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/meraki/dashboard-api-python";
     license = lib.licenses.mit;
   };
-}
+})

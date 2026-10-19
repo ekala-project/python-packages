@@ -10,7 +10,7 @@
   propcache,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "yarl";
   version = "1.24.5";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "aio-libs";
     repo = "yarl";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-2Uqn1TwfH375CBIveEpsco4dDNrhxHwX8wIP8dKhh/M=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/aio-libs/yarl";
     license = lib.licenses.asl20;
   };
-}
+})

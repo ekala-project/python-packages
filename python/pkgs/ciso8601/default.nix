@@ -6,7 +6,7 @@
   pytz,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ciso8601";
   version = "2.3.3";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "closeio";
     repo = "ciso8601";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-14HiCn8BPALPaW53k118lHb5F4oG9mMNN6sdLdKB6v0=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/closeio/ciso8601";
     license = lib.licenses.mit;
   };
-}
+})

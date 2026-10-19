@@ -11,7 +11,7 @@
   pyinstaller,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jpype1";
   version = "1.7.1";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "originell";
     repo = "jpype";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-6QKX43XyyBCwOxunQz8lFV1Svh/IXjLtpElbWEx37QQ=";
   };
 
@@ -57,4 +57,4 @@ buildPythonPackage rec {
     license = lib.licenses.asl20;
     description = "Python to Java bridge";
   };
-}
+})

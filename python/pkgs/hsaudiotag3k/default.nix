@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "hsaudiotag3k";
   version = "1.1.3.post1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-72DpIQ1HJ+gvAJWmhssHtnbQVZGPDFnFv6hZjaA+WdE=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "http://hg.hardcoded.net/hsaudiotag/";
     license = lib.licenses.bsd3;
   };
-}
+})

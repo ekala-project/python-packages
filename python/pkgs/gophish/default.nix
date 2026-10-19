@@ -15,7 +15,7 @@
   urllib3,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "gophish";
   version = "0.5.1";
   pyproject = true;
@@ -23,7 +23,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "gophish";
     repo = "api-client-python";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-ITwwU/Xixyi9JSWbYf606HB7S5E4jiI0lEYcOdNg3mo=";
   };
 
@@ -53,4 +53,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/gophish/api-client-python";
     license = lib.licenses.mit;
   };
-}
+})

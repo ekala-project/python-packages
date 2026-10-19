@@ -18,7 +18,7 @@
   numpy,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "soxr";
   version = "1.1.0";
   pyproject = true;
@@ -26,7 +26,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "dofuuz";
     repo = "python-soxr";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-XdSInR0ogbcku6yvMkGEEIxu2nlqa0mffBtd+ifvzoU=";
   };
 
@@ -61,4 +61,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/dofuuz/python-soxr/tree/main";
     license = lib.licenses.lgpl21Plus;
   };
-}
+})

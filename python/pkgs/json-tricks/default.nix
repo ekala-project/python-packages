@@ -6,7 +6,7 @@
   buildPythonPackage,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "json-tricks";
   version = "3.17.3";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mverleg";
     repo = "pyjson_tricks";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-xddMc4PvVI+mqB3eeVqECZmdeSKAURsdbOnUAXahqM0=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mverleg/pyjson_tricks";
     license = lib.licenses.bsd3;
   };
-}
+})

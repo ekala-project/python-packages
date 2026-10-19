@@ -25,7 +25,7 @@
   writableTmpDirAsHomeHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "caldav";
   version = "2.2.6";
   pyproject = true;
@@ -33,7 +33,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "python-caldav";
     repo = "caldav";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-xtxWDlYESIwkow/YdjaUAkJ/x2jdUyhqfSRycJVLncY=";
   };
 
@@ -81,4 +81,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/python-caldav/caldav";
     license = lib.licenses.asl20;
   };
-}
+})

@@ -6,14 +6,14 @@
   django,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-filter";
   version = "26.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "django_filter";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-ZuoEAxsGjHfIbhrCbO16P48Tznl/V5V1Fwfj3u/FgFQ=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/carltongibson/django-filter";
     license = lib.licenses.bsd3;
   };
-}
+})

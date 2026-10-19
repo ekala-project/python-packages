@@ -9,7 +9,7 @@
   microsoft-kiota-http,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "msgraph-core";
   version = "1.5.1";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "microsoftgraph";
     repo = "msgraph-sdk-python-core";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-oF9ipN8jEMFeC4b0jGlNPQWsk8/dTAmLzS4R/xfXZfk=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/microsoftgraph/msgraph-sdk-python-core";
     license = lib.licenses.mit;
   };
-}
+})

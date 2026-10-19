@@ -11,7 +11,7 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "maison";
   version = "2.0.2";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "dbatten5";
     repo = "maison";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-F0mxOeLFDCiPhhKaaUy4qV//Pb2JXCtOLNB1uW2KWZY=";
   };
 
@@ -45,4 +45,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     mainProgram = "maison";
   };
-}
+})

@@ -11,14 +11,14 @@
   bidsschematools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "bids-validator";
   version = "1.14.7.post0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "bids_validator";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-5gBaUAt1+KlhWT+2fUYIUQfa2xFvWaXDtSSqBpeUW2Y=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/bids-standard/bids-validator";
     license = lib.licenses.mit;
   };
-}
+})

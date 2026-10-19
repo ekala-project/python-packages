@@ -7,7 +7,7 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "git-filter-repo";
   version = "2.47.0";
   docs_version = "71d71d4be238628bf9cb9b27be79b8bb824ed1a9";
@@ -15,7 +15,7 @@ buildPythonPackage rec {
 
   src = fetchPypi {
     pname = "git_filter_repo";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-QRsn5ooIDAemnCM8tSbbwthIsJpy8QR39ERN0IIs8pA=";
   };
 
@@ -47,4 +47,4 @@ buildPythonPackage rec {
     mainProgram = "git-filter-repo";
   };
 
-}
+})

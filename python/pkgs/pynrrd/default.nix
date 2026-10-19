@@ -7,7 +7,7 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pynrrd";
   version = "1.1.3";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mhe";
     repo = "pynrrd";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-qu3s3XswJCUchqYfYMuqIzI4sfeXrttvXSEW9/GSENA=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     description = "Simple pure-Python reader for NRRD files";
     license = lib.licenses.mit;
   };
-}
+})

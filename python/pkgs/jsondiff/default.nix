@@ -7,13 +7,13 @@
   pyyaml,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jsondiff";
   version = "2.2.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-ZY0WLIqGuobeJjA82Gp7N+GyweyYtWmmDiymGAVF9/4=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     description = "Diff JSON and JSON-like structures in Python";
     license = lib.licenses.mit;
   };
-}
+})

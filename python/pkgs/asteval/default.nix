@@ -5,13 +5,13 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "asteval";
   version = "1.0.10";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-RqTtE8wuSimiFBj4ne3VfbcNmOuW2w+0xEHU7bL1r+0=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/lmfit/asteval";
     license = lib.licenses.mit;
   };
-}
+})

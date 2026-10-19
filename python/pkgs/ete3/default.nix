@@ -8,13 +8,13 @@
   legacy-cgi,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ete3";
   version = "3.1.3";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-BqO3+o7ZAYewdqjbvlsbYqzulCAdPG6CL1X0SWAe9vI=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "http://etetoolkit.org/";
     license = lib.licenses.gpl3Only;
   };
-}
+})

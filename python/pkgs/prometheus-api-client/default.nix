@@ -10,7 +10,7 @@
   requests,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "prometheus-api-client";
   version = "0.7.2";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "4n4nd";
     repo = "prometheus-api-client-python";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-aoaydE1e+Ng3XiyqRFCgnlFIsLRitss4A0pUZdYeHak=";
   };
 
@@ -43,4 +43,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/4n4nd/prometheus-api-client-python";
     license = lib.licenses.mit;
   };
-}
+})

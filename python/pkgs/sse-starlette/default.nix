@@ -11,7 +11,7 @@
   uvicorn,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "sse-starlette";
   version = "3.4.11";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "sysid";
     repo = "sse-starlette";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-fdI/SxJgUDEyB1UJd9PLS6/TxvXZLlTAQFnr1UIBQRU=";
   };
 
@@ -49,4 +49,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/sysid/sse-starlette";
     license = lib.licenses.bsd3;
   };
-}
+})

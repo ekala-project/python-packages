@@ -18,7 +18,7 @@
   # tests
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "dbt-bigquery";
   version = "1.9.1";
   pyproject = true;
@@ -26,7 +26,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "dbt-labs";
     repo = "dbt-bigquery";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-YZA8lcUGoq5jMNS1GlbBd036X2F3khsZWr5Pv65zpPI=";
   };
 
@@ -55,4 +55,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/dbt-labs/dbt-bigquery";
     license = lib.licenses.asl20;
   };
-}
+})

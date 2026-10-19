@@ -16,7 +16,7 @@
   trio,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "anyio";
   version = "4.15.1";
   pyproject = true;
@@ -24,7 +24,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "agronholm";
     repo = "anyio";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-cuTOVLyqLfp4LMuBd1BnFgey2gu3wehDk7VAb7yoqng=";
   };
 
@@ -54,4 +54,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/agronholm/anyio";
     license = lib.licenses.mit;
   };
-}
+})

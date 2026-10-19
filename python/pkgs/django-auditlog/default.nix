@@ -9,7 +9,7 @@
   python,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-auditlog";
   version = "3.4.1";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "jazzband";
     repo = "django-auditlog";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-/IOzMGRR8EP/AGP7fcqwP4GeSKXPwE6NF6AZmiF1+lA=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     downloadPage = "https://github.com/jazzband/django-auditlog";
     license = lib.licenses.mit;
   };
-}
+})

@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "yattag";
   version = "1.16.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-uqjyVOfqXT4GGCga0v9WEODlNgs2COaVwpv7OynQUfQ=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://www.yattag.org/";
     license = lib.licenses.lgpl21Only;
   };
-}
+})

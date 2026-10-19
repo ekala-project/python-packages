@@ -6,14 +6,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ruamel-base";
   version = "1.0.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "ruamel.base";
-    inherit version;
+    inherit (finalAttrs) version;
     sha256 = "1wswxrn4givsm917mfl39rafgadimf1sldpbjdjws00g1wx36hf0";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://sourceforge.net/projects/ruamel-base/";
     license = lib.licenses.mit;
   };
-}
+})

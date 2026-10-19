@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "future";
   version = "1.0.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-vSloMJMHhh7a4UWKT4pPNZjAO+Q7l1IQdq6/XZTAewU=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     description = "Clean single-source support for Python 3 and 2";
     license = lib.licenses.mit;
   };
-}
+})

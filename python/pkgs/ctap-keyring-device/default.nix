@@ -19,7 +19,7 @@ let
     version = "0.9.3";
     src = fetchPypi {
       inherit (oldAttrs) pname;
-      inherit version;
+      inherit (finalAttrs) version;
       hash = "sha256-tF6JphCc/Lfxu1E3dqotZAjpXEgi+DolORi5RAg0Zuw=";
     };
     postPatch = ''
@@ -34,7 +34,7 @@ let
     ];
   });
 in
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ctap-keyring-device";
   version = "1.0.6";
   pyproject = true;
@@ -78,4 +78,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/dany74q/ctap-keyring-device";
     license = lib.licenses.mit;
   };
-}
+})

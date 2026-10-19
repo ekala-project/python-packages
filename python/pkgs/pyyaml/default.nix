@@ -7,7 +7,7 @@
   libyaml,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyyaml";
   version = "6.0.3";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "yaml";
     repo = "pyyaml";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-jUooIBp80cLxvdU/zLF0X8Yjrf0Yp9peYeiFjuV8AHA=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/yaml/pyyaml";
     license = lib.licenses.mit;
   };
-}
+})

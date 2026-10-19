@@ -7,7 +7,7 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pykakasi";
   version = "2.3.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromCodeberg {
     owner = "miurahr";
     repo = "pykakasi";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-b2lYYdg1RW1xRD3hym7o1EnxzN/U5txVTWRifwZn3k0=";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     license = lib.licenses.gpl3Plus;
     mainProgram = "kakasi";
   };
-}
+})

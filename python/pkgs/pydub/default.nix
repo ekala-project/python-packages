@@ -9,7 +9,7 @@
   replaceVars,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pydub";
   version = "0.25.1";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "jiaaro";
     repo = "pydub";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-FTEMT47wPXK5i4ZGjTVAhI/NjJio3F2dbBZzYzClU3c=";
   };
 
@@ -49,4 +49,4 @@ buildPythonPackage rec {
     homepage = "http://pydub.com";
     license = lib.licenses.mit;
   };
-}
+})

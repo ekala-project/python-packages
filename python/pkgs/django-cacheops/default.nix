@@ -9,14 +9,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-cacheops";
   version = "7.2";
   pyproject = true;
 
   src = fetchPypi {
     pname = "django_cacheops";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-y8EcwDISlaNkTie8smlA8Iy5wucdPuUGy8/wvdoanzM=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Suor/django-cacheops";
     license = lib.licenses.bsd3;
   };
-}
+})

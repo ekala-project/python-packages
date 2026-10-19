@@ -10,7 +10,7 @@
   webdriver-manager,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "html2pdf4doc";
   version = "0.0.34";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mettta";
     repo = "html2pdf4doc_python";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-ABOtpKO7a2MYsM4aBToxouY2JTGKh+vIPzdSMbn4v0s=";
   };
 
@@ -46,4 +46,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mettta/html2pdf4doc_python";
     license = lib.licenses.asl20;
   };
-}
+})

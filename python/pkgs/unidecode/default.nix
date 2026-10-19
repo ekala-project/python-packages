@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "Unidecode";
   version = "1.4.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-zjWYUAgzi2dlcwI6zDgtYsJk8wfI95Y3M0Ba3TfqKyM=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/avian2/unidecode";
     license = lib.licenses.gpl2Plus;
   };
-}
+})

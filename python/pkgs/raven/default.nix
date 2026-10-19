@@ -8,7 +8,7 @@
   flask,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "raven";
   version = "6.10.0";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "getsentry";
     repo = "raven-python";
-    tag = version;
+    tag = finalAttrs.version;
     sha256 = "16x9ldl8cy7flw5kh7qmgbmflqyf210j3q6ac2lw61sgwajsnvw8";
   };
 
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/getsentry/raven-python";
     license = lib.licenses.bsd3;
   };
-}
+})

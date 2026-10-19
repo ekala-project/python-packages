@@ -7,7 +7,7 @@
   sniffio,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "asgi-lifespan";
   version = "2.1.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "florimondmanca";
     repo = "asgi-lifespan";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-Jgmd/4c1lxHM/qi3MJNN1aSSUJrI7CRNwwHrFwwcCkc=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/florimondmanca/asgi-lifespan";
     license = lib.licenses.mit;
   };
-}
+})

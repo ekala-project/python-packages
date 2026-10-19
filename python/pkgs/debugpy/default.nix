@@ -8,7 +8,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "debugpy";
   version = "1.8.21";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "microsoft";
     repo = "debugpy";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
 
     postFetch = ''
       sed -i 's/git_refnames = "[^"]*"/git_refnames = " (tag: ${src.tag})"/' "$out/src/debugpy/_version.py"
@@ -66,4 +66,4 @@ buildPythonPackage rec {
       "riscv64-linux"
     ];
   };
-}
+})

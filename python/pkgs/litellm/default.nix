@@ -55,7 +55,7 @@
   websockets,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "litellm";
   version = "1.89.0";
   pyproject = true;
@@ -63,7 +63,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "BerriAI";
     repo = "litellm";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-tPw4cDqCQgyC8EoB5EPfui2gT+frjlSMOv95ntUXTWk=";
   };
 
@@ -157,4 +157,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/BerriAI/litellm";
     license = lib.licenses.mit;
   };
-}
+})

@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "schema";
   version = "0.7.8";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-6GzAjt1v5uJSJkj05H46MZIKdugszok3U1Qi4xCGKrU=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     description = "Library for validating Python data structures";
     license = lib.licenses.mit;
   };
-}
+})

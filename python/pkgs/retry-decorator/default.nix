@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "retry-decorator";
   version = "1.1.1";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pnpnpn";
     repo = "retry-decorator";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-0dZq4YbPcH4ItyMnpF7B20YYLtzwniJClBK9gRndU1M=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pnpnpn/retry-decorator";
     license = lib.licenses.asl20;
   };
-}
+})

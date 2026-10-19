@@ -30,7 +30,7 @@
   wtforms,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "flask-security";
   version = "5.8.2";
   pyproject = true;
@@ -38,7 +38,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pallets-eco";
     repo = "flask-security";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-WRhQqSSlPKqY/NxqPCG3izYy782vCq6JGRzReL8Qwqw=";
   };
 
@@ -85,4 +85,4 @@ buildPythonPackage rec {
     description = "Quickly add security features to your Flask application";
     license = lib.licenses.mit;
   };
-}
+})

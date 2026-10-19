@@ -14,7 +14,7 @@
   legacy-cgi,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "zope-testbrowser";
   version = "8.0";
   pyproject = true;
@@ -22,7 +22,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "zopefoundation";
     repo = "zope.testbrowser";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-CcNlK7EKYng0GKYTZ2U2slkyQ9wTqwzOXGHt9S5p3L0=";
   };
 
@@ -63,4 +63,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/zopefoundation/zope.testbrowser";
     license = lib.licenses.zpl21;
   };
-}
+})

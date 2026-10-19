@@ -33,7 +33,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mypy";
   version = "2.1.0";
   pyproject = true;
@@ -44,7 +44,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "python";
     repo = "mypy";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-sm/pxQGxH5XuPH7B8i3fpp30KaFU9aSp6BT67UcDPvU=";
   };
 
@@ -148,4 +148,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     mainProgram = "mypy";
   };
-}
+})

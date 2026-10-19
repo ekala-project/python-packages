@@ -7,13 +7,13 @@
   hatch-vcs,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "execnet";
   version = "2.1.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-Y9g7/dmiPjW5xqMmFBIyT5ZMLsjc2NPGkW7pNz4L780=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     homepage = "https://execnet.readthedocs.io/";
     license = lib.licenses.mit;
   };
-}
+})

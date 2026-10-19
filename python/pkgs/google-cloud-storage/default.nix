@@ -17,7 +17,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "google-cloud-storage";
   version = "3.10.1";
   pyproject = true;
@@ -25,7 +25,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "googleapis";
     repo = "python-storage";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-pKy1A9RNyRlAn4bXclcdvbfW4kZOP9Z4HqKWwcrDePo=";
   };
 
@@ -63,4 +63,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/googleapis/python-storage";
     license = lib.licenses.asl20;
   };
-}
+})

@@ -9,7 +9,7 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "elvia";
   version = "0.1.0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "andersem";
     repo = "elvia-python";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-oGXs+EwEIykkq8KjK7qNnZfLj4ZoKlgkldUiJlAI1gA=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/andersem/elvia-python";
     license = lib.licenses.mit;
   };
-}
+})

@@ -12,7 +12,7 @@
   urllib3,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "nethsm";
   version = "3.0.0";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Nitrokey";
     repo = "nethsm-sdk-py";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-kOZ/kNvYlnKi/ojv4b4ZGmNZqARZPAT0g12xi6gw39E=";
   };
 
@@ -58,4 +58,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Nitrokey/nethsm-sdk-py";
     license = lib.licenses.asl20;
   };
-}
+})

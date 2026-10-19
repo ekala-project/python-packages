@@ -9,13 +9,13 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "eventlet";
   version = "0.41.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-chuGt3/KM6c1WYKSAirG/u+ZdHv0j1Le/a2mtXKs1a8=";
   };
 
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/eventlet/eventlet/";
     license = lib.licenses.mit;
   };
-}
+})

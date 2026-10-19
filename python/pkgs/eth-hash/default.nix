@@ -8,7 +8,7 @@
   pycryptodome,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "eth-hash";
   version = "0.7.1";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ethereum";
     repo = "eth-hash";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-91jWZDqrd7ZZlM0D/3sDokJ26NiAQ3gdeBebTV1Lq8s=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ethereum/eth-hash";
     license = lib.licenses.mit;
   };
-}
+})

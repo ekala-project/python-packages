@@ -8,7 +8,7 @@
   djangorestframework,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "drf-jwt";
   version = "1.19.2";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Styria-Digital";
     repo = "django-rest-framework-jwt";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-bbkk78uYTG+JTzY3AyOmEVtVSgout/TETfr5N5fUto4=";
   };
 
@@ -46,4 +46,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Styria-Digital/django-rest-framework-jwt";
     license = lib.licenses.mit;
   };
-}
+})

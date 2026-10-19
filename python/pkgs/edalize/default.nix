@@ -10,7 +10,7 @@
   pyparsing,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "edalize";
   version = "0.6.7";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "olofk";
     repo = "edalize";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-o+cwcW1A+EfIGNu3/Ufnr7D2we4U6i0SLg21CTBYaZ4=";
   };
 
@@ -50,4 +50,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/olofk/edalize";
     license = lib.licenses.bsd2;
   };
-}
+})

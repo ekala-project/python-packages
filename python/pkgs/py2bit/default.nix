@@ -6,13 +6,13 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "py2bit";
   version = "1.0.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-SXL4XrOETN+6Q+tUqzyDSaBTbgPf19sHyo00Ryha0gw=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     description = "File access to 2bit files";
     license = lib.licenses.mit;
   };
-}
+})

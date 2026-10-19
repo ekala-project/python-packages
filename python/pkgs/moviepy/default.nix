@@ -18,7 +18,7 @@
   tqdm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "moviepy";
   version = "2.2.1";
   pyproject = true;
@@ -26,7 +26,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Zulko";
     repo = "moviepy";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-3vt/EyEOv6yNPgewkgcWcjM0TbQ6IfkR6nytS/WpRyg=";
   };
 
@@ -51,4 +51,4 @@ buildPythonPackage rec {
     homepage = "https://zulko.github.io/moviepy/";
     license = lib.licenses.mit;
   };
-}
+})

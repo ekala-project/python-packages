@@ -8,7 +8,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "lingva";
   version = "5.0.7";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "vacanza";
     repo = "lingva";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-jGdDXRNhgF3sy9clx9rg7T2rjYlH7UHm0QsN+HZV0Sk=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/vacanza/lingva";
     license = lib.licenses.bsd3;
   };
-}
+})

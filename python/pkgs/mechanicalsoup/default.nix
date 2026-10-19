@@ -13,7 +13,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mechanicalsoup";
   version = "1.4.0";
   pyproject = true;
@@ -21,7 +21,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "MechanicalSoup";
     repo = "MechanicalSoup";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-fu3DGTsLrw+MHZCFF4WHMpyjqkexH/c8j9ko9ZAeAwU=";
   };
 
@@ -63,4 +63,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/hickford/MechanicalSoup";
     license = lib.licenses.mit;
   };
-}
+})

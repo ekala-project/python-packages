@@ -8,7 +8,7 @@
   poetry-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "lm-format-enforcer";
   version = "0.11.3";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "noamgat";
     repo = "lm-format-enforcer";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-aUZo7Nlk5A9SRyQFFGhy3LAJO29ygRFwNC4WbRuXvYE=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/noamgat/lm-format-enforcer";
     license = lib.licenses.mit;
   };
-}
+})

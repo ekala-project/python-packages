@@ -8,7 +8,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "numato-gpio";
   version = "0.14.0";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "clssn";
     repo = "numato-gpio";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-9kbPEtJOQhCxYh8cjyCAufV63mV7ZF1x7CdUyJLfqII=";
   };
 
@@ -47,4 +47,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/clssn/numato-gpio";
     license = lib.licenses.mit;
   };
-}
+})

@@ -12,7 +12,7 @@
   scikit-learn,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "kotsu";
   version = "0.4.0";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "datavaluepeople";
     repo = "kotsu";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-7bRrHowRKq3xiBiAkfS4ZL9PXHIUmZc99q9pHex9BLg=";
   };
 
@@ -44,4 +44,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/datavaluepeople/kotsu";
     license = lib.licenses.mit;
   };
-}
+})

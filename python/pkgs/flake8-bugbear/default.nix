@@ -9,7 +9,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "flake8-bugbear";
   version = "25.11.29";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "PyCQA";
     repo = "flake8-bugbear";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-aIcLCUUiXVzt9aDllXmm0TqIDxwTa3zcs6Yc2H5LnWY=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     '';
     license = lib.licenses.mit;
   };
-}
+})

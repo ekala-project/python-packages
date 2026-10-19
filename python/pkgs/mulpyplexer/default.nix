@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mulpyplexer";
   version = "0.09";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-FE6em/ZtOYj2BULJ09TJSFdDj3kI9g5T9MHLFiL7vTA=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/zardus/mulpyplexer";
     license = lib.licenses.bsd2;
   };
-}
+})

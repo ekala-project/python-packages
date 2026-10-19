@@ -6,7 +6,7 @@
   colormath2,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "spectra";
   version = "0.1.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "jsvine";
     repo = "spectra";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-PS5p9IR3v6+Up5Fcq8mhkprVgXigD6PZUF4/6hbv7NI=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jsvine/spectra";
     license = lib.licenses.mit;
   };
-}
+})

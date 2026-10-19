@@ -6,13 +6,13 @@
   ipykernel,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ipynbname";
   version = "2025.8.0.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-3Mg2fGTEqfC6pqzqPlCf1mlr9dgcmrzrOG4q1u/KyTU=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/msm1089/ipynbname";
     license = lib.licenses.mit;
   };
-}
+})

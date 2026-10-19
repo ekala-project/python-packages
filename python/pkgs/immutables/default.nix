@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "immutables";
   version = "0.21";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "MagicStack";
     repo = "immutables";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-wZuCZEVXzycqA/h27RIe59e2QQALem8mfb3EdjwQr9w=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/MagicStack/immutables";
     license = lib.licenses.asl20;
   };
-}
+})

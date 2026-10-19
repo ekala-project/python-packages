@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "lnkparse3";
   version = "1.6.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Matmaus";
     repo = "LnkParse3";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-nTU6FMHM0hRwHBgszixZLArbhKKJmtwUXZC8ZW1KOvk=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Matmaus/LnkParse3";
     license = lib.licenses.mit;
   };
-}
+})

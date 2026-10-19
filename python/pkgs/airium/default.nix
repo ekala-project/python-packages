@@ -7,7 +7,7 @@
   beautifulsoup4,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "airium";
   version = "0.2.7";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitLab {
     owner = "kamichal";
     repo = "airium";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-sXyqGYBjyQ3Ig1idw+omrjj+ElknN9oemzob7NxFppo=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     mainProgram = "airium";
   };
-}
+})

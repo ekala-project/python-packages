@@ -10,7 +10,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "flask-marshmallow";
   version = "1.5.0";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "marshmallow-code";
     repo = "flask-marshmallow";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-IzeVVkyf4BRxtUVQIfzAvyjaKG+BLwhruXZHFJ6iGmw=";
   };
 
@@ -49,4 +49,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/marshmallow-code/flask-marshmallow";
     license = lib.licenses.mit;
   };
-}
+})

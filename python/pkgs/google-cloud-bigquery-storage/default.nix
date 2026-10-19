@@ -10,14 +10,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "google-cloud-bigquery-storage";
   version = "2.41.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "google_cloud_bigquery_storage";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-uZkpXwjOfi1qJg0kW1uYQ7oWA/YWRRXJ8Mtdge5xpdI=";
   };
 
@@ -52,4 +52,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/googleapis/python-bigquery-storage";
     license = lib.licenses.asl20;
   };
-}
+})

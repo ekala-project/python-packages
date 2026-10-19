@@ -16,7 +16,7 @@
   tzdata,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "hypothesis";
   version = "6.136.9";
   pyproject = true;
@@ -26,7 +26,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "HypothesisWorks";
     repo = "hypothesis";
-    tag = "hypothesis-python-${version}";
+    tag = "hypothesis-python-${finalAttrs.version}";
     hash = "sha256-Q1wxIJwAYKZ0x6c85CJSGgcdKw9a3xFw8YpJROElSNU=";
   };
 
@@ -145,4 +145,4 @@ buildPythonPackage rec {
     }";
     license = lib.licenses.mpl20;
   };
-}
+})

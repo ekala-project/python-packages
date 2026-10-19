@@ -6,13 +6,13 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "logbook";
   version = "1.10.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-f9+NCdYMnqpNjSezc2O0zid9AZ9MrlwlnqAwQPe2NLc=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     description = "Logging replacement for Python";
     license = lib.licenses.bsd3;
   };
-}
+})

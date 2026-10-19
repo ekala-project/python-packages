@@ -19,7 +19,7 @@
   zstandard,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "trino-python-client";
   version = "0.339.0";
   pyproject = true;
@@ -27,7 +27,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     repo = "trino-python-client";
     owner = "trinodb";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-gdxSxCbFBuOGJuS5j8bJHf4IA0B/umFRiDGNU4ezZkU=";
   };
 
@@ -56,4 +56,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/trinodb/trino-python-client";
     license = lib.licenses.asl20;
   };
-}
+})

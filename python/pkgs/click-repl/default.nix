@@ -8,7 +8,7 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "click-repl";
   version = "0.3.0";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "click-contrib";
     repo = "click-repl";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-xCT3w0DDY73dtDL5jbssXM05Zlr44OOcy4vexgHyWiE=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     description = "Subcommand REPL for click apps";
     license = lib.licenses.mit;
   };
-}
+})

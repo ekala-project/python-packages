@@ -16,7 +16,7 @@
   urllib3,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "kubernetes-asyncio";
   version = "33.3.0";
   pyproject = true;
@@ -24,7 +24,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "tomplus";
     repo = "kubernetes_asyncio";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-Ei5Y2IBBk8AoMQQBHOvKkJ1H+9dmnz22qrrZKrWazVE=";
   };
 
@@ -54,4 +54,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/tomplus/kubernetes_asyncio";
     license = lib.licenses.asl20;
   };
-}
+})

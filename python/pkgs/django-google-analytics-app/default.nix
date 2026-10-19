@@ -12,7 +12,7 @@
   structlog,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-google-analytics-app";
   version = "6.0.0";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "praekeltfoundation";
     repo = "django-google-analytics";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-0KLfGZY8qq5JGb+LJXpQRS76+qXtrf/hv6QLenm+BhQ=";
   };
 
@@ -53,4 +53,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/praekeltfoundation/django-google-analytics/";
     license = lib.licenses.bsd3;
   };
-}
+})

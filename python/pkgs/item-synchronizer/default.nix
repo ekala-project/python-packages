@@ -7,7 +7,7 @@
   bubop,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "item-synchronizer";
   version = "1.1.5";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "bergercookie";
     repo = "item_synchronizer";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-+mviKtCLlJhYV576Q07kcFJvtls5qohKSrqZtBqE/s4=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/bergercookie/item_synchronizer";
     license = lib.licenses.mit;
   };
-}
+})

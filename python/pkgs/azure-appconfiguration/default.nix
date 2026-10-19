@@ -7,14 +7,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "azure-appconfiguration";
   version = "1.9.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_appconfiguration";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-OZZ39WNI6RB9epen5H22cjx9LGF/7b6miB7ae47tmVs=";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/master/sdk/appconfiguration/azure-appconfiguration";
     license = lib.licenses.mit;
   };
-}
+})

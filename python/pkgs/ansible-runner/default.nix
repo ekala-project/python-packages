@@ -12,7 +12,7 @@
   pyyaml,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ansible-runner";
   version = "2.4.3";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ansible";
     repo = "ansible-runner";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-QKvc5T80lVt5hgIjylPpza3kJiw+epytimIsxy0oIK0=";
   };
 
@@ -50,4 +50,4 @@ buildPythonPackage rec {
     license = lib.licenses.asl20;
     mainProgram = "ansible-runner";
   };
-}
+})

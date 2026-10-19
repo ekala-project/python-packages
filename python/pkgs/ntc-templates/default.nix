@@ -6,7 +6,7 @@
   textfsm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ntc-templates";
   version = "9.2.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "networktocode";
     repo = "ntc-templates";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-iKG1+sc/J+PdFNNmmqCR9xmw7KVuP0P2mNPqHiZDe7M=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/networktocode/ntc-templates";
     license = lib.licenses.asl20;
   };
-}
+})

@@ -7,7 +7,7 @@
   eth-utils,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "rlp";
   version = "5.0.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ethereum";
     repo = "pyrlp";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-a13KBXZyId83EukBTc3zu1GgllsqMRS0gpYfZ29+bjQ=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ethereum/pyrlp";
     license = lib.licenses.mit;
   };
-}
+})

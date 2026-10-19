@@ -7,14 +7,14 @@
   isPy3k,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pythondialog";
   version = "3.5.3";
   pyproject = true;
   disabled = !isPy3k;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     sha256 = "b2a34a8af0a6625ccbdf45cd343b854fc6c1a85231dadc80b8805db836756323";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "http://pythondialog.sourceforge.net/";
     license = lib.licenses.lgpl3;
   };
-}
+})

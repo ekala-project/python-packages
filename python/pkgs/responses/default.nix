@@ -14,7 +14,7 @@
   urllib3,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "responses";
   version = "0.26.3";
   pyproject = true;
@@ -22,7 +22,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "getsentry";
     repo = "responses";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-80NVKgzRikxXsHQiDdiXoJ2QdB+668NK0L66JarCa3M=";
   };
 
@@ -43,4 +43,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/getsentry/responses";
     license = lib.licenses.asl20;
   };
-}
+})

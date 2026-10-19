@@ -8,7 +8,7 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "cattrs";
   version = "26.2.0";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "python-attrs";
     repo = "cattrs";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-YJYmPpvZ6B/0zniwLZPSIRAz0afqrQP74JfY/hgrogw=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/python-attrs/cattrs";
     license = with lib.licenses; [ mit ];
   };
-}
+})

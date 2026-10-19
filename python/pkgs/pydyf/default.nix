@@ -8,13 +8,13 @@
   pytest-cov-stub,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pydyf";
   version = "0.12.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-+9fnWVQaxyXCnFBmEgA945Mkm5QxDqeK5Eyx0EsiAJU=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://doc.courtbouillon.org/pydyf/stable/";
     license = lib.licenses.bsd3;
   };
-}
+})

@@ -14,13 +14,13 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "google-cloud-iot";
   version = "2.9.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-pLQgcwR89F+9jcSDtW/5+6Gy+Wk7XQf4iD49vDPkN9U=";
   };
 
@@ -65,4 +65,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/googleapis/python-iot";
     license = lib.licenses.asl20;
   };
-}
+})

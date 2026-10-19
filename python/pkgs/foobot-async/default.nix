@@ -9,14 +9,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "foobot-async";
   version = "1.0.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "foobot_async";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-QQjysk2m8QkOpLBdC8kfuoA9PcljgEwzKyrIAhxHB4c=";
   };
 
@@ -45,4 +45,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/reefab/foobot_async";
     license = lib.licenses.mit;
   };
-}
+})

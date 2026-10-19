@@ -11,7 +11,7 @@
   pillow,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "blackrenderer";
   version = "0.8.2";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "BlackFoundryCom";
     repo = "black-renderer";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-6mC+JSg0u2hwi7SDFHBoUYCu8sYisWSCOuaTtc0FXi4=";
   };
 
@@ -56,4 +56,4 @@ buildPythonPackage rec {
     license = lib.licenses.asl20;
     mainProgram = "blackrenderer";
   };
-}
+})

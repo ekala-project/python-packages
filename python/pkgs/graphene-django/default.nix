@@ -13,7 +13,7 @@
   py,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "graphene-django";
   version = "3.2.3";
   pyproject = true;
@@ -21,7 +21,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "graphql-python";
     repo = "graphene-django";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-uMkzgXn3YRgEU46Sv5lg60cvetHir9bv0mzJGDv79DI=";
   };
 
@@ -46,4 +46,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/graphql-python/graphene-django";
     license = lib.licenses.mit;
   };
-}
+})

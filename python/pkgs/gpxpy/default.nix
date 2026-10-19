@@ -6,13 +6,13 @@
   lxml,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "gpxpy";
   version = "1.6.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-pyxIS5fsQrgINDU7ApzI7ht58P/KEXmyIQuzuvJsAa4=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     license = lib.licenses.asl20;
     platforms = lib.platforms.unix;
   };
-}
+})

@@ -8,7 +8,7 @@
   stdenv,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "cython";
   version = "3.3.0";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "cython";
     repo = "cython";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-gIEqq8DAJF197gH1cMuq5JxI4rV/VHS70vg8hywXDqw=";
   };
 

@@ -10,7 +10,7 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "hpccm";
   version = "26.1.0";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "NVIDIA";
     repo = "hpc-container-maker";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-ITmq031/I4nKU4te9hio/H03Kz1IAfqTejDWUfsGL+g=";
   };
 
@@ -50,4 +50,4 @@ buildPythonPackage rec {
     mainProgram = "hpccm";
     platforms = lib.platforms.x86;
   };
-}
+})

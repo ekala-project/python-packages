@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "emoji";
   version = "2.15.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-6uSrfYZFanCgCphRJaAyY6XqxUzVXlHX4YSx7TtnV+Q=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/carpedm20/emoji/";
     license = lib.licenses.bsd3;
   };
-}
+})

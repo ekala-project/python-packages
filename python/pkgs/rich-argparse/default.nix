@@ -6,7 +6,7 @@
   rich,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "rich-argparse";
   version = "1.8.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "hamdanal";
     repo = "rich-argparse";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-ze9wJn+Cxz/NhbG8xKwHZHaDqMdU142/vJjml3Y9508=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/hamdanal/rich-argparse";
     license = lib.licenses.mit;
   };
-}
+})

@@ -12,14 +12,14 @@
   wtforms,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "flask-wtf";
   version = "1.3.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "flask_wtf";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-YdXavFDD34hcKX3L2AgQRDpdYyEGyKacq4znQPDN18w=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pallets-eco/flask-wtf/";
     license = lib.licenses.bsd3;
   };
-}
+})

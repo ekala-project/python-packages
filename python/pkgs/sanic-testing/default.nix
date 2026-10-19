@@ -10,7 +10,7 @@
   websockets,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "sanic-testing";
   version = "24.6.0";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "sanic-org";
     repo = "sanic-testing";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-biUgxa0sINHAYzyKimVD8+/mPUq2dlnCl2BN+UeUaEo=";
   };
 
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/sanic-org/sanic-testing";
     license = lib.licenses.mit;
   };
-}
+})

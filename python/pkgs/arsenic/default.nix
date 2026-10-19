@@ -10,7 +10,7 @@
   structlog,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "arsenic";
   version = "21.8";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "HENNGE";
     repo = "arsenic";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-fsLo22PR9WdX2FazPgr8B8dFq6EM1LLTpRFGEm/ymCE=";
   };
 
@@ -57,4 +57,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/HENNGE/arsenic/";
     license = lib.licenses.asl20;
   };
-}
+})

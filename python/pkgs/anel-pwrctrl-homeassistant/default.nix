@@ -5,13 +5,13 @@
   # build-system
   setuptools,
 }:
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "anel-pwrctrl-homeassistant";
   version = "0.0.1.dev2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit version;
+    inherit (finalAttrs) version;
     pname = "anel_pwrctrl-homeassistant";
     hash = "sha256-AcsnYD9CeGAarm5QdweUF6CUFwUywhfmU46NG8+Cm4s=";
   };
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mweinelt/anel-pwrctrl";
     license = lib.licenses.mit;
   };
-}
+})

@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "events";
   version = "0.5";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pyeve";
     repo = "events";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-GGhIKHbJ31IN0Uoe689X9V/MZvtseE47qx2CmM4MYUs=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://events.readthedocs.org";
     license = lib.licenses.bsd3;
   };
-}
+})

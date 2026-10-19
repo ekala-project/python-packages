@@ -9,7 +9,7 @@
   requests,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "etcd";
   version = "2.0.8";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "dsoprea";
     repo = "PythonEtcdClient";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-h+jYIRSNdrGkW3tBV1ifIDEXU46EQGyeJoz/Mxym4pI=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/dsoprea/PythonEtcdClient";
     license = lib.licenses.gpl2;
   };
-}
+})

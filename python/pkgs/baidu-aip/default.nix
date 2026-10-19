@@ -7,13 +7,13 @@
   requests,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "baidu-aip";
   version = "4.16.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-zNYjEVVwhqFAR7w7CR3rWYefUZcM+sPZ87KYfDDLxN0=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Baidu-AIP/python-sdk";
     license = lib.licenses.asl20;
   };
-}
+})

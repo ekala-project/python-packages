@@ -13,7 +13,7 @@
   types-requests,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "retryhttp";
   version = "1.4.0";
   pyproject = true;
@@ -21,7 +21,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "austind";
     repo = "retryhttp";
-    tag = "release/v${version}";
+    tag = "release/v${finalAttrs.version}";
     hash = "sha256-wUz5cC8O//TqlalDoF1KtUCqONnfCShFv3hU4k4fzuM=";
   };
 
@@ -45,4 +45,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/austind/retryhttp";
     license = lib.licenses.apsl20;
   };
-}
+})

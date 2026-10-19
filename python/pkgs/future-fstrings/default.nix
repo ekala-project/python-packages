@@ -6,13 +6,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "future-fstrings";
   version = "1.2.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit version;
+    inherit (finalAttrs) version;
     pname = "future_fstrings";
     sha256 = "6cf41cbe97c398ab5a81168ce0dbb8ad95862d3caf23c21e4430627b90844089";
   };
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     mainProgram = "future-fstrings-show";
     license = lib.licenses.mit;
   };
-}
+})

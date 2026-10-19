@@ -10,7 +10,7 @@
   oldest-supported-numpy,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "bx-python";
   version = "0.15.1";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "bxlab";
     repo = "bx-python";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-2V05c7+kRBNq62DtRZpgyZKMlzveWDXOKrMUiOLzkRU=";
   };
 
@@ -59,4 +59,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     platforms = [ "x86_64-linux" ];
   };
-}
+})

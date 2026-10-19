@@ -11,7 +11,7 @@
   typer,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "trx-python";
   version = "0.5.0";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "tee-ar-ex";
     repo = "trx-python";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-2rWFjnvOIMT++tk9Dcf3j/rsfGf+uQjueeR0pKMZqZM=";
   };
 
@@ -43,4 +43,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/tee-ar-ex/trx-python";
     license = lib.licenses.bsd2;
   };
-}
+})

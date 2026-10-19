@@ -7,14 +7,14 @@
   packaging,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "deprecation-alias";
   version = "0.4.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "deprecation_alias";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-pY0udEkceDTp0xh4jaYCcvovga64FLQFWkupCgpBdA8=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/domdfcoding/deprecation-alias";
     license = lib.licenses.mit;
   };
-}
+})

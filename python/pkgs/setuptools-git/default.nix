@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "setuptools-git";
   version = "1.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-/2QTbaAaq7p2roiwUOcZeRjYshOcy/YUThTUcrnEBEU=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     description = "Setuptools revision control system plugin for Git";
     license = lib.licenses.bsd3;
   };
-}
+})

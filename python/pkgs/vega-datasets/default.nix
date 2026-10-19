@@ -6,14 +6,14 @@
   pandas,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "vega-datasets";
   version = "0.9.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "vega_datasets";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-nb6YNCCOjsMqtElw3zFd6RAoYeTNoT2OFDqreoDZP8A=";
   };
 
@@ -25,11 +25,11 @@ buildPythonPackage rec {
 
   meta =
     let
-      tag = lib.removeSuffix ".0" "v${version}";
+      tag = lib.removeSuffix ".0" "v${finalAttrs.version}";
     in
     {
       description = "Python package for offline access to vega datasets";
       homepage = "https://github.com/altair-viz/vega_datasets";
       license = lib.licenses.mit;
     };
-}
+})

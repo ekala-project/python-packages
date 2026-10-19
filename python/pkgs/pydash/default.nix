@@ -10,7 +10,7 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pydash";
   version = "8.0.6";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "dgilland";
     repo = "pydash";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-8DPeM9Q9NrlVF9a6vIfJLGyyB2SrWpZZRHZKqU/DT2w=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://pydash.readthedocs.io";
     license = lib.licenses.mit;
   };
-}
+})

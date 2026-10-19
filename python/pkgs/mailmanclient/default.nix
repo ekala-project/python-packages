@@ -6,13 +6,13 @@
   requests,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mailmanclient";
   version = "3.3.5";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-Y1gcYEyn6sAhSJwVqsygaklY63b2ZXTG+rBerGVN2Fc=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://www.gnu.org/software/mailman/";
     license = lib.licenses.lgpl3Plus;
   };
-}
+})

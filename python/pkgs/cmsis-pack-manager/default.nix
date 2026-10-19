@@ -9,7 +9,7 @@
   pyyaml,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "cmsis-pack-manager";
   version = "0.6.0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pyocd";
     repo = "cmsis-pack-manager";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-kb0VSg89qglL6Q5kx1nEN1OW1GYoccBTITtPw2/dXTY=";
   };
 
@@ -45,4 +45,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pyocd/cmsis-pack-manager";
     license = lib.licenses.asl20;
   };
-}
+})

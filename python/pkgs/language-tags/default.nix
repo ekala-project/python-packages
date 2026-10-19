@@ -6,7 +6,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "language-tags";
   version = "1.2.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "OnroerendErfgoed";
     repo = "language-tags";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-T9K290seKhQLqW36EfA9kn3WveKCmyjN4Mx2j50qIEk=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://language-tags.readthedocs.io/en/latest/";
     license = lib.licenses.mit;
   };
-}
+})

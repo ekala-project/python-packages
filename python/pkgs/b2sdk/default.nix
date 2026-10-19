@@ -19,7 +19,7 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "b2sdk";
   version = "2.12.0";
   pyproject = true;
@@ -27,7 +27,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Backblaze";
     repo = "b2-sdk-python";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-JzJ83+W9k5ys8dj0Q3X4MY+GH4m8/crvKmeQKOttspM=";
   };
 
@@ -70,4 +70,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Backblaze/b2-sdk-python";
     license = lib.licenses.mit;
   };
-}
+})

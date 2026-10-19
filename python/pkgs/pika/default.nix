@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pika";
   version = "1.4.4";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-jPyLM6XLFuczvWDP/KlzLA0ddh7NgKifNO198s041tY=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://pika.readthedocs.org";
     license = lib.licenses.bsd3;
   };
-}
+})

@@ -9,14 +9,14 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-databoxedge";
   version = "3.0.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_mgmt_databoxedge";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-dyJm7i3ObN3n0oueehU7P9V9J/ErRzdXQuI7P5/aJOs=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/databox/azure-mgmt-databox";
     license = lib.licenses.mit;
   };
-}
+})

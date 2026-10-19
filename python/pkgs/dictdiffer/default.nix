@@ -7,7 +7,7 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "dictdiffer";
   version = "0.9.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "inveniosoftware";
     repo = "dictdiffer";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-lQyPs3lQWtsvNPuvvwJUTDzrFaOX5uwGuRHe3yWUheU=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/inveniosoftware/dictdiffer";
     license = lib.licenses.mit;
   };
-}
+})

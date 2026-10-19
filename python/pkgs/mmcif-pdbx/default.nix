@@ -6,7 +6,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mmcif-pdbx";
   version = "2.1.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Electrostatics";
     repo = "mmcif_pdbx";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-HzRJ8bzUHAmF7WA20DefvgSNDxMaqJCxfgqTHrS0BqU=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Electrostatics/mmcif_pdbx";
     license = lib.licenses.cc0;
   };
-}
+})

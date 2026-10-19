@@ -7,7 +7,7 @@
   urllib3,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "downloader-cli";
   version = "0.3.4";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "deepjyoti30";
     repo = "downloader-cli";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-E2K3n9qCQofm4gXu1l7/0iMoJsniuzhsBUplr4aZ39s=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/deepjyoti30/downloader-cli";
     license = lib.licenses.mit;
   };
-}
+})

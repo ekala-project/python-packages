@@ -14,7 +14,7 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "spglib";
   version = "2.7.0";
   pyproject = true;
@@ -22,7 +22,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "spglib";
     repo = "spglib";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-RFvd/j/14YRIcQTpnYPx5edeF3zbHbi90jb32i3ZU/c=";
   };
 
@@ -51,4 +51,4 @@ buildPythonPackage rec {
     homepage = "https://spglib.github.io/spglib/";
     license = lib.licenses.bsd3;
   };
-}
+})

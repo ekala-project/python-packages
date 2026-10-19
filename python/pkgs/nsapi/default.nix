@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "nsapi";
   version = "3.2.1";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "aquatix";
     repo = "ns-api";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-eZT6DU68wcEYyoFejECuluzit9MDA269zaKVFWpSuc8=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/aquatix/ns-api/";
     license = lib.licenses.mit;
   };
-}
+})

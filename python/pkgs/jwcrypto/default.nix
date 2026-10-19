@@ -7,13 +7,13 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jwcrypto";
   version = "1.6.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-AqgrCjo2slUzCdeMZeHA4zULZA/kCR9T9m9YKxH0k3g=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     description = "Implementation of JOSE Web standards";
     license = lib.licenses.lgpl3Plus;
   };
-}
+})

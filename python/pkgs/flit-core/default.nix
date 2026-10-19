@@ -4,7 +4,7 @@
   flit,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "flit-core";
   inherit (flit) version;
   pyproject = true;
@@ -19,4 +19,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pypa/flit";
     license = lib.licenses.bsd3;
   };
-}
+})

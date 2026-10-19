@@ -7,7 +7,7 @@
   prompt-toolkit,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "questionary";
   version = "2.1.1";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "tmbo";
     repo = "questionary";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-r7F5y6KD6zonQGtO/9OuCTMTWdkCdd9aqTgKg6eWp08=";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/tmbo/questionary";
     license = lib.licenses.mit;
   };
-}
+})

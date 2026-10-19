@@ -7,7 +7,7 @@
   gitUpdater,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "colorful";
   version = "0.5.8";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "timofurrer";
     repo = "colorful";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-nztVTfBimRDXwPYk3LNMZKa1ItbgqM2ukgZs8hI8TwE=";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/timofurrer/colorful";
     license = lib.licenses.mit;
   };
-}
+})

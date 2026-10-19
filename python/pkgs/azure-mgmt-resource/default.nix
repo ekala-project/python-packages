@@ -9,14 +9,14 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-resource";
   version = "26.0.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_mgmt_resource";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-VCJ8XbBtO+TdS3etiFsnPp6yYG0d5lPFtTQGbPu2DAw=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/resources/azure-mgmt-resource";
     license = lib.licenses.mit;
   };
-}
+})

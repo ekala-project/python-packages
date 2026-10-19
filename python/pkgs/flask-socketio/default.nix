@@ -7,14 +7,14 @@
   python-socketio,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "flask-socketio";
   version = "5.6.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "flask_socketio";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-/lvZlcPtTampjzNdDYMPoaGdhKZHifYmVkKmcf2srqw=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/miguelgrinberg/Flask-SocketIO/";
     license = lib.licenses.mit;
   };
-}
+})

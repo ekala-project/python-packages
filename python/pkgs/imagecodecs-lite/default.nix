@@ -9,13 +9,13 @@
   cython,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "imagecodecs-lite";
   version = "2019.12.3";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     sha256 = "0s4xb17qd7vimc46rafbjnibj4sf0lnv8cwl22k1h6zb7jhqmlcm";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://www.lfd.uci.edu/~gohlke/";
     license = lib.licenses.bsd3;
   };
-}
+})

@@ -10,7 +10,7 @@
   sphinx,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "everett";
   version = "3.5.0";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "willkg";
     repo = "everett";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-5cjPV2pt2x8RmaGWTRWeX3Nb1QeDd7245FZ0tEmYCSk=";
   };
 
@@ -44,4 +44,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/willkg/everett";
     license = lib.licenses.mpl20;
   };
-}
+})

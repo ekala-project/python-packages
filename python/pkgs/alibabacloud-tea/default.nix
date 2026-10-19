@@ -7,13 +7,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "alibabacloud-tea";
   version = "0.4.3";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-7IBT0KqNQ+vh3rYy1cVAQzmznsmhigcH1Xdlg4QYUEo=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://pypi.org/project/alibabacloud-tea/";
     license = lib.licenses.asl20;
   };
-}
+})

@@ -9,7 +9,7 @@
   grpcio-status,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "google-cloud-core";
   version = "2.5.0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "googleapis";
     repo = "python-cloud-core";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-mB0gHxyK+g+e5I/3TRVAyQzPu005ug7fTvRNxciJ9LQ=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/googleapis/python-cloud-core";
     license = lib.licenses.asl20;
   };
-}
+})

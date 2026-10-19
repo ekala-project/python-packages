@@ -5,13 +5,13 @@
   poetry-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "flexmock";
   version = "0.13.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-aCnXoNf3Rtswh9qP2mL5JOUt9+zkBRwvWa1YbPWteXc=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     description = "Testing library that makes it easy to create mocks, stubs and fakes";
     license = lib.licenses.bsdOriginal;
   };
-}
+})

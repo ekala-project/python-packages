@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "PasteDeploy";
   version = "3.1.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-nduvFS+AlUOKn+gfgseKZxS5KujgZr7UGLan/2oJWpU=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Pylons/pastedeploy";
     license = lib.licenses.mit;
   };
-}
+})

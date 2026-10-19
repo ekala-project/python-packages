@@ -6,13 +6,13 @@
   gast,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "beniget";
   version = "0.5.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-568R+o7H3j0+s9mLHnItFdRAF9izXYqhHVT2cZsxLyI=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/serge-sans-paille/beniget";
     license = lib.licenses.bsd3;
   };
-}
+})

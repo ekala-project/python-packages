@@ -7,13 +7,13 @@
   packaging,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "auditwheel";
   version = "6.8.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-0AfE/YycS1ETaQqwsVngXFqpstMbae/ECHWCbMCVWUs=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     mainProgram = "auditwheel";
     platforms = lib.platforms.linux;
   };
-}
+})

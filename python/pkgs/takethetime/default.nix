@@ -7,14 +7,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "takethetime";
   version = "0.3.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "TakeTheTime";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-2+MEU6G1lqOPni4/qOGtxa8tv2RsoIN61cIFmhb+L/k=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ErikBjare/TakeTheTime";
     license = lib.licenses.mit;
   };
-}
+})

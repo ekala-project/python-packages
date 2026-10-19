@@ -11,13 +11,13 @@
   notebook-shim,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "nbclassic";
   version = "1.2.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-c27FBIOlRIWXHbITvpIH405R/BRMeDQ2JbaZF0I2RLo=";
   };
 
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jupyter/nbclassic";
     license = lib.licenses.bsd3;
   };
-}
+})

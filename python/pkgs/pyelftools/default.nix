@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyelftools";
   version = "0.32";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "eliben";
     repo = "pyelftools";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-58Twjf7ECOPynQ5KPCTDQWdD3nb7ADJZISozWGRGoXM=";
   };
 
@@ -44,4 +44,4 @@ buildPythonPackage rec {
     ];
     mainProgram = "readelf.py";
   };
-}
+})

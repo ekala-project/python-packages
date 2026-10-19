@@ -6,7 +6,7 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pegen";
   version = "0.3.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "we-like-parsers";
     repo = "pegen";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-P4zX8za9lBlXhNPkQe9p136ggZEJh6fHfBr+DQKvtTg=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/we-like-parsers/pegen";
     license = lib.licenses.mit;
   };
-}
+})

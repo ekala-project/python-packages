@@ -5,14 +5,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jsonrpclib-pelix";
   version = "1.2.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "jsonrpclib_pelix";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-NTtmcHwPxCY+3I/Wu9Rxt67egjqD5NvxYUsMg67iDxg=";
   };
 
@@ -25,4 +25,4 @@ buildPythonPackage rec {
     description = "JSON RPC client library - Pelix compatible fork";
     license = lib.licenses.asl20;
   };
-}
+})

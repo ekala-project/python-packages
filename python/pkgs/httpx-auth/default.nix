@@ -11,7 +11,7 @@
   time-machine,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "httpx-auth";
   version = "0.23.1";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Colin-b";
     repo = "httpx_auth";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-wrPKUAGBzzuWNtwYtTtqOhb1xqYgc83uxn4rjbfDPmo=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Colin-b/httpx_auth";
     license = lib.licenses.mit;
   };
-}
+})

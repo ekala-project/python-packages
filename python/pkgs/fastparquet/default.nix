@@ -22,7 +22,7 @@
   python-lzo,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "fastparquet";
   version = "2026.5.0";
   pyproject = true;
@@ -30,7 +30,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "dask";
     repo = "fastparquet";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-thvoMXXiGtHGcJ0/IrGujjhVAvSmTMGmrlDHjG8R7PQ=";
   };
 
@@ -63,4 +63,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/dask/fastparquet";
     license = lib.licenses.asl20;
   };
-}
+})

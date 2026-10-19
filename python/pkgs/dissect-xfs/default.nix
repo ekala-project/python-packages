@@ -9,7 +9,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "dissect-xfs";
   version = "3.13";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "fox-it";
     repo = "dissect.xfs";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-dFM/xYJR3wBvOe/8rLJz4AK2jmp67T5vo/4TCMRSXzw=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/fox-it/dissect.xfs";
     license = lib.licenses.agpl3Only;
   };
-}
+})

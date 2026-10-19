@@ -49,7 +49,7 @@
   psycopg2,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "flask-admin";
   version = "2.2.0";
   pyproject = true;
@@ -57,7 +57,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "flask-admin";
     repo = "flask-admin";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-lRLyGvCat6nBixFKkrn4NxeVF52Hl32admAL37mf9wc=";
   };
 
@@ -126,4 +126,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/flask-admin/flask-admin/";
     license = lib.licenses.bsd3;
   };
-}
+})

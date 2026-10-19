@@ -8,7 +8,7 @@
   pytest,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "coreschema";
   version = "0.0.4";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     repo = "python-coreschema";
     owner = "core-api";
-    tag = version;
+    tag = finalAttrs.version;
     sha256 = "027pc753mkgbb3r1v1x7dsdaarq93drx0f79ppvw9pfkcjcq6wb1";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ivegotasthma/python-coreschema";
     license = lib.licenses.bsd3;
   };
-}
+})

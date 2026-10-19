@@ -8,7 +8,7 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "opentelemetry-api";
   version = "1.44.0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "open-telemetry";
     repo = "opentelemetry-python";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-e0JJL2fpDPDE/REyb0QptTYe4a6/smLrV88oKwOeG4M=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     description = "OpenTelemetry Python API";
     license = lib.licenses.asl20;
   };
-}
+})

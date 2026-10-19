@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "supervisor";
   version = "4.3.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-SivxSa30KZfhu0S3DEO2EydeyYUsPtrMqGqRZrJ+lF4=";
   };
 
@@ -25,4 +25,4 @@ buildPythonPackage rec {
     mainProgram = "supervisord";
     license = lib.licenses.free;
   };
-}
+})

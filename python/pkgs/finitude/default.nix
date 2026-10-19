@@ -9,7 +9,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "finitude";
   version = "0.1.1";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "dulitz";
     repo = "finitude";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-yCI5UCRDhw+dJoTKyjmHbAGBm3by2AyxHKlqCywnLcs=";
   };
 
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/dulitz/finitude";
     license = lib.licenses.mit;
   };
-}
+})

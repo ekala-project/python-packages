@@ -31,7 +31,7 @@
   testfixtures,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "connexion";
   version = "3.3.0";
   pyproject = true;
@@ -39,7 +39,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "spec-first";
     repo = "connexion";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-mUnot9kdUgpxMXjKnkRzK9Dp2c7ibJzv4qX61ZPuJHM=";
   };
 
@@ -73,4 +73,4 @@ buildPythonPackage rec {
     license = lib.licenses.asl20;
     mainProgram = "connexion";
   };
-}
+})

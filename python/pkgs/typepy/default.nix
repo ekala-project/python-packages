@@ -10,7 +10,7 @@
   tcolorpy,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "typepy";
   version = "2.0.0";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "thombashi";
     repo = "typepy";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-QzfzAWQjKQBIVkgH+dPVVhlk717R71DiOhXZyfooJus=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/thombashi/typepy";
     license = lib.licenses.mit;
   };
-}
+})

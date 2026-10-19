@@ -6,13 +6,13 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "Twiggy";
   version = "0.5.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-eTiEAnWXL2zomZSlvfsLhPA4YwGgQ6lgr2NklS54/+Q=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "http://twiggy.wearpants.org";
     license = lib.licenses.bsd3;
   };
-}
+})

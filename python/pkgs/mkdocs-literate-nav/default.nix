@@ -6,7 +6,7 @@
   mkdocs,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mkdocs-literate-nav";
   version = "0.6.3";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "oprypin";
     repo = "mkdocs-literate-nav";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-YsWZhMGmOaZjJpQSPddW3TlBCieefQ42Tne85fdP1t0=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/oprypin/mkdocs-literate-nav";
     license = lib.licenses.mit;
   };
-}
+})

@@ -14,13 +14,13 @@
   filelock,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "tldextract";
   version = "5.3.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-wBdDG8CADy09G1fM424GZo8JMPYKbYxGFdTiuNopj6k=";
   };
 
@@ -43,4 +43,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/john-kurkowski/tldextract";
     license = lib.licenses.bsd3;
   };
-}
+})

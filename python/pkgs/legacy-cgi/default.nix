@@ -5,7 +5,7 @@
   hatchling,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "legacy-cgi";
   version = "2.6.4";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "jackrosenthal";
     repo = "legacy-cgi";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-2CCYRRWP8FP54AcLnehJ0Kj3F3U4cz8vnesSj5EakdA=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jackrosenthal/legacy-cgi";
     license = lib.licenses.psfl;
   };
-}
+})

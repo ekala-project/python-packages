@@ -23,7 +23,7 @@
   tifffile,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "scikit-image";
   version = "0.26.0";
   pyproject = true;
@@ -31,7 +31,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "scikit-image";
     repo = "scikit-image";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-VpvlG2ECbq+FWLZ4RfdbbR3V6Fbw0RIvnVp+w0Rp+8o=";
   };
 
@@ -39,7 +39,7 @@ buildPythonPackage rec {
     patchShebangs src/skimage/_build_utils/{version,cythoner}.py
 
     substituteInPlace src/skimage/_build_utils/version.py \
-      --replace-fail "version = version_from_init()" "version = \"${version}\""
+      --replace-fail "version = version_from_init()" "version = \"${finalAttrs.version}\""
   '';
 
   build-system = [
@@ -81,4 +81,4 @@ buildPythonPackage rec {
     homepage = "https://scikit-image.org";
     license = lib.licenses.bsd3;
   };
-}
+})

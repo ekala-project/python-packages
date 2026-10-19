@@ -16,7 +16,7 @@
   nix-update-script,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "whenever";
   version = "0.10.2";
   pyproject = true;
@@ -24,7 +24,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ariebovenberg";
     repo = "whenever";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-D3jNrxNTBbSheymnI72xAhdvvRzsbjIk+Gp82X7AkdU=";
   };
 
@@ -56,4 +56,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ariebovenberg/whenever";
     license = lib.licenses.mit;
   };
-}
+})

@@ -6,14 +6,14 @@
   packaging,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyproject-metadata";
   version = "0.12.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "pyproject_metadata";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-iAmk32/ggnmzmoiQZpUG7TFY4GF4Vaya/wmPy+dyrkw=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/FFY00/python-pyproject-metadata";
     license = lib.licenses.mit;
   };
-}
+})

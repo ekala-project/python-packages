@@ -10,7 +10,7 @@
   pandas,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "numpy-groupies";
   version = "0.11.3";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ml31415";
     repo = "numpy-groupies";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-pg9hOtIgS8pB/Y9Xqto9Omsdg8TxaA5ZGE1Qh1DCceU=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     description = "Optimised tools for group-indexing operations: aggregated sum and more";
     license = lib.licenses.bsd2;
   };
-}
+})

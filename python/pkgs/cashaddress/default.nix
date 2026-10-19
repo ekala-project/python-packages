@@ -6,7 +6,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "cashaddress";
   version = "1.0.6-unstable-2019-05-15";
   pyproject = true;
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/oskyk/cashaddress";
     license = lib.licenses.gpl3Only;
   };
-}
+})

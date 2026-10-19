@@ -8,7 +8,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "cxxheaderparser";
   version = "1.8.1";
   pyproject = true;
@@ -16,13 +16,13 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "robotpy";
     repo = "cxxheaderparser";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-l81b/M6ir3aWnycrl8RfuN3JQYkcRcTFRhejBWXGgb4=";
   };
 
   postPatch = ''
     # version.py is generated based on latest git tag
-    echo "__version__ = '${version}'" > cxxheaderparser/version.py
+    echo "__version__ = '${finalAttrs.version}'" > cxxheaderparser/version.py
   '';
 
   build-system = [
@@ -43,4 +43,4 @@ buildPythonPackage rec {
     license = lib.licenses.bsd3;
     platforms = lib.platforms.unix;
   };
-}
+})

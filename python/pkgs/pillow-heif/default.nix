@@ -29,7 +29,7 @@ let
   });
 in
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pillow-heif";
   version = "1.7.0";
   pyproject = true;
@@ -37,7 +37,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "bigcat88";
     repo = "pillow_heif";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-OATq+z6lQLEYh3tFCcW5WRTdAFrjjnZ4yNig8NPiUTM=";
   };
 
@@ -80,4 +80,4 @@ buildPythonPackage rec {
       lgpl3
     ];
   };
-}
+})

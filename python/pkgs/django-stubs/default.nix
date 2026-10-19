@@ -14,7 +14,7 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-stubs";
   version = "5.2.9";
   pyproject = true;
@@ -22,7 +22,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "typeddjango";
     repo = "django-stubs";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-42FluS2fmfgj4qk2u+Z/7TGhXY4WKUc0cI00go6rnGc=";
   };
 
@@ -58,4 +58,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/typeddjango/django-stubs";
     license = lib.licenses.mit;
   };
-}
+})

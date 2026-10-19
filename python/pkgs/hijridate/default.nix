@@ -6,7 +6,7 @@
   hatch-fancy-pypi-readme,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "hijridate";
   version = "2.6.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "dralshehri";
     repo = "hijridate";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-xnFF81l1ZqtH91NzYvjzXpXpN/zeHdARJYx6L5VNBSo=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/dralshehri/hijridate";
     license = lib.licenses.mit;
   };
-}
+})

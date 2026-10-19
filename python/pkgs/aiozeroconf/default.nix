@@ -6,13 +6,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aiozeroconf";
   version = "0.1.8";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-ENupazLlOqfwHugNLEgeTZjPOYxRgznuCKHpU5unlxw=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     license = lib.licenses.lgpl21Only;
     mainProgram = "aiozeroconf";
   };
-}
+})

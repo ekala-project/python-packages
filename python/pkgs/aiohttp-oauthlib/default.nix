@@ -8,13 +8,13 @@
   aiohttp,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aiohttp-oauthlib";
   version = "0.1.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-iTzRpZ3dDC5OmA46VE+XELfE/7nie0zQOLUf4dcDk7c=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://git.sr.ht/~whynothugo/aiohttp-oauthlib";
     license = lib.licenses.isc;
   };
-}
+})

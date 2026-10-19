@@ -6,7 +6,7 @@
   botocore,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "s3transfer";
   version = "0.16.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "boto";
     repo = "s3transfer";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-dpDlsZtLjd6r4kLkIDPG6ZPFFs6/4elYiHk2HDpa9+4=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/boto/s3transfer";
     license = lib.licenses.asl20;
   };
-}
+})

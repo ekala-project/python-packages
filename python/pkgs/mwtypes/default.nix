@@ -8,7 +8,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mwtypes";
   version = "0.4.0";
   pyproject = true;
@@ -43,4 +43,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mediawiki-utilities/python-mwtypes";
     license = lib.licenses.mit;
   };
-}
+})

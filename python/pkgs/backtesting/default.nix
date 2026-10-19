@@ -9,13 +9,13 @@
   bokeh,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "backtesting";
   version = "0.6.6";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-hErxHJYfoPR7/dsEtEhBb5OwK3Mfqt+j34uYpECB/Qs=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://kernc.github.io/backtesting.py/";
     license = lib.licenses.agpl3Only;
   };
-}
+})

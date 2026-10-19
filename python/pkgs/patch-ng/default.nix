@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "patch-ng";
   version = "1.19.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-J0hHkvSsHBX+Lz5M7PdLuYM9M7dccVtx0Zn34efR94Y=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     description = "Library to parse and apply unified diffs";
     license = lib.licenses.mit;
   };
-}
+})

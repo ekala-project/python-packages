@@ -8,13 +8,13 @@
   opencv-python,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "imagecorruptions";
   version = "1.1.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     sha256 = "044e173f24d5934899bdbf3596bfbec917e8083e507eed583ab217abebbe084d";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     description = "This package provides a set of image corruptions";
     license = lib.licenses.asl20;
   };
-}
+})

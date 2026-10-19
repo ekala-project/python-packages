@@ -20,7 +20,7 @@ let
   zero_or_one = cond: if cond then 1 else 0;
 in
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyarrow";
   inherit (arrow-cpp) version src;
   pyproject = true;
@@ -104,4 +104,4 @@ buildPythonPackage rec {
     license = lib.licenses.asl20;
     platforms = lib.platforms.unix;
   };
-}
+})

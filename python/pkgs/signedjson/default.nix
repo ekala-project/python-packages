@@ -8,13 +8,13 @@
   pynacl,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "signedjson";
   version = "1.1.4";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-zZHFavU/Fp7wMsYunEoyktwViGaTMxjQWS40Yts9ZJI=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/matrix-org/python-signedjson";
     license = lib.licenses.asl20;
   };
-}
+})

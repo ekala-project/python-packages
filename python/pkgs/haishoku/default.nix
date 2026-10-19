@@ -8,7 +8,7 @@
   pillow,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "haishoku";
   version = "1.1.8";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "LanceGin";
     repo = "haishoku";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-LSoZopCaM5vbknGS9gG13OZIgghgqJvPtktUkBCH04Q=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/LanceGin/haishoku";
     license = lib.licenses.mit;
   };
-}
+})

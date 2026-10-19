@@ -15,7 +15,7 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "midea-local";
   version = "11.0.1";
   pyproject = true;
@@ -23,7 +23,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "midea-lan";
     repo = "midea-local";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-9Yx3i/zZvVqZrlsbLxkWWFAITFnwOAaaiBoFfjaYbKw=";
   };
 
@@ -47,4 +47,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/midea-lan/midea-local";
     license = lib.licenses.mit;
   };
-}
+})

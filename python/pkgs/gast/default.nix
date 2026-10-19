@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "gast";
   version = "0.7.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-C7FM0bgGci6R3bq2+4a7oUjCK0Dn/xHiSJdOBMit/a4=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/serge-sans-paille/gast/";
     license = lib.licenses.bsd3;
   };
-}
+})

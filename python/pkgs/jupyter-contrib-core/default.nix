@@ -9,7 +9,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jupyter-contrib-core";
   version = "0.4.2";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "jupyter-contrib";
     repo = "jupyter_contrib_core";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-UTtK+aKxBFkqKuHrt1ox8vdHyFz/9HiKFl7U4UQcG88=";
   };
 
@@ -43,4 +43,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jupyter-contrib/jupyter_contrib_core";
     license = lib.licenses.bsd3;
   };
-}
+})

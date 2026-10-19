@@ -10,13 +10,13 @@
   tempora,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "portend";
   version = "3.2.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-qp1Aqx+eFL231AH0IhDfNdAXybl5kbrrGFaM7fuMZIk=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     description = "Monitor TCP ports for bound or unbound states";
     license = lib.licenses.bsd3;
   };
-}
+})

@@ -8,14 +8,14 @@
   django,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-celery-results";
   version = "2.6.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "django_celery_results";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-mrzYNq5rYQY3eSRNiIeoj+gLv6uhQ98208sHA0ZxJ3w=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/celery/django-celery-results";
     license = lib.licenses.bsd3;
   };
-}
+})

@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "dungeon-eos";
   version = "0.0.5";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "SkyTemple";
     repo = "dungeon-eos";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-Z1fGtslXP8zcZmVeWjRrbcM2ZJsfbrWjpLWZ49uSCRY=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     description = "Package that simulates PMD EoS dungeon generation";
     license = lib.licenses.gpl3Plus;
   };
-}
+})

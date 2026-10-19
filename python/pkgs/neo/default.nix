@@ -8,7 +8,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "neo";
   version = "0.14.5";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "NeuralEnsemble";
     repo = "python-neo";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-IB+RuQBJTu0Ss7PLdBpONBl50xdTiR512ni+w3Z+DEM=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://neuralensemble.org/neo/";
     license = lib.licenses.bsd3;
   };
-}
+})

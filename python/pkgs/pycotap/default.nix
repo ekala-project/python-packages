@@ -7,13 +7,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pycotap";
   version = "1.3.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-Z0NV8BMAvgPff4cXhOSYZSwtiawZzXfujmFlJjSi+Do=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://el-tramo.be/pycotap";
     license = lib.licenses.mit;
   };
-}
+})

@@ -8,7 +8,7 @@
   markdown,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mkdocs-graphviz";
   version = "1.5";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitLab {
     owner = "rod2ik";
     repo = "mkdocs-graphviz";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-5pc5RpOrDSONZcgIQMNsVxYwFyJ+PMcIt0GXDxCEyOg=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://gitlab.com/rod2ik/mkdocs-graphviz";
     license = lib.licenses.gpl3Only;
   };
-}
+})

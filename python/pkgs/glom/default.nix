@@ -12,13 +12,13 @@
   face,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "glom";
   version = "25.12.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-GufaiL42k99ArSe99Xp2WlXAdchslxvN3WeSdAPrAGk=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mahmoud/glom";
     license = lib.licenses.bsd3;
   };
-}
+})

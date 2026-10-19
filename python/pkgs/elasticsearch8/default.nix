@@ -11,13 +11,13 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "elasticsearch8";
   version = "8.19.3";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-fv/pWzYCQbbVbvaCGQN6kK0PVnI2FNtUu+V9MwWEAvQ=";
   };
 
@@ -45,4 +45,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/elasticsearch/elasticsearch-py";
     license = lib.licenses.asl20;
   };
-}
+})

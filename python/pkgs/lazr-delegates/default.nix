@@ -6,14 +6,14 @@
   zope-interface,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "lazr-delegates";
   version = "4.0.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "lazr_delegates";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-uxXCGgG1d6tfrHPaYbFU3W/NN3868C5SIHe0rhH+7Tc=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://launchpad.net/lazr.delegates";
     license = lib.licenses.lgpl3Only;
   };
-}
+})

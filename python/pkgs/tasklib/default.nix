@@ -9,13 +9,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "tasklib";
   version = "2.5.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-XM1zG1JjbdEEV6i42FjLDQJv+qsePnUbr3kb+APjfXs=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     platforms = lib.platforms.all;
     license = lib.licenses.bsd3;
   };
-}
+})

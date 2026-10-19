@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytest-pycodestyle";
   version = "2.5.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "henry0312";
     repo = "pytest-pycodestyle";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-X/vacxI0RFHIqlZ2omzvvFDePS/SZYSFQHEmfcbvf/4=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/henry0312/pytest-pycodestyle";
     license = lib.licenses.mit;
   };
-}
+})

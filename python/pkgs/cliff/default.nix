@@ -12,13 +12,13 @@
   sphinxHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "cliff";
   version = "4.15.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-7KaZ9rOQx1Xm7RgWp2zfwav19e99HO4Z84M2Z6Oh/jk=";
   };
 
@@ -45,4 +45,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/openstack/cliff";
     license = lib.licenses.asl20;
   };
-}
+})

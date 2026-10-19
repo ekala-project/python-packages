@@ -13,7 +13,7 @@
 let
   antlr4 = pkgs.antlr4;
 in
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "omegaconf";
   version = "2.3.1";
   pyproject = true;
@@ -21,7 +21,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "omry";
     repo = "omegaconf";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-HvK6bNInPIkfdpNh8DifH7Wxt8m9uR+Y/qL3voIUw6w=";
   };
 
@@ -58,4 +58,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/omry/omegaconf";
     license = lib.licenses.bsd3;
   };
-}
+})

@@ -14,7 +14,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pycurl";
   version = "7.47.0";
   pyproject = true;
@@ -52,4 +52,4 @@ buildPythonPackage rec {
       mit
     ];
   };
-}
+})

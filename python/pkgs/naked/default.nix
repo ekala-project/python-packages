@@ -9,7 +9,7 @@
   wheel,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "naked";
   version = "0.1.32";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "chrissimpkins";
     repo = "naked";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-KhygnURFggvUTR9wwWtORtfQES8ANd5sIaCONvIhfRM=";
   };
 
@@ -47,4 +47,4 @@ buildPythonPackage rec {
     downloadPage = "https://github.com/chrissimpkins/naked/tags";
     license = lib.licenses.mit;
   };
-}
+})

@@ -12,7 +12,7 @@
   urllib3,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "qdrant-client";
   version = "1.19.0";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "qdrant";
     repo = "qdrant-client";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-7d5FJhG5+uMBS7juolNpeYTJkPGbORXsBj7GvZSDWts=";
   };
 
@@ -48,4 +48,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/qdrant/qdrant-client";
     license = lib.licenses.mit;
   };
-}
+})

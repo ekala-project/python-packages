@@ -7,14 +7,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "socksipy-branch";
   version = "1.01";
   pyproject = true;
 
   src = fetchPypi {
     pname = "SocksiPy-branch";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-F6lQYOKMO5A4qbjBhlxU+MHFvvFdVhv3d8m788gOhAY=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "http://code.google.com/p/socksipy-branch/";
     license = lib.licenses.bsd3;
   };
-}
+})

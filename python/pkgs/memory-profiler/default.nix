@@ -6,14 +6,14 @@
   psutil,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "memory-profiler";
   version = "0.61.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "memory_profiler";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-Tltz14ZKHRKS+3agPoKj5475NNBoKKaY2dradtogZ7A=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://pypi.org/project/memory_profiler/";
     license = lib.licenses.bsd3;
   };
-}
+})

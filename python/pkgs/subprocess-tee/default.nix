@@ -7,7 +7,7 @@
   enrich,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "subprocess-tee";
   version = "0.4.2";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pycontribs";
     repo = "subprocess-tee";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-rfI4UZdENfSQ9EbQeldv6DDGIQe5yMjboGTCOwed1AU=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     description = "Subprocess.run drop-in replacement that supports a tee mode";
     license = lib.licenses.mit;
   };
-}
+})

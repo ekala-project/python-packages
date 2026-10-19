@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "markuppy";
   version = "1.18";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-VA8xuDUHYmAzk2iJCsT0TrOXHXX9vZe0n6H4tmhVE9M=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     description = "HTML/XML generator";
     license = lib.licenses.mit;
   };
-}
+})

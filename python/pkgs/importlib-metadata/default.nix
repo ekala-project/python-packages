@@ -8,14 +8,14 @@
   zipp,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "importlib-metadata";
   version = "9.0.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "importlib_metadata";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-q4MFgLwO89thzo+ucWOJ5UYrZ+AzAYurbY+A7xcXL5k=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     homepage = "https://importlib-metadata.readthedocs.io/";
     license = lib.licenses.asl20;
   };
-}
+})

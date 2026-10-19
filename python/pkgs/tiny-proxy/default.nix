@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "tiny-proxy";
   version = "0.3.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "romis2012";
     repo = "tiny-proxy";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-zE0SnO4IfX4KynCNQXWTJlHNe3TaZodg4eyriX2RRl8=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/romis2012/tiny-proxy";
     license = lib.licenses.asl20;
   };
-}
+})

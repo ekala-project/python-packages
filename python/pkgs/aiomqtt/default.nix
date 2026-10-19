@@ -8,7 +8,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aiomqtt";
   version = "2.5.1";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "sbtinstruments";
     repo = "aiomqtt";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-f9m+mdlSADOixsKymxsKiVxgWF7JBc3kjVU+rOkC+yM=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/sbtinstruments/aiomqtt";
     license = lib.licenses.bsd3;
   };
-}
+})

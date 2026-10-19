@@ -10,7 +10,7 @@
   pyyaml,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "conda-inject";
   version = "1.3.2";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "koesterlab";
     repo = "conda-inject";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-M4+bz7ZuHlcF8tF5kSCUjjkIHG75eCCW1IJxcwxNL6o=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/koesterlab/conda-inject";
     license = lib.licenses.mit;
   };
-}
+})

@@ -11,7 +11,7 @@
   pyproj,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "morecantile";
   version = "7.0.3";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "developmentseed";
     repo = "morecantile";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-Hx4duNbTuRfOmNBLN9J6/6URe57aPc8+3SJA7rbW5zs=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     mainProgram = "morecantile";
   };
-}
+})

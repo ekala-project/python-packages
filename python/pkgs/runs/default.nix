@@ -6,13 +6,13 @@
   xmod,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "runs";
   version = "1.3.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-zKMEtjHb7+xZjHv7z7UNb+rObTqWhzS2f9QtPHKPWgU=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/rec/runs";
     license = lib.licenses.mit;
   };
-}
+})

@@ -8,13 +8,13 @@
   requests,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "opencontainers";
   version = "0.0.15";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-o6QBJMxo7aVse0xauSTxi1UEW4RYrKlhH1v6g/fvrv4=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/vsoch/oci-python";
     license = lib.licenses.mpl20;
   };
-}
+})

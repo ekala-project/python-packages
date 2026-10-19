@@ -15,13 +15,13 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "evolutionhttp";
   version = "0.0.19";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-VhWYhkrZVUDu1I6ZZTZlTUhNfpma29tEYBLoT7xBd1M=";
   };
 
@@ -44,4 +44,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/danielsmyers/evolutionhttp";
     license = lib.licenses.asl20;
   };
-}
+})

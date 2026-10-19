@@ -23,13 +23,13 @@
   webcolors,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jsonschema";
   version = "4.26.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-DCZwfi762Kob/Ft84XDz/MwuSRj/hZibqf+p+ssr4yY=";
   };
 
@@ -81,4 +81,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     mainProgram = "jsonschema";
   };
-}
+})

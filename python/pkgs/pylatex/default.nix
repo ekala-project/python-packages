@@ -6,7 +6,7 @@
   ordered-set,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pylatex";
   version = "1.4.2";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "JelteF";
     repo = "PyLaTeX";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-R6u2HDDLsli/omrtEKSRTH8Pd99gBI4iM+O0cZhoSJc=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     downloadPage = "https://github.com/JelteF/PyLaTeX/releases";
     license = lib.licenses.mit;
   };
-}
+})

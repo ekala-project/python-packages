@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "secure";
   version = "2.0.1";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "typeerror";
     repo = "secure.py";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-ZUipbCDyKd3hxLh6nE0f7DrPVLfUoRFCKPrw5KcqVHM=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/TypeError/secure.py";
     license = lib.licenses.mit;
   };
-}
+})

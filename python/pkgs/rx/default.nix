@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "Rx";
   version = "3.2.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-tlfKK0WqSF2i99z9CfrC5VT3rFH/PC+PL/li7Nlj2Rw=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ReactiveX/RxPY";
     license = lib.licenses.asl20;
   };
-}
+})

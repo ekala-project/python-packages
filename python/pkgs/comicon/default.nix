@@ -11,7 +11,7 @@
   python-slugify,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "comicon";
   version = "1.5.0";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "potatoeggy";
     repo = "comicon";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-E5Jmk/dQcEuH7kq5RL80smHUuL/Sw0F1wk4V1/4sKSQ=";
   };
 
@@ -51,4 +51,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/potatoeggy/comicon";
     license = lib.licenses.agpl3Only;
   };
-}
+})

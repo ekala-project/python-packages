@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "databackend";
   version = "0.0.3";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "machow";
     repo = "databackend";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-M5Nm33Vae6FDy4aurru4CeHjeNxyZZnqzpdkqNEvrm0=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/machow/databackend";
     license = lib.licenses.mit;
   };
-}
+})

@@ -15,7 +15,7 @@
   urllib3,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "oci";
   version = "2.185.1";
   pyproject = true;
@@ -23,7 +23,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "oracle";
     repo = "oci-python-sdk";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-nmfTEbY9tVxhkFk6gEaJ7ntetpe2XVhflrY8YmJuL2Y=";
   };
 
@@ -59,4 +59,4 @@ buildPythonPackage rec {
       upl
     ];
   };
-}
+})

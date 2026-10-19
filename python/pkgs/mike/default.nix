@@ -16,7 +16,7 @@
   fetchpatch,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mike";
   version = "2.2.0";
   pyproject = true;
@@ -24,7 +24,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "jimporter";
     repo = "mike";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-+QFtInHma433XI4EcMTpFKZVdk+x2JREo73qM35G0pQ=";
   };
 
@@ -59,4 +59,4 @@ buildPythonPackage rec {
     license = lib.licenses.bsd3;
     mainProgram = "mike";
   };
-}
+})

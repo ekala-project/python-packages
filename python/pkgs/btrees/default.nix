@@ -8,13 +8,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "btrees";
   version = "6.5";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-GHbK0OvKw/aNrc3KgBjqbLdrM0+Zkac6qFy7DLj9jPA=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "http://packages.python.org/BTrees";
     license = lib.licenses.zpl21;
   };
-}
+})

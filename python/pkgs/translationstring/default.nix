@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "translationstring";
   version = "1.4";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-v5R1ONduaboSqxcoOxA1Wp7PvAeOYSNEP0PyEH9jdvM=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://pylonsproject.org/";
     license = lib.licenses.bsd0;
   };
-}
+})

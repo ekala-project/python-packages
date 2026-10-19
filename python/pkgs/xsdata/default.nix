@@ -11,7 +11,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "xsdata";
   version = "26.2";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "tefra";
     repo = "xsdata";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-h5VGXGXQSG4o8H+Q+Z0SN9rw4mFI8EORNtB+4VAKg/k=";
   };
 
@@ -56,4 +56,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/tefra/xsdata";
     license = lib.licenses.mit;
   };
-}
+})

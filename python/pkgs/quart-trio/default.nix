@@ -10,7 +10,7 @@
   trio,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "quart-trio";
   version = "0.12.0";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pgjones";
     repo = "quart-trio";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-n41XATex20iw3ZYxud/5cTdx+F6tTQQJmP91TIw2xJo=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pgjones/quart-trio";
     license = lib.licenses.mit;
   };
-}
+})

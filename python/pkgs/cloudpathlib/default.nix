@@ -24,7 +24,7 @@
   tenacity,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "cloudpathlib";
   version = "0.25.0";
   pyproject = true;
@@ -32,7 +32,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "drivendataorg";
     repo = "cloudpathlib";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-HgAqUWvFNv7UKhOfeN6nZaU9NyYCyKYCaSiLWtEJFEw=";
   };
 
@@ -61,4 +61,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/drivendataorg/cloudpathlib";
     license = lib.licenses.mit;
   };
-}
+})

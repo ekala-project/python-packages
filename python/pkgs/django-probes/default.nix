@@ -7,7 +7,7 @@
   pytestCheckHook,
   pytest-django,
 }:
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-probes";
   version = "1.8.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "painless-software";
     repo = "django-probes";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-opto5AAUPhEsWbYh7nItUw7qNoUfOFFZ7tw5agWGBSg=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/painless-software/django-probes";
     license = lib.licenses.bsd3;
   };
-}
+})

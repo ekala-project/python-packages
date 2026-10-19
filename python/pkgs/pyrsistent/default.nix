@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyrsistent";
   version = "0.20.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-TEj3j2KrWWxnkIYITQ3RMlSuTz1scqg//fXr3vjyZaQ=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     description = "Persistent/Functional/Immutable data structures";
     license = lib.licenses.mit;
   };
-}
+})

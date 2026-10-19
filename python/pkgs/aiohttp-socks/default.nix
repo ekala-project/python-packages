@@ -7,13 +7,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aiohttp-socks";
   version = "0.12.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit version;
+    inherit (finalAttrs) version;
     pname = "aiohttp_socks";
     hash = "sha256-PK+fWkFkYREi1BK8EbL5EU/SnIXhuie7OAYNPCNr3I0=";
   };
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/romis2012/aiohttp-socks";
     license = lib.licenses.asl20;
   };
-}
+})

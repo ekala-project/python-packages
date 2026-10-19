@@ -12,7 +12,7 @@
   python,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-celery-email";
   version = "3.0.0";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pmclanahan";
     repo = "django-celery-email";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-LBavz5Nh2ObmIwLCem8nHvsuKgPwkzbS/OzFPmSje/M=";
   };
 
@@ -50,4 +50,4 @@ buildPythonPackage rec {
     description = "Django email backend that uses a celery task for sending the email";
     license = lib.licenses.bsd3;
   };
-}
+})

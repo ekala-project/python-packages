@@ -7,13 +7,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "termstyle";
   version = "0.1.11";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-73S4NpjqAUESBAzzKxoJPBqz2RxN0Y7MA+wXj9mcn58=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://pypi.org/project/python-termstyle/";
     license = lib.licenses.bsdOriginal;
   };
-}
+})

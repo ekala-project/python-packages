@@ -9,7 +9,7 @@
   numpy,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "tracerite";
   version = "2.3.1";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "sanic-org";
     repo = "tracerite";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-UXIQc5rXVaZuZj5xu2X9H38vKWAM+AoKrKfudovUhwA=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
       unlicense
     ];
   };
-}
+})

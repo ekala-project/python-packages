@@ -9,7 +9,7 @@
   zipfile2,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "okonomiyaki";
   version = "3.0.0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "enthought";
     repo = "okonomiyaki";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-xAF9Tdr+IM3lU+mcNcAWATJLZOVvbx0llqznqHLVqDc=";
   };
 
@@ -49,4 +49,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/enthought/okonomiyaki";
     license = lib.licenses.bsd3;
   };
-}
+})

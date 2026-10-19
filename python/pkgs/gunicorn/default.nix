@@ -15,7 +15,7 @@
   setproctitle,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "gunicorn";
   version = "26.2.2";
   pyproject = true;
@@ -23,7 +23,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "benoitc";
     repo = "gunicorn";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-F1zjgh5iCmy3LExWhs0tWRjiqloHEUlD4IqVp7U+ht4=";
   };
 
@@ -46,4 +46,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     mainProgram = "gunicorn";
   };
-}
+})

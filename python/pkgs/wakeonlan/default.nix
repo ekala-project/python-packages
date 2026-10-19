@@ -5,13 +5,13 @@
   poetry-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "wakeonlan";
   version = "4.0.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-HLMMSuYPhe8on099T3Azgu0ZuoQQMgbcXiseUb7J9FY=";
   };
 
@@ -25,4 +25,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/remcohaszing/pywakeonlan";
     license = lib.licenses.mit;
   };
-}
+})

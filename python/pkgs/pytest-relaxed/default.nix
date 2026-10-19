@@ -9,13 +9,13 @@
   pytest,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytest-relaxed";
   version = "2.0.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-lW6gKOww27+2gN2Oe0p/uPgKI5WV6Ius4Bi/LA1xgkg=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     description = "Relaxed test discovery/organization for pytest";
     license = lib.licenses.bsd0;
   };
-}
+})

@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "dotmap";
   version = "1.3.30";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-WCGnkz8HX7R1Y0F8DpLgt8AxFYtMmmp+VhY0ebZYs2g=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/drgrib/dotmap";
     license = lib.licenses.mit;
   };
-}
+})

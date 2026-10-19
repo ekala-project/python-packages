@@ -7,14 +7,14 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "os-service-types";
   version = "1.9.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "os_service_types";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-Hy5ftx0fb0/zHYmSZ08jaEZbwvJc2UAYAVw92/xcYX8=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/openstack/os-service-types";
     license = lib.licenses.asl20;
   };
-}
+})

@@ -6,7 +6,7 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "whisper";
   version = "1.1.10";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "graphite-project";
     repo = "whisper";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-CnCbRmI2jc67mTtfupoE1uHtobrAiWoUXbfX8YeEV6A=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     description = "Fixed size round-robin style database";
     license = lib.licenses.asl20;
   };
-}
+})

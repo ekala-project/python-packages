@@ -12,7 +12,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aiontfy";
   version = "0.8.5";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "tr4nt0r";
     repo = "aiontfy";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-LDt8JapUQcojMWyW931zt3U4QMwQew4wOly2AyYvbkI=";
   };
 
@@ -48,4 +48,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/tr4nt0r/aiontfy";
     license = lib.licenses.mit;
   };
-}
+})

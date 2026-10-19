@@ -9,7 +9,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aioeafm";
   version = "1.0.0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Jc2k";
     repo = "aioeafm";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-bL59EPvFd5vjay2sqBPGx+iL5sE/0n/EtR4K7obtDBE=";
   };
 
@@ -46,4 +46,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Jc2k/aioeafm";
     license = lib.licenses.asl20;
   };
-}
+})

@@ -9,7 +9,7 @@
   pillow,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "minexr";
   version = "1.0.2";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "cheind";
     repo = "py-minexr";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-p42rlhaHq0A9+zk6c0evRDjNR1H/ruWJqPF5+nCTR8o=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/cheind/py-minexr";
     license = lib.licenses.mit;
   };
-}
+})

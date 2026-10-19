@@ -16,7 +16,7 @@
   requests,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "valkey";
   version = "6.1.1";
   pyproject = true;
@@ -24,7 +24,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "valkey-io";
     repo = "valkey-py";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-woJYfgLNIVzTYj9q8IjXo+SXhQZkQdB/Ofv5StGy9Rc=";
   };
 
@@ -74,4 +74,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/valkey-io/valkey-py";
     license = lib.licenses.mit;
   };
-}
+})

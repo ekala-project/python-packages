@@ -8,7 +8,7 @@
   pyproject-hooks,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "build";
   version = "1.5.1";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pypa";
     repo = "build";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-vm47wuSEKfU4CjonokylTyGe62jGS/5m2dhLKhY5TPc=";
   };
 
@@ -44,4 +44,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pypa/build";
     license = lib.licenses.mit;
   };
-}
+})

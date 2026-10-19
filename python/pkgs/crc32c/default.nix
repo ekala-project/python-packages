@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "crc32c";
   version = "2.8";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ICRAR";
     repo = "crc32c";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-LPiKms0fVHmgIiwUNWGTAdGByV+Pmh9dRaF/tro2rKo=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     changelog = "https://github.com/ICRAR/crc32c/blob/master/CHANGELOG.md";
     license = lib.licenses.lgpl21;
   };
-}
+})

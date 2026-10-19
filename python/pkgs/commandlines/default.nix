@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "commandlines";
   version = "0.4.1";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "chrissimpkins";
     repo = "commandlines";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-x3iUeOTAaTKNW5Y5foMPMJcWVxu52uYZoY3Hhe3UvQ4=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/chrissimpkins/commandlines";
     license = lib.licenses.mit;
   };
-}
+})

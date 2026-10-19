@@ -8,7 +8,7 @@
   python,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "metaflow";
   version = "2.19.39";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Netflix";
     repo = "metaflow";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-1YpOVPah0dYDeA3l0xCEF0lnx0IajobxRs3ReonOH2M=";
   };
 
@@ -50,4 +50,4 @@ buildPythonPackage rec {
     homepage = "https://metaflow.org/";
     license = lib.licenses.asl20;
   };
-}
+})

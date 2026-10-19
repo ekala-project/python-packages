@@ -12,7 +12,7 @@
   tomli-w,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "dataclass-wizard";
   version = "0.39.1";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "rnag";
     repo = "dataclass-wizard";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-X4/qe1nv/NwUvQGvVqbqIgi9Ej43jwJjzXyMaKAtN2A=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     license = lib.licenses.asl20;
     mainProgram = "wiz";
   };
-}
+})

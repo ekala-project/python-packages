@@ -13,7 +13,7 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mashumaro";
   version = "3.22";
   pyproject = true;
@@ -21,7 +21,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Fatal1ty";
     repo = "mashumaro";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-/aAyylHOEjSmcjb+OKDNY0OOlR2JXepvVpVsfGbKSyw=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Fatal1ty/mashumaro";
     license = lib.licenses.asl20;
   };
-}
+})

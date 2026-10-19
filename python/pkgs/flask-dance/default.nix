@@ -21,7 +21,7 @@
   werkzeug,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "flask-dance";
   version = "7.1.0";
   pyproject = true;
@@ -29,7 +29,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "singingwolfboy";
     repo = "flask-dance";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-rKHC0G5S7l52QSrbbweMii68AZuBAgf6tYsJdPKIeUk=";
   };
 
@@ -68,4 +68,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/singingwolfboy/flask-dance";
     license = lib.licenses.mit;
   };
-}
+})

@@ -7,13 +7,13 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "keke";
   version = "0.3.0b3";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-rkMfcJvhH4XTOyCwfK70fM8dZ4nDB59urfi+FhsSPQo=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://pypi.org/project/keke/";
     license = lib.licenses.mit;
   };
-}
+})

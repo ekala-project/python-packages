@@ -10,13 +10,13 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ufoprocessor";
   version = "1.14.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     sha256 = "sha256-/TjTzDWblBcbqNP9weTe/eIgas70+X11tIUDu4rAOwE=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
   ++ fonttools.optional-dependencies.lxml
   ++ fonttools.optional-dependencies.ufo;
 
-}
+})

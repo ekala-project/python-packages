@@ -16,7 +16,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyhanko-certvalidator";
   version = "0.31.1";
   pyproject = true;
@@ -24,7 +24,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "MatthiasValvekens";
     repo = "pyhanko";
-    tag = "pyhanko-certvalidator/v${version}";
+    tag = "pyhanko-certvalidator/v${finalAttrs.version}";
     hash = "sha256-mZ9u3mQ8JZIq+G1iwNQST8r7/rCWi/UW0j1xfeV9zFM=";
   };
 
@@ -32,9 +32,9 @@ buildPythonPackage rec {
 
   postPatch = ''
     substituteInPlace src/pyhanko_certvalidator/version.py \
-      --replace-fail "0.0.0.dev1" "${version}" \
-      --replace-fail "(0, 0, 0, 'dev1')" "tuple(\"${version}\".split(\".\"))"
-    substituteInPlace pyproject.toml --replace-fail "0.0.0.dev1" "${version}"
+      --replace-fail "0.0.0.dev1" "${finalAttrs.version}" \
+      --replace-fail "(0, 0, 0, 'dev1')" "tuple(\"${finalAttrs.version}\".split(\".\"))"
+    substituteInPlace pyproject.toml --replace-fail "0.0.0.dev1" "${finalAttrs.version}"
   '';
 
   build-system = [ setuptools ];
@@ -59,4 +59,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/MatthiasValvekens/pyHanko/tree/master/pkgs/pyhanko-certvalidator";
     license = lib.licenses.mit;
   };
-}
+})

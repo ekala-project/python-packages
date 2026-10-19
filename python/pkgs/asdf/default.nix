@@ -22,7 +22,7 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "asdf";
   version = "5.4.0";
   pyproject = true;
@@ -30,7 +30,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "asdf-format";
     repo = "asdf";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-kvo53BT/jCnMj772GiwI2v0KTQcRVQqbYTRIOyS7PRM=";
   };
 
@@ -58,4 +58,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/asdf-format/asdf";
     license = lib.licenses.bsd3;
   };
-}
+})

@@ -9,7 +9,7 @@
   stdenv,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "cffi";
   version = "2.1.1";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "python-cffi";
     repo = "cffi";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-01cqKx1TukxJJy00Cs/iuqc1+Yrq2//JJHfsUnJYNyw=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://cffi.readthedocs.org/";
     license = lib.licenses.mit0;
   };
-}
+})

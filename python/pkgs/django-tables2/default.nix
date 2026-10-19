@@ -21,7 +21,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-tables2";
   version = "3.0.0";
   pyproject = true;
@@ -29,7 +29,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "jieter";
     repo = "django-tables2";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-hy1eh+cSYK7TPgenCEo8J7msKgvk7i69PUb6m9NuCIA=";
   };
 
@@ -60,4 +60,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jieter/django-tables2";
     license = lib.licenses.bsd2;
   };
-}
+})

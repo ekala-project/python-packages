@@ -14,7 +14,7 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "hishel";
   version = "1.3.1";
   pyproject = true;
@@ -22,7 +22,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "karpetrosyan";
     repo = "hishel";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-KVfbWhGpbLGzK3fQOuT+KtBi13z5ZZBP8NOsIIfObMc=";
   };
 
@@ -57,4 +57,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/karpetrosyan/hishel";
     license = lib.licenses.bsd3;
   };
-}
+})

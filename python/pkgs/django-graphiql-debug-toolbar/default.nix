@@ -10,7 +10,7 @@
   graphene-django,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-graphiql-debug-toolbar";
   version = "0.2.0";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "flavors";
     repo = "django-graphiql-debug-toolbar";
-    tag = version;
+    tag = finalAttrs.version;
     sha256 = "0fikr7xl786jqfkjdifymqpqnxy4qj8g3nlkgfm24wwq0za719dw";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
 
   pythonImportsCheck = [ "graphiql_debug_toolbar" ];
 
-}
+})

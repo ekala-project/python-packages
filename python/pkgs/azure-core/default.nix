@@ -10,7 +10,7 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   version = "1.41.0";
   pname = "azure-core";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
 
   src = fetchPypi {
     pname = "azure_core";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-9G/1380jDyXPHBnoo0uNwIozeyUD4mi7YAoWwA24rVo=";
   };
 
@@ -43,4 +43,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/core/azure-core";
     license = lib.licenses.mit;
   };
-}
+})

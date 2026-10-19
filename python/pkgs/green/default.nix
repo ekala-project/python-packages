@@ -10,13 +10,13 @@
   lxml,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "green";
   version = "4.0.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-pAZ8P5/CpkTtNfU2ZJUGQzROxGLm0uu1vXS3YpcVprE=";
   };
 
@@ -50,4 +50,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/CleanCut/green";
     license = lib.licenses.mit;
   };
-}
+})

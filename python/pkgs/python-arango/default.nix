@@ -26,7 +26,7 @@ let
   };
 in
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "python-arango";
   version = "8.3.5";
   pyproject = true;
@@ -34,7 +34,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "arangodb";
     repo = "python-arango";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-GHpmWQKvF0gKoemytiAkMQfd3vBWlrRzSSveSE/5PAo=";
   };
 
@@ -94,4 +94,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ArangoDB-Community/python-arango";
     license = lib.licenses.mit;
   };
-}
+})

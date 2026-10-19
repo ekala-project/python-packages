@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "noiseprotocol";
   version = "0.3.1";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "plizonczyk";
     repo = "noiseprotocol";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-VZkKNxeSxLhRDhrj4VKV/1eXl7RtcsnCHru5KC/OYNY=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/plizonczyk/noiseprotocol/";
     license = lib.licenses.mit;
   };
-}
+})

@@ -9,13 +9,13 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "kiwisolver";
   version = "1.5.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-8TA+8u7IEmKktwjD6Fiv5Y18da2RwcBSZu2nZzNphZo=";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/nucleic/kiwi";
     license = lib.licenses.bsd3;
   };
-}
+})

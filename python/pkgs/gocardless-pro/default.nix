@@ -9,7 +9,7 @@
   responses,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "gocardless-pro";
   version = "3.7.3";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "gocardless";
     repo = "gocardless-pro-python";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-SSmyrFHDwmxmgt1D5XurFY1mvw3V2Q7AOr4JnYKJHC8=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/gocardless/gocardless-pro-python";
     license = lib.licenses.mit;
   };
-}
+})

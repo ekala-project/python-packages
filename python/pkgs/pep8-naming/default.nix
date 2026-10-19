@@ -6,14 +6,14 @@
   flake8,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pep8-naming";
   version = "0.15.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "pep8_naming";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-9vSkmaui3u2pPB8mzMAvPaMrA1yLLblpa3MO8sljnSk=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/PyCQA/pep8-naming";
     license = lib.licenses.mit;
   };
-}
+})

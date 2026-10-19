@@ -11,7 +11,7 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "nebula3-python";
   version = "5.2.0";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "vesoft-inc";
     repo = "nebula-python";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-WVbLywb/uVHWjtzXHSSlvBUwFz0p3VtiYwAl/0CcMDw=";
   };
 
@@ -57,4 +57,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/vesoft-inc/nebula-python";
     license = lib.licenses.asl20;
   };
-}
+})

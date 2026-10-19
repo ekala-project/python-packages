@@ -11,7 +11,7 @@
   urllib3,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "htmldate";
   version = "1.10.0";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "adbar";
     repo = "htmldate";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-3qtksgzqcgWtUv81Aqeh0nTWYnH0PjPLG4NuYChbV0g=";
   };
 
@@ -55,4 +55,4 @@ buildPythonPackage rec {
     license = lib.licenses.asl20;
     mainProgram = "htmldate";
   };
-}
+})

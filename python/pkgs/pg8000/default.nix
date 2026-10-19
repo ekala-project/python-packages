@@ -8,20 +8,20 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pg8000";
   version = "1.31.5";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-RuuwO+UrenfAPHJcedosooHW6PWVd8pmsXyQCWGMrng=";
   };
 
   postPatch = ''
     # Upstream uses versioningit to set the version
     sed -i "/versioningit >=/d" pyproject.toml
-    sed -i '/^name =.*/a version = "${version}"' pyproject.toml
+    sed -i '/^name =.*/a version = "${finalAttrs.version}"' pyproject.toml
     sed -i "/dynamic =/d" pyproject.toml
   '';
 
@@ -45,4 +45,4 @@ buildPythonPackage rec {
     license = with lib.licenses; [ bsd3 ];
     platforms = lib.platforms.unix;
   };
-}
+})

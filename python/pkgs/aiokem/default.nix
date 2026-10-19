@@ -12,7 +12,7 @@
   syrupy,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aiokem";
   version = "1.1.4";
   pyproject = true;
@@ -22,7 +22,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "kohlerlibs";
     repo = "aiokem";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-4LbpTov81LMr4V8jMgttlUCyHWJoR6tExOvt8X4Telc=";
   };
 
@@ -47,4 +47,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/kohlerlibs/aiokem";
     license = lib.licenses.mit;
   };
-}
+})

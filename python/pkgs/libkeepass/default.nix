@@ -9,13 +9,13 @@
   colorama,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "libkeepass";
   version = "0.3.1.post1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     sha256 = "0pwg7n9xqcjia1qmz6g48h5s31slh3mxmcqag73gq4zhl4xb6bai";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     description = "Library to access KeePass 1.x/KeePassX (v3) and KeePass 2.x (v4) files";
     license = lib.licenses.gpl2Plus;
   };
-}
+})

@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "cerberus";
   version = "1.3.8";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-V5VUiH/9GJImd0uHVw9Kdtt1zw78uv/KzV6YuO6Hf2E=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     description = "Schema and data validation tool for Python dictionaries";
     license = lib.licenses.mit;
   };
-}
+})

@@ -6,14 +6,14 @@
   idna,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "url-normalize";
   version = "3.0.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "url_normalize";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-BVLL8oMaMqKJlKE9KbylimDhD/bAOA40PsbRwqDSMtg=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/niksite/url-normalize";
     license = lib.licenses.mit;
   };
-}
+})

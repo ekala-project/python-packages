@@ -8,14 +8,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-iothub";
   version = "5.0.0b4";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_mgmt_iothub";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-bRyfCFbJNB4yRr3hr0D+hwdxkc6QF5eO7DH0L9jsHuY=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/iothub/azure-mgmt-iothub";
     license = lib.licenses.mit;
   };
-}
+})

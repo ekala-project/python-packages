@@ -19,14 +19,14 @@
   ipython,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "google-cloud-bigquery";
   version = "3.45.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "google_cloud_bigquery";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-WnmYVoJfR3Q85WGALL0BtNXHAGKzapQs/vUUYBfs8KQ=";
   };
 
@@ -72,4 +72,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/googleapis/python-bigquery";
     license = lib.licenses.asl20;
   };
-}
+})

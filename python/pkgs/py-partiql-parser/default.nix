@@ -6,7 +6,7 @@
   sure,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "py-partiql-parser";
   version = "0.6.3";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "getmoto";
     repo = "py-partiql-parser";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-99GkYfsscifVAws+Rgn1Tb2FZxY/4OtNvOoXGGmzbco=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/getmoto/py-partiql-parser";
     license = lib.licenses.mit;
   };
-}
+})

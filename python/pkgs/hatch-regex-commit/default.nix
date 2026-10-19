@@ -5,7 +5,7 @@
   hatchling,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "hatch-regex-commit";
   version = "0.0.4";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "frankie567";
     repo = "hatch-regex-commit";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-xdt3qszigdCudt2+EpUZPkJzL+XQ6TnVEAMm0sV3zwY=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/frankie567/hatch-regex-commit";
     license = lib.licenses.mit;
   };
-}
+})

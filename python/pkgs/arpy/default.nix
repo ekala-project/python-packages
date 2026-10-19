@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "arpy";
   version = "2.4.0";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "viraptor";
     repo = "arpy";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-SOJuk2JY952g6O3Tn2YA4Z3mYOnusERXmsHbfzD44kE=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/viraptor/arpy";
     license = lib.licenses.bsd2;
   };
-}
+})

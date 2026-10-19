@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "venusian";
   version = "3.1.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-U0+zs1VmkoPrOVRYGTHl0dBx/OYdAp1Y8yGaXjpvDEE=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://pylonsproject.org/";
     license = lib.licenses.bsd0;
   };
-}
+})

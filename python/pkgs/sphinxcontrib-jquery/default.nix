@@ -7,7 +7,7 @@
   sphinx,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "sphinxcontrib-jquery";
   version = "4.1";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "sphinx-contrib";
     repo = "jquery";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-ZQGQcVmhWREFa2KyaOKdTz5W2AS2ur7pFp8qZ2IkxSE=";
   };
 
@@ -51,4 +51,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/sphinx-contrib/jquery";
     license = lib.licenses.bsd0;
   };
-}
+})

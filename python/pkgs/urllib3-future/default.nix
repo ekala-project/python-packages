@@ -15,7 +15,7 @@
   zstandard,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "urllib3-future";
   version = "2.24.908";
   pyproject = true;
@@ -23,7 +23,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "jawah";
     repo = "urllib3.future";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-/1gAHvXtp0g88PE0pZrBDlB0Gj/NkpbrggvsNHQO+8o=";
   };
 
@@ -61,4 +61,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jawah/urllib3.future";
     license = lib.licenses.mit;
   };
-}
+})

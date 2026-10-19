@@ -6,7 +6,7 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pydiffx";
   version = "1.1";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "beanbaginc";
     repo = "diffx";
-    tag = "pydiffx/release-${version}";
+    tag = "pydiffx/release-${finalAttrs.version}";
     hash = "sha256-oJjHrg1X02SmNJKbWbTPc0kycI+jLj0C4eUFFXwb+TA=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/beanbaginc/diffx";
     license = lib.licenses.mit;
   };
-}
+})

@@ -14,13 +14,13 @@
   pytest-django,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-csp";
   version = "4.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit version;
+    inherit (finalAttrs) version;
     pname = "django_csp";
     hash = "sha256-snAQu3Ausgo9rTKReN8rYaK4LTOLcPvcE8OjvShxKDM=";
   };
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mozilla/django-csp";
     license = lib.licenses.bsd3;
   };
-}
+})

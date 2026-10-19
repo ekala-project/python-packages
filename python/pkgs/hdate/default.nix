@@ -12,7 +12,7 @@
   syrupy,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "hdate";
   version = "1.2.2";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "py-libhdate";
     repo = "py-libhdate";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-3MOxDVrEMuMfk/fCCo6IItqR1DMr/0KN7L4hYjMYCGM=";
   };
 
@@ -59,4 +59,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/py-libhdate/py-libhdate";
     license = lib.licenses.gpl3Plus;
   };
-}
+})

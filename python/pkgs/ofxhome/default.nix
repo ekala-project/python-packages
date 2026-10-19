@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   version = "0.3.3";
   pname = "ofxhome";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "captin411";
     repo = "ofxhome";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-i16bE9iuafhAKco2jYfg5T5QCWFHdnYVztf1z2XbO9g=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     description = "ofxhome.com financial institution lookup REST client";
     license = lib.licenses.mit;
   };
-}
+})

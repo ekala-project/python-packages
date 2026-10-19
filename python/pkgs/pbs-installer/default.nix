@@ -7,7 +7,7 @@
   zstandard,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pbs-installer";
   version = "2026.09.01";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "frostming";
     repo = "pbs-installer";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-DmS0RThERXTCufIX4oAG3qfxzs324Ol2oeqN+iKiNfs=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/frostming/pbs-installer";
     license = lib.licenses.mit;
   };
-}
+})

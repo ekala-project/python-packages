@@ -15,7 +15,7 @@
   uvicorn,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aioprometheus";
   version = "unstable-2023-03-14";
   pyproject = true;
@@ -44,4 +44,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/claws/aioprometheus";
     license = lib.licenses.mit;
   };
-}
+})

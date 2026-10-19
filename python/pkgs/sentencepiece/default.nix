@@ -9,7 +9,7 @@
 let
   sentencepiece-cpp = pkgs.sentencepiece;
 in
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "sentencepiece";
   pyproject = true;
   inherit (sentencepiece-cpp) version src;
@@ -25,4 +25,4 @@ buildPythonPackage rec {
 
   # sentencepiece installs 'bin' output.
   meta = removeAttrs sentencepiece-cpp.meta [ "outputsToInstall" ];
-}
+})

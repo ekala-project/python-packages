@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "fasteners";
   version = "0.20";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "harlowja";
     repo = "fasteners";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-h8hlx3yl1+EgqCGE02O+wLejwxgJ5ZOs6nPrYUtHwn0=";
   };
 
@@ -24,7 +24,7 @@ buildPythonPackage rec {
   meta = {
     description = "Module that provides useful locks";
     homepage = "https://github.com/harlowja/fasteners";
-    changelog = "https://github.com/harlowja/fasteners/releases/tag/${version}";
+    changelog = "https://github.com/harlowja/fasteners/releases/tag/${finalAttrs.version}";
     license = lib.licenses.asl20;
   };
-}
+})

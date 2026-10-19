@@ -8,13 +8,13 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "maxminddb";
   version = "3.1.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-sZqTjEgVGPGaLFNP/cs7xZWC8Pu9z5+BrJrfkSoK9oY=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/maxmind/MaxMind-DB-Reader-python";
     license = lib.licenses.asl20;
   };
-}
+})

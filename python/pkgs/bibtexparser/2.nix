@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "bibtexparser";
   version = "2.0.0b9";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "sciunto-org";
     repo = "python-bibtexparser";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-viBY2hZXsXsfjpi7zMFh3CwQFOKL41F3x0IKULelo/o=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     changelog = "https://github.com/sciunto-org/python-bibtexparser/blob/${src.tag}/CHANGELOG";
     license = lib.licenses.mit;
   };
-}
+})

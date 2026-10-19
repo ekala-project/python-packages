@@ -6,13 +6,13 @@
   setuptools,
   cffi,
 }:
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "onigurumacffi";
   version = "1.5.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-1Pqb7kSm04qYsiN8Z9ms3yftDDLWwhgSX+RmgaXt6k0=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/asottile/onigurumacffi";
     license = lib.licenses.mit;
   };
-}
+})

@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "css-parser";
   version = "1.0.10";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-vx6XKtMzROkyBpZPtM2QjZ3e+fzQwB+pPg1zRnU5Q2M=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     description = "CSS Cascading Style Sheets library for Python";
     license = lib.licenses.lgpl3Plus;
   };
-}
+})

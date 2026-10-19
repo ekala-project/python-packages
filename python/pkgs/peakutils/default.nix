@@ -7,13 +7,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "peakutils";
   version = "1.3.5";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-T/Ln8zMLkwJP6Noe4E4AOJ4mvLLveb0vnPhszUli4RQ=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://pypi.org/project/PeakUtils/";
     license = lib.licenses.mit;
   };
-}
+})

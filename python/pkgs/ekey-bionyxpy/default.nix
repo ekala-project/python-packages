@@ -9,7 +9,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ekey-bionyxpy";
   version = "1.0.1";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "richardpolzer";
     repo = "ekey-bionyx-api";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-V4xYv+mjU4QO/+hOq3TH8b/X9PVP95i6apYkcqVDIWY=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/richardpolzer/ekey-bionyx-api";
     license = lib.licenses.mit;
   };
-}
+})

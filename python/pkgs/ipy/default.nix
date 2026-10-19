@@ -5,14 +5,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ipy";
   version = "1.01";
   pyproject = true;
 
   src = fetchPypi {
     pname = "IPy";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-7eynQd6i1UrKVo+iN0AojD/obA8+pwA0RXHp7xSnzBo=";
   };
 
@@ -25,4 +25,4 @@ buildPythonPackage rec {
     description = "Class and tools for handling of IPv4 and IPv6 addresses and networks";
     license = lib.licenses.bsdOriginal;
   };
-}
+})

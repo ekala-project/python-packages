@@ -7,14 +7,14 @@
   zope_interface,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "zope.schema";
   version = "8.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "zope_schema";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-LZ+qf5Gnvwn8qywDnZGC/MnOcELcd+GNPfJ3kEruCUg=";
   };
 
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/zopefoundation/zope.schema";
     license = lib.licenses.zpl21;
   };
-}
+})

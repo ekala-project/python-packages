@@ -8,7 +8,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "curated-tokenizers";
   version = "2.0.0";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "explosion";
     repo = "curated-tokenizers";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-VkDV/9c5b8TzYlthCZ38ufbrne4rihtkmkZ/gyAQXLE=";
     fetchSubmodules = true;
   };
@@ -56,4 +56,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/explosion/curated-tokenizers";
     license = lib.licenses.mit;
   };
-}
+})

@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pylatexenc";
   version = "2.11";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "phfaist";
     repo = "pylatexenc";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-Zv3Sjx0YpSCnoHHf3CSiGaFMS7FNgUUwvIxNX/k9tOg=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://pylatexenc.readthedocs.io";
     license = lib.licenses.mit;
   };
-}
+})

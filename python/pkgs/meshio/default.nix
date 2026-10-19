@@ -17,7 +17,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "meshio";
   version = "5.3.5";
   pyproject = true;
@@ -25,7 +25,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "nschloe";
     repo = "meshio";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-2j+5BYftCiy+g33UbsgCMWBRggGBJBx5VoEdSqQ/mV0=";
   };
 
@@ -108,4 +108,4 @@ buildPythonPackage rec {
     mainProgram = "meshio";
     license = lib.licenses.mit;
   };
-}
+})

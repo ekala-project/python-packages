@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyfakefs";
   version = "6.2.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-5Zo220R79QnOnJerPRUQwIzFGJXFMRMlpWCl5bXcGUA=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://pyfakefs.org/";
     license = lib.licenses.asl20;
   };
-}
+})

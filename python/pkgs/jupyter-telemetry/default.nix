@@ -10,7 +10,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jupyter-telemetry";
   version = "0.1.0";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "jupyter";
     repo = "telemetry";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-WxTlTs6gE9pa0hbl29Zvwikobz1/2JQ3agYO7WxyZ2E=";
   };
 
@@ -46,4 +46,4 @@ buildPythonPackage rec {
     homepage = "https://jupyter-telemetry.readthedocs.io/";
     license = lib.licenses.bsd3;
   };
-}
+})

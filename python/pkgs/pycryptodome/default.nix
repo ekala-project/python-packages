@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pycryptodome";
   version = "3.23.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Legrandin";
     repo = "pycryptodome";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-x8QkRBwM/H/n7yHGjE8UfBhOzkGr0PBixe9g4EuZLUg=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
       asl20
     ];
   };
-}
+})

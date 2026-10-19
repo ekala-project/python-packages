@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyxdg";
   version = "0.28";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-Mme7MHTpNN8gKvLuCGhXVIQQhYHm88sAavHaNTleiLQ=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "http://freedesktop.org/wiki/Software/pyxdg";
     license = lib.licenses.lgpl2;
   };
-}
+})

@@ -17,7 +17,7 @@
   pyyaml,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "dazl";
   version = "8.9.0";
   pyproject = true;
@@ -25,7 +25,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "digital-asset";
     repo = "dazl-client";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-ZJBaamazyNAYU5xbUvNGLUV5OsyymCdJCoUvoUlIkm4=";
   };
 
@@ -66,4 +66,4 @@ buildPythonPackage rec {
     license = lib.licenses.asl20;
     homepage = "https://github.com/digital-asset/dazl-client";
   };
-}
+})

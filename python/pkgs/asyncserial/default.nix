@@ -6,7 +6,7 @@
   pyserial,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "asyncserial";
   version = "1.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "m-labs";
     repo = "asyncserial";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-ZHzgJnbsDVxVcp09LXq9JZp46+dorgdP8bAiTB59K28=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/m-labs/asyncserial";
     license = lib.licenses.bsd2;
   };
-}
+})

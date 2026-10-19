@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "publicsuffix2";
   version = "2.20191221";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-APjMMaqNDVWSpc7RnMy6feQo68qYXbJqyFLZIN3W/ns=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/nexB/python-publicsuffix2";
     license = lib.licenses.mpl20;
   };
-}
+})

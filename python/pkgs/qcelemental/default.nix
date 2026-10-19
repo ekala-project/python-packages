@@ -15,13 +15,13 @@
   scipy,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "qcelemental";
   version = "0.51.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-2S7sa14rKd8b+yDy2eIpk1TUElA6XepeTPuzWW6S4TU=";
   };
 
@@ -58,4 +58,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/MolSSI/QCElemental";
     license = lib.licenses.bsd3;
   };
-}
+})

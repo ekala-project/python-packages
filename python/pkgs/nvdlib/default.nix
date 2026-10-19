@@ -8,7 +8,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "nvdlib";
   version = "0.8.3";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Vehemont";
     repo = "nvdlib";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-FjeYJMMccao9KJMcJBKtt5QhpQEEbcPyNunj+VqMdx0=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Vehemont/nvdlib/";
     license = lib.licenses.mit;
   };
-}
+})

@@ -18,13 +18,13 @@
   pytest-mock,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "hebg";
   version = "0.2.4";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-11bz+FbnaEVLiXT1eujMw8lvABlzVOeROOsdVgsyfjQ=";
   };
 
@@ -57,4 +57,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/IRLL/HEB_graphs";
     license = lib.licenses.gpl3Only;
   };
-}
+})

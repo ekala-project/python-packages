@@ -5,14 +5,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "types-protobuf";
   version = "7.35.1.20260906";
   pyproject = true;
 
   src = fetchPypi {
     pname = "types_protobuf";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-79Gjhi1Mln2tVRLvjVaxUwrITxgsQXNblABHVlGMSZg=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/python/typeshed";
     license = lib.licenses.asl20;
   };
-}
+})

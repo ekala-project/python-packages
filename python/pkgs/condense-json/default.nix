@@ -5,7 +5,7 @@
   setuptools,
   pytestCheckHook,
 }:
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "condense-json";
   version = "1.1";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "simonw";
     repo = "condense-json";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-IBYjDFhbQlZ/17nTo5FvJM7aeadKS5dW7J8IGy4956M=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/simonw/condense-json";
     license = lib.licenses.asl20;
   };
-}
+})

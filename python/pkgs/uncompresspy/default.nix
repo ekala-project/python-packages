@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "uncompresspy";
   version = "0.4.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-556tZurtjUI2TYB8C6PzqK7w4Ah6m+rxpg8jqAimwUc=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/kYwzor/uncompresspy";
     license = lib.licenses.bsd3;
   };
-}
+})

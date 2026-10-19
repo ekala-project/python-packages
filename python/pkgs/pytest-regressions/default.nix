@@ -13,7 +13,7 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytest-regressions";
   version = "2.11.0";
   pyproject = true;
@@ -21,7 +21,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ESSS";
     repo = "pytest-regressions";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-BojXizPr1b09YOa4wEeHQheyubKR2nBvtzLlcvt3380=";
   };
 
@@ -64,4 +64,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ESSS/pytest-regressions";
     license = lib.licenses.mit;
   };
-}
+})

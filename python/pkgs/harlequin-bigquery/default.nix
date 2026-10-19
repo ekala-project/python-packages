@@ -7,14 +7,14 @@
   google-cloud-bigquery-storage,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "harlequin-bigquery";
   version = "1.0.3";
   pyproject = true;
 
   src = fetchPypi {
     pname = "harlequin_bigquery";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-jdDwmfiU7x4zl4hg12evrPqLEzPB2M8/1HN4d0N1EJQ=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://pypi.org/project/harlequin-bigquery/";
     license = lib.licenses.mit;
   };
-}
+})

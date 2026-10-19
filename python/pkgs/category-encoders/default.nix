@@ -16,7 +16,7 @@
   scipy,
   statsmodels,
 }:
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "category-encoders";
   version = "2.10.0";
   pyproject = true;
@@ -24,7 +24,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "scikit-learn-contrib";
     repo = "category_encoders";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-NMFMVteOW5kGVxw/S1FdMfYM/jQcpxSTQTRzn95bqGE=";
   };
 
@@ -51,4 +51,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/scikit-learn-contrib/category_encoders";
     license = lib.licenses.bsd3;
   };
-}
+})

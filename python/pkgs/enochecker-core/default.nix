@@ -6,13 +6,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "enochecker-core";
   version = "0.10.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit version;
+    inherit (finalAttrs) version;
     pname = "enochecker_core";
     hash = "sha256-N41p2XRCp55rcPXLpA4rPIARsva/dQzK8qafjzXtavI=";
   };
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/enowars/enochecker_core";
     license = lib.licenses.mit;
   };
-}
+})

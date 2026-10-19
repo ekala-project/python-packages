@@ -6,7 +6,7 @@
   aiohttp,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aiosseclient";
   version = "0.1.8";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ebraminio";
     repo = "aiosseclient";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-ynWqRQsCuog8myNleJDdp+omyujmNB1Ys7O6gU2AaUc=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ebraminio/aiosseclient";
     license = lib.licenses.mit;
   };
-}
+})

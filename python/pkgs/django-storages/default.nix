@@ -17,7 +17,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-storages";
   version = "1.14.6";
   pyproject = true;
@@ -25,7 +25,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "jschneier";
     repo = "django-storages";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-br7JGPf5EAAl0Qg7b+XaksxNPCTJsSS8HLgvA0wZmeI=";
   };
 
@@ -62,4 +62,4 @@ buildPythonPackage rec {
     homepage = "https://django-storages.readthedocs.io";
     license = lib.licenses.bsd3;
   };
-}
+})

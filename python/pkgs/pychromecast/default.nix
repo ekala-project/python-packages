@@ -8,7 +8,7 @@
   zeroconf,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pychromecast";
   version = "14.0.10";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "home-assistant-libs";
     repo = "pychromecast";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-m9rucHSiApT0Xqkf4sjVRehcGGgvbaoGgbT/s3SLxKI=";
   };
 
@@ -44,4 +44,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     platforms = lib.platforms.unix;
   };
-}
+})

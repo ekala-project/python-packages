@@ -5,7 +5,7 @@
   unittestCheckHook,
   setuptools,
 }:
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mdutils";
   version = "1.8.1";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "didix21";
     repo = "mdutils";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-qUCiiFzbOccS7wy0LqgyZH04KlwG/FzE3a+R3z7tPF8=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/didix21/mdutils";
     license = lib.licenses.mit;
   };
-}
+})

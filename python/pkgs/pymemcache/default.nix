@@ -6,7 +6,7 @@
   stdenv,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pymemcache";
   version = "4.0.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pinterest";
     repo = "pymemcache";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-WgtHhp7lE6StoOBfSy9+v3ODe/+zUC7lGrc2S4M68+M=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://pymemcache.readthedocs.io/";
     license = lib.licenses.asl20;
   };
-}
+})

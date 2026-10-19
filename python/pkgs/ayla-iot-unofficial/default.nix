@@ -10,7 +10,7 @@
   ujson,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ayla-iot-unofficial";
   version = "1.5.2";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "rewardone";
     repo = "ayla-iot-unofficial";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-reKXctSmGk1H3kEnvcC7AiDWLwr2fdezZqM5HI2qdYU=";
   };
 
@@ -46,4 +46,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/rewardone/ayla-iot-unofficial";
     license = lib.licenses.mit;
   };
-}
+})

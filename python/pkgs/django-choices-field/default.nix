@@ -7,7 +7,7 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-choices-field";
   version = "4.0.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "bellini666";
     repo = "django-choices-field";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-EnJMn6tAjhylY8qsT/T/N9v/w/vD+d93U2RMxwEcc84=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/bellini666/django-choices-field";
     license = lib.licenses.mit;
   };
-}
+})

@@ -6,14 +6,14 @@
   types-webencodings,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "types-html5lib";
   version = "1.1.11.20260518";
   pyproject = true;
 
   src = fetchPypi {
     pname = "types_html5lib";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-TzPAh8sRGdZcTIDspDI8K1Afnq+K+WFri3Mu1Njq6Po=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://pypi.org/project/types-html5lib/";
     license = lib.licenses.asl20;
   };
-}
+})

@@ -14,7 +14,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "annoy";
   version = "1.17.3";
   pyproject = true;
@@ -22,7 +22,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "spotify";
     repo = "annoy";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-oJHW4lULRun2in35pBGOKg44s5kgLH2BKiMOzVu4rf4=";
   };
 
@@ -60,4 +60,4 @@ buildPythonPackage rec {
       lib.systems.inspect.patterns.isDarwin
     ];
   };
-}
+})

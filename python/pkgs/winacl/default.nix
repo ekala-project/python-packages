@@ -10,13 +10,13 @@
   cryptography,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "winacl";
   version = "0.1.9";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-r3DC7DAXi/njyKHEjCXoeBI1/iwbMhrbRuLyrh+NSqs=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/skelsec/winacl";
     license = lib.licenses.mit;
   };
-}
+})

@@ -9,7 +9,7 @@
   rustPlatform,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "betterproto-rust-codec";
   version = "0.1.1";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "124C41p";
     repo = "betterproto-rust-codec";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-Q8oCk/VVe4Dcw6Z5PBFJBKRlsHgi6Jn+FWDqLH8BgYc=";
   };
 
@@ -45,4 +45,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/124C41p/betterproto-rust-codec/releases/tag/${src.tag}";
     license = lib.licenses.mit;
   };
-}
+})

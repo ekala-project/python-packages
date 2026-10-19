@@ -9,7 +9,7 @@
   icu,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyicu";
   version = "2.16.2";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
     domain = "gitlab.pyicu.org";
     owner = "main";
     repo = "pyicu";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-JCevXAL6+G+EXx4ikOANgFiI9YPhjY5fDFLFBmEs8Ro=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     description = "Python extension wrapping the ICU C++ API";
     license = lib.licenses.mit;
   };
-}
+})

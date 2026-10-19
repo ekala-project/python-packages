@@ -8,13 +8,13 @@
   xz,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "deeptoolsintervals";
   version = "0.1.9";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     sha256 = "1xnl80nblysj6dylj4683wgrfa425rkx4dp5k65hvwdns9pw753x";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     description = "Helper library for deeptools";
     license = lib.licenses.mit;
   };
-}
+})

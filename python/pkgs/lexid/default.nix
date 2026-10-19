@@ -8,12 +8,12 @@
   click,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "lexid";
   version = "2021.1006";
   pyproject = true;
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     sha256 = "509a3a4cc926d3dbf22b203b18a4c66c25e6473fb7c0e0d30374533ac28bafe5";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://pypi.org/project/lexid/";
     license = lib.licenses.mit;
   };
-}
+})

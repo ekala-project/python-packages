@@ -26,14 +26,14 @@
   sqlalchemy-utils,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "flask-appbuilder";
   version = "5.0.2";
   pyproject = true;
 
   src = fetchPypi {
     pname = "Flask-AppBuilder";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-9Xe5gqGuQLwhMjjO25PDnGfPIZmqHgBuCH6hs1B9VFA=";
   };
 
@@ -78,4 +78,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/dpgaspar/flask-appbuilder/";
     license = lib.licenses.bsd3;
   };
-}
+})

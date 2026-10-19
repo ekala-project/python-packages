@@ -9,7 +9,7 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "zulip";
   version = "0.9.1";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "zulip";
     repo = "python-zulip-api";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-mcqIfha+4nsqlshayLQ2Sd+XOYVKf1FkoczjiFRNybc=";
   };
   sourceRoot = "${src.name}/zulip";
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/zulip/python-zulip-api";
     license = lib.licenses.asl20;
   };
-}
+})

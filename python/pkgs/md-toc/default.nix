@@ -8,7 +8,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "md-toc";
   version = "9.0.0";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "frnmst";
     repo = "md-toc";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-YVDFYxxKMKOrHyymewLTTkmBgg6YVqWou4hTKHJmbOg=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://docs.franco.net.eu.org/md-toc/";
     license = lib.licenses.gpl3Plus;
   };
-}
+})

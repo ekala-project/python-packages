@@ -9,13 +9,13 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "launchpadlib";
   version = "2.1.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-tMJYkLt1BQ1UwIEj0nMxVreKWaJVX1Rh9psORM2RJC8=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://help.launchpad.net/API/launchpadlib";
     license = lib.licenses.lgpl3Only;
   };
-}
+})

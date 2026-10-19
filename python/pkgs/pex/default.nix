@@ -34,13 +34,13 @@ let
     };
   };
 in
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pex";
   version = "2.38.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-ejd9JWmDutYpwR+KPiS90Y3XKyyOwRAMpCEN013VMdI=";
   };
 
@@ -63,4 +63,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pantsbuild/pex";
     license = lib.licenses.asl20;
   };
-}
+})

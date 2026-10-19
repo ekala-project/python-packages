@@ -6,13 +6,13 @@
   decorator,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ratelim";
   version = "0.1.6";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-gm0yF34R+aEoMZAcn9pmef1bvqNgWRCCAWcIj1rLsR0=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/themiurgo/ratelim";
     license = lib.licenses.mit;
   };
-}
+})

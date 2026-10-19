@@ -7,7 +7,7 @@
   lxml,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "cmsis-svd";
   version = "0.6";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "cmsis-svd";
     repo = "cmsis-svd";
-    tag = "python-${version}";
+    tag = "python-${finalAttrs.version}";
     hash = "sha256-fx9eR9/Nw/oxPaP9rm1G6sjGI7iU4bhkmTS7f8i2RrQ=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/cmsis-svd/cmsis-svd";
     license = lib.licenses.asl20;
   };
-}
+})

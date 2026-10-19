@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "zope-testing";
   version = "6.1";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "zopefoundation";
     repo = "zope.testing";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-dAUiG8DxlhQKMBXh49P0CDC9UjqAYjB+2vVCTI36cgc=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/zopefoundation/zope.testing";
     license = lib.licenses.zpl21;
   };
-}
+})

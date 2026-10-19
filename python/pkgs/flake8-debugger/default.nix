@@ -7,13 +7,13 @@
   pycodestyle,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "flake8-debugger";
   version = "4.1.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-UrACVglB422b+Ab8olI9x/uFYKKV1fGm4VrC3tenOEA=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jbkahn/flake8-debugger";
     license = lib.licenses.mit;
   };
-}
+})

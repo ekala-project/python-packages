@@ -6,7 +6,7 @@
   caio,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aiofile";
   version = "3.12.3";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mosquito";
     repo = "aiofile";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-Y79LGiPsaPxQLOCmH+MGXBcPUL+XWGje0RgYljKW11U=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mosquito/aiofile";
     license = lib.licenses.asl20;
   };
-}
+})

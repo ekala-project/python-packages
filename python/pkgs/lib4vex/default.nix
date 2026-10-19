@@ -8,7 +8,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "lib4vex";
   version = "0.2.3";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "anthonyharrison";
     repo = "lib4vex";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-XH3Y2kbsJFR202F8bmcd3IWpgHS36W+ylDObtBFNFFg=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/anthonyharrison/lib4vex";
     license = lib.licenses.asl20;
   };
-}
+})

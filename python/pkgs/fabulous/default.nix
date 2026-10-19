@@ -8,7 +8,7 @@
   python,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "fabulous";
   version = "0.4.0";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "jart";
     repo = "fabulous";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-hchlxuB5QP+VxCx+QZ2739/mR5SQmYyE+9kXLKJ2ij4=";
   };
 
@@ -44,4 +44,4 @@ buildPythonPackage rec {
     homepage = "https://jart.github.io/fabulous";
     license = lib.licenses.asl20;
   };
-}
+})

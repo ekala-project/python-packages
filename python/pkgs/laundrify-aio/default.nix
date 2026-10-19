@@ -7,7 +7,7 @@
   pyjwt,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "laundrify-aio";
   version = "1.2.2";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "laundrify";
     repo = "laundrify-pypi";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-iFQ0396BkGWM7Ma/I0gbXucd2/yPmEVF4IC3/bMK2SA=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/laundrify/laundrify-pypi";
     license = lib.licenses.asl20;
   };
-}
+})

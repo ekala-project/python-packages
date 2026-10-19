@@ -7,14 +7,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyric";
   version = "0.1.6.3";
   pyproject = true;
 
   src = fetchPypi {
     pname = "PyRIC";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-tTmwHK/r0kBsAAl/lFJeoPjs0d2S93MfQ+rA7xbCzMk=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/wraith-wireless/PyRIC";
     license = lib.licenses.gpl3Plus;
   };
-}
+})

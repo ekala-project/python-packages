@@ -7,13 +7,13 @@
   wheel,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "tqdm";
   version = "4.70.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-VbCw29l0YtBuvukeTawk7U1HAr6Csk8H5sHSfgjOoiA=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/tqdm/tqdm";
     license = lib.licenses.mit;
   };
-}
+})

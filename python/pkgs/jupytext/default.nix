@@ -19,7 +19,7 @@
   pyyaml,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jupytext";
   version = "1.18.1";
   pyproject = true;
@@ -27,7 +27,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mwouts";
     repo = "jupytext";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-D7Ps/lHF3F/7Jm4ozcjO8YsTPA1GQPqZVpPod/riGvA=";
   };
 
@@ -85,4 +85,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     mainProgram = "jupytext";
   };
-}
+})

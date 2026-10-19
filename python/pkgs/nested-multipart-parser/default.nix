@@ -12,7 +12,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "nested-multipart-parser";
   version = "1.6.0";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "remigermain";
     repo = "nested-multipart-parser";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-FFALem8Y43tKL32VSZE1pIlOKEPh5Ryzbu509Xjd+VY=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/remigermain/nested-multipart-parser";
     license = lib.licenses.mit;
   };
-}
+})

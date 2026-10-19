@@ -14,7 +14,7 @@
   responses,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "fhir-py";
   version = "2.3.0";
   pyproject = true;
@@ -22,7 +22,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "beda-software";
     repo = "fhir-py";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-XPkWtzYtMPCcV7FbV89Qv/kfV7qu3ZT3XwcLDoJ392o=";
   };
 
@@ -54,4 +54,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/beda-software/fhir-py";
     license = lib.licenses.mit;
   };
-}
+})

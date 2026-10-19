@@ -7,13 +7,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "vdf";
   version = "3.4";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-/VQZ9B4HoQCeX/0CfH3L5D0ffo70U66qkNnQS4B94q8=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ValvePython/vdf";
     license = lib.licenses.mit;
   };
-}
+})

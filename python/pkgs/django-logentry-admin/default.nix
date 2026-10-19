@@ -9,7 +9,7 @@
   pytest-django,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-logentry-admin";
   version = "1.1.0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "yprez";
     repo = "django-logentry-admin";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "1bndxgvisw8kk52zfdifvly6dl4833wqilxf77pg473172yaf5gq";
   };
 
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/yprez/django-logentry-admin";
     license = lib.licenses.isc;
   };
-}
+})

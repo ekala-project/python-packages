@@ -16,7 +16,7 @@
 }:
 
 let
-  pylama = buildPythonPackage rec {
+  pylama = buildPythonPackage (finalAttrs: {
     pname = "pylama";
     version = "8.4.1";
     pyproject = true;
@@ -24,7 +24,7 @@ let
     src = fetchFromGitHub {
       owner = "klen";
       repo = "pylama";
-      tag = version;
+      tag = finalAttrs.version;
       hash = "sha256-WOGtZ412tX3YH42JCd5HIngunluwtMmQrOSUZp23LPU=";
     };
 

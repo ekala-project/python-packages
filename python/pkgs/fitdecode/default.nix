@@ -6,7 +6,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "fitdecode";
   version = "0.11.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "polyvertex";
     repo = "fitdecode";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-3NoJHPql5mVQ+h2InM8tp7LIuR2znJyaawISarr688Q=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     homepage = "https://github.com/polyvertex/fitdecode";
   };
-}
+})

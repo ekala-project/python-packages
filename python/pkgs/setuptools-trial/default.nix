@@ -6,14 +6,14 @@
   twisted,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "setuptools-trial";
   version = "0.6.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "setuptools_trial";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-FCIPj3YcSLoeJSbwhxlQd89U+tcJizgs4iBCLw/1mxI=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/rutsky/setuptools-trial";
     license = lib.licenses.bsd2;
   };
-}
+})

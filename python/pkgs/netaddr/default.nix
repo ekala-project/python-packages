@@ -6,13 +6,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "netaddr";
   version = "1.3.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-XDw9mJW1Ubdjd5un23oDSH3B+OOzha+BmvNBrp725Io=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     downloadPage = "https://github.com/netaddr/netaddr/releases";
     license = lib.licenses.mit;
   };
-}
+})

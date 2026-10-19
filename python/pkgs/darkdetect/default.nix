@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "darkdetect";
   version = "0.8.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "albertosottile";
     repo = "darkdetect";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-OOINgrgjSLr3L07E9zf1+mlTPr+7ZlgN3CfkWE8+LoE=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/albertosottile/darkdetect";
     license = lib.licenses.bsd3;
   };
-}
+})

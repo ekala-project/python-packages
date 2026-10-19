@@ -6,13 +6,13 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "python-gflags";
   version = "3.1.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-QK4THome9o6eFKpTygY4OcNPahaK/mIiF7W4dUkqHuI=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/google/python-gflags";
     license = lib.licenses.bsd3;
   };
-}
+})

@@ -22,7 +22,7 @@
   xxhash,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pins";
   version = "0.9.1";
   pyproject = true;
@@ -30,7 +30,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "rstudio";
     repo = "pins-python";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-IpM4s/cECtrmD1K+Ya2v+9KzFH/GKbMDqfte0A+2rMc=";
   };
 
@@ -69,4 +69,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/rstudio/pins-python";
     license = lib.licenses.mit;
   };
-}
+})

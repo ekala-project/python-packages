@@ -7,7 +7,7 @@
   matplotlib,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mpldatacursor";
   version = "0.7.1";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "joferkington";
     repo = "mpldatacursor";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "0i1lwl6x6hgjq4xwsc138i4v5895lmnpfqwpzpnj5mlck6fy6rda";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     description = "Interactive data cursors for matplotlib";
     license = lib.licenses.mit;
   };
-}
+})

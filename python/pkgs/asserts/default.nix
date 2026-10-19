@@ -13,7 +13,7 @@
   unittestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "asserts";
   version = "0.14.0";
   pyproject = true;
@@ -21,7 +21,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "srittau";
     repo = "python-asserts";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-nSL28LaKWVkzOmyI1TpCXJxyKdqpvK/YHRLUJ77sRA8=";
   };
 
@@ -46,4 +46,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/srittau/python-asserts";
     license = lib.licenses.mit;
   };
-}
+})

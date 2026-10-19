@@ -9,13 +9,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "locationsharinglib";
   version = "5.0.3";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-ar5/gyDnby0aceqqHe8lTQaHafOub+IPKglmct4xEGM=";
   };
 
@@ -44,4 +44,4 @@ buildPythonPackage rec {
     homepage = "https://locationsharinglib.readthedocs.io/";
     license = lib.licenses.mit;
   };
-}
+})

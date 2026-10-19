@@ -7,14 +7,14 @@
   fields,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aspectlib";
   version = "2.0.0";
 
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-pLRhudoLUxrry5PvzePegIpyxgIm3Y2QLEZ9E/r3zpI=";
   };
 
@@ -49,4 +49,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ionelmc/python-aspectlib";
     license = lib.licenses.bsd2;
   };
-}
+})

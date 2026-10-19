@@ -9,7 +9,7 @@
   requests,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "iocextract";
   version = "1.16.1";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "InQuest";
     repo = "iocextract";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-cCp9ug/TuVY1zL+kiDlFGBmfFJyAmVwxLD36WT0oRAE=";
   };
 
@@ -45,4 +45,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/InQuest/iocextract";
     license = lib.licenses.gpl2Only;
   };
-}
+})

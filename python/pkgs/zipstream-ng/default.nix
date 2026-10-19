@@ -5,7 +5,7 @@
   hatchling,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "zipstream-ng";
   version = "1.9.2";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pR0Ps";
     repo = "zipstream-ng";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-1MSnabckpAwV/NmD5wKxF7k7hwve6fBiCPyw7skxdlM=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pR0Ps/zipstream-ng";
     license = lib.licenses.lgpl3Only;
   };
-}
+})

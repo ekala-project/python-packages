@@ -6,7 +6,7 @@
   nix-update-script,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "unicode-segmentation-rs";
   version = "0.2.4";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "WeblateOrg";
     repo = "unicode-segmentation-rs";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-c/KWCJz8ZbWWE7S+2Uxp3+eQWHXAEZXcVN3C5OrFlrc=";
   };
 
@@ -44,4 +44,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/WeblateOrg/unicode-segmentation-rs/";
     license = lib.licenses.mit;
   };
-}
+})

@@ -8,14 +8,14 @@
   pytest-asyncio,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "llama-index-embeddings-ollama";
   version = "0.9.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "llama_index_embeddings_ollama";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-GdLSoOPwk0SA6uMSQ6xfHOFxMZV4ucCtrSXPG2w1ZZ4=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/run-llama/llama_index/tree/main/llama-index-integrations/embeddings/llama-index-embeddings-ollama";
     license = lib.licenses.mit;
   };
-}
+})

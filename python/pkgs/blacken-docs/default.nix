@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "blacken-docs";
   version = "1.20.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "adamchainz";
     repo = "blacken-docs";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-A8hSpywuhdS+RNm3QQJ11ofWrYZgiOFRwIoD3mlwc4k=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     mainProgram = "blacken-docs";
   };
-}
+})

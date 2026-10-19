@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "labmath";
   version = "2.2.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-dzJ4szPxnck0Cgc5IEp5FBmHvIyAC0rqKRVrkt20ntQ=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     description = "Module for basic math in the general vicinity of computational number theory";
     license = lib.licenses.mit;
   };
-}
+})

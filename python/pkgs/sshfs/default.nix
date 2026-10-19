@@ -13,7 +13,7 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "sshfs";
   version = "2026.8.0";
   pyproject = true;
@@ -21,7 +21,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "fsspec";
     repo = "sshfs";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-Gw9fAVAxQxVge7APxrdGXpmhYZlyqmcB2QU9+2ze9dw=";
   };
 
@@ -50,4 +50,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/fsspec/sshfs/";
     license = lib.licenses.asl20;
   };
-}
+})

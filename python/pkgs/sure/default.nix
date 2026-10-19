@@ -7,13 +7,13 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "sure";
   version = "2.0.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-yPxvq8Dn9phO6ruUJUDkVkblvvC7mf5Z4C2mNOTUuco=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     description = "Utility belt for automated testing";
     license = lib.licenses.gpl3Plus;
   };
-}
+})

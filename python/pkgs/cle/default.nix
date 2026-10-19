@@ -21,19 +21,19 @@ let
   binaries = fetchFromGitHub {
     owner = "angr";
     repo = "binaries";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-XXJBySIT3ylK1nd3suP2bq4bVSVah/1XhOmkEONbCoY=";
   };
 in
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "cle";
-  inherit version;
+  inherit (finalAttrs) version;
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "angr";
     repo = "cle";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-rWbZzm5hWi/C+te8zeQChxqYHO0S795tJ6Znocq9TTs=";
   };
 
@@ -60,4 +60,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/angr/cle";
     license = lib.licenses.bsd2;
   };
-}
+})

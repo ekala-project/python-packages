@@ -7,13 +7,13 @@
   requests,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "requests-mock";
   version = "1.12.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-6eEuMztSUVboKjyFLyIBa5FYIg0vR0VN6crop303FAE=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     description = "Mock out responses from the requests package";
     license = lib.licenses.asl20;
   };
-}
+})

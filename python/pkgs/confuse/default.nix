@@ -7,13 +7,13 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "confuse";
   version = "2.2.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-jnYAwyYYUhIutfF7JLBquOVDeyHWIkhTwUIMOKxGnTw=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/beetbox/confuse";
     license = lib.licenses.mit;
   };
-}
+})

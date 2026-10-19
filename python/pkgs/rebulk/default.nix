@@ -6,13 +6,13 @@
   regex,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "rebulk";
   version = "6.0.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-1t8MjIluFgCHxpgfN3DtUT7Jc6n0BmueSwYU6wi6DOE=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Toilal/rebulk/";
     license = lib.licenses.mit;
   };
-}
+})

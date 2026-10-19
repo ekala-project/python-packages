@@ -6,7 +6,7 @@
   webencodings,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "tinycss2";
   version = "1.5.1";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "kozea";
     repo = "tinycss2";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-34qmoKVH5M0l5Is7YoreN9X3iPD0km0TLvGLbfW8KBY=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Kozea/tinycss2";
     license = lib.licenses.bsd3;
   };
-}
+})

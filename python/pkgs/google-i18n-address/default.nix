@@ -7,7 +7,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "google-i18n-address";
   version = "3.1.1";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mirumee";
     repo = "google-i18n-address";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-7RqS/+6zInlhWydJwp4xf2uGpfmSdiSwvJugpL8Mlpk=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     license = lib.licenses.bsd3;
     mainProgram = "update-validation-files";
   };
-}
+})

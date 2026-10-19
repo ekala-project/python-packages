@@ -6,13 +6,13 @@
   cryptography,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyspnego";
   version = "0.12.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-RIpJGpvw5fuVdWf+RuaAn6g2qkDfzM68x0C7ZKyxvhw=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jborean93/pyspnego";
     license = lib.licenses.mit;
   };
-}
+})

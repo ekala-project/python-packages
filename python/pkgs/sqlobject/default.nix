@@ -7,7 +7,7 @@
   pydispatcher,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "sqlobject";
   version = "3.13.1";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "sqlobject";
     repo = "sqlobject";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-Qbb48z4DrD/M8e26+5NjPcA0b3gxHeAxj1X/jSrTwx0=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://www.sqlobject.org/";
     license = lib.licenses.lgpl21Only;
   };
-}
+})

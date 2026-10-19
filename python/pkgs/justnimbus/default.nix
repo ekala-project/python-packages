@@ -6,7 +6,7 @@
   requests,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "justnimbus";
   version = "0.7.4";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "kvanzuijlen";
     repo = "justnimbus";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-FsuvpmMWBYI1LheO3NFfCeaW4m3YQ41Tc81TP3gdNqo=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/kvanzuijlen/justnimbus";
     license = lib.licenses.asl20;
   };
-}
+})

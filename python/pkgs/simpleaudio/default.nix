@@ -7,7 +7,7 @@
   lib,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "simpleaudio";
   version = "1.0.4";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "hamiltron";
     repo = "py-simple-audio";
-    tag = version;
+    tag = finalAttrs.version;
     sha256 = "12nypzb1m14yip4zrbzin5jc5awyp1d5md5y40g5anj4phb4hx1i";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     description = "Simple audio playback Python extension - cross-platform, asynchronous, dependency-free";
     license = lib.licenses.mit;
   };
-}
+})

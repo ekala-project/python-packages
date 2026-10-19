@@ -7,7 +7,7 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "azure-eventhub";
   version = "5.15.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Azure";
     repo = "azure-sdk-for-python";
-    tag = "azure-eventhub_${version}";
+    tag = "azure-eventhub_${finalAttrs.version}";
     hash = "sha256-zpj1DUeFCXgVw44LcBCYtuFcQtA9BnrDKAxKSYzu4ts=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/master/sdk/eventhub/azure-eventhub";
     license = lib.licenses.mit;
   };
-}
+})

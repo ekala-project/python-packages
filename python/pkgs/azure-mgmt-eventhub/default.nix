@@ -9,14 +9,14 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-eventhub";
   version = "12.0.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_mgmt_eventhub";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-hrHlqmTquqa3imeceRHxYtXcFjPzacceD2Qv+4iboZ8=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/eventhub/azure-mgmt-eventhub";
     license = lib.licenses.mit;
   };
-}
+})

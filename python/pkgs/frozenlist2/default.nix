@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "frozenlist2";
   version = "1.0.0";
 
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "rohanpm";
     repo = "frozenlist2";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-fF0oFZ2q1wRH7IKBlCjm3Za4xtEMSHyEaGL09rHgtTY=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/rohanpm/frozenlist2";
     license = lib.licenses.gpl3Plus;
   };
-}
+})

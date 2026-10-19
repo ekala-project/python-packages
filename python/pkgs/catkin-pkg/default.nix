@@ -9,7 +9,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "catkin-pkg";
   version = "1.1.0";
 
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ros-infrastructure";
     repo = "catkin_pkg";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-V4iurFt1WmY2jXy0A4Qa2eKMCWmR+Hs3d9pru0/zUSM=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     homepage = "http://wiki.ros.org/catkin_pkg";
     license = lib.licenses.bsd3;
   };
-}
+})

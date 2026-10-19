@@ -7,7 +7,7 @@
   uv-build,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "yte";
   version = "1.9.4";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "koesterlab";
     repo = "yte";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-TpY13HYBZ4qL2W6sPdoM+bpHcEOi0rwubCbFa4zm2I0=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
 
   pythonImportsCheck = [ "yte" ];
 
-}
+})

@@ -6,13 +6,13 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "survey";
   version = "5.4.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-4vnjtSbw2y/o+fSWDl/CqTEZkl0jULGOLURdZ0BpKvY=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Exahilosys/survey";
     license = lib.licenses.mit;
   };
-}
+})

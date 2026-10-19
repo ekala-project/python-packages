@@ -5,14 +5,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "zope.interface";
   version = "8.6";
   pyproject = true;
 
   src = fetchPypi {
     pname = "zope_interface";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-tA75tIc6+10N7AK40t/eHPGMcjN7YMmctzWWHgusBcA=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/zopefoundation/zope.interface";
     license = lib.licenses.zpl21;
   };
-}
+})

@@ -11,7 +11,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "hydrogram";
   version = "0.2.0";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "hydrogram";
     repo = "hydrogram";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-QpweUDCypTxOOWL08gCUuMgbuE4130iNyxRpUNuSBac=";
   };
 
@@ -56,4 +56,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/hydrogram/hydrogram";
     license = lib.licenses.lgpl3Plus;
   };
-}
+})

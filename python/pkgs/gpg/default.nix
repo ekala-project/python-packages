@@ -10,13 +10,13 @@
   swig,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "gpg";
   version = "2.0.0";
   pyproject = true;
 
   src = fetchurl {
-    url = "mirror://gnupg/gpgmepy/gpgmepy-${version}.tar.bz2";
+    url = "mirror://gnupg/gpgmepy/gpgmepy-${finalAttrs.version}.tar.bz2";
     hash = "sha256-B+EmVkj/UdojjJr3oYs/HcewxmtPIacvJ8dLOWzTM20=";
   };
 
@@ -55,4 +55,4 @@ buildPythonPackage rec {
     homepage = "https://dev.gnupg.org/source/gpgmepy/";
     license = lib.licenses.lgpl21Plus;
   };
-}
+})

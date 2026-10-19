@@ -10,13 +10,13 @@
   asn1crypto,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ionoscloud";
   version = "6.1.13";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-8QgweGXPWcvGQcp22yo4KovkVXrDI2eSWNMUnGhDWEI=";
   };
 
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     description = "Python API client for ionoscloud";
     license = lib.licenses.asl20;
   };
-}
+})

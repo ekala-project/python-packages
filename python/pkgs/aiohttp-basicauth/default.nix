@@ -7,7 +7,7 @@
   pytest-asyncio,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aiohttp-basicauth";
   version = "1.2.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "romis2012";
     repo = "aiohttp-basicauth";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-EnrICetTmQimScjaQ8/jviwwansbZtl35Z5v35rF7kU=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/romis2012/aiohttp-basicauth";
     license = lib.licenses.asl20;
   };
-}
+})

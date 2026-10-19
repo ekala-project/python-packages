@@ -7,13 +7,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "dasbus";
   version = "1.7";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-qIUNhBrf6O5fe7n4LPRJq5tJUNwGM4lwcXGODQA2tvY=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/rhinstaller/dasbus";
     license = lib.licenses.lgpl21Only;
   };
-}
+})

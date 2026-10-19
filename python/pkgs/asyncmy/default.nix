@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "asyncmy";
   version = "0.2.14";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "long2ice";
     repo = "asyncmy";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-bUpuFHfHW5mDtcbLk7Ro2gGq48sw3v3adY8tQ23e460=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/long2ice/asyncmy";
     license = lib.licenses.asl20;
   };
-}
+})

@@ -6,7 +6,7 @@
   tqdm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "semchunk";
   version = "4.1.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "isaacus-dev";
     repo = "semchunk";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-jQQNb5E/EarsN9OwlF6l8huX06kM2EChfUYW+MM5uxA=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/isaacus-dev/semchunk";
     license = lib.licenses.mit;
   };
-}
+})

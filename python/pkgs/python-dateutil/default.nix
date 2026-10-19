@@ -6,13 +6,13 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "python-dateutil";
   version = "2.9.0.post0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-N91UII2n4c2HU4ghfV4A69QXkkn5D7ckN+kaNUWaCtM=";
   };
 
@@ -45,4 +45,4 @@ buildPythonPackage rec {
       bsd3
     ];
   };
-}
+})

@@ -12,13 +12,13 @@
   urllib3,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "spotipy";
   version = "2.26.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-32ol2CCQcu+ozqFlYI7mRIhOOAT4dittjgbKGlx/imM=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://spotipy.readthedocs.org/";
     license = lib.licenses.mit;
   };
-}
+})

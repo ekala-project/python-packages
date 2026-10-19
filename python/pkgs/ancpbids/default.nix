@@ -9,7 +9,7 @@
   pandas,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ancpbids";
   version = "0.4.10";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ANCPLabOldenburg";
     repo = "ancp-bids";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-yAirSGClMAx5us9D9I0Dtn2xbNdXYrMclqfIdcHv5E4=";
   };
 
@@ -44,4 +44,4 @@ buildPythonPackage rec {
     description = "Read/write/validate/query BIDS datasets";
     license = lib.licenses.mit;
   };
-}
+})

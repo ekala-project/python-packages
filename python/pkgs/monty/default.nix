@@ -27,7 +27,7 @@
   ipython,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "monty";
   version = "2026.7.16";
   pyproject = true;
@@ -35,7 +35,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "materialsvirtuallab";
     repo = "monty";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-x5FNw7E3rtrgCWVhMsBpnO+uwu+mB3ELNFdd33+uFds=";
   };
 
@@ -85,4 +85,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/materialsvirtuallab/monty";
     license = lib.licenses.mit;
   };
-}
+})

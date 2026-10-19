@@ -6,13 +6,13 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jsonpickle";
   version = "4.1.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-iv7RiqGJ/YHi6DO0JrtK9IVZSSHwsdNsIAH8Vjei8hA=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jsonpickle/jsonpickle";
     license = lib.licenses.bsd3;
   };
-}
+})

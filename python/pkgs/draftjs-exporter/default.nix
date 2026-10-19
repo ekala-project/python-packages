@@ -9,7 +9,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "draftjs-exporter";
   version = "7.0.0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     repo = "draftjs_exporter";
     owner = "springload";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-vOSsT7YOMzBFkYre2GYSTlNUNwd70RsO7fJ6FWahNXM=";
   };
 
@@ -54,4 +54,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/springload/draftjs_exporter";
     license = lib.licenses.mit;
   };
-}
+})

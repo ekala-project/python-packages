@@ -8,13 +8,13 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "xyzservices";
   version = "2026.9.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-jRo5v2sZKUDMXbUmTu78GyDdGE+Lg7EwOweHQ3RPWUM=";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/geopandas/xyzservices";
     license = lib.licenses.bsd3;
   };
-}
+})

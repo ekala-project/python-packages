@@ -11,7 +11,7 @@
   pyzbar ? null,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "segno";
   version = "1.6.6";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "heuer";
     repo = "segno";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-A6lESmVogypit0SDeG4g9axn3+welSqTt1A17BNLmvU=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/heuer/segno/";
     license = lib.licenses.bsd3;
   };
-}
+})

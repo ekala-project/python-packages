@@ -8,13 +8,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jinja2-strcase";
   version = "0.0.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-2Qw3971A00WqzI94sIf2bmxapMloqyOnkVc/z3VsM3k=";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     description = "Library for converting string case in Jinja2 templates";
     license = lib.licenses.mit;
   };
-}
+})

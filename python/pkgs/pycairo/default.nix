@@ -7,7 +7,7 @@
   meson-python,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pycairo";
   version = "1.29.1";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pygobject";
     repo = "pycairo";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-fx/C3raSOU+E5vb/Awu3lz5cMpsXaOrl/8rlCR4jp/o=";
   };
 
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     ];
     platforms = lib.platforms.unix;
   };
-}
+})

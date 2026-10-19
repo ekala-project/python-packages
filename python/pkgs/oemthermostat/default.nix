@@ -7,7 +7,7 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "oemthermostat";
   version = "1.1.1";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Cadair";
     repo = "openenergymonitor_thermostat";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-vrMw3/X8MtejO1WyUA1DOlfVCPTCPgcK5p3+OlTWcM4=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Cadair/openenergymonitor_thermostat";
     license = lib.licenses.bsd3;
   };
-}
+})

@@ -8,14 +8,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-monitor";
   version = "8.0.0b3";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_mgmt_monitor";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-Nk26yjMNW+OJx9+Fdcp0KTzSv+VEV2fhm0ExcNolOaI=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Azure/azure-sdk-for-python";
     license = lib.licenses.mit;
   };
-}
+})

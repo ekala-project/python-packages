@@ -9,7 +9,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "blurhash";
   version = "1.1.5";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "halcy";
     repo = "blurhash-python";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-lTPn2GTD7eQ9XkZyuttFqEvNgzcx6b7OdeMc5WOXrJs=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/halcy/blurhash-python";
     license = lib.licenses.mit;
   };
-}
+})

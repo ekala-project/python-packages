@@ -11,7 +11,7 @@
   zope-copy,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "zope-location";
   version = "6.0";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "zopefoundation";
     repo = "zope.location";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-s7HZda+U87P62elX/KbDp2o9zAplgFVmnedDI/uq2sk=";
   };
 
@@ -53,4 +53,4 @@ buildPythonPackage rec {
     description = "Zope Location";
     license = lib.licenses.zpl21;
   };
-}
+})

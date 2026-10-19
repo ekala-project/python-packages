@@ -7,7 +7,7 @@
   buildPythonPackage,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "entry-points-txt";
   version = "0.3.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "jwodder";
     repo = "entry-points-txt";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-8oGK7aIDgXkCLh/d38hWzfF367KhmggG2s820D2r/EA=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jwodder/entry-points-txt";
     license = lib.licenses.mit;
   };
-}
+})

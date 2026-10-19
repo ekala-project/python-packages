@@ -6,14 +6,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "dash-table";
   version = "5.0.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "dash_table";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-GGJNaT1MjvLd7Jmm8WdZNDen6gvxU6og8xjBcMW8cwg=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://dash.plot.ly/datatable";
     license = lib.licenses.mit;
   };
-}
+})

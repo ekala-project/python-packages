@@ -11,7 +11,7 @@
   jpype1,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "tabula-py";
   version = "2.10.0";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "chezou";
     repo = "tabula-py";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-PQbwm9ho3XtpmZ7N7ASkrV8gk9Jom+yQKlt2fUa948s=";
   };
 
@@ -49,4 +49,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/chezou/tabula-py";
     license = lib.licenses.mit;
   };
-}
+})

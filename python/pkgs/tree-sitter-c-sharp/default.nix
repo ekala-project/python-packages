@@ -9,7 +9,7 @@
   tree-sitter,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "tree-sitter-c-sharp";
   version = "0.23.5";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "tree-sitter";
     repo = "tree-sitter-c-sharp";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-N5AAlwQFGGi47cj0m7Te08bA486gwY6NBOx4Qcy4lpo=";
   };
 
@@ -45,4 +45,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/tree-sitter/tree-sitter-c-sharp";
     license = lib.licenses.mit;
   };
-}
+})

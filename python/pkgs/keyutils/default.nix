@@ -8,7 +8,7 @@
   keyutils,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "keyutils";
   version = "0.6";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "sassoftware";
     repo = "python-keyutils";
-    tag = version;
+    tag = finalAttrs.version;
     sha256 = "0pfqfr5xqgsqkxzrmj8xl2glyl4nbq0irs0k6ik7iy3gd3mxf5g1";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/sassoftware/python-keyutils";
     license = lib.licenses.asl20;
   };
-}
+})

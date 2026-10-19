@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "DAWG-Python";
   version = "0.7.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-Sl4yhuYmHMoC8gXP1VFqerEBkPowxRwo00WAj1leNCE=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pytries/DAWG-Python";
     license = lib.licenses.mit;
   };
-}
+})

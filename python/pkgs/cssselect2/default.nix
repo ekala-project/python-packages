@@ -7,13 +7,13 @@
   webencodings,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "cssselect2";
   version = "0.10.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-g7DYIO9YnauvaTKJtkfC9bQQ920oX1beupEf+nWnudE=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Kozea/cssselect2";
     license = lib.licenses.bsd3;
   };
-}
+})

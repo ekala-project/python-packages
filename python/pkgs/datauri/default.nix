@@ -9,7 +9,7 @@
   cached-property,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "datauri";
   version = "3.0.2";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "fcurella";
     repo = "python-datauri";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-WrOQPUZ9vaLSR0hxIvCK8kBnARiOLh6qqWBw/h6XpaY=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/fcurella/python-datauri";
     license = lib.licenses.unlicense;
   };
-}
+})

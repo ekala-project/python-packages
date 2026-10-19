@@ -5,14 +5,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "testing-common-database";
   version = "2.0.3";
   pyproject = true;
 
   src = fetchPypi {
     pname = "testing.common.database";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-ll2AsphTFTJdw1jDBhsXSnEvTU1b9qgLWLEfmh3YbXM=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/tk0miya/testing.common.database";
     license = lib.licenses.asl20;
   };
-}
+})

@@ -19,7 +19,7 @@
   websockets,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "web3";
   version = "7.15.0";
   pyproject = true;
@@ -27,7 +27,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ethereum";
     repo = "web3.py";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-BStkLH7lCnhVs2Fc3c0EBXzyZtEgI8ywA01OEBYLUeQ=";
   };
 
@@ -64,4 +64,4 @@ buildPythonPackage rec {
     homepage = "https://web3py.readthedocs.io/";
     license = lib.licenses.mit;
   };
-}
+})

@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "lzfse";
   version = "0.4.2";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "m1stadev";
     repo = "lzfse";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     fetchSubmodules = true;
     hash = "sha256-ER+Hr/WrGCB0uYwsSgB4U8sCPeZ4JlOHoeb5YEGUFFM=";
   };
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/m1stadev/lzfse";
     license = lib.licenses.mit;
   };
-}
+})

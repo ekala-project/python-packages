@@ -9,14 +9,14 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "debian-inspector";
   version = "31.1.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "debian_inspector";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-uyFsYrb7D9cM1OQzkIERX0oV711uI/TEKF6t67z8egU=";
   };
 
@@ -45,4 +45,4 @@ buildPythonPackage rec {
       mit
     ];
   };
-}
+})

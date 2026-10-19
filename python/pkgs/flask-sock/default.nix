@@ -8,7 +8,7 @@
   simple-websocket,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "flask-sock";
   version = "0.7.0";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "miguelgrinberg";
     repo = "flask-sock";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-GKfOVdeLPag2IKGCWrMjQp4NTL1/9GiyLhXhf9jQKhQ=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/miguelgrinberg/flask-sock/";
     license = lib.licenses.mit;
   };
-}
+})

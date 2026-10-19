@@ -6,13 +6,13 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "langdetect";
   version = "1.0.9";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-y8H++J+NBic5d0vVHto9oydABrNmHRmcJlX2s/bWBaA=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Mimino666/langdetect";
     license = lib.licenses.asl20;
   };
-}
+})

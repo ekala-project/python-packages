@@ -11,7 +11,7 @@
   requests-mock,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "marqo";
   version = "3.18.0";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "marqo-ai";
     repo = "py-marqo";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-vzeIl3egT3HOV0GacfEGaAgBxQ/c/4b9kxxTd2uNNfQ=";
   };
 
@@ -72,4 +72,4 @@ buildPythonPackage rec {
     homepage = "https://marqo.ai";
     license = lib.licenses.asl20;
   };
-}
+})

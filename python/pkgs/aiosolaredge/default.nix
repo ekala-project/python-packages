@@ -11,7 +11,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aiosolaredge";
   version = "1.0.2";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "bdraco";
     repo = "aiosolaredge";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-1RdkYcdhhU+MaP91iJ1tSrL0OlUi6Il1XBXnmRYhC7g=";
   };
 
@@ -44,4 +44,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/bdraco/aiosolaredge";
     license = lib.licenses.mit;
   };
-}
+})

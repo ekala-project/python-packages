@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "graphviz";
   version = "0.21";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-IHQ+cYO+gqqqitbJP4iTySO9ZligTDLuEV7bPIqDX3g=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     description = "Simple Python interface for Graphviz";
     license = lib.licenses.mit;
   };
-}
+})

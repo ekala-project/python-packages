@@ -15,7 +15,7 @@
 let
   sqlite-vec-c = pkgs.sqlite-vec;
 in
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   inherit (sqlite-vec-c) pname version src;
   pyproject = true;
 
@@ -46,7 +46,7 @@ buildPythonPackage rec {
     substituteInPlace sqlite_vec/__init__.py \
       --replace-fail "@libpath@" "${lib.getLib sqlite-vec-c}/lib/"
     substituteInPlace pyproject.toml \
-      --replace-fail 'version = "0.0.0"' 'version = "${version}"'
+      --replace-fail 'version = "0.0.0"' 'version = "${finalAttrs.version}"'
   '';
 
   build-system = [
@@ -69,4 +69,4 @@ buildPythonPackage rec {
   meta = sqlite-vec-c.meta // {
     description = "Python bindings for sqlite-vec";
   };
-}
+})

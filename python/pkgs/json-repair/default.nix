@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "json-repair";
   version = "0.63.4";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mangiucugna";
     repo = "json_repair";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-VRRtL8X9egdqdz6Celw1CGGTuWd9YMVbq/uHwHtmv64=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     mainProgram = "json_repair";
   };
-}
+})

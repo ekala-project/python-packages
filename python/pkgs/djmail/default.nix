@@ -10,7 +10,7 @@
   psycopg2,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "djmail";
   version = "2.0.0";
   pyproject = true;
@@ -22,7 +22,7 @@ buildPythonPackage rec {
   };
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     sha256 = "cf3ce7626305d218a8bf2b6a219266ef8061aceeefc1c70a54170f4105465202";
   };
 
@@ -39,4 +39,4 @@ buildPythonPackage rec {
   ];
 
   # django.core.exceptions.ImproperlyConfigured: Requested setting DEFAULT_INDEX_TABLESPACE, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
-}
+})

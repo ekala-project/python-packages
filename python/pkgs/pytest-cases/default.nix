@@ -9,14 +9,14 @@
   pytest,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytest-cases";
   version = "3.10.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "pytest_cases";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-RR+ePs1dLYGkNiwQxEESb1s9GuOn769Z9gsfuTDfLWk=";
   };
 
@@ -55,4 +55,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/smarie/python-pytest-cases";
     license = lib.licenses.bsd3;
   };
-}
+})

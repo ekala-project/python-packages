@@ -9,14 +9,14 @@
   protobuf,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "grpcio-status";
   version = "1.83.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "grpcio_status";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-wIyNVT1quW7/rh2SODneIpJvWjFqlC9IpIBA4EfFF68=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/grpc/grpc/tree/master/src/python/grpcio_status";
     license = lib.licenses.asl20;
   };
-}
+})

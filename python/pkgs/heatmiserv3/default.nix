@@ -10,7 +10,7 @@
   pyyaml,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "heatmiserv3";
   version = "2.0.6";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "andylockran";
     repo = "heatmiserV3";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-mwzW52g3Uz7zxL9R5zePDyxMSramEiaiVm6VPlNyNts=";
   };
 
@@ -46,4 +46,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/andylockran/heatmiserV3";
     license = lib.licenses.mit;
   };
-}
+})

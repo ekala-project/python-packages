@@ -10,14 +10,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "google-cloud-batch";
   version = "0.22.3";
   pyproject = true;
 
   src = fetchPypi {
     pname = "google_cloud_batch";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-ULIqB2tIIhFMSFtgCPcjoEvqksosIeI0sK78kYZGz20=";
   };
 
@@ -48,4 +48,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-batch";
     license = lib.licenses.asl20;
   };
-}
+})

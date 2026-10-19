@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "asynccmd";
   version = "0.2.4";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "valentinmk";
     repo = "asynccmd";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-0AjOKAEiwHi3AkzMGRvE/czTCfShXQAm8mDz98EESgs=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/valentinmk/asynccmd";
     license = lib.licenses.asl20;
   };
-}
+})

@@ -6,13 +6,13 @@
   beautifulsoup4,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "micawber";
   version = "0.8.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-3u2qkRfFbH2AAwrFVm/cW1Kz62qfryuqaUCIltkJDSg=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://micawber.readthedocs.io/en/latest/";
     license = lib.licenses.mit;
   };
-}
+})

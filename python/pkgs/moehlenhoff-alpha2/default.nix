@@ -9,7 +9,7 @@
   pytest-asyncio,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "moehlenhoff-alpha2";
   version = "1.4.0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "j-a-n";
     repo = "python-moehlenhoff-alpha2";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-bvT7kWFPIEQUgUxLGydd2e7SBA7vPV+YAzDqYLE7X+o=";
   };
 
@@ -44,4 +44,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/j-a-n/python-moehlenhoff-alpha2";
     license = lib.licenses.gpl3Only;
   };
-}
+})

@@ -10,7 +10,7 @@
   python,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "djangorestframework-csv";
   version = "3.0.2";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mjumbewu";
     repo = "django-rest-framework-csv";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-XtMkSucB7+foRpTaRfGF1Co0n3ONNGyzex6MXR4xM5c=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mjumbewu/django-rest-framework-csv";
     license = lib.licenses.bsd2;
   };
-}
+})

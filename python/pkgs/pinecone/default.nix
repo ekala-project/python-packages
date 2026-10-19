@@ -9,7 +9,7 @@
   rustPlatform,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pinecone";
   version = "9.1.0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pinecone-io";
     repo = "pinecone-python-client";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-yWGW9qx4zb4FnDLXvtXREYXRO7e5Jk/KJoaQlpKMwpg=";
   };
 
@@ -46,4 +46,4 @@ buildPythonPackage rec {
     homepage = "https://www.pinecone.io/";
     license = lib.licenses.asl20;
   };
-}
+})

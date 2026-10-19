@@ -10,13 +10,13 @@
   testtools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "effect";
   version = "1.1.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-ev+2A3B8ZIsHsReB67eTpLmu6KzxrFdkw+0hEq3wyeo=";
   };
 
@@ -44,4 +44,4 @@ buildPythonPackage rec {
     homepage = "https://effect.readthedocs.io/";
     license = lib.licenses.mit;
   };
-}
+})

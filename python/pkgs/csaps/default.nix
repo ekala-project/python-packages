@@ -12,7 +12,7 @@
   scipy,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "csaps";
   version = "1.3.3";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "espdev";
     repo = "csaps";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-1pNJaNExhcRWDjJenEKp1eJ4wZMFXxwWcmepEt6/p0s=";
   };
 
@@ -46,4 +46,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/espdev/csaps";
     license = lib.licenses.mit;
   };
-}
+})

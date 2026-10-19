@@ -7,13 +7,13 @@
   sphinx,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "sphinxcontrib-asyncio";
   version = "0.3.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-mf0m4P5+34ckSnGpnDFv0Mm1CFbCUZrMqSfr50EAci4=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/aio-libs/sphinxcontrib-asyncio";
     license = lib.licenses.asl20;
   };
-}
+})

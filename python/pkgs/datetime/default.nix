@@ -7,14 +7,14 @@
   zope_interface,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "DateTime";
   version = "6.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "datetime";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-wVFJNtL5AeEMjgjYO/BObJ29fKTyRNqU/smAmAo7xNU=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/zopefoundation/DateTime";
     license = lib.licenses.zpl21;
   };
-}
+})

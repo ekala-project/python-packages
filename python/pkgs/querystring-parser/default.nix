@@ -6,13 +6,13 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "querystring_parser";
   version = "1.2.4";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-ZE/OHP/gUwRTtDqDo4CU2+QizLqMmy8qHAAoDhTKimI=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/bernii/querystring-parser";
     license = lib.licenses.mit;
   };
-}
+})

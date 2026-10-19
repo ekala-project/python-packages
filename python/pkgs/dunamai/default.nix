@@ -10,7 +10,7 @@
   packaging,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "dunamai";
   version = "1.26.2";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mtkennerly";
     repo = "dunamai";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-pP0KeQ1tThvBomQIlrWNCVzB8ghR9rfaLm5NeBKwiuE=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mtkennerly/dunamai";
     license = lib.licenses.mit;
   };
-}
+})

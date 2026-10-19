@@ -10,7 +10,7 @@
   simplejson,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "eve";
   version = "2.3.1";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pyeve";
     repo = "eve";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-y0QfxLDoTKNZuAKcPqrLjwkZ0mRseBVq7OyflwUd+Lk=";
   };
 
@@ -46,4 +46,4 @@ buildPythonPackage rec {
     homepage = "https://python-eve.org/";
     license = lib.licenses.bsd3;
   };
-}
+})

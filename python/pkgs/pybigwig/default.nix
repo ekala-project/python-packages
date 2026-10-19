@@ -7,7 +7,7 @@
   zlib,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pybigwig";
   version = "0.3.25";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "deeptools";
     repo = "pyBigWig";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-Vq/QdJg2qObJ49lHZ4RjULfI0f7pScLRWGW8NBZoMAw=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/deeptools/pyBigWig";
     license = lib.licenses.mit;
   };
-}
+})

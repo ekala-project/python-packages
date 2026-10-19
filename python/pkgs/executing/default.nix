@@ -8,7 +8,7 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "executing";
   version = "2.2.1";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "alexmojaki";
     repo = "executing";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-UlXuXBW9TmJ0xG/0yMdx8EDQDSzVgtsgFJIj/O7pmio=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/alexmojaki/executing";
     license = lib.licenses.mit;
   };
-}
+})

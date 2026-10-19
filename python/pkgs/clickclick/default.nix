@@ -10,7 +10,7 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "clickclick";
   version = "20.10.2";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromCodeberg {
     owner = "hjacobs";
     repo = "python-clickclick";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-gefU6CI4ibtvonsaKZmuffuUNUioBn5ODs72BI5zXOw=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://codeberg.org/hjacobs/python-clickclick/";
     license = lib.licenses.asl20;
   };
-}
+})

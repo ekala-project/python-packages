@@ -9,7 +9,7 @@
   tomlkit,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "poetry-dynamic-versioning";
   version = "1.10.0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mtkennerly";
     repo = "poetry-dynamic-versioning";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-sETUaOKFS0T4o++W1maKt7qsy0CdnmMQT7vegNKQCbk=";
   };
 
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mtkennerly/poetry-dynamic-versioning";
     license = lib.licenses.mit;
   };
-}
+})

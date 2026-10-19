@@ -15,13 +15,13 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "keystoneauth1";
   version = "5.17.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-gjWazCDHVPyyKBjgkOL+pkfkxcETemrdtJhOn7pwirM=";
   };
 
@@ -54,4 +54,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/openstack/keystoneauth";
     license = lib.licenses.asl20;
   };
-}
+})

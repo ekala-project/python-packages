@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "dbutils";
   version = "3.2.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-3+P16244MELWitB+Tpd4squ8xGJ6KD+F78ghAxnAddI=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://webwareforpython.github.io/DBUtils/";
     license = lib.licenses.mit;
   };
-}
+})

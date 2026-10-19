@@ -11,14 +11,14 @@
   striprtf,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "llama-index-readers-file";
   version = "0.7.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "llama_index_readers_file";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-Mo4/5dptphcuPXG2C1x2wWdnB7IgyPxH7fqnlfmu/RY=";
   };
 
@@ -51,4 +51,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/run-llama/llama_index/tree/main/llama-index-integrations/readers/llama-index-readers-file";
     license = lib.licenses.mit;
   };
-}
+})

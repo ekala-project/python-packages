@@ -11,7 +11,7 @@
   voluptuous,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "async-upnp-client";
   version = "0.48.1";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "StevenLooman";
     repo = "async_upnp_client";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-bORaKv0ntXubjGuVNKVRaWeKgqvmN5HEmTYqva8yobQ=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     license = lib.licenses.asl20;
     mainProgram = "upnp-client";
   };
-}
+})

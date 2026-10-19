@@ -6,7 +6,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "html-table-parser-python3";
   version = "0.3.1";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "schmijos";
     repo = "html-table-parser-python3";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-okYl0T12wVld7GVbFQH2hgEVKXSScipJN/vYaiRVdGY=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/schmijos/html-table-parser-python3";
     license = lib.licenses.agpl3Only;
   };
-}
+})

@@ -5,14 +5,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "types-tabulate";
   version = "0.10.0.20260508";
   pyproject = true;
 
   src = fetchPypi {
     pname = "types_tabulate";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-jlHxWeiySXaElwauLtHcmtuo670ICxfklOu2aozJLHQ=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/python/typeshed";
     license = lib.licenses.asl20;
   };
-}
+})

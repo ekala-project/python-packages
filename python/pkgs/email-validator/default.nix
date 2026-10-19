@@ -8,14 +8,14 @@
   idna,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "email-validator";
   version = "2.3.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "email_validator";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-n8BcN/L2z0Of9BT4/EbZF5KZdKgiRMIOsQIxumDFRCY=";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/JoshData/python-email-validator";
     license = lib.licenses.cc0;
   };
-}
+})

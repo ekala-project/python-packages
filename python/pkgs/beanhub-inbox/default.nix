@@ -15,7 +15,7 @@
   pyyaml,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "beanhub-inbox";
   version = "0.2.3";
   pyproject = true;
@@ -23,7 +23,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "LaunchPlatform";
     repo = "beanhub-inbox";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-WWfZsJRm2rJI85vmFt/AtV++5vpSTJZpRrk3PdHMhAA=";
   };
 
@@ -52,4 +52,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/LaunchPlatform/beanhub-inbox";
     license = lib.licenses.mit;
   };
-}
+})

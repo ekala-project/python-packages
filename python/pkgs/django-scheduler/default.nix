@@ -11,7 +11,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-scheduler";
   version = "1.0";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "llazzaro";
     repo = "django-scheduler";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-TgIp2oqju3O6zPp3WMEB9HeNgAJILNkWWfbDFmMQ3eA=";
   };
 
@@ -66,4 +66,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/llazzaro/django-scheduler";
     license = lib.licenses.bsd3;
   };
-}
+})

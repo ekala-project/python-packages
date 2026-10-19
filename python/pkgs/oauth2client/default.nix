@@ -9,13 +9,13 @@
   rsa,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "oauth2client";
   version = "4.1.3";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-1IZ0HkUSh/aVaKTSbXDZrNc6K7+idXRsU1tCCYkczMY=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/google/oauth2client/";
     license = lib.licenses.asl20;
   };
-}
+})

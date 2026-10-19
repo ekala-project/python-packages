@@ -27,7 +27,7 @@
   websockets,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "python-lsp-server";
   version = "1.14.0";
   pyproject = true;
@@ -35,7 +35,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "python-lsp";
     repo = "python-lsp-server";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-Yq5dYaX+/hLvmPpHI8rhCcSlabQBPAyUrIQRgnoi17c=";
   };
 
@@ -100,4 +100,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     mainProgram = "pylsp";
   };
-}
+})

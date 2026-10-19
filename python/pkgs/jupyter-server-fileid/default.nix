@@ -7,7 +7,7 @@
   click,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jupyter-server-fileid";
   version = "0.9.3";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "jupyter-server";
     repo = "jupyter_server_fileid";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-ob7hnqU7GdaDHEPF7+gwkmsboKZgiiLzzwxbBUwYHYo=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
 
   pythonImportsCheck = [ "jupyter_server_fileid" ];
 
-}
+})

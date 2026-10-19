@@ -6,7 +6,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "juliandate";
   version = "1.0.5";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "seanredmond";
     repo = "juliandate";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-pOWyrPBFqKmG9oKbXY/L14LblIcc8KfZSqZAEQP29V8=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/seanredmond/juliandate";
     license = lib.licenses.gpl3Only;
   };
-}
+})

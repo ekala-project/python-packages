@@ -8,7 +8,7 @@
   versionCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "csaf-tool";
   version = "0.3.2";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "anthonyharrison";
     repo = "csaf";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-LR6r03z0nvvAQgFHaTWfukoJmLZ6SLPXfbp/G8N/HtM=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/anthonyharrison/csaf";
     license = lib.licenses.asl20;
   };
-}
+})

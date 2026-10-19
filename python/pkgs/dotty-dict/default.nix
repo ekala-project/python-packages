@@ -5,7 +5,7 @@
   poetry-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "dotty-dict";
   version = "1.3.1";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pawelzny";
     repo = "dotty_dict";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-kY7o9wgfsV7oc5twOeuhG47C0Js6JzCt02S9Sd8dSGc=";
   };
 
@@ -25,4 +25,4 @@ buildPythonPackage rec {
     homepage = "https://dotty-dict.readthedocs.io";
     license = lib.licenses.mit;
   };
-}
+})

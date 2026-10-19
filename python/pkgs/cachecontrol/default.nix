@@ -9,14 +9,14 @@
   requests,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "cachecontrol";
   version = "0.14.4";
   pyproject = true;
   src = fetchFromGitHub {
     owner = "ionrock";
     repo = "cachecontrol";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-627SqJocVOO0AfI8vswPqOr15MA/Lx7RLAdRAXzWu84=";
   };
 
@@ -47,4 +47,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ionrock/cachecontrol";
     license = lib.licenses.asl20;
   };
-}
+})

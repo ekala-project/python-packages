@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "cram";
   version = "0.7";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-fadEWvLOFbkKrV7EeS+FfO9XhtcfFDd+nrmU2Lgzfy8=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://bitheap.org/cram/";
     license = lib.licenses.gpl2Plus;
   };
-}
+})

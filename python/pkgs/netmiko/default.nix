@@ -13,13 +13,13 @@
   textfsm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "netmiko";
   version = "4.7.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-lM97/l2u0dBYREzhY34QF33yL5A2g6U9H77kdVNIjGU=";
   };
 
@@ -45,4 +45,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ktbyers/netmiko/";
     license = lib.licenses.mit;
   };
-}
+})

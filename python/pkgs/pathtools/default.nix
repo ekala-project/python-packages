@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pathtools";
   version = "0.1.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-fDXFQho5u4LlgBj+vZDjtuXbNMVEOqr3QrPzPUZV8cA=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     description = "Pattern matching and various utilities for file systems paths";
     license = lib.licenses.mit;
   };
-}
+})

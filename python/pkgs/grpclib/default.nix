@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "grpclib";
   version = "0.4.9";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "vmagamedov";
     repo = "grpclib";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-9ElCIL084B+KihV1AXYJejBletj8y6LnoWRGEj4E1tQ=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/vmagamedov/grpclib";
     license = lib.licenses.bsd3;
   };
-}
+})

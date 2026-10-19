@@ -8,7 +8,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "crontab";
   version = "3.3.0";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitLab {
     owner = "doctormo";
     repo = "python-crontab";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-eJXtvTRwokbewWrTArHJ2FXGDLvlkGA/5ZZR01koMW8=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://gitlab.com/doctormo/python-crontab/";
     license = lib.licenses.lgpl21Only;
   };
-}
+})

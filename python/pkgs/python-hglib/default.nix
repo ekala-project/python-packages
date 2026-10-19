@@ -7,13 +7,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "python-hglib";
   version = "2.6.2";
   pyproject = true;
 
   src = fetchzip {
-    url = "https://repo.mercurial-scm.org/python-hglib/archive/${version}.tar.gz";
+    url = "https://repo.mercurial-scm.org/python-hglib/archive/${finalAttrs.version}.tar.gz";
     hash = "sha256-UXersegqJ9VAxy4Kvpb2IiOJfQbWryeeaGvwiR4ncW8=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://www.mercurial-scm.org/wiki/PythonHglibs";
     license = lib.licenses.mit;
   };
-}
+})

@@ -8,14 +8,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "google-cloud-videointelligence";
   version = "2.20.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "google_cloud_videointelligence";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-5EktMzhD8EAZG0cw/1igpK6hAINQBTh5vEBY3fYtqKA=";
   };
 
@@ -48,4 +48,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-videointelligence";
     license = lib.licenses.asl20;
   };
-}
+})

@@ -8,13 +8,13 @@
   tornado,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ws4py";
   version = "0.6.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-n4exm3c/CgdEo486+jaoAyht0xl/C7Ndm3UpPscALRk=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://ws4py.readthedocs.org";
     license = lib.licenses.bsd3;
   };
-}
+})

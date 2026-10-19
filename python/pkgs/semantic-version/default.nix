@@ -6,14 +6,14 @@
   buildPythonPackage,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "semantic-version";
   version = "2.10.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "semantic_version";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-vau20zaZjLs3jUuds6S1ah4yNXAdwF6iaQ2amX7VBBw=";
   };
 
@@ -25,4 +25,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/rbarrois/python-semanticversion/";
     license = lib.licenses.bsd2;
   };
-}
+})

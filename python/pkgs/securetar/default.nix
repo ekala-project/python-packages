@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "securetar";
   version = "2026.4.1";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "home-assistant-libs";
     repo = "securetar";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-y2Ow272094Qrn52LGYkuRcjaR6d0C6bF12g7W6AwSMI=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/home-assistant-libs/securetar";
     license = lib.licenses.asl20;
   };
-}
+})

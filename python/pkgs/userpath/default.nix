@@ -6,13 +6,13 @@
   click,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "userpath";
   version = "1.9.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-bFIojasGklfMgxhG0V1IEzUiRV1Gd+5pqXgfEdvv2BU=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
       mit
     ];
   };
-}
+})

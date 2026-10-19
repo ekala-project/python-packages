@@ -7,13 +7,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mistletoe";
   version = "1.6.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-kvBmxHIKJfokvyYOZBNwK7/zpbipOvMUy2zYWJcmqOE=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/miyuchina/mistletoe";
     license = lib.licenses.mit;
   };
-}
+})

@@ -17,14 +17,14 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "google-cloud-aiplatform";
   version = "2.1.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "google_cloud_aiplatform";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-lk7KFg1K9IouBLXuR2+004yEOI8jtEIOLHGzAVHWJb0=";
   };
 
@@ -61,4 +61,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/googleapis/python-aiplatform";
     license = lib.licenses.asl20;
   };
-}
+})

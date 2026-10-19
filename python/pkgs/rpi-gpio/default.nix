@@ -6,14 +6,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "rpi-gpio";
   version = "0.7.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "RPi.GPIO";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-zWHEsDw3tiu6SlrP6phidJwzxhjgKV5+kKpHE/s3O3A=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     platforms = lib.platforms.linux;
   };
-}
+})

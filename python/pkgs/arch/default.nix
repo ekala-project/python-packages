@@ -13,7 +13,7 @@
   meson-python,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "arch";
   version = "8.0.0";
   pyproject = true;
@@ -21,7 +21,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "bashtage";
     repo = "arch";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-qw8sSgsMu6YTiQlzsrePnDKkFBtrxD9RK6ZZE5jFeX0=";
   };
 
@@ -51,4 +51,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/bashtage/arch";
     license = lib.licenses.mit;
   };
-}
+})

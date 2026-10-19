@@ -6,13 +6,13 @@
   hatch-vcs,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "plumbum";
   version = "2.0.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-IzdR14GcnmdD7BwkBZJ+tPpSooTHuJS9EOKBBqkwmpI=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/tomerfiliba/plumbum";
     license = lib.licenses.mit;
   };
-}
+})

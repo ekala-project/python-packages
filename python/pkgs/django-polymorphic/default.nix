@@ -11,7 +11,7 @@
   pytest-playwright ? null,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-polymorphic";
   version = "4.11.7";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "django-polymorphic";
     repo = "django-polymorphic";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-Xm+yPpi6UbHON2eSv1e8hiQLWHdMA4zYoDtAnURFMRA=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     description = "Improved Django model inheritance with automatic downcasting";
     license = lib.licenses.bsd3;
   };
-}
+})

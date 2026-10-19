@@ -5,14 +5,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "lazr-uri";
   version = "4.0.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "lazr_uri";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-1KTkS3yHJpq2wB39TEYLjwSS4jd8QhUVfChZKYiO/lw=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://launchpad.net/lazr.uri";
     license = lib.licenses.lgpl3Only;
   };
-}
+})

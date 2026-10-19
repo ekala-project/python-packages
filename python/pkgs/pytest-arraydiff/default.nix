@@ -9,13 +9,13 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytest-arraydiff";
   version = "0.6.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-KTexRQ/JNWIPJHCdh9QMZ+BVoEPXuFQaJf36mU3aZ94=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/astrofrog/pytest-arraydiff";
     license = lib.licenses.bsd3;
   };
-}
+})

@@ -8,7 +8,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ldapdomaindump";
   version = "0.10.0";
   pyproject = true;
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/dirkjanm/ldapdomaindump/";
     license = lib.licenses.mit;
   };
-}
+})

@@ -5,7 +5,7 @@
   uv-build,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "qasync";
   version = "0.28.0";
 
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "CabbageDevelopment";
     repo = "qasync";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-eQJ1Yszl95IycggSyWcD3opAO1rfBdNp14y8eHDMJY4=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/CabbageDevelopment/qasync";
     license = lib.licenses.bsd2;
   };
-}
+})

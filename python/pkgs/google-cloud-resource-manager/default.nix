@@ -10,14 +10,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "google-cloud-resource-manager";
   version = "1.18.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "google_cloud_resource_manager";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-22ifgAoUxm0EEZan+7i7iq6NyH8owpKeEBpex2axVRI=";
   };
 
@@ -48,4 +48,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-resource-manager";
     license = lib.licenses.asl20;
   };
-}
+})

@@ -22,7 +22,7 @@
   oci,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "cohere";
   version = "7.1.0";
   pyproject = true;
@@ -30,7 +30,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "cohere-ai";
     repo = "cohere-python";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-7dkU2M9v7JbQU9OMUQA1yLzbCmRPuOzUmB6KBpO7EG0=";
   };
 
@@ -68,4 +68,4 @@ buildPythonPackage rec {
     homepage = "https://docs.cohere.com/docs";
     license = lib.licenses.mit;
   };
-}
+})

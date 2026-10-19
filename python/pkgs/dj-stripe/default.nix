@@ -11,7 +11,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "dj-stripe";
   version = "2.11.0";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "dj-stripe";
     repo = "dj-stripe";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-BTXqt6daGXWghURtzFuOOlNVDfe01ZFOnNoCsTrvsRQ=";
   };
 
@@ -117,4 +117,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/dj-stripe/dj-stripe";
     license = lib.licenses.mit;
   };
-}
+})

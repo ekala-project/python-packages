@@ -6,7 +6,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "chameleon";
   version = "4.6.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "malthe";
     repo = "chameleon";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-zCEM5yl8Y11FbexD7veS9bFJgm30L6fsTde59m2t1ec=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://chameleon.readthedocs.io";
     license = lib.licenses.bsd0;
   };
-}
+})

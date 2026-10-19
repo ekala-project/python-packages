@@ -10,13 +10,13 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "leather";
   version = "0.4.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-ZxGcKu6TvoIfB3GTvYU04pbAWzi9F02cWoDEqjHRpNM=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     description = "Python charting library";
     license = lib.licenses.mit;
   };
-}
+})

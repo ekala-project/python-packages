@@ -15,13 +15,13 @@
   xlwt,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "tablib";
   version = "3.10.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-eBz6mkLejzPFKv+Ff9CgTkg95P0cU+qqmmrqxiutEd4=";
   };
 
@@ -56,4 +56,4 @@ buildPythonPackage rec {
     homepage = "https://tablib.readthedocs.io/";
     license = lib.licenses.mit;
   };
-}
+})

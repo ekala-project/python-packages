@@ -7,13 +7,13 @@
   idna,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "trustme";
   version = "1.2.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-ZSi6K7x/LbQfM4JcjdE+Pj650zS6D5CXE8jDE59K5H8=";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
       asl20
     ];
   };
-}
+})

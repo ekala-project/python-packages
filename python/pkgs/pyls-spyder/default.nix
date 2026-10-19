@@ -7,7 +7,7 @@
   python-lsp-server,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyls-spyder";
   version = "0.4.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "spyder-ide";
     repo = "pyls-spyder";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "11ajbsia60d4c9s6m6rbvaqp1d69fcdbq6a98lkzkkzv2b9pdhkk";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/spyder-ide/pyls-spyder";
     license = lib.licenses.mit;
   };
-}
+})

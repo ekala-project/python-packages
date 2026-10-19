@@ -9,7 +9,7 @@
   pytest-timeout,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyppmd";
   version = "1.1.1";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromCodeberg {
     owner = "miurahr";
     repo = "pyppmd";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-0t1vyVMtmhb38C2teJ/Lq7dx4usm4Bzx+k7Zalf/nXE=";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     homepage = "https://codeberg.org/miurahr/pyppmd";
     license = lib.licenses.gpl2Plus;
   };
-}
+})

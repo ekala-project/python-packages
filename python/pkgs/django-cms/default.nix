@@ -13,7 +13,7 @@
   django-cms,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-cms";
   version = "5.1.2";
   pyproject = true;
@@ -21,7 +21,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "django-cms";
     repo = "django-cms";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-bwIbCZI1XwN/BQq7WYBJUOsclIaLO4jtVKUpH1iyY/w=";
   };
 
@@ -48,4 +48,4 @@ buildPythonPackage rec {
     homepage = "https://django-cms.org";
     license = lib.licenses.bsd3;
   };
-}
+})

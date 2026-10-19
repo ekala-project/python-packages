@@ -10,7 +10,7 @@
   versioneer,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "intake-parquet";
   version = "0.3.0";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "intake";
     repo = "intake-parquet";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-6OZPevpa3T/7p7X77Dib4My07oqksw9m0ELTLXwYJ70=";
   };
 
@@ -49,4 +49,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/intake/intake-parquet";
     license = lib.licenses.bsd2;
   };
-}
+})

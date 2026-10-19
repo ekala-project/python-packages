@@ -25,7 +25,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "fedora-messaging";
   version = "3.9.1";
   pyproject = true;
@@ -33,7 +33,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "fedora-infra";
     repo = "fedora-messaging";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-384pvF/MgOReA52bfifa4Fuo79b9zUe+AK7vfIkFSf8=";
   };
 
@@ -79,4 +79,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/fedora-infra/fedora-messaging";
     license = lib.licenses.gpl2Plus;
   };
-}
+})

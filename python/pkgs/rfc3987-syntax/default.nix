@@ -6,7 +6,7 @@
   lark,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "rfc3987-syntax";
   version = "1.1.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "willynilly";
     repo = "rfc3987-syntax";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-6jA/x8KnwBvyW2k384/EB/NJ8BmJJTEHA8YUlQP+1Y4=";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/willynilly/rfc3987-syntax";
     license = lib.licenses.mit;
   };
-}
+})

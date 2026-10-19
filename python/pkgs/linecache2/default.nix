@@ -6,13 +6,13 @@
   pbr,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "linecache2";
   version = "1.0.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-Syb/TnEQ23butvWntkqCYjg51ZXCA47tpmLyott46Xw=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     description = "Backport of linecache to older supported Pythons";
     license = lib.licenses.psfl;
   };
-}
+})

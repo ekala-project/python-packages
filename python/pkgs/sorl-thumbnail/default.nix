@@ -7,14 +7,14 @@
   django,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "sorl-thumbnail";
   version = "13.1.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "sorl_thumbnail";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-S/LT5cIR+dPXVCc68GfHZk3zYb/MRyL3eKzvBUNS7vo=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     description = "Thumbnails for Django";
     license = lib.licenses.bsd3;
   };
-}
+})

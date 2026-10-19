@@ -12,13 +12,13 @@
   hatch-fancy-pypi-readme,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "cloudflare";
   version = "5.7.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-DKL7YBfoB3vXmCEdJQWqLK0Yai2sFKIKrle4/+Q/s4s=";
   };
 
@@ -50,4 +50,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/cloudflare/cloudflare-python";
     license = lib.licenses.asl20;
   };
-}
+})

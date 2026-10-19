@@ -12,7 +12,7 @@
   toml,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "adblock";
   version = "0.6.0";
   pyproject = true;
@@ -21,7 +21,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ArniDagur";
     repo = "python-adblock";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-5g5xdUzH/RTVwu4Vfb5Cb1t0ruG0EXgiXjrogD/+JCU=";
   };
 
@@ -36,7 +36,7 @@ buildPythonPackage rec {
 
   postPatch = ''
     substituteInPlace pyproject.toml \
-      --replace "0.0.0" "${version}"
+      --replace "0.0.0" "${finalAttrs.version}"
   '';
 
   cargoDeps = rustPlatform.fetchCargoVendor {
@@ -74,4 +74,4 @@ buildPythonPackage rec {
       mit
     ];
   };
-}
+})

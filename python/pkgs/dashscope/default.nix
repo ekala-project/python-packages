@@ -18,7 +18,7 @@
   websocket-client,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "dashscope";
   version = "1.27.4";
   pyproject = true;
@@ -26,7 +26,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "dashscope";
     repo = "dashscope-sdk-python";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-oLg/ghUllfsS/2Aqu6QrkBnQYxsBshZlWPHg+UZp6Yw=";
   };
 
@@ -48,7 +48,7 @@ buildPythonPackage rec {
   # Specify the version explicitly
   postPatch = ''
     substituteInPlace setup.py \
-      --replace-fail "version=get_version()," "version='${version}',"
+      --replace-fail "version=get_version()," "version='${finalAttrs.version}',"
   '';
   pythonImportsCheck = [ "dashscope" ];
   meta = {
@@ -56,4 +56,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/dashscope/dashscope-sdk-python";
     license = lib.licenses.asl20;
   };
-}
+})

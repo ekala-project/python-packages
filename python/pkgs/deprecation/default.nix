@@ -7,13 +7,13 @@
   packaging,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "deprecation";
   version = "2.1.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     sha256 = "1zqqjlgmhgkpzg9ss5ki8wamxl83xn51fs6gn2a8cxsx9vkbvcvj";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://deprecation.readthedocs.io/";
     license = lib.licenses.asl20;
   };
-}
+})

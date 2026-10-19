@@ -7,13 +7,13 @@
   yajl,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ijson";
   version = "3.5.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-r0C9GoX1XbC4swcVyFh2Ewa9ktVZAUhjb3XDMJ5udr0=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ICRAR/ijson";
     license = lib.licenses.bsd3;
   };
-}
+})

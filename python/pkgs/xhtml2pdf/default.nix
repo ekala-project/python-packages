@@ -14,7 +14,7 @@
   svglib,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "xhtml2pdf";
   version = "0.2.18";
   pyproject = true;
@@ -22,7 +22,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "xhtml2pdf";
     repo = "xhtml2pdf";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-AAFtHz1jOPmSMP3FIo9Tb5Bv0TmR2PtLsB1uSEgNLJo=";
   };
 
@@ -53,4 +53,4 @@ buildPythonPackage rec {
     license = lib.licenses.asl20;
     mainProgram = "xhtml2pdf";
   };
-}
+})

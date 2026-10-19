@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "tensorly";
   version = "0.9.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "tensorly";
     repo = "tensorly";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-A6Zlp8fa7XFgf4qpg7SEtNLlYSNtDGLuRUEfzD+crQc=";
   };
 
@@ -50,4 +50,4 @@ buildPythonPackage rec {
     homepage = "https://tensorly.org/";
     license = lib.licenses.bsd3;
   };
-}
+})

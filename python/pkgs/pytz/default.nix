@@ -6,13 +6,13 @@
   pkgs,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytz";
   version = "2026.3.post1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-IhHT/Pmnl9NAXKyWrH9h2A5qZE9yozCWBygv6KIBDF0=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://pythonhosted.org/pytz";
     license = lib.licenses.mit;
   };
-}
+})

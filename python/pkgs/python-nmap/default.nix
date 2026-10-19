@@ -7,13 +7,13 @@
   nmap,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "python-nmap";
   version = "0.7.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-91r2uR3Y47DDH4adsyFj9iraaGlF5bfCX4S8D3+tO2Q=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://xael.org/pages/python-nmap-en.html";
     license = lib.licenses.gpl3Plus;
   };
-}
+})

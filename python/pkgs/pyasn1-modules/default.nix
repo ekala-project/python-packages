@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyasn1-modules";
   version = "0.4.2";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pyasn1";
     repo = "pyasn1-modules";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-jpMIxQ4BJ7MY3cV276sVJv+3M/MMFKRIoL2m2QJFxRY=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://pyasn1.readthedocs.io";
     license = lib.licenses.bsd2;
   };
-}
+})

@@ -30,7 +30,7 @@ let
   src = fetchFromGitHub {
     owner = "pradyunsg";
     repo = "furo";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-s9CQXmHI3PoXbB24e8rUd9ip02UZTjPHP4Ar6hV3mUc=";
   };
 
@@ -56,7 +56,7 @@ let
       '';
 in
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   inherit pname version src;
   pyproject = true;
 
@@ -89,4 +89,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pradyunsg/furo";
     license = lib.licenses.mit;
   };
-}
+})

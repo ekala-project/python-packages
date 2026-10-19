@@ -13,7 +13,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "dawg2-python";
   version = "0.9.0";
   pyproject = true;
@@ -21,7 +21,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pymorphy2-fork";
     repo = "DAWG-Python";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-45k7QmozbMt7qYdDFRSL5JDeEtqdMHBoEXXQkLDoGfE=";
   };
 
@@ -46,4 +46,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pymorphy2-fork/DAWG-Python";
     license = lib.licenses.mit;
   };
-}
+})

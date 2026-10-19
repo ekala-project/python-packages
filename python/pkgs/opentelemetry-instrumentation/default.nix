@@ -9,7 +9,7 @@
   wrapt,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "opentelemetry-instrumentation";
   version = "0.55b0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "open-telemetry";
     repo = "opentelemetry-python-contrib";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-UM9ezCh3TVwyj257O0rvTCIgfrddobWcVIgJmBUj/Vo=";
   };
 
@@ -44,4 +44,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/open-telemetry/opentelemetry-python-contrib/tree/main/opentelemetry-instrumentation";
     license = lib.licenses.asl20;
   };
-}
+})

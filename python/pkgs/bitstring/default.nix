@@ -7,13 +7,13 @@
   bitarray,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "bitstring";
   version = "4.0.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-o5HbiCisRIXdXOcsgLJ+usPnuYljE1mVnjEM2XKXI7I=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/scott-griffiths/bitstring";
     license = lib.licenses.mit;
   };
-}
+})

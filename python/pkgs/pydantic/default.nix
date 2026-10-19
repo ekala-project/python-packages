@@ -10,7 +10,7 @@
   typing-inspection,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pydantic";
   version = "2.12.5";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pydantic";
     repo = "pydantic";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-9TRLtVNBw2WHQnS0XFHg16Q7FdpTf3e2nb5qE5rlLUA=";
   };
 
@@ -45,4 +45,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pydantic/pydantic";
     license = lib.licenses.mit;
   };
-}
+})

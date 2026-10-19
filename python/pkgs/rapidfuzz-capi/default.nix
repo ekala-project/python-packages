@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "rapidfuzz-capi";
   version = "1.0.5";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "maxbachmann";
     repo = "rapidfuzz_capi";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-0IvJl2JU/k1WbGPWRoucVGbVsEFNPHZT1ozEQAKQnPk=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/maxbachmann/rapidfuzz_capi";
     license = lib.licenses.mit;
   };
-}
+})

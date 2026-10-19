@@ -8,7 +8,7 @@
   timeout-decorator,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "frelatage";
   version = "0.1.0";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Rog3rSm1th";
     repo = "frelatage";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-eHVqp6govBV9FvSQyaZuEEImHQRs/mbLaW86RCvtDbM=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Rog3rSm1th/frelatage";
     license = lib.licenses.mit;
   };
-}
+})

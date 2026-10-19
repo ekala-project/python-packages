@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyro-api";
   version = "0.1.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-obkA2VgKocL6s7Ejq3/zNBN0TafF9EC9Sq3E1A0U2SA=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "http://pyro.ai";
     license = lib.licenses.mit;
   };
-}
+})

@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "multiprocess";
   version = "0.70.19";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "uqfoundation";
     repo = "multiprocess";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-dH6SWecBxBQYqLohCg1gPWu6cQ7iKtRmIet9UlDMkWs=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/uqfoundation/multiprocess";
     license = lib.licenses.bsd3;
   };
-}
+})

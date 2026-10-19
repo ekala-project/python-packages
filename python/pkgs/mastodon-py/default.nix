@@ -18,7 +18,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mastodon-py";
   version = "2.2.2";
   pyproject = true;
@@ -26,7 +26,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "halcy";
     repo = "Mastodon.py";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-/1oOouJjCCBCymfl9ps3eMDs099cqRY5f4j2jMKKBfE=";
   };
 
@@ -65,4 +65,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/halcy/Mastodon.py";
     license = lib.licenses.mit;
   };
-}
+})

@@ -8,7 +8,7 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "testrail-api";
   version = "1.13.6";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "tolstislon";
     repo = "testrail-api";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-xCarEmJM+liyh8T8qG8sqSLXMnFN49yZapbktIElSF0=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/tolstislon/testrail-api";
     license = lib.licenses.mit;
   };
-}
+})

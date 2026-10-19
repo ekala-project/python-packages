@@ -6,13 +6,13 @@
   hatchling,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "termcolor";
   version = "3.3.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-NIhxymSOxqmpg6E6tibArM4C9RW54ZgzMrF695eVIcU=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/termcolor/termcolor";
     license = lib.licenses.mit;
   };
-}
+})

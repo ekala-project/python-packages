@@ -8,7 +8,7 @@
   ua-parser,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-sesame";
   version = "3.2.4";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "aaugustin";
     repo = "django-sesame";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-q9LvsPyFEbaE/TEOlQ5WodVvzAiv4x7C4vaiz1RJLu4=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/aaugustin/django-sesame";
     license = lib.licenses.bsd3;
   };
-}
+})

@@ -10,14 +10,14 @@
   flask,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "flask-testing";
   version = "0.8.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "Flask-Testing";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-CnNNe2jmOpQQtBPNex+WRW+ahYvQmmIi1GVlDMeC6wE=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://pythonhosted.org/Flask-Testing/";
     license = lib.licenses.bsd3;
   };
-}
+})

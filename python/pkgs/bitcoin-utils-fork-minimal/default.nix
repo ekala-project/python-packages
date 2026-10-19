@@ -9,13 +9,13 @@
   sympy,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "bitcoin-utils-fork-minimal";
   version = "0.4.11.6";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-DzibvC8qr/5ync59cfFB7tBmZWkPs/hKh+e5OC4lcEw=";
   };
 
@@ -43,4 +43,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/doersf/python-bitcoin-utils";
     license = lib.licenses.mit;
   };
-}
+})

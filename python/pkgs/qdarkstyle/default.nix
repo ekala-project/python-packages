@@ -8,13 +8,13 @@
   qtpy,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "qdarkstyle";
   version = "3.2.3";
   pyproject = true;
 
   src = fetchPypi {
-    inherit version;
+    inherit (finalAttrs) version;
     pname = "QDarkStyle";
     hash = "sha256-DAt/dKbpISEAiZKzabq2BGgVfbHALNMNZKXpo7QC8a4=";
   };
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ColinDuquesnoy/QDarkStyleSheet";
     license = lib.licenses.mit;
   };
-}
+})

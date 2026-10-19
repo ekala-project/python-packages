@@ -7,14 +7,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "azure-servicemanagement-legacy";
   version = "0.20.8";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_servicemanagement_legacy";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-42neKpeBjx26GTIzeBTyjTmj5tcNklNQoaBoEDjC+Xc=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/core/azure-servicemanagement-legacy";
     license = lib.licenses.mit;
   };
-}
+})

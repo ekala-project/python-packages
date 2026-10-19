@@ -10,7 +10,7 @@
   pytz,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "flask-apscheduler";
   version = "1.13.1";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "viniciuschiele";
     repo = "flask-apscheduler";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-0gZueUuBBpKGWE6OCJiJL/EEIMqCVc3hgLKwIWFuSZI=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/viniciuschiele/flask-apscheduler";
     license = lib.licenses.asl20;
   };
-}
+})

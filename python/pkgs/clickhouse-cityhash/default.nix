@@ -7,13 +7,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "clickhouse-cityhash";
   version = "1.0.2.6";
   pyproject = true;
 
   src = fetchPypi {
-    inherit version;
+    inherit (finalAttrs) version;
     pname = "clickhouse_cityhash";
     hash = "sha256-Yq9sraxmVWE3cGZKsmgCjlyLcvyXgrMMD12HJK9Sx78=";
   };
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/xzkostyan/python-cityhash";
     license = lib.licenses.mit;
   };
-}
+})

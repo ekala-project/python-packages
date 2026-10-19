@@ -6,7 +6,7 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aiosqlite";
   version = "0.21.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "omnilib";
     repo = "aiosqlite";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-3l/uR97WuLlkAEdogL9iYoXp89bsAcpH6XEtMELsX9o=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jreese/aiosqlite";
     license = lib.licenses.mit;
   };
-}
+})

@@ -7,7 +7,7 @@
   pdm-backend,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "numdifftools";
   version = "0.9.42";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pbrod";
     repo = "numdifftools";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-tNPv+KJuSmMHItHfRUjMIFtAFB+vC530sp+Am0VRG44=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pbrod/numdifftools";
     license = lib.licenses.bsd3;
   };
-}
+})

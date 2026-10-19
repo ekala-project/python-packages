@@ -10,14 +10,14 @@
   requests,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "python-jenkins";
   version = "1.8.3";
   pyproject = true;
 
   src = fetchPypi {
     pname = "python_jenkins";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-j0dhw5GsEejB8j93EBCSDBBEBJdwWrcXXVI1j1oS3Jg=";
   };
 
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     homepage = "https://pypi.org/project/python-jenkins/";
     license = lib.licenses.bsd3;
   };
-}
+})

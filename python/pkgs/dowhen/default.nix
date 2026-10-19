@@ -7,7 +7,7 @@
   nix-update-script,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "dowhen";
   version = "0.1.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "gaogaotiantian";
     repo = "dowhen";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-7eoNe9SvE39J4mwIOxvbU1oh/L7tr/QM1uuBDqWtQu0=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/gaogaotiantian/dowhen";
     license = lib.licenses.asl20;
   };
-}
+})

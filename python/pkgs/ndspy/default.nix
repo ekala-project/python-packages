@@ -7,7 +7,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ndspy";
   version = "4.2.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "RoadrunnerWMC";
     repo = "ndspy";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-PQONVEuh5Fg2LHr4gq0XTGcOpps/s9FSgoyDn4BCcik=";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/RoadrunnerWMC/ndspy";
     license = lib.licenses.gpl3Plus;
   };
-}
+})

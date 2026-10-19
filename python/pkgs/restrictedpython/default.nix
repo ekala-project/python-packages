@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "restrictedpython";
   version = "8.4";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "zopefoundation";
     repo = "RestrictedPython";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-Ck5YDtjYs7rZk+MC+eKrQVCQX1EYlxC6m4kD5+QjfjE=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/zopefoundation/RestrictedPython";
     license = lib.licenses.zpl21;
   };
-}
+})

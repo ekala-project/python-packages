@@ -9,7 +9,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "docformatter";
   version = "1.7.8";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "PyCQA";
     repo = "docformatter";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-Z1ZW5ljWRDnS2mlAmbQyAcE97nU+PrpKaP1aox3VQtQ=";
   };
 
@@ -54,4 +54,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/myint/docformatter";
     license = lib.licenses.mit;
   };
-}
+})

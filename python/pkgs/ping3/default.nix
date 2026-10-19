@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ping3";
   version = "5.1.6";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "kyan001";
     repo = "ping3";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-9HWqJK8cxVKetrhcivI0p63I99XqkBVgZa6aR4Hablc=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     changelog = "https://github.com/kyan001/ping3/blob/master/CHANGELOG.md";
     license = lib.licenses.mit;
   };
-}
+})

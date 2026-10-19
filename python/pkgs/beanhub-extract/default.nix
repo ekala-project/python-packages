@@ -9,7 +9,7 @@
   pytz,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "beanhub-extract";
   version = "0.1.7";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "LaunchPlatform";
     repo = "beanhub-extract";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-CpR4NNXr6Ag8dCI+NB+4hvAtFBjKJTNkXMps2E+6L7Q=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/LaunchPlatform/beanhub-extract/";
     license = lib.licenses.mit;
   };
-}
+})

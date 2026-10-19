@@ -9,7 +9,7 @@
   nasm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "kornia-rs";
   version = "0.1.14";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "kornia";
     repo = "kornia-rs";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-xzJkuWhSQe5V+I4dKNoGflbt7cARewtEbTdJ3YY+cm8=";
   };
 
@@ -48,4 +48,4 @@ buildPythonPackage rec {
     description = "Python bindings to Low-level Computer Vision library in Rust";
     license = lib.licenses.asl20;
   };
-}
+})

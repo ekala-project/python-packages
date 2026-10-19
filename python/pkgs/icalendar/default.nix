@@ -8,13 +8,13 @@
   tzdata,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "icalendar";
   version = "7.3.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-e9AByOZIIF4b3lxqW3cJZZjo0Ik9z1d1XGxZdjViATI=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     description = "Parser/generator of iCalendar files";
     license = lib.licenses.bsd2;
   };
-}
+})

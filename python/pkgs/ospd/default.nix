@@ -12,7 +12,7 @@
   psutil,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ospd";
   version = "21.4.4";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "greenbone";
     repo = "ospd";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-dZgs+G2vJQIKnN9xHcNeNViG7mOIdKb+Ms2AKE+FC4M=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     license = lib.licenses.agpl3Plus;
     broken = stdenv.hostPlatform.isDarwin;
   };
-}
+})

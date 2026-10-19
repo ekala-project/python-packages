@@ -14,13 +14,13 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "tempora";
   version = "5.12.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-tJt4zH7AslK/vXTO8BhxIbGOT1oMV+O5w9j8FQkK87Q=";
   };
 
@@ -47,4 +47,4 @@ buildPythonPackage rec {
     mainProgram = "calc-prorate";
     license = lib.licenses.asl20;
   };
-}
+})

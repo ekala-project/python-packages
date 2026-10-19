@@ -6,13 +6,13 @@
   buildPythonPackage,
   cffi,
 }:
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "misaka";
   version = "2.1.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     sha256 = "1mzc29wwyhyardclj1vg2xsfdibg2lzb7f1azjcxi580ama55wv2";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://misaka.61924.nl";
     license = lib.licenses.mit;
   };
-}
+})

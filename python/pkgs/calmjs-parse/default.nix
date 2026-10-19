@@ -7,7 +7,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "calmjs-parse";
   version = "1.3.4";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "calmjs";
     repo = "calmjs.parse";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-OX3031omx9PdrVeNbekWzJKrrrKleP7q7yDosKsvH8U=";
   };
 
@@ -50,4 +50,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/calmjs/calmjs.parse";
     license = lib.licenses.mit;
   };
-}
+})

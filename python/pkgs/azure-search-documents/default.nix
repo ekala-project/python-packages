@@ -9,7 +9,7 @@
   gitUpdater,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "azure-search-documents";
   version = "11.5.2";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Azure";
     repo = "azure-sdk-for-python";
-    tag = "azure_search_documents_${version}";
+    tag = "azure_search_documents_${finalAttrs.version}";
     hash = "sha256-RcVdqI50lsYed9L6Kz7faNLec1Y9zq685SGnwaEw6Qc=";
   };
 
@@ -45,4 +45,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/search/azure-search-documents";
     license = lib.licenses.mit;
   };
-}
+})

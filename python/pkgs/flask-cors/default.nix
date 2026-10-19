@@ -12,7 +12,7 @@
   werkzeug,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "flask-cors";
   version = "6.0.5";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "corydolphin";
     repo = "flask-cors";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-fngKJm7/7BMcWPPFncTCWw2sL1UJ0t4ICpXr95yNpbg=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/corydolphin/flask-cors";
     license = lib.licenses.mit;
   };
-}
+})

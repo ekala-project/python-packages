@@ -6,7 +6,7 @@
   sphinx,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "sphinxcontrib-fulltoc";
   version = "1.3";
   pyproject = true;
@@ -14,11 +14,11 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "sphinx-contrib";
     repo = "fulltoc";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-rpzKiZgsuAqhLDEYURv77SDJny3eqfj0VtJ1tqT29IQ=";
   };
 
-  env.PBR_VERSION = version;
+  env.PBR_VERSION = finalAttrs.version;
 
   build-system = [ pbr ];
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://sphinxcontrib-fulltoc.readthedocs.org/";
     license = lib.licenses.asl20;
   };
-}
+})

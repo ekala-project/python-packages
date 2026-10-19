@@ -6,14 +6,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "factory-boy";
   version = "3.3.3";
   pyproject = true;
 
   src = fetchPypi {
     pname = "factory_boy";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-hmhi0iYSjfrH8rQWAofomdr1TyYSd4Mn3QPQ4ssePQM=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/rbarrois/factory_boy";
     license = lib.licenses.mit;
   };
-}
+})

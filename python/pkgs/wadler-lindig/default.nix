@@ -10,7 +10,7 @@
   numpy,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "wadler-lindig";
   version = "0.1.7";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "patrick-kidger";
     repo = "wadler_lindig";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-qP826zdzR5BEQ8bGd45RFSLTH6Eal+b7UN+BW07/glo=";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/patrick-kidger/wadler_lindig";
     license = lib.licenses.asl20;
   };
-}
+})

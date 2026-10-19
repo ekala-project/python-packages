@@ -7,13 +7,13 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pint";
   version = "0.25.3";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-+PXfbPZTFNdNoa3hv5b44+TQxBtRV3rFPEnn1EylrO4=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/hgrecco/pint/";
     license = lib.licenses.bsd3;
   };
-}
+})

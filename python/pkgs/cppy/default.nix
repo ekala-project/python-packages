@@ -5,7 +5,7 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "cppy";
   version = "1.3.1";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "nucleic";
     repo = "cppy";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-/u9JQ2ivjSlBPodfAjeDmJ+HUu1rFZ58p3V5L2dy4Jk=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/nucleic/cppy";
     license = lib.licenses.bsd3;
   };
-}
+})

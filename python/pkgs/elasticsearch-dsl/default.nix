@@ -8,14 +8,14 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "elasticsearch-dsl";
   version = "8.18.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "elasticsearch_dsl";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-djRl26nq4Wat0QVn6STGVzCqEigZsIv+mgd+kbE7MNE=";
   };
 
@@ -44,4 +44,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/elasticsearch/elasticsearch-dsl-py";
     license = lib.licenses.asl20;
   };
-}
+})

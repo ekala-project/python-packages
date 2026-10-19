@@ -6,13 +6,13 @@
   installShellFiles,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "sqlparse";
   version = "0.6.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-ETw1x1Nlq5zJxyMdaMZCj7EcCF/I6esa1lm33b9s0rk=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     license = lib.licenses.bsd3;
     mainProgram = "sqlformat";
   };
-}
+})

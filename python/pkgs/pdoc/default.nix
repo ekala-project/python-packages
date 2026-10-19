@@ -11,7 +11,7 @@
   pydantic,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pdoc";
   version = "16.0.0";
 
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mitmproxy";
     repo = "pdoc";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-9amp6CWYIcniVfdlmPKYuRFR7B5JJtuMlOoDxpfvvJA=";
   };
 
@@ -48,4 +48,4 @@ buildPythonPackage rec {
     mainProgram = "pdoc";
     license = lib.licenses.unlicense;
   };
-}
+})

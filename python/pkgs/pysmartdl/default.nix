@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pysmartdl";
   version = "1.3.4";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "iTaybb";
     repo = "pySmartDL";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-Etyv3xCB1cGozWDsskygwcTHJfC+V5hvqBNQAF8SIMM=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     description = "Smart Download Manager for Python";
     license = lib.licenses.unlicense;
   };
-}
+})

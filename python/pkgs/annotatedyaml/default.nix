@@ -14,7 +14,7 @@
   voluptuous,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "annotatedyaml";
   version = "1.0.2";
   pyproject = true;
@@ -22,7 +22,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "home-assistant-libs";
     repo = "annotatedyaml";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-+4H3StCZ58TDV6LSXyeC6+Vn56W19+bIO4AdsJEfHI0=";
   };
 
@@ -52,4 +52,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/home-assistant-libs/annotatedyaml";
     license = lib.licenses.asl20;
   };
-}
+})

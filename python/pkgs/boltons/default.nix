@@ -5,13 +5,13 @@
   flit-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "boltons";
   version = "26.1.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-V2RGirpJOxWZXtF/RqFniQI/Ejyipi1JGpzoJcHL4mw=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     description = "Constructs, recipes, and snippets extending the Python standard library";
     license = lib.licenses.bsd3;
   };
-}
+})

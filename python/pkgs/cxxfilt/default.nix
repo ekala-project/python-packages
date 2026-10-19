@@ -7,13 +7,13 @@
   setuptools,
   gcc-unwrapped,
 }:
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "cxxfilt";
   version = "0.3.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     sha256 = "7df6464ba5e8efbf0d8974c0b2c78b32546676f06059a83515dbdfa559b34214";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/afq984/python-cxxfilt";
     license = lib.licenses.bsd2;
   };
-}
+})

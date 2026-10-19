@@ -13,7 +13,7 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   version = "0.11.0";
   pname = "mwclient";
   pyproject = true;
@@ -21,7 +21,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mwclient";
     repo = "mwclient";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-qnWVQEG1Ri0z4RYmmG/fxYrlIFFf/6PnP5Dnv0cZb5I=";
   };
 
@@ -47,4 +47,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     homepage = "https://github.com/mwclient/mwclient";
   };
-}
+})

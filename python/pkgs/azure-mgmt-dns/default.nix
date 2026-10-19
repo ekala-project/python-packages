@@ -9,14 +9,14 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-dns";
   version = "10.0.0b1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_mgmt_dns";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-4mYqKLWRN2tZbFvylNJHSw84ThOSf+8cx2jfbUe7vpQ=";
   };
 
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/network/azure-mgmt-dns";
     license = lib.licenses.mit;
   };
-}
+})

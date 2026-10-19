@@ -11,13 +11,13 @@
   pyproject-metadata,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "meson-python";
   version = "0.20.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit version;
+    inherit (finalAttrs) version;
     pname = "meson_python";
     hash = "sha256-bZcmrmzTfiLyEMdLNkswGApowgRC6X/wnzxWakFK9zg=";
   };
@@ -54,4 +54,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mesonbuild/meson-python";
     license = lib.licenses.mit;
   };
-}
+})

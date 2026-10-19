@@ -9,13 +9,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "paramiko";
   version = "5.0.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-NnY7W5XCoNz98avEjkgVbuQlsh7+Lw54fC3VqVwOXnk=";
   };
 
@@ -43,4 +43,4 @@ buildPythonPackage rec {
       supported. SFTP client and server mode are both supported too.
     '';
   };
-}
+})

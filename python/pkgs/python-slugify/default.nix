@@ -6,7 +6,7 @@
   text-unidecode,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "python-slugify";
   version = "8.0.4";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "un33k";
     repo = "python-slugify";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-zReUMIkItnDot3XyYCoPUNHrrAllbClWFYcxdTy3A30=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/un33k/python-slugify";
     license = lib.licenses.mit;
   };
-}
+})

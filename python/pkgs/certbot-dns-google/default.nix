@@ -8,7 +8,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "certbot-dns-google";
   inherit (certbot) src version;
   pyproject = true;
@@ -33,4 +33,4 @@ buildPythonPackage rec {
   meta = certbot.meta // {
     description = "Google Cloud DNS Authenticator plugin for Certbot";
   };
-}
+})

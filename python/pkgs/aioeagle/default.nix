@@ -7,7 +7,7 @@
   xmltodict,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aioeagle";
   version = "1.1.1";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "home-assistant-libs";
     repo = "aioeagle";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-MJTq8mWdn+QvLhagPwmdXVcGnDB8Y+2ivBFV6h9vnDU=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/home-assistant-libs/aioeagle";
     license = lib.licenses.asl20;
   };
-}
+})

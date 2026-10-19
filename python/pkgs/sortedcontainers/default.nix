@@ -7,7 +7,7 @@
 }:
 
 let
-  sortedcontainers = buildPythonPackage rec {
+  sortedcontainers = buildPythonPackage (finalAttrs: {
     pname = "sortedcontainers";
     version = "2.4.0";
     pyproject = true;
@@ -15,7 +15,7 @@ let
     src = fetchFromGitHub {
       owner = "grantjenks";
       repo = "python-sortedcontainers";
-      tag = "v${version}";
+      tag = "v${finalAttrs.version}";
       hash = "sha256-YRbSM2isWi7AzfquFvuZBlpEMNUnBJTBLBn0/XYVHKQ=";
     };
 

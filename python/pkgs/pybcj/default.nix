@@ -6,7 +6,7 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pybcj";
   version = "1.0.3";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromCodeberg {
     owner = "miurahr";
     repo = "pybcj";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-nFPk+1V0VXDvFA2w42w4UBF9T6adwBXfH78kDNnMGSU=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://codeberg.org/miurahr/pybcj";
     license = lib.licenses.gpl2Plus;
   };
-}
+})

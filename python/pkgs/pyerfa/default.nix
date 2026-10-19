@@ -10,13 +10,13 @@
   numpy,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyerfa";
   version = "2.0.1.5";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-F9ayT+SEbGXV59jDYtywgZncY7MKI2rt1zh1zIPh9sA=";
   };
 
@@ -55,4 +55,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/liberfa/pyerfa";
     license = lib.licenses.bsd3;
   };
-}
+})

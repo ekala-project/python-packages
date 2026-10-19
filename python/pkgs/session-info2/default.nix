@@ -7,7 +7,7 @@
   hatchling,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "session-info2";
   version = "0.4.2";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "scverse";
     repo = "session-info2";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-uq+UTbI1hwwaF7FEjWCNKuVvnEvqvXKb/XygIlo3oHg=";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     homepage = "https://session-info2.readthedocs.io";
     license = lib.licenses.mpl20;
   };
-}
+})

@@ -16,7 +16,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mayim";
   version = "1.3.2";
   pyproject = true;
@@ -24,7 +24,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ahopkins";
     repo = "mayim";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-HEnzHpgTbEZOBzUG7DDIO9YRWIoLroLY+Spq/jkMib0=";
   };
 
@@ -60,4 +60,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ahopkins/mayim";
     license = lib.licenses.mit;
   };
-}
+})

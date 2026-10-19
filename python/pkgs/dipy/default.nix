@@ -13,7 +13,7 @@
   trx-python,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "dipy";
   version = "1.12.1";
   pyproject = true;
@@ -21,7 +21,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "dipy";
     repo = "dipy";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-4DQswr46du49h5v+mvhkjH4s3WFDJ2LwmURsoM9ICz8=";
   };
 
@@ -56,4 +56,4 @@ buildPythonPackage rec {
     description = "Diffusion imaging toolkit for Python";
     license = lib.licenses.bsd3;
   };
-}
+})

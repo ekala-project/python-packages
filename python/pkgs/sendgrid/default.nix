@@ -12,7 +12,7 @@
   werkzeug,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "sendgrid";
   version = "6.12.5";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = pname;
     repo = "sendgrid-python";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-7r1FHcGmHRQK9mfpV3qcuZlIe7G6CIyarnpWLjduw4E=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/sendgrid/sendgrid-python";
     license = lib.licenses.mit;
   };
-}
+})

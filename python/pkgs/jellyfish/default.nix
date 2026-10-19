@@ -5,7 +5,7 @@
   rustPlatform,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jellyfish";
   version = "1.2.1";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "jamesturk";
     repo = "jellyfish";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-jKz7FYzV66TUkJZfWDTy8GXmTZ6SU5jEdtkjYLDfS/8=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jamesturk/jellyfish";
     license = lib.licenses.mit;
   };
-}
+})

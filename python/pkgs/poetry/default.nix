@@ -26,7 +26,7 @@
   xattr,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "poetry";
   version = "2.4.1";
   pyproject = true;
@@ -34,7 +34,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "python-poetry";
     repo = "poetry";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-Mb1etVmBm542q7FrcMU6pzXdMUDQSpI8DFg/gbOiG4U=";
   };
 
@@ -79,4 +79,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     mainProgram = "poetry";
   };
-}
+})

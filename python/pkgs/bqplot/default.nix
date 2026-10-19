@@ -12,13 +12,13 @@
   traittypes,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "bqplot";
   version = "0.12.46";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-lBdL4+skHJ+h1pelQxMomgvT/ogK3ZbGZA0xY73T0io=";
   };
 
@@ -54,4 +54,4 @@ buildPythonPackage rec {
     homepage = "https://bqplot.github.io/bqplot";
     license = lib.licenses.asl20;
   };
-}
+})

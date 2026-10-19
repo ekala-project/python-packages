@@ -15,7 +15,7 @@
   yarl,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "nice-go";
   version = "1.0.3";
   pyproject = true;
@@ -23,7 +23,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "IceBotYT";
     repo = "nice-go";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-KrsAs5aMkrhxv6PtFTm+8e0h2hAD/bc4ADam2jT2oAc=";
   };
 
@@ -59,4 +59,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/IceBotYT/nice-go";
     license = lib.licenses.mit;
   };
-}
+})

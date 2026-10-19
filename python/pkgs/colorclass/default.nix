@@ -5,13 +5,13 @@
   poetry-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "colorclass";
   version = "2.2.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-bU/ih3ZhZqmMp7xvYxLa8EoEgbHtpD5xc0hAUcCrQ2Y=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Robpol86/colorclass";
     license = lib.licenses.mit;
   };
-}
+})

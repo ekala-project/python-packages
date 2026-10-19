@@ -8,7 +8,7 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "unittest-xml-reporting";
   version = "4.0.0";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "xmlrunner";
     repo = "unittest-xml-reporting";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-9gV/DX/G12bthonBJlMDKaS6Iwt9nF5DrNG33KK7KbU=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/xmlrunner/unittest-xml-reporting";
     license = lib.licenses.bsd2;
   };
-}
+})

@@ -7,13 +7,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "krb5";
   version = "0.10.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-j0cRoKsR7kP9pWc3HvbZSHr9vU8VbKCT6Pswb0zGha4=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jborean93/pykrb5";
     license = lib.licenses.mit;
   };
-}
+})

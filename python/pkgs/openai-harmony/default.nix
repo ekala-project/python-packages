@@ -14,7 +14,7 @@
   uvicorn,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "openai-harmony";
   version = "0.0.8";
   pyproject = true;
@@ -22,7 +22,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "openai";
     repo = "harmony";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-CaEldCrjBkjwsVeTzpiAFl/llAnUwJGTlU8Pt8YTV1E=";
   };
 
@@ -56,4 +56,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/openai/harmony";
     license = lib.licenses.asl20;
   };
-}
+})

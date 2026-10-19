@@ -9,7 +9,7 @@
   yarl,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "garminconnect-aio";
   version = "0.1.4";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "cyberjunky";
     repo = "python-garminconnect-aio";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-GWY2kTG2D+wOJqM/22pNV5rLvWjAd4jxVGlHBou/T2g=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/cyberjunky/python-garminconnect-aio";
     license = lib.licenses.mit;
   };
-}
+})

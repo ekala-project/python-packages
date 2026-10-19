@@ -7,13 +7,13 @@
   certifi,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "twitter";
   version = "2.0a2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-CzjsEI184ruO48kOHVbrexkZgJ01gKTq/5gkjvTNmqc=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://mike.verdone.ca/twitter/";
     license = lib.licenses.mit;
   };
-}
+})

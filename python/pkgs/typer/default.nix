@@ -10,7 +10,7 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "typer";
   version = "0.27.2";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "fastapi";
     repo = "typer";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-vBHSJoyIQawkqqhbPJGKzPjBPm42OR/Ref/k6XFJTi8=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     homepage = "https://typer.tiangolo.com/";
     license = lib.licenses.mit;
   };
-}
+})

@@ -8,7 +8,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "djangosaml2";
   version = "1.12.0";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "IdentityPython";
     repo = "djangosaml2";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-ei65WadTOR7eiRFo817HPSiKCSOOunFJRcpIQstPQ+A=";
   };
 
@@ -46,4 +46,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/IdentityPython/djangosaml2";
     license = lib.licenses.asl20;
   };
-}
+})

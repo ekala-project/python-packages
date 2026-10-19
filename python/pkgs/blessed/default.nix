@@ -7,13 +7,13 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "blessed";
   version = "1.20.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-LN1n+HRuBI8A30eiiA9NasvNs5kDG2BONLqPcdV4doA=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     description = "Thin, practical wrapper around terminal capabilities in Python";
     license = lib.licenses.mit;
   };
-}
+})

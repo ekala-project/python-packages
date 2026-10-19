@@ -5,7 +5,7 @@
   flit-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "asyncinotify";
   version = "4.4.4";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "absperf";
     repo = "asyncinotify";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-NncqHS6JK9OYv/155PXYi0Sg4oX7p0WAGZ9wnvoYlgE=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/absperf/asyncinotify";
     license = lib.licenses.mpl20;
   };
-}
+})

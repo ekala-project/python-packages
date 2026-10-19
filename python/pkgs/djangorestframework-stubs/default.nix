@@ -15,7 +15,7 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "djangorestframework-stubs";
   version = "3.16.8";
   pyproject = true;
@@ -23,7 +23,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "typeddjango";
     repo = "djangorestframework-stubs";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-I7+XMUB87+bIyQMQZUm5hUTsJ+2wA3F6qyjJQeWeQdo=";
   };
 
@@ -52,4 +52,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/typeddjango/djangorestframework-stubs";
     license = lib.licenses.mit;
   };
-}
+})

@@ -9,7 +9,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "la-panic";
   version = "0.5.0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitLab {
     owner = "yanivhasbanidev";
     repo = "la_panic";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-V9VUSp5uvj4jR3oVHdRjvnNDGB1a5bi8elu/ry4jq00=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     license = lib.licenses.gpl3Plus;
     mainProgram = "la_panic";
   };
-}
+})

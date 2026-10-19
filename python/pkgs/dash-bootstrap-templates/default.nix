@@ -9,7 +9,7 @@
   numpy,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "dash-bootstrap-templates";
   version = "2.1.0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "AnnMarieW";
     repo = "dash-bootstrap-templates";
-    tag = "V${version}";
+    tag = "V${finalAttrs.version}";
     hash = "sha256-B7iyN4sJA6DmoLf3DpFEONDe5tUd4cBlDIH4E7JtULk=";
   };
   build-system = [
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/AnnMarieW/dash-bootstrap-templates";
     license = lib.licenses.mit;
   };
-}
+})

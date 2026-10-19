@@ -7,7 +7,7 @@
   poetry-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "terminaltables3";
   version = "4.0.0-unstable-2024-07-21";
   pyproject = true;
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     description = "Generate simple tables in terminals from a nested list of strings";
     license = lib.licenses.mit;
   };
-}
+})

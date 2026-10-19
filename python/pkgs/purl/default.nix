@@ -6,13 +6,13 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "purl";
   version = "1.6";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-ugurrb0MmBxJWkVxXFRK00za01EC6Z+0/NenhiVifOM=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/codeinthehole/purl";
     license = lib.licenses.mit;
   };
-}
+})

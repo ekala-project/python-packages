@@ -22,7 +22,7 @@
   writableTmpDirAsHomeHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "datashader";
   version = "0.19.1";
   pyproject = true;
@@ -30,7 +30,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "holoviz";
     repo = "datashader";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-jP6e7YmLyg3wd8QQZ4Vzr7vRFsRmttjIrEgIFqd6+hQ=";
   };
 
@@ -73,4 +73,4 @@ buildPythonPackage rec {
     homepage = "https://datashader.org";
     license = lib.licenses.bsd3;
   };
-}
+})

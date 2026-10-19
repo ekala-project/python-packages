@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "hikvision";
   version = "2.0.4";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "fbradyirl";
     repo = "hikvision";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-tiJUqr5WtRvnKll1OymJ9Uva1tUT5so4Zzc4SHLcH9A=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/fbradyirl/hikvision";
     license = lib.licenses.mit;
   };
-}
+})

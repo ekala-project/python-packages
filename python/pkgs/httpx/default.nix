@@ -22,7 +22,7 @@
   zstandard,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "httpx";
   version = "0.28.1";
   pyproject = true;
@@ -30,7 +30,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "encode";
     repo = "httpx";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-tB8uZm0kPRnmeOvsDdrkrHcMVIYfGanB4l/xHsTKpgE=";
   };
 
@@ -71,4 +71,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/encode/httpx";
     license = lib.licenses.bsd3;
   };
-}
+})

@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "chevron";
   version = "0.14.0-unstable-2021-03-21";
   pyproject = true;
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/noahmorrison/chevron";
     license = lib.licenses.mit;
   };
-}
+})

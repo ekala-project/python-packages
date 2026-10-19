@@ -10,13 +10,13 @@
   w3lib,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "parsel";
   version = "1.11.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-WSX+CH6xb8QEp+2R4x4sHiqbIw2ktk802BNYwNDifog=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     description = "Python library to extract data from HTML and XML using XPath and CSS selectors";
     license = lib.licenses.bsd3;
   };
-}
+})

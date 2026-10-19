@@ -18,7 +18,7 @@
   zeroconf,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "gotailwind";
   version = "0.4.0";
   pyproject = true;
@@ -26,14 +26,14 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "frenck";
     repo = "python-gotailwind";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-sDQnweGVDyewvTPkRlmk9f7YMnUdPmvB9VrvegAC2B8=";
   };
 
   postPatch = ''
     # Upstream doesn't set a version for the pyproject.toml
     substituteInPlace pyproject.toml \
-      --replace-fail "0.0.0" "${version}"
+      --replace-fail "0.0.0" "${finalAttrs.version}"
   '';
 
   build-system = [ poetry-core ];
@@ -69,4 +69,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     mainProgram = "tailwind";
   };
-}
+})

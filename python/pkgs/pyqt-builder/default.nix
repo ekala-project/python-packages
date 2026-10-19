@@ -8,14 +8,14 @@
   sip,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyqt-builder";
   version = "1.19.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "pyqt_builder";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-avZka6KWaHUbA5v9ztUWQstRDjAHlrWKTWi3+VagJNg=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Python-PyQt/PyQt-builder";
     license = lib.licenses.gpl3Only;
   };
-}
+})

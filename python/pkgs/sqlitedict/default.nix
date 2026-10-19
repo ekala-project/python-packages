@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "sqlitedict";
   version = "2.1.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "RaRe-Technologies";
     repo = "sqlitedict";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-GfvvkQ6a75UBPn70IFOvjvL1MedSc4siiIjA3IsQnic=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/RaRe-Technologies/sqlitedict";
     license = lib.licenses.asl20;
   };
-}
+})

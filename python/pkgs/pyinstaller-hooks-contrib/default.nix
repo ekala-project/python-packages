@@ -5,14 +5,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyinstaller-hooks-contrib";
   version = "2026.7";
   pyproject = true;
 
   src = fetchPypi {
     pname = "pyinstaller_hooks_contrib";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-X7yqyyLE9KrIaaEn3OKD9npLTPzDfUlvJEZgPm1orvo=";
   };
 
@@ -25,4 +25,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pyinstaller/pyinstaller-hooks-contrib";
     license = lib.licenses.asl20;
   };
-}
+})

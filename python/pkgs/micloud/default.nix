@@ -10,7 +10,7 @@
   tzlocal,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "micloud";
   version = "0.6";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Squachen";
     repo = "micloud";
-    tag = "v_${version}";
+    tag = "v_${finalAttrs.version}";
     hash = "sha256-IsNXFs1N+rKwqve2Pjp+wRTZCxHF4acEo6KyhsSKuqI=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Squachen/micloud";
     license = lib.licenses.mit;
   };
-}
+})

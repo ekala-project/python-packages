@@ -14,7 +14,7 @@
   uvicorn,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "json-logging";
   version = "1.5.1";
   pyproject = true;
@@ -22,7 +22,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "bobbui";
     repo = "json-logging-python";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-r2ttPFvlN+hqMxBLPkr5hOz0UKNX4NRoXmLMXhTZ/VY=";
   };
 
@@ -66,4 +66,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/bobbui/json-logging-python";
     license = lib.licenses.asl20;
   };
-}
+})

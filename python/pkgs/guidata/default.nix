@@ -14,7 +14,7 @@
   guidata,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "guidata";
   version = "3.15.1";
   pyproject = true;
@@ -22,7 +22,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "PlotPyStack";
     repo = "guidata";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-u9iT19xQRQ6vw7tJW9Wr7geYAGdBTDisvsE0pq9jZlo=";
   };
 
@@ -45,4 +45,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/PlotPyStack/guidata";
     license = lib.licenses.bsd3;
   };
-}
+})

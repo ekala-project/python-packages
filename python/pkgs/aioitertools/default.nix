@@ -7,13 +7,13 @@
   flit-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aioitertools";
   version = "0.13.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-YgvSQazAu7nsgZ8ashWGaHG0u9H3ODalX3mSAO6GlQw=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://aioitertools.omnilib.dev/";
     license = lib.licenses.mit;
   };
-}
+})

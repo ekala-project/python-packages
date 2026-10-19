@@ -17,14 +17,14 @@
   rich-click,
   sybil,
 }:
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "typed-settings";
   version = "26.0.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "typed_settings";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-iNDaM+RAoEGfGU4kuS7M5MEufBZbW5Zpf+QUDIPThuo=";
   };
 
@@ -58,4 +58,4 @@ buildPythonPackage rec {
     homepage = "https://gitlab.com/sscherfke/typed-settings";
     license = lib.licenses.mit;
   };
-}
+})

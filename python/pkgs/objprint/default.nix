@@ -6,7 +6,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "objprint";
   version = "0.3.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "gaogaotiantian";
     repo = "objprint";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-+OS034bikrKy4F27b6ic97fHTW6rSMxQ0dx4caF6cUM=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/gaogaotiantian/objprint";
     license = lib.licenses.asl20;
   };
-}
+})

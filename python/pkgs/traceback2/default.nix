@@ -8,13 +8,13 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "traceback2";
   version = "1.4.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-BazGegmYDC7P7dNCP3rgEEg57MtV/GRXc+HKoJUcMDA=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     description = "Backport of traceback to older supported Pythons";
     license = lib.licenses.psfl;
   };
-}
+})

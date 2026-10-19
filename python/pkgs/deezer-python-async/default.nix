@@ -11,7 +11,7 @@
   asyncio-throttle,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "deezer-python-async";
   version = "0.3.0";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "music-assistant";
     repo = "deezer-python-async";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-uuAB+SC/ECG50ox/6Bi+94bAt+YZokeQChpDQUAK+zc=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/music-assistant/deezer-python-async";
     license = lib.licenses.mit;
   };
-}
+})

@@ -5,7 +5,7 @@
   huggingface-hub,
   setuptools,
 }:
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "kernels";
   version = "0.11.7";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "huggingface";
     repo = "kernels";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-OUOCC7ViRWqRZIUpK31ItWsNc0F87dBpAg/Lql1LWp4=";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/huggingface/kernels";
     license = lib.licenses.asl20;
   };
-}
+})

@@ -20,7 +20,7 @@
   xlwt,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytablewriter";
   version = "1.2.1";
   pyproject = true;
@@ -28,7 +28,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "thombashi";
     repo = "pytablewriter";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-YuuSMKTSG3oybvA6TDWNnGg4EiDAw2tRlM0S9mBQlkc=";
   };
 
@@ -82,4 +82,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/thombashi/pytablewriter";
     license = lib.licenses.mit;
   };
-}
+})

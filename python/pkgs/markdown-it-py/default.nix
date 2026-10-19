@@ -6,7 +6,7 @@
   mdurl,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "markdown-it-py";
   version = "4.2.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "executablebooks";
     repo = "markdown-it-py";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-S3xDPvnGqawsxAUcrMF/3a4jds6i+zfPLMpyvduaDpE=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     mainProgram = "markdown-it";
   };
-}
+})

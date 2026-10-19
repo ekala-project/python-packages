@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "gcodepy";
   version = "0.1.1";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "rmeno12";
     repo = "gcodepy";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-+amBkwwISPyes8ABdqgCw50Zg5ioDa46WZgQsZZgl+8=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/rmeno12/gcodepy";
     license = lib.licenses.mit;
   };
-}
+})

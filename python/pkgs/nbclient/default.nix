@@ -10,7 +10,7 @@
 }:
 
 let
-  nbclient = buildPythonPackage rec {
+  nbclient = buildPythonPackage (finalAttrs: {
     pname = "nbclient";
     version = "0.11.0";
     pyproject = true;
@@ -18,7 +18,7 @@ let
     src = fetchFromGitHub {
       owner = "jupyter";
       repo = "nbclient";
-      tag = "v${version}";
+      tag = "v${finalAttrs.version}";
       hash = "sha256-otKmurWifkLnu6ZwzvopzNnsksodS0jACjrRsxc3dIE=";
     };
 

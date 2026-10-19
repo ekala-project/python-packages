@@ -6,17 +6,17 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "munch";
   version = "4.0.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-VCyxUUYSYyFqTjfD/Zr8Ql/urziqowJc0qmB+ttCIjU=";
   };
 
-  env.PBR_VERSION = version;
+  env.PBR_VERSION = finalAttrs.version;
 
   nativeBuildInputs = [
     pbr
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Infinidat/munch";
     license = lib.licenses.mit;
   };
-}
+})

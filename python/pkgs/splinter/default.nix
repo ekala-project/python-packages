@@ -12,7 +12,7 @@
   zope-testbrowser,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "splinter";
   version = "0.21.0";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "cobrateam";
     repo = "splinter";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-PGGql8yI1YosoUBAyDoI/8k7s4sVYnXEV7eow3GHH88=";
   };
 
@@ -58,4 +58,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/cobrateam/splinter";
     license = lib.licenses.bsd3;
   };
-}
+})

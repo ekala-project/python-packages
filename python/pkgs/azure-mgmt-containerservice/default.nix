@@ -8,14 +8,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-containerservice";
   version = "41.6.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_mgmt_containerservice";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-WSyDKI2csIIuoDHYgV0dMP4wcn2m+nVS0eglxFDsymo=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/containerservice/azure-mgmt-containerservice";
     license = lib.licenses.mit;
   };
-}
+})

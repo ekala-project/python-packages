@@ -9,7 +9,7 @@
 }:
 
 let
-  textx = buildPythonPackage rec {
+  textx = buildPythonPackage (finalAttrs: {
     pname = "textx";
     version = "4.4.0";
     pyproject = true;
@@ -17,7 +17,7 @@ let
     src = fetchFromGitHub {
       owner = "textx";
       repo = "textx";
-      tag = version;
+      tag = finalAttrs.version;
       hash = "sha256-bwwINUJiMG6Isi0/p1DsIzzlSa0y7xR4Q6OnpKy894s=";
     };
 
@@ -70,7 +70,7 @@ let
     meta = {
       inherit (textx.meta) license;
       description = "Sample textX language for testing";
-      homepage = textx.meta.homepage + "tree/${version}/" + pathToSourceRoot;
+      homepage = textx.meta.homepage + "tree/${finalAttrs.version}/" + pathToSourceRoot;
     };
   };
 
@@ -93,7 +93,7 @@ let
     meta = {
       inherit (textx.meta) license;
       description = "Sample textX language for testing";
-      homepage = textx.meta.homepage + "tree/${version}/" + pathToSourceRoot;
+      homepage = textx.meta.homepage + "tree/${finalAttrs.version}/" + pathToSourceRoot;
     };
   };
 
@@ -113,7 +113,7 @@ let
     meta = {
       inherit (textx.meta) license;
       description = "Sample textX language for testing";
-      homepage = textx.meta.homepage + "tree/${version}/" + pathToSourceRoot;
+      homepage = textx.meta.homepage + "tree/${finalAttrs.version}/" + pathToSourceRoot;
     };
   };
 
@@ -133,7 +133,7 @@ let
     meta = {
       inherit (textx.meta) license;
       description = "Sample textX language for testing";
-      homepage = textx.meta.homepage + "tree/${version}/" + pathToSourceRoot;
+      homepage = textx.meta.homepage + "tree/${finalAttrs.version}/" + pathToSourceRoot;
     };
   };
 
@@ -153,7 +153,7 @@ let
     meta = {
       inherit (textx.meta) license;
       description = "Sample textX sub-command for testing";
-      homepage = textx.meta.homepage + "tree/${version}/" + pathToSourceRoot;
+      homepage = textx.meta.homepage + "tree/${finalAttrs.version}/" + pathToSourceRoot;
     };
   };
 in

@@ -10,7 +10,7 @@
   openssl,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "oscrypto";
   version = "1.3.0";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "wbond";
     repo = "oscrypto";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-CmDypmlc/kb6ONCUggjT1Iqd29xNSLRaGh5Hz36dvOw=";
   };
 
@@ -51,4 +51,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/wbond/oscrypto";
     license = lib.licenses.mit;
   };
-}
+})

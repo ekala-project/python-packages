@@ -7,13 +7,13 @@
   flit-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pep440";
   version = "0.1.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-WLNyRswrE/7hyio8CSyzcE0h7PYhpb27Fo5E5pf20E0=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Carreau/pep440";
     license = lib.licenses.mit;
   };
-}
+})

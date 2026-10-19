@@ -5,14 +5,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jalali-core";
   version = "1.0.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "jalali_core";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-9Ch8cMYwMj3PCjqybfkFuk1FHiMKwfZbO7L3d5eJSis=";
   };
 
@@ -25,4 +25,4 @@ buildPythonPackage rec {
     homepage = "https://pypi.org/project/jalali-core/";
     license = lib.licenses.lgpl2Only;
   };
-}
+})

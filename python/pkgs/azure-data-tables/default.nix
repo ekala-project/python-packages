@@ -9,14 +9,14 @@
   yarl,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "azure-data-tables";
   version = "12.7.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_data_tables";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-sU/JSjIjooNf9WiOF9jhB7J8fNfEEUE48qyBNzcjcF0=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Azure/azure-sdk-for-python";
     license = lib.licenses.mit;
   };
-}
+})

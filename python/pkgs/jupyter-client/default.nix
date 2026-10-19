@@ -11,14 +11,14 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jupyter-client";
   version = "8.10.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "jupyter_client";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-n3EWKU3KVfF4W+iABX1EVE25sVZ3GNksszxYiGr7lJc=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jupyter/jupyter_client";
     license = lib.licenses.bsd3;
   };
-}
+})

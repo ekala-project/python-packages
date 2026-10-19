@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "versiontools";
   version = "1.9.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-qWkzKIehipyYsN8OpNTKdZcvJMqU8G+4fVkTd+g0FPY=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     description = "Smart replacement for plain tuple used in __version__";
     license = lib.licenses.lgpl2;
   };
-}
+})

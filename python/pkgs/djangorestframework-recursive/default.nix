@@ -8,7 +8,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "djangorestframework-recursive";
   version = "0.1.2";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "heywbj";
     repo = "django-rest-framework-recursive";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-Q/6yxpz3c402sMZudAeFIht9+5GmTRlzM51AMAx5muY=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/heywbj/django-rest-framework-recursive";
     license = lib.licenses.isc;
   };
-}
+})

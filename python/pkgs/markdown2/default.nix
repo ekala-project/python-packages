@@ -10,7 +10,7 @@
   latex2mathml,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "markdown2";
   version = "2.5.5";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "trentm";
     repo = "python-markdown2";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-h0vzv59RsceTZSvFF9DX5D6YanAKMTG3cNc1napXMyI=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/trentm/python-markdown2";
     license = lib.licenses.mit;
   };
-}
+})

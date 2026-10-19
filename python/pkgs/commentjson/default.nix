@@ -8,7 +8,7 @@
   lark,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "commentjson";
   version = "0.9.0";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "vaidik";
     repo = "commentjson";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-dPnIcv7TIeyG7rU938w7FrDklmaGuPpXz34uw/JjOgY=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/vaidik/commentjson/";
     license = lib.licenses.mit;
   };
-}
+})

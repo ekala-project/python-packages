@@ -10,13 +10,13 @@
   boltons,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "face";
   version = "26.0.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-gYPZS8JIuq6oVan4RF+XoiqZiJCOYKvdzMbiUdp3xMY=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     description = "Command-line interface parser and framework";
     license = lib.licenses.bsd3;
   };
-}
+})

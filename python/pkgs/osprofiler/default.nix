@@ -13,13 +13,13 @@
   webob,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "osprofiler";
   version = "4.4.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-bgjffu9q/A0tAngT1A5DyyKPDrPrNEHWFJXCgA6/oyA=";
   };
 
@@ -44,4 +44,4 @@ buildPythonPackage rec {
     license = lib.licenses.asl20;
     mainProgram = "osprofiler";
   };
-}
+})

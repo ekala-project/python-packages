@@ -6,7 +6,7 @@
   voluptuous,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "voluptuous-serialize";
   version = "2.7.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "home-assistant-libs";
     repo = "voluptuous-serialize";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-vmBK4FJr15wOYHtH14OqeyY/vgVOSrpo0Sd9wqu4zgo=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/home-assistant-libs/voluptuous-serialize";
     license = lib.licenses.asl20;
   };
-}
+})

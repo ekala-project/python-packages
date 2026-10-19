@@ -7,7 +7,7 @@
   rich,
   typing-extensions,
 }:
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "corallium";
   version = "2.4.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "KyleKing";
     repo = "corallium";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-BtePG2XcukAytbNyIfH3rBesx7nu7J1TLtfbzZO37Os=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     homepage = "https://corallium.kyleking.me";
     license = lib.licenses.mit;
   };
-}
+})

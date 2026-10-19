@@ -9,7 +9,7 @@
   fetchFromGitHub,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "bcrypt";
   version = "5.0.0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pyca";
     repo = "bcrypt";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-7Dp07xoq6h+fiP7d7/TRRoYszWsyQF1c4vuFUpZ7u6U=";
   };
 
@@ -48,4 +48,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pyca/bcrypt/";
     license = lib.licenses.asl20;
   };
-}
+})

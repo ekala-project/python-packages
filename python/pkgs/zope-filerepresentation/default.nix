@@ -7,7 +7,7 @@
   zope-interface,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "zope-filerepresentation";
   version = "7.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "zopefoundation";
     repo = "zope.filerepresentation";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-VWi00b7m+aKwkg/Gfzo5fJWMqdMqgowBpkqsYcEO2gY=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     description = "File-system Representation Interfaces";
     license = lib.licenses.zpl21;
   };
-}
+})

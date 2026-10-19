@@ -11,13 +11,13 @@
   replaceVars,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "sounddevice";
   version = "0.5.5";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-Ikh7ZRmMtb8iCHVRBbUk94rRc+Wra0Rb2rHJifZpjfM=";
   };
 
@@ -49,4 +49,4 @@ buildPythonPackage rec {
     homepage = "https://python-sounddevice.readthedocs.io/";
     license = lib.licenses.mit;
   };
-}
+})

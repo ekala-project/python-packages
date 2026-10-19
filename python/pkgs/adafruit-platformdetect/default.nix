@@ -5,14 +5,14 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "adafruit-platformdetect";
   version = "3.89.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "adafruit_platformdetect";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-dFUtGvz3eahMpjUnoerumZXEKf9CLbFUkrrQw1mcq0s=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/adafruit/Adafruit_Python_PlatformDetect";
     license = lib.licenses.mit;
   };
-}
+})

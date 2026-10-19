@@ -8,7 +8,7 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "simplesat";
   version = "0.9.2";
   pyproject = true;
@@ -16,13 +16,13 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "enthought";
     repo = "sat-solver";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-C3AQN999iuckaY9I0RTI8Uj6hrV4UB1XYvua5VG8hHw=";
   };
 
   postPatch = ''
     substituteInPlace setup.cfg \
-      --replace-fail "version = file: VERSION" "version = ${version}"
+      --replace-fail "version = file: VERSION" "version = ${finalAttrs.version}"
   '';
 
   build-system = [ setuptools ];
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/enthought/sat-solver";
     license = lib.licenses.bsd3;
   };
-}
+})

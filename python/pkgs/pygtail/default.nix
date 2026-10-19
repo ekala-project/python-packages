@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pygtail";
   version = "0.14.0";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "bgreenlee";
     repo = "pygtail";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-TlXTlxeGDd+elGpMjxcJCmRuJmp5k9xj6MrViRzcST4=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     license = lib.licenses.gpl2Plus;
     homepage = "https://github.com/bgreenlee/pygtail";
   };
-}
+})

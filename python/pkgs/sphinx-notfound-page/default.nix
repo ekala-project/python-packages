@@ -15,7 +15,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "sphinx-notfound-page";
   version = "1.1.0";
   pyproject = true;
@@ -28,7 +28,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "readthedocs";
     repo = "sphinx-notfound-page";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-KkdbK8diuQtZQk6FC9xDK/U7mfRBwwUmXp4YYuKueLQ=";
   };
 
@@ -53,4 +53,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/readthedocs/sphinx-notfound-page";
     license = lib.licenses.mit;
   };
-}
+})

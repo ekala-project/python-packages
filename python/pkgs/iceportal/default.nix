@@ -9,7 +9,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "iceportal";
   version = "1.2.0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "home-assistant-ecosystem";
     repo = "python-iceportal";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-kpAUgGi2fAHzQYuZAaQW9wdrYjwbduRsoTwSuzcjJa8=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/home-assistant-ecosystem/python-iceportal";
     license = lib.licenses.mit;
   };
-}
+})

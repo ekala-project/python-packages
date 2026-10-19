@@ -9,7 +9,7 @@
   tzdata,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aiozoneinfo";
   version = "0.2.3";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "bluetooth-devices";
     repo = "aiozoneinfo";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-7qd6Yk/K4BLocu8eQK0hLaw2r1jhWIHBr9W4KsAvmx8=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/bluetooth-devices/aiozoneinfo";
     license = lib.licenses.asl20;
   };
-}
+})

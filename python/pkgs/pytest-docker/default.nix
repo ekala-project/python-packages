@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytest-docker";
   version = "3.2.5";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "avast";
     repo = "pytest-docker";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-AkVLfCt2aQZrvSfa/5oXr95XUIR5mRqcMRz67kmuKKw=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/avast/pytest-docker";
     license = lib.licenses.mit;
   };
-}
+})

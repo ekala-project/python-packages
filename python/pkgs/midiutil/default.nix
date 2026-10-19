@@ -6,14 +6,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "midiutil";
   version = "1.2.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "MIDIUtil";
-    inherit version;
+    inherit (finalAttrs) version;
     sha256 = "02m9sqv36zrzgz5zg2w9qmz8snzlm27yg3ways2hgipgs4xriykr";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     description = "Pure python library for creating multi-track MIDI files";
     license = lib.licenses.mit;
   };
-}
+})

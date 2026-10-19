@@ -11,7 +11,7 @@
   textile,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "markups";
   version = "4.1.1";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "retext-project";
     repo = "pymarkups";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-kQ1L8l/ONT4qOA/xfx85WyA7pDveaKoXWGZbljYxO/4=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/retext-project/pymarkups";
     license = lib.licenses.bsd3;
   };
-}
+})

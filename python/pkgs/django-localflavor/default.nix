@@ -15,7 +15,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-localflavor";
   version = "5.0";
   pyproject = true;
@@ -23,7 +23,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "django";
     repo = "django-localflavor";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-eYhkWfxoZlnxhCIaqBhoEt0+SbkZKkUNUAy4p3tYf4A=";
   };
 
@@ -57,4 +57,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/django/django-localflavor";
     license = lib.licenses.bsd3;
   };
-}
+})

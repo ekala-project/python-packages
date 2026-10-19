@@ -9,7 +9,7 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "referencing";
   version = "0.37.0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "python-jsonschema";
     repo = "referencing";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-cuy9NS4PtfBILjw9gv7GRfheKez4FEf8ym94/O6nNcE=";
   };
 
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/python-jsonschema/referencing";
     license = lib.licenses.mit;
   };
-}
+})

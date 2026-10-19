@@ -10,7 +10,7 @@
   tenacity,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aiokef";
   version = "0.2.17";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "basnijholt";
     repo = "aiokef";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "0ms0dwrpj80w55svcppbnp7vyl5ipnjfp1c436k5c7pph4q5pxk9";
   };
 
@@ -47,4 +47,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/basnijholt/aiokef";
     license = lib.licenses.mit;
   };
-}
+})

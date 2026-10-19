@@ -18,7 +18,7 @@
   rich,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "flask-limiter";
   version = "4.1.1";
   pyproject = true;
@@ -26,7 +26,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "alisaifee";
     repo = "flask-limiter";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-lrq4WCc2gxm039nXW6tiDt7laJFEICO0x9jw71UUwaI=";
   };
 
@@ -60,4 +60,4 @@ buildPythonPackage rec {
     homepage = "https://flask-limiter.readthedocs.org/";
     license = lib.licenses.mit;
   };
-}
+})

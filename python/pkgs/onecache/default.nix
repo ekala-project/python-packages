@@ -9,7 +9,7 @@
   stdenv,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "onecache";
   version = "0.8.1";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "sonic182";
     repo = "onecache";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-jhyszGKzmMdtPfnjc3VllfF6Zd0MkV66CpL6HiAof/A=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     homepage = "https://github.com/sonic182/onecache";
   };
-}
+})

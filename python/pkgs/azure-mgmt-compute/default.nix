@@ -8,14 +8,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-compute";
   version = "38.3.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_mgmt_compute";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-IxDmCPePs6TTi+IG7CX/B9Z7HJI2/UVo+FevZ0yxdzo=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/compute/azure-mgmt-compute";
     license = lib.licenses.mit;
   };
-}
+})

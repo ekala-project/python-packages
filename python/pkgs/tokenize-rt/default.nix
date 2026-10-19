@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "tokenize_rt";
   version = "6.2.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-hDnAQrMwxVP9vhdY5KBcDtRg27uySmBvEfDe512kytY=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/asottile/tokenize-rt";
     license = lib.licenses.mit;
   };
-}
+})

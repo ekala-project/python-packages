@@ -8,13 +8,13 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyusb";
   version = "1.3.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-OvBwtgdGfBwWT0nVsMqr6Kx42+2SmNcDqNv530BS0X4=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://pyusb.github.io/pyusb/";
     license = lib.licenses.bsd3;
   };
-}
+})

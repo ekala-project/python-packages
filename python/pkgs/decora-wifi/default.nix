@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "decora-wifi";
   version = "1.5";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   #No tag in github, so fetchPypi is OK to use.
   src = fetchPypi {
     pname = "decora_wifi";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-oWETtzZueNJC0lTWdLfk3SOuvnqrJ9wp5rOSPJxH3M4=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/tlyakhov/python-decora_wifi";
     license = lib.licenses.mit;
   };
-}
+})

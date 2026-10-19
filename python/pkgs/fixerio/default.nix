@@ -10,7 +10,7 @@
   responses,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "fixerio";
   version = "1.0.0-alpha";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "amatellanes";
     repo = "fixerio";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "009h1mys175xdyznn5bl980vly40544s4ph1zcgqwg2i2ic93gvb";
   };
 
@@ -53,4 +53,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/amatellanes/fixerio";
     license = lib.licenses.mit;
   };
-}
+})

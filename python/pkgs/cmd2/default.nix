@@ -11,13 +11,13 @@
   wcwidth,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "cmd2";
   version = "3.2.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-bGNyobJs0Uu2IJZTyJ1zAP58FDno3KMPW2tv/bXyFPo=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/python-cmd2/cmd2";
     license = lib.licenses.mit;
   };
-}
+})

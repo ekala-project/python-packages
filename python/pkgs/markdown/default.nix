@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "markdown";
   version = "3.10.3";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Python-Markdown";
     repo = "markdown";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-itRigH1234C6hwtGRon4AiDAKafscmhMn22V5J9WtvI=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Python-Markdown/markdown";
     license = lib.licenses.bsd3;
   };
-}
+})

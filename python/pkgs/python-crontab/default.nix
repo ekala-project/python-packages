@@ -10,14 +10,14 @@
   python-dateutil,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "python-crontab";
   version = "3.4.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "python_crontab";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-0rWtkfemQdd0Zht/O6UiWP1oJzhiyIcT9MwJK6YU5wc=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://gitlab.com/doctormo/python-crontab/";
     license = lib.licenses.lgpl3Plus;
   };
-}
+})

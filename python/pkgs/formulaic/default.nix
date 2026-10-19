@@ -16,7 +16,7 @@
   sympy,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "formulaic";
   version = "1.2.2";
   pyproject = true;
@@ -24,12 +24,12 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "matthewwardrop";
     repo = "formulaic";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-C4IUuyxBbW2DUxF4at8/736ZMmVZrFRRp+RxrJfmLkY=";
   };
 
   # project uses a version-file that is not present in tagged releases
-  env.SETUPTOOLS_SCM_PRETEND_VERSION = version;
+  env.SETUPTOOLS_SCM_PRETEND_VERSION = finalAttrs.version;
 
   build-system = [
     hatchling
@@ -58,4 +58,4 @@ buildPythonPackage rec {
     homepage = "https://matthewwardrop.github.io/formulaic/";
     license = lib.licenses.mit;
   };
-}
+})

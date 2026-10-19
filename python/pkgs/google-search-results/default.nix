@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "google-search-results";
   version = "2.4.2";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "serpapi";
     repo = "google-search-results-python";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-2GRhBaRE0KHNFsdMrIC87dx6yMzql+QQFSSm2Gf7xHU=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/serpapi/google-search-results-python";
     license = lib.licenses.mit;
   };
-}
+})

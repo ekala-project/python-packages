@@ -6,7 +6,7 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytest-datadir";
   version = "1.8.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "gabrielcnr";
     repo = "pytest-datadir";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-ttzYFzePPpFY6DfMGLVImZMiehuR9IhmIFxBlgrDDmk=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/gabrielcnr/pytest-datadir";
     license = lib.licenses.mit;
   };
-}
+})

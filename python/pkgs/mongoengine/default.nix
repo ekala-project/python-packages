@@ -11,7 +11,7 @@
   coverage,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mongoengine";
   version = "0.29.3";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "MongoEngine";
     repo = "mongoengine";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-Y+cRQW29GBGt4aC+ENx8zSocV9A5Exzq1sMDv/wcJ3M=";
   };
 
@@ -44,4 +44,4 @@ buildPythonPackage rec {
     homepage = "http://mongoengine.org/";
     license = lib.licenses.mit;
   };
-}
+})

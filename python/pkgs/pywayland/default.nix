@@ -11,13 +11,13 @@
   wayland-scanner,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pywayland";
   version = "0.4.18";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-WYreAng6rQWjKPZjtRtpTFq2i9XR4JJsDaPFISxWZTM=";
   };
 
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     mainProgram = "pywayland-scanner";
     license = lib.licenses.ncsa;
   };
-}
+})

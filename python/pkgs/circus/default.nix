@@ -12,7 +12,7 @@
   tornado,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "circus";
   version = "0.19.0";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "circus-tent";
     repo = "circus";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-MiZXiGb6F8LAJLAdmEDBO8Y5cJxHJy7jMFi50Ac3Bsc=";
   };
 
@@ -68,4 +68,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/circus-tent/circus";
     license = lib.licenses.asl20;
   };
-}
+})

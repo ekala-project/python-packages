@@ -10,7 +10,7 @@
   python-dateutil,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aiobiketrax";
   version = "1.3.1";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "basilfx";
     repo = "aiobiketrax";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-N0v5SCTf3NkW/TCSTQL9VkrDj7/GXEejJGFCvJY4pIc=";
   };
 
@@ -48,4 +48,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/basilfx/aiobiketrax";
     license = lib.licenses.mit;
   };
-}
+})

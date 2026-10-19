@@ -20,7 +20,7 @@
   rich,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "cookiecutter";
   version = "2.7.1";
   pyproject = true;
@@ -29,7 +29,7 @@ buildPythonPackage rec {
   disabled = isPyPy;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-ynu3vIxv9EH79TkhtVN2aAAOONVuKNdjobc5dcZsYTg=";
   };
 
@@ -60,4 +60,4 @@ buildPythonPackage rec {
     mainProgram = "cookiecutter";
     license = lib.licenses.bsd3;
   };
-}
+})

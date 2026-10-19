@@ -11,7 +11,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "lsprotocol";
   version = "2025.0.0";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "microsoft";
     repo = "lsprotocol";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-DrWXHMgDZSQQ6vsmorThMrUTX3UQU+DajSEOdxoXrFQ=";
   };
 
@@ -61,4 +61,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/microsoft/lsprotocol";
     license = lib.licenses.mit;
   };
-}
+})

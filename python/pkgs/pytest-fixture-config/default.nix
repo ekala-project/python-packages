@@ -6,7 +6,7 @@
   pytest,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytest-fixture-config";
   version = "1.8.1";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "man-group";
     repo = "pytest-plugins";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-fLctuuvHVk9GvQB5cTL4/T7GeWzJ2zLJpwZqq9/6C30=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/manahl/pytest-plugins";
     license = lib.licenses.mit;
   };
-}
+})

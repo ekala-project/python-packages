@@ -7,13 +7,13 @@
   libkrb5,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "kerberos";
   version = "1.3.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     sha256 = "cdd046142a4e0060f96a00eb13d82a5d9ebc0f2d7934393ed559bac773460a2c";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://pypi.org/project/kerberos/";
     license = lib.licenses.asl20;
   };
-}
+})

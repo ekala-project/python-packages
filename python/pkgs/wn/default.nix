@@ -8,13 +8,13 @@
   starlette,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "wn";
   version = "1.1.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-BVXqh18T32SPNDucYiFT5Pce5CvJ1XoA8mDhko+GsSg=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/goodmami/wn";
     license = lib.licenses.mit;
   };
-}
+})

@@ -7,7 +7,7 @@
   numpy,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "colormath2";
   version = "3.0.3";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "bkmgit";
     repo = "python-colormath2";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-G8b0L8A2RzbVQFPNg2fuBklqTNjo3yqvek/+GnqtsHc=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/bkmgit/python-colormath2";
     license = lib.licenses.bsd3;
   };
-}
+})

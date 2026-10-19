@@ -16,7 +16,7 @@
   syrupy,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "habiticalib";
   version = "0.4.7";
   pyproject = true;
@@ -26,7 +26,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "tr4nt0r";
     repo = "habiticalib";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-ZZY7UnA4d4JNHGLMtaEGobAgzAwYDgL2SUGfxGABxTs=";
   };
 
@@ -66,4 +66,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/tr4nt0r/habiticalib";
     license = lib.licenses.mit;
   };
-}
+})

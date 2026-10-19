@@ -9,7 +9,7 @@
   pytest-django,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-json-widget";
   version = "2.1.1";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "jmrivas86";
     repo = "django-json-widget";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-AABJHWoEIcyJyRHv3sp1d1l6ZByF8Q5h+xEHJe/4uC0=";
   };
 
@@ -46,4 +46,4 @@ buildPythonPackage rec {
     # https://github.com/jmrivas86/django-json-widget/issues/93
     license = lib.licenses.mit;
   };
-}
+})

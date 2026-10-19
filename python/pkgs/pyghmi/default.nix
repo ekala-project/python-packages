@@ -7,13 +7,13 @@
   pbr,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyghmi";
   version = "1.6.19";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-MKCy4UWj5DKcjYaUhjXu47NHnsan7LxMw1B+bfP+WcI=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
 
   pythonImportsCheck = [ "pyghmi" ];
 
-}
+})

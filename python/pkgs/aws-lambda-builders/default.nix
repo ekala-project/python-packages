@@ -11,7 +11,7 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aws-lambda-builders";
   version = "1.67.0";
   pyproject = true;
@@ -19,13 +19,13 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "awslabs";
     repo = "aws-lambda-builders";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-eCnjqIZxnbMawKlCSk4khfYcX3I/+bAX8ODe2kFxNsE=";
   };
 
   postPatch = ''
     substituteInPlace setup.py \
-      --replace-fail "version=read_version()," 'version="${version}",'
+      --replace-fail "version=read_version()," 'version="${finalAttrs.version}",'
   '';
 
   build-system = [ setuptools ];
@@ -79,4 +79,4 @@ buildPythonPackage rec {
     '';
     license = lib.licenses.asl20;
   };
-}
+})

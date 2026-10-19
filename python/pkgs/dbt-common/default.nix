@@ -27,7 +27,7 @@
   pytest-xdist,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "dbt-common";
   version = "1.37.3-unstable-2026-03-27";
   pyproject = true;
@@ -95,4 +95,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/dbt-labs/dbt-common";
     license = lib.licenses.asl20;
   };
-}
+})

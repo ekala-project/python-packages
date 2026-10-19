@@ -7,7 +7,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ochre";
   version = "0.4.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "getcuia";
     repo = "ochre";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-U6qycLnldwNze3XMAn6DS3XGX4RaCZgW0pH/y/FEAkk=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/getcuia/ochre";
     license = lib.licenses.mit;
   };
-}
+})

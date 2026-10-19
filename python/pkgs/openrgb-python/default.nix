@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "openrgb-python";
   version = "0.3.6";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-86jy8hoOgQocdCeapjaRFO9PKx/TW9kcN16UKSWNVps=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://openrgb-python.readthedocs.io/";
     license = lib.licenses.gpl3Only;
   };
-}
+})

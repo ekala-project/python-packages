@@ -12,13 +12,13 @@
   wheel,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pydeck";
   version = "0.9.3";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-aVd1y/5R9f3/vZc1ukaZh/3F78lrxAoO5ICBcFCceLI=";
   };
 
@@ -58,4 +58,4 @@ buildPythonPackage rec {
     description = "Large-scale interactive data visualization in Python";
     license = lib.licenses.asl20;
   };
-}
+})

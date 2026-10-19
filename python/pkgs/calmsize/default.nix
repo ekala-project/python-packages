@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "calmsize";
   version = "0.1.3";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Stonesjtu";
     repo = "calmsize";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-D4UMzgYq++w6+Od0t9mDP4S+3Tc/ME5++NOlozXXALQ=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Stonesjtu/calmsize";
     license = lib.licenses.zpl21;
   };
-}
+})

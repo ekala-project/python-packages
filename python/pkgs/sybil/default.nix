@@ -5,13 +5,13 @@
   hatchling,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "sybil";
   version = "10.1.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-BiJJyIhqCrGeRdHDr9VjHsgG56lc9RU8llYPXkd1bL0=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/simplistix/sybil";
     license = lib.licenses.mit;
   };
-}
+})

@@ -14,7 +14,7 @@
   tenacity,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "azure-kusto-ingest";
   version = "6.0.4";
   pyproject = true;
@@ -22,7 +22,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Azure";
     repo = "azure-kusto-python";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-iggsVxLmDbP6+oSPaIiujPLsZAWwm5VLZSl+HYm0DIQ=";
   };
 
@@ -55,4 +55,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Azure/azure-kusto-python/tree/master/azure-kusto-ingest";
     license = lib.licenses.mit;
   };
-}
+})

@@ -9,7 +9,7 @@
   net-tools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ethtool";
   version = "0.15";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "fedora-python";
     repo = "python-ethtool";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-0XzGaqpkEv3mpUsbfOtRl8E62iNdS7kRoo4oYrBjMys=";
   };
 
@@ -47,4 +47,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/fedora-python/python-ethtool";
     license = lib.licenses.gpl2Plus;
   };
-}
+})

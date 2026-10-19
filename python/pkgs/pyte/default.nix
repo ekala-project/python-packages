@@ -7,7 +7,7 @@
   wcwidth,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyte";
   version = "0.8.2";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "selectel";
     repo = "pyte";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-u24ltX/LEteiZ2a/ioKqxV2AZgrFmKOHXmySmw21sLE=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/selectel/pyte";
     license = lib.licenses.lgpl3;
   };
-}
+})

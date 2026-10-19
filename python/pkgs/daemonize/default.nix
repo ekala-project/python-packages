@@ -6,13 +6,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "daemonize";
   version = "2.5.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-3QJuT/jSLLAW7SEwvHOLfUsdpZfvk8B00q255N6gi8M=";
   };
 
@@ -25,4 +25,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/thesharp/daemonize";
     license = lib.licenses.mit;
   };
-}
+})

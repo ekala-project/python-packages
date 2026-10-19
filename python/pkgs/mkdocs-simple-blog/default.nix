@@ -8,7 +8,7 @@
   pytestCheckHook,
   pytest-cov-stub,
 }:
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mkdocs-simple-blog";
   version = "0.6.1";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "FernandoCelmer";
     repo = "mkdocs-simple-blog";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-B+vTDwyhP80bCWNn58sUl+411NKUERWpQGESvj8NEEE=";
   };
 
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     homepage = "https://fernandocelmer.github.io/mkdocs-simple-blog/";
     license = lib.licenses.mit;
   };
-}
+})

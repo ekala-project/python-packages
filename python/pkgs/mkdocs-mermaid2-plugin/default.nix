@@ -13,7 +13,7 @@
   requests,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mkdocs-mermaid2-plugin";
   version = "1.2.3";
   pyproject = true;
@@ -21,7 +21,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "fralau";
     repo = "mkdocs-mermaid2-plugin";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-EsfcOnfjZpAndYccN8WTpfLoUAlc5JQkgoy1ro1hMRo=";
   };
 
@@ -46,4 +46,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/fralau/mkdocs-mermaid2-plugin";
     license = lib.licenses.mit;
   };
-}
+})

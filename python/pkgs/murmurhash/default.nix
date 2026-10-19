@@ -6,13 +6,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "murmurhash";
   version = "1.0.15";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-WOKye3hH+eKm7fELR6jI3XCkcF9F3Mt792rq2s9WugE=";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/explosion/murmurhash";
     license = lib.licenses.mit;
   };
-}
+})

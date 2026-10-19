@@ -11,13 +11,13 @@
   trio,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "dnspython";
   version = "2.8.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-GB08aZZFLLEYnEBGxhWZuEpahuCZVi/9530mmE/ybQ8=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     homepage = "https://www.dnspython.org";
     license = lib.licenses.isc;
   };
-}
+})

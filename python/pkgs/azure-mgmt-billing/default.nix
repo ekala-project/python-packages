@@ -9,14 +9,14 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-billing";
   version = "8.0.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_mgmt_billing";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-j5AvIdJJPm/Fw8iU1SoHg/w0gPRYDjWUiVgDFvfO98Y=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/billing/azure-mgmt-billing";
     license = lib.licenses.mit;
   };
-}
+})

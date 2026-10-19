@@ -7,7 +7,7 @@
   jinja2,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "hiyapyco";
   version = "0.7.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "zerwes";
     repo = "hiyapyco";
-    tag = "release-${version}";
+    tag = "release-${finalAttrs.version}";
     hash = "sha256-uF5DblAg4q8L1tZKopcjJ14NIQVQF5flNHdZ/jnw71M=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/zerwes/hiyapyco";
     license = lib.licenses.gpl3Plus;
   };
-}
+})

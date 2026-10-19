@@ -11,13 +11,13 @@
   zope-interface,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "persistent";
   version = "6.8";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-LnzKobGrU0a+kDmAv3SsMB5ae+TmlJyTz58qcWrdixg=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/zopefoundation/persistent/";
     license = lib.licenses.zpl21;
   };
-}
+})

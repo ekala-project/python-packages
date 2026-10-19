@@ -8,7 +8,7 @@
   markupsafe,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mkdocs-autorefs";
   version = "1.4.4";
   pyproject = true;
@@ -16,13 +16,13 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mkdocstrings";
     repo = "autorefs";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-kEDnCAqn9musqbY4efUrAHcKc/LAhH1zkLAI9fP/7eg=";
   };
 
   postPatch = ''
     substituteInPlace pyproject.toml \
-      --replace 'dynamic = ["version"]' 'version = "${version}"'
+      --replace 'dynamic = ["version"]' 'version = "${finalAttrs.version}"'
   '';
 
   build-system = [ pdm-backend ];
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mkdocstrings/autorefs/";
     license = lib.licenses.isc;
   };
-}
+})

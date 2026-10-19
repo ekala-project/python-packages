@@ -6,13 +6,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "hexdump";
   version = "3.3";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-14GkOwwWrOP5Nmqt5z6K06e9UTfVjwtFqy0/VIdvINs=";
     extension = "zip";
   };
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://pypi.org/project/hexdump/"; # BitBucket site returns 404
     license = lib.licenses.publicDomain;
   };
-}
+})

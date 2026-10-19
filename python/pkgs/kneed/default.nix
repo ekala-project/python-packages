@@ -10,7 +10,7 @@
   pytest-cov-stub,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "kneed";
   version = "0.8.6";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "arvkevi";
     repo = "kneed";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-A9d5igX9Eqr3rgx93VMee9yFEs6WfO0bb/eCEFCxUJg=";
   };
 
@@ -45,4 +45,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/arvkevi/kneed";
     license = lib.licenses.bsd3;
   };
-}
+})

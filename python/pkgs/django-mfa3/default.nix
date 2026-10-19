@@ -10,7 +10,7 @@
   python,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-mfa3";
   version = "1.1.0";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "xi";
     repo = "django-mfa3";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-J31NiqOysOS6FFDCaCiPAJUBvD0Xu99sIykLxfk0M3U=";
   };
 
@@ -44,4 +44,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/xi/django-mfa3";
     license = lib.licenses.mit;
   };
-}
+})

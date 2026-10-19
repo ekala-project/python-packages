@@ -14,7 +14,7 @@
   scipy,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "uncertainties";
   version = "3.2.4";
   pyproject = true;
@@ -22,7 +22,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "lmfit";
     repo = "uncertainties";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-XfEiE27azEBNCZ6sIBncJI1cYocoXwgxEkclVgR5O34=";
   };
 
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     description = "Transparent calculations with uncertainties on the quantities involved (aka error propagation)";
     license = lib.licenses.bsd3;
   };
-}
+})

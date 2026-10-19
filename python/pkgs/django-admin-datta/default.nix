@@ -7,13 +7,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-admin-datta";
   version = "1.0.19";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-65fUrV4FIbuVvNX93rgOCMjz4CoozMHEEVpzJqtbhKY=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://appseed.us/product/datta-able/django";
     license = lib.licenses.mit;
   };
-}
+})

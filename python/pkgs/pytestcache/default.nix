@@ -7,14 +7,14 @@
   pytest,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytestcache";
   version = "1.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "pytest-cache";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-vnRo7dTT2D8ehElZ/W4/0o53pIFECnEY1DATDqMbB6k=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://pypi.org/project/pytest-cache/";
     license = lib.licenses.mit;
   };
-}
+})

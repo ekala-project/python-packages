@@ -7,7 +7,7 @@
   hypothesis,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "hid-parser";
   version = "0.1.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "usb-tools";
     repo = "python-hid-parser";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-8aGyLTsBK5etwbqFkNinbLHCt20fsQEmuBvu3RrwCDA=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/usb-tools/python-hid-parser";
     license = lib.licenses.mit;
   };
-}
+})

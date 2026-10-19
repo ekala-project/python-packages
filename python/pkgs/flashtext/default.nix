@@ -6,13 +6,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "flashtext";
   version = "2.7";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     sha256 = "1kq5idfp9skqkjdcld40igxn2yqjly8jpmxawkp0skwxw29jpgm1";
   };
 
@@ -25,4 +25,4 @@ buildPythonPackage rec {
     description = "Python package to replace keywords in sentences or extract keywords from sentences";
     license = lib.licenses.mit;
   };
-}
+})

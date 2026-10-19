@@ -8,7 +8,7 @@
   python,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-pwa";
   version = "2.0.1";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "silviolleite";
     repo = "django-pwa";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-EAjDK3rkjoPw8jyVVZdhMNHmTqr0/ERiMwGMxmVbsls=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/silviolleite/django-pwa";
     license = lib.licenses.mit;
   };
-}
+})

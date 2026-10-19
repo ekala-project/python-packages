@@ -17,7 +17,7 @@
   httpx,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "starlette";
   version = "1.6.0";
   pyproject = true;
@@ -25,7 +25,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "encode";
     repo = "starlette";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-Cp6wkRxbDdC+Yf3z4TvRF5xrchJ+PAo36qHbBg+FcXw=";
   };
 
@@ -49,4 +49,4 @@ buildPythonPackage rec {
     description = "Little ASGI framework that shines";
     license = lib.licenses.bsd3;
   };
-}
+})

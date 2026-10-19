@@ -8,7 +8,7 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "asyncer";
   version = "0.0.18";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "fastapi";
     repo = "asyncer";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-PoIyE+Mv+Uo74R6mXv2unKU396UW3/8085zvR1jYVvQ=";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/fastapi/asyncer";
     license = lib.licenses.mit;
   };
-}
+})

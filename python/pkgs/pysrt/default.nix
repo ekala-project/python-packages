@@ -7,7 +7,7 @@
   fetchpatch2,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pysrt";
   version = "1.1.2";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "byroot";
     repo = "pysrt";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "1f5hxyzlh5mdvvi52qapys9qcinffr6ghgivb6k4jxa92cbs3mfg";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     description = "Python library used to edit or create SubRip files";
     mainProgram = "srt";
   };
-}
+})

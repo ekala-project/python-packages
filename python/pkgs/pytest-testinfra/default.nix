@@ -7,14 +7,14 @@
   pytest,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytest-testinfra";
   version = "10.2.2";
   pyproject = true;
 
   src = fetchPypi {
     pname = "pytest_testinfra";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-U3/V64jaYYwfRhJIqiBZTPjURRLoUZsjmDfoOHXh6c0=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pytest-dev/pytest-testinfra";
     license = lib.licenses.asl20;
   };
-}
+})

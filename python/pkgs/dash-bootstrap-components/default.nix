@@ -6,13 +6,13 @@
   hatchling,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "dash-bootstrap-components";
   version = "2.0.5a2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit version;
+    inherit (finalAttrs) version;
     pname = "dash_bootstrap_components";
     hash = "sha256-quEneBgSbhIgTvwGkHaGB1X7rhj/Uwz/UN6CWAkrMSM=";
   };
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/facultyai/dash-bootstrap-components";
     license = lib.licenses.asl20;
   };
-}
+})

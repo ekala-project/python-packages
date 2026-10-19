@@ -10,7 +10,7 @@
   rebulk,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "trakit";
   version = "0.3.0";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ratoaq2";
     repo = "trakit";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-uKLuXkvyZWjCMx5MHlsTKvTJwHYYV+wnRyE+D8BtCC0=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ratoaq2/trakit";
     license = lib.licenses.mit;
   };
-}
+})

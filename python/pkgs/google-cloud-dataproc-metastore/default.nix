@@ -11,14 +11,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "google-cloud-dataproc-metastore";
   version = "1.23.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "google_cloud_dataproc_metastore";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-J1iZ6gE3q3KZPSg81SqEqdSPDEhR6wtliZgvLU09rU0=";
   };
 
@@ -50,4 +50,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-dataproc-metastore";
     license = lib.licenses.asl20;
   };
-}
+})

@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pynamecheap";
   version = "0.0.3";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Bemmu";
     repo = "PyNamecheap";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-J2WYWtZGtZiox4q9tdkLyU1nix9Jn64K0+1mw7xoLLw=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Bemmu/PyNamecheap";
     license = lib.licenses.mit;
   };
-}
+})

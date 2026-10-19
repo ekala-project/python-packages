@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "latexrestricted";
   version = "0.6.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-1R0hpBGXpYH/KcD4GFUfFvoOaJDe+Sl5msC952KnqmA=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     description = "Python library for creating executables compatible with LaTeX restricted shell escape";
     license = lib.licenses.lppl13c;
   };
-}
+})

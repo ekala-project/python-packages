@@ -10,7 +10,7 @@
   requests-mock,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "midea-beautiful-air";
   version = "0.10.7";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "nbogojevic";
     repo = "midea-beautiful-air";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-9smuLzgJPO/GoYP8NqfY9Ky9q2E3/cjEQLtWHIx7BxI=";
   };
 
@@ -48,4 +48,4 @@ buildPythonPackage rec {
     mainProgram = "midea-beautiful-air-cli";
     license = lib.licenses.mit;
   };
-}
+})

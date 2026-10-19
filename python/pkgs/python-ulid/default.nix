@@ -9,7 +9,7 @@
   freezegun,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "python-ulid";
   version = "4.0.1";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mdomke";
     repo = "python-ulid";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-U53hfviygdp6S+ZLXpLc0AeiAARfp3f5EBcCrufS2dA=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mdomke/python-ulid";
     license = lib.licenses.mit;
   };
-}
+})

@@ -8,7 +8,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "flask-paranoid";
   version = "0.3.0";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "miguelgrinberg";
     repo = "flask-paranoid";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-tikD8efc3Q3xIQnaC3SSBaCRQxMI1HzXxeupvYeNnE4=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     description = "Simple user session protection";
     license = lib.licenses.mit;
   };
-}
+})

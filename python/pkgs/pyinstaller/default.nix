@@ -24,13 +24,13 @@
   testers,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyinstaller";
   version = "6.22.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-ibZaOtB9ndWDIlPje8RfMYctENf51cn9D91giKg4Kd0=";
   };
 
@@ -73,4 +73,4 @@ buildPythonPackage rec {
     ];
     mainProgram = "pyinstaller";
   };
-}
+})

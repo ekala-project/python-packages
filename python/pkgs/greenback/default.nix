@@ -11,7 +11,7 @@
   sniffio,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "greenback";
   version = "1.3.0";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "oremanj";
     repo = "greenback";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-YAQEG3Lnyy9O+d58zZatDOeF+rxk34VqJ09XikqTyQk=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/oremanj/greenback";
     license = lib.licenses.mit;
   };
-}
+})

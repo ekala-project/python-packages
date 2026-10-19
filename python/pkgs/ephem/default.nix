@@ -7,13 +7,13 @@
   pytest,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ephem";
   version = "4.2.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-kgyzA2nHn94QiMIGDVVepfilD9yAqSZYMv1b8ZXPFH8=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/brandon-rhodes/pyephem";
     license = lib.licenses.mit;
   };
-}
+})

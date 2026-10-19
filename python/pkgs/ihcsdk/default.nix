@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ihcsdk";
   version = "2.8.12";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "dingusdk";
     repo = "PythonIhcSdk";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-k1WKfW/qweRdcaczqf47iNlqeOe7ULa57kqsTF4W2Zs=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/dingusdk/PythonIhcSdk";
     license = lib.licenses.gpl3Plus;
   };
-}
+})

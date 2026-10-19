@@ -10,7 +10,7 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "rchitect";
   version = "0.4.10";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "randy3k";
     repo = "rchitect";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-CTXvca687RL1aFxf7jptcNIKPUcugzFdVTSyApcaWS4=";
   };
 
@@ -44,4 +44,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/randy3k/rchitect";
     license = lib.licenses.mit;
   };
-}
+})

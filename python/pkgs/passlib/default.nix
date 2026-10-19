@@ -12,7 +12,7 @@
   cryptography,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "passlib";
   version = "1.9.3";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ThirVondukr";
     repo = "passlib";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-fzI9HpGE3wNK41ZSOeA5NAr5T4r3Jzdqe5+SHoWVXUs=";
   };
 
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     description = "Comprehensive password hashing framework supporting over 30 schemes";
     license = lib.licenses.bsd3;
   };
-}
+})

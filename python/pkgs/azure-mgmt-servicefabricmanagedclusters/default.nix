@@ -8,14 +8,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-servicefabricmanagedclusters";
   version = "3.0.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_mgmt_servicefabricmanagedclusters";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-6JcaQubkkT9IWr9NRRQBGwvYbNQeFQovh9yHWO/P984=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/servicefabricmanagedclusters/azure-mgmt-servicefabricmanagedclusters";
     license = lib.licenses.mit;
   };
-}
+})

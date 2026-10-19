@@ -8,7 +8,7 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "reactivex";
   version = "4.1.0";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ReactiveX";
     repo = "RxPY";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-napPfp72gqy43UmkPu1/erhjmJbZypHZQikmjIFVBqA=";
   };
 
@@ -35,7 +35,7 @@ buildPythonPackage rec {
   postPatch = ''
     # Upstream doesn't set a version for their GitHub releases
     substituteInPlace pyproject.toml \
-      --replace 'version = "0.0.0"' 'version = "${version}"'
+      --replace 'version = "0.0.0"' 'version = "${finalAttrs.version}"'
   '';
 
   pythonImportsCheck = [ "reactivex" ];
@@ -45,4 +45,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ReactiveX/RxPY";
     license = lib.licenses.mit;
   };
-}
+})

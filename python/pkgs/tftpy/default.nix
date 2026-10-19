@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "tftpy";
   version = "0.8.7";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-6KWqCS2rLhy7m5Q5IDaCe4CNw362zxsaszyBlXs/X+I=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/msoulier/tftpy";
     license = lib.licenses.mit;
   };
-}
+})

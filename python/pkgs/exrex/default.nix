@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "exrex";
   version = "0.11.0";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
 
   postPatch = ''
     substituteInPlace setup.py \
-      --replace "version=about['__version__']," "version='${version}',"
+      --replace "version=about['__version__']," "version='${finalAttrs.version}',"
   '';
 
   build-system = [ setuptools ];
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/asciimoo/exrex";
     license = lib.licenses.agpl3Plus;
   };
-}
+})

@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "momonga";
   version = "0.7.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "nbtk";
     repo = "momonga";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-3Ngm30Bo6hKeLLAOMyYxcgfiwOIessi5S0BB92Ye/rM=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/nbtk/momonga";
     license = lib.licenses.mit;
   };
-}
+})

@@ -9,7 +9,7 @@
   bcrypt,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pwdlib";
   version = "0.3.1";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "frankie567";
     repo = "pwdlib";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-4fqdgeDtPZztaR2SzwpYjv3WjXcf/9qHKzNwm/muXm8=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/frankie567/pwdlib";
     license = lib.licenses.mit;
   };
-}
+})

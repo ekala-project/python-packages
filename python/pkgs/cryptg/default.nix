@@ -9,7 +9,7 @@
   setuptools-rust,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "cryptg";
   version = "0.6.0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "cher-nov";
     repo = "cryptg";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-3vdZGtr4NTtba42jqklhEEMWqHgEct/0Rw0Krllgcn4=";
   };
 
@@ -50,4 +50,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/cher-nov/cryptg";
     license = lib.licenses.cc0;
   };
-}
+})

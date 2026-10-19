@@ -6,7 +6,7 @@
   tokenize-rt,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "unasync";
   version = "0.6.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "python-trio";
     repo = "unasync";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-ZRvmX1fSfSJ1HNEymzhIuUi3tdjFmUoidfr0rN8c7tk=";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
       asl20
     ];
   };
-}
+})

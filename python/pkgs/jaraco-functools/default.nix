@@ -8,14 +8,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jaraco-functools";
   version = "4.6.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "jaraco_functools";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-iAxXfslyCzoFLVvGEfufImmz2HkC70JEDfRDuI5EMoA=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jaraco/jaraco.functools";
     license = lib.licenses.mit;
   };
-}
+})

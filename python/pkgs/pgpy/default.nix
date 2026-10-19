@@ -7,7 +7,7 @@
   cryptography,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pgpy";
   version = "0.6.0";
 
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "SecurityInnovation";
     repo = "PGPy";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-47YiHNxmjyCOYHHUV3Zyhs3Att9HZtCXYfbN34ooTxU=";
   };
 
@@ -49,4 +49,4 @@ buildPythonPackage rec {
     '';
     license = lib.licenses.bsd3;
   };
-}
+})

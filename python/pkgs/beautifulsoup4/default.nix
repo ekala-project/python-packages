@@ -22,7 +22,7 @@
   lxml,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "beautifulsoup4";
   version = "4.15.0";
   pyproject = true;
@@ -33,7 +33,7 @@ buildPythonPackage rec {
   ];
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-KI48p9VLBvKsGRlwvCdcGTnLRtRQslW/ZxiwSqN6tPc=";
   };
 
@@ -59,4 +59,4 @@ buildPythonPackage rec {
     homepage = "http://crummy.com/software/BeautifulSoup/bs4/";
     license = lib.licenses.mit;
   };
-}
+})

@@ -15,7 +15,7 @@
   texttable,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "py7zr";
   version = "1.1.3";
   pyproject = true;
@@ -23,7 +23,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "miurahr";
     repo = "py7zr";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-rD5qs0AjJXS5x4o0niyz23ROtgmJg/4uZqAbDCnFnYY=";
   };
 
@@ -58,4 +58,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/miurahr/py7zr";
     license = lib.licenses.gpl2Only;
   };
-}
+})

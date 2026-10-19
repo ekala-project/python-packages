@@ -8,7 +8,7 @@
   urllib3,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "cloudsmith-api";
   version = "2.0.23";
   format = "wheel";
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/cloudsmith-io/cloudsmith-api";
     license = lib.licenses.asl20;
   };
-}
+})

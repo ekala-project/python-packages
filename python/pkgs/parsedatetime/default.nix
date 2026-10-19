@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "parsedatetime";
   version = "2.6";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-TLNo+7GKC3Ix9NdhGRZUUcjS41lRRV3+6XxiqHsE1FU=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     description = "Parse human-readable date/time text";
     license = lib.licenses.asl20;
   };
-}
+})

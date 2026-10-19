@@ -6,14 +6,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "stix2-patterns";
   version = "2.1.2";
   pyproject = true;
 
   src = fetchPypi {
     pname = "stix2_patterns";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-sgWdNsH9h3QPP6zCKkFHzeHisKy41eTAj78EsdxVMYU=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/oasis-open/cti-pattern-validator";
     license = lib.licenses.bsd3;
   };
-}
+})

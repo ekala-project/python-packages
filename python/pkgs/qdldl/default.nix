@@ -11,7 +11,7 @@
   scipy,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "qdldl";
   version = "0.1.7.post5";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "osqp";
     repo = "qdldl-python";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-XHdvYWORHDYy/EIqmlmFQZwv+vK3I+rPIrvcEW1JyIw=";
   };
 
@@ -55,4 +55,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/osqp/qdldl-python";
     license = lib.licenses.asl20;
   };
-}
+})

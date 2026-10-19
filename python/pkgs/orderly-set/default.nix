@@ -5,7 +5,7 @@
   flit-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "orderly-set";
   version = "5.5.0";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "seperman";
     repo = "orderly-set";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-xrxH/LB+cyZlVf+sVwOtAf9+DojYPDnudHpqlVuARLg=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/seperman/orderly-set";
     license = lib.licenses.mit;
   };
-}
+})

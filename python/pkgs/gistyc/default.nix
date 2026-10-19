@@ -9,13 +9,13 @@
   requests,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "gistyc";
   version = "1.3";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-WVK45U9e3qyZFi9wSRHNi9+1u4TetlZkYXAZN7LVqhE=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     '';
     license = lib.licenses.gpl3Plus;
   };
-}
+})

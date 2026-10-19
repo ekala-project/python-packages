@@ -18,7 +18,7 @@ let
   version = "2.68.0";
   format = "wheel";
 in
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   inherit pname version format;
 
   src =
@@ -70,4 +70,4 @@ buildPythonPackage rec {
     license = lib.licenses.bsd3;
     platforms = lib.platforms.linux;
   };
-}
+})

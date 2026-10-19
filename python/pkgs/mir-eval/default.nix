@@ -12,7 +12,7 @@
   pytest-mpl,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mir-eval";
   version = "0.8.2";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mir-evaluation";
     repo = "mir_eval";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-Dq/kqoTY8YGATsr6MSgfQxkWvFpmH/Pf1pKBLPApylY=";
   };
 
@@ -56,4 +56,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/craffel/mir_eval";
     license = lib.licenses.mit;
   };
-}
+})

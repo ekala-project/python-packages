@@ -6,14 +6,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyrect";
   version = "0.2.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "PyRect";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-9lFV9t+bkptnyv+9V8CUfFrlRJ07WA0XgHS/+0egm3g=";
   };
 
@@ -25,4 +25,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/asweigart/pyrect";
     license = lib.licenses.bsd3;
   };
-}
+})

@@ -10,7 +10,7 @@
   zeroconf,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "altruistclient";
   version = "0.1.1";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "LoSk-p";
     repo = "altruistclient";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-36qqB9e53eZgMgwXzrXlMOySnuqmT3vLiU02NL9xtko=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/LoSk-p/altruistclient";
     license = lib.licenses.asl20;
   };
-}
+})

@@ -7,7 +7,7 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pure-protobuf";
   version = "3.1.5";
 
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "eigenein";
     repo = "protobuf";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-Gr5fKpagSUzH34IKHb+pBta4q71AqYa/KG9XW2AxZqk=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/eigenein/protobuf";
     license = lib.licenses.mit;
   };
-}
+})

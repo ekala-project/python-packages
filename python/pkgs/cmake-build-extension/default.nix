@@ -9,7 +9,7 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "cmake-build-extension";
   version = "0.6.1";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "diegoferigo";
     repo = "cmake-build-extension";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-taAwxa7Sv+xc8xJRnNM6V7WPcL+TWZOkngwuqjAslzc=";
   };
 
@@ -43,4 +43,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/diegoferigo/cmake-build-extension";
     license = lib.licenses.mit;
   };
-}
+})

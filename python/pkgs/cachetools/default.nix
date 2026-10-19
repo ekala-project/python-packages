@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "cachetools";
   version = "6.2.4";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "tkem";
     repo = "cachetools";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-LlDyrjiRYCD9btDl5NA0Seb3jk3hlpNhwu0jAQp9YZE=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/tkem/cachetools";
     license = lib.licenses.mit;
   };
-}
+})

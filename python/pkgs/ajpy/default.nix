@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ajpy";
   version = "0.0.5";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-MBDh9APWJgnsC71p3B2WtZLYpmJ6H11FNSj6f4CofJw=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/hypn0s/AJPy";
     license = lib.licenses.lgpl2Only;
   };
-}
+})

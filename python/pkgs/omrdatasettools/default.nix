@@ -21,13 +21,13 @@
   twine,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "omrdatasettools";
   version = "1.4.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-kUUcbti29uDnSEvCubMAUnptlaZGpEsW2IBGSAGnGyQ=";
   };
 
@@ -73,4 +73,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/apacha/OMR-Datasets";
     license = lib.licenses.mit;
   };
-}
+})

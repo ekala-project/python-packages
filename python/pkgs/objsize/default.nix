@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "objsize";
   version = "0.8.0";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "liran-funaro";
     repo = "objsize";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-u4PTUk3K3ZCNZ87xM+PoCabsw+EjOoDgNySDWWB7yho=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/liran-funaro/objsize";
     license = lib.licenses.bsd3;
   };
-}
+})

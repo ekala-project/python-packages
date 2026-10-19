@@ -6,13 +6,13 @@
   pycodestyle,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "autopep8";
   version = "2.3.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-iUQKT5aRl7aamV5M4GYbAx9FWp93bSxbo9vYNGaTF1g=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     mainProgram = "autopep8";
   };
-}
+})

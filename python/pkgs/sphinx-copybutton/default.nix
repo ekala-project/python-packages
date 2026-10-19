@@ -6,13 +6,13 @@
   sphinx,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "sphinx-copybutton";
   version = "0.5.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-TPF8gvuWRtG8nKkqwoCBOjtgXYxCEiX9mRMVQQPuH70=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     description = "Small sphinx extension to add a \"copy\" button to code blocks";
     license = lib.licenses.mit;
   };
-}
+})

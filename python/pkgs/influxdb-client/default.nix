@@ -14,7 +14,7 @@
   urllib3,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "influxdb-client";
   version = "1.50.0";
   pyproject = true;
@@ -22,7 +22,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "influxdata";
     repo = "influxdb-client-python";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-39ioVlTgvICHArTNhfXZQ+WrUda2B5LxLtMwXWp6krU=";
   };
 
@@ -56,4 +56,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/influxdata/influxdb-client-python";
     license = lib.licenses.mit;
   };
-}
+})

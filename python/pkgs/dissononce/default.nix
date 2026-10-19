@@ -9,7 +9,7 @@
   transitions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "dissononce";
   version = "0.34.3";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "tgalal";
     repo = "dissononce";
-    tag = version;
+    tag = finalAttrs.version;
     sha256 = "0hn64qfr0d5npmza6rjyxwwp12k2z2y1ma40zpl104ghac6g3mbs";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     description = "Python implementation for Noise Protocol Framework";
   };
-}
+})

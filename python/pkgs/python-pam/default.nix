@@ -8,7 +8,7 @@
   toml,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "python-pam";
   version = "2.0.2";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "FirefighterBlu3";
     repo = "python-pam";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-MR9LYXtkbltAmn7yoyyKZn4yMHyh3rj/i/pA8nJy2xU=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/FirefighterBlu3/python-pam";
     license = lib.licenses.mit;
   };
-}
+})

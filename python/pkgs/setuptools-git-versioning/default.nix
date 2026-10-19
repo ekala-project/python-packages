@@ -8,7 +8,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "setuptools-git-versioning";
   version = "3.1.0";
   pyproject = true;
@@ -16,13 +16,13 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "dolfinus";
     repo = "setuptools-git-versioning";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-d6d8taSSAjvirivf1WaEICq0XbrYQzC2LB//LpGpHhI=";
   };
 
   postPatch = ''
     substituteInPlace pyproject.toml \
-      --replace-fail 'dynamic = ["version"]' 'version = "${version}"'
+      --replace-fail 'dynamic = ["version"]' 'version = "${finalAttrs.version}"'
   '';
 
   build-system = [
@@ -43,4 +43,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/dolfinus/setuptools-git-versioning";
     license = lib.licenses.mit;
   };
-}
+})

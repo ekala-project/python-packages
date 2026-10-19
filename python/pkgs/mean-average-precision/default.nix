@@ -7,7 +7,7 @@
   pandas,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mean-average-precision";
   version = "2024.01.05.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "bes-dev";
     repo = "mean_average_precision";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-qo160L+oJsHERVOV0qdiRIZPMjvSlUmMTrAzThfrQSs=";
   };
 
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/bes-dev/mean_average_precision";
     license = lib.licenses.mit;
   };
-}
+})

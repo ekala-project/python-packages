@@ -7,14 +7,14 @@
   hatchling,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "llama-index-vector-stores-google";
   version = "0.6.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "llama_index_vector_stores_google";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-bGxsNAE6tC0bOLfjzn3kY1Se17yh6c7jjk/sgyMPdck=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/run-llama/llama_index/tree/main/llama-index-integrations/vector_stores/llama-index-vector-stores-google";
     license = lib.licenses.mit;
   };
-}
+})

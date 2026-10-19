@@ -12,13 +12,13 @@
   typeguard,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "inflect";
   version = "7.5.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-+vGYAcN0LtWgWozjiODY/hoH+NCVyCIB65BPXSetVx8=";
   };
 
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     description = "Correctly generate plurals, singular nouns, ordinals, indefinite articles";
     license = lib.licenses.mit;
   };
-}
+})

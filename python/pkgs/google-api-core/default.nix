@@ -12,7 +12,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "google-api-core";
   version = "2.29.0";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "googleapis";
     repo = "python-api-core";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-wqDGtCYAH2f+P3zUfXgiQTePLr7a0qzUTeEc6pdCGio=";
   };
 
@@ -55,4 +55,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/googleapis/python-api-core";
     license = lib.licenses.asl20;
   };
-}
+})

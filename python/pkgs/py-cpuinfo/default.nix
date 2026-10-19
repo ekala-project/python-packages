@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "py-cpuinfo";
   version = "9.0.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-PNu/P6yQ3G8Ri/1kOE8wnt6t2QLXyPsX8C/6H8P0lpA=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/workhorsy/py-cpuinfo";
     license = lib.licenses.mit;
   };
-}
+})

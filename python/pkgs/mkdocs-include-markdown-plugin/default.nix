@@ -8,14 +8,14 @@
   platformdirs,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mkdocs-include-markdown-plugin";
   version = "7.3.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "mkdocs_include_markdown_plugin";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-KAASZ0ZFLjHC4yG71DyBkLNW4N41PiDLwWo0o8PWeWw=";
   };
 
@@ -43,4 +43,4 @@ buildPythonPackage rec {
     homepage = "https://pypi.org/project/mkdocs-include-markdown-plugin/";
     license = lib.licenses.asl20;
   };
-}
+})

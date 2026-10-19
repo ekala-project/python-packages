@@ -9,7 +9,7 @@
   parsimonious,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "eth-abi";
   version = "5.2.0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ethereum";
     repo = "eth-abi";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-/tyGm/lH72oZEKfTd25t+k0y3TuAZQg+hUABT4YCP2g=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ethereum/eth-abi";
     license = lib.licenses.mit;
   };
-}
+})

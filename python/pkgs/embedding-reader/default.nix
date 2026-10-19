@@ -12,7 +12,7 @@
   tqdm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "embedding-reader";
   version = "1.8.1";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "rom1504";
     repo = "embedding-reader";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-D7yrvV6hDqzHaIMhCQ16DhY/8FEr3P4gcT5vV371whs=";
   };
 
@@ -45,4 +45,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/rom1504/embedding-reader";
     license = lib.licenses.mit;
   };
-}
+})

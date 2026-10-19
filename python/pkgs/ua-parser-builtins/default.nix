@@ -6,7 +6,7 @@
   versioningit,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ua-parser-builtins";
   inherit (ua-parser) version src;
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   postPatch = ''
     # don't use git to determine version
     substituteInPlace pyproject.toml \
-      --replace-fail 'dynamic = ["version"]' 'version = "${version}"'
+      --replace-fail 'dynamic = ["version"]' 'version = "${finalAttrs.version}"'
   '';
 
   build-system = [
@@ -32,4 +32,4 @@ buildPythonPackage rec {
       license
       ;
   };
-}
+})

@@ -5,13 +5,13 @@
   hatchling,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "rubymarshal";
   version = "1.2.10";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-iZtG5khSANCHhY/1YpWIF2T/Umj2/fAbfsxOTgPT7Xw=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/d9pouces/RubyMarshal/";
     license = lib.licenses.wtfpl;
   };
-}
+})

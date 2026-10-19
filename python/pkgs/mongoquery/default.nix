@@ -7,13 +7,13 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mongoquery";
   version = "1.4.3";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     sha256 = "sha256-6QH4buWvfvbtovLCb0vSz+g4DYHxeLfjYH27zc7pcjk=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/kapouille/mongoquery";
     license = lib.licenses.unlicense;
   };
-}
+})

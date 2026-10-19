@@ -6,7 +6,7 @@
   legacy-cgi,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "webob";
   version = "1.8.9";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Pylons";
     repo = "webob";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-axJQwlybuqBS6RgI2z9pbw58vHF9aC9AxCg13CIKCLs=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://webob.org/";
     license = lib.licenses.mit;
   };
-}
+})

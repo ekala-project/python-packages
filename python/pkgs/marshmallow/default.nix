@@ -8,7 +8,7 @@
   flit-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "marshmallow";
   version = "4.3.0";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "marshmallow-code";
     repo = "marshmallow";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-KNxR8AiEJ9S15G5l3rB48BvLdgB5s6q6L1I83V7iMv0=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/marshmallow-code/marshmallow";
     license = lib.licenses.mit;
   };
-}
+})

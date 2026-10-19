@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "whichcraft";
   version = "0.6.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-rNu5G2PWoV771kMNHXstNuRKcWl+k+Gbfe1Hev2fzoc=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pydanny/whichcraft";
     license = lib.licenses.bsd3;
   };
-}
+})

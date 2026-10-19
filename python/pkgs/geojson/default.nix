@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "geojson";
   version = "3.3.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-kug7nLN4pFC0LxIHu5sqAx+fyJGF8zUVPEQ2m4uLcf0=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     description = "Python bindings and utilities for GeoJSON";
     license = lib.licenses.bsd3;
   };
-}
+})

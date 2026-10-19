@@ -7,13 +7,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "bashlex";
   version = "0.18";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-W7A6AcbVZ2M4w2/RAoAJyK0H59Ydihzj9RO3//Unlu4=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/idank/bashlex";
     license = lib.licenses.gpl3Plus;
   };
-}
+})

@@ -16,14 +16,14 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "draccus";
   version = "0.11.6";
   pyproject = true;
 
   # No (recent) tags on GitHub
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-0TT1dqH0/r2TxrIA33+S5f6//p79wKXzgb9QwuBWijk=";
   };
 
@@ -56,4 +56,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/dlwh/draccus";
     license = lib.licenses.mit;
   };
-}
+})

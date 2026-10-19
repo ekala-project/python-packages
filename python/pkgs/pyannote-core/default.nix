@@ -13,7 +13,7 @@
   sortedcontainers,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyannote-core";
   version = "6.0.1";
   pyproject = true;
@@ -21,7 +21,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pyannote";
     repo = "pyannote-core";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-r5NkOAzrQGcb6LPi4/DA0uT9R0ELiYuwQkbT1l6R8Mw=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pyannote/pyannote-core";
     license = lib.licenses.mit;
   };
-}
+})

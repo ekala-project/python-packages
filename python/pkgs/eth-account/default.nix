@@ -17,7 +17,7 @@
   websockets,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "eth-account";
   version = "0.13.7";
   pyproject = true;
@@ -25,7 +25,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ethereum";
     repo = "eth-account";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-Ipz2zIKCpIzKBtX0UZnvpKZeTUcDPbGTzMgmcJC/4qs=";
   };
 
@@ -57,4 +57,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ethereum/eth-account";
     license = lib.licenses.mit;
   };
-}
+})

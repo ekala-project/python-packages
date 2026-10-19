@@ -13,7 +13,7 @@
   requests,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mkdocs-git-committers-plugin-2";
   version = "2.5.0";
   pyproject = true;
@@ -21,7 +21,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ojacques";
     repo = "mkdocs-git-committers-plugin-2";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-PpXgY5RlOeb0mB46gcNVWkSGMZa4WPkCwDUXMxCUjsI=";
   };
 
@@ -43,4 +43,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ojacques/mkdocs-git-committers-plugin-2";
     license = lib.licenses.mit;
   };
-}
+})

@@ -10,13 +10,13 @@
   xlsxwriter,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "shodan";
   version = "1.31.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-xzJ1OG6gI5DhlsNcZgcGoo3U1TfFoh6zh6tiNvrCUfY=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/achillean/shodan-python";
     license = lib.licenses.mit;
   };
-}
+})

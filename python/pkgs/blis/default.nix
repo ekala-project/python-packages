@@ -18,7 +18,7 @@
   gitUpdater,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "blis";
   version = "1.3.3";
   pyproject = true;
@@ -26,7 +26,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "explosion";
     repo = "cython-blis";
-    tag = "release-v${version}";
+    tag = "release-v${finalAttrs.version}";
     hash = "sha256-CCy5vYjj4pCOfpKSEjdHsA6XTW7Wl3UVN8FHUsAhmVk=";
   };
 
@@ -85,4 +85,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/explosion/cython-blis";
     license = lib.licenses.bsd3;
   };
-}
+})

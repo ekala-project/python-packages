@@ -10,7 +10,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "notion-client";
   version = "3.1.0";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ramnes";
     repo = "notion-sdk-py";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-TdBynMSx8VWzJY9j/AeKLivVzpSoCWavn6bW9p804Jw=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ramnes/notion-sdk-py";
     license = lib.licenses.mit;
   };
-}
+})

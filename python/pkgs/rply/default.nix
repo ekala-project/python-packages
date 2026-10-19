@@ -6,13 +6,13 @@
   appdirs,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "rply";
   version = "0.7.8";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-KoCKwlpFgKmZH8ME1kQ04pmo/HV2BXRJLyQsu1uzAck=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/alex/rply";
     license = lib.licenses.bsd3;
   };
-}
+})

@@ -8,7 +8,7 @@
   defusedxml,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "sphinx-pytest";
   version = "0.3.0";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "chrisjsewell";
     repo = "sphinx-pytest";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-z71IrUr3e2oAPeZMjUBwMwy2SkoAA3oxtK4+iR9vLEc=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/chrisjsewell/sphinx-pytest";
     license = lib.licenses.mit;
   };
-}
+})

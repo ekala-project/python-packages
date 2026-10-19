@@ -12,7 +12,7 @@
   yarl,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aiodukeenergy";
   version = "1.1.0";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "hunterjm";
     repo = "aiodukeenergy";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-v8rWRjAlTGu7d0bQaAQ1A7Qm4oP3STkIzHcKLa8+/OY=";
   };
 
@@ -46,4 +46,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/hunterjm/aiodukeenergy";
     license = lib.licenses.mit;
   };
-}
+})

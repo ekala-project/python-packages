@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "colorlog";
   version = "6.12.0";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "borntyping";
     repo = "python-colorlog";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-K7gxWg1OMSwcslrBvEyRIoGKSDOrlfiLmhxl8PbL/9g=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/borntyping/python-colorlog";
     license = lib.licenses.mit;
   };
-}
+})

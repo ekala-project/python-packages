@@ -7,13 +7,13 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "gemfileparser2";
   version = "0.9.4";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-ezfioBwlZMGb1cEzzwa1afXUrTnxsgpzX0CNOTyVzgY=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
       gpl3Plus
     ];
   };
-}
+})

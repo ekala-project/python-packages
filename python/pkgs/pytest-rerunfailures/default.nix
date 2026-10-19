@@ -7,7 +7,7 @@
   pytest,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytest-rerunfailures";
   version = "16.4";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pytest-dev";
     repo = "pytest-rerunfailures";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-wdUNGc50Yqrctc8OXBmgRwmHVjSeOq+ADRYcLtKSraM=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pytest-dev/pytest-rerunfailures";
     license = lib.licenses.mpl20;
   };
-}
+})

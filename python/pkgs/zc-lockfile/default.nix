@@ -7,14 +7,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "zc-lockfile";
   version = "4.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "zc_lockfile";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-06sPU5dClqgG2zIZuRkboObVy70dqi4NFyCMubKdIQI=";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     description = "Inter-process locks";
     license = lib.licenses.zpl21;
   };
-}
+})

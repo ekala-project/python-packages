@@ -24,13 +24,13 @@
   python,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "numcodecs";
   version = "0.16.5";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-DQ+2CFL4TAvZVDzE0que79N/yO/MQQrNR3fmKh0wAxg=";
   };
 
@@ -65,4 +65,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     description = "Buffer compression and transformation codecs for use in data storage and communication applications";
   };
-}
+})

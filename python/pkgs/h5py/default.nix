@@ -17,13 +17,13 @@ let
   mpi = hdf5.mpi;
   mpiSupport = hdf5.mpiSupport;
 in
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   version = "3.16.0";
   pname = "h5py";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-oNuq15aEDMqmekwUSg0MgIAHPDTHbVppQdaBhnjvJzg=";
   };
 
@@ -78,4 +78,4 @@ buildPythonPackage rec {
     homepage = "http://www.h5py.org/";
     license = lib.licenses.bsd3;
   };
-}
+})

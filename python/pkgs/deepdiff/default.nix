@@ -15,7 +15,7 @@
   pyyaml,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "deepdiff";
   version = "9.0.0";
   pyproject = true;
@@ -23,7 +23,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "seperman";
     repo = "deepdiff";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-+QHYYts6FGOrg01+SjUQTxW6kjbwIG3NVSKDYKWvels=";
   };
 
@@ -53,4 +53,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/seperman/deepdiff";
     license = lib.licenses.mit;
   };
-}
+})

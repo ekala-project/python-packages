@@ -18,7 +18,7 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "cfn-lint";
   version = "1.56.0";
   pyproject = true;
@@ -26,7 +26,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "aws-cloudformation";
     repo = "cfn-lint";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-GkY8t7USyiDRxTNESiXZ6P/oxaoMO4mlDmaiF1rzyEA=";
   };
 
@@ -59,4 +59,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/aws-cloudformation/cfn-lint";
     license = lib.licenses.mit;
   };
-}
+})

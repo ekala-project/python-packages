@@ -6,14 +6,14 @@
   packaging,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "setuptools-scm";
   version = "9.2.2";
   pyproject = true;
 
   src = fetchPypi {
     pname = "setuptools_scm";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-HGdKtGZWhqCIfX4kwDqyXyQgHCE+guponS8+Fp7371c=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pypa/setuptools_scm";
     license = lib.licenses.mit;
   };
-}
+})

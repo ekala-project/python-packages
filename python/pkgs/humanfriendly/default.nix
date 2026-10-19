@@ -6,13 +6,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "humanfriendly";
   version = "10.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     sha256 = "6b0b831ce8f15f7300721aa49829fc4e83921a9a301cc7f606be6686a2288ddc";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://humanfriendly.readthedocs.io/";
     license = lib.licenses.mit;
   };
-}
+})

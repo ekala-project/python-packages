@@ -15,7 +15,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-statici18n";
   version = "2.7.1";
   pyproject = true;
@@ -23,7 +23,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "zyegfryed";
     repo = "django-statici18n";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-e6sCH/9h+Ki96hfG4ftuLo34HfZbwImThi9YxmZOmRc=";
   };
 
@@ -48,4 +48,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/zyegfryed/django-statici18n";
     license = lib.licenses.bsd3;
   };
-}
+})

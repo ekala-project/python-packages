@@ -6,7 +6,7 @@
   flit-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "sphinxext-rediraffe";
   version = "0.3.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "wpilibsuite";
     repo = "sphinxext-rediraffe";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-OW+MNQbPfJa8+jcpWZxTKD+EAv1gyo5tmcYAGba4u3c=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/wpilibsuite/sphinxext-rediraffe";
     license = lib.licenses.mit;
   };
-}
+})

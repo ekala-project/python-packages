@@ -8,14 +8,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-applicationinsights";
   version = "5.0.0b2";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_mgmt_applicationinsights";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-JffPFxZQg/yYh0wJ71VKt+ibT87VWV0U08pUlSXg5HY=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/applicationinsights/azure-mgmt-applicationinsights";
     license = lib.licenses.mit;
   };
-}
+})

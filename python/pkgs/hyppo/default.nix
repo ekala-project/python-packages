@@ -24,7 +24,7 @@
   seaborn,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "hyppo";
   version = "0.5.2";
   pyproject = true;
@@ -32,7 +32,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "neurodata";
     repo = "hyppo";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-7Y+UhneIGwqjsPCnGAQWF/l4r1gFbYs3fdHhV46ZBjA=";
   };
 
@@ -71,4 +71,4 @@ buildPythonPackage rec {
     description = "Python package for multivariate hypothesis testing";
     license = lib.licenses.mit;
   };
-}
+})

@@ -10,7 +10,7 @@
   nix-update-script,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-cache-memoize";
   version = "0-unstable-2026-03-01";
   pyproject = true;
@@ -48,4 +48,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/peterbe/django-cache-memoize";
     license = lib.licenses.mpl20;
   };
-}
+})

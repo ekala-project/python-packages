@@ -11,14 +11,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "google-cloud-trace";
   version = "1.20.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "google_cloud_trace";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-9ab5uNpTC3bEUhY7g+UIHBaW8bT2cpDIeLDnNw8ekQo=";
   };
 
@@ -45,4 +45,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-trace";
     license = lib.licenses.asl20;
   };
-}
+})

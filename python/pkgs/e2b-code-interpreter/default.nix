@@ -12,7 +12,7 @@
   httpx,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "e2b-code-interpreter";
   inherit (e2b) version;
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "e2b-dev";
     repo = "code-interpreter";
-    tag = "@e2b/code-interpreter-python@${version}";
+    tag = "@e2b/code-interpreter-python@${finalAttrs.version}";
     hash = "sha256-a2rc7BtV+qwtqlB+JtLCs0BKN15yfwmG3XWWO8we2LA=";
   };
 
@@ -46,4 +46,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/e2b-dev/code-interpreter/tree/main/python";
     license = lib.licenses.asl20;
   };
-}
+})

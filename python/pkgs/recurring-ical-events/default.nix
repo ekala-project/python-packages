@@ -10,7 +10,7 @@
   x-wr-timezone,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "recurring-ical-events";
   version = "3.9.0";
   pyproject = true;
@@ -18,13 +18,13 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "niccokunzmann";
     repo = "python-recurring-ical-events";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-hBZg1u6JtWGC+l1D1M18al6OQ298Z76tkiqYrBQYIzQ=";
   };
 
   postPatch = ''
     substituteInPlace pyproject.toml \
-      --replace 'dynamic = ["urls", "version"]' 'version = "${version}"'
+      --replace 'dynamic = ["urls", "version"]' 'version = "${finalAttrs.version}"'
   '';
 
   build-system = [
@@ -46,4 +46,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/niccokunzmann/python-recurring-ical-events";
     license = lib.licenses.lgpl3Plus;
   };
-}
+})

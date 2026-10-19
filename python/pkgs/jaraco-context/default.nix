@@ -7,7 +7,7 @@
   backports-tarfile,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jaraco-context";
   version = "6.1.2";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "jaraco";
     repo = "jaraco.context";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-gkFRBgVu79o2wCZqVdqChND+763uR6lAuWFwYHxHIq8=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jaraco/jaraco.context";
     license = lib.licenses.mit;
   };
-}
+})

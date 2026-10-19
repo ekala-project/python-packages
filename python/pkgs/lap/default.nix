@@ -8,13 +8,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "lap";
   version = "0.5.13";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-nv9xaePKRSmVrwSTzCDTVFLEv9BhIsNsBkVxGf+9QRs=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/gatagat/lap";
     license = lib.licenses.bsd2;
   };
-}
+})

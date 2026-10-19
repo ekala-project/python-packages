@@ -9,7 +9,7 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "casa-formats-io";
   version = "0.3.0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
 
   src = fetchPypi {
     pname = "casa_formats_io";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-FpQj0XeZ7vvOzUM/+5qG6FRwNXl3gzoUBItYdQ1M4m4=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://casa-formats-io.readthedocs.io/";
     license = lib.licenses.lgpl2Only;
   };
-}
+})

@@ -7,13 +7,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "namedlist";
   version = "1.8";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-NPifyZJZLICzmnCeE27c9B6hfyS6Mer4SjFKAsi5vO8=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://gitlab.com/ericvsmith/namedlist";
     license = lib.licenses.asl20;
   };
-}
+})

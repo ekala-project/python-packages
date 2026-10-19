@@ -9,7 +9,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "notifications-android-tv";
   version = "1.2.2";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "engrbm87";
     repo = "notifications_android_tv";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-JUvxxVCiQtywAWU5AYnPm4SueIWIXkzLxPYveVXpc2E=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/engrbm87/notifications_android_tv";
     license = lib.licenses.mit;
   };
-}
+})

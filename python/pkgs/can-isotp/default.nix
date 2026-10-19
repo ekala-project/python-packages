@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "can-isotp";
   version = "2.0.7";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pylessard";
     repo = "python-can-isotp";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-Gts6eeeto++DKnkojFvCwyPVPRSq2OcTA0jAYrPAWJI=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pylessard/python-can-isotp";
     license = lib.licenses.mit;
   };
-}
+})

@@ -9,7 +9,7 @@
   pytest-django,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-sql-utils";
   version = "0.7.0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "martsberger";
     repo = "django-sql-utils";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-OjKPxoWYheu8UQ14KvyiQyHISAQjJep+N4HRc4Msa1w=";
   };
 
@@ -48,4 +48,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/martsberger/django-sql-utils";
     license = lib.licenses.mit;
   };
-}
+})

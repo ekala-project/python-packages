@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "unicodecsv";
   version = "0.14.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-AYwIA31IZJoEEgY/9O2ibqqB7/FUbb/6UfpSkydv9/w=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jdunck/python-unicodecsv";
     license = lib.licenses.bsd2WithViews;
   };
-}
+})

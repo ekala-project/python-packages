@@ -19,7 +19,7 @@
   sybil,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "lifelines";
   version = "0.30.3";
   pyproject = true;
@@ -27,7 +27,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "CamDavidsonPilon";
     repo = "lifelines";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-A9MsQN/JGCQ4cYNIZI5LBKpRb44uI/SM8eT4/nKpsXQ=";
   };
 
@@ -68,4 +68,4 @@ buildPythonPackage rec {
     homepage = "https://lifelines.readthedocs.io";
     license = lib.licenses.mit;
   };
-}
+})

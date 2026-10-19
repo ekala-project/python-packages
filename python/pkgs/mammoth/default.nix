@@ -10,7 +10,7 @@
   gitUpdater,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mammoth";
   version = "1.12.0";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mwilliamson";
     repo = "python-mammoth";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-8aqO5JPiyONu5rfR76qrutPHGE4nJn+716uPtYlZ+xA=";
   };
 
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mwilliamson/python-mammoth";
     license = lib.licenses.bsd2;
   };
-}
+})

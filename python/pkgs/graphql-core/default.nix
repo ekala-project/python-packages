@@ -5,7 +5,7 @@
   poetry-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "graphql-core";
   version = "3.2.12";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "graphql-python";
     repo = "graphql-core";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-KzPjD/5HGPI2lrsCfW8aocXMhXc7YB7N+WUukc9Ru3s=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/graphql-python/graphql-core";
     license = lib.licenses.mit;
   };
-}
+})

@@ -10,13 +10,13 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "sievelib";
   version = "1.5.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-Kvuq8lA6/pEt4IgeTFdzg+b5D4dikx+00y8rVBI85FA=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/tonioo/sievelib";
     license = lib.licenses.mit;
   };
-}
+})

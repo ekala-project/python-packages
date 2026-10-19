@@ -10,7 +10,7 @@
   zstd,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyzstd";
   version = "0.19.1";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Rogdham";
     repo = "pyzstd";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-1oUqnZCBJYu8haFIQ+T2KaSQaa1xnZyJHLzOQg4Fdw8=";
   };
 
@@ -60,4 +60,4 @@ buildPythonPackage rec {
     homepage = "https://pyzstd.readthedocs.io";
     license = lib.licenses.bsd3;
   };
-}
+})

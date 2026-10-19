@@ -10,13 +10,13 @@
   jaraco-collections,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "distorm3";
   version = "3.5.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-dSgii5BdEolyIF6bbLafMo3OD+uqc1W5L64QGoMJ4UQ=";
   };
 
@@ -46,4 +46,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/gdabah/distorm";
     license = lib.licenses.bsd3;
   };
-}
+})

@@ -8,7 +8,7 @@
   wheel,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "anthemav";
   version = "1.4.2";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "nugget";
     repo = "python-anthemav";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-ZjAt4oODx09Qij0PwBvLCplSjwdBx2fReiwjmKhdPa0=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/nugget/python-anthemav";
     license = lib.licenses.mit;
   };
-}
+})

@@ -6,7 +6,7 @@
   versioneer,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ed25519";
   version = "1.5";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "warner";
     repo = "python-ed25519";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-AwnhB5UGycQliNndbqd0JlI4vKSehCSy0qHv2EiB+jA=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/warner/python-ed25519";
     license = lib.licenses.mit;
   };
-}
+})

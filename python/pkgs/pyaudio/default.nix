@@ -8,7 +8,7 @@
   pkgs,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyaudio";
   version = "0.2.14";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
 
   src = fetchPypi {
     pname = "PyAudio";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-eN//OHm0mU0fT8ZIVkald1XG7jwZZHpJH3kKCJW9L4c=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://people.csail.mit.edu/hubert/pyaudio/";
     license = lib.licenses.mit;
   };
-}
+})

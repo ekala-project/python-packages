@@ -5,13 +5,13 @@
   poetry-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pylint_venv";
   version = "3.0.4";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-THHCrRT8BUlplEC8xGCZT/3cFIG5B4QEtMQ9KAbvD1k=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jgosmann/pylint-venv/";
     license = lib.licenses.mit;
   };
-}
+})

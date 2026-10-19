@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "textwrap3";
   version = "0.9.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     extension = "zip";
     hash = "sha256-UAju69sjb2MD3NaPGLhW01X2GXUR2VK6dLx15A4MNBQ=";
   };
@@ -25,4 +25,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jonathaneunice/textwrap3";
     license = lib.licenses.psfl;
   };
-}
+})

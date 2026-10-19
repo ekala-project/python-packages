@@ -8,7 +8,7 @@
   django,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-registration";
   version = "5.2.1";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ubernostrum";
     repo = "django-registration";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-k7r4g+iCdAwAUNQdbtxzS5kqgAavEBAJERSWgXvbXqg=";
   };
 
@@ -43,8 +43,8 @@ buildPythonPackage rec {
 
   meta = {
     description = "User registration app for Django";
-    homepage = "https://django-registration.readthedocs.io/en/${version}/";
+    homepage = "https://django-registration.readthedocs.io/en/${finalAttrs.version}/";
     downloadPage = "https://github.com/ubernostrum/django-registration";
     license = lib.licenses.bsd3;
   };
-}
+})

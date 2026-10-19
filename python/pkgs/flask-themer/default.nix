@@ -8,7 +8,7 @@
   pytest-cov-stub,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "flask-themer";
   version = "2.0.0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "TkTech";
     repo = "flask-themer";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-2Zw+gKKN0kfjYuruuLQ+3dIFF0X07DTy0Ypc22Ih66w=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/TkTech/flask-themer";
     license = lib.licenses.mit;
   };
-}
+})

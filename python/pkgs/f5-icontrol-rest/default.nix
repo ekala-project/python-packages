@@ -8,7 +8,7 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "f5-icontrol-rest";
   version = "1.3.16";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "F5Networks";
     repo = "f5-icontrol-rest-python";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-asAFIRoc2zll8a8gMMt4ZRQILhMAes8wf3PGwG5wF9c=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/F5Networks/f5-icontrol-rest-python";
     license = lib.licenses.asl20;
   };
-}
+})

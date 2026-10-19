@@ -16,7 +16,7 @@
   uv-build,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-pydantic-field";
   version = "0.5.4";
   pyproject = true;
@@ -24,7 +24,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "surenkov";
     repo = "django-pydantic-field";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-pnB6kYfN67102Z3R41BHIWnWoJQgd/ixyT+bbtY9PC8=";
   };
 
@@ -61,4 +61,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/surenkov/django-pydantic-field";
     license = lib.licenses.mit;
   };
-}
+})

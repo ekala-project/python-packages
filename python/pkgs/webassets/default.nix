@@ -7,13 +7,13 @@
   zope-dottedname,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "webassets";
   version = "3.0.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-BSDl/W+8wBL0hv78YblmR02o/Bs1sFaansLLB4LxYHo=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/miracle2k/webassets/";
     license = lib.licenses.bsd2;
   };
-}
+})

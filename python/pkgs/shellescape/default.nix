@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "shellescape";
   version = "3.8.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-QLMQswR5vncb86sovY1AdTd4SIvUbqCWm6CzUDjD7CY=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
       psfl
     ];
   };
-}
+})

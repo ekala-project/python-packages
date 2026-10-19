@@ -12,7 +12,7 @@ let
   inherit (pkgs) bash git less;
 in
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "icdiff";
   version = "2.0.10";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "jeffkaufman";
     repo = "icdiff";
-    tag = "release-${version}";
+    tag = "release-${finalAttrs.version}";
     hash = "sha256-7/EvuHNWE9kdb35TFuqT8ShjyciodsRNkBMG0WvTy1c=";
   };
 
@@ -50,4 +50,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jeffkaufman/icdiff";
     license = lib.licenses.psfl;
   };
-}
+})

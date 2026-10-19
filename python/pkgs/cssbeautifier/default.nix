@@ -7,13 +7,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "cssbeautifier";
   version = "2.0.3";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-LC/RKTQlYQKd6GsXRO+iMcn6/iYCPbyYih3rDKD1yEU=";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/beautifier/js-beautify";
     license = lib.licenses.mit;
   };
-}
+})

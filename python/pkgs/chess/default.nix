@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "chess";
   version = "1.11.2";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "niklasf";
     repo = "python-${pname}";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-8LOp4HQI9UOdaj4/jwd79ftdnaO4HtzMVf1cwcYFCiA=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     changelog = "https://github.com/niklasf/python-chess/blob/${src.tag}/CHANGELOG.rst";
     license = lib.licenses.gpl3Plus;
   };
-}
+})

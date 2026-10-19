@@ -11,7 +11,7 @@
   pytest-benchmark,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "geoalchemy2";
   version = "0.20.0";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "geoalchemy";
     repo = "geoalchemy2";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-QtikpkMEM/DdL0Mmt4PZuQc3EFla8xbI0MODecT1hGY=";
   };
 
@@ -43,4 +43,4 @@ buildPythonPackage rec {
     homepage = "https://geoalchemy-2.readthedocs.io/";
     license = lib.licenses.mit;
   };
-}
+})

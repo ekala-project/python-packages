@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "multi_key_dict";
   version = "2.0.3";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-3uvewXqjChxDLLP0N+gfhiHhwFQqDAYXp09x4jLpk54=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     description = "Multi key dictionary implementation";
     license = lib.licenses.mit;
   };
-}
+})

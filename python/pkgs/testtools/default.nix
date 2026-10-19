@@ -12,13 +12,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "testtools";
   version = "2.9.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-Oa2eueG5NdaDj0s67k1ucttl31YC9v7amY27T+jeCxk=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/testing-cabal/testtools";
     license = lib.licenses.mit;
   };
-}
+})

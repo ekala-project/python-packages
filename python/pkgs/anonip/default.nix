@@ -8,7 +8,7 @@
   pytest-cov-stub,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "anonip";
   version = "1.1.0";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "DigitaleGesellschaft";
     repo = "Anonip";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "0cssdcridadjzichz1vv1ng7jwphqkn8ihh83hpz9mcjmxyb94qc";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/DigitaleGesellschaft/Anonip";
     license = lib.licenses.bsd3;
   };
-}
+})

@@ -11,7 +11,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "dtw-python";
   version = "1.7.5";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "DynamicTimeWarping";
     repo = "dtw-python";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-4OP6Fop04HLHURUagLMW4D93zTv9FwAtZ6xyNFbJILA=";
   };
 
@@ -52,4 +52,4 @@ buildPythonPackage rec {
     license = lib.licenses.gpl3Only;
     mainProgram = "dtw";
   };
-}
+})

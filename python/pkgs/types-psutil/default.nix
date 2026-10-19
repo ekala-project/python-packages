@@ -5,14 +5,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "types-psutil";
   version = "7.2.2.20260906";
   pyproject = true;
 
   src = fetchPypi {
     pname = "types_psutil";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-k6vyLPmmK5Ffck5DO95wKZWsJ0hlQl/Up20dm1go2ho=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/python/typeshed";
     license = lib.licenses.asl20;
   };
-}
+})

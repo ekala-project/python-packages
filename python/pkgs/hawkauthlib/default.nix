@@ -8,7 +8,7 @@
   unittestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "hawkauthlib";
   version = "2.0.0";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mozilla-services";
     repo = "hawkauthlib";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-dFBGrk7vdZMNTuWvXXWXA4iF/vmiUnK9ds8edN2Yt10=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     description = "Hawk Access Authentication protocol";
     license = lib.licenses.mpl20;
   };
-}
+})

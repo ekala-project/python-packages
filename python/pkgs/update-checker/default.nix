@@ -5,14 +5,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "update-checker";
   version = "1.0.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "update_checker";
-    inherit version;
+    inherit (finalAttrs) version;
     sha256 = "sha256-v8rGZBRXKoKpjqjIYzvxzl0QJ1DjuTRpuJswqoRc0dc=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/bboe/update_checker";
     license = lib.licenses.bsd2;
   };
-}
+})

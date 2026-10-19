@@ -9,7 +9,7 @@
   ipdb,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "drf-nested-routers";
   version = "0.95.3";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "alanjds";
     repo = "drf-nested-routers";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-09yMZW2dvXHQ8oak5skWQKCzqn9pcsgXpkQAkfR1lyA=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     description = "Provides routers and fields to create nested resources in the Django Rest Framework";
     license = lib.licenses.asl20;
   };
-}
+})

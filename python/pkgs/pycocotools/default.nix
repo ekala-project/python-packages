@@ -8,13 +8,13 @@
   matplotlib,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pycocotools";
   version = "2.0.11";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-NCVNdtqFV2/K9cHzqpquFrjLFUGDNLpCg7gAeWvRmT0=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/cocodataset/cocoapi/tree/master/PythonAPI";
     license = lib.licenses.bsd2;
   };
-}
+})

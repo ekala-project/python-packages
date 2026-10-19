@@ -16,14 +16,14 @@
   pygments,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "flask-gravatar";
   version = "0.5.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "Flask-Gravatar";
-    inherit version;
+    inherit (finalAttrs) version;
     sha256 = "YGZfMcLGEokdto/4Aek+06CIHGyOw0arxk0qmSP1YuE=";
   };
 
@@ -62,4 +62,4 @@ buildPythonPackage rec {
     description = "Small and simple integration of gravatar into flask";
     license = lib.licenses.bsd3;
   };
-}
+})

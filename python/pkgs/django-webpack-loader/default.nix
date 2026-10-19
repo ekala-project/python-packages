@@ -6,7 +6,7 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-webpack-loader";
   version = "3.2.4";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "django-webpack";
     repo = "django-webpack-loader";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-yWOzMjXauwOwlEjcZpjl/z6kE5bOYAdb+map1dHupWs=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/owais/django-webpack-loader";
     license = lib.licenses.mit;
   };
-}
+})

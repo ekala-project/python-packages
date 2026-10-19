@@ -8,7 +8,7 @@
   unidecode,
   buildPythonPackage,
 }:
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "cli-ui";
   version = "0.19.0";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "your-tools";
     repo = "python-cli-ui";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-BLc55LkVQwZ18V/fD/lBYw6jgchE8n0ijDTSr8/Jkdk=";
   };
 
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/your-tools/python-cli-ui";
     license = lib.licenses.bsd3;
   };
-}
+})

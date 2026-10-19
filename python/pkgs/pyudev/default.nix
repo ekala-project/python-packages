@@ -8,13 +8,13 @@
   stdenvNoCC,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyudev";
   version = "0.24.4";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-54i7mDcAsahO/C6IhisKUa8qmV1bhryZl1RlBc97Nrw=";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     homepage = "https://pyudev.readthedocs.org/";
     license = lib.licenses.lgpl21Plus;
   };
-}
+})

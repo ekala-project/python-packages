@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "zxcvbn";
   version = "4.5.0";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "dwolfhub";
     repo = "zxcvbn-python";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-0SVJkJMEMnZVMpamDVP02kMwWRSj5zGlrMYG9kn0aXQ=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/dwolfhub/zxcvbn-python";
     license = lib.licenses.mit;
   };
-}
+})

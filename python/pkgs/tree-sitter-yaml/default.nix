@@ -9,7 +9,7 @@
   tree-sitter,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "tree-sitter-yaml";
   version = "0.7.2";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "tree-sitter-grammars";
     repo = "tree-sitter-yaml";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-BX6TOfAZLW+0h2TNsgsLC9K2lfirraCWlBN2vCKiXQ4=";
   };
 
@@ -45,4 +45,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/tree-sitter-grammars/tree-sitter-yaml";
     license = lib.licenses.mit;
   };
-}
+})

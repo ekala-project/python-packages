@@ -7,7 +7,7 @@
   webob,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "wsgiproxy2";
   version = "0.5.1";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "gawel";
     repo = "WSGIProxy2";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-ouofw3cBQzBwSh3Pdtdl7KI2pg/T/z3qoh8zoeiKiSs=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://wsgiproxy2.readthedocs.io/";
     license = lib.licenses.mit;
   };
-}
+})

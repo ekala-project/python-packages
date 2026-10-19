@@ -13,7 +13,7 @@
   xmlschema,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "lib4sbom";
   version = "0.10.4";
   pyproject = true;
@@ -21,7 +21,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "anthonyharrison";
     repo = "lib4sbom";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-P9/QcICGxJUzcsilgfNPeybavgwrPwjO5eDBuxu25BA=";
   };
 
@@ -67,4 +67,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/anthonyharrison/lib4sbom";
     license = lib.licenses.asl20;
   };
-}
+})

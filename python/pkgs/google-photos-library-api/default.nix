@@ -9,7 +9,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "google-photos-library-api";
   version = "1.0.1";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "allenporter";
     repo = "python-google-photos-library-api";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-pmAAvwhr783ih9vpqr5DmT462z3Ug1xwHaz9itu/mt4=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/allenporter/python-google-photos-library-api";
     license = lib.licenses.asl20;
   };
-}
+})

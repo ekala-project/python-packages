@@ -14,7 +14,7 @@
   tomlkit,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytest-mypy-plugins";
   version = "4.0.3";
   pyproject = true;
@@ -22,7 +22,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "typeddjango";
     repo = "pytest-mypy-plugins";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-RyHoZniVLtunqz42tuVeAoiUm/e5JvvwX2MMCAJBhy8=";
   };
 
@@ -47,4 +47,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/TypedDjango/pytest-mypy-plugins";
     license = lib.licenses.mit;
   };
-}
+})

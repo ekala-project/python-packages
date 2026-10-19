@@ -9,13 +9,13 @@
   ply,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "stone";
   version = "3.5.4";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-T09DmeanZGkXcW19wG+BTTL5TzD7UdYbXHYOj207pTs=";
   };
 
@@ -43,4 +43,4 @@ buildPythonPackage rec {
     description = "Official API Spec Language for Dropbox API V2";
     license = lib.licenses.mit;
   };
-}
+})

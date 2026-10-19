@@ -6,7 +6,7 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "nest-asyncio";
   version = "1.6.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "erdewit";
     repo = "nest_asyncio";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-5I5WItOl1QpyI4OXZgZf8GiQ7Jlo+SJbDicIbernaU4=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/erdewit/nest_asyncio";
     license = lib.licenses.bsdOriginal;
   };
-}
+})

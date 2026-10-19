@@ -8,7 +8,7 @@
   protobuf,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ghome-foyer-api";
   version = "1.2.3";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "KapJI";
     repo = "ghome-foyer-api";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-hIprnkfAUbKoAp++sxu+T7MuGqLKOM1N1hqGBDOSo3k=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/KapJI/ghome-foyer-api";
     license = lib.licenses.mit;
   };
-}
+})

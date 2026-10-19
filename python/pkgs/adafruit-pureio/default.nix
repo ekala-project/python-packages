@@ -5,14 +5,14 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "adafruit-pureio";
   version = "1.1.11";
   pyproject = true;
 
   src = fetchPypi {
     pname = "Adafruit_PureIO";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-xM+7NlcxlC0fEJKhFvR9/a4K7xjFsn8QcrWCStXqjHw=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/adafruit/Adafruit_Python_PureIO";
     license = lib.licenses.mit;
   };
-}
+})

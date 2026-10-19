@@ -5,13 +5,13 @@
   flit-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aioprocessing";
   version = "2.0.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-/gHHsaOMeBaGEdMEDnPZMDbDt8imSdY23J7Xo7ybG6I=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/dano/aioprocessing";
     license = lib.licenses.bsd2;
   };
-}
+})

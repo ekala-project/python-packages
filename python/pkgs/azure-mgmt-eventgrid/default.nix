@@ -10,14 +10,14 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-eventgrid";
   version = "10.5.0b2";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_mgmt_eventgrid";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-Dtsm4wB48QRsCNtGcXW4284Ju9j2TW1C9GTxzfBmf4w=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/eventgrid/azure-mgmt-eventgrid";
     license = lib.licenses.mit;
   };
-}
+})

@@ -7,13 +7,13 @@
   cython,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "memory-allocator";
   version = "0.2.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit version;
+    inherit (finalAttrs) version;
     pname = "memory_allocator";
     hash = "sha256-Z108kQGduYyXRB3nPVxkiCHlroE/P1TNCYY9R0tI/iY=";
   };
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/sagemath/memory_allocator/";
     license = lib.licenses.lgpl3Plus;
   };
-}
+})

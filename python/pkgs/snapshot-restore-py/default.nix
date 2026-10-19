@@ -4,7 +4,7 @@
   fetchFromGitHub,
   setuptools,
 }:
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "snapshot-restore-py";
   version = "1.0.0";
   pyproject = true;
@@ -12,7 +12,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "aws";
     repo = "snapshot-restore-py";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-sixVSQcEqLTUrKxYAM13gzqttWnbXPMII0V/gtXM1IE=";
   };
 
@@ -25,4 +25,4 @@ buildPythonPackage rec {
     license = lib.licenses.asl20;
     platforms = lib.platforms.all;
   };
-}
+})

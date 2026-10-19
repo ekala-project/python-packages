@@ -8,14 +8,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "oslo-serialization";
   version = "5.11.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "oslo_serialization";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-gyboWoCFbBBoAHQj/Pb+Kd0v5Xoy9dh//wEgtVW0tnw=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/openstack/oslo.serialization";
     license = lib.licenses.asl20;
   };
-}
+})

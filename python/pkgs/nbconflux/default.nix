@@ -13,7 +13,7 @@
   versioneer,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "nbconflux";
   version = "0.7.0";
   pyproject = true;
@@ -21,7 +21,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "vericast";
     repo = "nbconflux";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-kHIuboFKLVsu5zlZ0bM1BUoQR8f1l0XWcaaVI9bECJw=";
   };
 
@@ -65,4 +65,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Valassis-Digital-Media/nbconflux";
     license = lib.licenses.bsd3;
   };
-}
+})

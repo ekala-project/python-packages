@@ -6,13 +6,13 @@
   lib,
   poetry-core,
 }:
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-encrypted-model-fields";
   version = "0.6.5";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-i9IcVWXA1k7E29N1rTT+potNotuHHew/px/nteQiHJk=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://gitlab.com/lansharkconsulting/django/django-encrypted-model-fields";
     license = lib.licenses.mit;
   };
-}
+})

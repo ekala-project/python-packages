@@ -5,13 +5,13 @@
   flit-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "entrypoints";
   version = "0.4";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-twbt2qkhihnrzWe1aBjwW7J1ibHKno15e3Sv+tTMrNQ=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     description = "Discover and load entry points from installed packages";
     license = lib.licenses.mit;
   };
-}
+})

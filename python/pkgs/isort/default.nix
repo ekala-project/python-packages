@@ -6,7 +6,7 @@
   hatch-vcs,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "isort";
   version = "8.0.1";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "PyCQA";
     repo = "isort";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-adEAWbRY+bCji4TfnS8W5p5KvuSjmLQrqhi+n8mSQPA=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     mainProgram = "isort";
   };
-}
+})

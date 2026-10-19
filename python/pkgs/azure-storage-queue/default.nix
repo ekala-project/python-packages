@@ -9,14 +9,14 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "azure-storage-queue";
   version = "12.17.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_storage_queue";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-brEIqIVUvjcf6y66lxX6Dj97rKez8AwZ7EF/x85bODQ=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Azure/azure-sdk-for-python";
     license = lib.licenses.mit;
   };
-}
+})

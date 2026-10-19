@@ -16,7 +16,7 @@
   websocket-client,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "coinmetrics-api-client";
   version = "2026.2.9.18";
   pyproject = true;
@@ -24,7 +24,7 @@ buildPythonPackage rec {
   __darwinAllowLocalNetworking = true;
 
   src = fetchPypi {
-    inherit version;
+    inherit (finalAttrs) version;
     pname = "coinmetrics_api_client";
     hash = "sha256-5R/Z/FItszcNAdwHkhzr/HWqQBbXsYf9Hub+HGdBEGo=";
   };
@@ -62,4 +62,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     mainProgram = "coinmetrics";
   };
-}
+})

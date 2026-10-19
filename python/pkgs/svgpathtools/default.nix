@@ -10,7 +10,7 @@
   svgwrite,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "svgpathtools";
   version = "1.7.2";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mathandy";
     repo = "svgpathtools";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-OGengjPIEuxDYHqzFUBbYcVs9RjBSKSd1NNjx/KqnSk=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mathandy/svgpathtools";
     license = lib.licenses.mit;
   };
-}
+})

@@ -13,7 +13,7 @@
   msgspec,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "flask-session";
   version = "0.8.0";
   pyproject = true;
@@ -21,7 +21,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pallets-eco";
     repo = "flask-session";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-QLtsM0MFgZbuLJPLc5/mUwyYc3bYxildNKNxOF8Z/3Y=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pallets-eco/flask-session";
     license = lib.licenses.bsd3;
   };
-}
+})

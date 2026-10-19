@@ -6,7 +6,7 @@
   whey,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "coincidence";
   version = "0.6.6";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "python-coincidence";
     repo = "coincidence";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-ktSuUzAwMych6Y2eJWMUfG1a3mGypg8L20f/105RFXc=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/python-coincidence/coincidence";
     license = lib.licenses.mit;
   };
-}
+})

@@ -8,7 +8,7 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-pglocks";
   version = "1.0.4";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   };
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     sha256 = "3c47c66fbfbd268ef46269673a0516a039539b0972b8ed2ec9cfee44c4b65523";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
   ];
 
   # tests need a postgres database
-}
+})

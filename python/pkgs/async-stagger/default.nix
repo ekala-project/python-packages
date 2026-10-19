@@ -8,7 +8,7 @@
   pytest-mock,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "async-stagger";
   version = "0.4.1";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "twisteroidambassador";
     repo = "async_stagger";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-qLeTP5FWHho/CbXth3OQNW15Y8uibOh35KqskoIUTHQ=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/twisteroidambassador/async_stagger";
     license = lib.licenses.mit;
   };
-}
+})

@@ -6,13 +6,13 @@
   swig,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pykcs11";
   version = "1.5.20";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-H3p8gWT6xjY4Kqew1wJ5rVWBN5dI/BeiC8C+j+V0wlk=";
   };
 
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/LudovicRousseau/PyKCS11";
     license = lib.licenses.gpl2Plus;
   };
-}
+})

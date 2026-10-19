@@ -6,7 +6,7 @@
   termcolor,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "sparklines";
   version = "1.0.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "deeplook";
     repo = "sparklines";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-HXOt3xqXfd9GwHQZifHcveE1v48nKRaCKGAJI8xeLdM=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/deeplook/sparklines";
     license = lib.licenses.mit;
   };
-}
+})

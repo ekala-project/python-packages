@@ -6,13 +6,13 @@
   unittestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "nameparser";
   version = "2.2.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-EyDHOIYvwXC1oU+plv8QMnfl+HoU2h1C3cJU1w+7ZJE=";
   };
 
@@ -25,4 +25,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/derek73/python-nameparser";
     license = lib.licenses.lgpl21Plus;
   };
-}
+})

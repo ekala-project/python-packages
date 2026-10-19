@@ -13,13 +13,13 @@
   traitlets,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ipytablewidgets";
   version = "0.3.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-CGkb//mLUmkyv+hmVJX5+04JGCfw+TtfBxMTXW0bhsw=";
   };
 
@@ -55,4 +55,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/progressivis/ipytablewidgets";
     license = lib.licenses.bsd3;
   };
-}
+})

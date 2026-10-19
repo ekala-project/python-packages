@@ -7,13 +7,13 @@
   xmod,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "editor";
   version = "1.8.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-sH4bvLizPwXC5u08537pdWNUrahAoYqtfAU22Wf+TAs=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/rec/editor";
     license = lib.licenses.mit;
   };
-}
+})

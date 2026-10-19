@@ -9,13 +9,13 @@
   rustc,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "fastbencode";
   version = "0.3.11";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-fivkW/6BFnzXmYZpiizycOr2Gt1bG8cRN4wrs/BTltU=";
   };
 
@@ -43,4 +43,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/breezy-team/fastbencode";
     license = lib.licenses.gpl2Plus;
   };
-}
+})

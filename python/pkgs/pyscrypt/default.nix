@@ -6,13 +6,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyscrypt";
   version = "1.6.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     sha256 = "1sd5pd5fpcdnpp4h58kdnvkf0s3afh4ssfqky2ap6z0gy6ax3zds";
   };
 
@@ -23,4 +23,4 @@ buildPythonPackage rec {
     description = "Pure-Python implementation of Scrypt PBKDF and scrypt file format library";
     license = lib.licenses.mit;
   };
-}
+})

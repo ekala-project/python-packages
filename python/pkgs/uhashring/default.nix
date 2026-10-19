@@ -4,7 +4,7 @@
   fetchFromGitHub,
   hatchling,
 }:
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "uhashring";
   version = "2.4";
   pyproject = true;
@@ -12,7 +12,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ultrabug";
     repo = "uhashring";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-6zNPExbcwTUne0lT8V6xp2Gf6J1VgG7Q93qizVOAc+k=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ultrabug/uhashring";
     license = lib.licenses.bsd3;
   };
-}
+})

@@ -5,7 +5,7 @@
   flit-core,
   sphinx,
 }:
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "sphinx-issues";
   version = "6.0.0";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "sloria";
     repo = "sphinx-issues";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-havy1wP300yAKRi68fAVfQS7t5S9NueuGqE2RqdkVP0=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     description = "Sphinx extension for linking to your project's issue tracker";
     license = lib.licenses.mit;
   };
-}
+})

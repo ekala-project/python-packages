@@ -7,7 +7,7 @@
   pygments,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "rich";
   version = "15.0.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Textualize";
     repo = "rich";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-Uk3r6aYhrjYJ8GrMKfdlv3/muK/uUynd4pd1yWCwSOM=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Textualize/rich";
     license = lib.licenses.mit;
   };
-}
+})

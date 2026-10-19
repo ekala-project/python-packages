@@ -12,7 +12,7 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mapclassify";
   version = "2.11.0";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pysal";
     repo = "mapclassify";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-QmGSMkCBAzpWLmDcSjwa8DibAA0JsNHjgjmb8zBuXno=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     homepage = "https://pysal.org/mapclassify/";
     license = lib.licenses.bsd3;
   };
-}
+})

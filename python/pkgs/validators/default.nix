@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "validators";
   version = "0.35.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "python-validators";
     repo = "validators";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-b3kjKbqmfny6YnU0rlrralTgvYT06sUpckI4EDKDleA=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/python-validators/validators";
     license = lib.licenses.mit;
   };
-}
+})

@@ -6,7 +6,7 @@
   pytest,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytest-lazy-fixtures";
   version = "1.4.1";
   pyproject = true;
@@ -14,13 +14,13 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "dev-petrov";
     repo = "pytest-lazy-fixtures";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-z4j9mITPUkug2/YaKwij5nlJYIoMpkDUPUmW/peNUXQ=";
   };
 
   postPatch = ''
     substituteInPlace pyproject.toml \
-      --replace-fail 'version = "0.0.0"' 'version = "${version}"'
+      --replace-fail 'version = "0.0.0"' 'version = "${finalAttrs.version}"'
   '';
 
   build-system = [ hatchling ];
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/dev-petrov/pytest-lazy-fixtures";
     license = lib.licenses.mit;
   };
-}
+})

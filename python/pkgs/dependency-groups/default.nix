@@ -7,7 +7,7 @@
   tomli,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "dependency-groups";
   version = "1.3.2";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pypa";
     repo = "dependency-groups";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-qjWvUKUfxYnSUUU3zuS27/a9lxvrHC/qams+XULvxxI=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pypa/dependency-groups";
     license = lib.licenses.mit;
   };
-}
+})

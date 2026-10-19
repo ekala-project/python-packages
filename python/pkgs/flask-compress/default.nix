@@ -13,14 +13,14 @@
   flask,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "flask-compress";
   version = "1.24";
   pyproject = true;
 
   src = fetchPypi {
     pname = "flask_compress";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-FAl87+Weyz5GbVKmrrYvNPElqffa3x8zpT5DDOSlDzE=";
   };
 
@@ -47,4 +47,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/colour-science/flask-compress";
     license = lib.licenses.mit;
   };
-}
+})

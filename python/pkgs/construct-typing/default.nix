@@ -14,7 +14,7 @@
   ruamel-yaml,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "construct-typing";
   version = "0.8.1";
   pyproject = true;
@@ -22,7 +22,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "timrid";
     repo = "construct-typing";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-yKk0KmvXShKLG3wxGGWZUydro34qHx3JriwPsF4qaWA=";
   };
 
@@ -54,4 +54,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/timrid/construct-typing";
     license = lib.licenses.mit;
   };
-}
+})

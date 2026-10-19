@@ -7,7 +7,7 @@
   traitlets,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jupyter-core";
   version = "5.9.1";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "jupyter";
     repo = "jupyter_core";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-mAvfyiN8Fdm9U3Ar7xicwOinKfTqk9qrfq/SGiaxNvU=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://jupyter.org/";
     license = lib.licenses.bsd3;
   };
-}
+})

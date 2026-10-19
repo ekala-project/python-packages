@@ -13,13 +13,13 @@
   networkx,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "rdflib";
   version = "7.6.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-bIMSiNXkpafs6F0MzemHfVEqPQ8C18BkVdANbQ6jed8=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     description = "Python library for working with RDF";
     license = lib.licenses.bsd3;
   };
-}
+})

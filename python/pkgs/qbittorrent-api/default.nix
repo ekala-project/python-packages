@@ -9,13 +9,13 @@
   urllib3,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "qbittorrent_api";
   version = "2026.8.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-lkLEUouu5nIW6rhwIs4pcEislt8vjJ8c+SDeB461C2I=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/rmartin16/qbittorrent-api";
     license = lib.licenses.mit;
   };
-}
+})

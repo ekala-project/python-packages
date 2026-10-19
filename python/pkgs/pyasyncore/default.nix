@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyasyncore";
   version = "1.0.5";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "simonrob";
     repo = "pyasyncore";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-gpmsawbTf59EchoKixWw2wcBoOFElPDLg9zylvhA04U=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/simonrob/pyasyncore";
     license = lib.licenses.psfl;
   };
-}
+})

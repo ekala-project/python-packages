@@ -6,7 +6,7 @@
   hatch-vcs,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "flatdict";
   version = "4.1.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "gmr";
     repo = "flatdict";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-sLeW92F473H90+EMHaIWPt9ETqSeL/DoLmlMAg9Thj4=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/gmr/flatdict";
     license = lib.licenses.bsd3;
   };
-}
+})

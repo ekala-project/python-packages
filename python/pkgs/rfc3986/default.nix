@@ -6,13 +6,13 @@
   idna,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "rfc3986";
   version = "2.0.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-l6rPnb1L/YKbqtbmMJ+mVzqvG+P2+nNcirBeRs7LJhw=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://rfc3986.readthedocs.org";
     license = lib.licenses.asl20;
   };
-}
+})

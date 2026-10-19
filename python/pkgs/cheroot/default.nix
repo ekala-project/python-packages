@@ -13,13 +13,13 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "cheroot";
   version = "11.1.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-v7cMSWY/Y7BEDytU28aw0WUOVt/k4mQfWbLG9ye0Sso=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     mainProgram = "cheroot";
     license = lib.licenses.mit;
   };
-}
+})

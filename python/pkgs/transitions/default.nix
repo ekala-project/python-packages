@@ -12,13 +12,13 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "transitions";
   version = "0.9.3";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-iB+3W7FlTtVdhgYLsGfyxxb44VX1e7c/1ETlNxOq/sg=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     description = "Lightweight, object-oriented finite state machine implementation in Python";
     license = lib.licenses.mit;
   };
-}
+})

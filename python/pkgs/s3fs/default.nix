@@ -12,7 +12,7 @@
   fsspec,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "s3fs";
   version = "2026.3.0";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "fsspec";
     repo = "s3fs";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-7Z8vOtWaY1goPPNb1poybI6zWweexv+sHHTj+YWRVk8=";
   };
 
@@ -49,4 +49,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/fsspec/s3fs";
     license = lib.licenses.bsd3;
   };
-}
+})

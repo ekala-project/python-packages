@@ -18,13 +18,13 @@
   python-dotenv,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "flask";
   version = "3.1.3";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-DvDlK4qc2TKFU3kZfdj5QEezWcoKeGlRRDBMtF+Hyes=";
   };
 
@@ -58,4 +58,4 @@ buildPythonPackage rec {
     '';
     license = lib.licenses.bsd3;
   };
-}
+})

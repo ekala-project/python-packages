@@ -14,7 +14,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mplcursors";
   version = "0.7.1";
   pyproject = true;
@@ -22,7 +22,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "anntzer";
     repo = "mplcursors";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-ZHX//AUVSF91cHxyiL4klglJ2Ef3iSE6oOancL+gQbA=";
   };
 
@@ -48,4 +48,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/anntzer/mplcursors";
     license = lib.licenses.zlib;
   };
-}
+})

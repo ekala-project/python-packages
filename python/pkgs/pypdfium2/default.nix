@@ -13,7 +13,7 @@
 
 let
   # They demand their own fork of ctypesgen
-  ctypesgen = buildPythonPackage rec {
+  ctypesgen = buildPythonPackage (finalAttrs: {
     pname = "ctypesgen";
     version = "1.1.1+g${src.rev}"; # the most recent tag + git version
     pyproject = true;
@@ -31,7 +31,7 @@ let
   };
 
 in
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pypdfium2";
   version = "5.13.0";
   pyproject = true;
@@ -39,7 +39,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pypdfium2-team";
     repo = "pypdfium2";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-DbCbJUvYzjWIlGJyrUbJfzebHrPpRFEx60DYqs1UrkQ=";
   };
 
@@ -93,4 +93,4 @@ buildPythonPackage rec {
       mit
     ];
   };
-}
+})

@@ -6,13 +6,13 @@
   urllib3,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "id";
   version = "1.6.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-0HMtYk+0b9TnvE5RUvACFEUJU7nncsGCwcIpZN7xoGk=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/di/id";
     license = lib.licenses.asl20;
   };
-}
+})

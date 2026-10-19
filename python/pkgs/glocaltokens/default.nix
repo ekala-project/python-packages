@@ -20,7 +20,7 @@
   faker,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "glocaltokens";
   version = "0.7.6";
   pyproject = true;
@@ -28,7 +28,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "leikoilja";
     repo = "glocaltokens";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-+7HpyZUumu1r/UXM4awckjTkpVbCz7MsAJOp2JiJzho=";
   };
 
@@ -62,4 +62,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/leikoilja/glocaltokens";
     license = lib.licenses.mit;
   };
-}
+})

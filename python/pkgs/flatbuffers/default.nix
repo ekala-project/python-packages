@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "flatbuffers";
   version = "25.2.10";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-l+RRN3pBJi+Nm9QpXMg2EzQVzAPYy5ZkEKSvkusA0m4=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://google.github.io/flatbuffers/";
     license = lib.licenses.asl20;
   };
-}
+})

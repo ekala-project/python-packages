@@ -9,13 +9,13 @@
   fontpens,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "defcon";
   version = "0.12.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-Jd/n/QFSzPKSyxkNGSikfViImcILBGhUKT4DnhyT5eA=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/robotools/defcon";
     license = lib.licenses.mit;
   };
-}
+})

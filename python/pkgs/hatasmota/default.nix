@@ -9,7 +9,7 @@
   voluptuous,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "hatasmota";
   version = "0.10.2";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "emontnemery";
     repo = "hatasmota";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-IIOXpgBlXzeOUCvyEYAuEYzvoCKzhWSud1GbgTpa8wU=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/emontnemery/hatasmota";
     license = lib.licenses.mit;
   };
-}
+})

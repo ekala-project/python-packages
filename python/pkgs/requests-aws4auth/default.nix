@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "requests-aws4auth";
   version = "1.3.2";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "tedder";
     repo = "requests-aws4auth";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-GIbv4/a1ZdcIOemanzDiueLcKg8pUVeIFSAfErIr0HI=";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/sam-washington/requests-aws4auth";
     license = lib.licenses.mit;
   };
-}
+})

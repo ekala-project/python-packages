@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "rfc3987";
   version = "1.3.8";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-08TSV6Vg1UTpgms4vIHbZ2iQx5q516ySs5x6JT1cpzM=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://pypi.org/project/rfc3987/";
     license = lib.licenses.gpl3Plus;
   };
-}
+})

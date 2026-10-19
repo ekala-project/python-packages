@@ -12,7 +12,7 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-phonenumber-field";
   version = "8.5.0";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "stefanfoulis";
     repo = "django-phonenumber-field";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-hTrW7QeZPBsln9iHh9sV7JMQxdJ9cFcAq4ETyhxFGv0=";
   };
 
@@ -53,4 +53,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/stefanfoulis/django-phonenumber-field/";
     license = lib.licenses.mit;
   };
-}
+})

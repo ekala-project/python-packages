@@ -8,7 +8,7 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pdfminer-six";
   version = "20260107";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pdfminer";
     repo = "pdfminer.six";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-spWDwPoBLdySysYblCWABIWtokOMoJdpYQ6qxX94wIE=";
   };
 
@@ -46,4 +46,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pdfminer/pdfminer.six";
     license = lib.licenses.mit;
   };
-}
+})

@@ -7,13 +7,13 @@
   lib,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "monkeyhex";
   version = "1.7.4";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     sha256 = "a646096dd3114ee8a7c6f30363f38c288ec56c4e032c8fc7e681792b604dd122";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/rhelmot/monkeyhex";
     license = lib.licenses.mit;
   };
-}
+})

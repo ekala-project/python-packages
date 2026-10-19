@@ -12,13 +12,13 @@
   watchfiles,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "anywidget";
   version = "0.11.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-ZpX775RJz4wn9CG5bFg3qjf5CewfYM+jOt0zPhtwsWk=";
   };
 
@@ -47,4 +47,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/manzt/anywidget";
     license = lib.licenses.mit;
   };
-}
+})

@@ -6,13 +6,13 @@
   pkginfo,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "colorzero";
   version = "2.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-59WlwmzQ3DexZOvvxgnziN4k+Fk7ZZGR4S2F+PnV61g=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/waveform80/colorzero";
     license = lib.licenses.bsd3;
   };
-}
+})

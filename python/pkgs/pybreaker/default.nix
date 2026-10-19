@@ -9,7 +9,7 @@
   tornado,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pybreaker";
   version = "1.4.1";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "danielfm";
     repo = "pybreaker";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-Cxer6EDfi4fvs7XENwpUUMcCiRX6eDNJz0s57l9U+zQ=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/danielfm/pybreaker";
     license = lib.licenses.bsd3;
   };
-}
+})

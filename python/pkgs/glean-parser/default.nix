@@ -13,14 +13,14 @@
   pyyaml,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "glean-parser";
   version = "21.0.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "glean_parser";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-Dg8R63l3iwItwevZWPjOGcBhuLW9k8+OFnGKXWZX/NU=";
   };
 
@@ -60,4 +60,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mozilla/glean_parser";
     license = lib.licenses.mpl20;
   };
-}
+})

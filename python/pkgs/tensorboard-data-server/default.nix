@@ -4,14 +4,14 @@
   fetchPypi,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "tensorboard-data-server";
   version = "0.7.2";
   format = "wheel";
 
   src = fetchPypi {
     pname = "tensorboard_data_server";
-    inherit version;
+    inherit (finalAttrs) version;
     format = "wheel";
     dist = "py3";
     python = "py3";
@@ -25,4 +25,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/tensorflow/tensorboard/tree/master/tensorboard/data/server";
     license = lib.licenses.asl20;
   };
-}
+})

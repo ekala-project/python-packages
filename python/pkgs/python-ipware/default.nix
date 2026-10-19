@@ -5,14 +5,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "python-ipware";
   version = "3.0.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "python_ipware";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-kRexxN3ctdXKSeapYX3i/Gauwu81OUVjrE7sq99YwGI=";
   };
 
@@ -25,4 +25,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/un33k/python-ipware";
     license = lib.licenses.mit;
   };
-}
+})

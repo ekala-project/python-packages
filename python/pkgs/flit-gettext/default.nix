@@ -17,7 +17,7 @@
   pytest-cov-stub,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "flit-gettext";
   version = "1.0.2";
   pyproject = true;
@@ -25,7 +25,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "codingjoe";
     repo = "flit-gettext";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-rCIMwAiXXCJ+PH26/hoPWsuKd68crWStBErAOh9wzUg=";
   };
 
@@ -52,4 +52,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/codingjoe/flit-gettext";
     license = lib.licenses.bsd2;
   };
-}
+})

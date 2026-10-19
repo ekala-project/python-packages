@@ -5,7 +5,7 @@
   flit-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "bottombar";
   version = "2.1";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "evalf";
     repo = "bottombar";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-W+Cbcgb664nVT/nsFdDruT688JWG2NZnF5hDDezTgnw=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/evalf/bottombar";
     license = lib.licenses.mit;
   };
-}
+})

@@ -21,13 +21,13 @@
   pandas,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "lmfit";
   version = "1.3.4";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-PCLCjEP3F/bFtKO9geiTohSXOcJqWSwEby4zwjz75Jc=";
   };
 
@@ -60,4 +60,4 @@ buildPythonPackage rec {
     homepage = "https://lmfit.github.io/lmfit-py/";
     license = lib.licenses.bsd3;
   };
-}
+})

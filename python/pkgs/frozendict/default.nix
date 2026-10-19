@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "frozendict";
   version = "2.4.7";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-5Hj7KhORpWyKbhDMl8SpACtBDs0awowY14BmF2Licb0=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     description = "Module for immutable dictionary";
     license = lib.licenses.lgpl3Only;
   };
-}
+})

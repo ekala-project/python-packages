@@ -6,14 +6,14 @@
   wsproto,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "simple-websocket";
   version = "1.1.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "simple_websocket";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-eTkjTnqgZ8U0q9qzqe2TPsnORpGwcTx4rLGVVgqlKuQ=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/miguelgrinberg/simple-websocket";
     license = lib.licenses.mit;
   };
-}
+})

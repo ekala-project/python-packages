@@ -32,7 +32,7 @@
   unittestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mkdocs";
   version = "1.6.1";
   pyproject = true;
@@ -40,7 +40,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mkdocs";
     repo = "mkdocs";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-JQSOgV12iYE6FubxdoJpWy9EHKFxyKoxrm/7arCn9Ak=";
   };
 
@@ -99,4 +99,4 @@ buildPythonPackage rec {
     license = lib.licenses.bsd2;
     platforms = lib.platforms.unix;
   };
-}
+})

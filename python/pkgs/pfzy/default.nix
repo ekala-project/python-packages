@@ -5,13 +5,13 @@
   poetry-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pfzy";
   version = "0.3.4";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-cX6nZd0QtjYY5ymLLZjv2BngswzVkFyXByI9zuuUs/E=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/kazhala/pfzy";
     license = lib.licenses.mit;
   };
-}
+})

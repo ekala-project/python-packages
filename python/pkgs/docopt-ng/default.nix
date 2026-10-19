@@ -5,14 +5,14 @@
   pdm-backend,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "docopt-ng";
   version = "0.9.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "docopt_ng";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-kcbaELW7by6eJTRYKfuCeMeK8Bn2/ECIetSbBgSDsdc=";
   };
 
@@ -25,4 +25,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/bazaar-projects/docopt-ng";
     license = lib.licenses.mit;
   };
-}
+})

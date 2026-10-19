@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "libpyfoscamcgi";
   version = "0.0.9";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Foscam-wangzhengyu";
     repo = "libfoscamcgi";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-tKA2UnVHAUjDfvm+t/aCk+3YfWfwjfEWPRgieDAcr7k=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Foscam-wangzhengyu/libfoscamcgi";
     license = lib.licenses.lgpl3Plus;
   };
-}
+})

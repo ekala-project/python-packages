@@ -6,13 +6,13 @@
   requests,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyepsg";
   version = "0.4.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-LQj60eeotHqQpOQ9pIW6lXBZI0Ja78Tio++lQNvUcNc=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://pyepsg.readthedocs.io/en/latest/";
     license = lib.licenses.lgpl3;
   };
-}
+})

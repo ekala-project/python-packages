@@ -13,7 +13,7 @@
   importlib-resources,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pypiserver";
   version = "2.4.1";
   pyproject = true;
@@ -21,7 +21,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pypiserver";
     repo = "pypiserver";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-nqoAT3g32srJ0c3sGNFQBznLsnymDPUfL7kcON+BP0k=";
   };
 
@@ -55,4 +55,4 @@ buildPythonPackage rec {
     ];
     mainProgram = "pypi-server";
   };
-}
+})

@@ -6,7 +6,7 @@
   pythonOlder,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aioonkyo";
   version = "0.4.0";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "arturpragacz";
     repo = "aioonkyo";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-hLtyQWChWBddefDUT/+7e/w6i/DPEm/zw+EqOPgGsUI=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/arturpragacz/aioonkyo";
     license = lib.licenses.gpl3Only;
   };
-}
+})

@@ -10,7 +10,7 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "wordcloud";
   version = "1.9.6";
 
@@ -22,7 +22,7 @@ buildPythonPackage rec {
   ];
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-3xfEaP+QO9CrpPh8ZUB0XROkkxIg3Uk3yzY62FpHcbk=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/amueller/word_cloud";
     license = lib.licenses.mit;
   };
-}
+})

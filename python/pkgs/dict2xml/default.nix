@@ -5,13 +5,13 @@
   hatchling,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "dict2xml";
   version = "1.7.8";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-ZjjamtMrD4voM20W4PNqnDghFF407T70iJgiqbmA+yg=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/delfick/python-dict2xml";
     license = lib.licenses.mit;
   };
-}
+})

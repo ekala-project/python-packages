@@ -9,7 +9,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "headerparser";
   version = "0.5.2";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "jwodder";
     repo = "headerparser";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-fn9Nlazte6r5JMmp9ynq0qmkLEoJGv8witgZlD7zJNM=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jwodder/headerparser";
     license = lib.licenses.mit;
   };
-}
+})

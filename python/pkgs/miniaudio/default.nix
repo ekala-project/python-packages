@@ -7,7 +7,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "miniaudio";
   version = "1.71";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "irmen";
     repo = "pyminiaudio";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-fBdRricV0eqQknOQInB3cj8reZGKS9hrJTMF1ILASpY=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/irmen/pyminiaudio";
     license = lib.licenses.mit;
   };
-}
+})

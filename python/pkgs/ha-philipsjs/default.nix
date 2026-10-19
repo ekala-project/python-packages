@@ -11,7 +11,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ha-philipsjs";
   version = "3.3.4"; # FIXME Can we check metadata again?
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "danielperna84";
     repo = "ha-philipsjs";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-Ui15KtTpyfVTHmiHNVx/99qiUtKLZeyOOtAuQvfnU8k=";
   };
 
@@ -47,4 +47,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/danielperna84/ha-philipsjs";
     license = lib.licenses.mit;
   };
-}
+})

@@ -6,13 +6,13 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "simpy";
   version = "4.1.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-du82tx4ENrqU5V/rwAHHiHnkk6Mj8EW7z7sLIW6bH7w=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://simpy.readthedocs.io/";
     license = lib.licenses.mit;
   };
-}
+})

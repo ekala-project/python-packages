@@ -8,13 +8,13 @@
   requests,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "apache-libcloud";
   version = "3.8.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-db9MCxI7wiXiTKlfyhw1vjCxnmu4X+6ngUBNQ8QnbJE=";
   };
 
@@ -43,4 +43,4 @@ buildPythonPackage rec {
     homepage = "https://libcloud.apache.org/";
     license = lib.licenses.asl20;
   };
-}
+})

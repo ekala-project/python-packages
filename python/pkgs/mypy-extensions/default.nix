@@ -5,7 +5,7 @@
   flit-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mypy-extensions";
   version = "1.1.0";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "python";
     repo = "mypy_extensions";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-HNAFsWX4tU9hfZkKxLNJn1J+H3uTesQflbRPlo3GQ4k=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://www.mypy-lang.org";
     license = lib.licenses.mit;
   };
-}
+})

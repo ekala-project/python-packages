@@ -11,13 +11,13 @@
   mock,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "hiro";
   version = "1.1.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-2jM5rx3JpZTMqdycccclJysuMGYE5F0OBXXNE8X5XWg=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://hiro.readthedocs.io/en/latest/";
     license = lib.licenses.mit;
   };
-}
+})

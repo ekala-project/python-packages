@@ -6,13 +6,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "asyncsleepiq";
   version = "1.7.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-gOg1cxd2OsDRg5jtc6MfEMsK9T0Croo8K1jzsvbAbdY=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/kbickar/asyncsleepiq";
     license = lib.licenses.mit;
   };
-}
+})

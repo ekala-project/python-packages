@@ -8,7 +8,7 @@
   spacy,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pysbd";
   version = "0.3.4";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "nipunsadvilkar";
     repo = "pySBD";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "12p7qm237z56hw4zr03n8rycgfymhki2m9c4w3ib0mvqq122a5dp";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/nipunsadvilkar/pySBD";
     license = lib.licenses.mit;
   };
-}
+})

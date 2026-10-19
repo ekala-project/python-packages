@@ -6,7 +6,7 @@
   requests,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "nextcloudmonitor";
   version = "1.6.0";
   pyproject = true;
@@ -14,13 +14,13 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "meichthys";
     repo = "nextcloud_monitor";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-748cDMxPjOQFKdSt1GrQqZHmPgz20HN1+lMzo2vMj6c=";
   };
 
   postPatch = ''
     substituteInPlace setup.py \
-      --replace-fail 'version="1.5.1"' 'version="${version}"'
+      --replace-fail 'version="1.5.1"' 'version="${finalAttrs.version}"'
   '';
 
   build-system = [ setuptools ];
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/meichthys/nextcloud_monitor";
     license = lib.licenses.mit;
   };
-}
+})

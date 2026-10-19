@@ -17,7 +17,7 @@
   selenium,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "contourpy";
   version = "1.3.3";
   pyproject = true;
@@ -25,7 +25,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "contourpy";
     repo = "contourpy";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-/tE+F1wH7YkqfgenXwtcfkjxUR5FwfgoS4NYC6n+/2M=";
   };
 
@@ -68,4 +68,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/contourpy/contourpy";
     license = lib.licenses.bsd3;
   };
-}
+})

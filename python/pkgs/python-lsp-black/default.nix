@@ -10,7 +10,7 @@
   python-lsp-server,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "python-lsp-black";
   version = "2.0.0";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "python-lsp";
     repo = "python-lsp-black";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-nV6mePSWzfPW2RwXg/mxgzfT9wD95mmTuPnPEro1kEY=";
   };
 
@@ -54,4 +54,4 @@ buildPythonPackage rec {
     description = "Black plugin for the Python LSP Server";
     license = lib.licenses.mit;
   };
-}
+})

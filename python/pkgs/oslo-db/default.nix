@@ -13,14 +13,14 @@
   stevedore,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "oslo-db";
   version = "18.1.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "oslo_db";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-B16GziPAwh2x01CR8dyyGwVEnInDpDJtpPLT+4MwIj8=";
   };
 
@@ -45,4 +45,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/openstack/oslo.db";
     license = lib.licenses.asl20;
   };
-}
+})

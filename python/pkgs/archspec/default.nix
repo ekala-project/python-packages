@@ -6,7 +6,7 @@
   poetry-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "archspec";
   version = "0.2.6";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "archspec";
     repo = "archspec";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     fetchSubmodules = true;
     hash = "sha256-vtOntxkHlkO0aRS6nRknz+9AYiKtHPoeG8iAw49QsvE=";
   };
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     ];
     mainProgram = "archspec";
   };
-}
+})

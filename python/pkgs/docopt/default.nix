@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "docopt";
   version = "0.6.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-SbOoJSgL1ms6qDWF71nEqMgvLIpSLb51SovI0IyFxJE=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "http://docopt.org/";
     license = lib.licenses.mit;
   };
-}
+})

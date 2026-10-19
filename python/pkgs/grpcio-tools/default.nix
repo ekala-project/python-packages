@@ -8,14 +8,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "grpcio-tools";
   version = "1.83.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "grpcio_tools";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-qBSO7OOW+KNJCXlYvADxSIIAMzHzt8KugHnBxjLRfW8=";
   };
 
@@ -56,4 +56,4 @@ buildPythonPackage rec {
     license = lib.licenses.asl20;
     homepage = "https://grpc.io/grpc/python/";
   };
-}
+})

@@ -6,7 +6,7 @@
   tree-sitter,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "tree-sitter-rust";
   version = "0.24.2";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "tree-sitter";
     repo = "tree-sitter-rust";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-Ls6tB6IxXDQDWwx0BJ7RgbheelC4MH8z97E7wwhkDcY=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/tree-sitter/tree-sitter-rust";
     license = lib.licenses.mit;
   };
-}
+})

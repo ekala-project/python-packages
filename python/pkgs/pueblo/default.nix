@@ -9,7 +9,7 @@
   tomli,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pueblo";
   version = "0.0.19";
   pyproject = true;
@@ -21,7 +21,7 @@ buildPythonPackage rec {
   # package, we can rely on upstream to run the tests before releasing, and it
   # should work for us as well.
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-TGPjM6lOHUTKOdp+lu67ENvkmyfUVdAUaMIHgCxto3U=";
   };
 
@@ -43,4 +43,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pyveci/pueblo";
     license = lib.licenses.lgpl3Only;
   };
-}
+})

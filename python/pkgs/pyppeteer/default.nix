@@ -12,7 +12,7 @@
   websockets,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyppeteer";
   version = "2.0.0";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pyppeteer";
     repo = "pyppeteer";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-LYyV4Wzz4faewSsGjNe0i/9BLbCHzzEns2ZL2MYkGWw=";
   };
 
@@ -50,4 +50,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pyppeteer/pyppeteer";
     license = lib.licenses.mit;
   };
-}
+})

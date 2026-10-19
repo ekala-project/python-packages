@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "bidict";
   version = "0.23.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-AwaddjvDh7vSDn1JkU51/EEypBk3+jQFQX4aWi0AbXE=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://bidict.readthedocs.io";
     license = lib.licenses.mpl20;
   };
-}
+})

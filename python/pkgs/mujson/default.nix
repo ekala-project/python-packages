@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mujson";
   version = "1.4";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-J9nPGxDkLQje6AkL9cewNqmQ7Z+00TXBEr3p71E2cnE=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mattgiles/mujson";
     license = lib.licenses.mit;
   };
-}
+})

@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "airportsdata";
   version = "20251008";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mborsetti";
     repo = "airportsdata";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-9Y4W5yhICiB5Py36RoVTe7obVtKUaUf0du2i1AihFdE=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mborsetti/airportsdata/";
     license = lib.licenses.mit;
   };
-}
+})

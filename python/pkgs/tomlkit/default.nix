@@ -7,13 +7,13 @@
   poetry-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "tomlkit";
   version = "0.15.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-4lu/OIQwBSRiEKEpgndvJ/mcub5nFg4UQ00MDSHuHpc=";
   };
 
@@ -25,4 +25,4 @@ buildPythonPackage rec {
     description = "Style-preserving TOML library for Python";
     license = lib.licenses.mit;
   };
-}
+})

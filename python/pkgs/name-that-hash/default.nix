@@ -7,7 +7,7 @@
   rich,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "name-that-hash";
   version = "1.11.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "HashPals";
     repo = "name-that-hash";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-zOb4BS3zG1x8GLXAooqqvMOw0fNbw35JuRWOdGP26/8=";
   };
 
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/HashPals/Name-That-Hash";
     license = lib.licenses.gpl3Plus;
   };
-}
+})

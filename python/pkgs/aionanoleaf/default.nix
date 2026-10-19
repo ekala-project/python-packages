@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aionanoleaf";
   version = "0.2.1";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "milanmeu";
     repo = "aionanoleaf";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-f0TyXhuAzI0s0n6sXH9mKWA4nad2YchZkQ0+jw/Bmv0=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/milanmeu/aionanoleaf";
     license = lib.licenses.lgpl3Plus;
   };
-}
+})

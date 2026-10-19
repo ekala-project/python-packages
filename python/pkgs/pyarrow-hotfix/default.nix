@@ -5,7 +5,7 @@
   hatchling,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyarrow-hotfix";
   version = "0.7";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pitrou";
     repo = "pyarrow-hotfix";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-9K7rQUSd+at1WghTP8DlD44Op2VkvN1vlzF3ZLEIaRE=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pitrou/pyarrow-hotfix";
     license = lib.licenses.asl20;
   };
-}
+})

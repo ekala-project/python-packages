@@ -9,7 +9,7 @@
   xmltodict,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "huawei-lte-api";
   version = "2.0.0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Salamek";
     repo = "huawei-lte-api";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-3EqxZhoMilNa/ffKnER0XabGKMJAzlgipiKLlUN3kFU=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Salamek/huawei-lte-api";
     license = lib.licenses.lgpl3Only;
   };
-}
+})

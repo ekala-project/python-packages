@@ -8,13 +8,13 @@
   requests,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "requests-oauthlib";
   version = "2.0.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-s9/669iE2M13hJQ2lgOp57WNKREb9rQb3C3NhyA69Ok=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/requests/requests-oauthlib";
     license = with lib.licenses; [ isc ];
   };
-}
+})

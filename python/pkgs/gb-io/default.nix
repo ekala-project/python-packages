@@ -8,7 +8,7 @@
   unittestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "gb-io";
   version = "0.4.0";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "althonos";
     repo = "gb-io.py";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-6owaHSOVahgOG1gvN4Tox8c49qGzQ4lG1n8GKwEnCRk=";
   };
 
@@ -49,4 +49,4 @@ buildPythonPackage rec {
     description = "Python interface to gb-io, a fast GenBank parser written in Rust";
     license = lib.licenses.mit;
   };
-}
+})

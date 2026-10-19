@@ -8,7 +8,7 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "developer-disk-image";
   version = "0.3.0";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   # GitHub archive is way too large
   src = fetchPypi {
     pname = "developer_disk_image";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-H7mEHcxc+B5pe24KnBSQnAWcGJPWdbODmKkcCMt7qLw=";
   };
 
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     license = lib.licenses.gpl3Plus;
     mainProgram = "developer_disk_image";
   };
-}
+})

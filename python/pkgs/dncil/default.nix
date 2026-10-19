@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "dncil";
   version = "1.0.2";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mandiant";
     repo = "dncil";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-bndkiXkIYTd071J+mgkmJmA+9J5yJ+9/oDfAypN7wYo=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mandiant/dncil";
     license = lib.licenses.asl20;
   };
-}
+})

@@ -8,7 +8,7 @@
   yajl,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jsonslicer";
   version = "0.1.8";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "AMDmi3";
     repo = "jsonslicer";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-nPifyqr+MaFqoCYFbFSSBDjvifpX0CFnHCdMCvhwYTA=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/AMDmi3/jsonslicer";
     license = lib.licenses.mit;
   };
-}
+})

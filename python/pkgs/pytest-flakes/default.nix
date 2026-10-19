@@ -7,13 +7,13 @@
   pyflakes,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytest-flakes";
   version = "4.0.5";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-lTE06XIVrjH2h5+9c2jBjUP3Cdwvq1t3d9srsrrDqSQ=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://pypi.org/project/pytest-flakes/";
     license = lib.licenses.mit;
   };
-}
+})

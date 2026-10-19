@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "imagesize";
   version = "2.0.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-srpqTepIen681TJI00dqykSdMNsSot3l4MXKliT9d+U=";
   };
 
@@ -22,4 +22,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/shibukawa/imagesize_py";
     license = lib.licenses.mit;
   };
-}
+})

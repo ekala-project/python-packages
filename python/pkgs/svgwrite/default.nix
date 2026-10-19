@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "svgwrite";
   version = "1.4.3";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     extension = "zip";
     hash = "sha256-qPvf1EQzAqZhmn92vJN/xoPa8mKNm3N8iR7Ai4zlJMM=";
   };
@@ -25,4 +25,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mozman/svgwrite";
     license = lib.licenses.mit;
   };
-}
+})

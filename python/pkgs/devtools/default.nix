@@ -9,7 +9,7 @@
   pytest-mock,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "devtools";
   version = "0.12.2";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "samuelcolvin";
     repo = "python-${pname}";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-1HFbNswdKa/9cQX0Gf6lLW1V5Kt/N4X6/5kQDdzp1Wo=";
   };
 
@@ -45,4 +45,4 @@ buildPythonPackage rec {
     homepage = "https://python-devtools.helpmanual.io/";
     license = lib.licenses.mit;
   };
-}
+})

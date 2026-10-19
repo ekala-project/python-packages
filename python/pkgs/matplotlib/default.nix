@@ -31,13 +31,13 @@
   tornado,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   version = "3.10.9";
   pname = "matplotlib";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-/WZQjoxod9mOWGZUtgigRW241+ilRuseJgDv2VcwI1g=";
   };
 
@@ -105,4 +105,4 @@ buildPythonPackage rec {
       bsd0
     ];
   };
-}
+})

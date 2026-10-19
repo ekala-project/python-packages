@@ -8,14 +8,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-redhatopenshift";
   version = "4.0.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_mgmt_redhatopenshift";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-cuPnbKvj4iZIBnkbF7IRoaB3qJxgtLfT6JSgjRcdZrI=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Azure/azure-sdk-for-python";
     license = lib.licenses.mit;
   };
-}
+})

@@ -7,7 +7,7 @@
   numpy,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "transforms3d";
   version = "0.4.2";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "matthew-brett";
     repo = "transforms3d";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-9wICu7zNYF54e6xcDpZxqctB4GVu5Knf79Z36016Rpw=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     description = "Convert between various geometric transformations";
     license = lib.licenses.bsd2;
   };
-}
+})

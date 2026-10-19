@@ -13,7 +13,7 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "dlms-cosem";
   version = "25.1.0";
   pyproject = true;
@@ -21,13 +21,13 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pwitab";
     repo = "dlms-cosem";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-ZsF+GUVG9bZNZE5daROQJIZZgqpjAkB/bFyre2oGu+E=";
   };
 
   postPatch = ''
     substituteInPlace setup.py \
-      --replace-fail 'VERSION = "24.1.0"' 'VERSION = "${version}"'
+      --replace-fail 'VERSION = "24.1.0"' 'VERSION = "${finalAttrs.version}"'
   '';
 
   build-system = [ setuptools ];
@@ -51,4 +51,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pwitab/dlms-cosem";
     license = lib.licenses.mit;
   };
-}
+})

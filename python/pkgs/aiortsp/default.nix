@@ -15,7 +15,7 @@
   pytest-asyncio,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aiortsp";
   version = "1.4.0";
   pyproject = true;
@@ -23,7 +23,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "marss";
     repo = "aiortsp";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-/ydsu+53WOocdWk3AW0/cXBEx1qAlhIC0LUDy459pbQ=";
   };
 
@@ -49,4 +49,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/marss/aiortsp";
     license = lib.licenses.lgpl3Plus;
   };
-}
+})

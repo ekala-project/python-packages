@@ -6,7 +6,7 @@
   aiohttp,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "imeon-inverter-api";
   version = "0.4.3";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Imeon-Inverters-for-Home-Assistant";
     repo = "inverter-api";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-8W14q9Q+DcAHI1EiAmkodX6FfMYlD+nuiiY6NyOXI/o=";
   };
 
@@ -44,4 +44,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Imeon-Inverters-for-Home-Assistant/inverter-api";
     license = lib.licenses.asl20;
   };
-}
+})

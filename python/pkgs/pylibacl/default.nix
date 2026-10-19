@@ -7,13 +7,13 @@
   pkgs,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pylibacl";
   version = "0.7.3";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-nZ/7WA4MWC1d5ZgIf3X2lARYsjgQxhVSkUPGGxcr+SI=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     description = "Python extension module for POSIX ACLs, it can be used to query, list, add, and remove ACLs from files and directories under operating systems that support them";
     license = lib.licenses.lgpl21Plus;
   };
-}
+})

@@ -10,7 +10,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
 
   pname = "gremlinpython";
   version = "3.8.0";
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "apache";
     repo = "tinkerpop";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-dslSvtne+0mobjhjZDiO7crQE3aW5wEMWw7l3LkBTV8=";
   };
 
@@ -58,4 +58,4 @@ buildPythonPackage rec {
     homepage = "https://tinkerpop.apache.org/";
     license = lib.licenses.asl20;
   };
-}
+})

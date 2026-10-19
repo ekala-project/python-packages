@@ -14,7 +14,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "hyperpyyaml";
   version = "1.2.3";
   pyproject = true;
@@ -22,7 +22,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "speechbrain";
     repo = "hyperpyyaml";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-/7OrIR61zQYl2+RjiOOlaqUGWBieon5fe8sgmEvKowo=";
   };
 
@@ -57,4 +57,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/speechbrain/HyperPyYAML";
     license = lib.licenses.asl20;
   };
-}
+})

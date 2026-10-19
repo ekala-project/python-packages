@@ -8,7 +8,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "expiringdict";
   version = "1.2.2";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mailgun";
     repo = "expiringdict";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-vRhJSHIqc51I+s/wndtfANM44CKW3QS1iajqyoSBf0I=";
   };
 
@@ -44,4 +44,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mailgun/expiringdict";
     license = lib.licenses.asl20;
   };
-}
+})

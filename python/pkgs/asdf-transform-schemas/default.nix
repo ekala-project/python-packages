@@ -6,14 +6,14 @@
   asdf-standard,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "asdf-transform-schemas";
   version = "0.6.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "asdf_transform_schemas";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-D1D44Jb//S0UucgplZASZu8lsj0N/8MK1Bu6RoUalzI=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/asdf-format/asdf-transform-schemas";
     license = lib.licenses.bsd3;
   };
-}
+})

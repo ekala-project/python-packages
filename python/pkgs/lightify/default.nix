@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "lightify";
   version = "1.0.7.3";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "tfriedel";
     repo = "python-lightify";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-zgDB1Tq4RYIeABZCjCcoB8NGt+ZhQFnFu655OghgpH0=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/tfriedel/python-lightify";
     license = lib.licenses.asl20;
   };
-}
+})

@@ -10,14 +10,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "google-cloud-dataflow-client";
   version = "0.14.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "google_cloud_dataflow_client";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-luoVCivPdtJs5hgStMkEhQ6nVARIp1y/a8gLT6LCLac=";
   };
 
@@ -48,4 +48,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-dataflow-client";
     license = lib.licenses.asl20;
   };
-}
+})

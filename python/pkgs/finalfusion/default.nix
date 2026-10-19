@@ -11,7 +11,7 @@
   pytest,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "finalfusion";
   version = "0.7.1";
   pyproject = true;
@@ -21,7 +21,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "finalfusion";
     repo = "finalfusion-python";
-    tag = version;
+    tag = finalAttrs.version;
     sha256 = "0pwzflamxqvpl1wcz0zbhhd6aa4xn18rmza6rggaic3ckidhyrh4";
   };
 
@@ -58,4 +58,4 @@ buildPythonPackage rec {
     platforms = lib.platforms.all;
     license = lib.licenses.blueOak100;
   };
-}
+})

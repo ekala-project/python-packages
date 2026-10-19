@@ -7,13 +7,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "rencode";
   version = "1.0.8";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-g7LZtthK3DVhW3oJt0J5IRq6r1eleK8QrQEkVamadyI=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/aresch/rencode";
     license = lib.licenses.gpl3Plus;
   };
-}
+})

@@ -5,14 +5,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "file-read-backwards";
   version = "3.2.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "file_read_backwards";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-VHjTBeuuquj+PGWFok38MmIXAiRFCsyTITmPDSbN0Qk=";
   };
 
@@ -25,4 +25,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/RobinNil/file_read_backwards";
     license = lib.licenses.mit;
   };
-}
+})

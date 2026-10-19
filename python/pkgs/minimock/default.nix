@@ -5,14 +5,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "minimock";
   version = "1.2.8";
   pyproject = true;
 
   src = fetchPypi {
     pname = "MiniMock";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-X9/f6t8Px4HQWSobkNL8wRWB9oL/fLpiAc/bFcPqWkw=";
   };
 
@@ -25,4 +25,4 @@ buildPythonPackage rec {
     description = "Minimalistic mocking library";
     license = lib.licenses.mit;
   };
-}
+})

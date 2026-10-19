@@ -7,13 +7,13 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "typeguard";
   version = "4.6.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-50FPCRETF94+M13pLNOXxcDKALHMFnbeEuHURKebPyE=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/agronholm/typeguard";
     license = lib.licenses.mit;
   };
-}
+})

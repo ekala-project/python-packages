@@ -8,7 +8,7 @@
   sphinx-notfound-page,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pallets-sphinx-themes";
   version = "2.5.0";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pallets";
     repo = "pallets-sphinx-themes";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-nmukg/h6DMv6t0wl84VEvHIHzk0G0VDaHZsb8y+OO4M=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     description = "Sphinx theme for Pallets projects";
     license = lib.licenses.bsd3;
   };
-}
+})

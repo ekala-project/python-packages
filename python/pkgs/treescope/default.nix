@@ -15,7 +15,7 @@
   palettable,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "treescope";
   version = "0.1.10";
   pyproject = true;
@@ -23,7 +23,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "google-deepmind";
     repo = "treescope";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-SfycwuI/B7S/rKkaqxtnJI26q89313pvj/Xsomg6qyA=";
   };
 
@@ -46,4 +46,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/google-deepmind/treescope";
     license = lib.licenses.asl20;
   };
-}
+})

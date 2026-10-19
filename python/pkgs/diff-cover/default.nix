@@ -15,13 +15,13 @@
   tomli,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "diff_cover";
   version = "10.5.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-8clBfGIRHkCoHEgsaSxc3RMf+TMXuqmTBEyykZEuu6M=";
   };
 
@@ -43,4 +43,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Bachmann1234/diff-cover";
     license = lib.licenses.asl20;
   };
-}
+})

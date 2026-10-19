@@ -5,13 +5,13 @@
   poetry-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "unpaddedbase64";
   version = "2.1.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-cnPGDAid452Q9dbUp4g6eeMZ3J2bHIkkp/q5YXil8AU=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     description = "Unpadded Base64";
     license = lib.licenses.asl20;
   };
-}
+})

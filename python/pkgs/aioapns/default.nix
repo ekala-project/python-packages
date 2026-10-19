@@ -8,13 +8,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aioapns";
   version = "4.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-NxX6q/P6bAJA52N/RCfYjQiv3M6w3PuVbG0JtvSUJ/g=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Fatal1ty/aioapns";
     license = lib.licenses.asl20;
   };
-}
+})

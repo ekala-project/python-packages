@@ -11,13 +11,13 @@
   isPyPy,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aioredis";
   version = "2.0.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-6qUar5k/LXH1S3BSfEQEN7plNAWIr+t4bNh8Vcic2Y4=";
   };
 
@@ -46,4 +46,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/aio-libs-abandoned/aioredis-py";
     license = lib.licenses.mit;
   };
-}
+})

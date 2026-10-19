@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "async-timeout";
   version = "5.0.1";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "aio-libs";
     repo = "async-timeout";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-lsSoIv2SnAJbv7V1eRognjv0cCQONwJMlb6fum9wQ/s=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/aio-libs/async_timeout/";
     license = lib.licenses.asl20;
   };
-}
+})

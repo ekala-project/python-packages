@@ -5,7 +5,7 @@
   rustPlatform,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "uuid-utils";
   version = "0.16.1";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "aminalaee";
     repo = "uuid-utils";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-5pGBc1+2Vx0nIwhLFBy/Mx5GLLzA7Oj4eWPPCfBV1v4=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/aminalaee/uuid-utils";
     license = lib.licenses.bsd3;
   };
-}
+})

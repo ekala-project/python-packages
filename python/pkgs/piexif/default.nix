@@ -8,7 +8,7 @@
   pillow,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "piexif";
   version = "1.1.3";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "hMatoba";
     repo = "Piexif";
-    tag = version;
+    tag = finalAttrs.version;
     sha256 = "1akmaxq1cjr8wghwaaql1bd3sajl8psshl58lprgfsigrvnklp8b";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/hMatoba/Piexif";
     license = lib.licenses.mit;
   };
-}
+})

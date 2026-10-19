@@ -6,7 +6,7 @@
   pkg-config,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pkgconfig";
   version = "1.6.0";
   pyproject = true;
@@ -22,7 +22,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "matze";
     repo = "pkgconfig";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-Glla/tg83Vd2VWvUnCPrcncS73vMhqaGpo+AviR8jnY=";
   };
 
@@ -43,4 +43,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/matze/pkgconfig";
     license = lib.licenses.mit;
   };
-}
+})

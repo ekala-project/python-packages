@@ -13,7 +13,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "polars";
   version = "1.40.1";
   pyproject = true;
@@ -21,7 +21,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pola-rs";
     repo = "polars";
-    tag = "py-${version}";
+    tag = "py-${finalAttrs.version}";
     hash = "sha256-QlrEYwoYPALELK3UGBC/92vCBIzFrigJAwU8qxn7Pys=";
   };
 
@@ -88,4 +88,4 @@ buildPythonPackage rec {
     mainProgram = "polars";
     platforms = lib.platforms.all;
   };
-}
+})

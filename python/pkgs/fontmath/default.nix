@@ -9,13 +9,13 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "fontmath";
   version = "0.9.4";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-H9kZDJ14ThMFw8SXcbkdkQ8kakt8RO3iGcmaB+167aQ=";
     extension = "zip";
   };
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/robotools/fontMath/";
     license = lib.licenses.mit;
   };
-}
+})

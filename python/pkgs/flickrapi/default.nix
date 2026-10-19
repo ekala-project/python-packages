@@ -11,7 +11,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "flickrapi";
   version = "2.4";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "sybrenstuvel";
     repo = "flickrapi";
-    tag = "version-${version}";
+    tag = "version-${finalAttrs.version}";
     hash = "sha256-vRZrlXKI0UDdmDevh3XUngH4X8G3VlOCSP0z/rxhIgw=";
   };
 
@@ -70,4 +70,4 @@ buildPythonPackage rec {
     homepage = "https://stuvel.eu/flickrapi";
     license = lib.licenses.psfl;
   };
-}
+})

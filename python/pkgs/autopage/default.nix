@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "autopage";
   version = "0.6.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-QtB96Q3mPoN2KCgCi/1W0ZkGoY98lR727vPprUijBx0=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     description = "Library to provide automatic paging for console output";
     license = lib.licenses.asl20;
   };
-}
+})

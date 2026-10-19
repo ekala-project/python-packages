@@ -8,7 +8,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-cors-headers";
   version = "4.9.0";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "adamchainz";
     repo = "django-cors-headers";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-YtBMTmUOqozJksUgF4XJO+cQaFVt49qa0YKHlcXM1nU=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/OttoYiu/django-cors-headers";
     license = lib.licenses.mit;
   };
-}
+})

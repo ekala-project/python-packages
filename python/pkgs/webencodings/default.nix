@@ -6,13 +6,13 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "webencodings";
   version = "0.6.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     sha256 = "sha256-Vl+a0DHHAtrkBOJ6CZ4+CRhqOrG5Ug8G0hVQK2Uf2RA=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/CourtBouillon/webencodings";
     license = lib.licenses.bsd3;
   };
-}
+})

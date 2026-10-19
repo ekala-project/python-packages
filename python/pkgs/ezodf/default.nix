@@ -7,7 +7,7 @@
   unittestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ezodf";
   version = "0.3.2";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "T0ha";
     repo = "ezodf";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-d66CTj9CpCnMICqNdUP07M9elEfoxuPg8x1kxqgXTTE=";
   };
 
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/T0ha/ezodf";
     license = lib.licenses.mit;
   };
-}
+})

@@ -24,7 +24,7 @@
 let
   stdenvTarget = if cudaSupport then gcc13Stdenv else stdenv;
 in
-buildPythonPackage.override { stdenv = stdenvTarget; } rec {
+buildPythonPackage.override { stdenv = stdenvTarget; } (finalAttrs: {
   pname = "llama-cpp-python";
   version = "0.3.35";
   pyproject = true;
@@ -32,7 +32,7 @@ buildPythonPackage.override { stdenv = stdenvTarget; } rec {
   src = fetchFromGitHub {
     owner = "abetlen";
     repo = "llama-cpp-python";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-3o9YdjJ4rORVzwtu4lPZTioqiKHpWc1alhM76cCfVVM=";
     fetchSubmodules = true;
   };
@@ -90,4 +90,4 @@ buildPythonPackage.override { stdenv = stdenvTarget; } rec {
     homepage = "https://github.com/abetlen/llama-cpp-python";
     license = lib.licenses.mit;
   };
-}
+})

@@ -6,7 +6,7 @@
   ipython,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jupyter-ui-poll";
   version = "1.1.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Kirill888";
     repo = "jupyter-ui-poll";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-Q+y0Xr7wuo8ZwCHEELSi0QSXa8DLtfZ8XQc48eOk4bw=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Kirill888/jupyter-ui-poll";
     license = lib.licenses.mit;
   };
-}
+})

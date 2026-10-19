@@ -8,7 +8,7 @@
   requests,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "kiwiki-client";
   version = "0.1.2";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "c7h";
     repo = "kiwiki_client";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-CIBed8HzbUqUIzNy1lHxIgjneA6R8uKtmd43LU92M0Q=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/c7h/kiwiki_client";
     license = lib.licenses.gpl3Only;
   };
-}
+})

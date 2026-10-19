@@ -18,7 +18,7 @@
   shippinglabel,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "whey";
   version = "0.1.1";
   pyproject = true;
@@ -26,7 +26,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "repo-helper";
     repo = "whey";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-s2jZmuFj0gTWVTcXWcBhcu5RBuaf/qMS/xzIpIoG1ZE=";
   };
 
@@ -72,4 +72,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/repo-helper/whey";
     license = lib.licenses.mit;
   };
-}
+})

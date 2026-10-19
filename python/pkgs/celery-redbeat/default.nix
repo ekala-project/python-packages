@@ -14,7 +14,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "celery-redbeat";
   version = "2.9.0";
   pyproject = true;
@@ -22,7 +22,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "celery";
     repo = "django-celery-beat";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-UGKMSXB+Hg865sAk5ePc/noO3eNTr7b3pp7tvNvn1T8=";
   };
 
@@ -51,4 +51,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/celery/django-celery-beat";
     license = lib.licenses.bsd3;
   };
-}
+})

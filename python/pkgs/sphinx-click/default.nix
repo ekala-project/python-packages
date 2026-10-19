@@ -14,7 +14,7 @@
   defusedxml,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "sphinx-click";
   version = "6.2.0";
   pyproject = true;
@@ -46,7 +46,7 @@ buildPythonPackage rec {
   ];
 
   src = fetchPypi {
-    inherit version;
+    inherit (finalAttrs) version;
     pname = "sphinx_click";
     hash = "sha256-/Hi0FUpOUVlGLjbeVbhkN0fabNqGs7Uqi7YiieYDd2w=";
   };
@@ -56,4 +56,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/click-contrib/sphinx-click";
     license = lib.licenses.mit;
   };
-}
+})

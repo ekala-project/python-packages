@@ -23,7 +23,7 @@
   httpx,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aiobotocore";
   version = "3.9.1";
   pyproject = true;
@@ -31,7 +31,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "aio-libs";
     repo = "aiobotocore";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-VlQS47FmjFHq3Q2VGa4nGPPnG7qhFgEVxovhCuh7rxI=";
   };
 
@@ -66,4 +66,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/aio-libs/aiobotocore";
     license = lib.licenses.asl20;
   };
-}
+})

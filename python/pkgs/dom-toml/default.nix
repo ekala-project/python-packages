@@ -8,7 +8,7 @@
   tomli-w,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "dom-toml";
   version = "2.3.0";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "domdfcoding";
     repo = "dom_toml";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-ukRnQecbgZBdTHhyEBIoHUwGTwQVJxo+u7Dqg4Kjvsw=";
   };
 
@@ -44,4 +44,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/domdfcoding/dom_toml";
     license = lib.licenses.mit;
   };
-}
+})

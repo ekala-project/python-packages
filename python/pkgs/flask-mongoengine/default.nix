@@ -12,7 +12,7 @@
   wtforms,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "flask-mongoengine";
   version = "1.0.0";
   pyproject = true;
@@ -59,4 +59,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mongoengine/flask-mongoengine";
     license = lib.licenses.bsd3;
   };
-}
+})

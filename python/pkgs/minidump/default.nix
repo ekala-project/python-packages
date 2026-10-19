@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "minidump";
   version = "0.0.24";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-964JuUTzsXzPXOzGb5/1p6RbBTR0oTrrAS9MkgRHBDc=";
   };
 
@@ -24,8 +24,8 @@ buildPythonPackage rec {
   meta = {
     description = "Python library to parse and read Microsoft minidump file format";
     homepage = "https://github.com/skelsec/minidump";
-    changelog = "https://github.com/skelsec/minidump/releases/tag/${version}";
+    changelog = "https://github.com/skelsec/minidump/releases/tag/${finalAttrs.version}";
     license = lib.licenses.mit;
     mainProgram = "minidump";
   };
-}
+})

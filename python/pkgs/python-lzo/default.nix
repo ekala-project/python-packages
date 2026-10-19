@@ -7,7 +7,7 @@
   wheel,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "python-lzo";
   version = "1.16";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "jd-boyd";
     repo = "python-lzo";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-iXAvOCzHPvNERMkE5y4QTHi4ZieW1wrYWYScs7zyb2c=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jd-boyd/python-lzo";
     license = lib.licenses.gpl2Only;
   };
-}
+})

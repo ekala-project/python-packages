@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "infinity";
   version = "1.5";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-jap8Fc4hAP3M/eISM34M1c8IWGn1TcJjS2ww1hRh7No=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     description = "All-in-one infinity value for Python";
     license = lib.licenses.bsd3;
   };
-}
+})

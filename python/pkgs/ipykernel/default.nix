@@ -19,13 +19,13 @@
   traitlets,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ipykernel";
   version = "7.1.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-WKP8iFM9WTDDVG3H6sZsbSiKzeT4AeIAHmXtxdyc8Ns=";
   };
 
@@ -55,4 +55,4 @@ buildPythonPackage rec {
     homepage = "https://ipython.org/";
     license = lib.licenses.bsd3;
   };
-}
+})

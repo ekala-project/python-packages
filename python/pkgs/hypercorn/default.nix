@@ -15,7 +15,7 @@
   pytest-trio,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "hypercorn";
   version = "0.18.0";
   pyproject = true;
@@ -23,7 +23,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pgjones";
     repo = "Hypercorn";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-RNurpDq5Z3N9Wv9Hq/l6A3yKUriCCKx9BrbrWGwBsUk=";
   };
 
@@ -51,4 +51,4 @@ buildPythonPackage rec {
     mainProgram = "hypercorn";
     license = lib.licenses.mit;
   };
-}
+})

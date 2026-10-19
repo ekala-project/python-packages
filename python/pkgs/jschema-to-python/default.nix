@@ -12,14 +12,14 @@
   jsonpickle,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jschema-to-python";
   version = "1.2.3";
   pyproject = true;
 
   src = fetchPypi {
     pname = "jschema_to_python";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-dv8U/l0wRwjMrRKE5LEflqZYlJox7n+u2eCZUnlUm5E=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/microsoft/jschema-to-python";
     license = lib.licenses.mit;
   };
-}
+})

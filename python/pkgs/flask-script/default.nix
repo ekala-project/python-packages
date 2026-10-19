@@ -10,14 +10,14 @@
   flask,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "flask-script";
   version = "2.0.6";
   pyproject = true;
 
   src = fetchPypi {
     pname = "Flask-Script";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-ZCWWPZEFTPzBhYBxQccxSpxa1GMlkRvSTctIm9AWHGU=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     description = "Scripting support for Flask";
     license = lib.licenses.bsd3;
   };
-}
+})

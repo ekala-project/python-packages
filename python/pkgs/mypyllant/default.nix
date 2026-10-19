@@ -24,7 +24,7 @@
   requests,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mypyllant";
   version = "0.9.17";
   pyproject = true;
@@ -32,7 +32,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "signalkraft";
     repo = "myPyllant";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-C6/rCpY4Pn8j8dNo1mlz2GRzMBeMo9CZMitlmtuBRE0=";
   };
 
@@ -68,4 +68,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/signalkraft/myPyllant";
     license = lib.licenses.mit;
   };
-}
+})

@@ -11,7 +11,7 @@
   mpegdash,
   pyaes,
 }:
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "tidalapi";
   version = "0.8.11";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "EbbLabs";
     repo = "python-tidal";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-5IGMSiDwEGCnMtTARmx8Z9nfc3BaCe6z32m5j2FFBAI=";
   };
 
@@ -46,4 +46,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/tamland/python-tidal";
     license = lib.licenses.gpl3;
   };
-}
+})

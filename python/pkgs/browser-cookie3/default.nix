@@ -10,7 +10,7 @@
   pyaes,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "browser-cookie3";
   version = "0.20.1";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "borisbabic";
     repo = "browser_cookie3";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-3EmFx+9LQFuS26mUPH/etc6hkUXqmNOOipbldhjorDE=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/borisbabic/browser_cookie3";
     license = lib.licenses.gpl3Only;
   };
-}
+})

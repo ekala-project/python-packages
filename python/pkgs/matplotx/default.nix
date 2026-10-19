@@ -12,7 +12,7 @@
   scipy,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "matplotx";
   version = "0.3.10";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "nschloe";
     repo = "matplotx";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-EWEiEY23uFwd/vgWVLCH/buUmgRqz1rqqlJEdXINYMg=";
   };
 
@@ -61,4 +61,4 @@ buildPythonPackage rec {
     mainProgram = "matplotx";
     license = lib.licenses.mit;
   };
-}
+})

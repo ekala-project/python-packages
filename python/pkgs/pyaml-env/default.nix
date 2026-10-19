@@ -6,7 +6,7 @@
   pyyaml,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyaml-env";
   version = "1.2.2";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mkaranasou";
     repo = "pyaml_env";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-Mp5Zn2JA6j/OTkPCRggNdqdWkrUYyYHMVK6hy/EI0I8=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mkaranasou/pyaml_env";
     license = lib.licenses.mit;
   };
-}
+})

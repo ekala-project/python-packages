@@ -9,7 +9,7 @@
   syrupy,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "htmltools";
   version = "0.7.0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "posit-dev";
     repo = "py-htmltools";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-Cs/aft5mghyRnMCeLrCMXRs3c5SmAZ/xPG0s7NBf8Yc=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/posit-dev/py-htmltools";
     license = lib.licenses.mit;
   };
-}
+})

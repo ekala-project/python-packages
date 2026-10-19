@@ -5,7 +5,7 @@
   lib,
   setuptools,
 }:
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "fitparse";
   version = "1.2.0";
 
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "dtcooper";
     repo = "python-fitparse";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-aO4djG9omc0jogalLitvT5i58cYKXqtvJ5WGBiCv448=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://pythonhosted.org/fitparse/";
     license = lib.licenses.mit;
   };
-}
+})

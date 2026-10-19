@@ -7,7 +7,7 @@
   yarl,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aiormq";
   version = "9.6.4";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mosquito";
     repo = "aiormq";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-GFeOwjSQ1+nxP9hgNoELoEInTmhhO0JnNeoe2qfWNcg=";
   };
 
@@ -43,4 +43,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mosquito/aiormq";
     license = lib.licenses.asl20;
   };
-}
+})

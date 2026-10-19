@@ -5,7 +5,7 @@
   poetry-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "expecttest";
   version = "0.3.0";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pytorch";
     repo = "expecttest";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-/BMaQD3ZgYiprRYZ/fIlW7mStyFGzsjqup62tegBP7Y=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pytorch/expecttest";
     license = lib.licenses.mit;
   };
-}
+})

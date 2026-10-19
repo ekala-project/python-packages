@@ -8,7 +8,7 @@
   pkg-config,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mysqlclient";
   version = "2.2.8";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
 
   # Tests need a MySQL database
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-jtIMVhWpFdpFG7MIx9AwZkik/ZooCbqVyZJpAAYwYZk=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/PyMySQL/mysqlclient-python";
     license = lib.licenses.gpl2Only;
   };
-}
+})

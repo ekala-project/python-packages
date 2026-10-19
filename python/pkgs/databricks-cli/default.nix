@@ -16,7 +16,7 @@
   tabulate,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "databricks-cli";
   version = "0.18.0";
   pyproject = true;
@@ -24,7 +24,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "databricks";
     repo = "databricks-cli";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-dH95C2AY/B6F9BROr6rh+gVtKqxsg1gyEU5MzCd5aqs=";
   };
 
@@ -47,4 +47,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/databricks/databricks-cli";
     license = lib.licenses.asl20;
   };
-}
+})

@@ -8,7 +8,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "geniushub-client";
   version = "0.7.4";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "manzanotti";
     repo = "geniushub-client";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-6jVLqOf9OmxynUOjEuOPI/Pvbv3NYAbWE3glwBAY4p8=";
   };
 
@@ -25,7 +25,7 @@ buildPythonPackage rec {
   postPatch = ''
     substituteInPlace setup.py \
       --replace 'VERSION = os.environ["GITHUB_REF_NAME"]' "" \
-      --replace "version=VERSION," 'version="${version}",'
+      --replace "version=VERSION," 'version="${finalAttrs.version}",'
   '';
 
   dependencies = [ aiohttp ];
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/manzanotti/geniushub-client";
     license = lib.licenses.mit;
   };
-}
+})

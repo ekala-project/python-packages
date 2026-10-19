@@ -7,7 +7,7 @@
   websockets,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aiorpcx";
   version = "0.25.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "kyuupichan";
     repo = "aiorpcX";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-mFg9mWrlnfXiQpgZ1rxvUy9TBfwy41XEKmsCf2nvxGo=";
   };
 
@@ -44,4 +44,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/kyuupichan/aiorpcX";
     license = lib.licenses.mit;
   };
-}
+})

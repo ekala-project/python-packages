@@ -6,7 +6,7 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "suds";
   version = "1.2.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "suds-community";
     repo = "suds";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-YdL+zDelRspQ6VMqa45vK1DDS3HjFvKE1P02USVBrEo=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/suds-community/suds";
     license = lib.licenses.lgpl3Plus;
   };
-}
+})

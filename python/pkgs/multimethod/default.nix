@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "multimethod";
   version = "2.0.2";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "coady";
     repo = "multimethod";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-0En3NdLLmS/4bw0I3z9xxKa85tECi1rjmpZyxYuZk3w=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     changelog = "https://github.com/coady/multimethod/blob/${src.tag}/CHANGELOG.md";
     license = lib.licenses.asl20;
   };
-}
+})

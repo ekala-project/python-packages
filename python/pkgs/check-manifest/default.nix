@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "check-manifest";
   version = "0.51";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mgedmin";
     repo = "check-manifest";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-tT6xQZwqJIsyrO9BjWweIeNgYaopziewerVBk0mFVYg=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     mainProgram = "check-manifest";
   };
-}
+})

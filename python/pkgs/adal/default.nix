@@ -9,7 +9,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "adal";
   version = "1.2.7";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "AzureAD";
     repo = "azure-activedirectory-library-for-python";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-HE8/P0aohoZNeMdcQVKdz6M31FMrjsd7oVytiaD0idI=";
   };
 
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/AzureAD/azure-activedirectory-library-for-python";
     license = lib.licenses.mit;
   };
-}
+})

@@ -17,13 +17,13 @@
   virtualenv,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyscaffoldext-custom-extension";
   version = "0.6.3";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-xHtKNqLSCTlbbXubADfLYjD3/53WfM65rRuh9RsyeN4=";
   };
 
@@ -60,4 +60,4 @@ buildPythonPackage rec {
     homepage = "https://pypi.org/project/pyscaffoldext-custom-extension/";
     license = lib.licenses.mit;
   };
-}
+})

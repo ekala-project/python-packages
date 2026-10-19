@@ -14,14 +14,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "google-cloud-pubsub";
   version = "2.40.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "google_cloud_pubsub";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-/n1+t291P2rrzdovTf9TZ0jRmZFH9k2VWlVPVyq7FYU=";
   };
 
@@ -55,4 +55,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/googleapis/python-pubsub";
     license = lib.licenses.asl20;
   };
-}
+})

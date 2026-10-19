@@ -10,13 +10,13 @@
   trio,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ignorant";
   version = "1.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-SLjED08uI+RjX+E0WHTQceReTEaY9WLPhXR3n0fP080=";
   };
 
@@ -46,4 +46,4 @@ buildPythonPackage rec {
     homepage = "https://pypi.org/project/ignorant/";
     license = lib.licenses.gpl3Only;
   };
-}
+})

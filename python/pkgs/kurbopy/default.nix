@@ -9,13 +9,13 @@
   rustPlatform,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "kurbopy";
   version = "0.13.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-JiXNgUeY2booOp1zaWtCuEqdyp/CxXy4rUo5kKmq0eQ=";
   };
 
@@ -47,4 +47,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/simoncozens/kurbopy";
     license = lib.licenses.asl20;
   };
-}
+})

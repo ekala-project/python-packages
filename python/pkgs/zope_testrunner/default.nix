@@ -7,14 +7,14 @@
   zope_exceptions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "zope.testrunner";
   version = "8.2";
   pyproject = true;
 
   src = fetchPypi {
     pname = "zope_testrunner";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-H0AWw+6FA6BplGAApVR5ZG2wqD7UzSvI5Uz7bCfYiUY=";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/zopefoundation/zope.testrunner";
     license = lib.licenses.zpl21;
   };
-}
+})

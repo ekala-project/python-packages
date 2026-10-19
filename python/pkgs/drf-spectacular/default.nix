@@ -28,7 +28,7 @@
   uritemplate,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "drf-spectacular";
   version = "0.30.0";
   pyproject = true;
@@ -36,7 +36,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "tfranzel";
     repo = "drf-spectacular";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-CuN3ZmFQBLUlRteXVcWF/oE9vvLcaFAoEbkF3hHQLgQ=";
   };
 
@@ -59,4 +59,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/tfranzel/drf-spectacular";
     license = lib.licenses.bsd3;
   };
-}
+})

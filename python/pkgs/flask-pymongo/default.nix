@@ -8,14 +8,14 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "flask-pymongo";
   version = "3.0.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "flask_pymongo";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-0iW1HCHOyi5nDmzKebXFhK0XuWJStI6E47Qj3bczBMw=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     description = "PyMongo support for Flask applications";
     license = lib.licenses.bsd2;
   };
-}
+})

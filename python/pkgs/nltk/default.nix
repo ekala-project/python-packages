@@ -12,13 +12,13 @@
   tqdm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "nltk";
   version = "3.10.3";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-u5MnpGHDgRwvpJAOA4QEAfISat+zDABygnxDO9JETqQ=";
   };
 
@@ -45,4 +45,4 @@ buildPythonPackage rec {
     homepage = "http://nltk.org/";
     license = lib.licenses.asl20;
   };
-}
+})

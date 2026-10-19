@@ -11,13 +11,13 @@
   pytest,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytest-console-scripts";
   version = "1.4.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-WoJu2EzAr6IC655EOB19di973ajgwj+feafx9Ez0qJU=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/kvas-it/pytest-console-scripts";
     license = lib.licenses.mit;
   };
-}
+})

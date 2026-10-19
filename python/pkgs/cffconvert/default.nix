@@ -13,7 +13,7 @@
   pytest-cov-stub,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "cffconvert";
   version = "2.0.0";
   pyproject = true;
@@ -57,4 +57,4 @@ buildPythonPackage rec {
     license = lib.licenses.asl20;
     mainProgram = "cffconvert";
   };
-}
+})

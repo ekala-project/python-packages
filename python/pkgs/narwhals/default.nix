@@ -10,7 +10,7 @@
   rich,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "narwhals";
   version = "2.16.0";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "narwhals-dev";
     repo = "narwhals";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-k7CeM8Q4JgKbkLisAaVrljro4diOf0K0immek6AI0vM=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/narwhals-dev/narwhals";
     license = lib.licenses.mit;
   };
-}
+})

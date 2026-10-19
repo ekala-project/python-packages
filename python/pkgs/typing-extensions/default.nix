@@ -5,7 +5,7 @@
   flit-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "typing-extensions";
   version = "4.16.0";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "python";
     repo = "typing_extensions";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-L1BRIDYz0YqYE4geKTxIkbCbzTGz7AtrbpB5vR8T4dw=";
   };
 
@@ -25,4 +25,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/python/typing";
     license = lib.licenses.psfl;
   };
-}
+})

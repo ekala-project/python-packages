@@ -11,7 +11,7 @@
   pyotp,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pykeepass";
   version = "4.2.0";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "libkeepass";
     repo = "pykeepass";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-MGlkpnWTBO7m3u1v8yZiKMtXnEv+rsy6+J1mJILdx0I=";
   };
 
@@ -43,4 +43,4 @@ buildPythonPackage rec {
     description = "Python library to interact with keepass databases (supports KDBX3 and KDBX4)";
     license = lib.licenses.gpl3Only;
   };
-}
+})

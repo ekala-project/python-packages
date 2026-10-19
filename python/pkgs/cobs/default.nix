@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "cobs";
   version = "1.2.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-291eMhEdcnhvg9DCaSFdzWrGKbGsGWLGh4Ih87LKmNo=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/cmcqueen/cobs-python/";
     license = lib.licenses.mit;
   };
-}
+})

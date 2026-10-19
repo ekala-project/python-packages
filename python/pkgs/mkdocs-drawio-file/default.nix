@@ -10,14 +10,14 @@
   requests,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mkdocs-drawio-file";
   version = "1.5.2";
   pyproject = true;
 
   src = fetchPypi {
     pname = "mkdocs_drawio_file";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-5OPaG98m7ycxtEUyAYWunomHwq+r10VBnzza3kYtHhE=";
   };
 
@@ -48,4 +48,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/onixpro/mkdocs-drawio-file/";
     license = lib.licenses.mit;
   };
-}
+})

@@ -6,7 +6,7 @@
   sphinx,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "sphinx-lv2-theme";
   version = "1.4.6";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitLab {
     owner = "LV2";
     repo = "sphinx_lv2_theme";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-WOunukFWa4AMrLpeKjuvmFT+3GhCzV3k/hl4mQXN0GQ=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://gitlab.com/lv2/sphinx_lv2_theme";
     license = lib.licenses.isc;
   };
-}
+})

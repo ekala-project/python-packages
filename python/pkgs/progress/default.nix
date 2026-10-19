@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "progress";
   version = "1.6.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-wbpxn4Ys6IUjKnWeq0eXH+dN/Hu3arilHvWUC601CGw=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     description = "Easy to use progress bars";
     license = lib.licenses.mit;
   };
-}
+})

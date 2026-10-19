@@ -12,7 +12,7 @@
   xdoctest,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ubelt";
   version = "1.4.3";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Erotemic";
     repo = "ubelt";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-LCewB9K4nGw/uyGK35mcesJYXju2N0FsdLW1XkPLD+I=";
   };
 
@@ -48,4 +48,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Erotemic/ubelt";
     license = lib.licenses.asl20;
   };
-}
+})

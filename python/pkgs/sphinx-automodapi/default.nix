@@ -8,7 +8,7 @@
   sphinx,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "sphinx-automodapi";
   version = "0.22.0";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "astropy";
     repo = "sphinx-automodapi";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-F5QAHjnLjvcdZOtpY2UIaZliRIv5rciDHWi6DQ9tUmc=";
     leaveDotGit = true;
   };
@@ -46,4 +46,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/astropy/sphinx-automodapi";
     license = lib.licenses.bsd3;
   };
-}
+})

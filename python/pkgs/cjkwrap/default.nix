@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "cjkwrap";
   version = "2.2";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitLab {
     owner = "fgallaire";
     repo = "cjkwrap";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-0wTx3rnlUfQEE2/Z8Y7iwlsHk+CIy6ut+QIpC5yg4aM=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://f.gallai.re/cjkwrap";
     license = lib.licenses.lgpl3Plus;
   };
-}
+})

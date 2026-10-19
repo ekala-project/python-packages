@@ -9,7 +9,7 @@
   pydantic,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pydantic-compat";
   version = "0.1.2";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pyapp-kit";
     repo = "pydantic-compat";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     leaveDotGit = true;
     hash = "sha256-LU+NaQd0W2nRqHmnIcSXfEgIN+TIBkkR871+40Z+WR4=";
   };
@@ -43,4 +43,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pyapp-kit/pydantic-compat";
     license = lib.licenses.bsd3;
   };
-}
+})

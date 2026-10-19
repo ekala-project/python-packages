@@ -8,7 +8,7 @@
   rustPlatform,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jsonschema-rs";
   version = "0.46.5";
 
@@ -16,7 +16,7 @@ buildPythonPackage rec {
 
   # Fetching from Pypi, because there is no Cargo.lock in the GitHub repo.
   src = fetchPypi {
-    inherit version;
+    inherit (finalAttrs) version;
     pname = "jsonschema_rs";
     hash = "sha256-hX434HWi2fbyPepYpVmlW2Y9OHmiUhcABLVpBz2rHvM=";
   };
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Stranger6667/jsonschema/tree/master/crates/jsonschema-py";
     license = lib.licenses.mit;
   };
-}
+})

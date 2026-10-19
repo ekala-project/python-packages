@@ -9,7 +9,7 @@
   nix-update-script,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "blake3";
   version = "1.0.8";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "oconnor663";
     repo = "blake3-py";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-gwPGSah9qzApDwsBNABRLPZGrpaO3WArHoK6Jj6WJzo=";
   };
 
@@ -53,4 +53,4 @@ buildPythonPackage rec {
       asl20
     ];
   };
-}
+})

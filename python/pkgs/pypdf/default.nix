@@ -12,7 +12,7 @@
   pillow,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pypdf";
   version = "6.18.0";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "py-pdf";
     repo = "pypdf";
-    tag = version;
+    tag = finalAttrs.version;
     fetchSubmodules = true;
     hash = "sha256-If4wdvBABg+ixRaw3oHpisObsmTdbLQlrQEJt+NDrI0=";
   };
@@ -46,4 +46,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/py-pdf/pypdf";
     license = lib.licenses.bsd3;
   };
-}
+})

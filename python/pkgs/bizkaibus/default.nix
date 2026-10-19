@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "bizkaibus";
   version = "0.2.0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "UgaitzEtxebarria";
     repo = "BizkaibusRTPI";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-TM02pSSOELRGSwsKc5C+34W94K6mnS0C69aijsPqSWs=";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/UgaitzEtxebarria/BizkaibusRTPI";
     license = lib.licenses.mit;
   };
-}
+})

@@ -6,7 +6,7 @@
   poetry-core,
   pytestCheckHook,
 }:
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "bitvector-for-humans";
   version = "0.14.1";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "JnyJny";
     repo = "bitvector";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-GVTRD83tq/Hea53US4drOD5ruoYCLTVd24aZOSdDsSo=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     description = "This simple bit vector implementation aims to make addressing single bits a little less fiddly";
     license = lib.licenses.asl20;
   };
-}
+})

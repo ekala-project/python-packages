@@ -16,7 +16,7 @@
   beautifulsoup4,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "sphinx-autoapi";
   version = "3.8.1";
   pyproject = true;
@@ -24,7 +24,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "readthedocs";
     repo = "sphinx-autoapi";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-WvatLBJGTqQJbRV9wnac7oBRX+Az3mEHLkbCqNFQIYk=";
   };
 
@@ -48,4 +48,4 @@ buildPythonPackage rec {
     '';
     license = lib.licenses.mit;
   };
-}
+})

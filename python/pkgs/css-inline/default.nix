@@ -14,7 +14,7 @@
   hypothesis,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "css-inline";
   version = "0.21.0";
   pyproject = true;
@@ -22,7 +22,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Stranger6667";
     repo = "css-inline";
-    tag = "python-v${version}";
+    tag = "python-v${finalAttrs.version}";
     hash = "sha256-hXrcomE//BScA395zXSKQayeRn8G8ivfcIJkIKu+PUE=";
   };
 
@@ -60,4 +60,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Stranger6667/css-inline";
     license = lib.licenses.mit;
   };
-}
+})

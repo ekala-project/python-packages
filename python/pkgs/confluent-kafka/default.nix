@@ -25,7 +25,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "confluent-kafka";
   version = "2.15.0";
   pyproject = true;
@@ -33,7 +33,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "confluentinc";
     repo = "confluent-kafka-python";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-ZKeIHfFSI4o2hXttveS8rclEH3wMkl8wJiy7HFjScww=";
   };
 
@@ -83,4 +83,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/confluentinc/confluent-kafka-python";
     license = lib.licenses.asl20;
   };
-}
+})

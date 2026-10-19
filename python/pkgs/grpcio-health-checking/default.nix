@@ -8,14 +8,14 @@
   protobuf,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "grpcio-health-checking";
   version = "1.83.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "grpcio_health_checking";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-1gkk5vutOPNcNyd5vF62UaAORG1tJPHRxy8UKXodDlY=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://pypi.org/project/grpcio-health-checking/";
     license = with lib.licenses; [ asl20 ];
   };
-}
+})

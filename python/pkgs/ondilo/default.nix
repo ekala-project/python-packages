@@ -8,7 +8,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ondilo";
   version = "0.5.0";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "JeromeHXP";
     repo = "ondilo";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-l9pmamJbB/FAqB49S4vQAan9Wgj3qu1J2pboQO1Hg/Q=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/JeromeHXP/ondilo";
     license = lib.licenses.mit;
   };
-}
+})

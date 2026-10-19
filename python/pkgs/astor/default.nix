@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "astor";
   version = "0.8.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-am7/2pP04c6fYYd5st0dnYTx4ygSwjops//2/X9j+l4=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/berkerpeksag/astor";
     license = lib.licenses.bsd3;
   };
-}
+})

@@ -5,13 +5,13 @@
   hatchling,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "txaio";
   version = "26.6.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-PukAsjMck0V1MP3bzMGjIMTi16yPkHPQHD++h3YsyzU=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/crossbario/txaio";
     license = lib.licenses.mit;
   };
-}
+})

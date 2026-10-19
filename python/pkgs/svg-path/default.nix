@@ -6,7 +6,7 @@
   pillow,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "svg.path";
   version = "7.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "regebro";
     repo = "svg.path";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-x1u56O3HilA7Zmkrsot6Nh9E1e88qHwYnk1ySs08tbQ=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/regebro/svg.path";
     license = lib.licenses.mit;
   };
-}
+})

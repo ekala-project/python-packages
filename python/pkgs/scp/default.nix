@@ -6,13 +6,13 @@
   paramiko,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "scp";
   version = "0.16.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-PysmC/m9TCtoV/aXodfo7cJvpWkoK3cCfoSd/h5IWAo=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     description = "SCP module for paramiko";
     license = lib.licenses.lgpl21Only;
   };
-}
+})

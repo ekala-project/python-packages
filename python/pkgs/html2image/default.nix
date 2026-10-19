@@ -7,7 +7,7 @@
   websocket-client,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "html2image";
   version = "2.0.7";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "vgalin";
     repo = "html2image";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-qGp6i4fNmduTZfdxNvYJTAQV/Ovm3XFNOJ8uSj6Ipic=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/vgalin/html2image";
     license = lib.licenses.mit;
   };
-}
+})

@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pygtrie";
   version = "2.6.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-GTRhMSYHC07FGjzvzwyUzrsBOQQ7REwPAkhsrr0NgBE=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mina86/pygtrie";
     license = lib.licenses.asl20;
   };
-}
+})

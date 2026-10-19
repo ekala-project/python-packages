@@ -8,7 +8,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "castepxbin";
   version = "0.3.1";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "zhubonan";
     repo = "castepxbin";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-M+OoKr9ODIp47gt64hf47A1PblyZpBzulKI7nEm8hdo=";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/zhubonan/castepxbin";
     license = lib.licenses.mit;
   };
-}
+})

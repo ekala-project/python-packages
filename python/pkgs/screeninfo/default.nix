@@ -9,7 +9,7 @@
   poetry-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "screeninfo";
   version = "0.8.1";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "rr-";
     repo = "screeninfo";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-TEy4wff0eRRkX98yK9054d33Tm6G6qWrd9Iv+ITcFmA=";
   };
 
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/rr-/screeninfo";
     license = lib.licenses.mit;
   };
-}
+})

@@ -8,13 +8,13 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "protobuf3-to-dict";
   version = "0.1.5";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     sha256 = "0nibblvj3n20zvq6d73zalbjqjby0w8ji5mim7inhn7vb9dw4hhy";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/kaporzhu/protobuf-to-dict";
     license = lib.licenses.publicDomain;
   };
-}
+})

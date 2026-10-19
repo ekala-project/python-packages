@@ -8,7 +8,7 @@
   versioneer,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pydata-google-auth";
   version = "1.9.1";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     repo = "pydata-google-auth";
     owner = "pydata";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-vetijE+BQAt/8Dg3p2FunrzPyyNG9O2W6Y9sbWNFUnc=";
   };
 
@@ -44,4 +44,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pydata/pydata-google-auth";
     license = lib.licenses.bsd3;
   };
-}
+})

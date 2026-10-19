@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "chainmap";
   version = "1.0.3";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-5CqqSz4vZhAqEb/VYwaXBL+/2E/ctRe1ZO/9c2v1PNk=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://bitbucket.org/jeunice/chainmap";
     license = lib.licenses.psfl;
   };
-}
+})

@@ -16,13 +16,13 @@
   urllib3,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "twine";
   version = "7.0.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-hc2ynFGO/vhnNgrkrNSw39YchlSiL8oI5vhTnwUCIXc=";
   };
 
@@ -51,4 +51,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pypa/twine";
     license = lib.licenses.asl20;
   };
-}
+})

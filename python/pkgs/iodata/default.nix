@@ -11,7 +11,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "iodata";
   version = "1.0.1";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "theochem";
     repo = "iodata";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-ly5nEqgxCt5uU+UNQx/7zgrh+w1Plngarw29+Ns68ts=";
   };
 
@@ -47,4 +47,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/theochem/iodata";
     license = lib.licenses.lgpl3Only;
   };
-}
+})

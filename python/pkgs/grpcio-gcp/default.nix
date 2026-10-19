@@ -6,13 +6,13 @@
   grpcio,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "grpcio-gcp";
   version = "0.2.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-4pJgXv/H2jm3qHNMcZr7EuxLU2Kt01KNivrTqjqpBXw=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://grpc.io";
     license = lib.licenses.asl20;
   };
-}
+})

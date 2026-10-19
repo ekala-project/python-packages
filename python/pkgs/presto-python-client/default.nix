@@ -10,7 +10,7 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "presto-python-client";
   version = "0.8.4";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "prestodb";
     repo = "presto-python-client";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-ZpVcmX6jRu4PJ1RxtIR8i0EpfhhhP8HZVVkB7CWLrsM=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/prestodb/presto-python-client";
     license = lib.licenses.asl20;
   };
-}
+})

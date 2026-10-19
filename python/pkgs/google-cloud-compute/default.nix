@@ -8,14 +8,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "google-cloud-compute";
   version = "1.52.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "google_cloud_compute";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-PSZDc1VdtxF7j1irKQumTRP4EiM+FS6lNm8gjHNvrlw=";
   };
 
@@ -44,4 +44,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-compute";
     license = lib.licenses.asl20;
   };
-}
+})

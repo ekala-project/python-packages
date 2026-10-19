@@ -9,14 +9,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "google-cloud-os-config";
   version = "1.25.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "google_cloud_os_config";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-LgJxfWoNq+j26/e5s36yi19w4zWL18rwzdvPhDswPaE=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-os-config";
     license = lib.licenses.asl20;
   };
-}
+})

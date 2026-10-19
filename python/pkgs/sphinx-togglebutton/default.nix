@@ -8,13 +8,13 @@
   sphinx,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "sphinx-togglebutton";
   version = "0.4.5";
   pyproject = true;
 
   src = fetchPypi {
-    inherit version;
+    inherit (finalAttrs) version;
     pname = "sphinx_togglebutton";
     hash = "sha256-yHDfvTvG4Rm1D/mjemT4mRkCJp6FZyiTHH2Jh36NSz0=";
   };
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/executablebooks/sphinx-togglebutton";
     license = lib.licenses.mit;
   };
-}
+})

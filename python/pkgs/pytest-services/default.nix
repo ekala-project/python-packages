@@ -10,7 +10,7 @@
   zc-lockfile,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytest-services";
   version = "2.2.2";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pytest-dev";
     repo = "pytest-services";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-kWgqb7+3/hZKUz7B3PnfxHZq6yU3JUeJ+mruqrMD/NE=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pytest-dev/pytest-services";
     license = lib.licenses.mit;
   };
-}
+})

@@ -7,7 +7,7 @@
   flit-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "asgineer";
   version = "0.9.5";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "almarklein";
     repo = "asgineer";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-8qI5eHt+UmQGZNCn12Iup9dIVd+aI6r3Z1R+u+SziMc=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://asgineer.readthedocs.io";
     license = lib.licenses.bsd2;
   };
-}
+})

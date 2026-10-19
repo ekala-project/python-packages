@@ -10,7 +10,7 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "uharfbuzz";
   version = "0.56.1";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "harfbuzz";
     repo = "uharfbuzz";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     fetchSubmodules = true;
     hash = "sha256-pxfLUOx4oeymrOb4KnRjEIu4CXp0HKUbWeUT9144k8Q=";
   };
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     description = "Streamlined Cython bindings for the harfbuzz shaping engine";
     license = lib.licenses.asl20;
   };
-}
+})

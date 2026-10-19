@@ -11,14 +11,14 @@
   packaging,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyproject-api";
   version = "1.11.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "pyproject_api";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-uIB9haKT5snxM+ZXWUb+1F8dQrItWMeAszqiQhp5lUk=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/tox-dev/pyproject-api";
     license = lib.licenses.mit;
   };
-}
+})

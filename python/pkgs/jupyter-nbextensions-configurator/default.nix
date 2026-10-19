@@ -12,7 +12,7 @@
   selenium,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jupyter-nbextensions-configurator";
   version = "0.6.4";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "jupyter-contrib";
     repo = "jupyter_nbextensions_configurator";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-U4M6pGV/DdE+DOVMVaoBXOhfRERt+yUa+gADgqRRLn4=";
   };
 
@@ -53,4 +53,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jupyter-contrib/jupyter_nbextensions_configurator";
     license = lib.licenses.bsd3;
   };
-}
+})

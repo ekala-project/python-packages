@@ -7,7 +7,7 @@
   psycopg,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-pgactivity";
   version = "1.8.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "AmbitionEng";
     repo = "django-pgactivity";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-e+PodpFsGxx4SE6zQD2qVDAXx44xeIdsBO7YsdbSjiU=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/AmbitionEng/django-pgactivity";
     license = lib.licenses.bsd3;
   };
-}
+})

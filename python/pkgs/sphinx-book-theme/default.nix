@@ -6,14 +6,14 @@
   pydata-sphinx-theme,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "sphinx-book-theme";
   version = "1.4.0";
 
   format = "wheel";
 
   src = fetchPypi {
-    inherit version;
+    inherit (finalAttrs) version;
     format = "wheel";
     dist = "py3";
     python = "py3";
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/executablebooks/sphinx-book-theme";
     license = lib.licenses.bsd3;
   };
-}
+})

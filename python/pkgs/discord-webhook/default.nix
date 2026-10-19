@@ -9,7 +9,7 @@
   requests,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "discord-webhook";
   version = "1.4.1";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "lovvskillz";
     repo = "python-discord-webhook";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-7nVvtXo1XjQExZSCF9VaYSCeEByJY2jn5KbVGTi33f0=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/lovvskillz/python-discord-webhook";
     license = lib.licenses.mit;
   };
-}
+})

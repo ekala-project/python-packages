@@ -7,7 +7,7 @@
   sphinxHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "sphinxemoji";
   version = "0.3.2";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "sphinx-contrib";
     repo = "emojicodes";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-2/2fOIxjF4vs90uqZyzfidrh+P/MHa+LTf1RsQYmgZ0=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/sphinx-contrib/emojicodes";
     license = lib.licenses.mit;
   };
-}
+})

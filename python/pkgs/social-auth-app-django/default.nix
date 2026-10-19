@@ -8,7 +8,7 @@
   pytest-django,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "social-auth-app-django";
   version = "6.0.1";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "python-social-auth";
     repo = "social-app-django";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-5aZQcGPX93XITzJCgL+s5Jxep+qqVbYGvzMXDRpZXdY=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/python-social-auth/social-app-django";
     license = lib.licenses.bsd3;
   };
-}
+})

@@ -22,7 +22,7 @@ let
     ln -s "${bluez.test}/test/pbap-client" "$out/bin/pbap-client"
   '';
 in
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "python-dbusmock";
   version = "0.38.1";
   pyproject = true;
@@ -30,7 +30,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "martinpitt";
     repo = "python-dbusmock";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-nOsTgeZC0qvPOwx0woZZDxDxZm1ODG/bwltBhRCT8vY=";
   };
 
@@ -49,4 +49,4 @@ buildPythonPackage rec {
     license = lib.licenses.lgpl3Plus;
     platforms = lib.platforms.linux;
   };
-}
+})

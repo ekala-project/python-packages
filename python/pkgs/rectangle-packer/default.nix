@@ -5,7 +5,7 @@
   cython,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "rectangle-packer";
   version = "2.1.0";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Penlect";
     repo = "rectangle-packer";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-rdryJvY1kSRVIlC8LOr+//0fQLWEIExRQxuI3W53n18=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
 
   pythonImportsCheck = [ "rpack" ];
 
-}
+})

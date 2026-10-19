@@ -19,7 +19,7 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "groq";
   version = "1.7.0";
   pyproject = true;
@@ -27,7 +27,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "groq";
     repo = "groq-python";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-GqGiD4gwroz5i0W2MewgId+bliPTmmSGR/zMs9EV7q8=";
   };
 
@@ -62,4 +62,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/groq/groq-python";
     license = lib.licenses.asl20;
   };
-}
+})

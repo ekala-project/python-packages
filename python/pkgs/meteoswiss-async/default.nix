@@ -11,7 +11,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "meteoswiss-async";
   version = "0.1.1";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "albertomontesg";
     repo = "meteoswiss-async";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-xFvfyLZvBfnbzShKN+94piNUVjV1cfi4jWpc/Xw6XG4=";
   };
 
@@ -49,4 +49,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/albertomontesg/meteoswiss-async";
     license = lib.licenses.mit;
   };
-}
+})

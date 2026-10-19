@@ -6,7 +6,7 @@
   pyserial,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ppk2-api";
   version = "0.9.2";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "IRNAS";
     repo = "ppk2-api-python";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-fubDFtOXiv2YFYUCOUbuyXs1sHgs0/6ZVK9sAwxQ+Pk=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/IRNAS/ppk2-api-python";
     license = lib.licenses.gpl2Only;
   };
-}
+})

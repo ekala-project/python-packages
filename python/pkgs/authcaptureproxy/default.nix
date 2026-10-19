@@ -19,7 +19,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "authcaptureproxy";
   version = "1.3.7";
   pyproject = true;
@@ -27,7 +27,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "alandtse";
     repo = "auth_capture_proxy";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-3osyh4Er0bZ8dvOtDV1w66zOWuzECIWeL8M90gqi+D8=";
   };
 
@@ -63,4 +63,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/alandtse/auth_capture_proxy";
     license = lib.licenses.asl20;
   };
-}
+})

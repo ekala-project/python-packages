@@ -6,13 +6,13 @@
   snowballstemmer,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pydocstyle";
   version = "6.3.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-fOQ/DArIewdJTrnAtGLAtz5v8naAfyBNa1Ptxyt+ROE=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     description = "Python docstring style checker";
     license = lib.licenses.mit;
   };
-}
+})

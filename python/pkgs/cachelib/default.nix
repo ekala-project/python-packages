@@ -6,7 +6,7 @@
   pytest-xprocess,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "cachelib";
   version = "0.17.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pallets";
     repo = "cachelib";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-egAg0X4xpbvtiAXU6Cu/IIs8/GJAy5i73gLIkdnvOmc=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     description = "Collection of cache libraries in the same API interface";
     license = lib.licenses.bsd3;
   };
-}
+})

@@ -8,7 +8,7 @@
   requests,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "requests-pkcs12";
   version = "1.27";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "m-click";
     repo = "requests_pkcs12";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-4B7jL3OubIF8ZOYzsODltZCAHhb+PM18uJDOssuM6R4=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/m-click/requests_pkcs12";
     license = lib.licenses.isc;
   };
-}
+})

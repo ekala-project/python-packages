@@ -7,14 +7,14 @@
   llama-index-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "llama-index-node-parser-docling";
   version = "0.5.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "llama_index_node_parser_docling";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-4xp1UKDaZn/wFjGTHjaKr5e3AGm7Ce19pDZkaMIT8H8=";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     homepage = "https://pypi.org/project/llama-index-node-parser-docling/";
     license = lib.licenses.mit;
   };
-}
+})

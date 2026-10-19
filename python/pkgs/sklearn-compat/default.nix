@@ -6,7 +6,7 @@
   scikit-learn,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "sklearn-compat";
   version = "0.1.6";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "sklearn-compat";
     repo = "sklearn-compat";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-bziweext3Mqq0Wa9KlX1gp5NpVYX8IpcvS1gTjxQa70=";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/sklearn-compat/sklearn-compat";
     license = lib.licenses.bsd3;
   };
-}
+})

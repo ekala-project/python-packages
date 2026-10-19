@@ -6,13 +6,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "kaiterra-async-client";
   version = "1.1.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-Wap+yJaIIwPfOUtbVijr85BU3F/JIN2p7nRWW3tsPP8=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Michsior14/python-kaiterra-async-client";
     license = lib.licenses.mit;
   };
-}
+})

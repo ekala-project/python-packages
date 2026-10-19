@@ -9,14 +9,14 @@
   s3fs,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "llama-index-readers-s3";
   version = "0.6.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "llama_index_readers_s3";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-cK5XmH4F0TZt6IMJvAnmEs7UWkekrrbEAIvd/CE33xw=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/run-llama/llama_index/tree/main/llama-index-integrations/readers/llama-index-readers-s3";
     license = lib.licenses.mit;
   };
-}
+})

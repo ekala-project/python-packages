@@ -10,7 +10,7 @@
   yarl,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aiohttp-middlewares";
   version = "2.4.0";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "playpauseandstop";
     repo = "aiohttp-middlewares";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-jUH1XhkytRwR76wUTsGQGu6m8s+SZ/GO114Lz9atwE8=";
   };
 
@@ -56,4 +56,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/playpauseandstop/aiohttp-middlewares";
     license = lib.licenses.bsd3;
   };
-}
+})

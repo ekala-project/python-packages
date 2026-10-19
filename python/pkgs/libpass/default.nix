@@ -8,7 +8,7 @@
   lib,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "libpass";
   version = "1.9.3";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "ThirVondukr";
     repo = "passlib";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-fzI9HpGE3wNK41ZSOeA5NAr5T4r3Jzdqe5+SHoWVXUs=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/ThirVondukr/passlib";
     license = lib.licenses.bsd3;
   };
-}
+})

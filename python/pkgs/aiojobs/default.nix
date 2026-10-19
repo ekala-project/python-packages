@@ -9,7 +9,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aiojobs";
   version = "1.4.0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "aio-libs";
     repo = "aiojobs";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-MgGUmDG0b0V/k+mCeiVRnBxa+ChK3URnGv6P8QP7RzQ=";
   };
 
@@ -48,4 +48,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/aio-libs/aiojobs";
     license = lib.licenses.asl20;
   };
-}
+})

@@ -9,7 +9,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-tree-queries";
   version = "0.24";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "feincms";
     repo = "django-tree-queries";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-VPJU/0tnnLSayJhuOO0YOtqegULF6CB6ve8/1ytFydA=";
   };
 
@@ -50,4 +50,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/feincms/django-tree-queries";
     license = lib.licenses.bsd3;
   };
-}
+})

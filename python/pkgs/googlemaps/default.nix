@@ -8,7 +8,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "googlemaps";
   version = "4.10.0";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "googlemaps";
     repo = "google-maps-services-python";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-8oGZEMKUGaDHKq4qIZy10cbLNMmVclJnQE/dx877pNQ=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/googlemaps/google-maps-services-python";
     license = lib.licenses.asl20;
   };
-}
+})

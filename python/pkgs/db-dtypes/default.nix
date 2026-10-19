@@ -9,7 +9,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "db-dtypes";
   version = "1.5.0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "googleapis";
     repo = "python-db-dtypes-pandas";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-cF40Y2J944AojOXKoTzQ/ybTFY4GP5G8KWY6+NWyRT8=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/googleapis/python-db-dtypes-pandas";
     license = lib.licenses.asl20;
   };
-}
+})

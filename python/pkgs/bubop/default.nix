@@ -11,7 +11,7 @@
   click,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "bubop";
   version = "0.2.3";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "bergercookie";
     repo = "bubop";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-NXA3UDOkCoj4dm3UO/X0w2Mpx4bw3yFO6oyOzsPgtrU=";
   };
 
@@ -47,4 +47,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/bergercookie/bubop";
     license = lib.licenses.mit;
   };
-}
+})

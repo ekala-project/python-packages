@@ -6,7 +6,7 @@
   hatchling,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "platformdirs";
   version = "4.11.7";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "tox-dev";
     repo = "platformdirs";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-qjj3f/D3jJJXIRdtHfUXv9eTpfDZDfv9IxmTImLhFjA=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://platformdirs.readthedocs.io/";
     license = lib.licenses.mit;
   };
-}
+})

@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "blockfrost-python";
   version = "0.7.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "blockfrost";
     repo = "blockfrost-python";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-2NuWUK1DthGnMTbZQIaDvF9VF2dVLgYrCUKJIxuq1V0=";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/blockfrost/blockfrost-python";
     license = lib.licenses.asl20;
   };
-}
+})

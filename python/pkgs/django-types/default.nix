@@ -6,14 +6,14 @@
   types-psycopg2,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-types";
   version = "0.24.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "django_types";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-r5A96Lnuljt1lEWaeiDLjqqrF2risyROyqCJ4MVwsNE=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/sbdchd/django-types";
     license = lib.licenses.mit;
   };
-}
+})

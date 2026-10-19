@@ -5,7 +5,7 @@
   uv-build,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "cryptography-vectors";
   # The test vectors must have the same version as the cryptography package
   inherit (cryptography) version src;
@@ -28,4 +28,4 @@ buildPythonPackage rec {
       bsd3
     ];
   };
-}
+})

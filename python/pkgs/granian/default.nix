@@ -16,7 +16,7 @@
   nix-update-script,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "granian";
   version = "2.7.9";
   pyproject = true;
@@ -24,7 +24,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "emmett-framework";
     repo = "granian";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-SYbdLrE/LaPGpzsrW4FBWtKyTM1VTqJ6sWRVbLjvCM8=";
   };
 
@@ -77,4 +77,4 @@ buildPythonPackage rec {
     mainProgram = "granian";
     platforms = lib.platforms.unix;
   };
-}
+})

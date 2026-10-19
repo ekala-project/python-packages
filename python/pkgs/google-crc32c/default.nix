@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "google-crc32c";
   version = "1.8.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "googleapis";
     repo = "python-crc32c";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-bNTWyOWie1tPiptJ6NPCyC5kzcCpgOZ0w5hKVw07iwc=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/googleapis/python-crc32c";
     license = with lib.licenses; [ asl20 ];
   };
-}
+})

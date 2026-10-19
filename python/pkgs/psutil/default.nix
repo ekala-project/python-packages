@@ -7,7 +7,7 @@
   gitUpdater,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "psutil";
   version = "7.2.2";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "giampaolo";
     repo = "psutil";
-    tag = "release-${version}";
+    tag = "release-${finalAttrs.version}";
     hash = "sha256-plBv24QgNzmVMV2lFxCbNwHKtd620thJayWdjs4estw=";
   };
 
@@ -47,4 +47,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/giampaolo/psutil";
     license = lib.licenses.bsd3;
   };
-}
+})

@@ -13,13 +13,13 @@
   zlib,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "grpcio";
   version = "1.83.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-nO5vy/LrV8S0lFF4e/qHvo78HKAqCzJ91LVNRFAuNis=";
   };
 
@@ -77,4 +77,4 @@ buildPythonPackage rec {
     homepage = "https://grpc.io/grpc/python/";
     license = lib.licenses.asl20;
   };
-}
+})

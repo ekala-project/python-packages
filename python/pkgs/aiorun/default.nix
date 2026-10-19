@@ -8,7 +8,7 @@
   uvloop,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aiorun";
   version = "2025.1.1";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "cjrh";
     repo = "aiorun";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-YqUlWf79EbC47BETBDjo8hzg5jhL4LiWLKGr1Qy4AbM=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/cjrh/aiorun";
     license = lib.licenses.asl20;
   };
-}
+})

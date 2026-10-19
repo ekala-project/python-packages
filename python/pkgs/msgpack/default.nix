@@ -6,7 +6,7 @@
   cython,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "msgpack";
   version = "1.2.2";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "msgpack";
     repo = "msgpack-python";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-MMrgG3NudNVvt7xlsn4vUSIEVRGl/BGmXnpus3keGF8=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/msgpack/msgpack-python";
     license = lib.licenses.asl20;
   };
-}
+})

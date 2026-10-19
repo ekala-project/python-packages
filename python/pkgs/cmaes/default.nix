@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "cmaes";
   version = "0.13.1";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "CyberAgentAILab";
     repo = "cmaes";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-GzBAymSb6frMXvHtd1Xl5gK62pYuXKd3XU9TLhe+sJ4=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/CyberAgentAILab/cmaes";
     license = lib.licenses.mit;
   };
-}
+})

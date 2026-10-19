@@ -12,13 +12,13 @@
   tabulate,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "yoyo-migrations";
   version = "8.2.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-ggYGoD4mLPHNT1niVsKPpEZCUiTVuCo9EnX9eBeFI+Q=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://ollycope.com/software/yoyo";
     license = lib.licenses.asl20;
   };
-}
+})

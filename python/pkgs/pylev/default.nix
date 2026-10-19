@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pylev";
   version = "1.4.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "toastdriven";
     repo = "pylev";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-gZUE2n3VFH9Z93wZocYLw4nsZaEOtN5rt1ttu22T/Tk=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/toastdriven/pylev";
     license = lib.licenses.bsd3;
   };
-}
+})

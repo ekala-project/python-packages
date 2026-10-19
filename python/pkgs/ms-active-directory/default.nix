@@ -11,7 +11,7 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ms-active-directory";
   version = "1.14.1";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "zorn96";
     repo = "ms_active_directory";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-ZFIeG95+G9ofk54bYZpqu8uVfzjqsOrwWlIZvQgIWRI=";
   };
 
@@ -43,4 +43,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/zorn96/ms_active_directory/";
     license = lib.licenses.mit;
   };
-}
+})

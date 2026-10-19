@@ -11,7 +11,7 @@
   responses,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "nuheat";
   version = "1.0.1";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "broox";
     repo = "python-nuheat";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-EsPuwILfKc1Bpvu0Qos7yooC3dBaqf46lWhiSZdu3sc=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/broox/python-nuheat";
     license = lib.licenses.mit;
   };
-}
+})

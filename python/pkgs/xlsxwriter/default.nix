@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "xlsxwriter";
   version = "3.2.9";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "jmcnamara";
     repo = "XlsxWriter";
-    tag = "RELEASE_${version}";
+    tag = "RELEASE_${finalAttrs.version}";
     hash = "sha256-nr7Qw24BzQo/qEpyM9687mUaebzzHv1FAPmsBVdMekg=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     license = lib.licenses.bsd2;
     mainProgram = "vba_extract.py";
   };
-}
+})

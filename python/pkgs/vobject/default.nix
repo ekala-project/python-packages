@@ -8,13 +8,13 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "vobject";
   version = "0.9.9";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-rETl1+IHnYTB1SxQphW5vsSxupWGCMTH/kDL8zJHs44=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/py-vobject/vobject";
     license = lib.licenses.asl20;
   };
-}
+})

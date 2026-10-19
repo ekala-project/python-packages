@@ -5,7 +5,7 @@
   fetchFromGitLab,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "git-versioner";
   version = "7.1";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitLab {
     owner = "alelec";
     repo = "__version__";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-bnpuFJSd4nBXJA75V61kiB+nU5pUzdEAIScfKx7aaGU=";
   };
 
@@ -21,7 +21,7 @@ buildPythonPackage rec {
 
   postPatch = ''
     substituteInPlace pyproject.toml \
-      --replace-fail 'dynamic = ["version"]' 'version = "${version}"'
+      --replace-fail 'dynamic = ["version"]' 'version = "${finalAttrs.version}"'
   '';
 
   pythonImportsCheck = [ "__version__" ];
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://gitlab.com/alelec/__version__";
     license = lib.licenses.mit;
   };
-}
+})

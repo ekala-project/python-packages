@@ -8,7 +8,7 @@
   cloudpickle,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "donfig";
   version = "0.8.1.post1";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pytroll";
     repo = "donfig";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-hF4hzI1MTLgUexRIqwBEEEMV7Az2oDkp5GQQ5282vwE=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pytroll/donfig";
     license = lib.licenses.mit;
   };
-}
+})

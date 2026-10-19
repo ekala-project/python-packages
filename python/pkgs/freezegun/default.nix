@@ -7,13 +7,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "freezegun";
   version = "1.5.5";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-rHdCpsxsJaLDXpKS39VUuJe1F9LewmiRoujevyBcuUo=";
   };
 
@@ -34,4 +34,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/spulec/freezegun";
     license = lib.licenses.asl20;
   };
-}
+})

@@ -7,13 +7,13 @@
   versioningit,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "scramp";
   version = "1.4.17";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-KJcPKevDPfR/mXXIBeXlo2Dv/lsxBF5gfWSztgNw26E=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://codeberg.org/tlocke/scramp";
     license = lib.licenses.mit;
   };
-}
+})

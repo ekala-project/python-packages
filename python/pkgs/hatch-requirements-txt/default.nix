@@ -6,14 +6,14 @@
   packaging,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "hatch-requirements-txt";
   version = "0.4.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "hatch_requirements_txt";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-LGhuV1j9BbtV+n0MGY/dSB+NOqo8aTJg9cDXTONUfSA=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/repo-helper/hatch-requirements-txt";
     license = lib.licenses.mit;
   };
-}
+})

@@ -7,13 +7,13 @@
   python-dateutil,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "hcloud";
   version = "2.23.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-wS3OPxRATqNC15I2KSoV+8TO63hhckoJ3T/mDO9RPgs=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/hetznercloud/hcloud-python";
     license = lib.licenses.mit;
   };
-}
+})

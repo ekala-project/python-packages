@@ -6,13 +6,13 @@
   tornado,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "livereload";
   version = "2.7.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-PZv3wFZz3wbjK+ojtJS402ym0Q99XDyKaYlgjAnJhqk=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/lepture/python-livereload";
     license = lib.licenses.bsd3;
   };
-}
+})

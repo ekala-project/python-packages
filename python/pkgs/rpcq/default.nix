@@ -9,7 +9,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "rpcq";
   version = "3.10.0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "rigetti";
     repo = "rpcq";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-J7jtGXJIF3jp0a0IQZmSR4TWf9D02Luau+Bupmi/d68=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/rigetti/rpcq";
     license = lib.licenses.asl20;
   };
-}
+})

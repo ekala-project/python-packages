@@ -6,14 +6,14 @@
   click,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "click-default-group";
   version = "1.2.4";
   pyproject = true;
 
   src = fetchPypi {
     pname = "click_default_group";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-6z88mewNRWymzSp/CPfU6RdxvvUbAb3ZWAzGRQ/hJR4=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/click-contrib/click-default-group";
     license = lib.licenses.bsd3;
   };
-}
+})

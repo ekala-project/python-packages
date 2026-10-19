@@ -15,7 +15,7 @@
   tag-expressions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "radish-bdd";
   version = "0.18.4";
   pyproject = true;
@@ -23,7 +23,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = pname;
     repo = "radish";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-pnZ/vqjMd1Q/wF1W6joYrIulZSXAzS2G3E5Ke5VSAQg=";
   };
 
@@ -45,4 +45,4 @@ buildPythonPackage rec {
     homepage = "https://radish-bdd.github.io/";
     license = lib.licenses.mit;
   };
-}
+})

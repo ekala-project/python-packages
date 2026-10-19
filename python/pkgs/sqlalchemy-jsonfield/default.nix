@@ -10,7 +10,7 @@
   psycopg2,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "sqlalchemy-jsonfield";
   version = "1.0.3";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "penguinolog";
     repo = "sqlalchemy_jsonfield";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-htzWMItAQ1MdOcWHe9le5UofXi5plNpBqOAkgbPxCYI=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/penguinolog/sqlalchemy_jsonfield";
     license = lib.licenses.asl20;
   };
-}
+})

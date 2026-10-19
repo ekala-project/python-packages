@@ -8,7 +8,7 @@
   urllib3,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "botocore";
   version = "1.42.31";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "boto";
     repo = "botocore";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-avuv1uXKMeSr3SL+BI9XW8tDCQM/dlXFn590di3S03k=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/boto/botocore";
     license = lib.licenses.asl20;
   };
-}
+})

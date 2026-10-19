@@ -7,7 +7,7 @@
   pyyaml,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "dparse";
   version = "0.6.4";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pyupio";
     repo = "dparse";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-LnsmJtWLjV3xoSjacfR9sUwPlOjQTRBWirJVtIJSE8A=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pyupio/dparse";
     license = lib.licenses.mit;
   };
-}
+})

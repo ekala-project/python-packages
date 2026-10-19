@@ -16,7 +16,7 @@
   weasyprint,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "md2pdf";
   version = "3.1.1";
   pyproject = true;
@@ -24,7 +24,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "jmaupetit";
     repo = "md2pdf";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-EZIiuyy2FhHgpCh95/KbYfQpxyPQfDHnB/Q5yo2xVac=";
   };
 
@@ -76,4 +76,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     mainProgram = "md2pdf";
   };
-}
+})

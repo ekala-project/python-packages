@@ -6,13 +6,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-colorful";
   version = "1.3";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-/SRvL7KX7QdNxDSZZtM6HILQMIt/sNbvbi52uQzv/7c=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/charettes/django-colorful";
     license = lib.licenses.mit;
   };
-}
+})

@@ -8,13 +8,13 @@
   tabulate,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "numpydoc";
   version = "1.10.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-P3lw9u7jCRImCmsxrHK7okMoMM1nIlaewX7o0+9f+gE=";
   };
 
@@ -33,4 +33,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/numpy/numpydoc";
     license = lib.licenses.free;
   };
-}
+})

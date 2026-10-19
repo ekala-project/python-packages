@@ -6,13 +6,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-paintstore";
   version = "0.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     sha256 = "12wxgwv1qbkfq7w5i7bm7aidv655c2sxp0ym73qf8606dxbjcwwg";
   };
 
@@ -23,4 +23,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/gsiegman/django-paintstore";
     license = lib.licenses.mit;
   };
-}
+})

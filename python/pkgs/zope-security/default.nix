@@ -13,7 +13,7 @@
   zope-configuration,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "zope-security";
   version = "8.3";
   pyproject = true;
@@ -21,7 +21,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "zopefoundation";
     repo = "zope.security";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-iSWSBjtJe4iEvm+VUEWDvRCBdRz1R6m9mlfPLwh01Sk=";
   };
 
@@ -57,4 +57,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/zopefoundation/zope.security";
     license = lib.licenses.zpl21;
   };
-}
+})

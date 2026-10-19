@@ -14,13 +14,13 @@
   writableTmpDirAsHomeHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "deltalake";
   version = "1.4.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-lX5SYk4dzuNfCSCGjj0Vof6rQPzQ/NRoIjGjPaPUQto=";
   };
 
@@ -64,4 +64,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/delta-io/delta-rs";
     license = lib.licenses.asl20;
   };
-}
+})

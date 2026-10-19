@@ -11,7 +11,7 @@
   libusb1,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "libusb-package";
   version = "1.0.30.0";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pyocd";
     repo = "libusb-package";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-/Q1VovC2864Xu+LidL72Rh/FfyZqSJ8m21WS+FBkOrU=";
   };
 
@@ -48,4 +48,4 @@ buildPythonPackage rec {
     license = lib.licenses.asl20;
     platforms = lib.platforms.linux ++ lib.platforms.darwin;
   };
-}
+})

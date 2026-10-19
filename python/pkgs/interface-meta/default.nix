@@ -6,7 +6,7 @@
   hatch-vcs,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "interface-meta";
   version = "2.0.1";
 
@@ -15,11 +15,11 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "matthewwardrop";
     repo = "interface_meta";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     sha256 = "sha256-1of84/Y/efGlz33FD06M2A7b4cJCKJTKYm+tWHPJzak=";
   };
 
-  env.SETUPTOOLS_SCM_PRETEND_VERSION = version;
+  env.SETUPTOOLS_SCM_PRETEND_VERSION = finalAttrs.version;
 
   build-system = [
     hatchling
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     description = "Convenient way to expose an extensible API with enforced method signatures and consistent documentation";
     license = lib.licenses.mit;
   };
-}
+})

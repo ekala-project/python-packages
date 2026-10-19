@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "unicodedata2";
   version = "17.0.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-15lD0VP19r++P1Wl7GEZhRhL2jf87bPsx1Mi2CrmrTs=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mikekap/unicodedata2";
     license = lib.licenses.asl20;
   };
-}
+})

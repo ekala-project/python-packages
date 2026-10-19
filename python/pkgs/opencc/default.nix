@@ -6,14 +6,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "opencc";
   version = "1.4.2";
   pyproject = true;
 
   src = fetchPypi {
     pname = "opencc";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-R5d5BfEx19nPzsKful2EEVSQfh2nMQMQWkpodE4PTxo=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/BYVoid/OpenCC";
     license = lib.licenses.asl20;
   };
-}
+})

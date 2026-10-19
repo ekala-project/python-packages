@@ -24,13 +24,13 @@
   yarl,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "okta";
   version = "3.4.5";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-fwL2QtieS2j8rplGKXHHTjRWXZsZFHf0JqRL81iW9+8=";
   };
 
@@ -88,4 +88,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/okta/okta-sdk-python";
     license = lib.licenses.asl20;
   };
-}
+})

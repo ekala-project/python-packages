@@ -10,7 +10,7 @@
   cryptography,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mozilla-django-oidc";
   version = "5.0.2";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mozilla";
     repo = "mozilla-django-oidc";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-5J2lzGGdjoXzdzfKdmfUaSM7KQ6Hn7KerBtoKzFsZfY=";
   };
 
@@ -50,4 +50,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mozilla/mozilla-django-oidc";
     license = lib.licenses.mpl20;
   };
-}
+})

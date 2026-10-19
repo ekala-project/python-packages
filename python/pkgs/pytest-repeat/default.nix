@@ -7,14 +7,14 @@
   pytest,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytest-repeat";
   version = "0.9.4";
   pyproject = true;
 
   src = fetchPypi {
     pname = "pytest_repeat";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-2SrBTfqm/8/mkX5dFvDJvII4DBNbA8Kl9BLSY38iRIU=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pytest-dev/pytest-repeat";
     license = lib.licenses.mpl20;
   };
-}
+})

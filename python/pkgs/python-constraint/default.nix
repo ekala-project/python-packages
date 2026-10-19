@@ -7,7 +7,7 @@
   cython,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "python-constraint";
   version = "2.5.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "python-constraint";
     repo = "python-constraint";
-    tag = version;
+    tag = finalAttrs.version;
     sha256 = "sha256-VTecK82VSDoUOkPnuC+PnQYPjPBsaPeWCqm2st6Wwvg=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     downloadPage = "https://github.com/python-constraint/python-constraint/releases";
     license = lib.licenses.bsd2;
   };
-}
+})

@@ -10,13 +10,13 @@
   ruamel-yaml,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   version = "1.8.0";
   pyproject = true;
   pname = "pykwalify";
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-eWsq0+1MuZuIMItTP7L1WcMPpu+0+p/aETR/SD0kWIQ=";
   };
 
@@ -60,4 +60,4 @@ buildPythonPackage rec {
     '';
     license = lib.licenses.mit;
   };
-}
+})

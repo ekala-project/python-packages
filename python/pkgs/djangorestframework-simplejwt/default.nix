@@ -12,14 +12,14 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "djangorestframework-simplejwt";
   version = "5.5.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "djangorestframework_simplejwt";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-5yxVcvUdeAMCEojiBXr8vQPxf+EdSECW9ApGCrx26H8=";
   };
 
@@ -47,4 +47,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/davesque/django-rest-framework-simplejwt";
     license = lib.licenses.mit;
   };
-}
+})

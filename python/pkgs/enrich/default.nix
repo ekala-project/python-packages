@@ -7,13 +7,13 @@
   rich,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "enrich";
   version = "1.2.7";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-Ciqw0pMd/4lHASYC0SNNKj7gAtmjVbXXC+a/VGYAiJM=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pycontribs/enrich";
     license = lib.licenses.mit;
   };
-}
+})

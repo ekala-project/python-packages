@@ -16,14 +16,14 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "georss-client";
   version = "2026.6.1";
   pyproject = true;
   src = fetchFromGitHub {
     owner = "exxamalte";
     repo = "python-georss-client";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-3JaFZY6c5wlJs2yE3KJITJIeCgifzurW7chOfQubQ5w=";
   };
 
@@ -45,4 +45,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/exxamalte/python-georss-client";
     license = lib.licenses.asl20;
   };
-}
+})

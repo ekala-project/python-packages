@@ -6,7 +6,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mercadopago";
   version = "3.6.0";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mercadopago";
     repo = "sdk-python";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-hi/DbIJx1eRYUHeqe6J4wQKnFmmGKwU0rXDMTlezfIM=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://www.mercadopago.com";
     license = lib.licenses.mit;
   };
-}
+})

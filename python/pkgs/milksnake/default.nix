@@ -6,13 +6,13 @@
   cffi,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "milksnake";
   version = "0.1.6";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-AZj4kytOE2wpwNDUkP8brAP4LDp7Lub2ZuNoO2QxT9k=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     description = "Python library that extends setuptools for binary extensions";
     license = lib.licenses.asl20;
   };
-}
+})

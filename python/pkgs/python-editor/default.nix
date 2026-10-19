@@ -5,13 +5,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "python-editor";
   version = "1.0.4";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-Uf2mvMXdu7cGOyr3UJ5DvYS/wypP9xNJ7HhHcTiCMns=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     description = "Programmatically open an editor, capture the result";
     license = lib.licenses.asl20;
   };
-}
+})

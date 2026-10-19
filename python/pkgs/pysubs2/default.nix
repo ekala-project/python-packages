@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pysubs2";
   version = "1.8.0";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "tkarabela";
     repo = "pysubs2";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-fKSb7MfBHGft8Tp6excjfkVXKnHRER11X0QxbR1zD4I=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     mainProgram = "pysubs2";
     license = lib.licenses.mit;
   };
-}
+})

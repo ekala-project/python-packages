@@ -6,19 +6,19 @@
   hatchling,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "attrs";
   version = "26.1.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-0DzricsyKo/XBtT7kZQHN7ZkKqNpmP4TCpvJbJhe/zI=";
   };
 
   patches = [
     (replaceVars ./remove-hatch-plugins.patch {
-      inherit version;
+      inherit (finalAttrs) version;
     })
   ];
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/python-attrs/attrs";
     license = lib.licenses.mit;
   };
-}
+})

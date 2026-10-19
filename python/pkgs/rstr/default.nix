@@ -8,13 +8,13 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "rstr";
   version = "3.2.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-xKVk1N+0Ry2THRRcQ9HPGteMJFkhQud1W4hmF57qwBI=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/leapfrogonline/rstr";
     license = lib.licenses.bsd3;
   };
-}
+})

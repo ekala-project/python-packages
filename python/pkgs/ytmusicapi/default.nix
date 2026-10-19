@@ -6,7 +6,7 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "ytmusicapi";
   version = "1.12.2";
   pyproject = true;
@@ -14,7 +14,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "sigma67";
     repo = "ytmusicapi";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-kYx1pimYj+WBYgmxQUin/Af3d6o7HJzqy7DUkbDyKBI=";
   };
 
@@ -30,4 +30,4 @@ buildPythonPackage rec {
     license = lib.licenses.mit;
     mainProgram = "ytmusicapi";
   };
-}
+})

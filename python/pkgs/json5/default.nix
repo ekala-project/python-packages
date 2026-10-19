@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "json5";
   version = "0.13.0";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "dpranke";
     repo = "pyjson5";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-KL5YsWSHS8xI+lQB+ZtdEKUHGKICOduZsBd51z4jItw=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     license = lib.licenses.asl20;
     mainProgram = "pyjson5";
   };
-}
+})

@@ -8,7 +8,7 @@
   websocket-client,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "plexapi";
   version = "4.18.2";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pkkid";
     repo = "python-plexapi";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-golJzx+ikMblGjat5lnraE+u0bwZeOjYK2f5ZuWGvmA=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pkkid/python-plexapi";
     license = lib.licenses.bsd3;
   };
-}
+})

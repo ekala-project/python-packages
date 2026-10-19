@@ -11,7 +11,7 @@
   types-pytz,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pandas-stubs";
   version = "2.3.3.260113";
   pyproject = true;
@@ -19,7 +19,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "pandas-dev";
     repo = "pandas-stubs";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-DJS3aG79IZowiTqHeOEgDdlH9Z1SXrbZ7yplCrFTtzw=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/pandas-dev/pandas-stubs";
     license = lib.licenses.mit;
   };
-}
+})

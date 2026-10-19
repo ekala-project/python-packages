@@ -17,7 +17,7 @@
   xxhash,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "cashews";
   version = "7.5.0";
   pyproject = true;
@@ -25,7 +25,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "Krukov";
     repo = "cashews";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-GQObsWTCAKuYCyHZVd1wDzhvyYK5Xw1z1QazLuAP3Jg=";
   };
 
@@ -65,4 +65,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Krukov/cashews/";
     license = lib.licenses.mit;
   };
-}
+})

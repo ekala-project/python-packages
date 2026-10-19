@@ -7,7 +7,7 @@
   hyperframe,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "h2";
   version = "4.3.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "python-hyper";
     repo = "h2";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-04we2xeh5LtLA4La9WPfXQVczDIz7NpL/6y9TmIELgM=";
   };
 
@@ -35,4 +35,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/python-hyper/h2";
     license = lib.licenses.mit;
   };
-}
+})

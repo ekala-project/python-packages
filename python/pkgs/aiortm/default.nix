@@ -15,7 +15,7 @@
   yarl,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aiortm";
   version = "0.20.1";
   pyproject = true;
@@ -25,7 +25,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "MartinHjelmare";
     repo = "aiortm";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-KhvqTj33dtJschS9ImSJdjwdAjXrm7b6Ng1KDBgMFog=";
   };
 
@@ -60,4 +60,4 @@ buildPythonPackage rec {
     license = lib.licenses.asl20;
     mainProgram = "aiortm";
   };
-}
+})

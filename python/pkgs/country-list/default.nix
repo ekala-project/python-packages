@@ -10,7 +10,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "country-list";
   version = "1.1.0";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "bulv1ne";
     repo = "country_list";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-jG2AC8c6mgWjHVBX7XW021PLPliLTwEBkN6+HSecfL4=";
     fetchSubmodules = true;
   };
@@ -44,4 +44,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/bulv1ne/country_list";
     license = lib.licenses.mit;
   };
-}
+})

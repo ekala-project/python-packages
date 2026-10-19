@@ -10,14 +10,14 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-web";
   version = "11.0.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_mgmt_web";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-HOjtf9aeHdTIIKKXZWQ+k5S1j0KLUBM2QT1RfAJ6FFk=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/Azure/azure-sdk-for-python";
     license = lib.licenses.mit;
   };
-}
+})

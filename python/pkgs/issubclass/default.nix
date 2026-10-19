@@ -5,7 +5,7 @@
   poetry-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "issubclass";
   version = "0.1.2";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "zmievsa";
     repo = "issubclass";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-a4EUbQY5duicnxuwtpBQ/7UBmtmeU+ZaySEnT4lmgLs=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://pypi.org/project/issubclass";
     license = lib.licenses.mit;
   };
-}
+})

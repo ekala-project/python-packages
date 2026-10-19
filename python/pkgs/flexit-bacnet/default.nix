@@ -5,7 +5,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "flexit-bacnet";
   version = "2.2.3";
   pyproject = true;
@@ -13,7 +13,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "piotrbulinski";
     repo = "flexit_bacnet";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-MudBn+ki/jqeFK1iz/vAXaXkkddLThO+1T4BXFJ90lk=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/piotrbulinski/flexit_bacnet";
     license = lib.licenses.mit;
   };
-}
+})

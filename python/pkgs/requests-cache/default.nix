@@ -11,14 +11,14 @@
   url-normalize,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "requests-cache";
   version = "1.3.3";
   pyproject = true;
 
   src = fetchPypi {
     pname = "requests_cache";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-ebctWsUUOZLRg2rXj02OZWZgYd1E4iBUjKqzcjCJgms=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/requests-cache/requests-cache";
     license = lib.licenses.bsd3;
   };
-}
+})

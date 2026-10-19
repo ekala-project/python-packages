@@ -23,7 +23,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "deepsearch-toolkit";
   version = "2.0.1";
   pyproject = true;
@@ -31,7 +31,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "DS4SD";
     repo = "deepsearch-toolkit";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-nrz9pvyA5gPIaKt6CsJOB9cLy3sXiWW5e1Rk4vtNIY8=";
   };
 
@@ -89,4 +89,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/DS4SD/deepsearch-toolkit";
     license = lib.licenses.mit;
   };
-}
+})

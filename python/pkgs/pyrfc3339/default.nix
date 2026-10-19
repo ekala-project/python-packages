@@ -7,13 +7,13 @@
   pytz,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pyrfc3339";
   version = "2.1.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-xWmpcU+vEVzbILUegw55jB9N6Nq7B/b/JdIhtdCdjX8=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     description = "Generate and parse RFC 3339 timestamps";
     license = lib.licenses.mit;
   };
-}
+})

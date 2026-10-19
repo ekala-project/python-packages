@@ -5,14 +5,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   version = "1.1.1";
   pname = "grappelli-safe";
   pyproject = true;
 
   src = fetchPypi {
     pname = "grappelli_safe";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-7jSz4qNxFJix+No9naqKEjnv3yVaISGBdCtqWJD6wDk=";
   };
 
@@ -38,4 +38,4 @@ buildPythonPackage rec {
     downloadPage = "http://pypi.org/pypi/grappelli_safe/";
     license = lib.licenses.bsd3;
   };
-}
+})

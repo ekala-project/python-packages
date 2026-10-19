@@ -18,7 +18,7 @@
   mock,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "minio";
   version = "7.2.20";
   pyproject = true;
@@ -26,7 +26,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "minio";
     repo = "minio-py";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-k7bMXEwRNqx5a6qz4+Yxs/zMANReHFKU2Ks/GSD4JKo=";
   };
 
@@ -51,4 +51,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/minio/minio-py";
     license = lib.licenses.asl20;
   };
-}
+})

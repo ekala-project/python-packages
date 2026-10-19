@@ -6,14 +6,14 @@
   simple-websocket,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "python-engineio";
   version = "4.14.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "python_engineio";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-6qHjhrr5wseVnu9/nZFlxeqRDFs5L1MW540p7Qc8tD0=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/miguelgrinberg/python-engineio/";
     license = lib.licenses.mit;
   };
-}
+})

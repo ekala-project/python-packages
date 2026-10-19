@@ -8,7 +8,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "mockfs";
   version = "2.0.2";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mockfs";
     repo = "mockfs";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-fTN9HLzlVCn0O8nYy4UUM+JIsYJ3qDPw3h41yhcilJ8=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mockfs/mockfs";
     license = lib.licenses.mit;
   };
-}
+})

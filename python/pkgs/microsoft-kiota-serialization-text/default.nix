@@ -10,7 +10,7 @@
   gitUpdater,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "microsoft-kiota-serialization-text";
   version = "1.12.1";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "microsoft";
     repo = "kiota-python";
-    tag = "microsoft-kiota-serialization-text-v${version}";
+    tag = "microsoft-kiota-serialization-text-v${finalAttrs.version}";
     hash = "sha256-J33Bxo9TwHRCPzDw/Jduo9HHxoofB5h/HsNX6R9FfFI=";
   };
 
@@ -41,4 +41,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/microsoft/kiota-python/tree/main/packages/serialization/text";
     license = lib.licenses.mit;
   };
-}
+})

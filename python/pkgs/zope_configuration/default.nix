@@ -8,14 +8,14 @@
   zope_schema,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "zope.configuration";
   version = "7.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "zope_configuration";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-WvUc77TcxmBT5Uz+zjhIP7WTqBvhAQw4WH26kcnRVKw=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/zopefoundation/zope.configuration";
     license = lib.licenses.zpl21;
   };
-}
+})

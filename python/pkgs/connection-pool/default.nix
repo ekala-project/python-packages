@@ -5,14 +5,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "connection-pool";
   version = "0.0.3";
   pyproject = true;
 
   src = fetchPypi {
     pname = "connection_pool";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-v0Keeu9lkhxptO1I89SNPqwTg7BdLfkYhHBYQtl00Nw=";
   };
 
@@ -25,4 +25,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/zhouyl/ConnectionPool";
     license = lib.licenses.mit;
   };
-}
+})

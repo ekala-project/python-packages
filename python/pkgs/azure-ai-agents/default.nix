@@ -9,14 +9,14 @@
   typing-extensions,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "azure-ai-agents";
   version = "1.2.0b6";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_ai_agents";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-08EISMOxneyYopL4wQzuS6SqwQUNT6q/nC4kVrcn9Sg=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://pypi.org/project/azure-ai-agents";
     license = lib.licenses.mit;
   };
-}
+})

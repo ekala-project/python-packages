@@ -8,7 +8,7 @@
   python-memcached,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aiomcache";
   version = "0.8.2";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "aio-libs";
     repo = "aiomcache";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-+rlKHDop0kNxJ0HoXROs/oyI4zE3MDyxXXhWZtVDMj4=";
   };
 
@@ -31,4 +31,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/aio-libs/aiomcache/";
     license = lib.licenses.bsd2;
   };
-}
+})

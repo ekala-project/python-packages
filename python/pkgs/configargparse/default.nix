@@ -6,13 +6,13 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "configargparse";
   version = "1.7.7";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-YHvqJ2ohmRIVivoeWnFsP4+I1UL5mX39Q7vQtJKp9aY=";
   };
 
@@ -28,4 +28,4 @@ buildPythonPackage rec {
     description = "Drop-in replacement for argparse";
     license = lib.licenses.mit;
   };
-}
+})

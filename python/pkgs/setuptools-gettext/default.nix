@@ -7,14 +7,14 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "setuptools-gettext";
   version = "0.1.18";
   pyproject = true;
 
   src = fetchPypi {
     pname = "setuptools_gettext";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-ySsK5Ibe9QJobNlE8WVZgZ5C+NwLnWg89i50FTl/KzU=";
   };
 
@@ -29,4 +29,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/breezy-team/setuptools-gettext";
     license = lib.licenses.gpl2Plus;
   };
-}
+})

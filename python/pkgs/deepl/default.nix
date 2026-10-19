@@ -6,13 +6,13 @@
   poetry-core,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "deepl";
   version = "1.32.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-MBa/hvH1Prbl/ttFh0bGv2V5qEC1fFSi7XAbA0S8eeE=";
   };
 
@@ -32,4 +32,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/DeepLcom/deepl-python";
     license = lib.licenses.mit;
   };
-}
+})

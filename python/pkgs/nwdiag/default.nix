@@ -7,7 +7,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "nwdiag";
   version = "3.0.0";
   pyproject = true;
@@ -15,7 +15,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "blockdiag";
     repo = "nwdiag";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-uKrdkXpL5YBr953sRsHknYg+2/WwrZmyDf8BMA2+0tU=";
   };
 
@@ -44,4 +44,4 @@ buildPythonPackage rec {
     mainProgram = "rackdiag";
     platforms = lib.platforms.unix;
   };
-}
+})

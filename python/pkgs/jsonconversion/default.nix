@@ -8,7 +8,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jsonconversion";
   version = "1.2.1";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "DLR-RM";
     repo = "python-jsonconversion";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-yWRpILAkwCvgh5bMiN9/XmS6U9zIQdDS8KVeTYxzDDw=";
   };
 
@@ -42,4 +42,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/DLR-RM/python-jsonconversion";
     license = lib.licenses.bsd2;
   };
-}
+})

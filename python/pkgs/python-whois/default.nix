@@ -6,13 +6,13 @@
   python-dateutil,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "python_whois";
   version = "0.9.6";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-Lm3nttcOMFqF9IWc0XeB7j8No6AqjpTyPLTNzS5AC/o=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/richardpenman/whois";
     license = lib.licenses.mit;
   };
-}
+})

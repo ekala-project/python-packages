@@ -7,13 +7,13 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "progressbar";
   version = "2.5";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-XYHLUp2i4iO1OWKv1sjKDwXGZw5AMJpyGerMNq+bbGM=";
   };
 
@@ -26,4 +26,4 @@ buildPythonPackage rec {
     homepage = "https://pypi.org/project/progressbar/";
     license = lib.licenses.lgpl3Plus;
   };
-}
+})

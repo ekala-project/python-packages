@@ -10,7 +10,7 @@
   msgpack,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aiocache";
   version = "0.12.3";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "aio-libs";
     repo = "aiocache";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-4QYCRXMWlt9fsiWgUTc2pKzXG7AG/zGmd4HT5ggIZNM=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/aio-libs/aiocache";
     license = lib.licenses.bsd3;
   };
-}
+})

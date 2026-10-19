@@ -16,13 +16,13 @@
   winsspi,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "aiosmb";
   version = "0.4.14";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-So6u+sX7EOEIjrYejfWK/z/mH9bxHOcu/YpjF1VfAsM=";
   };
 
@@ -51,4 +51,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/skelsec/aiosmb";
     license = lib.licenses.mit;
   };
-}
+})

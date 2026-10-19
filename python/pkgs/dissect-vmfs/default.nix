@@ -9,7 +9,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "dissect-vmfs";
   version = "3.13";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "fox-it";
     repo = "dissect.vmfs";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-4c3JVbQidGvXurWaO+/E0OehGgiY5shE5BiIBwMrCWM=";
   };
 
@@ -51,4 +51,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/fox-it/dissect.vmfs";
     license = lib.licenses.agpl3Only;
   };
-}
+})

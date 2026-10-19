@@ -8,7 +8,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "lb-matching-tools";
   version = "2024.01.30.1";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "metabrainz";
     repo = "listenbrainz-matching-tools";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-RQ4X6DKigQsNxaAWXB1meATKP+ddMUgkoAIyX8iIisU=";
   };
 
@@ -36,4 +36,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/metabrainz/listenbrainz-matching-tools";
     license = lib.licenses.gpl2Plus;
   };
-}
+})

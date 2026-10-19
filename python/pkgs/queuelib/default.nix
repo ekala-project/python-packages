@@ -5,13 +5,13 @@
   hatchling,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "queuelib";
   version = "1.10.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-BjyCHDKFmui9zizJ50FWZFwHQhikZPgmLimjuN6Dlzc=";
   };
 
@@ -24,4 +24,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/scrapy/queuelib";
     license = lib.licenses.bsd3;
   };
-}
+})

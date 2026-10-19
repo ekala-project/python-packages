@@ -9,7 +9,7 @@
   setuptools,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "google-cloud-kms";
   version = "3.16.0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "googleapis";
     repo = "google-cloud-python";
-    tag = "google-cloud-kms-v${version}";
+    tag = "google-cloud-kms-v${finalAttrs.version}";
     hash = "sha256-FqlIazChaviPUlTiIyy67/g2i/3r4H/Icj7vVuYkiaU=";
   };
 
@@ -47,4 +47,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/googleapis/google-cloud-python/tree/main/packages/google-cloud-kms";
     license = lib.licenses.asl20;
   };
-}
+})

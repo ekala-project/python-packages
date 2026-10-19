@@ -12,7 +12,7 @@
 let
   jq-c = pkgs.jq;
 in
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "jq";
   version = "1.12.0";
   pyproject = true;
@@ -20,7 +20,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mwilliamson";
     repo = "jq.py";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-glWEqoS+QaoIiBJu9DXd+VvhPnWOgRT4VaYfMpjbR5g=";
   };
 
@@ -46,4 +46,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/mwilliamson/jq.py";
     license = lib.licenses.bsd2;
   };
-}
+})

@@ -6,13 +6,13 @@
   pytest,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytest_check";
   version = "2.9.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname version;
+    inherit (finalAttrs) pname version;
     hash = "sha256-LYyfH+XM6wtBxIDhRU6V6e1qOlNL8sfj4PORZ7Ec+Is=";
   };
 
@@ -27,4 +27,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/okken/pytest-check";
     license = lib.licenses.mit;
   };
-}
+})

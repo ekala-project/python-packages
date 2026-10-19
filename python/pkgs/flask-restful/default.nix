@@ -13,14 +13,14 @@
   six,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "flask-restful";
   version = "0.3.10";
   pyproject = true;
 
   src = fetchPypi {
     pname = "Flask-RESTful";
-    inherit version;
+    inherit (finalAttrs) version;
     hash = "sha256-/kry7wAn34+bT3l6uiDFVmgBtq3plaxjtYir8aWc7Dc=";
   };
 
@@ -40,4 +40,4 @@ buildPythonPackage rec {
     homepage = "https://flask-restful.readthedocs.io";
     license = lib.licenses.bsd3;
   };
-}
+})

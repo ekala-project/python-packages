@@ -8,7 +8,7 @@
   pymongo,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "motor";
   version = "3.7.1";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "mongodb";
     repo = "motor";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-ul2GKzSiAewwGEuCpQQ61h3cqrJikaJeKs5KlX+aAjo=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     license = lib.licenses.asl20;
     homepage = "https://github.com/mongodb/motor";
   };
-}
+})

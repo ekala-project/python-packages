@@ -8,7 +8,7 @@
   pytestCheckHook,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "legacy-api-wrap";
   version = "1.5";
   pyproject = true;
@@ -16,7 +16,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "flying-sheep";
     repo = "legacy-api-wrap";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-UvOkVNtH3MbD+ExF0dQ+XAfDx9v7YD3GCNUsEaH7zzM=";
   };
 
@@ -37,4 +37,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/flying-sheep/legacy-api-wrap";
     license = lib.licenses.mpl20;
   };
-}
+})

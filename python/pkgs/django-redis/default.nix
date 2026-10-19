@@ -9,7 +9,7 @@
   redis,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "django-redis";
   version = "7.0.0";
   pyproject = true;
@@ -17,7 +17,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "jazzband";
     repo = "django-redis";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-4YNhNsa0J1tTtaeJTHnwT8WwYs6QQuxnjVl1mAYNePI=";
   };
 
@@ -39,4 +39,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/jazzband/django-redis";
     license = lib.licenses.bsd3;
   };
-}
+})

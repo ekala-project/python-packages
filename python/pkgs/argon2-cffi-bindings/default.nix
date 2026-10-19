@@ -10,7 +10,7 @@
   setuptools-scm,
 }:
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "argon2-cffi-bindings";
   version = "26.1.0";
   pyproject = true;
@@ -18,7 +18,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "hynek";
     repo = "argon2-cffi-bindings";
-    tag = version;
+    tag = finalAttrs.version;
     hash = "sha256-1938M2ALMcAIdTYTHCmJIAW1YyJPYhewZXOyFIJg/ZY=";
   };
 
@@ -44,4 +44,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/hynek/argon2-cffi-bindings";
     license = lib.licenses.mit;
   };
-}
+})

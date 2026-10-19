@@ -21,7 +21,7 @@ let
   };
 in
 
-buildPythonPackage rec {
+buildPythonPackage (finalAttrs: {
   pname = "pytest-codspeed";
   version = "5.0.3";
   pyproject = true;
@@ -29,7 +29,7 @@ buildPythonPackage rec {
   src = fetchFromGitHub {
     owner = "CodSpeedHQ";
     repo = "pytest-codspeed";
-    tag = "v${version}";
+    tag = "v${finalAttrs.version}";
     hash = "sha256-qlv7iCT1q/U8fWbXGYQyw2mcR7GS9w41FlRQvRxnHh8=";
   };
 
@@ -65,4 +65,4 @@ buildPythonPackage rec {
     homepage = "https://github.com/CodSpeedHQ/pytest-codspeed";
     license = lib.licenses.mit;
   };
-}
+})
