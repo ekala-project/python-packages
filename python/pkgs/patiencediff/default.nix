@@ -22,7 +22,7 @@ buildPythonPackage (finalAttrs: {
   };
 
   cargoDeps = rustPlatform.fetchCargoVendor {
-    inherit pname version src;
+    inherit (finalAttrs) pname version src;
     hash = "sha256-JW2Oj1oxAVf9K3lyJQpbHqw9eeNYDg3Agb189bduqlI=";
   };
 
