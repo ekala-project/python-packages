@@ -30,7 +30,7 @@ buildPythonPackage (finalAttrs: {
 
   cargoRoot = "rust";
   cargoDeps = rustPlatform.fetchCargoVendor {
-    inherit pname version src;
+    inherit (finalAttrs) pname version src;
     sourceRoot = "${src.name}/rust";
     hash = "sha256-Ozg+TW/woJsqmbmyDsgdMua3Lmnn+KBvBhd9kVik3XY=";
   };

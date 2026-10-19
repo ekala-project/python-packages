@@ -37,7 +37,7 @@ buildPythonPackage (finalAttrs: {
   # call `cargo build --release` in bindings/python and copy the
   # resulting lock file
   cargoDeps = rustPlatform.fetchCargoVendor {
-    inherit pname version src;
+    inherit (finalAttrs) pname version src;
     postPatch = ''
       cd bindings/python
       ln -s ${./Cargo.lock} Cargo.lock
