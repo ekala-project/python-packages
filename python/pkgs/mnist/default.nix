@@ -1,6 +1,8 @@
 {
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   lib,
   numpy,
   pytestCheckHook,
@@ -9,7 +11,7 @@
 buildPythonPackage rec {
   pname = "mnist";
   version = "0.2.2";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "datapythonista";
@@ -17,6 +19,8 @@ buildPythonPackage rec {
     rev = "${pname}-${version}";
     sha256 = "17r37pbxiv5dw857bmg990x836gq6sgww069w3q5jjg9m3xdm7dh";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ numpy ];
 

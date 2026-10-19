@@ -2,17 +2,21 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
 }:
 buildPythonPackage rec {
   pname = "anel-pwrctrl-homeassistant";
   version = "0.0.1.dev2";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit version;
     pname = "anel_pwrctrl-homeassistant";
     hash = "sha256-AcsnYD9CeGAarm5QdweUF6CUFwUywhfmU46NG8+Cm4s=";
   };
+
+  build-system = [ setuptools ];
 
   # No tests
 

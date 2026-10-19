@@ -3,6 +3,8 @@
   async-timeout,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   pytestCheckHook,
   pytest-cov-stub,
   tenacity,
@@ -11,7 +13,7 @@
 buildPythonPackage rec {
   pname = "aiokef";
   version = "0.2.17";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "basnijholt";
@@ -19,6 +21,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     sha256 = "0ms0dwrpj80w55svcppbnp7vyl5ipnjfp1c436k5c7pph4q5pxk9";
   };
+
+  build-system = [ setuptools ];
 
   postPatch = ''
     substituteInPlace tox.ini \

@@ -3,6 +3,8 @@
   buildPythonPackage,
   fetchPypi,
   fetchpatch,
+  # build-system
+  setuptools,
   webtest,
   pyramid,
   mako,
@@ -11,12 +13,14 @@
 buildPythonPackage rec {
   pname = "pyramid-mako";
   version = "1.1.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     sha256 = "0066c863441f1c3ddea60cee1ccc50d00a91a317a8052ca44131da1a12a840e2";
   };
+
+  build-system = [ setuptools ];
 
   patches = [
     # Fix tests with pyramid >= 2.0

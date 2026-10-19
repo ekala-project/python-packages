@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   pillow,
   poppler-utils,
 }:
@@ -9,12 +11,14 @@
 buildPythonPackage rec {
   pname = "pdf2image";
   version = "1.17.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-6qlZvBFrQg3X7EFfyuSbmBAN2j3RjNL9+obQnxEvbVc=";
   };
+
+  build-system = [ setuptools ];
 
   postPatch = ''
     # replace all default values of paths to poppler-utils

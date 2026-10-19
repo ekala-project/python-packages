@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   flask,
   elasticsearch,
 }:
@@ -9,13 +11,15 @@
 buildPythonPackage rec {
   pname = "flask-elastic";
   version = "0.2";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     pname = "Flask-Elastic";
     inherit version;
     hash = "sha256-XwGm/FQbXSV2qbAlHyAbT4DLcQnIseDm1Qqdb5zjE0M=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     flask

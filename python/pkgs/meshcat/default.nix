@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   ipython,
   u-msgpack-python,
   numpy,
@@ -14,12 +16,14 @@
 buildPythonPackage (finalAttrs: {
   pname = "meshcat";
   version = "0.3.2";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
     hash = "sha256-LP4XzeT+hdByo94Bip2r9WJvgMJV//LOY7JqSNJIStk=";
   };
+
+  build-system = [ setuptools ];
 
   postPatch = ''
     sed -i '/PYTHONPATH/d' src/meshcat/servers/zmqserver.py

@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   pytest,
   pytest-cov-stub,
   pytest-doctestplus,
@@ -11,12 +13,14 @@
 buildPythonPackage rec {
   pname = "pytest-filter-subpackage";
   version = "0.2.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-P0aPGzZRgSiGm5Xeq2YbpF7WKThUMp/vFNpMjKx4r1Y=";
   };
+
+  build-system = [ setuptools ];
 
   nativeBuildInputs = [ setuptools-scm ];
 

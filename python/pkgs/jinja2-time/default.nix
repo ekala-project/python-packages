@@ -3,6 +3,8 @@
   buildPythonPackage,
   fetchpatch,
   fetchPypi,
+  # build-system
+  setuptools,
   arrow,
   freezegun,
   jinja2,
@@ -11,12 +13,14 @@
 buildPythonPackage rec {
   pname = "jinja2-time";
   version = "0.2.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     sha256 = "0h0dr7cfpjnjj8bgl2vk9063a53649pn37wnlkd8hxjy656slkni";
   };
+
+  build-system = [ setuptools ];
 
   patches = [
     # fix usage of arrow in tests

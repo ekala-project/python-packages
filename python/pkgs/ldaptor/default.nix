@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   twisted,
   passlib,
   pyparsing,
@@ -12,12 +14,14 @@
 buildPythonPackage rec {
   pname = "ldaptor";
   version = "21.2.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-jEnrGTddSqs+W4NYYGFODLF+VrtaIOGHSAj6W+xno1g=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     passlib

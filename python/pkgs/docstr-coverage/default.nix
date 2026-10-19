@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   click,
   pyyaml,
   tqdm,
@@ -14,7 +16,7 @@ in
 buildPythonPackage {
   pname = "docstr-coverage";
   inherit version;
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "HunterMcGushion";
@@ -22,6 +24,8 @@ buildPythonPackage {
     tag = "v${version}";
     hash = "sha256-k1ny4fWS+CmgLNWPlYPsscjei2UZ6h8QJrZSay5abck=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     click

@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   glibcLocales,
   celery,
   django,
@@ -11,7 +13,7 @@
 buildPythonPackage rec {
   pname = "djmail";
   version = "2.0.0";
-  format = "setuptools";
+  pyproject = true;
 
   meta = {
     description = "Simple, powerfull and nonobstructive django email middleware";
@@ -23,6 +25,8 @@ buildPythonPackage rec {
     inherit pname version;
     sha256 = "cf3ce7626305d218a8bf2b6a219266ef8061aceeefc1c70a54170f4105465202";
   };
+
+  build-system = [ setuptools ];
 
   nativeBuildInputs = [ glibcLocales ];
 

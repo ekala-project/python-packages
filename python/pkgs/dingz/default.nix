@@ -5,12 +5,14 @@
   buildPythonPackage,
   click,
   fetchFromGitHub,
+  # build-system
+  setuptools,
 }:
 
 buildPythonPackage rec {
   pname = "dingz";
   version = "0.5.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "home-assistant-ecosystem";
@@ -18,6 +20,8 @@ buildPythonPackage rec {
     tag = version;
     hash = "sha256-bCytQwLWw8D1UkKb/3LQ301eDCkVR4alD6NHjTs6I+4=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     aiohttp

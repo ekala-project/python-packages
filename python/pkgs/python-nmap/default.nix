@@ -2,18 +2,22 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   nmap,
 }:
 
 buildPythonPackage rec {
   pname = "python-nmap";
   version = "0.7.1";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-91r2uR3Y47DDH4adsyFj9iraaGlF5bfCX4S8D3+tO2Q=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ nmap ];
 

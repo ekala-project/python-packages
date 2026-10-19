@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   isPyPy,
   unixodbc,
 }:
@@ -9,7 +11,7 @@
 buildPythonPackage rec {
   pname = "pyodbc";
   version = "5.3.0";
-  format = "setuptools";
+  pyproject = true;
 
   disabled = isPyPy; # use pypypdbc instead
 
@@ -17,6 +19,8 @@ buildPythonPackage rec {
     inherit pname version;
     hash = "sha256-L+DgY9j7Zu/QrG3DkjbE3hpF8Xwz6t7Q1VPSHBmfTQU=";
   };
+
+  build-system = [ setuptools ];
 
   nativeBuildInputs = [
     unixodbc # for odbc_config

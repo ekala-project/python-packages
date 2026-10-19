@@ -1,6 +1,8 @@
 {
   lib,
   fetchPypi,
+  # build-system
+  setuptools,
   buildPythonPackage,
   helpdev,
   qtpy,
@@ -9,13 +11,15 @@
 buildPythonPackage rec {
   pname = "qdarkstyle";
   version = "3.2.3";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit version;
     pname = "QDarkStyle";
     hash = "sha256-DAt/dKbpISEAiZKzabq2BGgVfbHALNMNZKXpo7QC8a4=";
   };
+
+  build-system = [ setuptools ];
 
   # No tests available
 

@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   freezegun,
   mock,
   pytestCheckHook,
@@ -13,7 +15,7 @@
 buildPythonPackage rec {
   pname = "fitbit";
   version = "0.3.1";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "orcasgit";
@@ -21,6 +23,8 @@ buildPythonPackage rec {
     tag = version;
     hash = "sha256-1u3h47lRBrJ7EUWBl5+RLGW4KHHqXqqrXbboZdy7VPA=";
   };
+
+  build-system = [ setuptools ];
 
   postPatch = ''
     substituteInPlace fitbit_tests/test_api.py \

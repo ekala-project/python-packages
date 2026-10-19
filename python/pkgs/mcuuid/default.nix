@@ -2,13 +2,15 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   requests,
 }:
 
 buildPythonPackage rec {
   pname = "mcuuid";
   version = "1.1.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "clerie";
@@ -16,6 +18,8 @@ buildPythonPackage rec {
     tag = version;
     hash = "sha256-YwM7CdZVXpUXKXUzFL3AtoDhekLDIvZ/q8taLsHihNk=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ requests ];
 

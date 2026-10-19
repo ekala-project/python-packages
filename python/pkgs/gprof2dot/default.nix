@@ -1,6 +1,8 @@
 {
   lib,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   buildPythonPackage,
   python,
   graphviz,
@@ -9,7 +11,7 @@
 buildPythonPackage rec {
   pname = "gprof2dot";
   version = "2025.04.14";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "jrfonseca";
@@ -17,6 +19,8 @@ buildPythonPackage rec {
     tag = version;
     hash = "sha256-kX/DCXO/qwm1iF44gG7aBSUpG4Vf2Aer0zwrtq4YNHo=";
   };
+
+  build-system = [ setuptools ];
 
   makeWrapperArgs = [ "--prefix PATH : ${lib.makeBinPath [ graphviz ]}" ];
 

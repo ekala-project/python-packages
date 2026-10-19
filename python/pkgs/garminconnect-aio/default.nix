@@ -4,13 +4,15 @@
   brotlipy,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   yarl,
 }:
 
 buildPythonPackage rec {
   pname = "garminconnect-aio";
   version = "0.1.4";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "cyberjunky";
@@ -18,6 +20,8 @@ buildPythonPackage rec {
     tag = version;
     hash = "sha256-GWY2kTG2D+wOJqM/22pNV5rLvWjAd4jxVGlHBou/T2g=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     aiohttp

@@ -2,6 +2,8 @@
   lib,
   stdenv,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   buildPythonPackage,
   isPyPy,
   pkgs,
@@ -10,7 +12,7 @@
 buildPythonPackage rec {
   pname = "pyparted";
   version = "3.13.0";
-  format = "setuptools";
+  pyproject = true;
   disabled = isPyPy;
 
   src = fetchFromGitHub {
@@ -19,6 +21,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     hash = "sha256-AiUCCrEbDD0OxrvXs1YN3/1IE7SuVasC2YCirIG58iU=";
   };
+
+  build-system = [ setuptools ];
 
   postPatch = ''
     sed -i -e 's|mke2fs|${pkgs.e2fsprogs}/bin/mke2fs|' tests/baseclass.py

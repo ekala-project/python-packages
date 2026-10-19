@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   justbases,
   unittestCheckHook,
   hypothesis,
@@ -10,7 +12,7 @@
 buildPythonPackage rec {
   pname = "justbytes";
   version = "0.15.2";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "mulkieran";
@@ -18,6 +20,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     hash = "sha256-+jwIK1ZU+j58VoOfZAm7GdFy7KHU28khwzxhYhcws74=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ justbases ];
   nativeCheckInputs = [

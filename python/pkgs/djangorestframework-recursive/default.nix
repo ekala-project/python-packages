@@ -4,12 +4,14 @@
   django,
   djangorestframework,
   fetchFromGitHub,
+  # build-system
+  setuptools,
 }:
 
 buildPythonPackage rec {
   pname = "djangorestframework-recursive";
   version = "0.1.2";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "heywbj";
@@ -17,6 +19,8 @@ buildPythonPackage rec {
     tag = version;
     hash = "sha256-Q/6yxpz3c402sMZudAeFIht9+5GmTRlzM51AMAx5muY=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     django

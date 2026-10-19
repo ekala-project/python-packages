@@ -2,18 +2,22 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   django,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "django-classy-tags";
   version = "4.1.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
     hash = "sha256-yNnRqi+m5xxNhm303RHSOmm40lu7dQskkKF7Fhd07lk=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ django ];
 

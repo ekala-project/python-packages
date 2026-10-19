@@ -2,18 +2,22 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   numpy,
 }:
 
 buildPythonPackage rec {
   pname = "jplephem";
   version = "2.24";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-NU/hra4CImSrRvGK+2ryYhEnfP17PvkEAHVfyr6TvBE=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ numpy ];
 

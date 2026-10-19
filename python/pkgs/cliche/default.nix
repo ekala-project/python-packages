@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   ipdb,
   pytestCheckHook,
 }:
@@ -9,7 +11,7 @@
 buildPythonPackage {
   pname = "cliche";
   version = "0.10.108";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "kootenpv";
@@ -17,6 +19,8 @@ buildPythonPackage {
     rev = "80a9ae2e90f4493880b669d5db51f1d4038589df"; # no tags
     sha256 = "sha256-7/icSneLQzwdkRL/mS4RjsgnKa6YIVvGCmdS6pB6r5Y=";
   };
+
+  build-system = [ setuptools ];
 
   postPatch = ''
     substituteInPlace setup.py \

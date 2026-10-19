@@ -3,6 +3,8 @@
   buildPythonPackage,
   click,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   pytest-cov-stub,
   pyyaml,
   six,
@@ -11,7 +13,7 @@
 buildPythonPackage rec {
   pname = "cfn-flip";
   version = "1.3.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "awslabs";
@@ -19,6 +21,8 @@ buildPythonPackage rec {
     tag = version;
     hash = "sha256-lfhTR3+D1FvblhQGF83AB8+I8WDPBTmo+q22ksgDgt4=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     click

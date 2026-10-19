@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   feedparser,
   requests,
   pillow,
@@ -15,12 +17,14 @@
 buildPythonPackage rec {
   pname = "newspaper3k";
   version = "0.2.8";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-nxvT4ftI9ADHFav4dcx7Cme33c2H9Qya7rj8u72QBPs=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     feedparser

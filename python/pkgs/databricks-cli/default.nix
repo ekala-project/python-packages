@@ -5,6 +5,8 @@
   configparser,
   decorator,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   mock,
   oauthlib,
   pyjwt,
@@ -17,7 +19,7 @@
 buildPythonPackage rec {
   pname = "databricks-cli";
   version = "0.18.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "databricks";
@@ -25,6 +27,8 @@ buildPythonPackage rec {
     tag = version;
     hash = "sha256-dH95C2AY/B6F9BROr6rh+gVtKqxsg1gyEU5MzCd5aqs=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     click

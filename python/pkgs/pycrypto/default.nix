@@ -1,4 +1,4 @@
-{ buildPythonPackage, pycryptodome }:
+{ buildPythonPackage, setuptools, pycryptodome }:
 
 # This is a dummy package providing the drop-in replacement pycryptodome.
 # https://github.com/NixOS/nixpkgs/issues/21671
@@ -6,7 +6,9 @@
 buildPythonPackage rec {
   pname = "pycrypto";
   version = pycryptodome.version;
-  format = "setuptools";
+  pyproject = true;
+
+  build-system = [ setuptools ];
 
   # Cannot build wheel otherwise (zip 1980 issue)
   env.SOURCE_DATE_EPOCH = 315532800;

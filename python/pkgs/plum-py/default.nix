@@ -2,12 +2,14 @@
   lib,
   buildPythonPackage,
   fetchFromGitLab,
+  # build-system
+  setuptools,
 }:
 
 buildPythonPackage rec {
   pname = "plum-py";
   version = "0.8.7";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitLab {
     owner = "dangass";
@@ -15,6 +17,8 @@ buildPythonPackage rec {
     tag = version;
     hash = "sha256-q9UNRZYBLBm0mf/r3cktGnGG9LzmTDrSVgXDgGDBMok=";
   };
+
+  build-system = [ setuptools ];
 
   postPatch = ''
     # Drop broken version specifier

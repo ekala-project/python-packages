@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   pillow,
   click,
   click-default-group,
@@ -11,7 +13,7 @@
 buildPythonPackage rec {
   pname = "image-diff";
   version = "0.2.2";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "simonw";
@@ -19,6 +21,8 @@ buildPythonPackage rec {
     tag = version;
     hash = "sha256-AQykJNvBgVjmPVTwJOX17eKWelqvZZieq/giid8GYAY=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     pillow

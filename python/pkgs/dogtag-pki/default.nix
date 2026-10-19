@@ -1,6 +1,8 @@
 {
   lib,
   fetchPypi,
+  # build-system
+  setuptools,
   buildPythonPackage,
   cryptography,
   python-ldap,
@@ -11,12 +13,14 @@
 buildPythonPackage rec {
   pname = "dogtag-pki";
   version = "11.2.1";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-rQSnQPNYr5SyeNbKoFAbnGb2X/8utrfWLa8gu93hy2w=";
   };
+
+  build-system = [ setuptools ];
 
   buildInputs = [
     cryptography

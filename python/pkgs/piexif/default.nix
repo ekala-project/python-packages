@@ -3,13 +3,15 @@
   buildPythonPackage,
   fetchFromGitHub,
   fetchpatch,
+  # build-system
+  setuptools,
   pillow,
 }:
 
 buildPythonPackage rec {
   pname = "piexif";
   version = "1.1.3";
-  format = "setuptools";
+  pyproject = true;
 
   # patch does not apply to PyPI sdist due to different line endings
   src = fetchFromGitHub {
@@ -18,6 +20,8 @@ buildPythonPackage rec {
     tag = version;
     sha256 = "1akmaxq1cjr8wghwaaql1bd3sajl8psshl58lprgfsigrvnklp8b";
   };
+
+  build-system = [ setuptools ];
 
   patches = [
     # Fix tests with Pillow >= 7.2.0: https://github.com/hMatoba/Piexif/pull/109

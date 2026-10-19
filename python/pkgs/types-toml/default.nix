@@ -2,17 +2,21 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
 }:
 
 buildPythonPackage rec {
   pname = "types-toml";
   version = "0.10.8.20240310";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-PUFQEwKXJDamuLI5yFCyZollfiUoG0j/DsBjRbiDAzE=";
   };
+
+  build-system = [ setuptools ];
 
   # Module doesn't have tests
 

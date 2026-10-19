@@ -1,6 +1,8 @@
 {
   lib,
   fetchPypi,
+  # build-system
+  setuptools,
   buildPythonPackage,
   lxml,
   pycryptodome,
@@ -10,12 +12,14 @@
 buildPythonPackage rec {
   pname = "libkeepass";
   version = "0.3.1.post1";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     sha256 = "0pwg7n9xqcjia1qmz6g48h5s31slh3mxmcqag73gq4zhl4xb6bai";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     lxml

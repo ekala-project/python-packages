@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   django,
   djangorestframework,
   pytest-django,
@@ -11,7 +13,7 @@
 buildPythonPackage rec {
   pname = "djangorestframework-csv";
   version = "3.0.2";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "mjumbewu";
@@ -19,6 +21,8 @@ buildPythonPackage rec {
     tag = version;
     hash = "sha256-XtMkSucB7+foRpTaRfGF1Co0n3ONNGyzex6MXR4xM5c=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     django

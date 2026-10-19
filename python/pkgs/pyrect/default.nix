@@ -2,18 +2,22 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
 }:
 
 buildPythonPackage rec {
   pname = "pyrect";
   version = "0.2.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     pname = "PyRect";
     inherit version;
     hash = "sha256-9lFV9t+bkptnyv+9V8CUfFrlRJ07WA0XgHS/+0egm3g=";
   };
+
+  build-system = [ setuptools ];
   pythonImportsCheck = [ "pyrect" ];
 
   meta = {

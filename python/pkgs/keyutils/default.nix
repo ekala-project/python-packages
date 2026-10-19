@@ -3,13 +3,15 @@
   buildPythonPackage,
   cython,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   keyutils,
 }:
 
 buildPythonPackage rec {
   pname = "keyutils";
   version = "0.6";
-  format = "setuptools";
+  pyproject = true;
 
   # github version comes bundled with tests
   src = fetchFromGitHub {
@@ -18,6 +20,8 @@ buildPythonPackage rec {
     tag = version;
     sha256 = "0pfqfr5xqgsqkxzrmj8xl2glyl4nbq0irs0k6ik7iy3gd3mxf5g1";
   };
+
+  build-system = [ setuptools ];
 
   postPatch = ''
     substituteInPlace setup.py --replace '"pytest-runner"' ""

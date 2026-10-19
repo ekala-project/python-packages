@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   django,
   six,
   pycrypto,
@@ -10,12 +12,14 @@
 buildPythonPackage rec {
   pname = "libthumbor";
   version = "2.0.2";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-1PsiFZrTDVQqy8A3nkaM5LdPiBoriRgHkklTOiczN+g=";
   };
+
+  build-system = [ setuptools ];
 
   buildInputs = [ django ];
 

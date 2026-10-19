@@ -5,6 +5,8 @@
   defusedxml,
   deprecated,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   lxml,
   paramiko,
   psutil,
@@ -13,7 +15,7 @@
 buildPythonPackage rec {
   pname = "ospd";
   version = "21.4.4";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "greenbone";
@@ -21,6 +23,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     hash = "sha256-dZgs+G2vJQIKnN9xHcNeNViG7mOIdKb+Ms2AKE+FC4M=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     defusedxml

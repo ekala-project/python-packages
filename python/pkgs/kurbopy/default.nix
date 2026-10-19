@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   fonttools,
   pytestCheckHook,
   rustPlatform,
@@ -10,12 +12,14 @@
 buildPythonPackage rec {
   pname = "kurbopy";
   version = "0.13.1";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-JiXNgUeY2booOp1zaWtCuEqdyp/CxXy4rUo5kKmq0eQ=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ fonttools ];
   nativeBuildInputs = [

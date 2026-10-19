@@ -3,17 +3,21 @@
   buildPythonPackage,
   fetchPypi,
   fetchpatch,
+  # build-system
+  setuptools,
 }:
 
 buildPythonPackage rec {
   pname = "namedlist";
   version = "1.8";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-NPifyZJZLICzmnCeE27c9B6hfyS6Mer4SjFKAsi5vO8=";
   };
+
+  build-system = [ setuptools ];
   patches = [
     # Deprecation warning using collections.abc, https://gitlab.com/ericvsmith/namedlist/-/merge_requests/1
     (fetchpatch {

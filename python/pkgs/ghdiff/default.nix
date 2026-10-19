@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   zope-testrunner,
   six,
   chardet,
@@ -10,12 +12,14 @@
 buildPythonPackage rec {
   pname = "ghdiff";
   version = "0.4";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     sha256 = "17mdhi2sq9017nq8rkjhhc87djpi5z99xiil0xz17dyplr7nmkqk";
   };
+
+  build-system = [ setuptools ];
 
   nativeCheckInputs = [ zope-testrunner ];
   dependencies = [

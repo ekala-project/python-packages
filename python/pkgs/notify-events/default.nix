@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   requests,
 }:
 
@@ -9,13 +11,15 @@ buildPythonPackage rec {
   pname = "notify-events";
   version = "1.1.3";
 
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     pname = "notify_events";
     inherit version;
     sha256 = "e63ba935c3300ff7f48cba115f7cb4474906e83c2e9b60b95a0881eb949701e7";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ requests ];
 

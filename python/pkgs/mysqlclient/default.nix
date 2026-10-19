@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   mariadb-connector-c,
   pkg-config,
 }:
@@ -9,7 +11,7 @@
 buildPythonPackage rec {
   pname = "mysqlclient";
   version = "2.2.8";
-  format = "setuptools";
+  pyproject = true;
 
   nativeBuildInputs = [ pkg-config ];
 
@@ -20,6 +22,8 @@ buildPythonPackage rec {
     inherit pname version;
     hash = "sha256-jtIMVhWpFdpFG7MIx9AwZkik/ZooCbqVyZJpAAYwYZk=";
   };
+
+  build-system = [ setuptools ];
 
   meta = {
     description = "Python interface to MySQL";

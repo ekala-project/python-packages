@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   django,
   pytestCheckHook,
   pytest-django,
@@ -11,7 +13,7 @@
 buildPythonPackage {
   pname = "django-crossdomainmedia";
   version = "0.0.4";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "stefanw";
@@ -22,6 +24,8 @@ buildPythonPackage {
     rev = "45af45a82e2630d99381758c7660fe9bdad06d2d";
     hash = "sha256-nwFUm+cxokZ38c5D77z15gIO/kg49oRACOl6+eGGEtQ=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ django ];
 

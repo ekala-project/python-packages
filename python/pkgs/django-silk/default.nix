@@ -4,6 +4,8 @@
   buildPythonPackage,
   django,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   gprof2dot,
   jinja2,
   mock,
@@ -21,7 +23,7 @@
 buildPythonPackage rec {
   pname = "django-silk";
   version = "5.5.2";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "jazzband";
@@ -29,6 +31,8 @@ buildPythonPackage rec {
     tag = version;
     hash = "sha256-1m6HvwN9n35q9p0LUD8ihbbQ5FRRr8KoDvRLed9RIMQ=";
   };
+
+  build-system = [ setuptools ];
 
   # "test_time_taken" tests aren't suitable for reproducible execution, but Django's
   # test runner doesn't have an easy way to ignore tests - so instead prevent it from picking

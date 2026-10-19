@@ -2,18 +2,22 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   django,
 }:
 
 buildPythonPackage rec {
   pname = "django-contrib-comments";
   version = "2.2.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-SN4A8VZ34BaiFq7/IF1uAOQ5HJpXAhNsZBGcRytzVto=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ django ];
 

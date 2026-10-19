@@ -2,12 +2,14 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
 }:
 
 buildPythonPackage {
   pname = "polygon3";
   version = "3.0.9";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "jraedler";
@@ -15,6 +17,8 @@ buildPythonPackage {
     rev = "7b2091f77741fa1d94251979bc4a4f2676b4d2d1";
     hash = "sha256-jXtjEzjWwMoVgrHWsK8brSN6TQRxIPRjUaRiLBXYLcI=";
   };
+
+  build-system = [ setuptools ];
 
   # malloc error on running the tests
   #  python3.10(30620,0x115b74600) malloc: *** error for object 0x10d6db580: pointer being freed was not allocated

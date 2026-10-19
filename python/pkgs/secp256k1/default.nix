@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   pkg-config,
   cffi,
   pkgs,
@@ -14,12 +16,14 @@ in
 buildPythonPackage rec {
   pname = "secp256k1";
   version = "0.14.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     sha256 = "82c06712d69ef945220c8b53c1a0d424c2ff6a1f64aee609030df79ad8383397";
   };
+
+  build-system = [ setuptools ];
 
   postPatch = ''
     # don't do hacky tarball download + setuptools check

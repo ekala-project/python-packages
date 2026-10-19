@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   python,
   isPy3k,
 }:
@@ -9,7 +11,7 @@
 buildPythonPackage rec {
   pname = "jieba";
   version = "0.42.1";
-  format = "setuptools";
+  pyproject = true;
 
   # no tests in PyPI tarball
   src = fetchFromGitHub {
@@ -18,6 +20,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     sha256 = "028vmd6sj6wn9l1ilw7qfmlpyiysnlzdgdlhwxs6j4fvq0gyrwxk";
   };
+
+  build-system = [ setuptools ];
 
   # UnicodeEncodeError
   doCheck = isPy3k;

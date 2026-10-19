@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   installShellFiles,
   pygments,
   unittestCheckHook,
@@ -10,7 +12,7 @@
 buildPythonPackage rec {
   pname = "jello";
   version = "1.6.1";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "kellyjonbrazil";
@@ -18,6 +20,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     hash = "sha256-RAQ04R1zDL9hk1q19GSFvdkxse5rJZXpboAondOoHEc=";
   };
+
+  build-system = [ setuptools ];
 
   nativeBuildInputs = [ installShellFiles ];
 

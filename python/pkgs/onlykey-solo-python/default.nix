@@ -4,6 +4,8 @@
   ecdsa,
   fetchpatch,
   fetchPypi,
+  # build-system
+  setuptools,
   fido2,
   intelhex,
   lib,
@@ -15,12 +17,14 @@
 buildPythonPackage rec {
   pname = "onlykey-solo-python";
   version = "0.0.32";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-88DuhgX4FCwzIKzw4RqWgMtjRdf5huVlKEHAAEminuQ=";
   };
+
+  build-system = [ setuptools ];
 
   postPatch = ''
     substituteInPlace setup.py \

@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   inflection,
   more-itertools,
   numpy,
@@ -14,7 +16,7 @@
 buildPythonPackage rec {
   pname = "nasdaq-data-link";
   version = "1.0.4";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "Nasdaq";
@@ -22,6 +24,8 @@ buildPythonPackage rec {
     tag = version;
     hash = "sha256-Q3Ay9FpJsvSVu0WU2bxFyo3ODKP/ZUo3SqsBtOGrIIE=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     inflection

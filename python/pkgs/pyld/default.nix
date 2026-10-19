@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   requests,
 }:
 
@@ -25,7 +27,7 @@ in
 buildPythonPackage rec {
   pname = "pyld";
   version = "1.0.5";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "digitalbazaar";
@@ -33,6 +35,8 @@ buildPythonPackage rec {
     tag = version;
     sha256 = "0z2vkllw8bvzxripwb6l757r7av5qwhzsiy4061gmlhq8z8gq961";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ requests ];
 

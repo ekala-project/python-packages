@@ -2,6 +2,8 @@
   buildPythonPackage,
   pkgs,
   pkg-config,
+  # build-system
+  setuptools,
 }:
 
 let
@@ -9,8 +11,10 @@ let
 in
 buildPythonPackage rec {
   pname = "sentencepiece";
-  format = "setuptools";
+  pyproject = true;
   inherit (sentencepiece-cpp) version src;
+
+  build-system = [ setuptools ];
 
   nativeBuildInputs = [ pkg-config ];
   buildInputs = [ sentencepiece-cpp.dev ];

@@ -2,13 +2,15 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   six,
 }:
 
 buildPythonPackage rec {
   pname = "pyu2f";
   version = "0.1.5a";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "google";
@@ -16,6 +18,8 @@ buildPythonPackage rec {
     tag = version;
     sha256 = "0mx7bn1p3n0fxyxa82wg3c719hby7vqkxv57fhf7zvhlg2zfnr0v";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ six ];
 

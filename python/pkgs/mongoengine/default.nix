@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   pymongo,
   six,
   blinker,
@@ -12,7 +14,7 @@
 buildPythonPackage rec {
   pname = "mongoengine";
   version = "0.29.3";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "MongoEngine";
@@ -20,6 +22,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     hash = "sha256-Y+cRQW29GBGt4aC+ENx8zSocV9A5Exzq1sMDv/wcJ3M=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     pymongo

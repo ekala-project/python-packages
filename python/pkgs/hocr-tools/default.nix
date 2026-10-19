@@ -1,6 +1,8 @@
 {
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   lxml,
   pillow,
   reportlab,
@@ -9,7 +11,7 @@
 buildPythonPackage rec {
   pname = "hocr-tools";
   version = "1.3.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "ocropus";
@@ -17,6 +19,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     sha256 = "14f9hkp7pr677085w8iidwd0la9cjzy3pyj3rdg9b03nz9pc0w6p";
   };
+
+  build-system = [ setuptools ];
 
   # hocr-tools uses a test framework that requires internet access
 

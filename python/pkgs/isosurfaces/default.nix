@@ -2,18 +2,22 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   numpy,
 }:
 
 buildPythonPackage rec {
   pname = "isosurfaces";
   version = "0.1.2";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-+lHr6GTqk1WyaDDif91qQdWli0GfqNS0fjuLgHGNbiE=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ numpy ];
 

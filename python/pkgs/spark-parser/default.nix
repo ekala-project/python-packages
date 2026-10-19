@@ -2,19 +2,23 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   click,
 }:
 
 buildPythonPackage rec {
   pname = "spark-parser";
   version = "1.9.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     pname = "spark_parser";
     inherit version;
     sha256 = "sha256-3GbUjEJlxBM9tBqcX+nBxQKzsgFn3xWKDyNM0xcSz2Q=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ click ];
 

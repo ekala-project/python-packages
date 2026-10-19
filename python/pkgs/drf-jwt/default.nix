@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   pyjwt,
   djangorestframework,
 }:
@@ -9,7 +11,7 @@
 buildPythonPackage rec {
   pname = "drf-jwt";
   version = "1.19.2";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "Styria-Digital";
@@ -17,6 +19,8 @@ buildPythonPackage rec {
     tag = version;
     hash = "sha256-bbkk78uYTG+JTzY3AyOmEVtVSgout/TETfr5N5fUto4=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     pyjwt

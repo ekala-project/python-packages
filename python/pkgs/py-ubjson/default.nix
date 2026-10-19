@@ -2,12 +2,14 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
 }:
 
 buildPythonPackage rec {
   pname = "py-ubjson";
   version = "0.16.1";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "Iotic-Labs";
@@ -15,6 +17,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     sha256 = "1frn97xfa88zrfmpnvdk1pc03yihlchhph99bhjayvzlfcrhm5v3";
   };
+
+  build-system = [ setuptools ];
   pythonImportsCheck = [ "ubjson" ];
 
   meta = {

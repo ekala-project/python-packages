@@ -2,12 +2,14 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
 }:
 
 buildPythonPackage rec {
   pname = "rapidfuzz-capi";
   version = "1.0.5";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "maxbachmann";
@@ -15,6 +17,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     hash = "sha256-0IvJl2JU/k1WbGPWRoucVGbVsEFNPHZT1ozEQAKQnPk=";
   };
+
+  build-system = [ setuptools ];
 
   # upstream has no tests
 

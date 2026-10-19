@@ -1,6 +1,8 @@
 {
   lib,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   buildPythonPackage,
   pyusb,
 }:
@@ -8,7 +10,7 @@
 buildPythonPackage rec {
   pname = "usbtmc";
   version = "0.8";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "python-ivi";
@@ -16,6 +18,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     hash = "sha256-69kqBTqnVqdWC2mqlXylzb9VkdhwTGZI0Ykf6lqbypI=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ pyusb ];
 

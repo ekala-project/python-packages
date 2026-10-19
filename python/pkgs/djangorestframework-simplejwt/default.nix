@@ -5,6 +5,8 @@
   django,
   djangorestframework,
   fetchPypi,
+  # build-system
+  setuptools,
   pyjwt,
   python-jose,
   setuptools-scm,
@@ -13,13 +15,15 @@
 buildPythonPackage rec {
   pname = "djangorestframework-simplejwt";
   version = "5.5.1";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     pname = "djangorestframework_simplejwt";
     inherit version;
     hash = "sha256-5yxVcvUdeAMCEojiBXr8vQPxf+EdSECW9ApGCrx26H8=";
   };
+
+  build-system = [ setuptools ];
 
   nativeBuildInputs = [ setuptools-scm ];
 

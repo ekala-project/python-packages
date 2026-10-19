@@ -2,6 +2,8 @@
   buildPythonPackage,
   lib,
   fetchPypi,
+  # build-system
+  setuptools,
   pytest,
   u-msgpack-python,
   six,
@@ -10,12 +12,14 @@
 buildPythonPackage (finalAttrs: {
   pname = "pytest-expect";
   version = "1.1.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
     sha256 = "36b4462704450798197d090809a05f4e13649d9cba9acdc557ce9517da1fd847";
   };
+
+  build-system = [ setuptools ];
 
   buildInputs = [ pytest ];
   dependencies = [

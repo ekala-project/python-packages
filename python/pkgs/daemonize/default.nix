@@ -2,17 +2,21 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
 }:
 
 buildPythonPackage rec {
   pname = "daemonize";
   version = "2.5.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-3QJuT/jSLLAW7SEwvHOLfUsdpZfvk8B00q255N6gi8M=";
   };
+
+  build-system = [ setuptools ];
 
   pythonImportsCheck = [ "daemonize" ];
 

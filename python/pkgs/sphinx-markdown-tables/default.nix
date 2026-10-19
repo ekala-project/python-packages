@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   sphinx,
   markdown,
 }:
@@ -9,12 +11,14 @@
 buildPythonPackage rec {
   pname = "sphinx-markdown-tables";
   version = "0.0.17";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-a8bT1ADqzP7r0ohEa8CN2DCDNnxYuF1A/mwS1371kvE=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     sphinx

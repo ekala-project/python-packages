@@ -4,12 +4,14 @@
   lxml,
   click,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   asn1crypto,
 }:
 
 buildPythonPackage rec {
   version = "0.3.31";
-  format = "setuptools";
+  pyproject = true;
   pname = "pyaxmlparser";
 
   src = fetchFromGitHub {
@@ -18,6 +20,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     hash = "sha256-ZV2PyWQfK9xidzGUz7XPAReaVjlB8tMUKQiXoGcFCGs=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     asn1crypto

@@ -4,15 +4,19 @@
   certbot,
   dnspython,
   pytestCheckHook,
+  # build-system
+  setuptools,
 }:
 
 buildPythonPackage rec {
   pname = "certbot-dns-rfc2136";
-  format = "setuptools";
+  pyproject = true;
 
   inherit (certbot) src version;
 
   sourceRoot = "${src.name}/certbot-dns-rfc2136";
+
+  build-system = [ setuptools ];
 
   dependencies = [
     acme

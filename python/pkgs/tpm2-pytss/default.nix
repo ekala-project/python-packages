@@ -5,6 +5,8 @@
   fetchPypi,
   fetchpatch,
   fetchpatch2,
+  # build-system
+  setuptools,
   asn1crypto,
   cffi,
   cryptography,
@@ -24,12 +26,14 @@ in
 buildPythonPackage rec {
   pname = "tpm2-pytss";
   version = "2.3.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-IAcRKTeWVvXzw7wW02RhJnKxR9gRkftOufn/n77khBA=";
   };
+
+  build-system = [ setuptools ];
 
   patches = [
     # libtpms (underneath swtpm) bumped the TPM revision
@@ -74,12 +78,7 @@ buildPythonPackage rec {
   # for more details.
   hardeningDisable = [ "fortify" ];
 
-  nativeBuildInputs = [
-    cffi
-    pkgconfig # this is the Python module
-    pkg-config # this is the actual pkg-config tool
-    setuptools-scm
-  ];
+  nativeBuildInputs = [ cffi pkgconfig # this is the Python module pkg-config # this is the actual pkg-config tool setuptools-scm ];
 
   buildInputs = [ tpm2-tss ];
 

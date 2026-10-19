@@ -8,12 +8,14 @@
 buildPythonPackage (finalAttrs: {
   pname = "genzshcomp";
   version = "0.6.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
     sha256 = "b582910d36f9ad0992756d7e9ccbe3e5cf811934b1002b51f25b99d3dda9d573";
   };
+
+  build-system = [ setuptools ];
 
   buildInputs = [ setuptools ];
 

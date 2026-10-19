@@ -2,19 +2,23 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   zeroconf,
 }:
 
 buildPythonPackage rec {
   pname = "envoy-utils";
   version = "0.0.1";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     pname = "envoy_utils";
     inherit version;
     sha256 = "13zn0d6k2a4nls9vp8cs0w07bgg4138vz18cadjadhm8p6r3bi0c";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ zeroconf ];
 

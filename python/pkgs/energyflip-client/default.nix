@@ -4,6 +4,8 @@
   async-timeout,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   pytest-aiohttp,
   pytestCheckHook,
   yarl,
@@ -12,7 +14,7 @@
 buildPythonPackage rec {
   pname = "energyflip-client";
   version = "0.2.2";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "dennisschroer";
@@ -20,6 +22,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     hash = "sha256-neuZ6pZWW/Rgexu/iCEymjnxi5l/IuLKPFn6S9U4DgU=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     aiohttp

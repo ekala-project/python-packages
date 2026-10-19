@@ -2,12 +2,14 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
 }:
 
 buildPythonPackage rec {
   pname = "linetable";
   version = "0.0.3";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "amol-";
@@ -15,6 +17,8 @@ buildPythonPackage rec {
     tag = version;
     hash = "sha256-nVZVxK6uB5TP0pReaEya3/lFXFkiqpnnaWqYzxzO6bM=";
   };
+
+  build-system = [ setuptools ];
 
   pythonImportsCheck = [ "linetable" ];
 

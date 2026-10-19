@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   localimport,
   pathlib2,
   six,
@@ -10,12 +12,14 @@
 buildPythonPackage rec {
   pname = "nodepy-runtime";
   version = "2.1.5";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-6tSsD76EpCZxkdulv1BcUZtIXGWLG6PuII25J8STygE=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     localimport

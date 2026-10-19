@@ -4,6 +4,8 @@
   colorful,
   docopt,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   freezegun,
   humanize,
   lxml,
@@ -16,7 +18,7 @@
 buildPythonPackage rec {
   pname = "radish-bdd";
   version = "0.18.4";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = pname;
@@ -24,6 +26,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     hash = "sha256-pnZ/vqjMd1Q/wF1W6joYrIulZSXAzS2G3E5Ke5VSAQg=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     colorful

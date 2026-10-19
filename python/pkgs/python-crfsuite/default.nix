@@ -8,7 +8,7 @@
 buildPythonPackage rec {
   pname = "python-crfsuite";
   version = "0.9.12";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit version;

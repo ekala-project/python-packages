@@ -1,6 +1,8 @@
 {
   lib,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   buildPythonPackage,
   requests,
   six,
@@ -10,7 +12,7 @@
 buildPythonPackage {
   pname = "mediafire-dl";
   version = "unstable-2023-09-07";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "Juvenal-Yescas";
@@ -18,6 +20,8 @@ buildPythonPackage {
     rev = "bf9d461f43c5d5dc2900e08bcd4202a597a07ca0";
     hash = "sha256-9qACTNMkO/CH/qB6WiggIKwSiFIccgU7CH0UeGUaFb4=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     requests

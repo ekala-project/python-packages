@@ -2,13 +2,15 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   gitUpdater,
 }:
 
 buildPythonPackage rec {
   pname = "colorful";
   version = "0.5.8";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "timofurrer";
@@ -16,6 +18,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     hash = "sha256-nztVTfBimRDXwPYk3LNMZKa1ItbgqM2ukgZs8hI8TwE=";
   };
+
+  build-system = [ setuptools ];
   pythonImportsCheck = [ "colorful" ];
 
   passthru.updateScript = gitUpdater {

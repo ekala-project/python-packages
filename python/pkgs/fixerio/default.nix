@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   requests,
   pytestCheckHook,
   httpretty,
@@ -11,7 +13,7 @@
 buildPythonPackage rec {
   pname = "fixerio";
   version = "1.0.0-alpha";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "amatellanes";
@@ -19,6 +21,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     sha256 = "009h1mys175xdyznn5bl980vly40544s4ph1zcgqwg2i2ic93gvb";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ requests ];
 

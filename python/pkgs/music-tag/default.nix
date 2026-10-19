@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   mutagen,
   pytestCheckHook,
 }:
@@ -9,12 +11,14 @@
 buildPythonPackage rec {
   pname = "music-tag";
   version = "0.4.3";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-Cqtubu2o3w9TFuwtIZC9dFYbfgNWKrCRzo1Wh828//Y=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ mutagen ];
 

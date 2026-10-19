@@ -4,6 +4,8 @@
   async-timeout,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   pytest-aiohttp,
   pytestCheckHook,
 }:
@@ -11,7 +13,7 @@
 buildPythonPackage rec {
   pname = "moonraker-api";
   version = "4.0.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "cmroche";
@@ -19,6 +21,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     hash = "sha256-I+/c3dVVuNGKWztVsEKi2AErACbhQoU8ZE3ye9B2HxM=";
   };
+
+  build-system = [ setuptools ];
 
   postPatch = ''
     # see comment on https://github.com/cmroche/moonraker-api/commit/e5ca8ab60d2839e150a81182fbe65255d84b4e4e

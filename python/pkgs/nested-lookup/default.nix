@@ -1,6 +1,8 @@
 {
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   lib,
   pytestCheckHook,
   six,
@@ -9,12 +11,14 @@
 buildPythonPackage rec {
   pname = "nested-lookup";
   version = "0.2.25";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-b6gydIyQOB8ikdhQgJ4ySSUZ7l8lPWpay8Kdk37KAug=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ six ];
 

@@ -4,6 +4,8 @@
   buildPackages,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   installShellFiles,
   ruamel-yaml,
   xmltodict,
@@ -14,7 +16,7 @@
 buildPythonPackage rec {
   pname = "jc";
   version = "1.25.7";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "kellyjonbrazil";
@@ -22,6 +24,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     hash = "sha256-aufAR+Y5ocJNWSr8CLIb0TZM6a3B6jqS3Ji1WIOLzBU=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     ruamel-yaml

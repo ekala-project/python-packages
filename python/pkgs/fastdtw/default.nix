@@ -3,6 +3,8 @@
   buildPythonPackage,
   fetchFromGitHub,
   fetchpatch,
+  # build-system
+  setuptools,
   cython,
   numpy,
   # Check Inputs
@@ -13,7 +15,7 @@
 buildPythonPackage rec {
   pname = "fastdtw";
   version = "0.3.4";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "slaypni";
@@ -21,6 +23,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     sha256 = "0irc5x4ahfp7f7q4ic97qa898s2awi0vdjznahxrfjirn8b157dw";
   };
+
+  build-system = [ setuptools ];
 
   patches = [
     # Removes outdated cythonized C++ file, which doesn't match CPython. Will be auto-used if left.

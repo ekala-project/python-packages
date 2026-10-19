@@ -1,19 +1,23 @@
 {
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   lib,
 }:
 
 buildPythonPackage rec {
   pname = "meshlabxml";
   version = "2018.3";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     pname = "MeshLabXML";
     inherit version;
     sha256 = "1villmg46hqby5jjkkpxr5bxydr72y5b3cbfngwpyxxdljn091w8";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ ];
 

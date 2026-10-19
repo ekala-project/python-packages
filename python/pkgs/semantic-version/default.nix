@@ -1,19 +1,23 @@
 {
   lib,
   fetchPypi,
+  # build-system
+  setuptools,
   buildPythonPackage,
 }:
 
 buildPythonPackage rec {
   pname = "semantic-version";
   version = "2.10.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     pname = "semantic_version";
     inherit version;
     hash = "sha256-vau20zaZjLs3jUuds6S1ah4yNXAdwF6iaQ2amX7VBBw=";
   };
+
+  build-system = [ setuptools ];
   pythonImportsCheck = [ "semantic_version" ];
 
   meta = {

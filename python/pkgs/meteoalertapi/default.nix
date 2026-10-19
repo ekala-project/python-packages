@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   requests,
   xmltodict,
 }:
@@ -9,7 +11,7 @@
 buildPythonPackage (finalAttrs: {
   pname = "meteoalertapi";
   version = "0.3.1";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "rolfberkenbosch";
@@ -17,6 +19,8 @@ buildPythonPackage (finalAttrs: {
     tag = "v${finalAttrs.version}";
     hash = "sha256-Imb4DVcNB3QiVSCLCI+eKpfl73aMn4NIItQVf7p0H+E=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     requests

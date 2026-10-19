@@ -7,6 +7,8 @@
   django,
   django-cache-url,
   fetchPypi,
+  # build-system
+  setuptools,
   mock,
   setuptools-scm,
 }:
@@ -14,12 +16,14 @@
 buildPythonPackage rec {
   pname = "django-configurations";
   version = "2.5.1";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-blCDdX4rvfm7eFBWdTa5apNRX2sXUD10ko/2KNsuDpQ=";
   };
+
+  build-system = [ setuptools ];
 
   buildInputs = [ setuptools-scm ];
 

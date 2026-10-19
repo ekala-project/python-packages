@@ -4,12 +4,14 @@
   async-timeout,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
 }:
 
 buildPythonPackage rec {
   pname = "open-garage";
   version = "0.2.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "Danielhiversen";
@@ -17,6 +19,8 @@ buildPythonPackage rec {
     tag = version;
     hash = "sha256-iJ7HcJhpTceFpHTUdNZOYDuxUWZGWPmZ9lxD3CyGvk8=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     aiohttp

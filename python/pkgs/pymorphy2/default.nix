@@ -1,6 +1,8 @@
 {
   lib,
   fetchPypi,
+  # build-system
+  setuptools,
   buildPythonPackage,
   isPy3k,
   dawg-python,
@@ -11,7 +13,7 @@
 buildPythonPackage rec {
   pname = "pymorphy2";
   version = "0.9.1";
-  format = "setuptools";
+  pyproject = true;
 
   disabled = !isPy3k;
 
@@ -19,6 +21,8 @@ buildPythonPackage rec {
     inherit pname version;
     hash = "sha256-hsRHFX3uLrI0HvvkU44SgadUdWuhqjLad6iWFMWLVgw=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     dawg-python

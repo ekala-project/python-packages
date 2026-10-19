@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   six,
   lark,
 }:
@@ -9,7 +11,7 @@
 buildPythonPackage rec {
   pname = "commentjson";
   version = "0.9.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "vaidik";
@@ -17,6 +19,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     hash = "sha256-dPnIcv7TIeyG7rU938w7FrDklmaGuPpXz34uw/JjOgY=";
   };
+
+  build-system = [ setuptools ];
 
   postPatch = ''
     substituteInPlace setup.py \

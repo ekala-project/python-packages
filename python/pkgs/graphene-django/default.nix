@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   graphene,
   graphql-core,
   django,
@@ -14,7 +16,7 @@
 buildPythonPackage rec {
   pname = "graphene-django";
   version = "3.2.3";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "graphql-python";
@@ -22,6 +24,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     hash = "sha256-uMkzgXn3YRgEU46Sv5lg60cvetHir9bv0mzJGDv79DI=";
   };
+
+  build-system = [ setuptools ];
 
   postPatch = ''
     substituteInPlace setup.py \

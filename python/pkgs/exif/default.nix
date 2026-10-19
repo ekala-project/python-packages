@@ -2,13 +2,15 @@
   lib,
   buildPythonPackage,
   fetchFromGitLab,
+  # build-system
+  setuptools,
   plum-py,
 }:
 
 buildPythonPackage rec {
   pname = "exif";
   version = "1.6.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitLab {
     owner = "TNThieding";
@@ -16,6 +18,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     hash = "sha256-uiHL3m0C6+YnAHRLwzMCSzffrQsSyVcuem6FBtTLxek=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ plum-py ];
 

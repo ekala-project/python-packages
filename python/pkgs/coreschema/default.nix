@@ -1,6 +1,8 @@
 {
   lib,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   buildPythonPackage,
   jinja2,
   pytest,
@@ -9,7 +11,7 @@
 buildPythonPackage rec {
   pname = "coreschema";
   version = "0.0.4";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     repo = "python-coreschema";
@@ -17,6 +19,8 @@ buildPythonPackage rec {
     tag = version;
     sha256 = "027pc753mkgbb3r1v1x7dsdaarq93drx0f79ppvw9pfkcjcq6wb1";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ jinja2 ];
   checkPhase = ''

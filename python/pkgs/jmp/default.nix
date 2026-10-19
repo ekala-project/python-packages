@@ -1,6 +1,8 @@
 {
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   jax,
   jaxlib,
   lib,
@@ -10,7 +12,7 @@
 buildPythonPackage rec {
   pname = "jmp";
   version = "0.0.4";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "deepmind";
@@ -18,6 +20,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     hash = "sha256-+PefZU1209vvf1SfF8DXiTvKYEnZ4y8iiIr8yKikx9Y=";
   };
+
+  build-system = [ setuptools ];
 
   # Wheel requires only `numpy`, but the import needs `jax`.
   dependencies = [ jax ];

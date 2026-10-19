@@ -3,6 +3,8 @@
   buildPythonPackage,
   deepmerge,
   fetchPypi,
+  # build-system
+  setuptools,
   setuptools-scm,
   jsonschema,
   picobox,
@@ -14,12 +16,14 @@
 buildPythonPackage rec {
   pname = "sphinxcontrib-openapi";
   version = "0.8.4";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-34g4CKW15LQROtaXGFxDo/Qt89znBFOveLpwdpB+miA=";
   };
+
+  build-system = [ setuptools ];
 
   nativeBuildInputs = [ setuptools-scm ];
   dependencies = [

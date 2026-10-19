@@ -3,17 +3,21 @@
   stdenv,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   gcc-unwrapped,
 }:
 buildPythonPackage rec {
   pname = "cxxfilt";
   version = "0.3.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     sha256 = "7df6464ba5e8efbf0d8974c0b2c78b32546676f06059a83515dbdfa559b34214";
   };
+
+  build-system = [ setuptools ];
 
   postPatch =
     let

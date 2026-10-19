@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   libusb1,
   rsa,
   pycryptodome,
@@ -11,7 +13,7 @@
 buildPythonPackage {
   pname = "adb-homeassistant";
   version = "1.3.1";
-  format = "setuptools";
+  pyproject = true;
 
   # pypi does not contain tests, using github sources instead
   src = fetchFromGitHub {
@@ -20,6 +22,8 @@ buildPythonPackage {
     rev = "5949bf432307cbba7128e84d7bc6add7f054a078";
     sha256 = "0s3fazvbzchn1fsvjrd1jl8w9y4dvvgq6q8m8p5lr2gri0npr581";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     libusb1

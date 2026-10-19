@@ -2,17 +2,21 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
 }:
 
 buildPythonPackage rec {
   pname = "isounidecode";
   version = "0.3";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-TbCpYsY0GCbJpprKq8L5I6WxJNU6M1voku8pFzvDHFs=";
   };
+
+  build-system = [ setuptools ];
 
   pythonImportsCheck = [ "isounidecode" ];
 

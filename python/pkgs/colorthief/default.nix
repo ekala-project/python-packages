@@ -2,13 +2,15 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   pillow,
 }:
 
 buildPythonPackage rec {
   pname = "colorthief";
   version = "0.2.1";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "fengsp";
@@ -16,6 +18,8 @@ buildPythonPackage rec {
     tag = version;
     sha256 = "0lzpflal1iqbj4k7hayss5z024qf2sn8c3wxw03a0mgxg06ca2hm";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ pillow ];
 

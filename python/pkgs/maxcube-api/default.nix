@@ -2,13 +2,15 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   pytestCheckHook,
 }:
 
 buildPythonPackage rec {
   pname = "maxcube-api";
   version = "0.4.3";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "hackercowboy";
@@ -16,6 +18,8 @@ buildPythonPackage rec {
     tag = "V${version}";
     sha256 = "10k61gfpnqljf3p3qxr97xq7j67a9cr4ivd9v72hdni0znrbx6ym";
   };
+
+  build-system = [ setuptools ];
 
   postPatch = ''
     substituteInPlace setup.py --replace "license=license" "license='MIT'"

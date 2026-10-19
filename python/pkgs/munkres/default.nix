@@ -3,6 +3,8 @@
   buildPythonPackage,
   fetchPypi,
   fetchpatch,
+  # build-system
+  setuptools,
   isPy3k,
   pytestCheckHook,
 }:
@@ -10,7 +12,7 @@
 buildPythonPackage rec {
   pname = "munkres";
   version = "1.1.4";
-  format = "setuptools";
+  pyproject = true;
 
   disabled = !isPy3k;
 
@@ -18,6 +20,8 @@ buildPythonPackage rec {
     inherit pname version;
     sha256 = "fc44bf3c3979dada4b6b633ddeeb8ffbe8388ee9409e4d4e8310c2da1792db03";
   };
+
+  build-system = [ setuptools ];
 
   patches = [
     # Fixes test on 32-bit systems.

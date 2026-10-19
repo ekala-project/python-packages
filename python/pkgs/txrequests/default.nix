@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   twisted,
   requests,
   cryptography,
@@ -11,12 +13,14 @@
 buildPythonPackage rec {
   pname = "txrequests";
   version = "0.9.6";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     sha256 = "b452a1cafa4d005678f6fa47922a330feb4907d5b4732d1841ca98e89f1362e1";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     twisted

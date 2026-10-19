@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   six,
   pytestCheckHook,
 }:
@@ -10,7 +12,7 @@ buildPythonPackage rec {
   pname = "imapclient";
   version = "3.1.0";
 
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "mjs";
@@ -18,6 +20,8 @@ buildPythonPackage rec {
     tag = version;
     hash = "sha256-J+pB+jXAoZItvaR8o+97sETFYxWj+uslmvsAe/Q0Gzc=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ six ];
 

@@ -2,17 +2,21 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
 }:
 
 buildPythonPackage rec {
   pname = "kconfiglib";
   version = "14.1.1a4";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     sha256 = "sha256-16d+R4neiTfVZ6/KM8BfxYu3kyAB9dMDdJSy74UWekE=";
   };
+
+  build-system = [ setuptools ];
 
   patches = [
     # see https://github.com/ulfalizer/Kconfiglib/pull/119

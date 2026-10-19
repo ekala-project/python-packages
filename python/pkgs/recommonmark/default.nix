@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   commonmark,
   docutils,
   sphinx,
@@ -11,7 +13,7 @@
 buildPythonPackage rec {
   pname = "recommonmark";
   version = "0.7.1";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "rtfd";
@@ -19,6 +21,8 @@ buildPythonPackage rec {
     tag = version;
     sha256 = "0kwm4smxbgq0c0ybkxfvlgrfb3gq9amdw94141jyykk9mmz38379";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     commonmark

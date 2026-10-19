@@ -2,13 +2,15 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   pytestCheckHook,
 }:
 
 buildPythonPackage rec {
   pname = "justbackoff";
   version = "0.6.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "alexferl";
@@ -16,6 +18,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     sha256 = "097j6jxgl4b3z46x9y9z10643vnr9v831vhagrxzrq6nviil2z6l";
   };
+
+  build-system = [ setuptools ];
 
   nativeCheckInputs = [ pytestCheckHook ];
 

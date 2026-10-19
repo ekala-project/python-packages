@@ -2,18 +2,22 @@
   buildPythonPackage,
   cffi,
   fetchPypi,
+  # build-system
+  setuptools,
   lib,
 }:
 
 buildPythonPackage rec {
   pname = "reflink";
   version = "0.2.2";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-iCN17nMZJ1rl9qahKHQGNl2sHpZDuRrRDlGH0/hCU70=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ cffi ];
 

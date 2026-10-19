@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
 }:
 
 let
@@ -10,7 +12,7 @@ let
 in
 buildPythonPackage {
   inherit pname version;
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "jmriebold";
@@ -18,6 +20,8 @@ buildPythonPackage {
     tag = "v${version}";
     hash = "sha256-dhAB0VbBGsSrgYGUlZEYaKA6sQB/f9Bb3alsRuQ8opo=";
   };
+
+  build-system = [ setuptools ];
 
   postPatch = ''
     # the version mangling in mautrix_signal/get_version.py interacts badly with pythonRelaxDepsHook

@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   python,
   six,
   twisted,
@@ -10,7 +12,7 @@
 buildPythonPackage {
   pname = "tubes";
   version = "0.2.1-unstable-2023-11-06";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "twisted";
@@ -18,6 +20,8 @@ buildPythonPackage {
     rev = "b74680b8e7bcfe64362865356bb9461b77bbd5c0";
     hash = "sha256-E8brnt8CtTEEP1KQTsTsgnl54H4zRGp+1IuoI/Qf5NA=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     six

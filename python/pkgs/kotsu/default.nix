@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   pandas,
   typing-extensions,
   pytestCheckHook,
@@ -13,7 +15,7 @@
 buildPythonPackage rec {
   pname = "kotsu";
   version = "0.4.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "datavaluepeople";
@@ -21,6 +23,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     hash = "sha256-7bRrHowRKq3xiBiAkfS4ZL9PXHIUmZc99q9pHex9BLg=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     pandas

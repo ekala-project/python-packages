@@ -1,6 +1,8 @@
 {
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   isPy3k,
   lib,
   # pythonPackages
@@ -10,7 +12,7 @@
 buildPythonPackage rec {
   pname = "pylint-celery";
   version = "0.3";
-  format = "setuptools";
+  pyproject = true;
   disabled = !isPy3k;
 
   src = fetchFromGitHub {
@@ -19,6 +21,8 @@ buildPythonPackage rec {
     tag = version;
     sha256 = "05fhwraq12c2724pn4py1bjzy5rmsrb1x68zck73nlp5icba6yap";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ pylint-plugin-utils ];
 

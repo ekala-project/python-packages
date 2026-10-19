@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   fixtures,
   jsonpatch,
   netaddr,
@@ -17,12 +19,14 @@
 buildPythonPackage rec {
   pname = "fiblary3-fork";
   version = "0.1.12";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     sha256 = "001wqh7gx2dv3sf7a5xsbppz9r88f5qwrp05jzjsjcm6cbcvmsz0";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     jsonpatch

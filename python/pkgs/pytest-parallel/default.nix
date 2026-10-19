@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   # build inputs
   tblib,
   pytest,
@@ -13,7 +15,7 @@ let
 in
 buildPythonPackage {
   inherit pname version;
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "kevlened";
@@ -21,6 +23,8 @@ buildPythonPackage {
     tag = version;
     hash = "sha256-ddpoWBTf7Zor569p6uOMjHSTx3Qa551f4mSwyTLDdBU=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     tblib

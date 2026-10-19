@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   protobuf,
   six,
 }:
@@ -9,12 +11,14 @@
 buildPythonPackage rec {
   pname = "protobuf3-to-dict";
   version = "0.1.5";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     sha256 = "0nibblvj3n20zvq6d73zalbjqjby0w8ji5mim7inhn7vb9dw4hhy";
   };
+
+  build-system = [ setuptools ];
 
   pythonImportsCheck = [ "protobuf_to_dict" ];
 

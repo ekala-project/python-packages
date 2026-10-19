@@ -3,19 +3,23 @@
   buildPythonPackage,
   dnspython,
   fetchPypi,
+  # build-system
+  setuptools,
   idna,
 }:
 
 buildPythonPackage rec {
   pname = "email-validator";
   version = "2.3.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     pname = "email_validator";
     inherit version;
     hash = "sha256-n8BcN/L2z0Of9BT4/EbZF5KZdKgiRMIOsQIxumDFRCY=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     dnspython

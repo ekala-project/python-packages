@@ -9,9 +9,11 @@
 buildPythonPackage rec {
   pname = "capstone";
   version = lib.getVersion pkgs.capstone;
-  format = "setuptools";
+  pyproject = true;
 
   src = pkgs.capstone.src;
+
+  build-system = [ setuptools ];
   sourceRoot = "${src.name}/bindings/python";
 
   postPatch = ''

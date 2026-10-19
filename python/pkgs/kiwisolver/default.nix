@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   stdenv,
   cppy,
   setuptools-scm,
@@ -10,12 +12,14 @@
 buildPythonPackage rec {
   pname = "kiwisolver";
   version = "1.5.1";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-8TA+8u7IEmKktwjD6Fiv5Y18da2RwcBSZu2nZzNphZo=";
   };
+
+  build-system = [ setuptools ];
 
   env.NIX_CFLAGS_COMPILE = lib.optionalString stdenv.hostPlatform.isDarwin "-I${lib.getInclude stdenv.cc.libcxx}/include/c++/v1";
 

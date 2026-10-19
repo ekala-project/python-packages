@@ -4,6 +4,8 @@
   buildPythonPackage,
   chardet,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   lxml,
   pkg-config,
   pkgs,
@@ -13,7 +15,7 @@
 buildPythonPackage rec {
   pname = "html5-parser";
   version = "0.4.12";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "kovidgoyal";
@@ -21,6 +23,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     hash = "sha256-0Qn+To/d3+HMx+KhhgJBEHVYPOfIeBnngBraY7r4uSs=";
   };
+
+  build-system = [ setuptools ];
 
   nativeBuildInputs = [ pkg-config ];
 

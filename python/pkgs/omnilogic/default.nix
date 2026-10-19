@@ -4,12 +4,14 @@
   xmltodict,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
 }:
 
 buildPythonPackage rec {
   pname = "omnilogic";
   version = "0.5.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "djtimca";
@@ -17,6 +19,8 @@ buildPythonPackage rec {
     tag = version;
     hash = "sha256-ySK2T5T+Qdq8nVQqluIARR89KmM1N3oD44oLydwcs7E=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     aiohttp

@@ -2,12 +2,14 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
 }:
 
 buildPythonPackage rec {
   pname = "pylatexenc";
   version = "2.11";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "phfaist";
@@ -15,6 +17,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     hash = "sha256-Zv3Sjx0YpSCnoHHf3CSiGaFMS7FNgUUwvIxNX/k9tOg=";
   };
+
+  build-system = [ setuptools ];
 
   pythonImportsCheck = [ "pylatexenc" ];
 

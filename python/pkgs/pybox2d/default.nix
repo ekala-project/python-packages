@@ -2,13 +2,15 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   swig,
 }:
 
 buildPythonPackage rec {
   pname = "pybox2d";
   version = "2.3.10";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "pybox2d";
@@ -16,6 +18,8 @@ buildPythonPackage rec {
     tag = version;
     hash = "sha256-yjLFvsg8GQLxjN1vtZM9zl+kAmD4+eS/vzRkpj0SCjY=";
   };
+
+  build-system = [ setuptools ];
 
   nativeBuildInputs = [ swig ];
 

@@ -2,18 +2,22 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
 }:
 
 buildPythonPackage rec {
   pname = "future-typing";
   version = "0.4.1";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     pname = "future_typing";
     inherit version;
     sha256 = "65fdc5034a95db212790fee5e977fb0a2df8deb60dccf3bac17d6d2b1a9bbacd";
   };
+
+  build-system = [ setuptools ];
 
   pythonImportsCheck = [ "future_typing" ];
 

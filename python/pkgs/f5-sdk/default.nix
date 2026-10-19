@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   f5-icontrol-rest,
   six,
 }:
@@ -9,12 +11,14 @@
 buildPythonPackage rec {
   pname = "f5-sdk";
   version = "3.0.21";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-IokMj9mCMsFMVFYO4CpZUB2i32cOamhS5u2mNkNjljo=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     f5-icontrol-rest

@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   pytest-asyncio,
   pytest-cov-stub,
   pytestCheckHook,
@@ -12,7 +14,7 @@
 buildPythonPackage rec {
   pname = "hydrawiser";
   version = "0.2";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "ptcryan";
@@ -20,6 +22,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     sha256 = "161hazlpvd71xcl2ja86560wm5lnrjv210ki3ji37l6c6gwmhjdj";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ requests ];
 

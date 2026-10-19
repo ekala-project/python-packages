@@ -2,19 +2,23 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   setuptools-scm,
 }:
 
 buildPythonPackage rec {
   pname = "ufonormalizer";
   version = "0.6.2";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     sha256 = "sha256-TFcVu5SDgfLGQa+CuUk4rSQtm1Nl3RxbfOPXVVaibDo=";
     extension = "zip";
   };
+
+  build-system = [ setuptools ];
 
   nativeBuildInputs = [ setuptools-scm ];
 

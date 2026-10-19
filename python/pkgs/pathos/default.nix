@@ -3,6 +3,8 @@
   buildPythonPackage,
   dill,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   multiprocess,
   pox,
   ppft,
@@ -11,7 +13,7 @@
 buildPythonPackage rec {
   pname = "pathos";
   version = "0.3.5";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "uqfoundation";
@@ -19,6 +21,8 @@ buildPythonPackage rec {
     tag = version;
     hash = "sha256-9ejrHHgSbDrbuq1bktyiKPJnQ1l52ug/lnJJbac7x4s=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     dill

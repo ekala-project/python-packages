@@ -2,13 +2,15 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   psutil,
 }:
 
 buildPythonPackage rec {
   pname = "psutil-home-assistant";
   version = "0.0.1";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "home-assistant-libs";
@@ -16,6 +18,8 @@ buildPythonPackage rec {
     tag = version;
     hash = "sha256-6bj1aaa/JYZFVwUAJfxISRoldgTmumCG8WrlKhkb6kM=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ psutil ];
 

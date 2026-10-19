@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   apispec,
   colorama,
   click,
@@ -27,13 +29,15 @@
 buildPythonPackage rec {
   pname = "flask-appbuilder";
   version = "5.0.2";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     pname = "Flask-AppBuilder";
     inherit version;
     hash = "sha256-9Xe5gqGuQLwhMjjO25PDnGfPIZmqHgBuCH6hs1B9VFA=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     apispec

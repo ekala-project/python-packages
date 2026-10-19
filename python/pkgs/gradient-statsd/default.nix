@@ -6,6 +6,8 @@
   datadog,
   decorator,
   fetchPypi,
+  # build-system
+  setuptools,
   idna,
   requests,
   urllib3,
@@ -14,13 +16,15 @@
 buildPythonPackage rec {
   pname = "gradient-statsd";
   version = "1.0.1";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     pname = "gradient_statsd";
     inherit version;
     hash = "sha256-iWlNX43ZtvU73wz4+8DgDulQNOnssJGxTBkvAaLj530=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     certifi

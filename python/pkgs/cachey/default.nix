@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   typing-extensions,
   heapdict,
   pytestCheckHook,
@@ -9,13 +11,15 @@
 buildPythonPackage rec {
   pname = "cachey";
   version = "0.2.1";
-  format = "setuptools";
+  pyproject = true;
   src = fetchFromGitHub {
     owner = "dask";
     repo = "cachey";
     tag = version;
     hash = "sha256-5USmuufrrWtmgibpfkjo9NtgN30hdl8plJfythmxM4s=";
   };
+
+  build-system = [ setuptools ];
   dependencies = [
     typing-extensions
     heapdict

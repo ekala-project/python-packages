@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   requests,
   six,
 }:
@@ -9,7 +11,7 @@
 buildPythonPackage rec {
   pname = "f5-icontrol-rest";
   version = "1.3.16";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "F5Networks";
@@ -17,6 +19,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     sha256 = "sha256-asAFIRoc2zll8a8gMMt4ZRQILhMAes8wf3PGwG5wF9c=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     requests

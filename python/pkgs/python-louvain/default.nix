@@ -3,6 +3,8 @@
   fetchPypi,
   buildPythonPackage,
   fetchpatch,
+  # build-system
+  setuptools,
   networkx,
   numpy,
 }:
@@ -10,12 +12,14 @@
 buildPythonPackage rec {
   pname = "python-louvain";
   version = "0.16";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-t7ot9QAv0o0+54mklTK6rRH+ZI5PIRfPB5jnUgodpWs=";
   };
+
+  build-system = [ setuptools ];
 
   patches = [
     # Fix test_karate

@@ -1,18 +1,22 @@
 {
   lib,
   fetchPypi,
+  # build-system
+  setuptools,
   buildPythonPackage,
 }:
 
 buildPythonPackage rec {
   pname = "dokuwiki";
   version = "1.3.3";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-gtTyO6jmjQT0ZwmxvH+RAe1v5aruNStfP1qz1+AqYXs=";
   };
+
+  build-system = [ setuptools ];
 
   pythonImportsCheck = [ "dokuwiki" ];
 

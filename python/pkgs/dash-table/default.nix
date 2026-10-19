@@ -2,18 +2,22 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
 }:
 
 buildPythonPackage rec {
   pname = "dash-table";
   version = "5.0.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     pname = "dash_table";
     inherit version;
     hash = "sha256-GGJNaT1MjvLd7Jmm8WdZNDen6gvxU6og8xjBcMW8cwg=";
   };
+
+  build-system = [ setuptools ];
 
   # No tests in archive
 

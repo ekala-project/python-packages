@@ -2,18 +2,22 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   blessed,
 }:
 
 buildPythonPackage rec {
   pname = "dashing";
   version = "0.1.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-JRRgjg8pp3Xb0bERFWEhnOg9U8+kuqL+QQH6uE/Vbxs=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ blessed ];
 

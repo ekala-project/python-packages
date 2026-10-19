@@ -2,17 +2,21 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
 }:
 
 buildPythonPackage rec {
   pname = "quantile-python";
   version = "1.1";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-VYYp6IxJfvO5sQgTScGuamG1NZDjF3JCmP9UxnTbeWk=";
   };
+
+  build-system = [ setuptools ];
 
   # package has no tests
 

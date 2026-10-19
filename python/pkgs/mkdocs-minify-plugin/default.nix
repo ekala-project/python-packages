@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   mkdocs,
   csscompressor,
   htmlmin,
@@ -11,7 +13,7 @@
 buildPythonPackage rec {
   pname = "mkdocs-minify-plugin";
   version = "0.7.1";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "byrnereese";
@@ -19,6 +21,8 @@ buildPythonPackage rec {
     tag = version;
     hash = "sha256-LDCAWKVbFsa6Y/tmY2Zne4nOtxe4KvNplZuWxg4e4L8=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     csscompressor

@@ -2,13 +2,15 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   typing-extensions,
 }:
 
 buildPythonPackage rec {
   version = "3.11.0";
   pname = "asgiref";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "django";
@@ -16,6 +18,8 @@ buildPythonPackage rec {
     tag = version;
     hash = "sha256-2ZaUIWGF5cQVNj95b7WiKGsn2wYsoJmJ/CfPhIEZdjc=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ typing-extensions ];
 

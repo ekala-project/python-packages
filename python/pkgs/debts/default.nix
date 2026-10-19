@@ -3,6 +3,8 @@
   python,
   buildPythonPackage,
   fetchFromGitLab,
+  # build-system
+  setuptools,
   jinja2,
   pytest,
 }:
@@ -10,7 +12,7 @@
 buildPythonPackage rec {
   pname = "debts";
   version = "0.5";
-  format = "setuptools";
+  pyproject = true;
 
   # pypi does not ship tests
   src = fetchFromGitLab {
@@ -20,6 +22,8 @@ buildPythonPackage rec {
     rev = "d887bd8b340172d1c9bbcca6426529b8d1c2a241"; # no tags
     sha256 = "1d66nka81mv9c07mki78lp5hdajqv4cq6aq2k7bh3mhkc5hwnwlg";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ jinja2 ];
 

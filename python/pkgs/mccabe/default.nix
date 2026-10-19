@@ -2,18 +2,22 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   pytest,
 }:
 
 buildPythonPackage rec {
   pname = "mccabe";
   version = "0.7.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-NI4CQMM7YLvfTlIxku+RnyjLLD19XHeU90AJKQ8jYyU=";
   };
+
+  build-system = [ setuptools ];
 
   buildInputs = [ pytest ];
 

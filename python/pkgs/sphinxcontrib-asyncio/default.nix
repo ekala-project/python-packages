@@ -2,18 +2,22 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   sphinx,
 }:
 
 buildPythonPackage rec {
   pname = "sphinxcontrib-asyncio";
   version = "0.3.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-mf0m4P5+34ckSnGpnDFv0Mm1CFbCUZrMqSfr50EAci4=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ sphinx ];
 

@@ -3,6 +3,8 @@
   attrs,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   pytestCheckHook,
   six,
   testtools,
@@ -11,12 +13,14 @@
 buildPythonPackage rec {
   pname = "effect";
   version = "1.1.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-ev+2A3B8ZIsHsReB67eTpLmu6KzxrFdkw+0hEq3wyeo=";
   };
+
+  build-system = [ setuptools ];
 
   postPatch = ''
     substituteInPlace effect/test_do.py \

@@ -4,12 +4,14 @@
   buildPythonPackage,
   requests,
   six,
+  # build-system
+  setuptools,
 }:
 
 buildPythonPackage {
   pname = "dopy";
   version = "2016-01-04";
-  format = "setuptools";
+  pyproject = true;
 
   src = pkgs.fetchFromGitHub {
     owner = "Wiredcraft";
@@ -17,6 +19,8 @@ buildPythonPackage {
     rev = "cb443214166a4e91b17c925f40009ac883336dc3";
     sha256 = "0ams289qcgna96aak96jbz6wybs6qb95h2gn8lb4lmx2p5sq4q56";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     requests

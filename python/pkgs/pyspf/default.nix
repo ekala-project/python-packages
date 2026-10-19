@@ -2,13 +2,15 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   py3dns,
 }:
 
 buildPythonPackage rec {
   pname = "pyspf";
   version = "2.0.14";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "sdgathman";
@@ -16,6 +18,8 @@ buildPythonPackage rec {
     tag = "pyspf-${version}";
     sha256 = "0bmimlmwrq9glnjc4i6pwch30n3y5wyqmkjfyayxqxkfrixqwydi";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ py3dns ];
 

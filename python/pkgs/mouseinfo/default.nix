@@ -3,13 +3,15 @@
   buildPythonPackage,
   pyperclip,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   python-xlib,
   pillow,
 }:
 buildPythonPackage {
   pname = "mouseinfo";
   version = "0.1.3";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "asweigart";
@@ -17,6 +19,8 @@ buildPythonPackage {
     rev = "1876ad5cd311b4352d46bc64a12edfb4da49974e";
     hash = "sha256-UTaHTJE0xFihN9r+DY/WhekZ7S/CXtMFbqAayzexRxk=";
   };
+
+  build-system = [ setuptools ];
 
   patches = [
     ./fix-xlib-version.patch

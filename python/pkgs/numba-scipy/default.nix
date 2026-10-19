@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   scipy,
   numba,
   pytestCheckHook,
@@ -10,12 +12,14 @@
 buildPythonPackage rec {
   pname = "numba-scipy";
   version = "0.4.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-RDZF1mNcZnrcOzjQpjbZq8yXHnjeLAeAjYmvzXvFhEQ=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     scipy

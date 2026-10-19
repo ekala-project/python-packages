@@ -2,12 +2,14 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
 }:
 
 buildPythonPackage rec {
   pname = "jupyter-highlight-selected-word";
   version = "0.2.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "jcb91";
@@ -15,6 +17,8 @@ buildPythonPackage rec {
     tag = version;
     hash = "sha256-KgM//SIfES46uZySwNR4ZOcolnJORltvThsmEvxXoIs=";
   };
+
+  build-system = [ setuptools ];
 
   # This package does not have tests
   doChecks = false;

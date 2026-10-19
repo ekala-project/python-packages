@@ -1,6 +1,8 @@
 {
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   lib,
   pyyaml,
   six,
@@ -10,7 +12,7 @@
 buildPythonPackage rec {
   pname = "ipyxact";
   version = "0.3.2";
-  format = "setuptools";
+  pyproject = true;
 
   dependencies = [ pyyaml ];
   nativeCheckInputs = [
@@ -24,6 +26,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     hash = "sha256-myD+NnqcxxaSAV7qZa8xqeciaiFqFePqIzd7sb/2GXA=";
   };
+
+  build-system = [ setuptools ];
 
   pythonImportsCheck = [ "ipyxact" ];
 

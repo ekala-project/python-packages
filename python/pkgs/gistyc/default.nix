@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   certifi,
   click,
   requests,
@@ -10,12 +12,14 @@
 buildPythonPackage rec {
   pname = "gistyc";
   version = "1.3";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-WVK45U9e3qyZFi9wSRHNi9+1u4TetlZkYXAZN7LVqhE=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     certifi

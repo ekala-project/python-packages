@@ -2,12 +2,14 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
 }:
 
 buildPythonPackage rec {
   pname = "rfc6555";
   version = "0.1.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "sethmlarson";
@@ -15,6 +17,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     hash = "sha256-Lmwgusc4EQlF0GHmMTUxWzUCjBk19cvurNwbOnT+1jM=";
   };
+
+  build-system = [ setuptools ];
 
   pythonImportsCheck = [ "rfc6555" ];
 

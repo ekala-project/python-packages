@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   jinja2,
   kubernetes,
   ruamel-yaml,
@@ -12,7 +14,7 @@
 buildPythonPackage rec {
   pname = "openshift";
   version = "0.13.2";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "openshift";
@@ -20,6 +22,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     hash = "sha256-uLfewj7M8KNs3oL1AM18sR/WhAR2mvBfqadyhR73FP0=";
   };
+
+  build-system = [ setuptools ];
 
   pythonRelaxDeps = [ "kubernetes" ];
 

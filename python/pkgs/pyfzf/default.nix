@@ -2,12 +2,14 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
 }:
 
 buildPythonPackage rec {
   pname = "pyfzf";
   version = "0.3.1";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "nk412";
@@ -15,6 +17,8 @@ buildPythonPackage rec {
     tag = version;
     hash = "sha256-w+ZjQGFd/lR2TiTHc2uQSJXORmzJJZXsr9BO4PIw/Co=";
   };
+
+  build-system = [ setuptools ];
 
   pythonImportsCheck = [ "pyfzf" ];
 

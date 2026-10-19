@@ -3,11 +3,15 @@
   stdenv,
   buildPythonPackage,
   pkgs,
+  # build-system
+  setuptools,
 }:
 
 buildPythonPackage {
-  format = "setuptools";
+  pyproject = true;
   inherit (pkgs.file) pname version src;
+
+  build-system = [ setuptools ];
 
   patchPhase = ''
     substituteInPlace python/magic.py --replace "find_library('magic')" "'${pkgs.file}/lib/libmagic${stdenv.hostPlatform.extensions.sharedLibrary}'"

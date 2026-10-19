@@ -2,13 +2,15 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   jsonpointer,
 }:
 
 buildPythonPackage rec {
   pname = "jsonpatch";
   version = "1.33";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "stefankoegl";
@@ -16,6 +18,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     hash = "sha256-JHBB64LExzHQVoFF2xcsqGlNWX/YeEBa1M/TmfeQLWI=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ jsonpointer ];
 

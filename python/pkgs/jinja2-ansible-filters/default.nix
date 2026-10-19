@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   jinja2,
   pyyaml,
 }:
@@ -9,12 +11,14 @@
 buildPythonPackage rec {
   pname = "jinja2-ansible-filters";
   version = "1.3.2";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-B8EM9E1wc/TwEQLKEtmi3DG0HUfkxh7ZLvam0mabNWs=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     jinja2

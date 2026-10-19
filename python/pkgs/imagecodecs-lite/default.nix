@@ -1,6 +1,8 @@
 {
   lib,
   fetchPypi,
+  # build-system
+  setuptools,
   buildPythonPackage,
   pytest,
   numpy,
@@ -10,12 +12,14 @@
 buildPythonPackage rec {
   pname = "imagecodecs-lite";
   version = "2019.12.3";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     sha256 = "0s4xb17qd7vimc46rafbjnibj4sf0lnv8cwl22k1h6zb7jhqmlcm";
   };
+
+  build-system = [ setuptools ];
 
   nativeBuildInputs = [ cython ];
 

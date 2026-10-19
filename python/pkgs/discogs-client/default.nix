@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   requests,
   oauthlib,
   python-dateutil,
@@ -11,7 +13,7 @@
 buildPythonPackage rec {
   pname = "discogs-client";
   version = "2.9";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "joalla";
@@ -19,6 +21,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     hash = "sha256-UWiop9hg6KSpSq4SnTtvFbRHYTnLe/Ed/o65sf78MYo=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     requests

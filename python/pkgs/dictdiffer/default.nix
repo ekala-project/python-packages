@@ -2,13 +2,15 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   setuptools-scm,
 }:
 
 buildPythonPackage rec {
   pname = "dictdiffer";
   version = "0.9.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "inveniosoftware";
@@ -16,6 +18,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     hash = "sha256-lQyPs3lQWtsvNPuvvwJUTDzrFaOX5uwGuRHe3yWUheU=";
   };
+
+  build-system = [ setuptools ];
 
   nativeBuildInputs = [ setuptools-scm ];
   postPatch = ''

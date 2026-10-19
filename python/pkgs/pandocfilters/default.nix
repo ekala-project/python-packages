@@ -2,17 +2,21 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
 }:
 
 buildPythonPackage rec {
   version = "1.5.1";
-  format = "setuptools";
+  pyproject = true;
   pname = "pandocfilters";
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-ACtKVV7k68A/i2Ywfih/pJLkp3tOoU0/k0MoKXu0k54=";
   };
+
+  build-system = [ setuptools ];
 
   pythonImportsCheck = [ "pandocfilters" ];
 

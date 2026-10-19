@@ -4,17 +4,21 @@
   cssutils,
   cython,
   fetchPypi,
+  # build-system
+  setuptools,
 }:
 
 buildPythonPackage rec {
   pname = "tinycss";
   version = "0.4";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-EjBvtQ5enn6u74S4Au2HdIi6gONcZyhn9UjAkkp2cW4=";
   };
+
+  build-system = [ setuptools ];
 
   postPatch = ''
     sed -i "/--cov/d" setup.cfg

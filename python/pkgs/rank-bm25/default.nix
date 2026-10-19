@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   numpy,
 }:
 let
@@ -10,7 +12,7 @@ let
 in
 buildPythonPackage {
   inherit version pname;
-  format = "setuptools";
+  pyproject = true;
 
   # Pypi source package doesn't contain tests
   src = fetchFromGitHub {
@@ -19,6 +21,8 @@ buildPythonPackage {
     tag = version;
     hash = "sha256-+BxQBflMm2AvCLAFFj52Jpkqn+KErwYXU1wztintgOg=";
   };
+
+  build-system = [ setuptools ];
 
   postPatch = ''
     # Upstream doesn't provide a PKG-INFO file

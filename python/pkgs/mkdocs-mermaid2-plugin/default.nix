@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   beautifulsoup4,
   jsbeautifier,
   mkdocs,
@@ -14,7 +16,7 @@
 buildPythonPackage rec {
   pname = "mkdocs-mermaid2-plugin";
   version = "1.2.3";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "fralau";
@@ -22,6 +24,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     hash = "sha256-EsfcOnfjZpAndYccN8WTpfLoUAlc5JQkgoy1ro1hMRo=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     beautifulsoup4

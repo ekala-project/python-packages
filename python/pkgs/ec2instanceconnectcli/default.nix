@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   boto3,
   cryptography,
 }:
@@ -9,12 +11,14 @@
 buildPythonPackage rec {
   pname = "ec2instanceconnectcli";
   version = "1.0.3";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-/U59a6od0JI27VHX+Bvue/7tQy+iwU+g8yt9/GgdoH4=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [
     boto3

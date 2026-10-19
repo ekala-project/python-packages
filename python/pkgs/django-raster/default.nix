@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   isPy3k,
   numpy,
   django-colorful,
@@ -16,7 +18,7 @@
 
 buildPythonPackage rec {
   version = "0.8.1";
-  format = "setuptools";
+  pyproject = true;
   pname = "django-raster";
 
   disabled = !isPy3k;
@@ -25,6 +27,8 @@ buildPythonPackage rec {
     inherit pname version;
     sha256 = "213758fe96d74be502f69f2620f7666961a85caa0551d14573637315035a9745";
   };
+
+  build-system = [ setuptools ];
 
   # Tests require a postgresql + postgis server
 

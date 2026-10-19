@@ -3,17 +3,21 @@
   buildPythonPackage,
   fetchPypi,
   fetchpatch,
+  # build-system
+  setuptools,
 }:
 
 buildPythonPackage rec {
   pname = "keepalive";
   version = "0.5";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-PGuW+QYqWnYCLwydQenvVVLYCxyt1PzMG/jxg7odHsE=";
   };
+
+  build-system = [ setuptools ];
 
   patches = [
     # https://github.com/wikier/keepalive/pull/11

@@ -2,18 +2,22 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   requests,
 }:
 
 buildPythonPackage rec {
   pname = "niluclient";
   version = "0.1.2";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     sha256 = "11ymn0cr4lchrcnf2xxlgljw223gwln01gxwr7mcgf95yc4006iq";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ requests ];
 

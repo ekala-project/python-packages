@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   djangorestframework,
   six,
 }:
@@ -9,12 +11,14 @@
 buildPythonPackage rec {
   pname = "djangorestframework-camel-case";
   version = "1.4.2";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     hash = "sha256-za51hGZIq7ZYXHRwY5odL7Bk3EX46LYqqlC+fxp6YfQ=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ djangorestframework ];
   # tests are only on GitHub but there are no tags

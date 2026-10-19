@@ -5,13 +5,15 @@
   graphql-core,
   promise,
   fetchpatch,
+  # build-system
+  setuptools,
   pytestCheckHook,
 }:
 
 buildPythonPackage rec {
   pname = "graphql-server-core";
   version = "2.0.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "graphql-python";
@@ -19,6 +21,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     sha256 = "1w3biv2za2m1brwjy0z049c2m94gm1zfwxzgc6lwrsci724jv9fr";
   };
+
+  build-system = [ setuptools ];
 
   patches = [
     (fetchpatch {

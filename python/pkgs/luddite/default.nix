@@ -12,7 +12,7 @@
 buildPythonPackage rec {
   pname = "luddite";
   version = "1.0.4";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "jumptrading";
@@ -21,12 +21,12 @@ buildPythonPackage rec {
     hash = "sha256-iJ3h1XRBzLd4cBKFPNOlIV5Z5XJ/miscfIdkpPIpbJ8=";
   };
 
+  build-system = [ setuptools ];
+
   postPatch = ''
     substituteInPlace pytest.ini \
       --replace "--disable-socket" ""
   '';
-
-  nativeBuildInputs = [ setuptools ];
 
   dependencies = [ packaging ];
 

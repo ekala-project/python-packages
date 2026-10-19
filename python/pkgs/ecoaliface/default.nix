@@ -2,18 +2,22 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  setuptools,
   requests,
 }:
 
 buildPythonPackage rec {
   pname = "ecoaliface";
   version = "0.7.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchPypi {
     inherit pname version;
     sha256 = "sha256-Z1O+Lkq1sIpjkz0N4g4FCUzTw51V4fYxlUVg+2sZ/ac=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ requests ];
 

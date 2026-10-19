@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   pycrypto,
   python,
 }:
@@ -9,7 +11,7 @@
 buildPythonPackage (finalAttrs: {
   pname = "android-backup";
   version = "0.2.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "bluec0re";
@@ -17,6 +19,8 @@ buildPythonPackage (finalAttrs: {
     tag = "v${finalAttrs.version}";
     sha256 = "0c436hv64ddqrjs77pa7z6spiv49pjflbmgg31p38haj5mzlrqvw";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ pycrypto ];
 

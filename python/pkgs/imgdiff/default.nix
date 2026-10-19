@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   pillow,
   mock,
   unittestCheckHook,
@@ -10,7 +12,7 @@
 buildPythonPackage rec {
   pname = "imgdiff";
   version = "1.8.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "mgedmin";
@@ -18,6 +20,8 @@ buildPythonPackage rec {
     tag = version;
     hash = "sha256-Ko2m6rLKUmRveHIeIylGWFXyDwlf3E7mkNHKxk7HBbA=";
   };
+
+  build-system = [ setuptools ];
 
   dependencies = [ pillow ];
 

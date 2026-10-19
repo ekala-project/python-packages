@@ -1,6 +1,8 @@
 {
   lib,
   fetchFromGitHub,
+  # build-system
+  setuptools,
   buildPythonPackage,
   django,
   pytest,
@@ -10,7 +12,7 @@
 buildPythonPackage rec {
   pname = "django-logentry-admin";
   version = "1.1.0";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = "yprez";
@@ -18,6 +20,8 @@ buildPythonPackage rec {
     tag = "v${version}";
     sha256 = "1bndxgvisw8kk52zfdifvly6dl4833wqilxf77pg473172yaf5gq";
   };
+
+  build-system = [ setuptools ];
 
   nativeCheckInputs = [
     pytest
