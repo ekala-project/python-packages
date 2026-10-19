@@ -59,7 +59,7 @@ buildPythonPackage (finalAttrs: {
     pytestCheckHook
     responses
   ]
-  ++ lib.concatAttrValues optional-dependencies;
+  ++ lib.concatAttrValues finalAttrs.optional-dependencies;
 
   pythonImportsCheck = [ "flask_dance" ];
 

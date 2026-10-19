@@ -52,7 +52,7 @@ buildPythonPackage (finalAttrs: {
     pytestCheckHook
     pytest-mock
   ]
-  ++ lib.concatAttrValues optional-dependencies;
+  ++ lib.concatAttrValues finalAttrs.optional-dependencies;
 
   pythonImportsCheck = [ "coinmetrics.api_client" ];
 

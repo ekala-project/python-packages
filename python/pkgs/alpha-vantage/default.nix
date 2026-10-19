@@ -47,7 +47,7 @@ buildPythonPackage (finalAttrs: {
     requests-mock
     pytestCheckHook
   ]
-  ++ lib.concatAttrValues optional-dependencies;
+  ++ lib.concatAttrValues finalAttrs.optional-dependencies;
 
   # Starting with 3.0.0 most tests require an API key
 

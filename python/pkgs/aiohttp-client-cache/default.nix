@@ -67,7 +67,7 @@ buildPythonPackage (finalAttrs: {
     pytest-aiohttp
     pytestCheckHook
   ]
-  ++ lib.concatAttrValues optional-dependencies;
+  ++ lib.concatAttrValues finalAttrs.optional-dependencies;
 
   pytestFlags = [ "--asyncio-mode=auto" ];
 

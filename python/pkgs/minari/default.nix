@@ -80,7 +80,7 @@ buildPythonPackage (finalAttrs: {
     jaxlib
     pytestCheckHook
   ]
-  ++ lib.concatAttrValues optional-dependencies;
+  ++ lib.concatAttrValues finalAttrs.optional-dependencies;
 
   disabledTests = [
     # Require internet access

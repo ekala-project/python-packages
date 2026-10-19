@@ -49,7 +49,7 @@ buildPythonPackage (finalAttrs: {
       jschema-to-python
       sarif-om
     ];
-    full = lib.concatAttrValues (lib.removeAttrs optional-dependencies [ "full" ]);
+    full = lib.concatAttrValues (lib.removeAttrs finalAttrs.optional-dependencies [ "full" ]);
   };
   pythonImportsCheck = [ "cfnlint" ];
 

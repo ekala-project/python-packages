@@ -54,7 +54,7 @@ buildPythonPackage (finalAttrs: {
   pythonImportsCheck = [ "whey" ];
 
   optional-dependencies = {
-    all = lib.concatAttrValues (lib.removeAttrs optional-dependencies [ "all" ]);
+    all = lib.concatAttrValues (lib.removeAttrs finalAttrs.optional-dependencies [ "all" ]);
     editable = [
       editables
     ];

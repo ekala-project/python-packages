@@ -39,7 +39,7 @@ buildPythonPackage (finalAttrs: {
     pytest-cov-stub
     pytest-mpl
   ]
-  ++ lib.concatAttrValues optional-dependencies;
+  ++ lib.concatAttrValues finalAttrs.optional-dependencies;
 
   preCheck = ''
     pushd tests

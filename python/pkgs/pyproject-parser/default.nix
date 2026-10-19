@@ -48,7 +48,7 @@ buildPythonPackage (finalAttrs: {
   ];
 
   optional-dependencies = {
-    all = lib.concatAttrValues (lib.removeAttrs optional-dependencies [ "all" ]);
+    all = lib.concatAttrValues (lib.removeAttrs finalAttrs.optional-dependencies [ "all" ]);
     cli = [
       click
       consolekit

@@ -56,7 +56,7 @@ buildPythonPackage (finalAttrs: {
     pytest-cov-stub
     pytestCheckHook
   ]
-  ++ lib.concatAttrValues optional-dependencies;
+  ++ lib.concatAttrValues finalAttrs.optional-dependencies;
 
   preCheck = ''
     export PATH="$out/bin:$PATH"

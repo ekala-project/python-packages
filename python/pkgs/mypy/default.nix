@@ -107,7 +107,7 @@ buildPythonPackage (finalAttrs: {
     setuptools
     tomli
   ]
-  ++ lib.concatAttrValues optional-dependencies;
+  ++ lib.concatAttrValues finalAttrs.optional-dependencies;
 
   disabledTests = [
     # A change to the base64 decoder in CPython 3.13.13 and 3.14.4 causes this

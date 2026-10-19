@@ -50,7 +50,7 @@ buildPythonPackage (finalAttrs: {
     pytest-cov-stub
     pytestCheckHook
   ]
-  ++ lib.concatAttrValues optional-dependencies;
+  ++ lib.concatAttrValues finalAttrs.optional-dependencies;
 
   pythonImportsCheck = [ "aiortm" ];
 

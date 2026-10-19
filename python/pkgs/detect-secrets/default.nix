@@ -34,8 +34,8 @@ buildPythonPackage (finalAttrs: {
     pyyaml
     requests
   ]
-  ++ lib.optionals withGibberish optional-dependencies.gibberish
-  ++ lib.optionals withWordList optional-dependencies.word_list;
+  ++ lib.optionals withGibberish finalAttrs.optional-dependencies.gibberish
+  ++ lib.optionals withWordList finalAttrs.optional-dependencies.word_list;
 
   optional-dependencies = {
     gibberish = [

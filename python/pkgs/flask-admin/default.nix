@@ -80,7 +80,7 @@ buildPythonPackage (finalAttrs: {
       flask-sqlalchemy-lite
     ];
     sqlalchemy-with-utils =
-      optional-dependencies.sqlalchemy
+      finalAttrs.optional-dependencies.sqlalchemy
       ++ [
         arrow
         colour
@@ -88,7 +88,7 @@ buildPythonPackage (finalAttrs: {
         sqlalchemy-utils
       ]
       ++ lib.optional (sqlalchemy-citext != null) sqlalchemy-citext;
-    geoalchemy = optional-dependencies.sqlalchemy ++ [
+    geoalchemy = finalAttrs.optional-dependencies.sqlalchemy ++ [
       geoalchemy2
       shapely
     ];
@@ -105,18 +105,18 @@ buildPythonPackage (finalAttrs: {
     rediscli = [ redis ];
     translation = [ flask-babel ];
     all = lib.flatten [
-      optional-dependencies.sqlalchemy
-      optional-dependencies.sqlalchemy-with-utils
-      optional-dependencies.geoalchemy
-      optional-dependencies.pymongo
-      optional-dependencies.mongoengine
-      optional-dependencies.peewee
-      optional-dependencies.s3
-      optional-dependencies.azure-blob-storage
-      optional-dependencies.images
-      optional-dependencies.export
-      optional-dependencies.rediscli
-      optional-dependencies.translation
+      finalAttrs.optional-dependencies.sqlalchemy
+      finalAttrs.optional-dependencies.sqlalchemy-with-utils
+      finalAttrs.optional-dependencies.geoalchemy
+      finalAttrs.optional-dependencies.pymongo
+      finalAttrs.optional-dependencies.mongoengine
+      finalAttrs.optional-dependencies.peewee
+      finalAttrs.optional-dependencies.s3
+      finalAttrs.optional-dependencies.azure-blob-storage
+      finalAttrs.optional-dependencies.images
+      finalAttrs.optional-dependencies.export
+      finalAttrs.optional-dependencies.rediscli
+      finalAttrs.optional-dependencies.translation
     ];
   };
   pythonImportsCheck = [ "flask_admin" ];

@@ -47,7 +47,7 @@ buildPythonPackage (finalAttrs: {
   # Not sure of the details, but we can avoid it by changing the matplotlib backend during testing.
   env.MPLBACKEND = lib.optionalString stdenv.hostPlatform.isDarwin "Agg";
 
-  nativeCheckInputs = [ pytestCheckHook ] ++ optional-dependencies.all;
+  nativeCheckInputs = [ pytestCheckHook ] ++ finalAttrs.optional-dependencies.all;
 
   disabledTestPaths = [
     "tests/test_spy.py" # Requires meshzoo (non-free) and pytest-codeblocks (not packaged)

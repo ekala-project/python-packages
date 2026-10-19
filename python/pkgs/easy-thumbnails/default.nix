@@ -41,7 +41,7 @@ buildPythonPackage (finalAttrs: {
     pytest-django
     testfixtures
   ]
-  ++ lib.concatAttrValues optional-dependencies;
+  ++ lib.concatAttrValues finalAttrs.optional-dependencies;
 
   disabledTests = [
     # AssertionError: 'ERROR' != 'INFO'

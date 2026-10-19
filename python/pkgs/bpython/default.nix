@@ -69,7 +69,7 @@ buildPythonPackage (finalAttrs: {
   nativeCheckInputs = [
     pytestCheckHook
   ]
-  ++ lib.concatAttrValues optional-dependencies;
+  ++ lib.concatAttrValues finalAttrs.optional-dependencies;
 
   pythonImportsCheck = [ "bpython" ];
 

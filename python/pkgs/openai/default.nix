@@ -63,9 +63,9 @@ buildPythonPackage (finalAttrs: {
     tqdm
     typing-extensions
   ]
-  ++ lib.optionals withAiohttp optional-dependencies.aiohttp
-  ++ lib.optionals withDatalib optional-dependencies.datalib
-  ++ lib.optionals withRealtime optional-dependencies.realtime;
+  ++ lib.optionals withAiohttp finalAttrs.optional-dependencies.aiohttp
+  ++ lib.optionals withDatalib finalAttrs.optional-dependencies.datalib
+  ++ lib.optionals withRealtime finalAttrs.optional-dependencies.realtime;
 
   optional-dependencies = {
     aiohttp = [
