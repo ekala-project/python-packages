@@ -21,6 +21,8 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-FwRraLPTzRKpdmzHpoAI0V/qTigT89VP+B3ue++t+Vg=";
   };
 
+  pythonRelaxDeps = [ "pyvcd" ];
+
   postPatch = ''
     substituteInPlace pyproject.toml \
       --replace-fail "pdm-backend~=2.3.0" "pdm-backend>=2.3.0"
