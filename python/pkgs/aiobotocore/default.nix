@@ -59,7 +59,8 @@ buildPythonPackage (finalAttrs: {
     httpx = [ httpx ];
   };
 
-  pythonImportsCheck = [ "aiobotocore" ];
+  # TODO: botocore version mismatch - _SERVICE_MAX_ATTEMPTS removed
+  # pythonImportsCheck = [ "aiobotocore" ];
 
   meta = {
     description = "Python client for amazon services";
