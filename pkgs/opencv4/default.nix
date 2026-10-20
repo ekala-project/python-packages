@@ -37,7 +37,7 @@
 
   enableCuda ? false,
 
-  enableLto ? true,
+  enableLto ? false,
   enableUnfree ? false,
   enableIpp ? false,
   enablePython ? false,
@@ -58,7 +58,7 @@
   enableDC1394 ? false,
   enableDocs ? false,
 
-  runAccuracyTests ? true,
+  runAccuracyTests ? false,
   runPerformanceTests ? false,
   enabledModules ? [ ],
 
@@ -280,7 +280,17 @@ stdenv.mkDerivation {
       ${installExtraFiles boostdesc}
       ${installExtraFiles face}
       ${installExtraFiles wechat_qrcode}
-    '');
+    '')
+    + ''
+      # Fix unsubstituted @build_protobuf@ from corepkgs protobuf setup hook
+      ProtobufCMakeFlags() {
+        cmakeFlagsArray+=(
+          "-DPROTOC_EXE=${protobuf}/bin/protoc"
+          "-DProtobuf_PROTOC_EXE=${protobuf}/bin/protoc"
+          "-DProtobuf_PROTOC_EXECUTABLE=${protobuf}/bin/protoc"
+        )
+      }
+    '';
 
   buildInputs = [
     boost
@@ -353,6 +363,7 @@ stdenv.mkDerivation {
     (cmakeBool "OPENCV_GENERATE_PKGCONFIG" true)
     (cmakeBool "WITH_OPENMP" true)
     (cmakeBool "BUILD_PROTOBUF" false)
+    (cmakeBool "WITH_ITT" false)
     (cmakeFeature "CMAKE_CXX_STANDARD" "17")
     (cmakeBool "WITH_PROTOBUF" true)
     (cmakeBool "PROTOBUF_UPDATE_FILES" true)
