@@ -17,6 +17,13 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-uzvqwjQ0FyTF9kD2WAMHH2I3OlDbqFTVo5hWf5rvurI=";
   };
 
+  postPatch = ''
+    rm -f ez_setup.py
+    substituteInPlace setup.py \
+      --replace-fail "from ez_setup import use_setuptools" "" \
+      --replace-fail "use_setuptools()" ""
+  '';
+
   build-system = [ setuptools ];
 
   pythonImportsCheck = [ "morfessor" ];
