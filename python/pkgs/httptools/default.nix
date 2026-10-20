@@ -16,6 +16,11 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-ayoy8Y2X4W6Qgn16gZ/6jb2MwkX8Th+p0QlbVO9L2Zk=";
   };
 
+  postPatch = ''
+    substituteInPlace pyproject.toml \
+      --replace-fail "setuptools>=80.9.0,<=82.0.1" "setuptools"
+  '';
+
   build-system = [ setuptools ];
 
   # Tests are not included in pypi tarball
