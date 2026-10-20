@@ -29,7 +29,7 @@ buildPythonPackage (finalAttrs: {
   # test_command_line.py::test_shared_main requires that /bin/sh and
   # /bin/ls exist and are regular executables (not symlinks).
   # It also dislikes something about the real /bin.
-  postPatch = lib.optionalString doCheck ''
+  postPatch = lib.optionalString finalAttrs.doCheck ''
     substituteInPlace macholib_tests/test_command_line.py \
       --replace-fail '"/bin/sh"' '"${lib.getExe' bashNonInteractive "bash"}"' \
       --replace-fail '"/bin/ls"' '"${lib.getExe' coreutils' "ls"}"' \
