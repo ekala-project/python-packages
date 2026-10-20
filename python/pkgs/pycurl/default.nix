@@ -24,7 +24,7 @@ buildPythonPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "pycurl";
     repo = "pycurl";
-    tag = "REL_${lib.replaceStrings [ "." ] [ "_" ] version}";
+    tag = "REL_${lib.replaceStrings [ "." ] [ "_" ] finalAttrs.version}";
     hash = "sha256-5mZvNVJS1WwBj4joNflSicllgTPL2SwstwO/n2vylJ0=";
   };
 
