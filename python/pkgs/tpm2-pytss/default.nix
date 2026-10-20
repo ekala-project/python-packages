@@ -78,7 +78,11 @@ buildPythonPackage (finalAttrs: {
   # for more details.
   hardeningDisable = [ "fortify" ];
 
-  nativeBuildInputs = [ cffi pkgconfig # this is the Python module pkg-config # this is the actual pkg-config tool setuptools-scm ];
+  nativeBuildInputs = [
+    cffi
+    pkgconfig
+    setuptools-scm
+  ];
 
   buildInputs = [ tpm2-tss ];
 
