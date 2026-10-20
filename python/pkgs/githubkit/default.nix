@@ -23,7 +23,7 @@ let
     }:
     buildPythonPackage {
       inherit pname version src;
-      sourceRoot = "${finalAttrs.src.name}/packages/${finalAttrs.pname}";
+      sourceRoot = "${src.name}/packages/${pname}";
       pyproject = true;
 
       # circular dependencies
