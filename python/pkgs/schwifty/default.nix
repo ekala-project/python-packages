@@ -18,7 +18,7 @@ buildPythonPackage (finalAttrs: {
   pyproject = true;
 
   src = fetchPypi {
-    inherit pname;
+    inherit (finalAttrs) pname;
     # The version is different missing leading zeros in the CalVer month.
     # This is due to PyPI's normalization of integers
     version = "2026.7.1";

@@ -15,7 +15,7 @@ buildPythonPackage (finalAttrs: {
 
   disabled = isPyPy;
   src = fetchPypi {
-    inherit version pname;
+    inherit (finalAttrs) version pname;
     hash = "sha256-8ftGSc59FOk1EzCI3sl82ifrN858xxA4X4HcpVb+jJ8=";
   };
 
