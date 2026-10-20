@@ -32,6 +32,9 @@ buildPythonPackage (finalAttrs: {
   postPatch = ''
     substituteInPlace setup.py \
       --replace "setup_requires=pytest_runner," "setup_requires=[],"
+    substituteInPlace pyproject.toml \
+      --replace-fail "setuptools~=66.1" "setuptools" \
+      --replace-fail "wheel~=0.37.1" "wheel"
   '';
 
   # requires a certificates file
