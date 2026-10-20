@@ -18,7 +18,7 @@ buildPythonPackage (finalAttrs: {
   pyproject = true;
 
   src = fetchFromGitHub {
-    owner = pname;
+    owner = finalAttrs.pname;
     repo = "sendgrid-python";
     tag = finalAttrs.version;
     hash = "sha256-7r1FHcGmHRQK9mfpV3qcuZlIe7G6CIyarnpWLjduw4E=";
