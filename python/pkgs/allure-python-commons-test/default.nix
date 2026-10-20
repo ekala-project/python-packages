@@ -21,6 +21,11 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-otfGxWNnbMUGuQcqsroOOfiqhCQqe25c39Ur57ek2og=";
   };
 
+  postPatch = ''
+    substituteInPlace setup.py \
+      --replace-fail 'setuptools_scm<10' 'setuptools_scm'
+  '';
+
   build-system = [ setuptools-scm ];
 
   dependencies = [
