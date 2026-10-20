@@ -28,7 +28,7 @@ let
     build-system = [
       setuptools-scm
     ];
-  };
+  });
 
 in
 buildPythonPackage (finalAttrs: {
