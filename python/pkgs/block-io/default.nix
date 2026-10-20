@@ -7,6 +7,7 @@
   pycryptodome,
   requests,
   setuptools,
+  setuptools_80,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -28,7 +29,7 @@ buildPythonPackage (finalAttrs: {
     bitcoin-utils-fork-minimal
     pycryptodome
     requests
-    setuptools
+    setuptools_80
   ];
 
   # Tests needs a BlockIO API key to run properly
