@@ -15,7 +15,8 @@ buildPythonPackage (finalAttrs: {
 
   src = fetchPypi {
     pname = "cloudsmith_api";
-    inherit format version;
+    inherit (finalAttrs) version;
+    format = "wheel";
     hash = "sha256-CfNgISONtTrabCoNUzHbMMVKDwGj8fdmSwh1FfzH10g=";
   };
 
