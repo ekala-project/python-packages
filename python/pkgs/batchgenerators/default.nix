@@ -38,7 +38,10 @@ buildPythonPackage (finalAttrs: {
   ];
 
   # see https://github.com/MIC-DKFZ/batchgenerators/pull/78
-  pythonRemoveDeps = [ "unittest2" ];
+  pythonRemoveDeps = [
+    "pandas"
+    "unittest2"
+  ];
 
   nativeCheckInputs = [ pytestCheckHook ];
 
