@@ -2,7 +2,7 @@
   buildPythonPackage,
   fetchPypi,
   # build-system
-  setuptools,
+  poetry-core,
   lib,
 
   # Python dependencies
@@ -20,7 +20,13 @@ buildPythonPackage (finalAttrs: {
     sha256 = "2eacc52692495f331437e8c8e9782ca71f4617ec84f174ca17acdd77631efc47";
   };
 
-  build-system = [ setuptools ];
+  postPatch = ''
+    substituteInPlace pyproject.toml \
+      --replace-fail '"poetry==1.0.9"' '"poetry-core"' \
+      --replace-fail "poetry.masonry.api" "poetry.core.masonry.api"
+  '';
+
+  build-system = [ poetry-core ];
 
   dependencies = [ uvloop ];
 
