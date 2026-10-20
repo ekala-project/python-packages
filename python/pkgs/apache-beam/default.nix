@@ -13,6 +13,7 @@
   jsonschema,
   mypy-protobuf,
   redis,
+  pyyaml,
   setuptools,
   yapf,
 
@@ -39,6 +40,7 @@
   pytz,
   regex,
   requests,
+  sortedcontainers,
   typing-extensions,
   zstandard,
 
@@ -65,21 +67,15 @@ buildPythonPackage (finalAttrs: {
     substituteInPlace pyproject.toml \
       --replace-fail "distlib==0.4.2" "distlib" \
       --replace-fail "cython>=3.2.5,<4" "cython" \
+      --replace-fail "numpy>=1.14.3,<2.5.0" "numpy>=1.14.3" \
       --replace-fail "==" ">="
 
     substituteInPlace setup.py \
       --replace-fail "  copy_tests_from_docs()" ""
   '';
 
-  pythonRelaxDeps = [
-    "cryptography"
-    "envoy-data-plane"
-    "httplib2"
-    "jsonpickle"
-    "objsize"
-    "protobuf"
-    "pyarrow"
-  ];
+  pythonRelaxDeps = true;
+  pythonRemoveDeps = [ "pyarrow-hotfix" ];
 
   build-system = [
     cython
@@ -90,6 +86,7 @@ buildPythonPackage (finalAttrs: {
     jsonschema
     mypy-protobuf
     redis
+    pyyaml
     setuptools
     yapf
   ];
@@ -117,6 +114,7 @@ buildPythonPackage (finalAttrs: {
     pytz
     regex
     requests
+    sortedcontainers
     typing-extensions
     zstandard
   ];
