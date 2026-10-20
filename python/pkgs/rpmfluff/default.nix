@@ -13,7 +13,7 @@ buildPythonPackage (finalAttrs: {
   pyproject = true;
 
   src = fetchurl {
-    url = "https://releases.pagure.org/${pname}/${pname}-${finalAttrs.version}.tar.xz";
+    url = "https://releases.pagure.org/${finalAttrs.pname}/${finalAttrs.pname}-${finalAttrs.version}.tar.xz";
     sha256 = "19vnlzma8b0aghdiixk0q3wc10y6306hsnic0qvswaaiki94fss1";
   };
 

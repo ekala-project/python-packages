@@ -19,7 +19,7 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-zpj1DUeFCXgVw44LcBCYtuFcQtA9BnrDKAxKSYzu4ts=";
   };
 
-  sourceRoot = "${src.name}/sdk/eventhub/azure-eventhub";
+  sourceRoot = "${finalAttrs.src.name}/sdk/eventhub/azure-eventhub";
 
   build-system = [ setuptools ];
 

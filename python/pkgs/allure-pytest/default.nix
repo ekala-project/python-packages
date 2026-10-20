@@ -19,7 +19,7 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-06SKodvyoT0mYn4RmAIryZc+VyTI79KXFK+2/zuhzQ0=";
   };
 
-  sourceRoot = "${src.name}/allure-pytest";
+  sourceRoot = "${finalAttrs.src.name}/allure-pytest";
 
   build-system = [ setuptools-scm ];
 

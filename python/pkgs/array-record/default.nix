@@ -34,7 +34,7 @@ buildPythonPackage (finalAttrs: {
           cp313 = "sha256-E98a7Js4r+mJc79f489SP4PKkEsEI9hTGZMIdxRbjyg=";
           cp314 = "sha256-idLPX0cJvjxsKzDA02YAUiM3VjP/zmbcsT2SegvcUig=";
         }
-        .${pyShortVersion} or (throw "${pname} is missing hash for ${pyShortVersion}");
+        .${pyShortVersion} or (throw "${finalAttrs.pname} is missing hash for ${pyShortVersion}");
     };
 
   dependencies = [

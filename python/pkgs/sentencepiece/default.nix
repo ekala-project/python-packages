@@ -19,7 +19,7 @@ buildPythonPackage (finalAttrs: {
   nativeBuildInputs = [ pkg-config ];
   buildInputs = [ sentencepiece-cpp.dev ];
 
-  sourceRoot = "${src.name}/python";
+  sourceRoot = "${finalAttrs.src.name}/python";
 
   pythonImportsCheck = [ "sentencepiece" ];
 

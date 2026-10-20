@@ -26,7 +26,7 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-ywRS1BfK6s+gcU8QRem0cSnfZq4BUQ2ABNcgnOa01LI=";
   };
 
-  sourceRoot = "${src.name}/packages/google-cloud-iam";
+  sourceRoot = "${finalAttrs.src.name}/packages/google-cloud-iam";
 
   build-system = [ setuptools ];
 

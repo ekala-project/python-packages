@@ -18,7 +18,7 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-vhGFTd1yXL4Frqli5D1GwOatwByDjvcP8sxgkdu6Jqg=";
   };
 
-  sourceRoot = "${src.name}/sunau";
+  sourceRoot = "${finalAttrs.src.name}/sunau";
 
   build-system = [ setuptools ];
 

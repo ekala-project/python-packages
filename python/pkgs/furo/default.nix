@@ -30,7 +30,7 @@ let
   src = fetchFromGitHub {
     owner = "pradyunsg";
     repo = "furo";
-    tag = finalAttrs.version;
+    tag = version;
     hash = "sha256-s9CQXmHI3PoXbB24e8rUd9ip02UZTjPHP4Ar6hV3mUc=";
   };
 

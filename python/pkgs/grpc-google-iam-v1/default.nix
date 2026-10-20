@@ -19,7 +19,7 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-qQ+8X6I8lt4OTgbvODsbdab2dYUk0wxWsbaVT2T651U=";
   };
 
-  sourceRoot = "${src.name}/packages/grpc-google-iam-v1";
+  sourceRoot = "${finalAttrs.src.name}/packages/grpc-google-iam-v1";
 
   build-system = [ setuptools ];
 

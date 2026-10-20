@@ -26,7 +26,7 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-iggsVxLmDbP6+oSPaIiujPLsZAWwm5VLZSl+HYm0DIQ=";
   };
 
-  sourceRoot = "${src.name}/${pname}";
+  sourceRoot = "${finalAttrs.src.name}/${finalAttrs.pname}";
 
   postPatch = ''
     substituteInPlace pyproject.toml \

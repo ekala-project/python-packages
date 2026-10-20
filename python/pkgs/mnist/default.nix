@@ -16,7 +16,7 @@ buildPythonPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "datapythonista";
     repo = "mnist";
-    rev = "${pname}-${finalAttrs.version}";
+    rev = "${finalAttrs.pname}-${finalAttrs.version}";
     sha256 = "17r37pbxiv5dw857bmg990x836gq6sgww069w3q5jjg9m3xdm7dh";
   };
 

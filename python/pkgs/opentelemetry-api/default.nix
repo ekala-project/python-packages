@@ -21,7 +21,7 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-e0JJL2fpDPDE/REyb0QptTYe4a6/smLrV88oKwOeG4M=";
   };
 
-  sourceRoot = "${src.name}/opentelemetry-api";
+  sourceRoot = "${finalAttrs.src.name}/opentelemetry-api";
 
   build-system = [ hatchling ];
 

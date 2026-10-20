@@ -32,7 +32,7 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-y8I806dbC7n3eMFyrzGJokfVDwEGFdC7NgzSA0G8hkQ=";
   };
 
-  sourceRoot = "${src.name}/python-proton-vpn-local-agent";
+  sourceRoot = "${finalAttrs.src.name}/python-proton-vpn-local-agent";
 
   cargoBuildType = "release";
   nativeBuildInputs = [

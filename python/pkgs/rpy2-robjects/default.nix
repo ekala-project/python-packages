@@ -21,7 +21,7 @@ buildPythonPackage (finalAttrs: {
 
   disabled = isPyPy;
   src = fetchurl {
-    url = "mirror://pypi/${builtins.substring 0 1 pname}/${pname}/${
+    url = "mirror://pypi/${builtins.substring 0 1 pname}/${finalAttrs.pname}/${
       builtins.replaceStrings [ "-" ] [ "_" ] pname
     }-${finalAttrs.version}.tar.gz";
     hash = "sha256-A9CZ9DagGotR+4+L9gJCCpnHzdqMP84OOg9TLja0r+Q=";

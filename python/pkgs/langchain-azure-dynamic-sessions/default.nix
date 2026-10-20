@@ -40,7 +40,7 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-tgvoOSr4tpi+tFBan+kw8FZUfUJHcQXv9e1nyeGP0so=";
   };
 
-  sourceRoot = "${src.name}/libs/partners/azure-dynamic-sessions";
+  sourceRoot = "${finalAttrs.src.name}/libs/partners/azure-dynamic-sessions";
 
   build-system = [ poetry-core ];
 

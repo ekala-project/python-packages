@@ -12,7 +12,7 @@ buildPythonPackage (finalAttrs: {
 
   inherit (certbot) src version;
 
-  sourceRoot = "${src.name}/certbot-dns-cloudflare";
+  sourceRoot = "${finalAttrs.src.name}/certbot-dns-cloudflare";
 
   build-system = [ setuptools ];
 

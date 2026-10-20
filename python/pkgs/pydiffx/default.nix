@@ -18,7 +18,7 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-oJjHrg1X02SmNJKbWbTPc0kycI+jLj0C4eUFFXwb+TA=";
   };
 
-  sourceRoot = "${src.name}/python";
+  sourceRoot = "${finalAttrs.src.name}/python";
 
   postPatch = ''
     substituteInPlace pydiffx/tests/testcases.py \

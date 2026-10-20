@@ -38,7 +38,7 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-I9xULsg+tlXM3Brh6Xa5xvFENx8zn4FRZ1/evNEh8UY=";
   };
 
-  sourceRoot = "${src.name}/libs/community";
+  sourceRoot = "${finalAttrs.src.name}/libs/community";
 
   build-system = [ hatchling ];
 

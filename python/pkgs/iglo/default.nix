@@ -17,7 +17,7 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-torDjfQcQ+ytv/Qab7PNugt1eLQJ0pPPz6p4f4kcFws=";
   };
 
-  sourceRoot = "${src.name}/src";
+  sourceRoot = "${finalAttrs.src.name}/src";
 
   build-system = [ setuptools ];
 

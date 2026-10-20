@@ -15,7 +15,7 @@ buildPythonPackage (finalAttrs: {
 
   # We need to have a dist-info folder, so let's create one with setuptools
   unpackPhase = ''
-    echo "from setuptools import setup; setup(name='${pname}', version='${finalAttrs.version}', install_requires=['pycryptodome'])" > setup.py
+    echo "from setuptools import setup; setup(name='${finalAttrs.pname}', version='${finalAttrs.version}', install_requires=['pycryptodome'])" > setup.py
   '';
 
   dependencies = [ pycryptodome ];

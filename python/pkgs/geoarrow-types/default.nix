@@ -18,7 +18,7 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-ciElwh94ukFyFdOBuQWyOUVpn4jBM1RKfxiBCcM+nmE=";
   };
 
-  sourceRoot = "${src.name}/geoarrow-types";
+  sourceRoot = "${finalAttrs.src.name}/geoarrow-types";
 
   build-system = [ setuptools-scm ];
 

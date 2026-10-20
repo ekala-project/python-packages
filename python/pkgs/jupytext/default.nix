@@ -47,7 +47,7 @@ buildPythonPackage (finalAttrs: {
     patches = [
       ./fix-yarn-lock-typescript-offline-cache.patch
     ];
-    sourceRoot = "${src.name}/jupyterlab";
+    sourceRoot = "${finalAttrs.src.name}/jupyterlab";
     hash = "sha256-k2lQnlSmCghIkp6VwNmq5KpSHS5tEbnFnsM+xqo3Ebw=";
   };
 

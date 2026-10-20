@@ -24,7 +24,7 @@ let
   src = fetchFromGitHub {
     owner = "psycopg";
     repo = "psycopg";
-    tag = finalAttrs.version;
+    tag = version;
     hash = "sha256-hHgswbqaoQRQrUxhNFG6tfmlap1mVUo/OkNsWF686U4=";
   };
 

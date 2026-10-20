@@ -22,7 +22,7 @@ buildPythonPackage (finalAttrs: {
 
   postInstall = ''
     installManPage *.?
-    install -Dm444 -t $out/share/doc/${pname} README*
+    install -Dm444 -t $out/share/doc/${finalAttrs.pname} README*
   '';
 
   pythonImportsCheck = [ "xkcdpass" ];

@@ -22,7 +22,7 @@ buildPythonPackage (finalAttrs: {
   };
 
   build-system = [ setuptools ];
-  sourceRoot = "${src.name}/nntplib";
+  sourceRoot = "${finalAttrs.src.name}/nntplib";
 
   pythonImportsCheck = [ "nntplib" ];
 

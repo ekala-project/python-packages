@@ -21,7 +21,7 @@ buildPythonPackage (finalAttrs: {
 
   # The actual source root is bindings/python but the patches
   # apply to the bindings directory.
-  sourceRoot = "${src.name}/bindings";
+  sourceRoot = "${finalAttrs.src.name}/bindings";
 
   patches = [
     (fetchpatch {

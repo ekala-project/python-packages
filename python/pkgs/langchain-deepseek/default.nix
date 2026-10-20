@@ -32,7 +32,7 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-IHWTArtJB/CLIk0tKirRxUPcdJiqf1NDXn5Y+HBYv/g=";
   };
 
-  sourceRoot = "${src.name}/libs/partners/deepseek";
+  sourceRoot = "${finalAttrs.src.name}/libs/partners/deepseek";
 
   build-system = [
     hatchling

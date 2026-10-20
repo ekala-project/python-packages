@@ -15,7 +15,7 @@ buildPythonPackage (finalAttrs: {
 
   src = fetchFromGitHub {
     owner = "binance";
-    repo = "${pname}-python";
+    repo = "${finalAttrs.pname}-python";
     tag = "v${finalAttrs.version}";
     hash = "sha256-8O73+fli0HNbvGBcyg79ZGOTQvL0TF5SCfogI6btlrA=";
   };

@@ -21,7 +21,7 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-FqlIazChaviPUlTiIyy67/g2i/3r4H/Icj7vVuYkiaU=";
   };
 
-  sourceRoot = "${src.name}/packages/google-cloud-kms";
+  sourceRoot = "${finalAttrs.src.name}/packages/google-cloud-kms";
 
   build-system = [ setuptools ];
 

@@ -21,13 +21,13 @@ let
   binaries = fetchFromGitHub {
     owner = "angr";
     repo = "binaries";
-    tag = "v${finalAttrs.version}";
+    tag = "v${version}";
     hash = "sha256-XXJBySIT3ylK1nd3suP2bq4bVSVah/1XhOmkEONbCoY=";
   };
 in
 buildPythonPackage (finalAttrs: {
   pname = "cle";
-  inherit (finalAttrs) version;
+  inherit version;
   pyproject = true;
 
   src = fetchFromGitHub {
