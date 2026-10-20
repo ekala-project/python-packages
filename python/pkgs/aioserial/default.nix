@@ -3,7 +3,7 @@
   buildPythonPackage,
   fetchPypi,
   # build-system
-  setuptools,
+  poetry-core,
   pyserial,
 }:
 
@@ -17,7 +17,13 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-cCvwOw64S47y2NrFy5JeHmhdzpj3exJVabxv0rO1gig=";
   };
 
-  build-system = [ setuptools ];
+  postPatch = ''
+    substituteInPlace pyproject.toml \
+      --replace-fail "poetry.masonry.api" "poetry.core.masonry.api" \
+      --replace-fail 'requires = ["poetry>=0.12"]' 'requires = ["poetry-core"]'
+  '';
+
+  build-system = [ poetry-core ];
 
   dependencies = [ pyserial ];
 
