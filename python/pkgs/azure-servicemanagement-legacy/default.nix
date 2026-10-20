@@ -18,6 +18,8 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-42neKpeBjx26GTIzeBTyjTmj5tcNklNQoaBoEDjC+Xc=";
   };
 
+  pythonRemoveDeps = [ "azure-nspkg" ];
+
   build-system = [ setuptools ];
 
   dependencies = [
