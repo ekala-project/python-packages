@@ -16,7 +16,7 @@ let
   version = "1.6.7.post2";
 in
 buildPythonPackage (finalAttrs: {
-  inherit (finalAttrs) pname version;
+  inherit pname version;
   pyproject = true;
 
   src = fetchPypi {
