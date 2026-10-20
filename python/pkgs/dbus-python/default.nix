@@ -75,5 +75,5 @@ lib.fix (
       ln -s $dev/include/*/dbus_python/dbus-1.0/ $dev/include/dbus-1.0
     '';
 
-  }
+  })
 )
