@@ -4,6 +4,7 @@
   buildPythonPackage,
   fetchFromGitHub,
   pytest,
+  setuptools_80,
   setuptools-scm,
 }:
 
@@ -21,7 +22,12 @@ buildPythonPackage (finalAttrs: {
 
   sourceRoot = "${finalAttrs.src.name}/allure-pytest";
 
-  build-system = [ setuptools-scm ];
+  pythonRelaxDeps = [ "allure-python-commons" ];
+
+  build-system = [
+    setuptools_80
+    setuptools-scm
+  ];
 
   buildInputs = [ pytest ];
 
