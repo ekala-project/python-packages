@@ -21,7 +21,7 @@ buildPythonPackage (finalAttrs: {
   pyproject = true;
 
   src = fetchFromGitHub {
-    owner = pname;
+    owner = finalAttrs.pname;
     repo = "radish";
     tag = "v${finalAttrs.version}";
     hash = "sha256-pnZ/vqjMd1Q/wF1W6joYrIulZSXAzS2G3E5Ke5VSAQg=";
