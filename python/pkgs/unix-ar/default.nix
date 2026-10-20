@@ -10,7 +10,8 @@ buildPythonPackage (finalAttrs: {
   format = "wheel";
 
   src = fetchPypi {
-    inherit format version;
+    inherit (finalAttrs) version;
+    format = "wheel";
     pname = "unix_ar";
     hash = "sha256-Kstxi8Ewi/gOW52iYU2CQswv475M2LL9Rxm84Ymq/PE=";
   };
