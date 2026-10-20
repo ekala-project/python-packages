@@ -14,7 +14,7 @@ buildPythonPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "marshallward";
     repo = "f90nml";
-    tag = "v" + version;
+    tag = "v" + finalAttrs.version;
     hash = "sha256-AtFyHCbt74246uFBhDjw144CfxVq8r7fsgDC36plz+I=";
   };
 
