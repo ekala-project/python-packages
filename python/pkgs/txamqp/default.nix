@@ -4,6 +4,7 @@
   fetchPypi,
   # build-system
   setuptools,
+  six,
   twisted,
 }:
 
@@ -20,7 +21,10 @@ buildPythonPackage (finalAttrs: {
 
   build-system = [ setuptools ];
 
-  dependencies = [ twisted ];
+  dependencies = [
+    six
+    twisted
+  ];
 
   meta = {
     homepage = "https://github.com/txamqp/txamqp";
