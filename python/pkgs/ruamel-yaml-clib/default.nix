@@ -13,7 +13,7 @@ buildPythonPackage (finalAttrs: {
 
   src = fetchhg {
     url = "http://hg.code.sf.net/p/ruamel-yaml-clib/code";
-    tag = finalAttrs.version;
+    rev = finalAttrs.version;
     hash = "sha256-SnMELcG2L2ei3UjImljjG1sSCHHROhXYcLe5kAR6h8E=";
   };
 
