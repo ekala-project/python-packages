@@ -18,6 +18,11 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-wVFJNtL5AeEMjgjYO/BObJ29fKTyRNqU/smAmAo7xNU=";
   };
 
+  postPatch = ''
+    substituteInPlace pyproject.toml \
+      --replace-fail "setuptools >= 78.1.1,< 81" "setuptools"
+  '';
+
   build-system = [ setuptools ];
 
   dependencies = [
