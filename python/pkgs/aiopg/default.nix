@@ -20,6 +20,8 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-GD5lRSUjASTwBk5vEK8v3xD8eNyxpwSrO3HHvtwubmk=";
   };
 
+  pythonRelaxDeps = true;
+
   build-system = [ setuptools ];
 
   dependencies = [
@@ -29,7 +31,8 @@ buildPythonPackage (finalAttrs: {
 
   postPatch = ''
     substituteInPlace setup.py \
-      --replace "psycopg2-binary" "psycopg2"
+      --replace "psycopg2-binary" "psycopg2" \
+      --replace "'async-timeout>=3.0,<5.0'" "'async-timeout>=3.0'"
   '';
 
   # Tests requires a PostgreSQL Docker instance
