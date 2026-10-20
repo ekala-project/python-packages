@@ -2,6 +2,7 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  legacy-cgi,
   setuptools,
 }:
 
@@ -18,6 +19,8 @@ buildPythonPackage (finalAttrs: {
   build-system = [
     setuptools
   ];
+
+  dependencies = [ legacy-cgi ];
 
   # pypi tarball does not contain tests
 
