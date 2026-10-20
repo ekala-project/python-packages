@@ -44,7 +44,7 @@ buildPythonPackage (finalAttrs: {
     scipy
   ];
 
-  dependencies = [
+  buildInputs = [
     pkgs.qdldl
   ];
 
