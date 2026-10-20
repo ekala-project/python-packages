@@ -20,9 +20,10 @@ buildPythonPackage (finalAttrs: {
 
   build-system = [ setuptools ];
 
-  dependencies = [ sphinx ];
-
-  dependencies = [ plantuml ];
+  dependencies = [
+    plantuml
+    sphinx
+  ];
 
   pythonImportsCheck = [ "sphinxcontrib.plantuml" ];
 
