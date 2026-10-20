@@ -39,14 +39,14 @@ buildPythonPackage (finalAttrs: {
   ];
 
   postPatch = ''
-    substituteInPlace setup.cfg --replace "auto_use = True" "auto_use = False"
-    # Remove astropy_helpers dependency - use setuptools directly
-    cat > setup.py << 'EOF'
-from setuptools import setup
-setup()
-EOF
-    # Remove extra directories that confuse flat-layout discovery
-    rm -rf astropy_helpers licenses
+        substituteInPlace setup.cfg --replace "auto_use = True" "auto_use = False"
+        # Remove astropy_helpers dependency - use setuptools directly
+        cat > setup.py << 'EOF'
+    from setuptools import setup
+    setup()
+    EOF
+        # Remove extra directories that confuse flat-layout discovery
+        rm -rf astropy_helpers licenses
   '';
 
   meta = {

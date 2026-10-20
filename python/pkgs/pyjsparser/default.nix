@@ -19,7 +19,7 @@ let
       hash = "sha256-Hqay9/qsjUfe62U7Q79l0Yy01L2Bnj5xNs6427k3Br8=";
     };
 
-  build-system = [ setuptools ];
+    build-system = [ setuptools ];
 
     # js2py is needed for tests but it's unmaintained and insecure
 

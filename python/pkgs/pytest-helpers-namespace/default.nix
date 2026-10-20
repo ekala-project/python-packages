@@ -19,7 +19,10 @@ buildPythonPackage (finalAttrs: {
 
   build-system = [ setuptools ];
 
-  nativeBuildInputs = [ setuptools-declarative-requirements setuptools-scm ];
+  nativeBuildInputs = [
+    setuptools-declarative-requirements
+    setuptools-scm
+  ];
 
   pythonImportsCheck = [ "pytest_helpers_namespace" ];
 

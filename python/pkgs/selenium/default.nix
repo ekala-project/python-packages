@@ -21,7 +21,9 @@ buildPythonPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "SeleniumHQ";
     repo = "selenium";
-    tag = "selenium-${finalAttrs.version}" + lib.optionalString (lib.versions.patch finalAttrs.version != "0") "-python";
+    tag =
+      "selenium-${finalAttrs.version}"
+      + lib.optionalString (lib.versions.patch finalAttrs.version != "0") "-python";
     hash = "sha256-Yfm2kpAmmEUP+m48PQf09UvFPeGBxd0ukqTtVah5h+E=";
   };
 
