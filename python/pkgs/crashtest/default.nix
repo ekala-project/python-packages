@@ -3,7 +3,7 @@
   buildPythonPackage,
   fetchPypi,
   # build-system
-  setuptools,
+  poetry-core,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -16,7 +16,7 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-gNex8xbr+9Qp9kgHbWJ1yHe6MLpIl53kGRcUp1Jm8M4=";
   };
 
-  build-system = [ setuptools ];
+  build-system = [ poetry-core ];
 
   # has tests, but only on GitHub, however the pyproject build fails for me
   pythonImportsCheck = [
