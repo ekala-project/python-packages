@@ -49,7 +49,7 @@ let
       homepage = "https://github.com/textx/textx/";
       license = lib.licenses.mit;
     };
-  };
+  });
 
   textx-data-dsl = buildPythonPackage rec {
     pname = "textx-data-dsl";
@@ -58,7 +58,7 @@ let
 
     inherit (textx) src;
     pathToSourceRoot = "tests/functional/registration/projects/data_dsl";
-    sourceRoot = "${finalAttrs.src.name}/" + pathToSourceRoot;
+    sourceRoot = "${src.name}/" + pathToSourceRoot;
 
     build-system = [ flit-core ];
 
@@ -70,7 +70,7 @@ let
     meta = {
       inherit (textx.meta) license;
       description = "Sample textX language for testing";
-      homepage = textx.meta.homepage + "tree/${finalAttrs.version}/" + pathToSourceRoot;
+      homepage = textx.meta.homepage + "tree/${textx.version}/" + pathToSourceRoot;
     };
   };
 
@@ -82,7 +82,7 @@ let
     inherit (textx) src;
 
     pathToSourceRoot = "tests/functional/registration/projects/flow_codegen";
-    sourceRoot = "${finalAttrs.src.name}/" + pathToSourceRoot;
+    sourceRoot = "${src.name}/" + pathToSourceRoot;
 
     build-system = [ flit-core ];
     dependencies = [
@@ -93,7 +93,7 @@ let
     meta = {
       inherit (textx.meta) license;
       description = "Sample textX language for testing";
-      homepage = textx.meta.homepage + "tree/${finalAttrs.version}/" + pathToSourceRoot;
+      homepage = textx.meta.homepage + "tree/${textx.version}/" + pathToSourceRoot;
     };
   };
 
@@ -105,7 +105,7 @@ let
     inherit (textx) src;
 
     pathToSourceRoot = "tests/functional/registration/projects/flow_dsl";
-    sourceRoot = "${finalAttrs.src.name}/" + pathToSourceRoot;
+    sourceRoot = "${src.name}/" + pathToSourceRoot;
 
     build-system = [ flit-core ];
     dependencies = [ textx ];
@@ -113,7 +113,7 @@ let
     meta = {
       inherit (textx.meta) license;
       description = "Sample textX language for testing";
-      homepage = textx.meta.homepage + "tree/${finalAttrs.version}/" + pathToSourceRoot;
+      homepage = textx.meta.homepage + "tree/${textx.version}/" + pathToSourceRoot;
     };
   };
 
@@ -125,7 +125,7 @@ let
     inherit (textx) src;
 
     pathToSourceRoot = "tests/functional/registration/projects/types_dsl";
-    sourceRoot = "${finalAttrs.src.name}/" + pathToSourceRoot;
+    sourceRoot = "${src.name}/" + pathToSourceRoot;
 
     build-system = [ flit-core ];
     dependencies = [ textx ];
@@ -133,7 +133,7 @@ let
     meta = {
       inherit (textx.meta) license;
       description = "Sample textX language for testing";
-      homepage = textx.meta.homepage + "tree/${finalAttrs.version}/" + pathToSourceRoot;
+      homepage = textx.meta.homepage + "tree/${textx.version}/" + pathToSourceRoot;
     };
   };
 
@@ -145,7 +145,7 @@ let
     inherit (textx) src;
 
     pathToSourceRoot = "tests/functional/subcommands/example_project";
-    sourceRoot = "${finalAttrs.src.name}/" + pathToSourceRoot;
+    sourceRoot = "${src.name}/" + pathToSourceRoot;
 
     build-system = [ flit-core ];
     dependencies = [ textx ];
@@ -153,7 +153,7 @@ let
     meta = {
       inherit (textx.meta) license;
       description = "Sample textX sub-command for testing";
-      homepage = textx.meta.homepage + "tree/${finalAttrs.version}/" + pathToSourceRoot;
+      homepage = textx.meta.homepage + "tree/${textx.version}/" + pathToSourceRoot;
     };
   };
 in
