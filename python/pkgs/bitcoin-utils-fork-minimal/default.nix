@@ -19,6 +19,8 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-DzibvC8qr/5ync59cfFB7tBmZWkPs/hKh+e5OC4lcEw=";
   };
 
+  pythonRelaxDeps = true;
+
   build-system = [ setuptools ];
 
   dependencies = [
