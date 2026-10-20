@@ -93,6 +93,13 @@ buildPythonPackage (finalAttrs: {
     ];
   });
 
+  pythonRemoveDeps = [
+    "cbor2"
+    "msgpack"
+    "py-ubjson"
+    "ujson"
+  ];
+
   pythonImportsCheck = [ "autobahn" ];
 
   meta = {
