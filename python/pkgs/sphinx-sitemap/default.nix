@@ -11,13 +11,13 @@ let
   version = "2.9.0";
 in
 buildPythonPackage (finalAttrs: {
-  inherit (finalAttrs) pname version;
+  inherit pname version;
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "jdillard";
     repo = "sphinx-sitemap";
-    tag = "v${finalAttrs.version}";
+    tag = "v${version}";
     hash = "sha256-TiR6F9wMWOGYexSKDzbSPPq0oiIDrZwSiO3a9DajL+0=";
   };
 

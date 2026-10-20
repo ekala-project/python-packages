@@ -13,7 +13,7 @@ let
   version = "1.5.33";
 in
 buildPythonPackage (finalAttrs: {
-  inherit (finalAttrs) pname version;
+  inherit pname version;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
