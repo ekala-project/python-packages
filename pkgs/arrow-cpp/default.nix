@@ -103,6 +103,7 @@ stdenv.mkDerivation (finalAttrs: {
     ninja
     autoconf # for vendored jemalloc
     flatbuffers
+    protobuf
   ]
   ++ lib.optional stdenv.hostPlatform.isDarwin fixDarwinDylibNames;
 
@@ -140,8 +141,18 @@ stdenv.mkDerivation (finalAttrs: {
 
   preConfigure = ''
     patchShebangs build-support/
+
     substituteInPlace "src/arrow/vendored/datetime/tz.cpp" \
       --replace-fail 'discover_tz_dir();' '"${tzdata}/share/zoneinfo";'
+
+    # Fix unsubstituted @build_protobuf@ from corepkgs protobuf setup hook
+    ProtobufCMakeFlags() {
+      cmakeFlagsArray+=(
+        "-DPROTOC_EXE=${protobuf}/bin/protoc"
+        "-DProtobuf_PROTOC_EXE=${protobuf}/bin/protoc"
+        "-DProtobuf_PROTOC_EXECUTABLE=${protobuf}/bin/protoc"
+      )
+    }
   '';
 
   cmakeFlags = [
@@ -182,6 +193,7 @@ stdenv.mkDerivation (finalAttrs: {
     (lib.cmakeBool "ARROW_S3" enableS3)
     (lib.cmakeBool "ARROW_GCS" enableGcs)
     (lib.cmakeBool "ARROW_AZURE" enableAzure)
+    (lib.cmakeFeature "Protobuf_PROTOC_EXECUTABLE" "${protobuf}/bin/protoc")
     (lib.cmakeBool "ARROW_ORC" true)
     # Parquet options:
     (lib.cmakeBool "ARROW_PARQUET" true)
