@@ -25,7 +25,7 @@ buildPythonPackage (finalAttrs: {
 
   nativeCheckInputs = [ pytestCheckHook ];
 
-  pythonImportsCheck = [ pname ];
+  pythonImportsCheck = [ finalAttrs.pname ];
 
   meta = {
     description = "Python monitor controls using DDC-CI";
