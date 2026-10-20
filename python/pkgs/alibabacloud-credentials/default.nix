@@ -20,7 +20,10 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-h9pB6j/7FGtE2ZnGLBYMK5awwwJ1rjUgW83+eboMQRk=";
   };
 
-  pythonRelaxDeps = [ "aiofiles" ];
+  pythonRelaxDeps = [
+    "aiofiles"
+    "apscheduler"
+  ];
 
   build-system = [ setuptools ];
 
