@@ -36,7 +36,7 @@ buildPythonPackage (finalAttrs: {
 
   postPatch = ''
     substituteInPlace sphinx_automodapi/tests/{helpers,test_cases}.py \
-      --replace ", None)" ", (None, '${testInventory}'))"
+      --replace ", None)" ", (None, '${finalAttrs.testInventory}'))"
   '';
 
   pythonImportsCheck = [ "sphinx_automodapi" ];
