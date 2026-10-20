@@ -42,10 +42,9 @@ buildPythonPackage (finalAttrs: {
 
   dependencies = [
     langchain-core
+    msgpack
     ormsgpack
   ];
-
-  dependencies = [ msgpack ];
 
   pythonImportsCheck = [ "langgraph.checkpoint" ];
   passthru = {
