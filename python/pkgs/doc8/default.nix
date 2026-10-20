@@ -20,6 +20,8 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-EmetMnWJcfvPmRRCQXo5Nce8nlJVDnNiLg5WulXqHUA=";
   };
 
+  pythonRelaxDeps = [ "docutils" ];
+
   build-system = [ setuptools-scm ];
 
   dependencies = [
