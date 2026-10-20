@@ -19,7 +19,7 @@ let
     version = "0.9.3";
     src = fetchPypi {
       inherit (oldAttrs) pname;
-      inherit (finalAttrs) version;
+      inherit version;
       hash = "sha256-tF6JphCc/Lfxu1E3dqotZAjpXEgi+DolORi5RAg0Zuw=";
     };
     postPatch = ''
@@ -40,7 +40,7 @@ buildPythonPackage (finalAttrs: {
   pyproject = true;
 
   src = fetchPypi {
-    inherit version pname;
+    inherit (finalAttrs) version pname;
     hash = "sha256-pEJkuz0wxKt2PkowmLE2YC+HPYa2ZiENK7FAW14Ec/Y=";
   };
 
