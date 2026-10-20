@@ -14,7 +14,7 @@ buildPythonPackage (finalAttrs: {
 
   src = fetchFromGitHub {
     owner = "hackercowboy";
-    repo = "python-${pname}";
+    repo = "python-${finalAttrs.pname}";
     tag = "V${finalAttrs.version}";
     sha256 = "10k61gfpnqljf3p3qxr97xq7j67a9cr4ivd9v72hdni0znrbx6ym";
   };

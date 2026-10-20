@@ -21,7 +21,7 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-Z3TsDEtDDfXO23gOlmEM5O4a9qS2+fTB7g0vJ4dOFH4=";
   };
 
-  sourceRoot = "${src.name}/packages/google-auth";
+  sourceRoot = "${finalAttrs.src.name}/packages/google-auth";
 
   build-system = [ setuptools ];
 

@@ -22,7 +22,7 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-J33Bxo9TwHRCPzDw/Jduo9HHxoofB5h/HsNX6R9FfFI=";
   };
 
-  sourceRoot = "${src.name}/packages/serialization/multipart/";
+  sourceRoot = "${finalAttrs.src.name}/packages/serialization/multipart/";
 
   build-system = [ flit-core ];
 

@@ -30,7 +30,7 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-ZUvcbVwhV2P8AvsuVoaPWUW5G9VaEvx3mt4kub0xHRk=";
   };
 
-  sourceRoot = src.name;
+  sourceRoot = finalAttrs.src.name;
 
   nativeBuildInputs = [
     cargo

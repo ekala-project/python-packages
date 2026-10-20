@@ -18,7 +18,7 @@ buildPythonPackage (finalAttrs: {
   inherit (opentelemetry-instrumentation) src version;
   pyproject = true;
 
-  sourceRoot = "${src.name}/opentelemetry-distro";
+  sourceRoot = "${finalAttrs.src.name}/opentelemetry-distro";
 
   build-system = [ hatchling ];
 

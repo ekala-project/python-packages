@@ -20,7 +20,7 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-PADClQ8ct9w0igKxQNoW4Act0n0vx1HiD7ysH4PwgFU=";
   };
 
-  sourceRoot = "${src.name}/sdk/python";
+  sourceRoot = "${finalAttrs.src.name}/sdk/python";
 
   postPatch = ''
     # We need the version of pulumi-aws in its package metadata to be accurate

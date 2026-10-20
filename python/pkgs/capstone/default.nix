@@ -14,7 +14,7 @@ buildPythonPackage (finalAttrs: {
   src = pkgs.capstone.src;
 
   build-system = [ setuptools ];
-  sourceRoot = "${src.name}/bindings/python";
+  sourceRoot = "${finalAttrs.src.name}/bindings/python";
 
   postPatch = ''
     ln -s ${pkgs.capstone}/lib/libcapstone${stdenv.targetPlatform.extensions.sharedLibrary} prebuilt/

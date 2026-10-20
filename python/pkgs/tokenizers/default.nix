@@ -94,7 +94,7 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-anYZ7M5OvLOOHDy+sLuZlHQ/cNTk6xHksBHSHa75iY4=";
   };
 
-  sourceRoot = "${src.name}/bindings/python";
+  sourceRoot = "${finalAttrs.src.name}/bindings/python";
 
   nativeBuildInputs = [
     cargo

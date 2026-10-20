@@ -13,7 +13,7 @@ buildPythonPackage (finalAttrs: {
   inherit (certbot) src version;
   pyproject = true;
 
-  sourceRoot = "${src.name}/certbot-dns-google";
+  sourceRoot = "${finalAttrs.src.name}/certbot-dns-google";
 
   build-system = [ setuptools ];
 

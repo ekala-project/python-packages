@@ -22,7 +22,7 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-fnqflSyNnkEy9XYoirk4iDZI1zYTRMbrYMyQ/4ge3Rs=";
   };
 
-  sourceRoot = "${src.name}/contrib/opencensus-ext-azure";
+  sourceRoot = "${finalAttrs.src.name}/contrib/opencensus-ext-azure";
 
   build-system = [ setuptools ];
 

@@ -46,7 +46,6 @@ let
         psfl # src/greenlet/slp_platformselect.h & files in src/greenlet/platform/ directory
         mit
       ];
-    };
-  };
+    };  });
 in
 greenlet

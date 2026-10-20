@@ -14,7 +14,7 @@ buildPythonPackage (finalAttrs: {
 
   inherit (certbot) src version;
 
-  sourceRoot = "${src.name}/certbot-dns-rfc2136";
+  sourceRoot = "${finalAttrs.src.name}/certbot-dns-rfc2136";
 
   build-system = [ setuptools ];
 

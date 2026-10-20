@@ -26,7 +26,7 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-a78KiTsCCARWZvbxz9QKdUKnjkDJGXcPVVJu5rU4m/U=";
   };
 
-  sourceRoot = "${src.name}/flaxlib_src";
+  sourceRoot = "${finalAttrs.src.name}/flaxlib_src";
 
   dontUseCmakeConfigure = true;
 

@@ -28,7 +28,7 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-6THRc4rv/mzOWbsN1FpUu56kjvHvVBssK2glNoGdSzI=";
   };
 
-  sourceRoot = "${src.name}/packages/python-sdk";
+  sourceRoot = "${finalAttrs.src.name}/packages/python-sdk";
 
   build-system = [
     poetry-core

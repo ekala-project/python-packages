@@ -12,7 +12,7 @@ buildPythonPackage (finalAttrs: {
 
   src = fetchFromGitHub {
     owner = "niklasf";
-    repo = "python-${pname}";
+    repo = "python-${finalAttrs.pname}";
     tag = "v${finalAttrs.version}";
     hash = "sha256-8LOp4HQI9UOdaj4/jwd79ftdnaO4HtzMVf1cwcYFCiA=";
   };

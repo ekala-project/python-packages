@@ -23,7 +23,7 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-PHjLKazMaT6W4Lve1xNxm6hEwqE3Lr2m5L7Q03fqb68=";
   };
 
-  sourceRoot = "${src.name}/packages/python";
+  sourceRoot = "${finalAttrs.src.name}/packages/python";
 
   build-system = [
     flit-core

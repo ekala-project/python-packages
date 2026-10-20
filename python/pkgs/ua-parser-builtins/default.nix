@@ -11,7 +11,7 @@ buildPythonPackage (finalAttrs: {
   inherit (ua-parser) version src;
   pyproject = true;
 
-  sourceRoot = "${src.name}/ua-parser-builtins";
+  sourceRoot = "${finalAttrs.src.name}/ua-parser-builtins";
 
   postPatch = ''
     # don't use git to determine version

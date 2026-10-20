@@ -21,7 +21,7 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-Ezt5QkA21SDfuCMm+XY8d+xso8SDb4lmK/yd89Guu0Y=";
   };
 
-  sourceRoot = "${src.name}/dask-gateway";
+  sourceRoot = "${finalAttrs.src.name}/dask-gateway";
 
   build-system = [ hatchling ];
 

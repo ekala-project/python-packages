@@ -21,7 +21,7 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-RcVdqI50lsYed9L6Kz7faNLec1Y9zq685SGnwaEw6Qc=";
   };
 
-  sourceRoot = "${src.name}/sdk/search/azure-search-documents";
+  sourceRoot = "${finalAttrs.src.name}/sdk/search/azure-search-documents";
 
   build-system = [ setuptools ];
 

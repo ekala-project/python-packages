@@ -13,7 +13,7 @@ buildPythonPackage (finalAttrs: {
 
   inherit (certbot) src version;
 
-  sourceRoot = "${src.name}/certbot-dns-route53";
+  sourceRoot = "${finalAttrs.src.name}/certbot-dns-route53";
 
   build-system = [ setuptools ];
 

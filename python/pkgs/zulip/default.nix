@@ -20,7 +20,7 @@ buildPythonPackage (finalAttrs: {
     tag = finalAttrs.version;
     hash = "sha256-mcqIfha+4nsqlshayLQ2Sd+XOYVKf1FkoczjiFRNybc=";
   };
-  sourceRoot = "${src.name}/zulip";
+  sourceRoot = "${finalAttrs.src.name}/zulip";
 
   build-system = [ setuptools ];
 

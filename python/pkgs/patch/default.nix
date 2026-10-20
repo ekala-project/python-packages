@@ -12,7 +12,7 @@ buildPythonPackage (finalAttrs: {
   pname = "patch";
 
   src = fetchzip {
-    url = "mirror://pypi/p/${pname}/${pname}-${finalAttrs.version}.zip";
+    url = "mirror://pypi/p/${finalAttrs.pname}/${finalAttrs.pname}-${finalAttrs.version}.zip";
     sha256 = "1nj55hvyvzax4lxq7vkyfbw91pianzr3hp7ka7j12pgjxccac50g";
     stripRoot = false;
   };

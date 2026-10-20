@@ -11,7 +11,7 @@ buildPythonPackage (finalAttrs: {
   inherit (cryptography) version src;
   pyproject = true;
 
-  sourceRoot = "${src.name}/vectors";
+  sourceRoot = "${finalAttrs.src.name}/vectors";
 
   build-system = [ uv-build ];
 

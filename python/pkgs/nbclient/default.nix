@@ -37,7 +37,6 @@ let
       description = "Client library for executing notebooks";
       mainProgram = "jupyter-execute";
       license = lib.licenses.bsd3;
-    };
-  };
+    };  });
 in
 nbclient

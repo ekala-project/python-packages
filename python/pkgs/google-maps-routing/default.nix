@@ -25,7 +25,7 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-M/7uDWWz4YCfxa4gyM9BaAo10iyTMvtR2MhNpdFYnis=";
   };
 
-  sourceRoot = "${src.name}/packages/google-maps-routing";
+  sourceRoot = "${finalAttrs.src.name}/packages/google-maps-routing";
 
   build-system = [ setuptools ];
 

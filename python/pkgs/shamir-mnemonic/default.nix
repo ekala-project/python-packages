@@ -14,7 +14,7 @@ buildPythonPackage (finalAttrs: {
 
   src = fetchFromGitHub {
     owner = "trezor";
-    repo = "python-${pname}";
+    repo = "python-${finalAttrs.pname}";
     tag = "v${finalAttrs.version}";
     hash = "sha256-KjZbxA92h25ghbItdmPvkSPvDZUSRWkl4vnJDBMN71s=";
   };

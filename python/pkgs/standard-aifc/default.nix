@@ -19,7 +19,7 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-vhGFTd1yXL4Frqli5D1GwOatwByDjvcP8sxgkdu6Jqg=";
   };
 
-  sourceRoot = "${src.name}/aifc";
+  sourceRoot = "${finalAttrs.src.name}/aifc";
 
   build-system = [
     setuptools

@@ -18,7 +18,7 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-HvuGP+QlUlfAUfFmaVVvtPHGdrbWVxghQipnqTTvAQc=";
   };
 
-  sourceRoot = "${src.name}/Files";
+  sourceRoot = "${finalAttrs.src.name}/Files";
 
   # The repo stores everything in "src" and uses setup.py to move "src" ->
   # "filedate" before calling setup() and then tries to rename "filedate" back

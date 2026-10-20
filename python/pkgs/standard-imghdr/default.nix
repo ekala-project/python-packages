@@ -17,7 +17,7 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-vhGFTd1yXL4Frqli5D1GwOatwByDjvcP8sxgkdu6Jqg=";
   };
 
-  sourceRoot = "${src.name}/imghdr";
+  sourceRoot = "${finalAttrs.src.name}/imghdr";
 
   build-system = [ setuptools ];
   pythonImportsCheck = [ "imghdr" ];

@@ -11,7 +11,7 @@ buildPythonPackage (finalAttrs: {
 
   inherit (certbot) src version;
 
-  sourceRoot = "${src.name}/certbot-nginx";
+  sourceRoot = "${finalAttrs.src.name}/certbot-nginx";
 
   build-system = [ setuptools ];
 

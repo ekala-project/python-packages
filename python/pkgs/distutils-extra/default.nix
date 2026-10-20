@@ -12,7 +12,7 @@ buildPythonPackage (finalAttrs: {
   pyproject = true;
 
   src = fetchurl {
-    url = "https://salsa.debian.org/python-team/modules/python-distutils-extra/-/archive/${finalAttrs.version}/python-${pname}-${finalAttrs.version}.tar.bz2";
+    url = "https://salsa.debian.org/python-team/modules/python-distutils-extra/-/archive/${finalAttrs.version}/python-${finalAttrs.pname}-${finalAttrs.version}.tar.bz2";
     hash = "sha256-aq5+JjlzD3fS4+CPxZNjyz2QNfqsChC0w6KRVgbTGwI=";
   };
 

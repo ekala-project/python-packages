@@ -25,7 +25,7 @@ buildPythonPackage (finalAttrs: {
   inherit (arrow-cpp) version src;
   pyproject = true;
 
-  sourceRoot = "${src.name}/python";
+  sourceRoot = "${finalAttrs.src.name}/python";
 
   build-system = [
     scikit-build-core

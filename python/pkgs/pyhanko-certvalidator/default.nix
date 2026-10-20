@@ -28,7 +28,7 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-mZ9u3mQ8JZIq+G1iwNQST8r7/rCWi/UW0j1xfeV9zFM=";
   };
 
-  sourceRoot = "${src.name}/pkgs/pyhanko-certvalidator";
+  sourceRoot = "${finalAttrs.src.name}/pkgs/pyhanko-certvalidator";
 
   postPatch = ''
     substituteInPlace src/pyhanko_certvalidator/version.py \

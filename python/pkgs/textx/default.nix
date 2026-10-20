@@ -58,7 +58,7 @@ let
 
     inherit (textx) src;
     pathToSourceRoot = "tests/functional/registration/projects/data_dsl";
-    sourceRoot = "${src.name}/" + pathToSourceRoot;
+    sourceRoot = "${finalAttrs.src.name}/" + pathToSourceRoot;
 
     build-system = [ flit-core ];
 
@@ -82,7 +82,7 @@ let
     inherit (textx) src;
 
     pathToSourceRoot = "tests/functional/registration/projects/flow_codegen";
-    sourceRoot = "${src.name}/" + pathToSourceRoot;
+    sourceRoot = "${finalAttrs.src.name}/" + pathToSourceRoot;
 
     build-system = [ flit-core ];
     dependencies = [
@@ -105,7 +105,7 @@ let
     inherit (textx) src;
 
     pathToSourceRoot = "tests/functional/registration/projects/flow_dsl";
-    sourceRoot = "${src.name}/" + pathToSourceRoot;
+    sourceRoot = "${finalAttrs.src.name}/" + pathToSourceRoot;
 
     build-system = [ flit-core ];
     dependencies = [ textx ];
@@ -125,7 +125,7 @@ let
     inherit (textx) src;
 
     pathToSourceRoot = "tests/functional/registration/projects/types_dsl";
-    sourceRoot = "${src.name}/" + pathToSourceRoot;
+    sourceRoot = "${finalAttrs.src.name}/" + pathToSourceRoot;
 
     build-system = [ flit-core ];
     dependencies = [ textx ];
@@ -145,7 +145,7 @@ let
     inherit (textx) src;
 
     pathToSourceRoot = "tests/functional/subcommands/example_project";
-    sourceRoot = "${src.name}/" + pathToSourceRoot;
+    sourceRoot = "${finalAttrs.src.name}/" + pathToSourceRoot;
 
     build-system = [ flit-core ];
     dependencies = [ textx ];
