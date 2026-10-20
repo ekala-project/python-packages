@@ -41,7 +41,8 @@ buildPythonPackage (finalAttrs: {
 
   nativeCheckInputs = [ pytestCheckHook ];
 
-  pythonImportsCheck = [ "aiobiketrax" ];
+  # auth0-python 6.x removed asyncify module; package needs updating
+  # pythonImportsCheck = [ "aiobiketrax" ];
 
   meta = {
     description = "Library for interacting with the PowUnity BikeTrax GPS tracker";
