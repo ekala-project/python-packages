@@ -3,7 +3,7 @@
   buildPythonPackage,
   fetchPypi,
   setuptools,
-  pytestCheckHook,
+  pytest,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -17,9 +17,9 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-+IN+0P4SljUWxF01Ln9PgeFVA/+qGKFVoKMGluAuYDw=";
   };
 
-  nativeBuildInputs = [ setuptools ];
+  build-system = [ setuptools ];
 
-  nativeCheckInputs = [ pytestCheckHook ];
+  dependencies = [ pytest ];
 
   pythonImportsCheck = [ "exdown" ];
 
