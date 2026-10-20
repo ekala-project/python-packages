@@ -15,7 +15,7 @@ let
   # They demand their own fork of ctypesgen
   ctypesgen = buildPythonPackage (finalAttrs: {
     pname = "ctypesgen";
-    version = "1.1.1+g${src.rev}"; # the most recent tag + git version
+    version = "1.1.1+g${finalAttrs.src.rev}"; # the most recent tag + git version
     pyproject = true;
 
     src = fetchFromGitHub {

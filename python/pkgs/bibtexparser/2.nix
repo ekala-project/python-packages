@@ -30,7 +30,7 @@ buildPythonPackage (finalAttrs: {
   meta = {
     description = "Bibtex parser for Python";
     homepage = "https://github.com/sciunto-org/python-bibtexparser";
-    changelog = "https://github.com/sciunto-org/python-bibtexparser/blob/${src.tag}/CHANGELOG";
+    changelog = "https://github.com/sciunto-org/python-bibtexparser/blob/${finalAttrs.src.tag}/CHANGELOG";
     license = lib.licenses.mit;
   };
 })

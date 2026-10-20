@@ -42,7 +42,7 @@ buildPythonPackage (finalAttrs: {
 
   meta = {
     description = "Converter between betterproto messages and the Protobuf wire format";
-    homepage = "https://github.com/124C41p/betterproto-rust-codec/releases/tag/${src.tag}";
+    homepage = "https://github.com/124C41p/betterproto-rust-codec/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.mit;
   };
 })

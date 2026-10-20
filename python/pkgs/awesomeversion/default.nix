@@ -29,7 +29,7 @@ buildPythonPackage (finalAttrs: {
   meta = {
     description = "Python module to deal with versions";
     homepage = "https://github.com/ludeeus/awesomeversion";
-    changelog = "https://github.com/ludeeus/awesomeversion/releases/tag/${src.tag}";
+    changelog = "https://github.com/ludeeus/awesomeversion/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.mit;
   };
 })

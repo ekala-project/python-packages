@@ -74,7 +74,7 @@ buildPythonPackage (finalAttrs: {
     #!nix-shell -i bash -p git common-updater-scripts perl
 
     tmpdir="$(mktemp -d)"
-    git clone --depth=1 "${src.gitRepoUrl}" "$tmpdir"
+    git clone --depth=1 "${finalAttrs.src.gitRepoUrl}" "$tmpdir"
 
     pushd "$tmpdir"
 

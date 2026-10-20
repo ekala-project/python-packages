@@ -19,7 +19,7 @@ buildPythonPackage (finalAttrs: {
     tag = "v${finalAttrs.version}";
 
     postFetch = ''
-      sed -i 's/git_refnames = "[^"]*"/git_refnames = " (tag: ${src.tag})"/' "$out/src/debugpy/_version.py"
+      sed -i 's/git_refnames = "[^"]*"/git_refnames = " (tag: ${finalAttrs.src.tag})"/' "$out/src/debugpy/_version.py"
     '';
 
     hash = "sha256-7XM476tfL6QLCHB1kwlbN/dmlgnjuTE+ulQ9yOHfgEE=";

@@ -23,7 +23,7 @@ buildPythonPackage (finalAttrs: {
     # - https://git-scm.com/docs/gitattributes#_export_subst and
     # - https://github.com/ncclient/ncclient/blob/e056e38af2843de0608da58e2f4662465c96d587/ncclient/_version.py#L25-L28
     postFetch = ''
-      sed -i 's/git_refnames = "[^"]*"/git_refnames = " (tag: ${src.tag})"/' $out/ncclient/_version.py
+      sed -i 's/git_refnames = "[^"]*"/git_refnames = " (tag: ${finalAttrs.src.tag})"/' $out/ncclient/_version.py
     '';
     hash = "sha256-A1e1YE+RW6mkuhF9eEUPiMiKw3YuHqA+4pNqJpYtAJU=";
   };

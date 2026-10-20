@@ -28,7 +28,7 @@ buildPythonPackage (finalAttrs: {
   meta = {
     description = "Implementation of magic file detection";
     homepage = "https://github.com/cdgriffith/puremagic";
-    changelog = "https://github.com/cdgriffith/puremagic/blob/${src.tag}/CHANGELOG.md";
+    changelog = "https://github.com/cdgriffith/puremagic/blob/${finalAttrs.src.tag}/CHANGELOG.md";
     license = lib.licenses.mit;
   };
 })

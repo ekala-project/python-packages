@@ -24,7 +24,7 @@ buildPythonPackage (finalAttrs: {
   meta = {
     description = "Wrapper around re or regex that adds additional back references";
     homepage = "https://github.com/facelessuser/backrefs";
-    changelog = "https://github.com/facelessuser/backrefs/releases/tag/${src.tag}";
+    changelog = "https://github.com/facelessuser/backrefs/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.mit;
   };
 })

@@ -24,7 +24,7 @@ buildPythonPackage (finalAttrs: {
   meta = {
     description = "Code generator for executing Python snippets in source files";
     homepage = "https://nedbatchelder.com/code/cog";
-    changelog = "https://github.com/nedbat/cog/blob/${src.tag}/CHANGELOG.rst";
+    changelog = "https://github.com/nedbat/cog/blob/${finalAttrs.src.tag}/CHANGELOG.rst";
     license = lib.licenses.mit;
   };
 })

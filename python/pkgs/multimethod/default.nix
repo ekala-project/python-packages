@@ -24,7 +24,7 @@ buildPythonPackage (finalAttrs: {
   meta = {
     description = "Multiple argument dispatching";
     homepage = "https://coady.github.io/multimethod/";
-    changelog = "https://github.com/coady/multimethod/blob/${src.tag}/CHANGELOG.md";
+    changelog = "https://github.com/coady/multimethod/blob/${finalAttrs.src.tag}/CHANGELOG.md";
     license = lib.licenses.asl20;
   };
 })
