@@ -7,6 +7,8 @@
   importlib-metadata,
   simplegeneric,
   netaddr,
+  pytz,
+  webob,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -26,8 +28,10 @@ buildPythonPackage (finalAttrs: {
 
   dependencies = [
     importlib-metadata
-    simplegeneric
     netaddr
+    pytz
+    simplegeneric
+    webob
   ];
 
   meta = {
