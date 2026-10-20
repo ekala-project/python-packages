@@ -19,7 +19,7 @@ let
       hash = "sha256-YRbSM2isWi7AzfquFvuZBlpEMNUnBJTBLBn0/XYVHKQ=";
     };
 
-  build-system = [ setuptools ];
+    build-system = [ setuptools ];
 
     pythonImportsCheck = [ "sortedcontainers" ];
     meta = {

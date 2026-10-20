@@ -37,7 +37,8 @@ buildPythonPackage (finalAttrs: {
     ];
   };
 
-  nativeCheckInputs = finalAttrs.optional-dependencies.lxml ++ finalAttrs.optional-dependencies.html5lib;
+  nativeCheckInputs =
+    finalAttrs.optional-dependencies.lxml ++ finalAttrs.optional-dependencies.html5lib;
 
   checkPhase = ''
     # 2 tests in this file randomly fail because they depend on the order of
