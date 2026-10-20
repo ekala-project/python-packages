@@ -4,6 +4,9 @@
   buildPythonPackage,
   hatchling,
   hatch-vcs,
+  flexcache,
+  flexparser,
+  platformdirs,
   typing-extensions,
 }:
 
@@ -23,17 +26,13 @@ buildPythonPackage (finalAttrs: {
   ];
 
   dependencies = [
+    flexcache
+    flexparser
+    platformdirs
     typing-extensions
   ];
 
-  pythonRemoveDeps = [
-    "flexcache"
-    "flexparser"
-    "platformdirs"
-  ];
-
-  # pint requires flexcache/flexparser at import time
-  # pythonImportsCheck = [ "pint" ];
+  pythonImportsCheck = [ "pint" ];
 
   meta = {
     description = "Physical quantities module";
