@@ -43,7 +43,7 @@ buildPythonPackage (finalAttrs: {
   missingHashes = ./missing-hashes.json;
 
   offlineCache = yarn-berry_3.fetchYarnBerryDeps {
-    inherit src missingHashes;
+    inherit (finalAttrs) src missingHashes;
     patches = [
       ./fix-yarn-lock-typescript-offline-cache.patch
     ];

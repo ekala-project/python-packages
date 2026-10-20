@@ -10,7 +10,8 @@ buildPythonPackage (finalAttrs: {
   format = "wheel";
 
   src = fetchPypi {
-    inherit format version;
+    inherit (finalAttrs) version;
+    format = "wheel";
     pname = "inference_gym";
     dist = "py3";
     python = "py3";
