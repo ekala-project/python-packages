@@ -22,12 +22,12 @@ buildPythonPackage (finalAttrs: {
   docs = fetchFromGitHub {
     owner = "newren";
     repo = "git-filter-repo";
-    rev = docs_version;
+    rev = finalAttrs.docs_version;
     hash = "sha256-m9NI7bLR5F+G7f3Dyi4sP6n4qz2i8cdBRuIn0OcpHAw=";
   };
 
   postInstall = ''
-    installManPage ${docs}/man1/git-filter-repo.1
+    installManPage ${finalAttrs.docs}/man1/git-filter-repo.1
   '';
 
   build-system = [ setuptools-scm ];
