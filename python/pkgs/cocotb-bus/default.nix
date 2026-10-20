@@ -18,6 +18,11 @@ buildPythonPackage {
     hash = "sha256-4j63kOjBd+iLA2EYqLTM0oKzKksOjH2UqNgDNFvWgYw=";
   };
 
+  pythonRemoveDeps = [
+    "cocotb"
+    "scapy"
+  ];
+
   build-system = [ setuptools ];
 
   # tests require cocotb, disable for now to avoid circular dependency
