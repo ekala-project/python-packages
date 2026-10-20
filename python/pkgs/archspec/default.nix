@@ -28,7 +28,7 @@ buildPythonPackage (finalAttrs: {
   meta = {
     description = "Library for detecting, labeling, and reasoning about microarchitectures";
     homepage = "https://archspec.readthedocs.io/";
-    changelog = "https://github.com/archspec/archspec/releases/tag/${src.tag}";
+    changelog = "https://github.com/archspec/archspec/releases/tag/${finalAttrs.src.tag}";
     license = with lib.licenses; [
       mit
       asl20

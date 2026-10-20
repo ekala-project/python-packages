@@ -33,7 +33,7 @@ buildPythonPackage (finalAttrs: {
   meta = {
     description = "Interface to Globus REST APIs, including the Transfer API and the Globus Auth API";
     homepage = "https://github.com/globus/globus-sdk-python";
-    changelog = "https://github.com/globus/globus-sdk-python/releases/tag/${src.tag}";
+    changelog = "https://github.com/globus/globus-sdk-python/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.asl20;
   };
 })

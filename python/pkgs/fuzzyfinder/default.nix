@@ -24,7 +24,7 @@ buildPythonPackage (finalAttrs: {
   meta = {
     description = "Fuzzy Finder implemented in Python";
     homepage = "https://github.com/amjith/fuzzyfinder";
-    changelog = "https://github.com/amjith/fuzzyfinder/blob/${src.tag}/CHANGELOG.rst";
+    changelog = "https://github.com/amjith/fuzzyfinder/blob/${finalAttrs.src.tag}/CHANGELOG.rst";
     license = lib.licenses.bsd3;
   };
 })

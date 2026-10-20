@@ -27,7 +27,7 @@ buildPythonPackage (finalAttrs: {
   meta = {
     description = "Parse your binary data into dataclasses";
     homepage = "https://github.com/matejcik/construct-classes";
-    changelog = "https://github.com/matejcik/construct-classes/blob/${src.tag}/CHANGELOG.rst";
+    changelog = "https://github.com/matejcik/construct-classes/blob/${finalAttrs.src.tag}/CHANGELOG.rst";
     license = lib.licenses.mit;
   };
 })

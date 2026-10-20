@@ -76,7 +76,7 @@ buildPythonPackage (finalAttrs: {
   __darwinAllowLocalNetworking = true;
 
   meta = {
-    changelog = "https://github.com/python-caldav/caldav/blob/${src.tag}/CHANGELOG.md";
+    changelog = "https://github.com/python-caldav/caldav/blob/${finalAttrs.src.tag}/CHANGELOG.md";
     description = "CalDAV (RFC4791) client library";
     homepage = "https://github.com/python-caldav/caldav";
     license = lib.licenses.asl20;

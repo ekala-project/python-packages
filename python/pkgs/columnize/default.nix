@@ -27,7 +27,7 @@ buildPythonPackage (finalAttrs: {
   meta = {
     description = "Python module to align a simple (not nested) list in columns";
     homepage = "https://github.com/rocky/pycolumnize";
-    changelog = "https://github.com/rocky/pycolumnize/blob/${src.tag}/ChangeLog";
+    changelog = "https://github.com/rocky/pycolumnize/blob/${finalAttrs.src.tag}/ChangeLog";
     license = lib.licenses.mit;
   };
 })

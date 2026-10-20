@@ -61,7 +61,7 @@ buildPythonPackage (finalAttrs: {
   meta = {
     description = "Python implementation of the Language Server Protocol";
     homepage = "https://github.com/microsoft/lsprotocol";
-    changelog = "https://github.com/microsoft/lsprotocol/releases/tag/${src.tag}";
+    changelog = "https://github.com/microsoft/lsprotocol/releases/tag/${finalAttrs.src.tag}";
     license = lib.licenses.mit;
   };
 })
