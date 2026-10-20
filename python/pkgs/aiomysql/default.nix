@@ -20,6 +20,11 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-DBNLmroR1W/gsYtW0iGNpki6EYUq6MyHI2pCRdyapU4=";
   };
 
+  postPatch = ''
+    substituteInPlace pyproject.toml \
+      --replace-fail '"setuptools_scm[toml] >= 7, < 10"' '"setuptools_scm[toml] >= 7"'
+  '';
+
   nativeBuildInputs = [
     setuptools
     setuptools-scm
