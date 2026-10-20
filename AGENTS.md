@@ -76,6 +76,7 @@ buildPythonPackage (finalAttrs: {
 - **Source fetchers:** prefer `fetchPyPi`; use `fetchFromGitHub` when patches or test fixtures are needed.
 - **Alternate versions:** place in a separate file (e.g., `chardet/5.nix`) alongside `default.nix`.
 - **Patches:** place `.patch` files alongside `default.nix` in the package directory.
+- **Formatting:** run `nix fmt -- <file>` after every edit to ensure consistent formatting.
 
 ## Commit Message Format
 
