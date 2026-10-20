@@ -11,13 +11,7 @@ buildPythonPackage (finalAttrs: {
   version = "1.6.0";
   pyproject = true;
 
-  inherit (pkg-config)
-    setupHooks
-    wrapperName
-    suffixSalt
-    targetPrefix
-    baseBinName
-    ;
+  propagatedBuildInputs = [ pkg-config ];
 
   src = fetchFromGitHub {
     owner = "matze";
