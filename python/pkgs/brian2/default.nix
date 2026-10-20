@@ -41,6 +41,8 @@ buildPythonPackage (finalAttrs: {
       --replace-fail "distutils" "setuptools._distutils"
   '';
 
+  pythonRelaxDeps = [ "cython" ];
+
   build-system = [
     setuptools-scm
   ];
