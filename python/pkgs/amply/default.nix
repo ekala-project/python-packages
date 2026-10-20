@@ -19,9 +19,15 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-Z1tzt9dhE922z3Q8wW7ZJbzMTnLvZpkfDHNyBkYys8k=";
   };
 
-  build-system = [ setuptools ];
+  build-system = [
+    setuptools
+    setuptools-scm
+  ];
 
-  nativeBuildInputs = [ setuptools-scm ];
+  postPatch = ''
+    substituteInPlace pyproject.toml \
+      --replace-fail "setuptools_scm[toml]>=10.1.2" "setuptools_scm[toml]>=10"
+  '';
 
   dependencies = [
     docutils
