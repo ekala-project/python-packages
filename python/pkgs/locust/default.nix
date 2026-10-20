@@ -44,12 +44,12 @@ buildPythonPackage (finalAttrs: {
 
   webui = callPackage ./webui.nix {
     inherit (finalAttrs) version;
-    src = "${src}/locust/webui";
+    src = "${finalAttrs.src}/locust/webui";
   };
 
   preBuild = ''
     mkdir -p $out/${python.sitePackages}/locust/webui/dist
-    ln -sf ${webui}/dist/* $out/${python.sitePackages}/locust/webui/dist
+    ln -sf ${finalAttrs.webui}/dist/* $out/${python.sitePackages}/locust/webui/dist
   '';
 
   build-system = [
