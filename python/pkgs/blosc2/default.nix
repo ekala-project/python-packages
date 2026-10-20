@@ -64,7 +64,7 @@ buildPythonPackage (finalAttrs: {
       hash = "sha256-lj0BC/A+Kv/VloLhFe3hmrdZ6QWv6mSrMn8HdHS9PfI=";
     })
   ];
-  sourceRoot = "source";
+  sourceRoot = "python-blosc2-${finalAttrs.version}-github-source";
 
   nativeBuildInputs = [
     cmake
@@ -87,8 +87,8 @@ buildPythonPackage (finalAttrs: {
     '';
   postUnpack = ''
     # ensure our separately pinned versions correspond to those in source
-    if ! grep -F '${miniexprRev}' source/CMakeLists.txt ; then
-      echo 'Expected to find ${miniexprRev} in source/CMakeLists.txt:' \
+    if ! grep -F '${miniexprRev}' python-blosc2-${finalAttrs.version}-github-source/CMakeLists.txt ; then
+      echo 'Expected to find ${miniexprRev} in python-blosc2-${finalAttrs.version}-github-source/CMakeLists.txt:' \
         'has miniexpr source been updated to match pinned version?'
       exit 1
     fi
