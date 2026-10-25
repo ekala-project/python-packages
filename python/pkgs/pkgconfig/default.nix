@@ -11,7 +11,7 @@ buildPythonPackage (finalAttrs: {
   version = "1.6.0";
   pyproject = true;
 
-  propagatedBuildInputs = [ pkg-config ];
+  propagatedNativeBuildInputs = [ pkg-config ];
 
   src = fetchFromGitHub {
     owner = "matze";
