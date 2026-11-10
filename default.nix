@@ -4,6 +4,7 @@ in
 
 {
   modules ? [ ],
+  ...
 }@args:
 
 let

@@ -17,14 +17,12 @@
     }:
     let
       forAllSystems = nix-lib.lib.genAttrs (import systems);
-      pkgsModule = import ./pkgs-module.nix;
     in
     {
       legacyPackages = forAllSystems (
         system:
         import ./. {
           inherit system;
-          modules = [ pkgsModule ];
         }
       );
 
