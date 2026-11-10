@@ -1,27 +1,8 @@
+# Pins are read from flake.lock; update them with `nix flake update`.
 let
-  # Inherit pinning from flake.lock
-  lock = builtins.fromJSON (builtins.readFile ./flake.lock);
-  getInfo =
-    attr:
-    let
-      node = lock.nodes.${attr}.locked;
-    in
-    if node.type == "path" then
-      builtins.fetchTree {
-        inherit (node) type path narHash;
-      }
-    else
-      builtins.fetchTree {
-        inherit (node)
-          type
-          owner
-          repo
-          narHash
-          rev
-          ;
-      };
+  fetchLocked = import ./fetch-locked.nix { };
 in
 {
-  lib = getInfo "nix-lib";
-  core = getInfo "corepkgs";
+  lib = fetchLocked "nix-lib";
+  core = fetchLocked "corepkgs";
 }
