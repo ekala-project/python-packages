@@ -10,10 +10,7 @@
 let
   pins = import ../pins.nix;
   lib = import pins.lib;
-  pkgsModule = import ../pkgs-module.nix;
-  pkgs = import ../. {
-    modules = [ pkgsModule ];
-  };
+  pkgs = import ../. { };
   mkProjection = overlay: base: lib.fix (self: base // overlay self base);
 
   # --- Native packages (pkgs/ directory + top-level.nix overrides) ---
