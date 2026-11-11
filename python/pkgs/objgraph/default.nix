@@ -7,12 +7,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "objgraph";
-  version = "3.6.2";
+  version = "3.7.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-ALny9A90IuPH9FphxNr9r4HwP/BknW6uyGbwEDDlGtg=";
+    hash = "sha256-tu9LJEIXQQUJsleXBBOwGpedVN9I0tQFW2lB6Ged27s=";
   };
 
   build-system = [ setuptools ];
