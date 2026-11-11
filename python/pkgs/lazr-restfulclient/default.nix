@@ -12,13 +12,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "lazr-restfulclient";
-  version = "0.14.6";
+  version = "4.1.0";
   pyproject = true;
 
   src = fetchPypi {
-    pname = "lazr.restfulclient";
+    pname = "lazr_restfulclient";
     inherit (finalAttrs) version;
-    hash = "sha256-Q/EqHTlIRjsUYgOMR7Qp3LXkLgun8uFlEbArpdKt/9s=";
+    hash = "sha256-EtSa/UgSP1CZWPJvdXEhuzdUjLKx3FhfVHuuLOc/RcE=";
   };
 
   build-system = [ setuptools ];
