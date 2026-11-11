@@ -2,21 +2,25 @@
   lib,
   buildPythonPackage,
   fetchPypi,
-  setuptools-scm,
+  hatchling,
+  hatch-vcs,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "configupdater";
-  version = "3.2";
+  version = "4.1.1";
   pyproject = true;
 
   src = fetchPypi {
-    pname = "ConfigUpdater";
+    pname = "configupdater";
     inherit (finalAttrs) version;
-    hash = "sha256-n9rFODHBsGKSm/OYtkm4fKMOfxpzXz+/SCBygEEGMGs=";
+    hash = "sha256-XlY4P9BTZ/QgSp1GvyCxu7iLRSV8uTOTj/b4e8FwV+c=";
   };
 
-  build-system = [ setuptools-scm ];
+  build-system = [
+    hatchling
+    hatch-vcs
+  ];
 
   pythonImportsCheck = [ "configupdater" ];
 
