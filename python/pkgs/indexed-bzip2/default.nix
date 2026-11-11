@@ -8,13 +8,20 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "indexed_bzip2";
-  version = "1.6.0";
+  version = "1.7.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-3HUiigZR91/nbOAMOuSHGcPtqkkEaj3VepyMhmKOHpI=";
+    hash = "sha256-P8347fXYRsF9cgDAJNRHWBoHI7VXRtb9zGEIVqwz1Cs=";
   };
+
+  # Upstream pins setuptools < 72 and cython < 3.1 for issues not affecting us
+  postPatch = ''
+    substituteInPlace pyproject.toml \
+      --replace-fail '"setuptools >= 61.2, < 72"' '"setuptools >= 61.2"' \
+      --replace-fail '"cython >= 0.29.24, < 3.1"' '"cython >= 0.29.24"'
+  '';
 
   nativeBuildInputs = [
     cython
