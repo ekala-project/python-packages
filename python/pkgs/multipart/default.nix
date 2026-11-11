@@ -7,12 +7,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "multipart";
-  version = "2.0.0";
+  version = "2.0.1";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-1gdlZ7SJJwJx2ewQPUBHRdoVAa1bcOOn8fB/ViPYKFA=";
+    hash = "sha256-Xf6nzkJg4QqeYgNpRJ59QcJpqU4ZLbnqSvGgBZzd03A=";
   };
 
   build-system = [ flit-core ];
