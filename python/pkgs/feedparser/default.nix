@@ -3,22 +3,22 @@
   fetchPypi,
   buildPythonPackage,
   setuptools,
-  sgmllib3k,
+  feedparser-sgmllib,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "feedparser";
-  version = "6.0.12";
+  version = "6.0.14";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-ZPds6Qrj6O9dHt4PjTtQzia8znHdiuXoKxzS1KX5Qig=";
+    hash = "sha256-CIZ5sMS1Q+4hGoIN1URpjHakAhIurnRzwEpDQl8oPQY=";
   };
 
   build-system = [ setuptools ];
 
-  dependencies = [ sgmllib3k ];
+  dependencies = [ feedparser-sgmllib ];
 
   pythonImportsCheck = [ "feedparser" ];
 
