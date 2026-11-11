@@ -9,16 +9,18 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "flask-socketio";
-  version = "5.6.1";
+  version = "5.7.2";
   pyproject = true;
 
   src = fetchPypi {
     pname = "flask_socketio";
     inherit (finalAttrs) version;
-    hash = "sha256-/lvZlcPtTampjzNdDYMPoaGdhKZHifYmVkKmcf2srqw=";
+    hash = "sha256-ay+WfyT2k/IxbRCLLSElZC24VrJoHBLmDe2b/xuANeA=";
   };
 
   build-system = [ setuptools ];
+
+  pythonRelaxDeps = [ "python-socketio" ];
 
   dependencies = [
     flask
