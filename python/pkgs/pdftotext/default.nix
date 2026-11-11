@@ -9,12 +9,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "pdftotext";
-  version = "3.0.0";
+  version = "4.0.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    sha256 = "sha256-w2UrGRVOFFUVqL+pU/xhNjOO2SM3vcy7U/4NiAE7Gqo=";
+    sha256 = "sha256-bJSfAbsP6kVgzCPkuLAXGIZH0i+ZpgSn7T0J9y9D5jQ=";
   };
 
   build-system = [ setuptools ];
