@@ -9,14 +9,19 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "zope.testrunner";
-  version = "8.2";
+  version = "8.3";
   pyproject = true;
 
   src = fetchPypi {
     pname = "zope_testrunner";
     inherit (finalAttrs) version;
-    hash = "sha256-H0AWw+6FA6BplGAApVR5ZG2wqD7UzSvI5Uz7bCfYiUY=";
+    hash = "sha256-b++IEXMUZ2ZQgpFAwqkDj7egtG/XwBop3X8oQr/GFNc=";
   };
+
+  postPatch = ''
+    substituteInPlace pyproject.toml \
+      --replace-fail "setuptools >= 78.1.1,< 82" "setuptools >= 78.1.1"
+  '';
 
   build-system = [ setuptools ];
 
