@@ -11,13 +11,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "google-cloud-runtimeconfig";
-  version = "0.37.1";
+  version = "0.37.2";
   pyproject = true;
 
   src = fetchPypi {
     pname = "google_cloud_runtimeconfig";
     inherit (finalAttrs) version;
-    hash = "sha256-oj/3RJYhPCXwy7o4TbNdmVjYuuObeAB9RHFV7QIB+dw=";
+    hash = "sha256-ku0bmZc0LIdCRzhoCea21k+KVvAy7tF1Kw9WIaSBlUs=";
   };
 
   build-system = [ setuptools ];
