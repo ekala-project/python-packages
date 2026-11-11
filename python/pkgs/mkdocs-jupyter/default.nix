@@ -16,13 +16,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "mkdocs-jupyter";
-  version = "0.26.3";
+  version = "0.27.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "mkdocs_jupyter";
     inherit (finalAttrs) version;
-    hash = "sha256-4ei9SKG5ZULoTjAo4wZhErrHuU2Vq2n4uRMFyEADyiY=";
+    hash = "sha256-JTBAW5YWU0uKi7gdpojE5hex9wTN/kwb2EYrBxuaTQM=";
   };
 
   pythonRelaxDeps = [
