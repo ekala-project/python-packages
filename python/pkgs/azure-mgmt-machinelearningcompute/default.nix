@@ -12,13 +12,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-machinelearningcompute";
-  version = "0.4.1";
+  version = "1.0.0b2";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
     extension = "zip";
-    hash = "sha256-elL4VZERTvM6WZ2rvvhA2HK39Zm3gj5ZavlJDsUbhz8=";
+    hash = "sha256-ZVJgR1pHQlb54nOJMZ8LMQRMjUS8HRYbg8KWsm2iPms=";
   };
 
   build-system = [ setuptools ];
