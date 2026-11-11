@@ -15,6 +15,7 @@
   dulwich,
   google-cloud-storage,
   huggingface-hub,
+  oras,
   requests,
 
   # tests
@@ -23,13 +24,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "kserve-storage";
-  version = "0.20.0";
+  version = "0.21.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "kserve_storage";
     inherit (finalAttrs) version;
-    hash = "sha256-8tBFGx++hMQkZfptV0EuFePZrlN1Tn5TlefzGop9aU0=";
+    hash = "sha256-6pZppck0MpJc9x8ZduTCIio6dvMB3tDPJmQKmfdI3so=";
   };
 
   build-system = [
@@ -38,6 +39,10 @@ buildPythonPackage (finalAttrs: {
 
   pythonRelaxDeps = [
     "google-cloud-storage"
+  ];
+  pythonRemoveDeps = [
+    # not packaged; import is guarded and only needed for modelscope:// URIs
+    "modelscope-hub"
   ];
   dependencies = [
     aiohttp
@@ -48,6 +53,7 @@ buildPythonPackage (finalAttrs: {
     dulwich
     google-cloud-storage
     huggingface-hub
+    oras
     requests
   ];
 
