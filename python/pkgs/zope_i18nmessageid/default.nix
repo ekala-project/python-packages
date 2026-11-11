@@ -8,13 +8,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "zope.i18nmessageid";
-  version = "8.3";
+  version = "8.4";
   pyproject = true;
 
   src = fetchPypi {
     pname = "zope_i18nmessageid";
     inherit (finalAttrs) version;
-    hash = "sha256-f3JDoRT9sGoql9z2sWx7H5kWiCel5+4J680hDHZ0Xe4=";
+    hash = "sha256-9rNsN1O3G76SKOvkSiZXcm6I0tXuQ5Y1Df2Mn+bP3sE=";
   };
 
   build-system = [ setuptools ];
