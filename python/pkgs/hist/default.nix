@@ -11,12 +11,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "hist";
-  version = "2.11.0";
+  version = "2.12.1";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-kusfoMo5utYZ9/cEs7qTxEs1U7BEX22ywXxnwBuctTQ=";
+    hash = "sha256-cm5h5slZS+0oS7OrfKrBYjhyqcbckesV7SitZrqEuwM=";
   };
 
   build-system = [
