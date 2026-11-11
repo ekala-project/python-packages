@@ -10,13 +10,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-deploymentmanager";
-  version = "1.0.0";
+  version = "2.0.0b2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit (finalAttrs) pname version;
-    hash = "sha256-m623aGFyCRScM+aMouWcNbHT0RQn4paYcvLiNuFO7ng=";
-    extension = "zip";
+    pname = "azure_mgmt_deploymentmanager";
+    inherit (finalAttrs) version;
+    hash = "sha256-qjDX3TFAq414yA01HmEiW9jHRmestMlc2LfldjNdgdY=";
   };
 
   build-system = [ setuptools ];
