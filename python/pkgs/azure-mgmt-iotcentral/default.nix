@@ -13,13 +13,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-iotcentral";
-  version = "9.0.0";
+  version = "9.0.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit (finalAttrs) pname version;
-    extension = "zip";
-    hash = "sha256-ZN9z30SabzcX89CWPlhpIk7T5iFsed5XFJO+p8G1LLY=";
+    pname = "azure_mgmt_iotcentral";
+    inherit (finalAttrs) version;
+    hash = "sha256-Q+OYkC1MAMPi9Js4/xQIAXk7chqRguDkyMP+3jZ5hGg=";
   };
 
   build-system = [ setuptools ];
