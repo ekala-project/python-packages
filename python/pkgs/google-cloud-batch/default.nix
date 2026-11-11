@@ -12,13 +12,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "google-cloud-batch";
-  version = "0.22.3";
+  version = "0.22.5";
   pyproject = true;
 
   src = fetchPypi {
     pname = "google_cloud_batch";
     inherit (finalAttrs) version;
-    hash = "sha256-ULIqB2tIIhFMSFtgCPcjoEvqksosIeI0sK78kYZGz20=";
+    hash = "sha256-6tpOWEfZSxHflPi/9ZzoG6LJ3yt6aeX1hTCrFzNY8Vc=";
   };
 
   build-system = [ setuptools ];
