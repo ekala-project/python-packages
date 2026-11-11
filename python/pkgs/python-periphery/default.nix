@@ -1,18 +1,20 @@
 {
   lib,
   buildPythonPackage,
-  fetchPypi,
+  fetchFromGitHub,
   setuptools,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "python-periphery";
-  version = "2.4.1";
+  version = "2.5.0";
   pyproject = true;
 
-  src = fetchPypi {
-    inherit (finalAttrs) pname version;
-    hash = "sha256-YdRh1zaYKm92boeHIKsQpoFR4ujBCGYA2TiaxH5A6Io=";
+  src = fetchFromGitHub {
+    owner = "vsergeev";
+    repo = "python-periphery";
+    tag = "v${finalAttrs.version}";
+    hash = "sha256-faVsDcrA24jb3Iyu72MYEOkoyRKPKA/IjovzDJRJksY=";
   };
 
   build-system = [ setuptools ];
