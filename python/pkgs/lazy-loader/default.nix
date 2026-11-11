@@ -8,13 +8,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "lazy-loader";
-  version = "0.5";
+  version = "0.6";
   pyproject = true;
 
   src = fetchPypi {
     pname = "lazy_loader";
     inherit (finalAttrs) version;
-    hash = "sha256-cX+ReaDb7TVwEt2tUKWtPV5NmguHEmgNTmh/Xm5u2bM=";
+    hash = "sha256-L0t4JNZAGVhjkAigyuIMd2th3/YZrM1okGk+LegmAWc=";
   };
 
   build-system = [ setuptools ];
