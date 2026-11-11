@@ -7,13 +7,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "pycosat";
-  version = "0.6.3";
+  version = "0.6.6";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    extension = "zip";
-    hash = "sha256-TJmHSUan6Tm7lBu7AZ3Swg5gaOMQfJE2bnd5xp1w4O0=";
+    hash = "sha256-o3bPriCxb8++8kvzwEeoopTDUDK7BR+piELBK7q28P8=";
   };
 
   build-system = [ setuptools ];
