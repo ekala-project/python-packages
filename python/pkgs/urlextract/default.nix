@@ -11,12 +11,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "urlextract";
-  version = "1.9.0";
+  version = "1.10.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-cFCOArqd83LiXPBkLbNnzs4nPocSzQzngXj8XdfqANs=";
+    hash = "sha256-VckUA+CfTh99NroO+4iIPkdu8UyNQjvdzgmDlckL4dg=";
   };
 
   build-system = [ setuptools ];
