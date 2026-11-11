@@ -12,13 +12,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "google-cloud-bigquery-storage";
-  version = "2.41.0";
+  version = "2.43.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "google_cloud_bigquery_storage";
     inherit (finalAttrs) version;
-    hash = "sha256-uZkpXwjOfi1qJg0kW1uYQ7oWA/YWRRXJ8Mtdge5xpdI=";
+    hash = "sha256-YiDsOIpJqEdcGqY+N3jhvnud/e6+WRlR8cxWx5HRPv0=";
   };
 
   build-system = [ setuptools ];
