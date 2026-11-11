@@ -2,20 +2,24 @@
   lib,
   buildPythonPackage,
   fetchPypi,
-  setuptools,
+  hatchling,
+  hatch-vcs,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "pyotp";
-  version = "2.9.0";
+  version = "2.10.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-NGtmQuDb3eO0/1qTC2ZMqCq/oRY1btSMxCx9ZZDTb2M=";
+    hash = "sha256-0B6XA0Q2FrA8V8cAtcv/1WofkpwbD48DExvHjB/KnT8=";
   };
 
-  build-system = [ setuptools ];
+  build-system = [
+    hatchling
+    hatch-vcs
+  ];
 
   pythonImportsCheck = [ "pyotp" ];
 
