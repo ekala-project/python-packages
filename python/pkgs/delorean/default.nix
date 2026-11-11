@@ -4,34 +4,32 @@
   fetchPypi,
 
   # build-system
-  setuptools,
+  hatchling,
 
   # dependencies
   babel,
   humanize,
   python-dateutil,
-  pytz,
   tzlocal,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "delorean";
-  version = "1.0.0";
+  version = "2.0.0";
   pyproject = true;
 
   src = fetchPypi {
-    pname = "Delorean";
+    pname = "delorean";
     inherit (finalAttrs) version;
-    hash = "sha256-/md4bhIzhSOEi+xViKZYxNQl4S1T61HP74cL7I9XYTQ=";
+    hash = "sha256-Y5E+xCRVWp1H9SGnrz2yShwuOxkGP+JuAZQ/GS6rNek=";
   };
 
-  build-system = [ setuptools ];
+  build-system = [ hatchling ];
 
   dependencies = [
     babel
     humanize
     python-dateutil
-    pytz
     tzlocal
   ];
 
