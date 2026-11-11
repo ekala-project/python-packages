@@ -11,13 +11,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "google-cloud-secret-manager";
-  version = "2.30.0";
+  version = "2.32.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "google_cloud_secret_manager";
     inherit (finalAttrs) version;
-    hash = "sha256-JuyHc3cxtIP3+VwmqMereeIstmMXyVAG5/aYXbxDyKI=";
+    hash = "sha256-EEY19p8JT3F8rwtorfYj8PDPezI23LoS06UD6GNwF+g=";
   };
 
   build-system = [ setuptools ];
