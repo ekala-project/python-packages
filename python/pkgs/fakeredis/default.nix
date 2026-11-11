@@ -9,12 +9,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "fakeredis";
-  version = "2.37.1";
+  version = "2.40.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-kEWFGwqf5WMSaWqtyCQ1FBqkOhk8q0YtNyyPtYOnwIc=";
+    hash = "sha256-FusFo+l8N6Azxz0dp+iF6yqke6dgTMN3FEM576J4CgI=";
   };
 
   build-system = [ hatchling ];
