@@ -9,12 +9,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "rencode";
-  version = "1.0.8";
+  version = "1.0.9";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-g7LZtthK3DVhW3oJt0J5IRq6r1eleK8QrQEkVamadyI=";
+    hash = "sha256-yjr+jQnSb7SKwK1nc+NewK4bktA40hdoXFTFqGV34vI=";
   };
 
   build-system = [
