@@ -16,12 +16,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "tempora";
-  version = "5.12.0";
+  version = "5.13.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-tJt4zH7AslK/vXTO8BhxIbGOT1oMV+O5w9j8FQkK87Q=";
+    hash = "sha256-Hm/gPYyczsVX5Y8YvzdD5sGnsJsyvNoHtzviM+9bJME=";
   };
 
   build-system = [ flit-core ];
