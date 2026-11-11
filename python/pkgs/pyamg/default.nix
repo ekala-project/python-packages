@@ -3,38 +3,36 @@
   stdenv,
   buildPythonPackage,
   fetchPypi,
+  # build-system
+  meson-python,
   numpy,
-  scipy,
-  pytest,
-  python,
   pybind11,
-  setuptools-scm,
+  versioningit,
+  # dependencies
+  scipy,
+  python,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "pyamg";
-  version = "5.3.0";
+  version = "5.4.1";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-UyPQ8aTNmZviRqkNWAyeHptYS5iIf2KY05dhEIfvhgs=";
+    hash = "sha256-tYKc45aHZVzmjbRBXJPuFxBWu05B57eY705un5+Tvq4=";
   };
 
-  postPatch = ''
-    substituteInPlace pyproject.toml \
-      --replace-fail \
-        'setuptools_scm[toml]==8.3.0' \
-        'setuptools_scm>=8.3.0' \
-  '';
-
-  nativeBuildInputs = [ setuptools-scm ];
+  build-system = [
+    meson-python
+    numpy
+    pybind11
+    versioningit
+  ];
 
   dependencies = [
     numpy
     scipy
-    pytest
-    pybind11
   ];
 
   pythonImportsCheck = [
@@ -45,6 +43,7 @@ buildPythonPackage (finalAttrs: {
   meta = {
     description = "Algebraic Multigrid Solvers in Python";
     homepage = "https://github.com/pyamg/pyamg";
+    changelog = "https://github.com/pyamg/pyamg/blob/v${finalAttrs.version}/changelog.md";
     license = lib.licenses.mit;
     broken = stdenv.hostPlatform.isDarwin && lib.versionAtLeast python.version "3.14";
   };
