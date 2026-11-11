@@ -11,13 +11,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-managementpartner";
-  version = "1.0.0";
+  version = "1.0.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit (finalAttrs) pname version;
-    extension = "zip";
-    hash = "sha256-HNWRhIRUoRXCFtIWo/t4AsG13gSxBeJpbkI3sPh2jy8=";
+    pname = "azure_mgmt_managementpartner";
+    inherit (finalAttrs) version;
+    hash = "sha256-+VUacBeUTaj34XMAaBWDbS4IU5aGC/gb3SOHXqMUGbc=";
   };
 
   build-system = [ setuptools ];
