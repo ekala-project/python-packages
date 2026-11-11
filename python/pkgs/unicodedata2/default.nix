@@ -7,12 +7,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "unicodedata2";
-  version = "17.0.1";
+  version = "18.0.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-15lD0VP19r++P1Wl7GEZhRhL2jf87bPsx1Mi2CrmrTs=";
+    hash = "sha256-qVNikaUgTK9kI8p8VhMdRPKq/C+to1/zperIL3+MYqc=";
   };
 
   build-system = [
