@@ -11,17 +11,19 @@
   setuptools,
   sqlalchemy,
   stevedore,
+  testresources,
+  testscenarios,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "oslo-db";
-  version = "18.1.0";
+  version = "18.1.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "oslo_db";
     inherit (finalAttrs) version;
-    hash = "sha256-B16GziPAwh2x01CR8dyyGwVEnInDpDJtpPLT+4MwIj8=";
+    hash = "sha256-Ujm6BZuUw4HGG1q+YHrc0V6u6N8RXerduKNtyzZuRPo=";
   };
 
   build-system = [
@@ -37,6 +39,8 @@ buildPythonPackage (finalAttrs: {
     oslo-utils
     sqlalchemy
     stevedore
+    testresources
+    testscenarios
   ];
   pythonImportsCheck = [ "oslo_db" ];
 
