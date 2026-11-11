@@ -9,13 +9,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "argparse-manpage";
-  version = "4.7";
+  version = "4.8";
   pyproject = true;
 
   src = fetchPypi {
     pname = "argparse_manpage";
     inherit (finalAttrs) version;
-    hash = "sha256-Heq3ayEqyHU8u2e50tK8CUm7wzi7HMNUfwiQyzQQizI=";
+    hash = "sha256-1VzhwkZHnd2ChxFwqMxUOmgxu2jIeimOR/BmOpMwt08=";
   };
 
   build-system = [ setuptools ];
