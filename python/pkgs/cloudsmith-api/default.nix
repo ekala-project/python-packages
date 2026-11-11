@@ -10,14 +10,16 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "cloudsmith-api";
-  version = "2.0.23";
+  version = "2.0.43";
   format = "wheel";
 
   src = fetchPypi {
+    dist = "py3";
+    python = "py3";
     pname = "cloudsmith_api";
     inherit (finalAttrs) version;
     format = "wheel";
-    hash = "sha256-CfNgISONtTrabCoNUzHbMMVKDwGj8fdmSwh1FfzH10g=";
+    hash = "sha256-DGMJ3mfVvtMEzsOAr00/yDAp3uMSVksC1e96RIVBOtA=";
   };
 
   dependencies = [
