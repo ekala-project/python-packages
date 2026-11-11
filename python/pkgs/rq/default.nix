@@ -14,14 +14,14 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "rq";
-  version = "2.12";
+  version = "3.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "rq";
     repo = "rq";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-EGgOeATfuRONPxfbgBqrgK8tk4Ehg9El7bTGOVX4cLY=";
+    hash = "sha256-xLl667lQ0IcyCEUmo2BvdvvOQNYpRIzq3IvILXe2x68=";
   };
 
   build-system = [ hatchling ];
