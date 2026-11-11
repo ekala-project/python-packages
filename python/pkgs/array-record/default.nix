@@ -10,7 +10,7 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "array-record";
-  version = "0.8.3";
+  version = "0.8.6";
   format = "wheel";
 
   disabled = pythonAtLeast "3.15";
@@ -29,10 +29,10 @@ buildPythonPackage (finalAttrs: {
       platform = "manylinux2014_x86_64.manylinux_2_17_x86_64";
       hash =
         {
-          cp311 = "sha256-9ABPzOt5YaLMAJACjmij7rkdP1s4wA1gtTP3AE0dP3s=";
-          cp312 = "sha256-RY9mWN6GyTabI//mTcsxOTqRm5GuLxUUfuK+sgELEio=";
-          cp313 = "sha256-E98a7Js4r+mJc79f489SP4PKkEsEI9hTGZMIdxRbjyg=";
-          cp314 = "sha256-idLPX0cJvjxsKzDA02YAUiM3VjP/zmbcsT2SegvcUig=";
+          cp311 = "sha256-sYiabBuxOdDMzbCtS9KxpE6JS061Yc7sDqj24v9slOw=";
+          cp312 = "sha256-dv+6akd7UOKRHpwJR0KhffAG+5tlXGxkSur8hONdmVw=";
+          cp313 = "sha256-XhRuYtkdXUsa0Uhv2zuvgesqWmGgDjKxqD7Y997oaA8=";
+          cp314 = "sha256-8wdRI8LlTf13naLkbCYhCuYjiiPRIIHJQhjxE6bPIZ4=";
         }
         .${pyShortVersion} or (throw "${finalAttrs.pname} is missing hash for ${pyShortVersion}");
     };
