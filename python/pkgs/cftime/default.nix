@@ -10,12 +10,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "cftime";
-  version = "1.6.5";
+  version = "1.6.6";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-giX+1rm0P7h2g+urUhMEUPwXMAERUNMJIJapDlTR6B4=";
+    hash = "sha256-eycWs9zpe6F0AYnEJM6XvW+OZTkbf+MjxvD4F/aorVY=";
   };
 
   build-system = [ setuptools ];
