@@ -1,19 +1,24 @@
 {
   lib,
   buildPythonPackage,
-  fetchPypi,
+  fetchFromGitHub,
   setuptools,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "flatbuffers";
-  version = "25.2.10";
+  version = "25.12.19";
   pyproject = true;
 
-  src = fetchPypi {
-    inherit (finalAttrs) pname version;
-    hash = "sha256-l+RRN3pBJi+Nm9QpXMg2EzQVzAPYy5ZkEKSvkusA0m4=";
+  # PyPI only ships a wheel for this release
+  src = fetchFromGitHub {
+    owner = "google";
+    repo = "flatbuffers";
+    tag = "v${finalAttrs.version}";
+    hash = "sha256-I4PthsQOOV8tsi5uRYudyqBPcbE+ZH8Q9j0Ms4HP9Ec=";
   };
+
+  sourceRoot = "${finalAttrs.src.name}/python";
 
   build-system = [ setuptools ];
 
