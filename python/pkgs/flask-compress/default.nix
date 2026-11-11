@@ -2,6 +2,7 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  pythonOlder,
 
   # build-system
   setuptools,
@@ -15,13 +16,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "flask-compress";
-  version = "1.24";
+  version = "1.26";
   pyproject = true;
 
   src = fetchPypi {
     pname = "flask_compress";
     inherit (finalAttrs) version;
-    hash = "sha256-FAl87+Weyz5GbVKmrrYvNPElqffa3x8zpT5DDOSlDzE=";
+    hash = "sha256-vVKZUE5WTqwnOVGBGhwWHYk/XVG4ciBm/O8bTaVWdJ8=";
   };
 
   build-system = [
@@ -30,9 +31,11 @@ buildPythonPackage (finalAttrs: {
   ];
 
   dependencies = [
-    backports-zstd
     brotli
     flask
+  ]
+  ++ lib.optionals (pythonOlder "3.14") [
+    backports-zstd
   ];
 
   postPatch = ''
