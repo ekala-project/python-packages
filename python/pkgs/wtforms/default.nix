@@ -14,12 +14,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "wtforms";
-  version = "3.3.0b3";
+  version = "3.3.2";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-oRxWo1Xbp0OzRUFL8kkPw/5xUCatkNxZGBLasYXZQ30=";
+    hash = "sha256-SbtR0Qt4MtSX51hzbaTVb30SmgFdskdW828omS8XVAQ=";
   };
 
   build-system = [
