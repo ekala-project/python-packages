@@ -19,13 +19,13 @@
 }:
 buildPythonPackage (finalAttrs: {
   pname = "typed-settings";
-  version = "26.0.0";
+  version = "26.1.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "typed_settings";
     inherit (finalAttrs) version;
-    hash = "sha256-iNDaM+RAoEGfGU4kuS7M5MEufBZbW5Zpf+QUDIPThuo=";
+    hash = "sha256-69j7z40xT5IqfwMH9iKkgtw6bqze9upkTTmk3CpBsEk=";
   };
 
   build-system = [ hatchling ];
