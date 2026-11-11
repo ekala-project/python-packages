@@ -11,13 +11,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-consumption";
-  version = "10.0.0";
+  version = "11.0.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit (finalAttrs) pname version;
-    extension = "zip";
-    hash = "sha256-BqCGQ2wXN/d6uGiU1R9Zc7bg+l7fVlWOTCllieurkTA=";
+    pname = "azure_mgmt_consumption";
+    inherit (finalAttrs) version;
+    hash = "sha256-ymXXgvG+A6V2D8629Fd7fHBl7N4drGrted9/Hr4bS4o=";
   };
 
   build-system = [ setuptools ];
