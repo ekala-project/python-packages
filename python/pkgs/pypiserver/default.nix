@@ -2,53 +2,54 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
-  passlib,
-  pip,
+  pythonAtLeast,
   pythonOlder,
-  setuptools,
-  twine,
-  watchdog,
-  webtest,
-  build,
+  # build-system
+  hatchling,
+  # dependencies
+  defusedxml,
   importlib-resources,
+  legacy-cgi,
+  packaging,
+  pip,
+  # optional-dependencies
+  passlib,
+  watchdog,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "pypiserver";
-  version = "2.4.1";
+  version = "2.4.3";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "pypiserver";
     repo = "pypiserver";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-nqoAT3g32srJ0c3sGNFQBznLsnymDPUfL7kcON+BP0k=";
+    hash = "sha256-uVCFk5He8qadiMVPNrJObaeEIG+rS+h/PGrCBYeM6G8=";
   };
 
-  postPatch = ''
-    substituteInPlace setup.py \
-      --replace-fail '"setuptools-git>=0.3",' ""
-  '';
-
-  build-system = [
-    setuptools
-  ];
+  build-system = [ hatchling ];
 
   dependencies = [
-    setuptools
+    defusedxml
+    packaging
     pip
   ]
-  ++ lib.optionals (pythonOlder "3.12") [ importlib-resources ];
+  ++ lib.optionals (pythonOlder "3.12") [ importlib-resources ]
+  ++ lib.optionals (pythonAtLeast "3.13") [ legacy-cgi ];
 
   optional-dependencies = {
     passlib = [ passlib ];
     cache = [ watchdog ];
   };
+
   pythonImportsCheck = [ "pypiserver" ];
 
   meta = {
     description = "Minimal PyPI server for use with pip/easy_install";
     homepage = "https://github.com/pypiserver/pypiserver";
+    changelog = "https://github.com/pypiserver/pypiserver/blob/v${finalAttrs.version}/CHANGES.rst";
     license = with lib.licenses; [
       mit
       zlib
