@@ -8,13 +8,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "sphinxcontrib-moderncmakedomain";
-  version = "3.29.0";
+  version = "4.4.3";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) version;
     pname = "sphinxcontrib_moderncmakedomain";
-    hash = "sha256-NYfe8kH/JXfQu+8RgQoILp3sG3ij1LSgZiQLXz3BtbI=";
+    hash = "sha256-I/gBiLskGk2miG+eSyBNxiuudgYKQapZe5DwTSd0EKg=";
   };
 
   build-system = [ hatchling ];
