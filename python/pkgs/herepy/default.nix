@@ -2,7 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
-  setuptools,
+  hatchling,
+  httpx2,
   requests,
   pytestCheckHook,
   responses,
@@ -10,19 +11,24 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "herepy";
-  version = "3.6.5";
+  version = "3.7.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "abdullahselek";
     repo = "HerePy";
     tag = finalAttrs.version;
-    hash = "sha256-8DwzzC0sTrGnMpuADc55HCIeH/KyWacv8X+Ubh+n7ZM=";
+    hash = "sha256-I8ayZA+5mdZlmNH0VopEXJGslP5OXuXC4STFE9D7stg=";
   };
 
-  build-system = [ setuptools ];
+  build-system = [ hatchling ];
 
-  dependencies = [ requests ];
+  pythonRelaxDeps = [ "httpx2" ];
+
+  dependencies = [
+    httpx2
+    requests
+  ];
 
   nativeCheckInputs = [
     pytestCheckHook
