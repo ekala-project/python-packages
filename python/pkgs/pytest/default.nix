@@ -26,13 +26,22 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "pytest";
-  version = "9.1.1";
+  version = "9.2.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-EIj73o8rSdlaVJoZVwevp6dqPOm8rcJrbXHw/9pf4xM=";
+    hash = "sha256-l8TzsfPHQUqjZGXgm4Ig8dA2J5k71RsSguGTdTyAVXs=";
   };
+
+  # pytest 9.2.0 requires setuptools-scm >= 10.1 for the `write_to_source`
+  # option; the package set ships 10.0.x, which writes version_file into the
+  # source tree by default anyway.
+  postPatch = ''
+    substituteInPlace pyproject.toml \
+      --replace-fail '"setuptools-scm[toml]>=10.1"' '"setuptools-scm[toml]"' \
+      --replace-fail 'write_to_source = true' ""
+  '';
 
   outputs = [
     "out"
