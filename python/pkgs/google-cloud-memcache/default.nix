@@ -12,13 +12,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "google-cloud-memcache";
-  version = "1.16.0";
+  version = "1.17.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "google_cloud_memcache";
     inherit (finalAttrs) version;
-    hash = "sha256-5zs8e/S97VbLYnyO/CKn8P2vdUiSit6X+QTLa/qDfz8=";
+    hash = "sha256-vzRTatUt79/yEKYa91KFLRN8yWQJUsQjELNCpC4PuZE=";
   };
 
   build-system = [ setuptools ];
