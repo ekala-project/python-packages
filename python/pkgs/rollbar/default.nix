@@ -9,12 +9,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "rollbar";
-  version = "1.4.0";
+  version = "1.5.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-mK1/kAEseR0LQOrFG2/miLHK3MSq3/dy/Aoj7+dftfw=";
+    hash = "sha256-GUCi4AeQHXAjAUvngqCYKOKCK4QqSw+QNIBs24Hgfww=";
   };
 
   build-system = [ setuptools ];
