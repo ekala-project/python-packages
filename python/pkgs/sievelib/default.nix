@@ -12,12 +12,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "sievelib";
-  version = "1.5.0";
+  version = "1.6.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-Kvuq8lA6/pEt4IgeTFdzg+b5D4dikx+00y8rVBI85FA=";
+    hash = "sha256-VcEa0/QEqsX/D07J4K41Th2AOu1yxEUkWY0l3qyGsLg=";
   };
 
   build-system = [ setuptools-scm ];
