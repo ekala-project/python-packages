@@ -11,13 +11,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-signalr";
-  version = "1.2.0";
+  version = "2.0.0b3";
   pyproject = true;
 
   src = fetchPypi {
-    inherit (finalAttrs) pname version;
-    extension = "zip";
-    hash = "sha256-jbFhVoJbObpvcVJr2VoUzY5CmSblJ6OK7Q3l17SARfg=";
+    pname = "azure_mgmt_signalr";
+    inherit (finalAttrs) version;
+    hash = "sha256-cgkCvkDQXUihCcBgSJ7BOBQExPO7YQc6Lk+iBXPzSLo=";
   };
 
   build-system = [ setuptools ];
