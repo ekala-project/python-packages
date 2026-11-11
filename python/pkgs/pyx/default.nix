@@ -9,13 +9,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "pyx";
-  version = "0.17";
+  version = "0.18";
   pyproject = true;
   disabled = !isPy3k;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-O8iqgJExVZ96XA4fESm0LHGt423wMyET9cV3k4SjmvE=";
+    hash = "sha256-lm2mtRhuBv04ScIQ2uksiOEgJ5wLvs/gO9o/dj6S18w=";
   };
 
   build-system = [ setuptools ];
