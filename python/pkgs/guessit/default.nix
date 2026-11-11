@@ -2,7 +2,7 @@
   lib,
   buildPythonPackage,
   fetchPypi,
-  setuptools,
+  hatchling,
   rebulk,
   babelfish,
   python-dateutil,
@@ -10,15 +10,18 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "guessit";
-  version = "3.8.0";
+  version = "4.5.1";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-Zhn8u/mgUQ7IwsM3RMQlHK0FB7HVc9Bch13hftxe2+0=";
+    hash = "sha256-3wnyvW9Ksk63lgQiKSzCMyvnvX0zj/FFEbnRF0p444M=";
   };
 
-  build-system = [ setuptools ];
+  build-system = [ hatchling ];
+
+  # rebulk 6.0.2 is not packaged yet
+  pythonRelaxDeps = [ "rebulk" ];
 
   dependencies = [
     rebulk
