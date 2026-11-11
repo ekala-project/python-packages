@@ -14,12 +14,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "alembic";
-  version = "1.19.2";
+  version = "1.20.1";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-KXlQqKkfZ3Drgr+86b6lXHKLkKU4bG6BQwGRoxnROLA=";
+    hash = "sha256-g0kN7x9yNBPbUJZZH3YJrFJUSAW+k4SRcAiO0E9aLgs=";
   };
 
   build-system = [ setuptools ];
