@@ -11,12 +11,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "paramiko";
-  version = "5.0.0";
+  version = "5.1.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-NnY7W5XCoNz98avEjkgVbuQlsh7+Lw54fC3VqVwOXnk=";
+    hash = "sha256-I5tfmypTAGzVT4PPhJXudCCDcI6tlHiCyN0nht5585s=";
   };
 
   build-system = [ setuptools ];
