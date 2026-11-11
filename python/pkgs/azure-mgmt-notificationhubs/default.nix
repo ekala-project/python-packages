@@ -12,13 +12,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-notificationhubs";
-  version = "8.0.0";
+  version = "8.1.0b3";
   pyproject = true;
 
   src = fetchPypi {
-    inherit (finalAttrs) pname version;
-    extension = "zip";
-    hash = "sha256-Tdkk9HBJk+Pr8dQuK+HL4LDZCOaVhX+gjENprhHQ6zY=";
+    pname = "azure_mgmt_notificationhubs";
+    inherit (finalAttrs) version;
+    hash = "sha256-zehcshDcg1SsC4rTHhr09xlM3uHSQC0OWFFfcwZwqdU=";
   };
 
   build-system = [ setuptools ];
