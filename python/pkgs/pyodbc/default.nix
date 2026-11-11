@@ -10,14 +10,14 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "pyodbc";
-  version = "5.3.0";
+  version = "5.5.0";
   pyproject = true;
 
   disabled = isPyPy; # use pypypdbc instead
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-L+DgY9j7Zu/QrG3DkjbE3hpF8Xwz6t7Q1VPSHBmfTQU=";
+    hash = "sha256-eniHPKxmsoV79JCiSj46raJPg5U06Xxn4Xf2kefXAaw=";
   };
 
   build-system = [ setuptools ];
