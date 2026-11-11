@@ -7,12 +7,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "cssselect";
-  version = "1.5.0";
+  version = "1.6.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-PL6C3XrL7pup5XI7X55HSYJpEvH7Mc1/kqq+1f3hWxU=";
+    hash = "sha256-jIOnE56XuTql69wPRueF9wVqCKi/IB5ZemomKdfrEds=";
   };
 
   build-system = [ hatchling ];
