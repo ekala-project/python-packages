@@ -10,12 +10,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "pydyf";
-  version = "0.12.1";
+  version = "0.13.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-+9fnWVQaxyXCnFBmEgA945Mkm5QxDqeK5Eyx0EsiAJU=";
+    hash = "sha256-PBvVNscWHZ9HK4KoqqJ9M1mpBY7BLeFTAtkrNpDa5/U=";
   };
 
   postPatch = ''
