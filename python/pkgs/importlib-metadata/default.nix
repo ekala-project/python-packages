@@ -4,19 +4,19 @@
   fetchPypi,
   setuptools,
   setuptools-scm,
-  toml,
+  lazy-importer,
   zipp,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "importlib-metadata";
-  version = "9.0.1";
+  version = "10.2.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "importlib_metadata";
     inherit (finalAttrs) version;
-    hash = "sha256-q4MFgLwO89thzo+ucWOJ5UYrZ+AzAYurbY+A7xcXL5k=";
+    hash = "sha256-lBOiAp/ZylZp0n8Thgcbv+PH68oFRWkuyXUIgkH+HXk=";
   };
 
   postPatch = ''
@@ -29,7 +29,7 @@ buildPythonPackage (finalAttrs: {
   ];
 
   dependencies = [
-    toml
+    lazy-importer
     zipp
   ];
 
