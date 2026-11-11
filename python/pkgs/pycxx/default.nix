@@ -8,12 +8,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "pycxx";
-  version = "7.1.8";
+  version = "7.2.0";
   pyproject = true;
 
   src = fetchurl {
     url = "mirror://sourceforge/cxx/CXX/PyCXX%20V${finalAttrs.version}/pycxx-${finalAttrs.version}.tar.gz";
-    hash = "sha256-S5Hh4RQcI/vVA532NcS7bnVjIWhUj1a4POF3GTwMmMY=";
+    hash = "sha256-QUDKF8Oefz2MmkJtEhJqA3on3BSOUNP5jw0zRRP8u7I=";
   };
 
   outputs = [
