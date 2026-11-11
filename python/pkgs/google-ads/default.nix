@@ -15,16 +15,18 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "google-ads";
-  version = "31.4.0";
+  version = "35.0.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "google_ads";
     inherit (finalAttrs) version;
-    hash = "sha256-A45QJgivweiIiOLkrjZ7x6eHi1wyBpEHU8agifC0Y8w=";
+    hash = "sha256-6uBw3EbiwSEuuDUjE1J7D2Yyz8yJGcBlrD4A35KY3IU=";
   };
 
   build-system = [ setuptools ];
+
+  pythonRelaxDeps = [ "google-api-core" ];
 
   dependencies = [
     google-auth-oauthlib
