@@ -26,15 +26,22 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "okta";
-  version = "3.4.5";
+  version = "3.4.7";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-fwL2QtieS2j8rplGKXHHTjRWXZsZFHf0JqRL81iW9+8=";
+    hash = "sha256-uwjRGoa3tRM4lhKKubVLr7FpYdGP++hWifL/mUAj+VM=";
   };
 
   build-system = [ setuptools ];
+
+  pythonRelaxDeps = [
+    "aiohttp"
+    "pydantic"
+    "pydash"
+    "pyjwt"
+  ];
 
   dependencies = [
     aenum
