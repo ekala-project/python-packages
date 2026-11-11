@@ -17,23 +17,23 @@ let
     "aarch64-darwin" = "macosx_11_0_arm64";
   };
   hashes = {
-    "311-x86_64-linux" = "sha256-iudEUatcyKDNnlGSat8E9N/b2K1awxrHHxyqe9+ygo0=";
-    "312-x86_64-linux" = "sha256-ZMgDlVjVYHtzkDlI/OBYclcx30EMXBls9Ys/xiIjlbU=";
-    "313-x86_64-linux" = "sha256-87A/UsiYJ2QTPd0EXAVYJgjSrZARs6IP+DJoBGdpfW0=";
-    "314-x86_64-linux" = "sha256-fJEIrmwprckLcsome6K1dzhsXkEOovjofqvOXr2tMn4=";
-    "311-aarch64-linux" = "sha256-NDUvi6bl77pf6xiRfWjaGpK7/4DmTD/QbT0a9LNDgho=";
-    "312-aarch64-linux" = "sha256-Os4Azy5F3F1k/joQwsvvYTQ5FWg4CKEKPggSM1ZqcjE=";
-    "313-aarch64-linux" = "sha256-UK+wbFelCQkQFa9qhdpvSDp/WtA3IoTdldVRPYdzNuQ=";
-    "314-aarch64-linux" = "sha256-Gy/11VNqipsVlsUbkHXMnUC0xOpObMA8BIARHb5dlW0=";
-    "311-aarch64-darwin" = "sha256-NA/pcfGAjXBg8ic7ju41J4C8tl5QNfeBY/qbiTCqeVo=";
-    "312-aarch64-darwin" = "sha256-RHfqvibi9RMfGxo0RM2RZ/5p+rwpV56rglnSGDmbnms=";
-    "313-aarch64-darwin" = "sha256-AoRVzM3AXDHxlASM9FmiZmmybTjwUWyvkhPnIZse55o=";
-    "314-aarch64-darwin" = "sha256-19AXdZhfyqKw8QA0l2apU8UIbpLnRr85XpNhUdTY+aw=";
+    "311-x86_64-linux" = "sha256-NkoWesobJO64lh9NtzIOjEi+hSL+VPMv6iN9AVHIcXY=";
+    "312-x86_64-linux" = "sha256-hEDY9bdyH1GidNcZDXY2QKSKEbVvpI//pcL8AJGSVGo=";
+    "313-x86_64-linux" = "sha256-aUhCbvB157kG+d8dJ6+KyKrMKiCAdi4aUwBJb84JzH4=";
+    "314-x86_64-linux" = "sha256-p2Z7Mnq/yo9wpdi+wIyx0lVqCpiY56juCCu7U58y5Ms=";
+    "311-aarch64-linux" = "sha256-krcjY1wmkDQxFYx+nezkw1Mdsmfj5HalbdL8SI3VueI=";
+    "312-aarch64-linux" = "sha256-V20KR8CMAI05iu41lZwf9p7ergmCxr0yZM5qMV+KO5Y=";
+    "313-aarch64-linux" = "sha256-4NOeUdzARqL0Wxf4VMqvZYO/L8majqjVSXGKcbm68cw=";
+    "314-aarch64-linux" = "sha256-Y2qbT+ZqBJ4tJz9NuZMqUYvC265oUXZ001MBC/II6J4=";
+    "311-aarch64-darwin" = "sha256-KbVrHDZ2hzxg2bjQ9XG25qDGT01Ct52YSvM06RS5/FY=";
+    "312-aarch64-darwin" = "sha256-vadLEVjyLFkw3FnzeLGjQOZci3niti2k7M0+95ZkasA=";
+    "313-aarch64-darwin" = "sha256-4E2bDLDhlirMon/JeGwabPp2ti7yG2I6yBVFyIIFoMY=";
+    "314-aarch64-darwin" = "sha256-+cwrtDmKqgsVXJIFUov25ftjcgkmxrZVXRpboB2dn7A=";
   };
 in
 buildPythonPackage (finalAttrs: {
   pname = "tensorstore";
-  version = "0.1.85";
+  version = "0.1.86";
   format = "wheel";
 
   # The source build involves some wonky Bazel stuff.
