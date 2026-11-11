@@ -7,12 +7,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "bitarray";
-  version = "3.11.0";
+  version = "3.12.3";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-vxlDfsAOw9QK74Lq7twUz0AAvptjXE9QSXllBuZjDdg=";
+    hash = "sha256-kZ41qVHApVFjG5S/Vo8/XjjQBODGCGbLLKUb2MR3j+w=";
   };
 
   build-system = [ setuptools ];
