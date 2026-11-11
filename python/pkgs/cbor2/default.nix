@@ -2,33 +2,46 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  cargo,
+  rustPlatform,
+  rustc,
+  setuptools-rust,
   setuptools-scm,
   setuptools,
-  withCExtensions ? true,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "cbor2";
-  version = "5.8.0";
+  version = "6.2.1";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-sZw1/K6WiKwB73W61dsnMAwlN+tO4A7QfgXYRWoNSTE=";
+    hash = "sha256-CGwViL1AekZznacEte59FSJdyZjZWCoFGfxsmhFLJfc=";
+  };
+
+  cargoRoot = "rust";
+  cargoDeps = rustPlatform.fetchCargoVendor {
+    inherit (finalAttrs)
+      pname
+      version
+      src
+      cargoRoot
+      ;
+    hash = "sha256-cf8PSCUgJFGDsyJXTARVU4c+Uq+wE9MIgZao83GxHp4=";
   };
 
   build-system = [
     setuptools
+    setuptools-rust
     setuptools-scm
   ];
 
-  env = lib.optionalAttrs (!withCExtensions) {
-    CBOR2_BUILD_C_EXTENSION = "0";
-  };
-
-  passthru = {
-    inherit withCExtensions;
-  };
+  nativeBuildInputs = [
+    rustPlatform.cargoSetupHook
+    cargo
+    rustc
+  ];
 
   pythonImportsCheck = [ "cbor2" ];
 
