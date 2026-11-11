@@ -10,12 +10,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "asyncpg";
-  version = "0.31.0";
+  version = "0.32.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-yYk4bIOUC/vXhxgPKxUZQV4tPWJ3pw2dDwFFrHNQBzU=";
+    hash = "sha256-ReZOVnFNiIMwuISq0d+zY9C/Q/s0Pj0aiWhSXzut5Hg=";
   };
 
   build-system = [
