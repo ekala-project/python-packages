@@ -7,12 +7,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "multi_key_dict";
-  version = "2.0.3";
+  version = "2.0.4";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-3uvewXqjChxDLLP0N+gfhiHhwFQqDAYXp09x4jLpk54=";
+    hash = "sha256-NLD+zkRcrgFH8NzVQikOyMq4OoAFNYkKa3xhXAx3nQg=";
   };
 
   build-system = [ setuptools ];
