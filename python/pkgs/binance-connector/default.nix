@@ -1,7 +1,7 @@
 {
   lib,
   buildPythonPackage,
-  fetchFromGitHub,
+  fetchPypi,
   pycryptodome,
   requests,
   setuptools,
@@ -13,11 +13,9 @@ buildPythonPackage (finalAttrs: {
   version = "3.12.0";
   pyproject = true;
 
-  src = fetchFromGitHub {
-    owner = "binance";
-    repo = "${finalAttrs.pname}-python";
-    tag = "v${finalAttrs.version}";
-    hash = "sha256-8O73+fli0HNbvGBcyg79ZGOTQvL0TF5SCfogI6btlrA=";
+  src = fetchPypi {
+    inherit (finalAttrs) pname version;
+    hash = "sha256-M78DBS4vG+PO0RlqNsUac2pQqq4H95ImQMfrwBfGAR8=";
   };
 
   build-system = [ setuptools ];
