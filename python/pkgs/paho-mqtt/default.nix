@@ -7,13 +7,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "paho-mqtt";
-  version = "2.1.0";
+  version = "2.2.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "paho_mqtt";
     inherit (finalAttrs) version;
-    hash = "sha256-EtbnUR1BN1VaP26hZ66EavLHNXsQvG+k98OWj8FyODQ=";
+    hash = "sha256-vPcG8D8fSeD8OuFm3Htn7jVGNJb4vf18nDYYH2umNck=";
   };
 
   build-system = [ hatchling ];
