@@ -11,12 +11,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-maps";
-  version = "2.1.0";
+  version = "3.0.0b1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit (finalAttrs) pname version;
-    hash = "sha256-XVaml4UuVBanYYHxjB1YT/PvExzgAPbD4gI3Hbc0dI0=";
+    pname = "azure_mgmt_maps";
+    inherit (finalAttrs) version;
+    hash = "sha256-IIKvonwqwhGXmxLcsferztUKPgFxI6qAVEGhblq2WgE=";
   };
 
   build-system = [ setuptools ];
