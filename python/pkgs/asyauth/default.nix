@@ -11,15 +11,20 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "asyauth";
-  version = "0.0.23";
+  version = "0.0.25";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-NvA4TdsrYloQMzNjyv4ZDW6cntF/0Hs+KIdkGjzGJvA=";
+    hash = "sha256-YyZZnnlRvfn9Hf7iCBHbvvQfX91ZHbzLjYr21O3DZ3U=";
   };
 
   build-system = [ setuptools ];
+
+  pythonRelaxDeps = [
+    "asysocks"
+    "minikerberos"
+  ];
 
   dependencies = [
     asn1crypto
