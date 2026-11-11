@@ -8,12 +8,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "deepmerge";
-  version = "3.0.1";
+  version = "4.0.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-NbOaTLks8yjW7KYcu/ZfaKN8LOswhfD4U8uy5SpZ/CM=";
+    hash = "sha256-lIVl8ryc20Elmkoj0mY45YQMnghKNDqyef/T7c/fdNM=";
   };
 
   build-system = [
