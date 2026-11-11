@@ -21,12 +21,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "asyncssh";
-  version = "2.24.0";
+  version = "2.24.1";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-QGTFkOWc4ujYKi9m018xINdlgotN9ePb+we0qMJGhsk=";
+    hash = "sha256-78026bNfeYc1NbBkRKfJsKPGHZcIGyCMf90/2KQPHso=";
   };
 
   build-system = [ setuptools ];
