@@ -8,12 +8,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "murmurhash";
-  version = "1.0.15";
+  version = "1.0.16";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-WOKye3hH+eKm7fELR6jI3XCkcF9F3Mt792rq2s9WugE=";
+    hash = "sha256-CXlKzofYfUrb7+bGFKMezFzGXvgVpcYaAr8wVRUL278=";
   };
 
   postPatch = ''
