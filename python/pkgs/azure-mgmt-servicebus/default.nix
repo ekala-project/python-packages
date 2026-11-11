@@ -10,13 +10,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-servicebus";
-  version = "8.2.0";
+  version = "10.0.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit (finalAttrs) pname version;
-    extension = "zip";
-    hash = "sha256-i+kgjxQdmnifaNuNIZdU/3gGn9j5OQ6fdkS7laO+nsI=";
+    pname = "azure_mgmt_servicebus";
+    inherit (finalAttrs) version;
+    hash = "sha256-PYeohgtyQ3WXwz36sDYPtLd2pnjHD9aL0qqdAIU+dpg=";
   };
 
   build-system = [ setuptools ];
