@@ -14,13 +14,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "pymongo";
-  version = "4.18.0";
+  version = "4.19.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) version;
     pname = "pymongo";
-    hash = "sha256-bzPNIDPo6iFtMGm16+p53tdO8qk/aak7Js8xAIL5tbk=";
+    hash = "sha256-PFEN08XZs5LTszu10qWUdYrP6PAm/KZUJT+UfOCvnUA=";
   };
 
   build-system = [
