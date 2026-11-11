@@ -8,7 +8,7 @@
   uv-dynamic-versioning,
 
   # dependencies
-  httpx,
+  anyio,
   logfire-api,
   pydantic,
   typing-inspection,
@@ -19,14 +19,14 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "pydantic-graph";
-  version = "2.41.0";
+  version = "2.67.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "pydantic";
     repo = "pydantic-ai";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-UncVaekxLK2VPJ8wA5+6PUXy9Jah+icaIMsWkbs5x4g=";
+    hash = "sha256-iOev1nXKvuxk4pWyWhzljF07cvBYLWpQzPuyqNqHMdw=";
   };
 
   sourceRoot = "${finalAttrs.src.name}/pydantic_graph";
@@ -37,7 +37,7 @@ buildPythonPackage (finalAttrs: {
   ];
 
   dependencies = [
-    httpx
+    anyio
     logfire-api
     pydantic
     typing-inspection
