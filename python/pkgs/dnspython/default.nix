@@ -7,21 +7,21 @@
   httpcore,
   httpx,
   idna,
-  hatchling,
+  uv-build,
   trio,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "dnspython";
-  version = "2.8.0";
+  version = "2.9.2";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-GB08aZZFLLEYnEBGxhWZuEpahuCZVi/9530mmE/ybQ8=";
+    hash = "sha256-jU05pRPmSdY0AEzk05reI1LvzqRyoCR1NaXC0Yqde6k=";
   };
 
-  build-system = [ hatchling ];
+  build-system = [ uv-build ];
 
   optional-dependencies = {
     doh = [
