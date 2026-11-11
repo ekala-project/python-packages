@@ -5,18 +5,20 @@
   hatchling,
   pydantic,
   python-dotenv,
+  typing-extensions,
+  typing-inspection,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "pydantic-settings";
-  version = "2.15.0";
+  version = "2.16.2";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "pydantic";
     repo = "pydantic-settings";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-bVZ0KOQ+YA2n4HZ/G7A8fmgQJMtcACRdz587du/z1s4=";
+    hash = "sha256-iLvh3tM5c4+TLRdBqFp+x23vgPd63OmU3RqDitZV9Lw=";
   };
 
   build-system = [ hatchling ];
@@ -24,6 +26,8 @@ buildPythonPackage (finalAttrs: {
   dependencies = [
     pydantic
     python-dotenv
+    typing-extensions
+    typing-inspection
   ];
 
   pythonImportsCheck = [ "pydantic_settings" ];
