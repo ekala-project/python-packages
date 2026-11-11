@@ -16,12 +16,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "pyzmq";
-  version = "27.2.0";
+  version = "27.3.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-VNQlnRv64k7Ntcp596zC6sbChqAtagrmF3l8tF8HJtM=";
+    hash = "sha256-u+2z0dmbq8Yl8d2ddDis79RCs2t1Bz/WvB73wKS5bVY=";
   };
 
   build-system = [
