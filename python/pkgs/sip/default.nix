@@ -9,12 +9,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "sip";
-  version = "6.16.1";
+  version = "6.17.3";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-CnOcnNKSneTgiERW2Mrzz7IsEFNHV8d5e9jca9ntabw=";
+    hash = "sha256-47XC0UKalvLh/CW2nUzrIyvIt/I5XoZMkEzsKJBWQrU=";
   };
 
   build-system = [
