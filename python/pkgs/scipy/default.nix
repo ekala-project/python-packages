@@ -51,7 +51,8 @@ buildPythonPackage (finalAttrs: {
     substituteInPlace pyproject.toml \
       --replace-fail "numpy>=2.0.0,<2.7" numpy \
       --replace-fail "Cython>=3.0.8,<3.3.0" "Cython>=3.0.8" \
-      --replace-fail "pybind11>=2.13.2,<3.1.0" "pybind11>=2.13.2"
+      --replace-fail "pybind11>=2.13.2,<3.1.0" "pybind11>=2.13.2" \
+      --replace-fail "meson-python>=0.15.0,<0.21.0" "meson-python>=0.15.0"
   ''
   + lib.optionalString (stdenv.hostPlatform.isDarwin) ''
     substituteInPlace scipy/meson.build \
