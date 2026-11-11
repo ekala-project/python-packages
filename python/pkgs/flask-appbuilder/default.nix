@@ -28,13 +28,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "flask-appbuilder";
-  version = "5.0.2";
+  version = "5.3.0";
   pyproject = true;
 
   src = fetchPypi {
-    pname = "Flask-AppBuilder";
+    pname = "flask_appbuilder";
     inherit (finalAttrs) version;
-    hash = "sha256-9Xe5gqGuQLwhMjjO25PDnGfPIZmqHgBuCH6hs1B9VFA=";
+    hash = "sha256-uvZFw8FQRxxmYASc22Gh558xi2NSRTH4kNQvQG9dVZY=";
   };
 
   build-system = [ setuptools ];
