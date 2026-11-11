@@ -5,10 +5,9 @@
   fetchPypi,
 
   # build-system
-  setuptools,
+  meson-python,
   setuptools-scm,
   cython,
-  py-cpuinfo,
 
   # dependencies
   numpy,
@@ -26,19 +25,24 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "numcodecs";
-  version = "0.16.5";
+  version = "0.17.1";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-DQ+2CFL4TAvZVDzE0que79N/yO/MQQrNR3fmKh0wAxg=";
+    hash = "sha256-UGncAbAIfGE1y7OwQ3B6r5J8mS/NMlJI0V2QfFHdN0c=";
   };
 
+  # meson.build runs this helper via its `#!/usr/bin/env python3` shebang
+  postPatch = ''
+    patchShebangs src/numcodecs/_build_utils/gitversion.py
+  '';
+
   build-system = [
-    setuptools
+    meson-python
     setuptools-scm
     cython
-    py-cpuinfo
+    numpy
   ];
 
   dependencies = [
