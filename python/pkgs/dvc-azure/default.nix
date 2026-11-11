@@ -12,12 +12,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "dvc-azure";
-  version = "3.1.0";
+  version = "3.1.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit (finalAttrs) pname version;
-    hash = "sha256-UsvHDVQUtQIZs9sKFvaK0l2rp24/Igrr5OSbPGSYriA=";
+    pname = "dvc_azure";
+    inherit (finalAttrs) version;
+    hash = "sha256-2y+bBp5o0buuZ/lTo3Pr3kLUBNbH6JTZXVl8itdTpmA=";
   };
 
   # Prevent circular dependency
