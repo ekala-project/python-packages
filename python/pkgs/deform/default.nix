@@ -8,7 +8,7 @@
   peppercorn,
   translationstring,
   zope-deprecation,
-  setuptools,
+  setuptools_80,
   coverage,
   beautifulsoup4,
   flaky,
@@ -18,15 +18,15 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "deform";
-  version = "2.0.15";
+  version = "3.0.1";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-HpEpN2UMHbuDAHndnAOZUHYqIwIjpWd0D78bI/EJA2c=";
+    hash = "sha256-41wBUlJyXlLhlJAPilAxS9dktm49KphrRvRnbw2v5uk=";
   };
 
-  build-system = [ setuptools ];
+  build-system = [ setuptools_80 ];
 
   dependencies = [
     chameleon
@@ -35,6 +35,8 @@ buildPythonPackage (finalAttrs: {
     peppercorn
     translationstring
     zope-deprecation
+    # uses pkg_resources at runtime; pins setuptools<81
+    setuptools_80
   ];
 
   nativeCheckInputs = [
@@ -44,6 +46,8 @@ buildPythonPackage (finalAttrs: {
     pyramid
     pytestCheckHook
   ];
+
+  pythonImportsCheck = [ "deform" ];
 
   meta = {
     description = "Form library with advanced features like nested forms";
