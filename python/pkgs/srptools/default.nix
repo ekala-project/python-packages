@@ -2,23 +2,25 @@
   lib,
   fetchPypi,
   buildPythonPackage,
-  setuptools,
-  six,
+  hatchling,
+  click,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "srptools";
-  version = "1.0.1";
+  version = "2.0.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-f6QzclahVC6PW7S+0Z4dmuqY/l/5uvdmkzQqHdasfJY=";
+    hash = "sha256-O1KW/eS3DnZEO76sxkH05BJcgba9IOTiKLujQPAMBsU=";
   };
 
-  build-system = [ setuptools ];
+  build-system = [ hatchling ];
 
-  dependencies = [ six ];
+  optional-dependencies = {
+    cli = [ click ];
+  };
 
   pythonImportsCheck = [ "srptools" ];
 
