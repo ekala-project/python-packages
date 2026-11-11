@@ -8,18 +8,21 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "url-normalize";
-  version = "3.0.0";
+  version = "3.1.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "url_normalize";
     inherit (finalAttrs) version;
-    hash = "sha256-BVLL8oMaMqKJlKE9KbylimDhD/bAOA40PsbRwqDSMtg=";
+    hash = "sha256-E4kSgzwABex351bsIgWQ+Jcf8EYicoB5DOsA9audVrY=";
   };
 
   build-system = [ setuptools ];
 
   dependencies = [ idna ];
+
+  # Upstream pins idna>=3.20, but only 3.19 is packaged here
+  pythonRelaxDeps = [ "idna" ];
 
   pythonImportsCheck = [ "url_normalize" ];
 
