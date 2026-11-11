@@ -13,13 +13,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "google-cloud-dataform";
-  version = "0.11.3";
+  version = "0.11.5";
   pyproject = true;
 
   src = fetchPypi {
     pname = "google_cloud_dataform";
     inherit (finalAttrs) version;
-    hash = "sha256-UTuLDr7LU6LwgJmRsQrNP11tHwbXd9OjZTAPBZi6u2k=";
+    hash = "sha256-EbiytjJOsI/KWqxDSiMNDcIj6+E5kFb6CwBANj7AcYc=";
   };
 
   build-system = [ setuptools ];
