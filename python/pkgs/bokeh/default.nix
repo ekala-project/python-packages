@@ -22,12 +22,12 @@
 buildPythonPackage (finalAttrs: {
   pname = "bokeh";
   # update together with panel which is not straightforward
-  version = "3.10.0";
+  version = "3.10.2";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-c/CwwG15JcorbVKy3FHCUzoR9mfMaUTx8GwDnMxXxc4=";
+    hash = "sha256-2fuhAE+uFJxubVS6N0EOUrjUYi7VxtrSIgr6G2E2LeA=";
   };
 
   patches = [
