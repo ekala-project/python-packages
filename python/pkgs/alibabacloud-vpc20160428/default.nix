@@ -9,13 +9,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "alibabacloud-vpc20160428";
-  version = "7.2.1";
+  version = "7.3.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "alibabacloud_vpc20160428";
     inherit (finalAttrs) version;
-    hash = "sha256-AqxJfee3Eq3w8CueS2WjAEgrw7mH6nWeqqc6gdIXONA=";
+    hash = "sha256-sXSZjBCeDZ/JwfPc1C1LP7AgpDUlfXAXcl0lZlTzyKc=";
   };
 
   build-system = [ setuptools ];
