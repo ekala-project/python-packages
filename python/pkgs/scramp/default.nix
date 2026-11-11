@@ -9,12 +9,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "scramp";
-  version = "1.4.17";
+  version = "1.5.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-KJcPKevDPfR/mXXIBeXlo2Dv/lsxBF5gfWSztgNw26E=";
+    hash = "sha256-IbiKVLxLZW9X3p8Pa+Uxypn37+SSILvQg7hM+IdI45U=";
   };
 
   build-system = [
