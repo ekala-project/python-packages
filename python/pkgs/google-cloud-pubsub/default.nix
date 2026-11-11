@@ -16,13 +16,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "google-cloud-pubsub";
-  version = "2.40.0";
+  version = "2.43.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "google_cloud_pubsub";
     inherit (finalAttrs) version;
-    hash = "sha256-/n1+t291P2rrzdovTf9TZ0jRmZFH9k2VWlVPVyq7FYU=";
+    hash = "sha256-mg4Bh2Ak7NXhAaPEHNZ/pQ7wxOOapW9TuBUkWZ+Q40Y=";
   };
 
   build-system = [ setuptools ];
