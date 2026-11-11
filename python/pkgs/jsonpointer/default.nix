@@ -8,12 +8,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "jsonpointer";
-  version = "3.1.1";
+  version = "3.2.1";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-C4AcfbM6kEAk9gBNUm3MU7u4pKD04yv9EL6t9grfGQA=";
+    hash = "sha256-R8hGUTs6TsRu7O8RBSB/ugdeKjZZBI42K9fa/w/DM0I=";
   };
 
   build-system = [ setuptools ];
