@@ -12,13 +12,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "pymysql";
-  version = "1.2.0";
+  version = "1.2.4";
   pyproject = true;
 
   src = fetchPypi {
     pname = "pymysql";
     inherit (finalAttrs) version;
-    hash = "sha256-bHsXymhpiBBNdCbCeJW0Vc3uo+nTzrEnDww3BP6tjDM=";
+    hash = "sha256-SRVYFluOEfNkTF+c+zDMnJER/9VOU9OqkbmgogviKU8=";
   };
 
   build-system = [ setuptools ];
