@@ -13,13 +13,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-marketplaceordering";
-  version = "1.1.0";
+  version = "1.1.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit (finalAttrs) pname version;
-    extension = "zip";
-    hash = "sha256-aLOB9SpN9ENdrK1al+HFmsTJgfZn3MqPnQRFNBfWCtg=";
+    pname = "azure_mgmt_marketplaceordering";
+    inherit (finalAttrs) version;
+    hash = "sha256-nIfbCLTsDG9zj18HujJrb/kvNIYZ90lXOlX6uojEcoU=";
   };
 
   build-system = [ setuptools ];
