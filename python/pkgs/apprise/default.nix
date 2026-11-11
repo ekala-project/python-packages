@@ -15,12 +15,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "apprise";
-  version = "1.13.1";
+  version = "2.2.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-52id2nGq9zkkTWyGkN4TyxNhuNCnmYD7SLs5dFXKC90=";
+    hash = "sha256-cROCt8Nm5XUnaGPacvVHPjTbFzWpmA9t9GSzN6gAPrw=";
   };
 
   nativeBuildInputs = [ installShellFiles ];
