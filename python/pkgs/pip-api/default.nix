@@ -16,7 +16,7 @@ buildPythonPackage (finalAttrs: {
   src = fetchFromGitHub {
     owner = "di";
     repo = "pip-api";
-    tag = "v${finalAttrs.version}";
+    tag = finalAttrs.version;
     hash = "sha256-nmCP4hp+BsD80OBjerOu+QTBBExGHvn/v19od4V3ncI=";
   };
 
