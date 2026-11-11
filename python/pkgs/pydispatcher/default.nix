@@ -7,13 +7,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "pydispatcher";
-  version = "2.0.7";
+  version = "3.0.0a2";
   pyproject = true;
 
   src = fetchPypi {
-    pname = "PyDispatcher";
+    pname = "pydispatcher";
     inherit (finalAttrs) version;
-    hash = "sha256-t3fGrQgNwbrXSkwp1qRpFPpnAaxw+UsNZvvP3mL1vjE=";
+    hash = "sha256-FeQxqECzIO4YZ7oTWs9imLGpW9mCJFj40ajOt4JRGX4=";
   };
 
   build-system = [ setuptools ];
