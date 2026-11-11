@@ -10,6 +10,7 @@
   packaging,
   pytz,
   pyyaml,
+  swagger-spec-validator,
   uritemplate,
   datadiff,
   dj-database-url,
@@ -18,13 +19,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "drf-yasg";
-  version = "1.21.15";
+  version = "1.21.18";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) version;
     pname = "drf_yasg";
-    hash = "sha256-74aDjE7xDc06wevyvmAcvgKXi5mWccqkNmf3yduWFGg=";
+    hash = "sha256-yTsTldqPO5EghclrRfVhtsXWMmgl6gBAdhvIx0SsulI=";
   };
 
   postPatch = ''
@@ -44,6 +45,7 @@ buildPythonPackage (finalAttrs: {
     packaging
     pytz
     pyyaml
+    swagger-spec-validator
     uritemplate
   ];
   env.DJANGO_SETTINGS_MODULE = "testproj.settings.local";
