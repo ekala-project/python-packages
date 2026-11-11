@@ -3,19 +3,22 @@
   fetchPypi,
   buildPythonPackage,
   setuptools,
+  inversion,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "verspec";
-  version = "0.1.0";
+  version = "0.2.1";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-xFBMppeyBWzbS/pxIUYfWg6BgJJVtBwD3aS6gjY3wB4=";
+    hash = "sha256-IEbqFlvgGz/0qMIxnQztV7HXZz+wWzinU2dTGs3jtTQ=";
   };
 
   build-system = [ setuptools ];
+
+  dependencies = [ inversion ];
 
   pythonImportsCheck = [ "verspec" ];
 
