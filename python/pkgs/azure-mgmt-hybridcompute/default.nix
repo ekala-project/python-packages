@@ -11,7 +11,7 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-hybridcompute";
-  version = "10.0.0";
+  version = "10.1.0";
   format = "wheel";
 
   src = fetchPypi {
@@ -20,7 +20,7 @@ buildPythonPackage (finalAttrs: {
     format = "wheel";
     python = "py3";
     dist = "py3";
-    hash = "sha256-XRCJM+DHVPOvhpOq4J6JjbPPkTBOuQ/9C9DxcTWCIWs=";
+    hash = "sha256-FhpU2WJU6Fvk/W1BaDfOkvJMmNLtGGEh5yQxB36IGOg=";
   };
 
   dependencies = [
