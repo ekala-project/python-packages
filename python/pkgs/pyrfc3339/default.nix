@@ -9,12 +9,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "pyrfc3339";
-  version = "2.1.0";
+  version = "2.1.1";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-xWmpcU+vEVzbILUegw55jB9N6Nq7B/b/JdIhtdCdjX8=";
+    hash = "sha256-sUTWOBm9TB6/nLV+EvTLpWf88j1ujy+Cm6nHgQ6kuVE=";
   };
 
   build-system = [
