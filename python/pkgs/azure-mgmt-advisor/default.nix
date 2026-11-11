@@ -11,13 +11,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-advisor";
-  version = "9.0.0";
+  version = "9.0.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit (finalAttrs) pname version;
-    extension = "zip";
-    hash = "sha256-/ECLNzFf6EeBtRkST4yxuKwQsvQkHkOdDT4l/WyhjXs=";
+    pname = "azure_mgmt_advisor";
+    inherit (finalAttrs) version;
+    hash = "sha256-FmpZu8F0mePFoASnCYjDC3BoitTdAyg/8Gh8ijh+8nk=";
   };
 
   build-system = [ setuptools ];
