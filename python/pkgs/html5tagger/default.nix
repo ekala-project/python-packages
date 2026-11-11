@@ -4,23 +4,23 @@
   fetchPypi,
 
   # build-system
-  setuptools,
-  setuptools-scm,
+  hatchling,
+  hatch-vcs,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "html5tagger";
-  version = "1.3.0";
+  version = "2.0.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-hPo9+0nlyDt5u9hWq3sd6OIxHDu0aovpJfEZ44gKjak=";
+    hash = "sha256-De48kFREOTDpoyJe3MgQtt92wK6r/uRj6UN6kKGsFiQ=";
   };
 
   build-system = [
-    setuptools
-    setuptools-scm
+    hatchling
+    hatch-vcs
   ];
 
   pythonImportsCheck = [ "html5tagger" ];
