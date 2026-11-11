@@ -2,14 +2,15 @@
   lib,
   buildPythonPackage,
   fetchPypi,
-  fetchpatch,
   setuptools,
+  crc32c,
+  future,
   pycryptodome,
   six,
 }:
 
 let
-  version = "0.9.63";
+  version = "0.9.79";
 in
 buildPythonPackage {
   pname = "bce-python-sdk";
@@ -19,23 +20,14 @@ buildPythonPackage {
   src = fetchPypi {
     pname = "bce_python_sdk";
     inherit version;
-    hash = "sha256-DIC8OsEooKFEuuO43/Hzl/QsMLNvdnfjo52N+Od7EIg=";
+    hash = "sha256-zXdHa0M0ftKNAhHVrVV+Uk4exki9CT1XxqbT3gdadQg=";
   };
-
-  patches = [
-    # From https://github.com/baidubce/bce-sdk-python/pull/15 . Upstream
-    # doesn't seem to be responsive, the patch there doesn't apply cleanly on
-    # this version, so a vendored patch was produced by running:
-    #
-    #   git show -- setup.py baidubce
-    #
-    # in the Git checkout of the PR above.
-    ./no-future.patch
-  ];
 
   build-system = [ setuptools ];
 
   dependencies = [
+    crc32c
+    future
     pycryptodome
     six
   ];
