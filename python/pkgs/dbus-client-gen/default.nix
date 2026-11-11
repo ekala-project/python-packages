@@ -8,12 +8,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "dbus-client-gen";
-  version = "0.5.1";
+  version = "0.5.2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit (finalAttrs) pname version;
-    hash = "sha256-vRXo72aWoreH/VwzdEAOgoGSRzRf7vy8Z/IA+lnLoWw=";
+    pname = "dbus_client_gen";
+    inherit (finalAttrs) version;
+    hash = "sha256-i9vCiNOJeym0rs3P66hEnOrCcCqLcw2cSukaWPPa8zo=";
   };
 
   build-system = [ setuptools ];
