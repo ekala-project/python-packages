@@ -9,18 +9,18 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "zc-lockfile";
-  version = "4.0";
+  version = "4.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "zc_lockfile";
     inherit (finalAttrs) version;
-    hash = "sha256-06sPU5dClqgG2zIZuRkboObVy70dqi4NFyCMubKdIQI=";
+    hash = "sha256-SY830zo20bFTTqMaD747XTcchiuuuIBfRnptOZSAEe8=";
   };
 
   postPatch = ''
     substituteInPlace pyproject.toml \
-      --replace-fail "setuptools ==" "setuptools >="
+      --replace-fail "setuptools >= 78.1.1,< 82" "setuptools"
   '';
 
   build-system = [ setuptools ];
