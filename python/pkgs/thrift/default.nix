@@ -8,12 +8,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "thrift";
-  version = "0.24.0";
+  version = "0.25.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-nvYBxJ6YhHX/DnQdjhtF/uwjtIUU5SQ0HvwnQZHxeJw=";
+    hash = "sha256-6FYVrpJF9WIqXjap0thn4eexeoykZ7JX3s5dwWQszXM=";
   };
 
   build-system = [ setuptools ];
