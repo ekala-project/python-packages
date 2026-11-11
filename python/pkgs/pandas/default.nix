@@ -47,7 +47,7 @@ buildPythonPackage (finalAttrs: {
     owner = "pandas-dev";
     repo = "pandas";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-6Oo6086DAmgONadGyNLg9RvtibsSlR0EJmjoKTbRtM0=";
+    hash = "sha256-ZIZRYNQuPp2JftiSxcqxVm20JoUIRJ2o9vKOK/uYRpw=";
   };
 
   postPatch = ''
