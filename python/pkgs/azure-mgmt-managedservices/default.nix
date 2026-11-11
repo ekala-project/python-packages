@@ -11,13 +11,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-managedservices";
-  version = "6.0.0";
+  version = "6.0.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit (finalAttrs) pname version;
-    hash = "sha256-7AyzhYvPjt9e7g7d7oFWBCTrhDUuDfCC3clOuZut/V4=";
-    extension = "zip";
+    pname = "azure_mgmt_managedservices";
+    inherit (finalAttrs) version;
+    hash = "sha256-KnApRiVPvcY6wssKrWo0QW0jYEhIhBMGjc7EJpM6BIM=";
   };
 
   build-system = [ setuptools ];
