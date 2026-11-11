@@ -10,19 +10,14 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "grpcio-tools";
-  version = "1.83.1";
+  version = "1.85.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "grpcio_tools";
     inherit (finalAttrs) version;
-    hash = "sha256-qBSO7OOW+KNJCXlYvADxSIIAMzHzt8KugHnBxjLRfW8=";
+    hash = "sha256-1vHuIToH3pRiyQ7l3r5KeN/yAwag+zlKZdSLL5T+MaE=";
   };
-
-  postPatch = ''
-    substituteInPlace pyproject.toml \
-      --replace-fail "Cython==3.1.1" Cython
-  '';
 
   outputs = [
     "out"
