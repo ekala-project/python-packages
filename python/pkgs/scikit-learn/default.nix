@@ -23,13 +23,13 @@
 buildPythonPackage (finalAttrs: {
 
   pname = "scikit-learn";
-  version = "1.9.0";
+  version = "1.9.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "scikit_learn";
     inherit (finalAttrs) version;
-    hash = "sha256-iDMmaYnTpREBeKn64weDZ1Rgck0OHvsTsUkB0sZgxVc=";
+    hash = "sha256-Ypyto+M+K5vzds3HYUpHpBQLiu3B2DZXnjWXNvvYKXc=";
   };
 
   postPatch = ''
@@ -37,10 +37,10 @@ buildPythonPackage (finalAttrs: {
       "run_command('sklearn/_build_utils/version.py', check: true).stdout().strip()," \
       "'${finalAttrs.version}',"
     substituteInPlace pyproject.toml \
-      --replace-fail "meson-python>=0.17.1,<0.20.0" meson-python \
-      --replace-fail "numpy>=2,<2.5.0" numpy \
-      --replace-fail "scipy>=1.10.0,<1.18.0" scipy \
-      --replace-fail "cython>=3.1.2,<3.3.0" cython
+      --replace-fail "meson-python>=0.17.1,<0.22.0" meson-python \
+      --replace-fail "numpy>=2,<2.6.0" numpy \
+      --replace-fail "scipy>=1.10.0,<1.19.0" scipy \
+      --replace-fail "cython>=3.1.2,<3.2.6" cython
   '';
 
   buildInputs = [
