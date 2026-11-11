@@ -3,31 +3,31 @@
   buildPythonPackage,
   fetchFromGitHub,
   # build-system
-  setuptools,
+  hatchling,
+  # dependencies
+  argcomplete,
+  # optional-dependencies
   ipdb,
   pytestCheckHook,
 }:
 
-buildPythonPackage {
+buildPythonPackage (finalAttrs: {
   pname = "cliche";
-  version = "0.10.108";
+  version = "0.22.9";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "kootenpv";
     repo = "cliche";
-    rev = "80a9ae2e90f4493880b669d5db51f1d4038589df"; # no tags
-    sha256 = "sha256-7/icSneLQzwdkRL/mS4RjsgnKa6YIVvGCmdS6pB6r5Y=";
+    tag = "v${finalAttrs.version}";
+    hash = "sha256-mA4pKPN63beGB3e4xleYKSzp4zAuOevx4O1O3ObHZA8=";
   };
 
-  build-system = [ setuptools ];
+  build-system = [ hatchling ];
 
-  postPatch = ''
-    substituteInPlace setup.py \
-      --replace "ipdb == 0.13.9" "ipdb"
-  '';
+  dependencies = [ argcomplete ];
 
-  dependencies = [ ipdb ];
+  optional-dependencies.debug = [ ipdb ];
 
   nativeCheckInputs = [ pytestCheckHook ];
 
@@ -39,4 +39,4 @@ buildPythonPackage {
     homepage = "https://github.com/kootenpv/cliche";
     license = lib.licenses.mit;
   };
-}
+})
