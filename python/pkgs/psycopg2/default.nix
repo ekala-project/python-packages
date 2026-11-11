@@ -13,7 +13,7 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "psycopg2";
-  version = "2.9.12";
+  version = "2.9.13";
   pyproject = true;
 
   # Extension modules don't work well with PyPy. Use psycopg2cffi instead.
@@ -22,7 +22,7 @@ buildPythonPackage (finalAttrs: {
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-He2xx6HYVSxKYETGscQaUuao4tFEr4PsysdYB2sbfBU=";
+    hash = "sha256-02eE/C2uaVI7pLecfR0bTW6D6Hg2h08REmL025QLFqY=";
   };
 
   postPatch =
