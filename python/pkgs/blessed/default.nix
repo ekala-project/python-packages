@@ -2,26 +2,29 @@
   lib,
   fetchPypi,
   buildPythonPackage,
-  setuptools,
+  flit-core,
+  jinxed,
   wcwidth,
-  six,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "blessed";
-  version = "1.20.0";
+  version = "1.52.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-LN1n+HRuBI8A30eiiA9NasvNs5kDG2BONLqPcdV4doA=";
+    hash = "sha256-pvQrKHXHr+54QgrJkZaZ1cPc41v6mtRbwVixcT/DPQ0=";
   };
 
-  build-system = [ setuptools ];
+  build-system = [ flit-core ];
+
+  # wcwidth 0.8.3 already provides the APIs blessed uses
+  pythonRelaxDeps = [ "wcwidth" ];
 
   dependencies = [
+    jinxed
     wcwidth
-    six
   ];
 
   pythonImportsCheck = [ "blessed" ];
