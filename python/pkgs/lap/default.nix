@@ -10,12 +10,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "lap";
-  version = "0.5.13";
+  version = "0.5.14";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-nv9xaePKRSmVrwSTzCDTVFLEv9BhIsNsBkVxGf+9QRs=";
+    hash = "sha256-BkiL6yVmSaKR3B2LvRGSDI3HDD5hBXZF9oExxHmipUk=";
   };
 
   build-system = [ setuptools ];
