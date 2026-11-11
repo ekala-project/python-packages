@@ -7,13 +7,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "update-checker";
-  version = "1.0.0";
+  version = "1.0.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "update_checker";
     inherit (finalAttrs) version;
-    sha256 = "sha256-v8rGZBRXKoKpjqjIYzvxzl0QJ1DjuTRpuJswqoRc0dc=";
+    sha256 = "sha256-1yqHUfNmZJdKiyudhwgO/cBWLF7AfqpzzRk3xphX25g=";
   };
 
   postPatch = ''
