@@ -14,13 +14,23 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "cliff";
-  version = "4.15.0";
+  version = "4.17.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-7KaZ9rOQx1Xm7RgWp2zfwav19e99HO4Z84M2Z6Oh/jk=";
+    hash = "sha256-OtYe7kFaSHhLQtiL2uThfu8qcE72TbxSm7eTb2jwogA=";
   };
+
+  # cliff 4.17 targets cmd2 4.x, which renamed the Statement redirection
+  # fields; map them back to the cmd2 3.x names until cmd2 is updated.
+  postPatch = ''
+    substituteInPlace cliff/interactive.py \
+      --replace-fail "redirector=statement.redirector," "pipe_to=statement.pipe_to, output=statement.output," \
+      --replace-fail "redirect_to=statement.redirect_to," "output_to=statement.output_to,"
+  '';
+
+  pythonRelaxDeps = [ "cmd2" ];
 
   build-system = [
     openstackdocstheme
