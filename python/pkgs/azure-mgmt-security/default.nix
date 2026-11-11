@@ -10,12 +10,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-security";
-  version = "7.0.0";
+  version = "8.0.0b2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit (finalAttrs) pname version;
-    hash = "sha256-WRLu1+nTdY/cqNJuHcJrQZQ9xHAyCKEYQmbiwlLhrWY=";
+    pname = "azure_mgmt_security";
+    inherit (finalAttrs) version;
+    hash = "sha256-jpPzkjW9KqYTToENkkm/ZslMVSQTJ0eIatRgPhuqk3o=";
   };
 
   build-system = [ setuptools ];
