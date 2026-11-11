@@ -10,12 +10,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-imagebuilder";
-  version = "1.4.0";
+  version = "2.0.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit (finalAttrs) pname version;
-    hash = "sha256-5sLVc6vvJiIvwUSRgD1MsB+G/GEpLUz3xHKetLrkiRw=";
+    pname = "azure_mgmt_imagebuilder";
+    inherit (finalAttrs) version;
+    hash = "sha256-4rEtzQJM1V7fIxqevCZFr8Rmo7LmzId5+hYZVvuGh18=";
   };
 
   nativeBuildInputs = [ setuptools ];
