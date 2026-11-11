@@ -8,12 +8,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "aiostream";
-  version = "0.7.1";
+  version = "0.8.1";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-JyqqDY+DvrkG9aqQIrtZBGu3oQP6N3D4B8MfkYWVrPY=";
+    hash = "sha256-MtGAtKsB67L8We2n+ln0lolaTQezL8V1N9Ha3iUUqKE=";
   };
 
   build-system = [ setuptools ];
