@@ -11,13 +11,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-network";
-  version = "32.0.0";
+  version = "33.1.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_mgmt_network";
     inherit (finalAttrs) version;
-    hash = "sha256-zVcH3nuslFxUBwR812TmTMS0zo9R0fT+Mr/CBNkikJM=";
+    hash = "sha256-ykTpWWflML2sMv99fmR2yE6FIiXlquFI7vJpTzT5cQs=";
   };
 
   build-system = [ setuptools ];
