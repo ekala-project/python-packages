@@ -11,12 +11,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "eventlet";
-  version = "0.41.2";
+  version = "0.41.3";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-chuGt3/KM6c1WYKSAirG/u+ZdHv0j1Le/a2mtXKs1a8=";
+    hash = "sha256-ZtGIPydulNBA0AfpnXCF5qpfJzjFuHg9FloTcFDcj7Y=";
   };
 
   pythonRelaxDeps = [ "greenlet" ];
