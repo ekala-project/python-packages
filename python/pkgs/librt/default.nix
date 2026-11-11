@@ -1,25 +1,19 @@
 {
   lib,
   buildPythonPackage,
-  fetchFromGitHub,
+  fetchPypi,
   setuptools,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "librt";
-  version = "0.9.0";
+  version = "0.16.0";
   pyproject = true;
 
-  src = fetchFromGitHub {
-    owner = "mypyc";
-    repo = "librt";
-    tag = "v${finalAttrs.version}";
-    hash = "sha256-RZGaOq8hmkwekCs1fKshDrx3vmHdJl/wI3IO9ZLH5rc=";
+  src = fetchPypi {
+    inherit (finalAttrs) pname version;
+    hash = "sha256-rDjW2NZr89dEFI27wLjhk+GVpR42TtVeIkYx9XIYkfw=";
   };
-
-  postPatch = ''
-    cp -rv lib-rt/* .
-  '';
 
   build-system = [ setuptools ];
 
