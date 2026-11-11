@@ -8,12 +8,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "uritools";
-  version = "6.1.3";
+  version = "7.0.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-OkmOfoXvMkk0PVcQYY1kGkFNoPuubSMFOtp5du6D6l8=";
+    hash = "sha256-EQt3Pj+PuuvNy+E3fQTkGLGYWt9p3uyk7VafPjKMv0g=";
   };
 
   build-system = [
