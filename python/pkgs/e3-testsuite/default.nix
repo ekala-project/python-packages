@@ -2,7 +2,7 @@
   lib,
   buildPythonPackage,
   e3-core,
-  fetchFromGitHub,
+  fetchPypi,
   setuptools,
 }:
 
@@ -11,11 +11,10 @@ buildPythonPackage (finalAttrs: {
   version = "27.2";
   pyproject = true;
 
-  src = fetchFromGitHub {
-    owner = "AdaCore";
-    repo = "e3-testsuite";
-    tag = "v${finalAttrs.version}";
-    hash = "sha256-qG8SHwogBle3demgFJCqcfCh5ktLvOqh2XSwxPCANFk=";
+  src = fetchPypi {
+    pname = "e3_testsuite";
+    inherit (finalAttrs) version;
+    hash = "sha256-Vu43fIl2ZhmvtwPXPM3GIYojtgwv33zh/3tKNvlUw/Q=";
   };
 
   build-system = [ setuptools ];
