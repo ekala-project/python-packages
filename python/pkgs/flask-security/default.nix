@@ -9,7 +9,7 @@
   # extras: common
   argon2-cffi,
   bcrypt,
-  bleach,
+  nh3,
   flask-mail,
   # extras: fsqla
   flask-sqlalchemy,
@@ -32,14 +32,14 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "flask-security";
-  version = "5.8.2";
+  version = "5.9.2";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "pallets-eco";
     repo = "flask-security";
     tag = finalAttrs.version;
-    hash = "sha256-WRhQqSSlPKqY/NxqPCG3izYy782vCq6JGRzReL8Qwqw=";
+    hash = "sha256-OloTftY73PNicJ7o+cBYo9EobrLoaxF78+KAoftJocI=";
   };
 
   build-system = [ flit-core ];
@@ -63,7 +63,7 @@ buildPythonPackage (finalAttrs: {
     common = [
       argon2-cffi
       bcrypt
-      bleach
+      nh3
       flask-mail
     ];
     fsqla = [
