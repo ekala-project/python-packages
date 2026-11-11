@@ -10,12 +10,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-cdn";
-  version = "13.1.1";
+  version = "14.1.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit (finalAttrs) pname version;
-    hash = "sha256-RmMwTzG2Zy3sMgx857qXFcK5nn2LaEs3XwtO/9qQIQw=";
+    pname = "azure_mgmt_cdn";
+    inherit (finalAttrs) version;
+    hash = "sha256-mYvnfdzBC/n69u7u6uVFR+fjinKr0pCY1rTDJUTX/T8=";
   };
 
   build-system = [ setuptools ];
