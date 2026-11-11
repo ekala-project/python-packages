@@ -6,17 +6,17 @@
   lazr-restfulclient,
   lazr-uri,
   setuptools_80,
-  six,
+  pysocks,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "launchpadlib";
-  version = "2.1.0";
+  version = "2.3.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-tMJYkLt1BQ1UwIEj0nMxVreKWaJVX1Rh9psORM2RJC8=";
+    hash = "sha256-o5JhYyuqBghy9l/hSais1uGtpVlk7hr8nyWRXjuV5os=";
   };
 
   build-system = [ setuptools_80 ];
@@ -25,8 +25,10 @@ buildPythonPackage (finalAttrs: {
     httplib2
     lazr-restfulclient
     lazr-uri
-    six
+    pysocks
   ];
+
+  pythonImportsCheck = [ "launchpadlib" ];
 
   meta = {
     description = "Script Launchpad through its web services interfaces. Officially supported";
