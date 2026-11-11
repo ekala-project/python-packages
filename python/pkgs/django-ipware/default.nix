@@ -3,22 +3,23 @@
   buildPythonPackage,
   fetchPypi,
   # build-system
-  setuptools,
+  hatchling,
   django,
   python-ipware,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "django-ipware";
-  version = "7.0.1";
+  version = "8.0.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit (finalAttrs) pname version;
-    hash = "sha256-2exD0r983yFv7Y1JSghN61dhpUhgpTsudDRqTzhM/0c=";
+    pname = "django_ipware";
+    inherit (finalAttrs) version;
+    hash = "sha256-N3zHkm6jd9j1RFEbAZzTKygGDhycqj0MQ8Pl6SNWDzM=";
   };
 
-  build-system = [ setuptools ];
+  build-system = [ hatchling ];
 
   dependencies = [
     django
