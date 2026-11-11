@@ -9,10 +9,10 @@
 
   # dependencies
   anyio,
-  distro,
   docstring-parser,
   httpx2,
   jiter,
+  opentelemetry-api,
   pydantic,
   sniffio,
   typing-extensions,
@@ -22,18 +22,20 @@
   boto3,
   botocore,
   aiohttp,
+  mcp,
+  standardwebhooks,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "anthropic";
-  version = "1.4.0";
+  version = "2.8.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "anthropics";
     repo = "anthropic-sdk-python";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-5iHawkW76aAwhjaGYCqN9Gl/PLKQqu8eNdRiTca4dvo=";
+    hash = "sha256-oY39Butkm7hnMxxg7QwiA7fepGBI95mvTK2edXNjyWo=";
   };
 
   postPatch = ''
@@ -48,10 +50,10 @@ buildPythonPackage (finalAttrs: {
 
   dependencies = [
     anyio
-    distro
     docstring-parser
     httpx2
     jiter
+    opentelemetry-api
     pydantic
     sniffio
     typing-extensions
@@ -65,7 +67,14 @@ buildPythonPackage (finalAttrs: {
       boto3
       botocore
     ];
+    aws = [
+      boto3
+      botocore
+    ];
     vertex = [ google-auth ] ++ google-auth.optional-dependencies.requests;
+    google_cloud = [ google-auth ] ++ google-auth.optional-dependencies.requests;
+    mcp = [ mcp ];
+    webhooks = [ standardwebhooks ];
   };
 
   pythonImportsCheck = [ "anthropic" ];
@@ -73,6 +82,6 @@ buildPythonPackage (finalAttrs: {
   meta = {
     description = "Anthropic's safety-first language model APIs";
     homepage = "https://github.com/anthropics/anthropic-sdk-python";
-    license = lib.licenses.mit;
+    license = lib.licenses.asl20;
   };
 })
