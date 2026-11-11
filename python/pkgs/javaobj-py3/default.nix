@@ -9,12 +9,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "javaobj-py3";
-  version = "0.4.4";
+  version = "0.6.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit (finalAttrs) pname version;
-    hash = "sha256-5OMlfvLPgaMzl4ek1c+STlTJHwlacj9tJYTa5h1Dlu0=";
+    pname = "javaobj_py3";
+    inherit (finalAttrs) version;
+    hash = "sha256-CI/whsaqKRLzQnVMQ7DKOlBPuGm7Xm8TOVEx6HdE7zw=";
   };
 
   build-system = [ setuptools ];
