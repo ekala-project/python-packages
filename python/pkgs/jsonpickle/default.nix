@@ -8,12 +8,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "jsonpickle";
-  version = "4.1.2";
+  version = "4.1.4";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-iv7RiqGJ/YHi6DO0JrtK9IVZSSHwsdNsIAH8Vjei8hA=";
+    hash = "sha256-it8kzKYRgJtV/17SrOhQ4aPkNw2tXTY99xVpuPRslkU=";
   };
 
   build-system = [
