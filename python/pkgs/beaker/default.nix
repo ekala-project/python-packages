@@ -7,13 +7,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "beaker";
-  version = "1.13.0";
+  version = "1.14.1";
   pyproject = true;
 
   src = fetchPypi {
-    pname = "Beaker";
+    pname = "beaker";
     inherit (finalAttrs) version;
-    hash = "sha256-6VbNijWtXeG1ISx7/4/AHis9NKuSRm0kaExmaruMnDA=";
+    hash = "sha256-iG9SpRgQcD/bwKPlT8pAiGKI/1MLIHBYLtznK/GUVEc=";
   };
 
   build-system = [ setuptools ];
