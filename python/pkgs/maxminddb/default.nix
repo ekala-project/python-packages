@@ -10,12 +10,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "maxminddb";
-  version = "3.1.1";
+  version = "3.2.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-sZqTjEgVGPGaLFNP/cs7xZWC8Pu9z5+BrJrfkSoK9oY=";
+    hash = "sha256-0o4Ac/0d1jfIuVlHvIZLViXsqfjy2xU4FF4zsqHNS5I=";
   };
 
   build-system = [
