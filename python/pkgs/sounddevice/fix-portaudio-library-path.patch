@@ -1,8 +1,6 @@
-diff --git a/src/sounddevice.py b/src/sounddevice.py
-index 00fc6f8..72abede 100644
 --- a/src/sounddevice.py
 +++ b/src/sounddevice.py
-@@ -59,36 +59,7 @@
+@@ -60,36 +60,7 @@
  from _sounddevice import ffi as _ffi
  
  
@@ -22,7 +20,7 @@ index 00fc6f8..72abede 100644
 -    if _platform.system() == 'Darwin':
 -        _libname = 'libportaudio.dylib'
 -    elif _platform.system() == 'Windows':
--        if _platform.machine().lower() in ('arm64', 'aarch64'):
+-        if 'arm64' in _sysconfig.get_platform() or 'aarch64' in _sysconfig.get_platform():
 -            _platform_suffix = 'arm64'
 -        else:
 -            _platform_suffix = _platform.architecture()[0]
