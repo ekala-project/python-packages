@@ -13,14 +13,20 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "importlib-resources";
-  version = "6.5.2";
+  version = "7.1.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "importlib_resources";
     inherit (finalAttrs) version;
-    hash = "sha256-GF+Hre9bzCiESdmPtPugfOp4vANkVd1ExfxKL+eP7Sw=";
+    hash = "sha256-ByLUxiEkicUw8qFFo0wKejtHIbyWoV+tpZMOKgt2Bwg=";
   };
+
+  # coherent.licensed is only used to infer license metadata, which is already declared
+  postPatch = ''
+    substituteInPlace pyproject.toml \
+      --replace-fail '"coherent.licensed",' ""
+  '';
 
   build-system = [
     setuptools
