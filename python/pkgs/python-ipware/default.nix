@@ -2,21 +2,21 @@
   lib,
   buildPythonPackage,
   fetchPypi,
-  setuptools,
+  hatchling,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "python-ipware";
-  version = "3.0.0";
+  version = "4.1.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "python_ipware";
     inherit (finalAttrs) version;
-    hash = "sha256-kRexxN3ctdXKSeapYX3i/Gauwu81OUVjrE7sq99YwGI=";
+    hash = "sha256-/WECBY50wpEStDdviruucYhSyV+N5pZYAd6IypeA0i8=";
   };
 
-  build-system = [ setuptools ];
+  build-system = [ hatchling ];
 
   pythonImportsCheck = [ "python_ipware" ];
 
