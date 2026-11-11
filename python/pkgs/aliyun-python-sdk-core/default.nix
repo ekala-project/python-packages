@@ -4,22 +4,24 @@
   cryptography,
   fetchPypi,
   jmespath,
-  setuptools,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "aliyun-python-sdk-core";
-  version = "2.16.0";
-  pyproject = true;
+  version = "2.16.1";
+  format = "wheel";
 
+  # 2.16.1 was only published as a wheel on PyPI
   src = fetchPypi {
-    inherit (finalAttrs) pname version;
-    hash = "sha256-ZRyq1ZfrOdT61s+FEz3/6Sg31TvfYtudjzfatlCLuPk=";
+    pname = "aliyun_python_sdk_core";
+    inherit (finalAttrs) version;
+    format = "wheel";
+    python = "py3";
+    dist = "py3";
+    hash = "sha256-DyWm6Oweopx2YQJ4z/gcv/hRSabmkr8jmKb5t35edCQ=";
   };
 
   pythonRelaxDeps = true;
-
-  build-system = [ setuptools ];
 
   dependencies = [
     cryptography
