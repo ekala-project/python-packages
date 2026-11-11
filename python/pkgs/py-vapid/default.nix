@@ -3,29 +3,24 @@
   buildPythonPackage,
   fetchPypi,
 
-  # build-system
-  hatchling,
-  pytest,
-
   # dependencies
   cryptography,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "py-vapid";
-  version = "1.9.4";
-  pyproject = true;
+  version = "1.9.6";
+  format = "wheel";
 
+  # 1.9.6 is only published as a wheel on PyPI, and upstream has no matching git tag
   src = fetchPypi {
     pname = "py_vapid";
     inherit (finalAttrs) version;
-    hash = "sha256-oAQCNWDLxU40/AY4CgWA8E/8x4joT7bRnpM57rZVGig=";
+    format = "wheel";
+    python = "py2.py3";
+    dist = "py2.py3";
+    hash = "sha256-Btd1lRAW9j8NDW3Yur0zP8L4MfB2n9XbLh7Iz7vMxw8=";
   };
-
-  build-system = [
-    hatchling
-    pytest
-  ];
 
   dependencies = [ cryptography ];
 
