@@ -2,20 +2,20 @@
   lib,
   buildPythonPackage,
   fetchPypi,
-  setuptools,
+  uv-build,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "bidict";
-  version = "0.23.1";
+  version = "0.24.1";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-AwaddjvDh7vSDn1JkU51/EEypBk3+jQFQX4aWi0AbXE=";
+    hash = "sha256-TcpsF/CwFwDp8kNZ2qXrq/e+Ai2Z9MsqJXtq8qUHbIg=";
   };
 
-  build-system = [ setuptools ];
+  build-system = [ uv-build ];
 
   pythonImportsCheck = [ "bidict" ];
 
