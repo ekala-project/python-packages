@@ -2,9 +2,10 @@
   lib,
   buildPythonPackage,
   fetchPypi,
-  flit-core,
+  pdm-backend,
   uritemplate,
   pyjwt,
+  typing-extensions,
   pytestCheckHook,
   aiohttp,
   httpx,
@@ -15,19 +16,20 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "gidgethub";
-  version = "5.4.0";
+  version = "6.0.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-dHDXcj18F0NHGi1i55yHUvuhKxwJcuS61XJSM4pQHb0=";
+    hash = "sha256-Tm74rNtFVxIi6m9+yQ7IypPfhHOR2qyVAlYngPGYg2k=";
   };
 
-  build-system = [ flit-core ];
+  build-system = [ pdm-backend ];
 
   dependencies = [
     uritemplate
     pyjwt
+    typing-extensions
   ]
   ++ pyjwt.optional-dependencies.crypto;
 
