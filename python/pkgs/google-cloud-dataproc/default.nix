@@ -14,13 +14,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "google-cloud-dataproc";
-  version = "5.30.0";
+  version = "5.32.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "google_cloud_dataproc";
     inherit (finalAttrs) version;
-    hash = "sha256-KjxEzD1qPXpoDckzHx+XzVfFk0oTV67negdgcnZkTm0=";
+    hash = "sha256-HYJcjfZ8+ggINfQhzkm12dAB0/xt3NNNOyYjCwJU+zY=";
   };
 
   build-system = [ setuptools ];
