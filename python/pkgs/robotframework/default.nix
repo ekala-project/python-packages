@@ -9,14 +9,14 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "robotframework";
-  version = "7.4.2";
+  version = "7.5.1";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "robotframework";
     repo = "robotframework";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-SSjVrbe3uBqCMEUYjrk2lxHpxzdU6QK2xvEFszhT6lc=";
+    hash = "sha256-z7qJy7sUqTIIjz6nMNiCl2cBAeqsfU/O32YceryNRpY=";
   };
 
   build-system = [ setuptools ];
