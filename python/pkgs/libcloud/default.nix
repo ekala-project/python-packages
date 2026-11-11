@@ -10,12 +10,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "apache-libcloud";
-  version = "3.8.0";
+  version = "3.9.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit (finalAttrs) pname version;
-    hash = "sha256-db9MCxI7wiXiTKlfyhw1vjCxnmu4X+6ngUBNQ8QnbJE=";
+    pname = "apache_libcloud";
+    inherit (finalAttrs) version;
+    hash = "sha256-tl6qWsMrKKD5VV5qIj26Oec7mbaCzYSWJFh857wlFmE=";
   };
 
   build-system = [ setuptools ];
@@ -30,11 +31,9 @@ buildPythonPackage (finalAttrs: {
   '';
 
   postPatch = ''
-    substituteInPlace setup.py \
-      --replace "setup_requires=pytest_runner," "setup_requires=[],"
     substituteInPlace pyproject.toml \
-      --replace-fail "setuptools~=66.1" "setuptools" \
-      --replace-fail "wheel~=0.37.1" "wheel"
+      --replace-fail '"setuptools>=75.3,<80.11"' '"setuptools"' \
+      --replace-fail '"wheel~=0.45.1"' '"wheel"'
   '';
 
   # requires a certificates file
