@@ -8,13 +8,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "gtfs-realtime-bindings";
-  version = "2.2.0";
+  version = "3.0.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "gtfs_realtime_bindings";
     inherit (finalAttrs) version;
-    hash = "sha256-HhhAdf9qrh+OjJGuKOuUavXltla3Q6Qae8o3gYeEiGs=";
+    hash = "sha256-v6dCbtU3s3S7/kEKmeeIze8bcAn+HlquLj4Lyf3KfXM=";
   };
 
   build-system = [ setuptools ];
