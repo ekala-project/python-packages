@@ -9,12 +9,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "azure-batch";
-  version = "14.2.0";
+  version = "15.1.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit (finalAttrs) pname version;
-    hash = "sha256-x5Jn1sPT/hShakIqtbv6vL1o7QtYtrvN+gyDRcTHhTI=";
+    pname = "azure_batch";
+    inherit (finalAttrs) version;
+    hash = "sha256-L2hNF2tFe3ITU14UUYCpFO1oRLLRBm/MIqyIw6yeP6U=";
   };
 
   nativeBuildInputs = [ setuptools ];
