@@ -7,13 +7,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "random2";
-  version = "1.0.1";
+  version = "1.0.2";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    extension = "zip";
-    hash = "sha256-NK0wqsNBA5hyQBWV35qyydw20LfAd9sc6preQw7RwAc=";
+    hash = "sha256-N1T870gmdWfNVwX6faa7w4Ccs/gIdAMT5nBazDwFfnc=";
   };
 
   build-system = [ setuptools ];
