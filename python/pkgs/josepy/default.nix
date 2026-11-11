@@ -9,12 +9,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "josepy";
-  version = "2.2.0";
+  version = "2.3.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-dMAzFRM3yFT4Pv5TBaKRaGzvcjtLlwxDz+cnDPSmd6k=";
+    hash = "sha256-ZAhKF4RcuMDBir48Zut01h5EwZyb1F0hzSeXSaesEJo=";
   };
 
   build-system = [ poetry-core ];
