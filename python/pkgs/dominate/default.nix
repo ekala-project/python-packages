@@ -7,12 +7,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "dominate";
-  version = "2.9.1";
+  version = "3.1.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-VYKEaH2biq4ZBOPWBRrRMt1KjAz1UbN+pOfkKjHRncQ=";
+    hash = "sha256-kmmJyBnbL+keWQWQopAhg2he3ZSCnIz7pf1xr1fBqYI=";
   };
 
   build-system = [ setuptools ];
