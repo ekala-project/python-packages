@@ -10,13 +10,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-relay";
-  version = "1.1.0";
+  version = "2.1.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit (finalAttrs) pname version;
-    extension = "zip";
-    sha256 = "c93b7550e64b6734bf23ce57ca974a3ea929b734c58d1fe3669728c4fd2d2eb3";
+    pname = "azure_mgmt_relay";
+    inherit (finalAttrs) version;
+    sha256 = "sha256-hT/Zy5W4m92ryRWLJ7bJ78pEDWcXW+zeBxidiyveNko=";
   };
 
   build-system = [ setuptools ];
