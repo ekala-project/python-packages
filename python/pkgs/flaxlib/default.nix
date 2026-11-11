@@ -16,14 +16,14 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "flaxlib";
-  version = "0.12.9";
+  version = "0.12.12";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "google";
     repo = "flax";
-    tag = "v0.12.7";
-    hash = "sha256-a78KiTsCCARWZvbxz9QKdUKnjkDJGXcPVVJu5rU4m/U=";
+    tag = "v${finalAttrs.version}";
+    hash = "sha256-ERyzGKGu/8Cj5pPwiRatNOACPfwDiwjeqnBWkcnLD4k=";
   };
 
   sourceRoot = "${finalAttrs.src.name}/flaxlib_src";
