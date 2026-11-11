@@ -3,7 +3,7 @@
   lib,
   fetchPypi,
   setuptools,
-  pycparser,
+  headerkit,
   click,
   pytestCheckHook,
   cython,
@@ -11,13 +11,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "python-autopxd2";
-  version = "3.2.3";
+  version = "4.2.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "autopxd2";
     inherit (finalAttrs) version;
-    hash = "sha256-Zf44gmkuWvp8lfrScq4GAhOisLYu4scyuNp1Cn3lnVc=";
+    hash = "sha256-vAC3+SxD8/Un9mbzU2qULSStfM/vrlz+qVZKMgA2UV0=";
   };
 
   build-system = [
@@ -25,12 +25,12 @@ buildPythonPackage (finalAttrs: {
   ];
 
   dependencies = [
-    pycparser
     click
-    cython
+    headerkit
   ];
 
   nativeCheckInputs = [
+    cython
     pytestCheckHook
   ];
 
@@ -40,6 +40,8 @@ buildPythonPackage (finalAttrs: {
     # needs clang2 python module
     "libclang"
   ];
+
+  pythonImportsCheck = [ "autopxd" ];
 
   enabledTestPaths = [
     "test/"
