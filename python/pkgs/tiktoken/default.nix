@@ -14,10 +14,10 @@
 }:
 let
   pname = "tiktoken";
-  version = "0.12.0";
+  version = "0.14.0";
   src = fetchPypi {
     inherit pname version;
-    hash = "sha256-sYun7isJOGOXj8sU90s3B83I1NTTg2hTzn7GB3ITmTE=";
+    hash = "sha256-Ix3skO/NzPG1ZaFBYQdzbx4JsaCP5zbvnWNj5ibQOHQ=";
   };
   postPatch = ''
     cp ${./Cargo.lock} Cargo.lock
@@ -44,7 +44,7 @@ buildPythonPackage {
       src
       postPatch
       ;
-    hash = "sha256-daIKasW/lwYwIqMs3KvCDJWAoMn1CkPRpNqhl1jKpYY=";
+    hash = "sha256-6IXZk0N5fHqLi+wP514vKpjR5AA4lxjDHhDjh4AOJ5Q=";
   };
 
   nativeBuildInputs = [
