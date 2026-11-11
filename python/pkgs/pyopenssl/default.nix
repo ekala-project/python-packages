@@ -13,14 +13,14 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "pyopenssl";
-  version = "26.3.0";
+  version = "26.4.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "pyca";
     repo = "pyopenssl";
     tag = finalAttrs.version;
-    hash = "sha256-ASpF7CcakrPS4qg8XFGYgYb7Etjg7wcVyMBbtAZaKO0=";
+    hash = "sha256-ZWlY/dnOs5bDt7VSM6Juyr/I34WHSu2UemvzGmrDfio=";
   };
 
   outputs = [
