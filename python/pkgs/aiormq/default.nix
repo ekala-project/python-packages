@@ -1,7 +1,7 @@
 {
   lib,
   buildPythonPackage,
-  fetchFromGitHub,
+  fetchPypi,
   pamqp,
   uv-build,
   yarl,
@@ -12,11 +12,9 @@ buildPythonPackage (finalAttrs: {
   version = "9.6.4";
   pyproject = true;
 
-  src = fetchFromGitHub {
-    owner = "mosquito";
-    repo = "aiormq";
-    tag = finalAttrs.version;
-    hash = "sha256-GFeOwjSQ1+nxP9hgNoELoEInTmhhO0JnNeoe2qfWNcg=";
+  src = fetchPypi {
+    inherit (finalAttrs) pname version;
+    hash = "sha256-hoGpRW41GCswysz2FmQvUvVEv4HSnyRtbXCSMQozYak=";
   };
 
   postPatch = ''
