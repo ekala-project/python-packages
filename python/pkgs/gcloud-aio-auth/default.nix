@@ -13,13 +13,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "gcloud-aio-auth";
-  version = "5.5.0";
+  version = "5.6.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "gcloud_aio_auth";
     inherit (finalAttrs) version;
-    hash = "sha256-VsP+8x3sbzhB9esMefr5oc0+R1+ix6GUv1FiJqo5/Rg=";
+    hash = "sha256-shxb46kTjFqfRXoPTjX9TtSfOfOfV/sDEcdNaHKQUYw=";
   };
 
   build-system = [ poetry-core ];
