@@ -10,18 +10,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "nodriver";
-  version = "0.50.3";
+  version = "0.50.99";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-JMpojYZG74/61cjOZYBOXnZxp3mtJqJNdvZGXVZmxjE=";
+    hash = "sha256-uvjeUyvx54ySmKt+pW6mpYapBCkM5rnufdm6b0A3MhE=";
   };
-
-  patches = [
-    # https://github.com/ultrafunkamsterdam/nodriver/pull/36
-    ./python-3.14-network-py-encoding.patch
-  ];
 
   dependencies = [
     deprecated
