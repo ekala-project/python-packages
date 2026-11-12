@@ -3,7 +3,7 @@
   buildPythonPackage,
   fetchPypi,
   # build-system
-  setuptools,
+  poetry-core,
   pillow,
   regex,
 }:
@@ -18,7 +18,7 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-PG8C585wWViFRHve83z3b9NijHyV+iGY2BdMJpyVH64=";
   };
 
-  build-system = [ setuptools ];
+  build-system = [ poetry-core ];
 
   pythonRelaxDeps = [ "Pillow" ];
 
