@@ -29,6 +29,7 @@ buildPythonPackage (finalAttrs: {
   build-system = [ setuptools ];
 
   dependencies = [
+    werkzeug
     cryptography
     ecdsa
     python-http-client
