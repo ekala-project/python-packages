@@ -50,7 +50,10 @@ buildPythonPackage (finalAttrs: {
     scramp
   ];
 
-  pythonRelaxDeps = [ "lxml" ];
+  pythonRelaxDeps = [
+    "lxml"
+    "scramp"
+  ];
   # integration tests require a Redshift cluster
   # required for tests
 
