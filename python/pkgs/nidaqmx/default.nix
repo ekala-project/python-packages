@@ -66,5 +66,7 @@ buildPythonPackage (finalAttrs: {
     description = "API for interacting with the NI-DAQmx driver";
     homepage = "https://github.com/ni/nidaqmx-python";
     license = lib.licenses.mit;
+    # depends on nitypes, which is not packaged
+    broken = true;
   };
 })
