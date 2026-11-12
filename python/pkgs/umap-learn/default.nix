@@ -24,6 +24,7 @@
   pandas,
   scikit-image,
   seaborn,
+  writableTmpDirAsHomeHook,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -62,6 +63,9 @@ buildPythonPackage (finalAttrs: {
       seaborn
     ];
   };
+
+  # numba caches compiled functions under $HOME at import time
+  nativeBuildInputs = [ writableTmpDirAsHomeHook ];
 
   pythonImportsCheck = [ "umap" ];
 
