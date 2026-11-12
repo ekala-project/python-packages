@@ -3,7 +3,7 @@
   buildPythonPackage,
   fetchFromGitHub,
   replaceVars,
-  graphviz,
+  pkgs, # graphviz is shadowed by python3Packages.graphviz
   coreutils,
   pkg-config,
   setuptools,
@@ -27,7 +27,7 @@ buildPythonPackage (finalAttrs: {
     # pygraphviz depends on graphviz executables and wc being in PATH
     (replaceVars ./path.patch {
       path = lib.makeBinPath [
-        graphviz
+        pkgs.graphviz
         coreutils
       ];
     })
@@ -38,19 +38,19 @@ buildPythonPackage (finalAttrs: {
       --replace-fail ', "swig>4.1.0"' ""
   '';
 
-  env.GRAPHVIZ_PREFIX = graphviz;
+  env.GRAPHVIZ_PREFIX = pkgs.graphviz;
 
   build-system = [
     setuptools
   ];
 
   nativeBuildInputs = [
-    graphviz # for dot
+    pkgs.graphviz # for dot
     pkg-config
     swig
   ];
 
-  buildInputs = [ graphviz ];
+  buildInputs = [ pkgs.graphviz ];
   checkPhase = ''
     runHook preCheck
     pytest --pyargs pygraphviz
