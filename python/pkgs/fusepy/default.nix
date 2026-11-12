@@ -41,5 +41,7 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://github.com/terencehonles/fusepy";
     license = lib.licenses.isc;
     platforms = lib.platforms.unix;
+    # Needs libfuse 2; pkgs.fuse is now libfuse 3 and corepkgs has no fuse2.
+    broken = true;
   };
 })
