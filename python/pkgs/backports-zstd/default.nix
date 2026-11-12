@@ -3,6 +3,7 @@
   fetchFromGitHub,
   lib,
   pkgs,
+  pythonAtLeast,
   setuptools,
 }:
 
@@ -10,6 +11,9 @@ buildPythonPackage (finalAttrs: {
   pname = "backports-zstd";
   version = "1.3.0";
   pyproject = true;
+
+  # compression.zstd is part of the standard library since Python 3.14
+  disabled = pythonAtLeast "3.14";
 
   src = fetchFromGitHub {
     owner = "rogdham";
