@@ -40,9 +40,6 @@ buildPythonPackage (finalAttrs: {
     numpy
   ];
 
-  # return to project root to locate pyproject.toml for build
-  preBuild = "cd ..";
-
   pythonImportsCheck = [ "fast_colorthief" ];
 
   passthru.updateScript = nix-update-script { };
