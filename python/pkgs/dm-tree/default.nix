@@ -30,17 +30,14 @@ buildPythonPackage (finalAttrs: {
     tag = finalAttrs.version;
     hash = "sha256-L1DOwgJriFoS0rf6g+f3qcw94Q/ia4N6kZ1ai6F/Qng=";
   };
-  # Allows to forward cmake args through the conventional `cmakeFlags`
+  # Use the system abseil-cpp and pybind11 instead of downloading them.
+  # (cmakeFlags is not exported to the environment under structuredAttrs.)
   postPatch = ''
     substituteInPlace setup.py \
       --replace-fail \
         "cmake_args = [" \
-        'cmake_args = [ *os.environ.get("cmakeFlags", "").split(),'
+        'cmake_args = [ "-DUSE_SYSTEM_ABSEIL=ON", "-DUSE_SYSTEM_PYBIND11=ON",'
   '';
-  cmakeFlags = [
-    (lib.cmakeBool "USE_SYSTEM_ABSEIL" true)
-    (lib.cmakeBool "USE_SYSTEM_PYBIND11" true)
-  ];
   dontUseCmakeConfigure = true;
 
   nativeBuildInputs = [
