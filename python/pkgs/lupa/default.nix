@@ -23,11 +23,6 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-XLBUQ1TrzWWST9RJdMTnpsceldDNzidnL82bixLhSRA=";
   };
 
-  patches = [
-    # The updated lua52 src has a radically changed makefile, matching lua53
-    ./remove-lua52-special-case.patch
-  ];
-
   build-system = [
     cython
     setuptools
