@@ -11,7 +11,7 @@
   grpcio,
 }:
 
-buildPythonPackage {
+buildPythonPackage rec {
   inherit (opentelemetry-instrumentation) version src;
   pname = "opentelemetry-instrumentation-grpc";
   pyproject = true;
@@ -19,6 +19,11 @@ buildPythonPackage {
   sourceRoot = "${opentelemetry-instrumentation.src.name}/instrumentation/opentelemetry-instrumentation-grpc";
 
   build-system = [ hatchling ];
+
+  pythonRelaxDeps = [
+    "opentelemetry-semantic-conventions"
+    "wrapt"
+  ];
 
   dependencies = [
     opentelemetry-api
@@ -42,6 +47,9 @@ buildPythonPackage {
     # RuntimeError: Failed to bind to address
     "TestOpenTelemetryServerInterceptorUnix"
   ];
+
+  # the module imports the instrumented library, so pythonImportsCheck needs it
+  nativeBuildInputs = optional-dependencies.instruments;
 
   pythonImportsCheck = [ "opentelemetry.instrumentation.grpc" ];
   meta = opentelemetry-instrumentation.meta // {
