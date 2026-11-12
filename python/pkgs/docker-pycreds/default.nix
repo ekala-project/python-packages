@@ -4,7 +4,6 @@
   fetchFromGitHub,
   setuptools,
   six,
-  pythonAtLeast,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -23,12 +22,14 @@ buildPythonPackage (finalAttrs: {
     setuptools
   ];
 
-  dependencies = [
-    six
-  ]
-  ++ lib.optionals (pythonAtLeast "3.12") [
-    setuptools
-  ];
+  # distutils was removed in Python 3.12
+  postPatch = ''
+    substituteInPlace dockerpycreds/utils.py \
+      --replace-fail "import distutils.spawn" "import shutil" \
+      --replace-fail "distutils.spawn.find_executable(executable, path)" "shutil.which(executable, path=path)"
+  '';
+
+  dependencies = [ six ];
 
   pythonImportsCheck = [ "dockerpycreds" ];
 
