@@ -33,6 +33,8 @@ buildPythonPackage (finalAttrs: {
     wheel
   ];
 
+  pythonRelaxDeps = [ "configupdater" ];
+
   dependencies = [
     configupdater
     importlib-metadata
