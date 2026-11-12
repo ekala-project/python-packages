@@ -33,13 +33,6 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-AUte9llrcPl2z4ipkZ3PGeryDveZ9vj5oaBQtzGaT+w=";
   };
 
-  postPatch = ''
-    substituteInPlace ffi/CMakeLists.txt \
-      --replace-fail \
-        "set(LLVMLITE_SUPPORTED_LLVM_VERSION_DEFAULT 22)" \
-        "set(LLVMLITE_SUPPORTED_LLVM_VERSION_DEFAULT 21)"
-  '';
-
   build-system = [ setuptools ];
 
   nativeBuildInputs = [
