@@ -8,6 +8,7 @@
   tqdm,
   portalocker,
   boto3,
+  typing-extensions,
 }:
 let
   pname = "iopath";
@@ -27,6 +28,7 @@ buildPythonPackage {
   build-system = [ setuptools ];
 
   dependencies = [
+    typing-extensions
     tqdm
     portalocker
   ];
