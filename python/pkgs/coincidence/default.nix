@@ -2,6 +2,8 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  pytest,
+  pytest-regressions,
   typing-extensions,
   whey,
 }:
@@ -20,7 +22,12 @@ buildPythonPackage (finalAttrs: {
 
   build-system = [ whey ];
 
-  dependencies = [ typing-extensions ];
+  buildInputs = [ pytest ];
+
+  dependencies = [
+    pytest-regressions
+    typing-extensions
+  ];
 
   pythonImportsCheck = [ "coincidence" ];
 
