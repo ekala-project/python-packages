@@ -80,6 +80,9 @@ buildPythonPackage (finalAttrs: {
     substituteInPlace tables/__init__.py \
       --replace-fail "ctypes.CDLL(str(lib_path))" \
       "ctypes.CDLL('"${lib.getLib c-blosc}/lib/libblosc${stdenv.hostPlatform.extensions.sharedLibrary}"')"
+    # c-blosc2 3.x renamed BLOSC2_MAX_DIM to B2ND_MAX_DIM
+    substituteInPlace hdf5-blosc2/src/blosc2_filter.c \
+      --replace-fail "BLOSC2_MAX_DIM" "B2ND_MAX_DIM"
   '';
 
   env = {
