@@ -15,6 +15,12 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-OGXbu7jvtLteqnLxvn8+C+AOqLfxJcacvR9f2pJvN6I=";
   };
 
+  postPatch = ''
+    # ast.Constant.s was removed in Python 3.14
+    substituteInPlace setup.py \
+      --replace-fail "body[0].value.s" "body[0].value.value"
+  '';
+
   build-system = [ setuptools ];
 
   pythonImportsCheck = [ "untokenize" ];
