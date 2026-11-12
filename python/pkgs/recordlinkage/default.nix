@@ -33,6 +33,8 @@ buildPythonPackage (finalAttrs: {
     wheel
   ];
 
+  pythonRelaxDeps = [ "pandas" ];
+
   dependencies = [
     pyarrow
     jellyfish
