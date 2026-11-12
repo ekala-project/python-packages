@@ -46,7 +46,7 @@ buildPythonPackage (finalAttrs: {
     substituteInPlace sqlite_vec/__init__.py \
       --replace-fail "@libpath@" "${lib.getLib sqlite-vec-c}/lib/"
     substituteInPlace pyproject.toml \
-      --replace-fail 'version = "0.0.0"' 'version = "${finalAttrs.version}"'
+      --replace-fail 'dynamic = ["version"]' 'version = "${finalAttrs.version}"'
   '';
 
   build-system = [
@@ -55,14 +55,9 @@ buildPythonPackage (finalAttrs: {
   ];
 
   dependencies = [
+    numpy
     sqlite-vec-c
   ];
-
-  optional-dependencies = {
-    numpy = [
-      numpy
-    ];
-  };
 
   pythonImportsCheck = [ "sqlite_vec" ];
 
