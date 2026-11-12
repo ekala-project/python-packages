@@ -18,6 +18,13 @@ buildPythonPackage (finalAttrs: {
     sha256 = "0jbq641lmb0apq4fy6r2zyag8rdqgrz8c4wvydzrzmxrp6yx6wyd";
   };
 
+  # setup.py derives its own directory via inspect.getsource, which fails
+  # when setuptools exec()s it from a string
+  postPatch = ''
+    substituteInPlace setup.py \
+      --replace-fail "here = abspath(dirname(getsource(lambda:0)))" "here = abspath(dirname(__file__))"
+  '';
+
   build-system = [ setuptools ];
 
   pythonImportsCheck = [ "playsound" ];
