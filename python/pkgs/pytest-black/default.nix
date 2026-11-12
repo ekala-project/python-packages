@@ -5,6 +5,7 @@
   setuptools-scm,
   black,
   toml,
+  pytest,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -19,6 +20,8 @@ buildPythonPackage (finalAttrs: {
   };
 
   build-system = [ setuptools-scm ];
+
+  buildInputs = [ pytest ];
 
   dependencies = [
     black
