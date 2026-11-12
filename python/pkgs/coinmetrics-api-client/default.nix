@@ -2,6 +2,7 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  numpy,
   orjson,
   pandas,
   poetry-core,
@@ -29,12 +30,18 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-5R/Z/FItszcNAdwHkhzr/HWqQBbXsYf9Hub+HGdBEGo=";
   };
 
-  pythonRelaxDeps = [ "typer" ];
+  pythonRelaxDeps = [
+    "pandas"
+    "typer"
+  ];
 
   build-system = [ poetry-core ];
 
   dependencies = [
+    numpy
     orjson
+    pandas
+    polars
     python-dateutil
     pyyaml
     requests
@@ -43,16 +50,10 @@ buildPythonPackage (finalAttrs: {
     websocket-client
   ];
 
-  optional-dependencies = {
-    pandas = [ pandas ];
-    polars = [ polars ];
-  };
-
   nativeCheckInputs = [
     pytestCheckHook
     pytest-mock
-  ]
-  ++ lib.concatAttrValues finalAttrs.optional-dependencies;
+  ];
 
   pythonImportsCheck = [ "coinmetrics.api_client" ];
 
