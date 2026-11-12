@@ -21,6 +21,13 @@ buildPythonPackage (finalAttrs: {
 
   build-system = [ setuptools ];
 
+  # 8.18.0 is only a shim re-exporting elasticsearch.dsl, which
+  # elasticsearch 9 still provides.
+  pythonRelaxDeps = [
+    "elasticsearch"
+    "elastic-transport"
+  ];
+
   dependencies = [
     elasticsearch
     python-dateutil
