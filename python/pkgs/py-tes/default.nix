@@ -30,6 +30,9 @@ buildPythonPackage (finalAttrs: {
     sphinx-rtd-theme
   ];
 
+  # requirements.txt lists the test runner as a runtime dependency
+  pythonRemoveDeps = [ "pytest" ];
+
   pythonImportsCheck = [ "tes" ];
 
   meta = {
