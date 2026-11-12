@@ -12,7 +12,7 @@
 }:
 
 let
-  version = "0.12.0";
+  version = "0.11.1";
   inherit (python) pythonVersion;
 
   srcs =
@@ -72,7 +72,7 @@ let
       "3.14-x86_64-linux" = getSrcFromPypi {
         platform = "manylinux_2_27_x86_64";
         dist = "cp314";
-        hash = "sha256-L5i6ZmlOjyInetW7eRSII3Dsf5A0+Q2yGtDj258baGM=";
+        hash = "sha256-c56teS3bhUyzyl3s/gCqsIpzETGrLL7tm3T0VFyS/QE=";
       };
       "3.14-aarch64-linux" = getSrcFromPypi {
         platform = "manylinux_2_27_aarch64";
