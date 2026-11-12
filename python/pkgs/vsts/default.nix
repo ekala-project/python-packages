@@ -5,6 +5,7 @@
   fetchPypi,
   setuptools,
   msrest,
+  setuptools_80,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -19,7 +20,10 @@ buildPythonPackage (finalAttrs: {
 
   build-system = [ setuptools ];
 
-  dependencies = [ msrest ];
+  dependencies = [
+    msrest
+    setuptools_80 # needs pkg_resources at runtime
+  ];
 
   postPatch = ''
     substituteInPlace setup.py --replace-fail "msrest>=0.6.0,<0.7.0" "msrest"
