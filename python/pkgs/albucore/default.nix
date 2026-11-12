@@ -20,7 +20,7 @@ buildPythonPackage (finalAttrs: {
     owner = "albumentations-team";
     repo = "albucore";
     tag = finalAttrs.version;
-    hash = "sha256-gI6q9ODkc2JoDfV8RA2NzwbC9A6QyZFa7C24prqMydU=";
+    hash = "sha256-BFxte0UHKUkC/vKqiCUHRAQQMM34VrNYdZCiKW4Hm6U=";
   };
 
   build-system = [
