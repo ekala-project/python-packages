@@ -12,7 +12,7 @@
   decorator,
 
   # native dependencies
-  krb5,
+  pkgs, # krb5 is shadowed by python3Packages.krb5
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -31,7 +31,7 @@ buildPythonPackage (finalAttrs: {
     substituteInPlace pyproject.toml \
       --replace-fail "Cython == 3.2.4" Cython
     substituteInPlace setup.py \
-      --replace-fail 'get_output(f"{kc} gssapi --prefix")' '"${lib.getDev krb5}"'
+      --replace-fail 'get_output(f"{kc} gssapi --prefix")' '"${lib.getDev pkgs.krb5}"'
   '';
 
   env = lib.optionalAttrs (!stdenv.buildPlatform.canExecute stdenv.hostPlatform) {
@@ -40,7 +40,7 @@ buildPythonPackage (finalAttrs: {
 
   build-system = [
     cython
-    krb5
+    pkgs.krb5
     setuptools
   ];
 
