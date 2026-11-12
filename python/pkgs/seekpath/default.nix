@@ -26,6 +26,7 @@ buildPythonPackage (finalAttrs: {
   build-system = [ flit-core ];
 
   dependencies = [
+    scipy
     numpy
     spglib
   ];
