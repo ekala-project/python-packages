@@ -32,6 +32,16 @@ buildPythonPackage (finalAttrs: {
     # Fix Cython 3.3.0 'buf' redeclared error
     substituteInPlace src/dbus_fast/_private/marshaller.py \
       --replace-fail "buf: bytearray = self._buf" "buf = self._buf"
+
+    # Fix Cython 3.3.0 'result', 'body' and 'signature' redeclared errors
+    substituteInPlace src/dbus_fast/_private/unmarshaller.py \
+      --replace-fail "result: Variant | None = None" "result = None" \
+      --replace-fail "body: list[Any] = []" "body = []" \
+      --replace-fail "signature: str = header_signature" "signature = header_signature"
+
+    # Fix Cython 3.3.0 'Signature not compatible with previous declaration'
+    substituteInPlace src/dbus_fast/message_bus.py \
+      --replace-fail "self, interfaces: dict[str, ServiceInterface], msg: _Message" "self, interfaces: dict, msg: _Message"
   '';
 
   # The project can build both an optimized cython version and an unoptimized
