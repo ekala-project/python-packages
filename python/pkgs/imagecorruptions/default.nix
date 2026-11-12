@@ -6,6 +6,7 @@
   scikit-image,
   lib,
   opencv-python,
+  setuptools_80,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -24,6 +25,7 @@ buildPythonPackage (finalAttrs: {
     numpy
     scikit-image
     opencv-python
+    setuptools_80 # needs pkg_resources at runtime
   ];
 
   pythonImportsCheck = [ "imagecorruptions" ];
