@@ -31,7 +31,7 @@ buildPythonPackage (finalAttrs: {
     owner = "pyocd";
     repo = "pyOCD";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-4a9XfdRfd6Co33eCoW6rBA0okS2lvUoQfNwr4KnAjM8=";
+    hash = "sha256-GEKPSAoAqDsAQ+RSr1MkDosO4KTiwx5yX71fg3xwzEc=";
   };
 
   pythonRelaxDeps = [
