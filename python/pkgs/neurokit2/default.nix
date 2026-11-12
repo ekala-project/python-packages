@@ -38,6 +38,12 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-gn02l0vYl+/7hXp4gFVlgblxC4dewXckW3JL3wPC89Y=";
   };
 
+  # pytest-runner is deprecated and only needed for `setup.py test`
+  postPatch = ''
+    substituteInPlace setup.py \
+      --replace-fail '"pytest-runner", ' ""
+  '';
+
   build-system = [
     setuptools
   ];
