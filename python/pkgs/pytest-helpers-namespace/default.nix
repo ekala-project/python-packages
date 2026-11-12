@@ -5,6 +5,7 @@
   setuptools,
   setuptools-declarative-requirements,
   setuptools-scm,
+  pytest,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -18,6 +19,8 @@ buildPythonPackage (finalAttrs: {
   };
 
   build-system = [ setuptools ];
+
+  buildInputs = [ pytest ];
 
   nativeBuildInputs = [
     setuptools-declarative-requirements
