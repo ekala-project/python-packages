@@ -9,12 +9,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "aiormq";
-  version = "9.6.4";
+  version = "6.9.4";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-hoGpRW41GCswysz2FmQvUvVEv4HSnyRtbXCSMQozYak=";
+    hash = "sha256-DnwBtmKAThzHrOmhd5TowRkqJ/wq+pYWI2Km5hro6O8=";
   };
 
   postPatch = ''
