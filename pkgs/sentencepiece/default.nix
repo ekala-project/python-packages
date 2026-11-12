@@ -22,7 +22,8 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
-  buildInputs = [ abseil-cpp ];
+  # absl::StatusBuilder needs a newer abseil; upstream pins 20260526.0
+  buildInputs = [ abseil-cpp.v20260526 ];
 
   outputs = [
     "bin"
