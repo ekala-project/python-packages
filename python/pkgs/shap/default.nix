@@ -16,6 +16,7 @@
   setuptools-scm,
   slicer,
   tqdm,
+  typing-extensions,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -44,6 +45,7 @@ buildPythonPackage (finalAttrs: {
   ];
 
   dependencies = [
+    typing-extensions
     cloudpickle
     numba
     numpy
