@@ -10,6 +10,7 @@
   pyyaml,
   rich,
   super-collections,
+  lxml,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -29,6 +30,7 @@ buildPythonPackage (finalAttrs: {
   ];
 
   dependencies = [
+    lxml
     beautifulsoup4
     markdown
     mkdocs
