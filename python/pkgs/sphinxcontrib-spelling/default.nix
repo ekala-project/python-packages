@@ -18,7 +18,7 @@ buildPythonPackage (finalAttrs: {
     owner = "sphinx-contrib";
     repo = "spelling";
     tag = finalAttrs.version;
-    hash = "sha256-f9n3hp+d3UvfVt2KmhxYm80XsEnIx3EVkdrQJxWDxks=";
+    hash = "sha256-1y9a9AqYyPnLQVc23mD/Hs2EieZmsFOfLES8Jd/ulRQ=";
   };
 
   nativeBuildInputs = [
