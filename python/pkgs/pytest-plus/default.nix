@@ -4,6 +4,7 @@
   fetchFromGitHub,
   setuptools,
   setuptools-scm,
+  pytest,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -22,6 +23,8 @@ buildPythonPackage (finalAttrs: {
     setuptools
     setuptools-scm
   ];
+
+  buildInputs = [ pytest ];
 
   pythonImportsCheck = [ "pytest_plus" ];
 
