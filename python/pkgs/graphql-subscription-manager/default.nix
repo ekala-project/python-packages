@@ -3,6 +3,7 @@
   buildPythonPackage,
   fetchFromGitHub,
   setuptools,
+  setuptools_80,
   websockets,
 }:
 
@@ -21,7 +22,7 @@ buildPythonPackage (finalAttrs: {
   build-system = [ setuptools ];
 
   dependencies = [
-    setuptools
+    setuptools_80 # needs pkg_resources at runtime
     websockets
   ];
 
