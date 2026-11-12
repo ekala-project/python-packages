@@ -59,6 +59,7 @@ buildPythonPackage (finalAttrs: {
     pandas
     protobuf
     python-dotenv
+    requests
     setuptools
   ];
 
