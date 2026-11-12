@@ -17,6 +17,7 @@
   requests,
   types-requests,
   websockets,
+  pyunormalize,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -38,6 +39,7 @@ buildPythonPackage (finalAttrs: {
   ];
 
   dependencies = [
+    pyunormalize
     aiohttp
     eth-abi
     eth-account
