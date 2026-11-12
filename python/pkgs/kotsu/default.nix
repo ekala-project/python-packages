@@ -10,6 +10,7 @@
   pytest-cov-stub,
   pytest-mock,
   scikit-learn,
+  setuptools-scm,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -24,7 +25,10 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-7bRrHowRKq3xiBiAkfS4ZL9PXHIUmZc99q9pHex9BLg=";
   };
 
-  build-system = [ setuptools ];
+  build-system = [
+    setuptools
+    setuptools-scm
+  ];
 
   dependencies = [
     pandas
