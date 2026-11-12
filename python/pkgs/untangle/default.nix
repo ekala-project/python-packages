@@ -3,7 +3,7 @@
   buildPythonPackage,
   fetchFromGitHub,
   # build-system
-  setuptools,
+  poetry-core,
   defusedxml,
 }:
 
@@ -20,7 +20,9 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-i7B37Rj46ZVlN8vaMq7FoqS9dOoC680AqASdGk6pBJU=";
   };
 
-  build-system = [ setuptools ];
+  build-system = [ poetry-core ];
+
+  pythonRelaxDeps = [ "defusedxml" ];
 
   dependencies = [ defusedxml ];
 
