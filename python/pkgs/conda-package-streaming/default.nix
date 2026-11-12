@@ -4,6 +4,7 @@
   fetchFromGitHub,
   backports-zstd,
   flit-core,
+  pythonOlder,
   requests,
 }:
 buildPythonPackage (finalAttrs: {
@@ -20,9 +21,9 @@ buildPythonPackage (finalAttrs: {
 
   build-system = [ flit-core ];
   dependencies = [
-    backports-zstd
     requests
-  ];
+  ]
+  ++ lib.optionals (pythonOlder "3.14") [ backports-zstd ];
 
   pythonImportsCheck = [ "conda_package_streaming" ];
 

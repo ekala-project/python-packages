@@ -32,12 +32,13 @@ buildPythonPackage (finalAttrs: {
     hatch-vcs
   ];
 
-  dependencies = [
-    backports-zstd
-  ]
-  ++ lib.optionals (pythonOlder "3.13") [
-    typing-extensions
-  ];
+  dependencies =
+    lib.optionals (pythonOlder "3.14") [
+      backports-zstd
+    ]
+    ++ lib.optionals (pythonOlder "3.13") [
+      typing-extensions
+    ];
 
   pythonRelaxDeps = [
     "typing-extensions"
