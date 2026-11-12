@@ -2,7 +2,7 @@
   lib,
   fetchPypi,
   buildPythonPackage,
-  setuptools,
+  setuptools_80,
   setuptools-scm,
   makefun,
 }:
@@ -22,7 +22,7 @@ buildPythonPackage (finalAttrs: {
   '';
 
   build-system = [
-    setuptools
+    setuptools_80 # setup.py imports pkg_resources
     setuptools-scm
   ];
 
