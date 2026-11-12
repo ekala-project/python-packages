@@ -26,7 +26,10 @@ buildPythonPackage (finalAttrs: {
 
   build-system = [ setuptools ];
 
-  pythonRelaxDeps = [ "pyarrow" ];
+  pythonRelaxDeps = [
+    "pyarrow"
+    "pandas"
+  ];
 
   dependencies = [
     fsspec
