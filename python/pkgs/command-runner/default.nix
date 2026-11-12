@@ -3,7 +3,7 @@
   buildPythonPackage,
   fetchPypi,
   psutil,
-  setuptools,
+  setuptools_80,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -16,7 +16,7 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-raJ/6bZOYTxDfw61b064hoipeiNAKQOZ3/yB9kEhDMo=";
   };
 
-  build-system = [ setuptools ];
+  build-system = [ setuptools_80 ];
 
   dependencies = [ psutil ];
 
