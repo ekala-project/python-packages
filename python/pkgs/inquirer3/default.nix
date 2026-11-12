@@ -24,6 +24,8 @@ buildPythonPackage (finalAttrs: {
 
   build-system = [ poetry-core ];
 
+  pythonRelaxDeps = [ "editor" ];
+
   dependencies = [
     blessed
     editor
