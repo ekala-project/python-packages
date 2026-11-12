@@ -16,6 +16,11 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-uX1dYycGfua538vfYGremt5wmR4ZwWLoCOo55fzw+NM=";
   };
 
+  postPatch = ''
+    substituteInPlace pyproject.toml \
+      --replace-fail '"setuptools >= 78.1.1,< 82"' '"setuptools"'
+  '';
+
   build-system = [ setuptools ];
 
   pythonImportsCheck = [ "zope.event" ];
