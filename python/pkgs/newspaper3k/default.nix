@@ -43,5 +43,7 @@ buildPythonPackage (finalAttrs: {
     description = "Simplified python article discovery & extraction";
     homepage = "https://pypi.org/project/newspaper3k";
     license = lib.licenses.mit;
+    # depends on jieba3k and tinysegmenter, which are not packaged
+    broken = true;
   };
 })
