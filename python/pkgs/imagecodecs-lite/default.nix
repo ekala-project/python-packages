@@ -19,6 +19,13 @@ buildPythonPackage (finalAttrs: {
     sha256 = "0s4xb17qd7vimc46rafbjnibj4sf0lnv8cwl22k1h6zb7jhqmlcm";
   };
 
+  # __builtins__ is a dict when setuptools exec()s setup.py; the numpy
+  # setup flag it sets is obsolete anyway
+  postPatch = ''
+    substituteInPlace setup.py \
+      --replace-fail "__builtins__.__NUMPY_SETUP__ = False" ""
+  '';
+
   build-system = [ setuptools ];
 
   nativeBuildInputs = [ cython ];
