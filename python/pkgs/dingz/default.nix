@@ -7,6 +7,7 @@
   fetchFromGitHub,
   # build-system
   setuptools,
+  setuptools_80,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -23,10 +24,13 @@ buildPythonPackage (finalAttrs: {
 
   build-system = [ setuptools ];
 
+  pythonRelaxDeps = [ "async_timeout" ];
+
   dependencies = [
     aiohttp
     async-timeout
     click
+    setuptools_80 # needs pkg_resources at runtime
   ];
 
   # Project has no tests
