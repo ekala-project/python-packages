@@ -27,6 +27,8 @@ buildPythonPackage (finalAttrs: {
 
   build-system = [ poetry-core ];
 
+  pythonRelaxDeps = [ "wrapt" ];
+
   dependencies = [
     backoff
     httpx
