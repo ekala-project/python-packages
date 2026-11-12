@@ -20,6 +20,11 @@ buildPythonPackage (finalAttrs: {
 
   postPatch = ''
     patchShebangs bin/
+
+    # pbr.packaging does `from distutils import log`; importing setuptools first
+    # installs its distutils shim (distutils was removed in Python 3.12)
+    substituteInPlace openstackdocstheme/ext.py \
+      --replace-fail "import dulwich.repo" "import dulwich.repo; import setuptools"
   '';
 
   build-system = [ setuptools ];
@@ -33,9 +38,7 @@ buildPythonPackage (finalAttrs: {
 
   # no tests
 
-  # Import check disabled: pbr.packaging imports distutils which was removed
-  # in Python 3.13. Works fine at build time via setuptools.
-  pythonImportsCheck = [ ];
+  pythonImportsCheck = [ "openstackdocstheme" ];
 
   meta = {
     description = "Sphinx theme for RST-sourced documentation published to docs.openstack.org";
