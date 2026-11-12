@@ -6,6 +6,7 @@
   wheel,
   pytestCheckHook,
   pytest-django,
+  django,
 }:
 buildPythonPackage (finalAttrs: {
   pname = "django-probes";
@@ -22,6 +23,10 @@ buildPythonPackage (finalAttrs: {
   build-system = [
     setuptools
     wheel
+  ];
+
+  dependencies = [
+    django
   ];
 
   pythonImportsCheck = [
