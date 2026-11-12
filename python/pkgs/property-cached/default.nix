@@ -2,7 +2,7 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
-  setuptools,
+  setuptools_80,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -17,7 +17,8 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-8kityZ++1TS22Ff7a5x5bQi0QBaHsNaP4E/Man8A28A=";
   };
 
-  build-system = [ setuptools ];
+  # setup.py imports pkg_resources
+  build-system = [ setuptools_80 ];
 
   pythonImportsCheck = [ "property_cached" ];
 
