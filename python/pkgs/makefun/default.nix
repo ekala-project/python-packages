@@ -2,7 +2,7 @@
   lib,
   fetchPypi,
   buildPythonPackage,
-  setuptools,
+  setuptools_80,
   setuptools-scm,
 }:
 
@@ -21,8 +21,9 @@ buildPythonPackage (finalAttrs: {
       --replace-fail '"setuptools>=39.2,<72"' '"setuptools"'
   '';
 
+  # setup.py imports pkg_resources
   build-system = [
-    setuptools
+    setuptools_80
     setuptools-scm
   ];
 
