@@ -5,6 +5,7 @@
   hatchling,
   typing-extensions,
   pytest-asyncio,
+  pytest,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -22,6 +23,8 @@ buildPythonPackage (finalAttrs: {
   build-system = [
     hatchling
   ];
+
+  buildInputs = [ pytest ];
 
   dependencies = [
     typing-extensions
