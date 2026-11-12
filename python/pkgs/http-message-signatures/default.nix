@@ -7,6 +7,7 @@
   hatchling,
   pytestCheckHook,
   requests,
+  typing-extensions,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -26,7 +27,10 @@ buildPythonPackage (finalAttrs: {
     hatch-vcs
   ];
 
-  dependencies = [ cryptography ];
+  dependencies = [
+    cryptography
+    typing-extensions
+  ];
 
   nativeCheckInputs = [
     pytestCheckHook
