@@ -3,6 +3,7 @@
   aiohttp,
   buildPythonPackage,
   elastic-transport,
+  fetchFromGitHub,
   fetchPypi,
   hatchling,
   orjson,
@@ -11,6 +12,18 @@
   typing-extensions,
 }:
 
+let
+  # elasticsearch8 requires elastic-transport<9
+  elastic-transport_8 = elastic-transport.overridePythonAttrs (old: {
+    version = "8.17.1";
+    src = fetchFromGitHub {
+      owner = "elastic";
+      repo = "elastic-transport-python";
+      tag = "v8.17.1";
+      hash = "sha256-LWSvE88wEwMxRi6IZsMkIRP8UTRfImC9QZnuka1oiso=";
+    };
+  });
+in
 buildPythonPackage (finalAttrs: {
   pname = "elasticsearch8";
   version = "8.19.3";
@@ -24,7 +37,7 @@ buildPythonPackage (finalAttrs: {
   build-system = [ hatchling ];
 
   dependencies = [
-    elastic-transport
+    elastic-transport_8
     python-dateutil
     typing-extensions
   ];
