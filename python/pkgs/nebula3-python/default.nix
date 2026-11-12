@@ -56,5 +56,7 @@ buildPythonPackage (finalAttrs: {
     description = "Client API of Nebula Graph in Python";
     homepage = "https://github.com/vesoft-inc/nebula-python";
     license = lib.licenses.asl20;
+    # 5.x depends on minijinja, which is not packaged
+    broken = true;
   };
 })
