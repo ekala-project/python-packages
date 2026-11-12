@@ -8,6 +8,7 @@
   lazy,
   requests,
   tomli,
+  packaging-legacy,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -34,6 +35,7 @@ buildPythonPackage (finalAttrs: {
   ];
 
   dependencies = [
+    packaging-legacy
     lazy
     requests
     tomli
