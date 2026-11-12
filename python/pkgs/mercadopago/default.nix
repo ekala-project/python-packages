@@ -15,7 +15,7 @@ buildPythonPackage (finalAttrs: {
     owner = "mercadopago";
     repo = "sdk-python";
     tag = finalAttrs.version;
-    hash = "sha256-hi/DbIJx1eRYUHeqe6J4wQKnFmmGKwU0rXDMTlezfIM=";
+    hash = "sha256-TDiVjpteircgz3UDReBGJDAK1iO4T3LMrDXHTMezVhQ=";
   };
 
   build-system = [
