@@ -27,6 +27,8 @@ buildPythonPackage (finalAttrs: {
 
   dependencies = [
     bokeh
+    # imported unconditionally; upstream only lists it for Python < 3.8
+    ipython
     matplotlib
   ];
 
