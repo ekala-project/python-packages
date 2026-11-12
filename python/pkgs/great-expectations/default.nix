@@ -74,5 +74,7 @@ buildPythonPackage (finalAttrs: {
     description = "Library for writing unit tests for data validation";
     homepage = "https://docs.greatexpectations.io";
     license = lib.licenses.asl20;
+    # pydantic.v1 models fail on Python 3.14 until pydantic 2.13 (fixed in great-expectations 1.24.1)
+    broken = true;
   };
 })
