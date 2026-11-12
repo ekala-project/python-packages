@@ -81,5 +81,7 @@ buildPythonPackage (finalAttrs: {
     mainProgram = "fio";
     homepage = "https://fiona.readthedocs.io/";
     license = lib.licenses.bsd3;
+    # Needs gdal (gdal-config) to build, which is not available in corepkgs.
+    broken = true;
   };
 })
