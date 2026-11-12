@@ -8,6 +8,7 @@
   pyyaml,
   setuptools,
   setuptools-scm,
+  setuptools_80,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -28,7 +29,7 @@ buildPythonPackage (finalAttrs: {
     pyyaml
     colorama
     jinja2
-    setuptools
+    setuptools_80 # needs pkg_resources at runtime
   ];
 
   nativeCheckInputs = [ pytestCheckHook ];
