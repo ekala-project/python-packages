@@ -10,7 +10,7 @@
   fakeredis,
 }:
 
-buildPythonPackage {
+buildPythonPackage rec {
   inherit (opentelemetry-instrumentation) version src;
   pname = "opentelemetry-instrumentation-redis";
   pyproject = true;
@@ -18,6 +18,8 @@ buildPythonPackage {
   sourceRoot = "${opentelemetry-instrumentation.src.name}/instrumentation/opentelemetry-instrumentation-redis";
 
   build-system = [ hatchling ];
+
+  pythonRelaxDeps = [ "opentelemetry-semantic-conventions" ];
 
   dependencies = [
     opentelemetry-api
@@ -28,6 +30,9 @@ buildPythonPackage {
   optional-dependencies = {
     instruments = [ redis ];
   };
+
+  # the module imports the instrumented library, so pythonImportsCheck needs it
+  nativeBuildInputs = optional-dependencies.instruments;
 
   pythonImportsCheck = [ "opentelemetry.instrumentation.redis" ];
 
