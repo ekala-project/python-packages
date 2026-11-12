@@ -7,6 +7,7 @@
   pyramid,
   setuptools,
   zope-interface,
+  setuptools_80,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -36,8 +37,8 @@ buildPythonPackage (finalAttrs: {
   dependencies = [
     chameleon
     pyramid
-    setuptools
     zope-interface
+    setuptools_80 # needs pkg_resources at runtime
   ];
 
   pythonImportsCheck = [ "pyramid_chameleon" ];
