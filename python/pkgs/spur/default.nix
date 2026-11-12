@@ -21,6 +21,8 @@ buildPythonPackage (finalAttrs: {
 
   build-system = [ setuptools ];
 
+  pythonRelaxDeps = [ "paramiko" ];
+
   dependencies = [ paramiko ];
 
   # Tests require a running SSH server
