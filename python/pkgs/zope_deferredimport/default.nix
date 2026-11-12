@@ -17,6 +17,11 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-lZBS0/XgXEx4VLiHFpcZheCxtEpcAWPhLZoLkOTjtsw=";
   };
 
+  postPatch = ''
+    substituteInPlace pyproject.toml \
+      --replace-fail '"setuptools >= 78.1.1,< 81"' '"setuptools"'
+  '';
+
   build-system = [ setuptools ];
 
   dependencies = [ zope_proxy ];
