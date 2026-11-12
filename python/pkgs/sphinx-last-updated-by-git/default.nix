@@ -16,9 +16,8 @@ buildPythonPackage (finalAttrs: {
     owner = "mgeier";
     repo = "sphinx-last-updated-by-git";
     rev = "8d4eef2561996319e6f785b4faa914a1e6545476";
-    hash = "sha256-/oZwjQXMpLW6+VvIViqu4ofoXmOT9SQV9B/Intgz7qM=";
+    hash = "sha256-rOf5woQ0y0aUPrGgiG7mSa3cFsvenKGfADfJEoK7pZs=";
     fetchSubmodules = true;
-    leaveDotGit = true;
   };
 
   build-system = [ setuptools ];
@@ -35,8 +34,6 @@ buildPythonPackage (finalAttrs: {
       --replace-fail "'git', 'log'" "'${lib.getExe gitMinimal}', 'log'" \
       --replace-fail "'git', 'rev-parse'" "'${lib.getExe gitMinimal}', 'rev-parse'"
   '';
-
-  nativeBuildInputs = [ gitMinimal ];
 
   meta = {
     description = "Get the last updated time for each Sphinx page from Git";
