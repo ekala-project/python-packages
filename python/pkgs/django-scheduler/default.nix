@@ -13,14 +13,14 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "django-scheduler";
-  version = "1.0";
+  version = "0.11.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "llazzaro";
     repo = "django-scheduler";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-TgIp2oqju3O6zPp3WMEB9HeNgAJILNkWWfbDFmMQ3eA=";
+    hash = "sha256-VdnKXyXGNPlOH50s8vPmF1A6BinntC1i+8v5gup7mts=";
   };
 
   build-system = [ setuptools ];
@@ -39,18 +39,6 @@ buildPythonPackage (finalAttrs: {
 
   preCheck = ''
     export DJANGO_SETTINGS_MODULE=tests.settings
-  '';
-
-  patches = [
-    # Remove in Django 5.1
-    # https://github.com/llazzaro/django-scheduler/pull/567
-    ./index_together.patch
-  ];
-
-  postPatch = ''
-    # Remove in Django 5.1
-    substituteInPlace tests/settings.py \
-      --replace-fail "SHA1PasswordHasher" "PBKDF2PasswordHasher"
   '';
 
   disabledTests = lib.optionals (lib.versionAtLeast django.version "5.1") [
