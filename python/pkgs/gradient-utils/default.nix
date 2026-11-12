@@ -9,6 +9,7 @@
   prometheus-client,
   pytestCheckHook,
   requests,
+  pymongo,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -26,6 +27,7 @@ buildPythonPackage (finalAttrs: {
   nativeBuildInputs = [ poetry-core ];
 
   dependencies = [
+    pymongo
     hyperopt
     prometheus-client
     numpy
