@@ -29,7 +29,7 @@ buildPythonPackage (finalAttrs: {
     "Flask"
     "mistune"
     "networkx"
-    "prometheus-client"
+    "prometheus_client"
   ];
 
   dependencies = [
