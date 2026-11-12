@@ -3,6 +3,7 @@
   buildPythonPackage,
   fetchFromGitHub,
   pbr,
+  setuptools,
   sphinx,
 }:
 
@@ -20,7 +21,10 @@ buildPythonPackage (finalAttrs: {
 
   env.PBR_VERSION = finalAttrs.version;
 
-  build-system = [ pbr ];
+  build-system = [
+    pbr
+    setuptools
+  ];
 
   dependencies = [ sphinx ];
 
