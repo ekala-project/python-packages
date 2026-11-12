@@ -20,6 +20,7 @@
   pytest-asyncio,
   tox,
   jinja2,
+  sanic,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -37,7 +38,10 @@ buildPythonPackage (finalAttrs: {
   build-system = [ setuptools ];
 
   dependencies = [
+    sanic
     pyyaml
+    # sanic_ext/extras/validation/clean.py imports pydantic unconditionally
+    pydantic
   ];
   pythonImportsCheck = [ "sanic_ext" ];
 
