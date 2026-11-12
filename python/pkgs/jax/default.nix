@@ -20,7 +20,7 @@
 let
   usingMKL = blas.implementation == "mkl" || lapack.implementation == "mkl";
 in
-buildPythonPackage {
+buildPythonPackage (finalAttrs: {
   pname = "jax";
   version = "0.11.1";
   pyproject = true;
@@ -28,8 +28,8 @@ buildPythonPackage {
   src = fetchFromGitHub {
     owner = "google";
     repo = "jax";
-    tag = "jax-v0.11.0";
-    hash = "sha256-EE4JuiiwgdQlTsX6dE8KRjcGZHRiQVDXlDVFHchfyYs=";
+    tag = "jax-v${finalAttrs.version}";
+    hash = "sha256-OiH4qhVK7T6o+lYtP1e2UqtSitxVdzUWC5YXbaNMZsQ=";
   };
 
   build-system = [ setuptools ];
@@ -53,4 +53,4 @@ buildPythonPackage {
     homepage = "https://github.com/google/jax";
     license = lib.licenses.asl20;
   };
-}
+})
