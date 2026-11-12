@@ -5,6 +5,7 @@
   fetchpatch2,
   setuptools-scm,
   flake8,
+  pytest,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -28,6 +29,8 @@ buildPythonPackage (finalAttrs: {
   ];
 
   build-system = [ setuptools-scm ];
+
+  buildInputs = [ pytest ];
 
   dependencies = [ flake8 ];
 
