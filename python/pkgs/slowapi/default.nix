@@ -34,6 +34,7 @@ buildPythonPackage (finalAttrs: {
   dependencies = [
     limits
     redis
+    starlette # imported at runtime, but only declared as a dev dependency
   ];
   pythonImportsCheck = [ "slowapi" ];
 
