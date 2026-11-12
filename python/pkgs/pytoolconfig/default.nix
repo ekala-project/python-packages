@@ -40,6 +40,7 @@ buildPythonPackage (finalAttrs: {
     sphinx-autodoc-typehints
     sphinx-rtd-theme
     sphinxHook
+    tabulate
   ];
   dependencies = [ packaging ];
 
