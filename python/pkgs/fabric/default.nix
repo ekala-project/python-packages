@@ -26,6 +26,8 @@ buildPythonPackage (finalAttrs: {
 
   build-system = [ setuptools ];
 
+  pythonRelaxDeps = [ "invoke" ];
+
   dependencies = [
     invoke
     paramiko
