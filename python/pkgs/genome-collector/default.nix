@@ -5,8 +5,8 @@
   biopython,
   fetchPypi,
   # build-system
-  setuptools,
   proglog,
+  setuptools_80,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -19,7 +19,9 @@ buildPythonPackage (finalAttrs: {
     sha256 = "0023ihrz0waxbhq28xh1ymvk51ih882y9psg4glm6s9d1zmqvdph";
   };
 
-  build-system = [ setuptools ];
+  build-system = [
+    setuptools_80 # setup.py imports pkg_resources
+  ];
 
   dependencies = [
     appdirs
