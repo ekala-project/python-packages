@@ -5,6 +5,7 @@
   # build-system
   uv-build,
   sphinx,
+  six,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -25,7 +26,10 @@ buildPythonPackage (finalAttrs: {
 
   build-system = [ uv-build ];
 
-  dependencies = [ sphinx ];
+  dependencies = [
+    six
+    sphinx
+  ];
 
   pythonNamespaces = [ "sphinxcontrib" ];
 
