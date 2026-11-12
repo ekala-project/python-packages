@@ -10,6 +10,7 @@
   importlib-metadata,
   sqlparse,
   tabulate,
+  setuptools_80,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -26,9 +27,9 @@ buildPythonPackage (finalAttrs: {
 
   dependencies = [
     importlib-metadata
-    setuptools
     sqlparse
     tabulate
+    setuptools_80 # needs pkg_resources at runtime
   ];
 
   pythonImportsCheck = [ "yoyo" ];
