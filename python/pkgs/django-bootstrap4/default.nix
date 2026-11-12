@@ -36,6 +36,8 @@ buildPythonPackage (finalAttrs: {
 
   build-system = [ uv-build ];
 
+  buildInputs = [ django ];
+
   dependencies = [ beautifulsoup4 ];
 
   pythonImportsCheck = [ "bootstrap4" ];
