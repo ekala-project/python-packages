@@ -30,6 +30,7 @@ buildPythonPackage (finalAttrs: {
 
   pythonRelaxDeps = [
     "tabulate"
+    "typer"
   ];
 
   dependencies = [
