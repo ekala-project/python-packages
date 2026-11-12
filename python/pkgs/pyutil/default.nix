@@ -27,6 +27,8 @@ buildPythonPackage (finalAttrs: {
     versioneer
   ];
 
+  dependencies = [ simplejson ];
+
   optional-dependencies = {
     jsonutil = [ simplejson ];
     # Module not available
