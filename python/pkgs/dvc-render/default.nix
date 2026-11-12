@@ -30,6 +30,10 @@ buildPythonPackage (finalAttrs: {
     setuptools-scm
   ];
 
+  # dvc_render/utils.py imports flatten_dict unconditionally, so the package
+  # cannot be imported without it even though upstream lists it as optional.
+  dependencies = [ flatten-dict ];
+
   passthru.optional-dependencies = {
     table = [
       flatten-dict
