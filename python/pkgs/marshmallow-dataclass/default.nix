@@ -33,6 +33,7 @@ buildPythonPackage (finalAttrs: {
   build-system = [ setuptools ];
 
   dependencies = [
+    typeguard
     marshmallow
     typing-inspect
   ];
