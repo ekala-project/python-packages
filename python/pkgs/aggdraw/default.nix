@@ -6,6 +6,7 @@
   setuptools,
   pkgconfig,
   freetype,
+  pkg-config,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -25,6 +26,8 @@ buildPythonPackage (finalAttrs: {
     setuptools
     pkgconfig
   ];
+
+  nativeBuildInputs = [ pkg-config ];
 
   buildInputs = [ freetype ];
 
