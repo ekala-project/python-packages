@@ -44,6 +44,13 @@ buildPythonPackage (finalAttrs: {
 
   sourceRoot = "${finalAttrs.src.name}/libs/skinny";
 
+  postPatch = ''
+    substituteInPlace pyproject.toml \
+      --replace-fail '"setuptools<=82.0.1"' '"setuptools"'
+  '';
+
+  pythonRelaxDeps = [ "importlib_metadata" ];
+
   build-system = [ setuptools ];
 
   dependencies = [
