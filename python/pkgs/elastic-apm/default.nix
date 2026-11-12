@@ -45,6 +45,7 @@ buildPythonPackage (finalAttrs: {
   build-system = [ setuptools ];
 
   dependencies = [
+    ecs-logging
     aiohttp
     blinker
     certifi
