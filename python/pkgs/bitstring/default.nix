@@ -4,22 +4,22 @@
   buildPythonPackage,
   setuptools,
   # dependencies
-  bitarray,
+  tibs,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "bitstring";
-  version = "4.0.2";
+  version = "5.0.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-o5HbiCisRIXdXOcsgLJ+usPnuYljE1mVnjEM2XKXI7I=";
+    hash = "sha256-Adh2tue72RK/o64dAo7UGe0hkyRf4jN/IdMK+qORwFM=";
   };
 
   build-system = [ setuptools ];
 
-  dependencies = [ bitarray ];
+  dependencies = [ tibs ];
 
   pythonImportsCheck = [ "bitstring" ];
 
