@@ -23,23 +23,19 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "sphinx-toolbox";
-  version = "4.1.2";
+  version = "4.3.1";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) version;
     pname = "sphinx_toolbox";
-    hash = "sha256-wwpPhsTCnpetsOuTN9NfUJPLlqRPScr/z31bxYqIt4E=";
+    hash = "sha256-BcX9Ot1+YO8GJuUq1XQ51pW96JUYqFy1qIvY+scb4os=";
   };
 
-  postPatch = ''
-    substituteInPlace \
-      requirements.txt PKG-INFO pyproject.toml \
-      --replace-fail "sphinx-tabs<3.4.7,>=1.2.1" "sphinx-tabs<=3.5.0,>=1.2.1" \
-      --replace-fail "ruamel.yaml<=0.18.16,>=0.16.12" "ruamel.yaml<=0.19.1,>=0.16.12"
-  '';
-
   build-system = [ whey ];
+
+  # Upstream caps sphinx-autodoc-typehints<3.6.0
+  pythonRelaxDeps = [ "sphinx-autodoc-typehints" ];
 
   dependencies = [
     sphinx
