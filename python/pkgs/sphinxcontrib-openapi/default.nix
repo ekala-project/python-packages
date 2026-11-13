@@ -15,12 +15,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "sphinxcontrib-openapi";
-  version = "0.8.4";
+  version = "0.10.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit (finalAttrs) pname version;
-    hash = "sha256-34g4CKW15LQROtaXGFxDo/Qt89znBFOveLpwdpB+miA=";
+    pname = "sphinxcontrib_openapi";
+    inherit (finalAttrs) version;
+    hash = "sha256-vuyL9Ozo8o+xs3jmCRS5L+1uOACaYNkV7SzQwCOlT20=";
   };
 
   build-system = [ setuptools ];
