@@ -3,7 +3,6 @@
   fetchPypi,
   buildPythonPackage,
   uv-build,
-  setuptools-scm,
   aiohttp,
   maxminddb,
   requests,
@@ -12,21 +11,20 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "geoip2";
-  version = "5.2.0";
+  version = "5.3.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-bJ3tGVP46xYEPtCo6iDm6VJOp7Zet0VyThJJCspE7wA=";
+    hash = "sha256-Zt9lPhbFNfm7RePHzpkvvgCJEdnHw0lUBXTqL+iTHbU=";
   };
 
   postPatch = ''
-    substituteInPlace pyproject.toml --replace-fail "uv_build>=0.7.19,<0.8.0" "uv_build"
+    substituteInPlace pyproject.toml --replace-fail "uv_build>=0.11.26,<0.12.0" "uv_build"
   '';
 
   build-system = [
     uv-build
-    setuptools-scm
   ];
 
   dependencies = [

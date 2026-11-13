@@ -7,12 +7,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "frozendict";
-  version = "2.4.7";
+  version = "2.5.1";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-5Hj7KhORpWyKbhDMl8SpACtBDs0awowY14BmF2Licb0=";
+    hash = "sha256-t5sMEzIgxZdv8FuL/jwSFRGcqmJV9HejCRUf1eLCwMM=";
   };
 
   build-system = [ setuptools ];

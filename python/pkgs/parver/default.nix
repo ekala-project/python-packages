@@ -9,12 +9,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "parver";
-  version = "1.0.1";
+  version = "1.0.1.post0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-pY8SOrGijG93Oo8RMlicocXUMKLFsmEeD8b7Nm3xJiI=";
+    hash = "sha256-G/ucPxPV2syqEOtgVnm129S/LhW09fob3xeMXD8GWiw=";
   };
 
   build-system = [ hatchling ];

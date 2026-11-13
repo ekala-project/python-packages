@@ -54,5 +54,7 @@ buildPythonPackage (finalAttrs: {
     description = "Vectorized spatial vector file format I/O using GDAL/OGR";
     homepage = "https://pyogrio.readthedocs.io/";
     license = lib.licenses.mit;
+    # Needs gdal (gdal-config) to build, which is not available in corepkgs.
+    broken = true;
   };
 })

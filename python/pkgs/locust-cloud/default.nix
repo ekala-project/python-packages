@@ -33,6 +33,8 @@ buildPythonPackage (finalAttrs: {
     hatch-vcs
   ];
 
+  pythonRelaxDeps = [ "gevent" ];
+
   dependencies = [
     configargparse
     gevent

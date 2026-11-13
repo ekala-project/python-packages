@@ -13,13 +13,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "google-cloud-dataproc-metastore";
-  version = "1.23.0";
+  version = "1.24.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "google_cloud_dataproc_metastore";
     inherit (finalAttrs) version;
-    hash = "sha256-J1iZ6gE3q3KZPSg81SqEqdSPDEhR6wtliZgvLU09rU0=";
+    hash = "sha256-4d/8dllu4can9WiPiLT67GXyy+RTENOoCOcKw8F761I=";
   };
 
   build-system = [ setuptools ];

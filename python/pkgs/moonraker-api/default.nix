@@ -30,6 +30,8 @@ buildPythonPackage (finalAttrs: {
       --replace 'name="moonraker-api",' 'name="moonraker-api",version="${finalAttrs.version}",'
   '';
 
+  pythonRelaxDeps = [ "async-timeout" ];
+
   dependencies = [
     aiohttp
     async-timeout

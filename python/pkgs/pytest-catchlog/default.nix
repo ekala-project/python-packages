@@ -6,6 +6,7 @@
   setuptools,
   pytest,
   unzip,
+  py,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -20,6 +21,10 @@ buildPythonPackage (finalAttrs: {
   };
 
   build-system = [ setuptools ];
+
+  dependencies = [
+    py
+  ];
 
   nativeBuildInputs = [ unzip ];
   buildInputs = [ pytest ];

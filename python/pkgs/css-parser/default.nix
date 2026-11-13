@@ -7,12 +7,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "css-parser";
-  version = "1.0.10";
+  version = "1.1.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit (finalAttrs) pname version;
-    hash = "sha256-vx6XKtMzROkyBpZPtM2QjZ3e+fzQwB+pPg1zRnU5Q2M=";
+    pname = "css_parser";
+    inherit (finalAttrs) version;
+    hash = "sha256-k8f7CM8W1Fu7i5ZLT0iZpOs22b5v/vF/ma0oD0A0s2w=";
   };
 
   build-system = [ setuptools ];

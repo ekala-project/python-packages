@@ -113,5 +113,8 @@ buildPythonPackage (finalAttrs: {
     homepage = "https://github.com/pymupdf/PyMuPDF";
     license = lib.licenses.agpl3Only;
     platforms = lib.platforms.unix;
+    # corepkgs mupdf ignores enableCxx/enablePython, so the C++ and Python
+    # bindings PyMuPDF builds against (mupdf/classes2.h, mupdf.py) are missing.
+    broken = true;
   };
 })

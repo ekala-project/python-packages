@@ -9,14 +9,14 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "flake8-deprecated";
-  version = "2.3.0";
+  version = "2.4.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "gforcada";
     repo = "flake8-deprecated";
     tag = finalAttrs.version;
-    hash = "sha256-KF0hWhMZEWuSPUyfStayNa5Nfss9NpTvMXPeemWbQXU=";
+    hash = "sha256-Gshd+pYnEHlSRx2/XymoGwEMljIFn05MAKpM3n1dUnQ=";
   };
 
   build-system = [ hatchling ];

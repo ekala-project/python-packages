@@ -9,13 +9,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "regress";
-  version = "2025.10.1";
+  version = "2026.9.1";
 
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-3MCorwzbw9bg1HJfETM10KX/u6hq48oY0rWzUsXyyO0=";
+    hash = "sha256-57VHOGv5e4KiPmJHEnJ0JJLAst5izw7pgkf9N8xC8Wk=";
   };
 
   nativeBuildInputs = with rustPlatform; [
@@ -27,7 +27,7 @@ buildPythonPackage (finalAttrs: {
 
   cargoDeps = rustPlatform.fetchCargoVendor {
     inherit (finalAttrs) pname version src;
-    hash = "sha256-DOnKFVg+5cIv0T3mKzF8O9jj5+ZenQrLjTltfd+Tm9U=";
+    hash = "sha256-ljDpS7DhMRxSzY4VVOEUYZfw3dmDO5JkmjD1BSZLBks=";
   };
 
   meta = {

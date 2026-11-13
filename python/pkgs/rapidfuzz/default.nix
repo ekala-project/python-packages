@@ -20,7 +20,9 @@ buildPythonPackage (finalAttrs: {
     owner = "maxbachmann";
     repo = "RapidFuzz";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-wF7eeSD6GQfN0EOwDvrgjMqN5u2wxXFlktQS7nIKgkU=";
+    # taskflow and rapidfuzz-cpp are not packaged; use the vendored submodules
+    fetchSubmodules = true;
+    hash = "sha256-vKdSjj2DHmra/Ug0QWAJGYhB6kB9gSaH130jnnUry2Y=";
   };
 
   patches = [

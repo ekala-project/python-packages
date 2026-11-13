@@ -3,6 +3,7 @@
   buildPythonPackage,
   fetchPypi,
   cython,
+  setuptools,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -17,6 +18,7 @@ buildPythonPackage (finalAttrs: {
   };
   build-system = [
     cython
+    setuptools
   ];
   pythonImportsCheck = [ "pycrfsuite" ];
 

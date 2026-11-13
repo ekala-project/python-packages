@@ -15,14 +15,14 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "retryhttp";
-  version = "1.4.0";
+  version = "1.5.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "austind";
     repo = "retryhttp";
-    tag = "release/v${finalAttrs.version}";
-    hash = "sha256-wUz5cC8O//TqlalDoF1KtUCqONnfCShFv3hU4k4fzuM=";
+    tag = "v${finalAttrs.version}";
+    hash = "sha256-MPS1oAtXNmqZMKHJmt0QQgwr2gZhnrg0M2G4/PGlUhI=";
   };
 
   build-system = [

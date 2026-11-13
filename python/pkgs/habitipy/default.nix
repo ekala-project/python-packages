@@ -8,6 +8,7 @@
   hypothesis,
   pytestCheckHook,
   responses,
+  setuptools_80,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -27,7 +28,7 @@ buildPythonPackage (finalAttrs: {
   dependencies = [
     plumbum
     requests
-    setuptools
+    setuptools_80 # needs pkg_resources at runtime
   ];
 
   nativeCheckInputs = [

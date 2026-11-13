@@ -13,13 +13,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-devtestlabs";
-  version = "9.0.0";
+  version = "9.0.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit (finalAttrs) pname version;
-    extension = "zip";
-    hash = "sha256-2BYNk/09lH5WE8aRkXaw7fcslKxpZ56juSzyf/c5jmQ=";
+    pname = "azure_mgmt_devtestlabs";
+    inherit (finalAttrs) version;
+    hash = "sha256-wdDN1joIwtp4stF8mFtJCo9dJhfQgi94UzLX2ukYLAM=";
   };
 
   build-system = [ setuptools ];

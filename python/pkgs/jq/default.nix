@@ -24,6 +24,11 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-glWEqoS+QaoIiBJu9DXd+VvhPnWOgRT4VaYfMpjbR5g=";
   };
 
+  postPatch = ''
+    substituteInPlace pyproject.toml \
+      --replace-fail '"cython==3.2.3"' '"cython"'
+  '';
+
   build-system = [ setuptools ];
 
   env.JQPY_USE_SYSTEM_LIBS = 1;

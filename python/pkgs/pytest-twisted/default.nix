@@ -29,6 +29,9 @@ buildPythonPackage (finalAttrs: {
     decorator
     greenlet
   ];
+  # pytest_twisted imports twisted, which users provide themselves
+  nativeBuildInputs = [ twisted ];
+
   pythonImportsCheck = [ "pytest_twisted" ];
 
   meta = {

@@ -3,6 +3,7 @@
   buildPythonPackage,
   fetchPypi,
   setuptools,
+  pytest,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -22,6 +23,8 @@ buildPythonPackage (finalAttrs: {
   ];
 
   build-system = [ setuptools ];
+
+  buildInputs = [ pytest ];
 
   pythonImportsCheck = [ "pytest_lazyfixture" ];
   meta = {

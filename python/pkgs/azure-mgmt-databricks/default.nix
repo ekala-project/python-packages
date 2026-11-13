@@ -10,13 +10,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-databricks";
-  version = "2.0.0";
+  version = "3.0.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit (finalAttrs) pname version;
-    extension = "zip";
-    hash = "sha256-cNETYtwtF/X7HbDP5lwa9VuPE28aDbmltR56z3YM9bk=";
+    pname = "azure_mgmt_databricks";
+    inherit (finalAttrs) version;
+    hash = "sha256-/eeIbyV4EU8/W5S9P33VOPLK8J9xSUzKMjU0qJNbOf8=";
   };
 
   build-system = [ setuptools ];

@@ -8,12 +8,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "configargparse";
-  version = "1.7.7";
+  version = "1.9.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-YHvqJ2ohmRIVivoeWnFsP4+I1UL5mX39Q7vQtJKp9aY=";
+    hash = "sha256-SNnCKv/krEGbTdBpH6kp11nh+ZV0vkGCZ4Xy2/PaY6U=";
   };
 
   build-system = [

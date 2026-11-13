@@ -1,9 +1,11 @@
 {
   lib,
+  stdenv,
   buildPythonPackage,
   fetchFromGitHub,
   setuptools,
   bidict,
+  dbus-fast,
   packaging,
   typing-extensions,
 }:
@@ -26,7 +28,8 @@ buildPythonPackage (finalAttrs: {
     bidict
     packaging
     typing-extensions
-  ];
+  ]
+  ++ lib.optionals stdenv.hostPlatform.isLinux [ dbus-fast ];
   # no tests available, do the imports check instead
   pythonImportsCheck = [ "desktop_notifier" ];
 

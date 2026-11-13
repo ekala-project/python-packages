@@ -8,12 +8,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "hepunits";
-  version = "2.4.6";
+  version = "2.4.7";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-vKatqTcUcWbWbp+hUlZvI3iGjXmCEcrWmQCAOZVg+jQ=";
+    hash = "sha256-376enN8mWu6hiWNSyl61BgnhXUl6A8BGa6SpIHY/Yzc=";
   };
 
   build-system = [

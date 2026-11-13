@@ -7,12 +7,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "parse";
-  version = "1.22.1";
+  version = "1.22.4";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-06R0DsPaM44rJYstaXQbcx6t/dylniShS8TuX844yRE=";
+    hash = "sha256-cG1Fj+7VqBsCdo0xVugHC69s7n0VCjo8DNQxAah1w7U=";
   };
 
   build-system = [ setuptools ];

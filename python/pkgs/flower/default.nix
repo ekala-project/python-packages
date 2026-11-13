@@ -12,12 +12,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "flower";
-  version = "2.1.0";
+  version = "2.2.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-7Oef0ZC/0ZiUfjBHDEsmptXfGGHVQwlDDdkm7VFjAv8=";
+    hash = "sha256-xPR1GUL/i1Bp5mBKE24HO4YJcbdliFm9xh2h3BekuzI=";
   };
 
   build-system = [ setuptools ];

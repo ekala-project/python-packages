@@ -72,7 +72,7 @@ let
       "3.14-x86_64-linux" = getSrcFromPypi {
         platform = "manylinux_2_27_x86_64";
         dist = "cp314";
-        hash = "sha256-YSXahTJhBkG30+p5JiF82rUtzLKU72YVRV4rbsueLuY=";
+        hash = "sha256-c56teS3bhUyzyl3s/gCqsIpzETGrLL7tm3T0VFyS/QE=";
       };
       "3.14-aarch64-linux" = getSrcFromPypi {
         platform = "manylinux_2_27_aarch64";

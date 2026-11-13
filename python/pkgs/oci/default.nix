@@ -32,6 +32,11 @@ buildPythonPackage (finalAttrs: {
     "pyOpenSSL"
   ];
 
+  postPatch = ''
+    substituteInPlace pyproject.toml \
+      --replace-fail "setuptools>=78.1.1,<84" "setuptools"
+  '';
+
   build-system = [ setuptools ];
 
   dependencies = [

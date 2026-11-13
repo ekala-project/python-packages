@@ -61,6 +61,7 @@ buildPythonPackage (finalAttrs: {
     "flask-login"
     "flask-cors"
     "requests"
+    "gevent"
   ];
 
   dependencies = [

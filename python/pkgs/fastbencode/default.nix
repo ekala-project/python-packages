@@ -11,12 +11,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "fastbencode";
-  version = "0.3.11";
+  version = "0.3.12";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-fivkW/6BFnzXmYZpiizycOr2Gt1bG8cRN4wrs/BTltU=";
+    hash = "sha256-oNQD8xIqriTTTSaCZl5QWSW7p6bTJG2kgreiqc3OqP4=";
   };
 
   cargoDeps = rustPlatform.importCargoLock { lockFile = ./Cargo.lock; };

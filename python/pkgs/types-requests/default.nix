@@ -8,13 +8,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "types-requests";
-  version = "2.33.0.20260906";
+  version = "2.33.0.20261030";
   pyproject = true;
 
   src = fetchPypi {
     pname = "types_requests";
     inherit (finalAttrs) version;
-    hash = "sha256-dquKD7c2dEoMPe7nqleykn4wHweNnmH1ORs+kgAkFrk=";
+    hash = "sha256-QtdesC7Q+CIJBMj8CNMSl0Ln/OQv1c9wY5XIu0wK2ZA=";
   };
 
   build-system = [ setuptools ];

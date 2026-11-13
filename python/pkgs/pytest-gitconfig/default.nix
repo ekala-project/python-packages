@@ -21,7 +21,7 @@ buildPythonPackage (finalAttrs: {
 
   build-system = [ pdm-backend ];
 
-  buildInput = [ pytest ];
+  buildInputs = [ pytest ];
   pythonImportsCheck = [ "pytest_gitconfig" ];
 
   meta = {

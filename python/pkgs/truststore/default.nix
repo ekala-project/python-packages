@@ -7,12 +7,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "truststore";
-  version = "0.10.4";
+  version = "0.10.5";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-nZG9Q2RjrV5O5KunZmKN1s1wEM8+JGF1azMDcQ7rwwE=";
+    hash = "sha256-MNNpZ8yt7Vy7ONYCxDP1NgADbHnVAvRTOkm2CgO7780=";
   };
 
   build-system = [ flit-core ];

@@ -31,6 +31,11 @@ buildPythonPackage (finalAttrs: {
 
   sourceRoot = "${finalAttrs.src.name}/libs/tracing";
 
+  postPatch = ''
+    substituteInPlace pyproject.toml \
+      --replace-fail '"setuptools<=82.0.1"' '"setuptools"'
+  '';
+
   build-system = [ setuptools ];
 
   dependencies = [

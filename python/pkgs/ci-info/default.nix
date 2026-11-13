@@ -2,20 +2,25 @@
   lib,
   buildPythonPackage,
   fetchPypi,
-  setuptools,
+  hatchling,
+  hatch-vcs,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "ci-info";
-  version = "0.3.0";
+  version = "0.4.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit (finalAttrs) pname version;
-    hash = "sha256-H9UMvUAfKa3/7rGLBIniMtFqwadFisa8MW3qtq5TX7A=";
+    pname = "ci_info";
+    inherit (finalAttrs) version;
+    hash = "sha256-NNWhhyazeAq9+YUjS4cawzEk1k3Y4pSHC4zFtBDBhBg=";
   };
 
-  build-system = [ setuptools ];
+  build-system = [
+    hatchling
+    hatch-vcs
+  ];
 
   pythonImportsCheck = [ "ci_info" ];
 

@@ -12,13 +12,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "google-cloud-dataflow-client";
-  version = "0.14.0";
+  version = "0.14.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "google_cloud_dataflow_client";
     inherit (finalAttrs) version;
-    hash = "sha256-luoVCivPdtJs5hgStMkEhQ6nVARIp1y/a8gLT6LCLac=";
+    hash = "sha256-QUXsjZ90FtQOiLZFTCrBv+S/+dToZCSCQU83gS0gOxo=";
   };
 
   build-system = [ setuptools ];

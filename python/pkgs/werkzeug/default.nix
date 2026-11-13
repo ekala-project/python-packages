@@ -15,12 +15,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "werkzeug";
-  version = "3.1.8";
+  version = "3.1.9";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-m61hpCaNrBEvHFzUYwpW7eYBtu1CAwBneoaQg9cKTEQ=";
+    hash = "sha256-Vcp8cKdWib6TeqJ/j/SwGPBv9IOPxzBFVgvw9aEpEGA=";
   };
 
   build-system = [ flit-core ];

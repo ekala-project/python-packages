@@ -3,32 +3,42 @@
   buildPythonPackage,
   fetchPypi,
   # build-system
-  setuptools,
+  uv-build,
   sphinx,
+  six,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "sphinxcontrib-httpdomain";
-  version = "1.8.1";
+  version = "2.2.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit (finalAttrs) pname version;
-    hash = "sha256-bC3+bKKC119m3zM4absM5zMcAbR122gJ/50Qe3zf4Es=";
+    pname = "sphinxcontrib_httpdomain";
+    inherit (finalAttrs) version;
+    hash = "sha256-onEMmCR2l0KIy0EESs8mM0RoqoXnMBXoehKUxi2T8RQ=";
   };
 
-  build-system = [ setuptools ];
+  postPatch = ''
+    substituteInPlace pyproject.toml \
+      --replace-fail '"uv_build >= 0.12.22, < 0.14.0"' '"uv_build"'
+  '';
 
-  dependencies = [ sphinx ];
+  build-system = [ uv-build ];
 
-  # Check is disabled due to this issue:
-  # https://bitbucket.org/pypa/setuptools/issue/137/typeerror-unorderable-types-str-nonetype
+  dependencies = [
+    six
+    sphinx
+  ];
 
   pythonNamespaces = [ "sphinxcontrib" ];
 
+  pythonImportsCheck = [ "sphinxcontrib.httpdomain" ];
+
   meta = {
     description = "Provides a Sphinx domain for describing RESTful HTTP APIs";
-    homepage = "https://bitbucket.org/birkenfeld/sphinx-contrib";
-    license = lib.licenses.bsd0;
+    homepage = "https://github.com/sphinx-contrib/httpdomain";
+    changelog = "https://sphinxcontrib-httpdomain.readthedocs.io/en/stable/#changelog";
+    license = lib.licenses.bsd2;
   };
 })

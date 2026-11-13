@@ -12,13 +12,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-iothubprovisioningservices";
-  version = "1.1.0";
+  version = "2.1.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit (finalAttrs) pname version;
-    extension = "zip";
-    hash = "sha256-04OoJuff93L62G6IozpmHpEaUbHHHD6nKlkMHVoJvJ4=";
+    pname = "azure_mgmt_iothubprovisioningservices";
+    inherit (finalAttrs) version;
+    hash = "sha256-OWJanx3tLcy4jGBonQJl8mLqf8/dhiJJdWI2yWtW2T4=";
   };
 
   build-system = [ setuptools ];

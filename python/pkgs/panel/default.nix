@@ -21,7 +21,7 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "panel";
-  version = "1.9.4";
+  version = "1.10.0";
 
   format = "wheel";
 
@@ -31,18 +31,10 @@ buildPythonPackage (finalAttrs: {
   src = fetchPypi {
     inherit (finalAttrs) pname version;
     format = "wheel";
-    hash = "sha256-yJxMHnKCl9rwYo6lBw+w2orXd4HioxQtMCR5U3wd5qQ=";
+    hash = "sha256-Fcnyu1hWep42oiOWyzh3bfd+sMxSzZqZzrt4QksDY8A=";
     dist = "py3";
     python = "py3";
   };
-
-  # Fix compatibility with bokeh 3.10.0 which no longer auto-unpacks
-  # typing.Literal in enumeration() (upstream fix: holoviz/panel#8716)
-  postInstall = ''
-    substituteInPlace $out/lib/python*/site-packages/panel/_param.py \
-      --replace-fail 'Alignment = enumeration(AlignmentType)' \
-        'Alignment = enumeration(*t.get_args(AlignmentType))'
-  '';
 
   pythonRelaxDeps = [ "bokeh" ];
 

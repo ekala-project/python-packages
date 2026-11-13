@@ -10,7 +10,7 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "mysqlclient";
-  version = "2.2.8";
+  version = "2.3.1";
   pyproject = true;
 
   nativeBuildInputs = [ pkg-config ];
@@ -20,7 +20,7 @@ buildPythonPackage (finalAttrs: {
   # Tests need a MySQL database
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-jtIMVhWpFdpFG7MIx9AwZkik/ZooCbqVyZJpAAYwYZk=";
+    hash = "sha256-wH4bg7Uw/WxYiCWfNq+tGYDSH8szupc4RlDdI8j3Pqg=";
   };
 
   build-system = [ setuptools ];

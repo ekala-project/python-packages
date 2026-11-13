@@ -12,7 +12,7 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "pydata-sphinx-theme";
-  version = "0.21.0";
+  version = "0.24.0";
 
   format = "wheel";
 
@@ -22,7 +22,7 @@ buildPythonPackage (finalAttrs: {
     dist = "py3";
     python = "py3";
     pname = "pydata_sphinx_theme";
-    hash = "sha256-02p1S/lYCwF4nvqKAYafLXyH+mxUPsvK+xS2vdQ2T5A=";
+    hash = "sha256-GVvBZ6sdzwsxA34m8UX2BGHcnLsesgESg1ZVZ+5PtuU=";
   };
 
   dependencies = [

@@ -24,6 +24,9 @@ buildPythonPackage (finalAttrs: {
 
   pythonRelaxDeps = [ "pyparsing" ];
 
+  # easygui (not packaged) is only used by the olebrowse GUI tool
+  pythonRemoveDeps = [ "easygui" ];
+
   build-system = [ setuptools ];
 
   dependencies = [

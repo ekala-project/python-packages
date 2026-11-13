@@ -9,13 +9,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "python-socketio";
-  version = "5.16.4";
+  version = "5.18.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "python_socketio";
     inherit (finalAttrs) version;
-    hash = "sha256-9/pKQ8yOaHkwtcbkTW4u/CBx7KS+9JuLs9wIJ/f5IjU=";
+    hash = "sha256-B6sOfJSlKDOmevHcBZWK1vsN5prch96RmKYbIliMQNQ=";
   };
 
   build-system = [ setuptools ];

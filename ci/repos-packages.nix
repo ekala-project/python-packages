@@ -2,7 +2,8 @@
 #
 # This includes:
 #   - Native packages from pkgs/ and top-level.nix
-#   - Python package overrides from ci/python-packages.nix
+#   - Python packages from python/pkgs/ and ci/python-packages.nix, exposed
+#     under the `python3Packages` scope (recursed into by nix-eval-jobs)
 #
 # Used by ekapkgs-update to enumerate packages for automated updates.
 { ... }:
@@ -28,12 +29,22 @@ let
     "_internalCallByNamePackageFile"
   ];
 
-  # --- Python package overrides (python-packages.nix) ---
+  # --- Python packages (python/pkgs directory + python-packages.nix overrides) ---
+  pythonOverlay = lib.packageSets.mkAutoCalledPackageDir ../python/pkgs;
   pythonOverrides = import ./python-packages.nix;
-  projectedPython = mkProjection pythonOverrides pkgs.python3Packages;
-  pythonOverlayKeys = pythonOverrides (_: _: { }) { };
+  combinedPythonOverlay = lib.composeManyExtensions [
+    pythonOverlay
+    pythonOverrides
+  ];
+  projectedPython = mkProjection combinedPythonOverlay pkgs.python3Packages;
+  pythonOverlayKeys = combinedPythonOverlay (_: _: { }) { };
   pythonPkgs = removeAttrs (builtins.intersectAttrs pythonOverlayKeys projectedPython) [
     "_internalCallByNamePackageFile"
   ];
 in
-nativePkgs // pythonPkgs
+nativePkgs
+// {
+  python3Packages = pythonPkgs // {
+    recurseForDerivations = true;
+  };
+}

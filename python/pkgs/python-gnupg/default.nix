@@ -7,14 +7,19 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "python-gnupg";
-  version = "0.5.6";
+  version = "0.5.7";
   pyproject = true;
 
   src = fetchPypi {
     pname = "python_gnupg";
     inherit (finalAttrs) version;
-    hash = "sha256-V0PpYhLTiSP8GQg4EtwSeQfkTb07zw201lfikdPCHqw=";
+    hash = "sha256-c+pGIZ+ZKzYesc5UywloEBZwZURUkWo+5d+Lub8MyMw=";
   };
+
+  postPatch = ''
+    substituteInPlace pyproject.toml \
+      --replace-fail '"setuptools >= 68,<75"' '"setuptools >= 68"'
+  '';
 
   build-system = [ setuptools ];
 

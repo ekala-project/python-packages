@@ -20,7 +20,9 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-q9LvsPyFEbaE/TEOlQ5WodVvzAiv4x7C4vaiz1RJLu4=";
   };
 
-  nativeBuildInputs = [ poetry-core ];
+  build-system = [ poetry-core ];
+
+  dependencies = [ django ];
 
   nativeCheckInputs = [
     django

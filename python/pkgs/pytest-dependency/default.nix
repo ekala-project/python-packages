@@ -8,12 +8,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "pytest-dependency";
-  version = "0.6.0";
+  version = "0.6.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit (finalAttrs) pname version;
-    hash = "sha256-k0sOajnZWZUGLBk/fq7tio/6Bv8bzvS2Kw3HSnCLrME=";
+    pname = "pytest_dependency";
+    inherit (finalAttrs) version;
+    hash = "sha256-JGwk0qX8dDqULOxECIU2QOVqBbpY1G5bITodS3OKJGQ=";
   };
 
   build-system = [ setuptools ];

@@ -129,7 +129,8 @@ buildPythonPackage (finalAttrs: {
     rm -r "$IBIS_TEST_DATA_DIRECTORY"
   '';
 
-  pythonImportsCheck = [ "ibis" ] ++ map (backend: "ibis.backends.${backend}") testBackends;
+  # the backend modules import their optional dependencies
+  pythonImportsCheck = [ "ibis" ];
 
   optional-dependencies = {
     athena = [

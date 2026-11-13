@@ -1,5 +1,6 @@
 {
   lib,
+  buildPackages,
   buildPythonPackage,
   fetchFromGitHub,
 
@@ -38,6 +39,8 @@ buildPythonPackage (finalAttrs: {
       protoc --python_out=. $proto
     done
   '';
+
+  nativeBuildInputs = [ buildPackages.protobuf ];
 
   build-system = [ setuptools ];
 

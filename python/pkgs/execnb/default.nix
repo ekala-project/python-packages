@@ -10,15 +10,18 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "execnb";
-  version = "0.3.3";
+  version = "0.3.4";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-0Ca35QfhrNEyBdYf9KCl5tBJjOPDla79h8W0oOGHWu0=";
+    hash = "sha256-2ttR/KDOeXYnnCKQ1/5+ZLEWrlz6nmWFly496nWZbAw=";
   };
 
   build-system = [ setuptools ];
+
+  # 0.3.4 requires fastcore>=2.2.34, but all used APIs exist in 2.2.22
+  pythonRelaxDeps = [ "fastcore" ];
 
   dependencies = [
     fastcore

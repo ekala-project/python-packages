@@ -19,7 +19,7 @@ buildPythonPackage (finalAttrs: {
     owner = "HypothesisWorks";
     repo = "hypothesis";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-Z3LffzA+tsJtvXebTayfRZo32b0LcU2RFDS6bAdCDqU=";
+    hash = "sha256-m/lqi0uuoNwVTZsfK1Jz1NEeMw8Uh9LHy6QYC3b9BoQ=";
   };
 
   sourceRoot = "${finalAttrs.src.name}/hypothesis";

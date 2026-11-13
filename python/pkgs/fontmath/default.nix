@@ -11,13 +11,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "fontmath";
-  version = "0.9.4";
+  version = "0.10.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-H9kZDJ14ThMFw8SXcbkdkQ8kakt8RO3iGcmaB+167aQ=";
-    extension = "zip";
+    hash = "sha256-ews5M22D1/wD+53DxmLvfSaywVNVo0xkPRz70D+J+3Q=";
   };
 
   build-system = [ setuptools ];

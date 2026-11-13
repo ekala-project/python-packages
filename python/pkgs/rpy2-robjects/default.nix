@@ -15,7 +15,7 @@
 }:
 
 buildPythonPackage (finalAttrs: {
-  version = "3.6.5";
+  version = "3.6.6";
   pyproject = true;
   pname = "rpy2-robjects";
 
@@ -24,7 +24,7 @@ buildPythonPackage (finalAttrs: {
     url = "mirror://pypi/${builtins.substring 0 1 finalAttrs.pname}/${finalAttrs.pname}/${
       builtins.replaceStrings [ "-" ] [ "_" ] finalAttrs.pname
     }-${finalAttrs.version}.tar.gz";
-    hash = "sha256-A9CZ9DagGotR+4+L9gJCCpnHzdqMP84OOg9TLja0r+Q=";
+    hash = "sha256-tCq+uUn1YLW4qJioJ6LCZGjA80s0EONKQIX+2EKDJyM=";
   };
 
   patches = [

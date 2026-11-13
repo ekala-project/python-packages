@@ -13,13 +13,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-trafficmanager";
-  version = "1.1.0";
+  version = "2.0.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit (finalAttrs) pname version;
-    extension = "zip";
-    hash = "sha256-Nb8ZAr8VidYm41lx5aqgCeiECUZytHm3mM0buNTy/fk=";
+    pname = "azure_mgmt_trafficmanager";
+    inherit (finalAttrs) version;
+    hash = "sha256-VNkrYIpUHDKkYeYHhMS7wfBOSX+2TrQpxirBirfmzow=";
   };
 
   build-system = [ setuptools ];

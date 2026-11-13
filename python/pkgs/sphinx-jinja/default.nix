@@ -3,7 +3,7 @@
   buildPythonPackage,
   fetchPypi,
   # build-system
-  setuptools,
+  poetry-core,
   sphinx,
 }:
 
@@ -17,7 +17,7 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-xiMrWaiUE5dwvh3G0LAKN55CiM54FXkE4fhHPeo+Bxg=";
   };
 
-  build-system = [ setuptools ];
+  build-system = [ poetry-core ];
 
   dependencies = [ sphinx ];
 

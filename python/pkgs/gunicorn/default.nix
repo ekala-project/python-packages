@@ -6,36 +6,37 @@
   # build-system
   setuptools,
 
-  # dependencies
-  packaging,
-
   # optional-dependencies
   gevent,
+  h2,
+  packaging,
   tornado,
   setproctitle,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "gunicorn";
-  version = "26.2.2";
+  version = "27.0.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "benoitc";
     repo = "gunicorn";
     tag = finalAttrs.version;
-    hash = "sha256-F1zjgh5iCmy3LExWhs0tWRjiqloHEUlD4IqVp7U+ht4=";
+    hash = "sha256-X+/Dr95r/ZNEBUHKVM8ezg9QIxcew6AGIfATy5Gb5Ug=";
   };
 
   build-system = [ setuptools ];
 
-  dependencies = [ packaging ];
-
   optional-dependencies = {
-    gevent = [ gevent ];
+    gevent = [
+      gevent
+      packaging
+    ];
     tornado = [ tornado ];
     gthread = [ ];
     setproctitle = [ setproctitle ];
+    http2 = [ h2 ];
   };
 
   pythonImportsCheck = [ "gunicorn" ];

@@ -16,14 +16,14 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "guidata";
-  version = "3.15.1";
+  version = "3.17.2";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "PlotPyStack";
     repo = "guidata";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-u9iT19xQRQ6vw7tJW9Wr7geYAGdBTDisvsE0pq9jZlo=";
+    hash = "sha256-R9CPpH7rgIBgs1WS7RjxNSfRXeVQi8MJItYRF0WfLUg=";
   };
 
   build-system = [

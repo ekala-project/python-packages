@@ -2,7 +2,7 @@
   lib,
   buildPythonPackage,
   fetchPypi,
-  poetry-core,
+  hatchling,
   ntc-templates,
   paramiko,
   pyserial,
@@ -15,15 +15,15 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "netmiko";
-  version = "4.7.0";
+  version = "4.8.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-lM97/l2u0dBYREzhY34QF33yL5A2g6U9H77kdVNIjGU=";
+    hash = "sha256-YmTPivy9nBDvuDK6yruaiTcEUtUi9sIFMtKtD+/L3Wk=";
   };
 
-  build-system = [ poetry-core ];
+  build-system = [ hatchling ];
 
   pythonRelaxDeps = [ "paramiko" ];
 

@@ -7,12 +7,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "boltons";
-  version = "26.1.0";
+  version = "26.2.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-V2RGirpJOxWZXtF/RqFniQI/Ejyipi1JGpzoJcHL4mw=";
+    hash = "sha256-05z9FcGhw71NcFyCJS+p7bjk9ejMA5+OOa+sextH6Sw=";
   };
 
   build-system = [ flit-core ];

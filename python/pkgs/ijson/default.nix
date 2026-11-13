@@ -9,12 +9,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "ijson";
-  version = "3.5.1";
+  version = "3.6.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-r0C9GoX1XbC4swcVyFh2Ewa9ktVZAUhjb3XDMJ5udr0=";
+    hash = "sha256-7I+SZVJOckkF7PAL3QYcN0uqqNUEXvUEJWlfsG77RfU=";
   };
 
   build-system = [ setuptools ];

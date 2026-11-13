@@ -7,9 +7,10 @@
   uv-dynamic-versioning,
 
   # dependencies
+  anyio,
   genai-prices,
   griffelib,
-  httpx,
+  httpx2,
   opentelemetry-api,
   pydantic-graph,
   pydantic,
@@ -19,14 +20,14 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "pydantic-ai-slim";
-  version = "2.14.1";
+  version = "2.67.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "pydantic";
     repo = "pydantic-ai";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-pqgNRwe3PeBUtMX9evYze6oKUeQJwEO5x9/XS8f9ago=";
+    hash = "sha256-iOev1nXKvuxk4pWyWhzljF07cvBYLWpQzPuyqNqHMdw=";
   };
 
   sourceRoot = "${finalAttrs.src.name}/pydantic_ai_slim";
@@ -36,12 +37,22 @@ buildPythonPackage (finalAttrs: {
     uv-dynamic-versioning
   ];
 
+  # genai-prices in this package set lags behind upstream's lower bound
+  pythonRelaxDeps = [ "genai-prices" ];
+
   dependencies = [
+    anyio
     genai-prices
     griffelib
-    httpx
+    httpx2
     opentelemetry-api
-    pydantic-graph
+    # pydantic-ai-slim pins pydantic-graph to the exact same version; both are
+    # built from the same monorepo, so build it from the same source here.
+    (pydantic-graph.overridePythonAttrs {
+      inherit (finalAttrs) version src;
+      sourceRoot = "${finalAttrs.src.name}/pydantic_graph";
+      dependencies = pydantic-graph.dependencies ++ [ anyio ];
+    })
     pydantic
     typing-inspection
   ];

@@ -15,6 +15,11 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-J1/p9GKQ99D/rqHDMlG5K45GOs4jZgUIzu9SLnWHy28=";
   };
 
+  postPatch = ''
+    substituteInPlace pyproject.toml \
+      --replace-fail '"setuptools >= 78.1.1,< 81"' '"setuptools"'
+  '';
+
   build-system = [ setuptools ];
 
   pythonImportsCheck = [ "roman" ];

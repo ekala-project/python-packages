@@ -17,7 +17,7 @@ buildPythonPackage (finalAttrs: {
     owner = "Changaco";
     repo = "python-libarchive-c";
     tag = finalAttrs.version;
-    hash = "sha256-JqXTV1aD3k88OlW+8rT3xsDuW34+1xErG7hkupvL7Uo=";
+    hash = "sha256-rHGXERR7VmLJ5mL7UMkCMzKTJY+9MGv/Pg+nQqdzlgs=";
   };
 
   patches = [

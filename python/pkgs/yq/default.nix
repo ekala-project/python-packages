@@ -3,34 +3,36 @@
   argcomplete,
   buildPythonPackage,
   fetchPypi,
-  jq,
+  pkgs,
   pyyaml,
-  setuptools,
-  setuptools-scm,
-  replaceVars,
+  hatchling,
+  hatch-vcs,
   tomlkit,
   xmltodict,
 }:
 
+let
+  # The jq CLI, not python3Packages.jq (the Python bindings)
+  jq-bin = pkgs.jq;
+in
 buildPythonPackage (finalAttrs: {
   pname = "yq";
-  version = "3.4.3";
+  version = "4.4.5";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-ulhqGm8wz3BbL5IgZxLfIoHNMgKAIQ57e4Cty48lbjs=";
+    hash = "sha256-4XshqSfQSuM/YacoQ1G2mwpTm/tzuFKgSpB7ebzRXeI=";
   };
 
-  patches = [
-    (replaceVars ./jq-path.patch {
-      jq = "${lib.getBin jq}/bin/jq";
-    })
-  ];
+  postPatch = ''
+    substituteInPlace yq/__init__.py yq/parser.py \
+      --replace-fail '["jq"' '["${lib.getExe jq-bin}"'
+  '';
 
   build-system = [
-    setuptools
-    setuptools-scm
+    hatchling
+    hatch-vcs
   ];
 
   dependencies = [
@@ -39,6 +41,7 @@ buildPythonPackage (finalAttrs: {
     tomlkit
     xmltodict
   ];
+
   pythonImportsCheck = [ "yq" ];
 
   meta = {

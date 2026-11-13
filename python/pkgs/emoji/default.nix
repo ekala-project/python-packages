@@ -7,12 +7,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "emoji";
-  version = "2.15.0";
+  version = "2.16.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-6uSrfYZFanCgCphRJaAyY6XqxUzVXlHX4YSx7TtnV+Q=";
+    hash = "sha256-/56bHEg4nveO0Xh+dpPFVehOa7m6wWvh/WXhYW2/gMg=";
   };
 
   build-system = [ setuptools ];

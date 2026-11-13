@@ -13,13 +13,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "ansible-pylibssh";
-  version = "1.4.0";
+  version = "1.5.0a3";
   pyproject = true;
 
   src = fetchPypi {
     pname = "ansible_pylibssh";
     inherit (finalAttrs) version;
-    hash = "sha256-pItebbIQYrxiWFSOaj5DYwQ9QBKPDmt5Z3Slm2p9voI=";
+    hash = "sha256-O9DxP/ONLbhlAUsYZvrwUQUHZsARb9zydkuVsgL5Eng=";
   };
 
   build-system = [

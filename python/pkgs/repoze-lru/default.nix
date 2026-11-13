@@ -7,13 +7,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "repoze-lru";
-  version = "0.7";
+  version = "0.8";
   pyproject = true;
 
   src = fetchPypi {
-    pname = "repoze.lru";
+    pname = "repoze_lru";
     inherit (finalAttrs) version;
-    hash = "sha256-BCmnXhk4Dk7VDAaU4mrIgZtOp4Ue4fx1g8hXLbgK/3c=";
+    hash = "sha256-olJAjNk/5nDIjWZluW/l1C4HHbolB6HyGh5gmuT6iRo=";
   };
 
   build-system = [ setuptools ];

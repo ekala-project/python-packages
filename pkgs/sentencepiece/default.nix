@@ -22,7 +22,8 @@ stdenv.mkDerivation (finalAttrs: {
     cmake.configurePhaseHook
   ];
 
-  buildInputs = [ abseil-cpp ];
+  # absl::StatusBuilder needs a newer abseil; upstream pins 20260526.0
+  buildInputs = [ finalAttrs.passthru.abseil-cpp ];
 
   outputs = [
     "bin"
@@ -48,6 +49,8 @@ stdenv.mkDerivation (finalAttrs: {
     # See: https://github.com/NixOS/nixpkgs/issues/466092
     "-DSPM_ENABLE_SHARED=OFF"
   ];
+
+  passthru.abseil-cpp = abseil-cpp.v20260526;
 
   meta = {
     homepage = "https://github.com/google/sentencepiece";

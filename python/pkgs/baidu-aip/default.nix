@@ -2,22 +2,23 @@
   lib,
   buildPythonPackage,
   fetchPypi,
-  setuptools,
   chardet,
   requests,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "baidu-aip";
-  version = "4.16.1";
-  pyproject = true;
+  version = "4.16.13";
+  format = "wheel";
 
   src = fetchPypi {
-    inherit (finalAttrs) pname version;
-    hash = "sha256-zNYjEVVwhqFAR7w7CR3rWYefUZcM+sPZ87KYfDDLxN0=";
+    pname = "baidu_aip";
+    inherit (finalAttrs) version;
+    format = "wheel";
+    python = "py3";
+    dist = "py3";
+    hash = "sha256-Y6PNN+KTV04FbDPZqaHl8y+gk4x9R6xdJO6jbnnp4/Y=";
   };
-
-  build-system = [ setuptools ];
 
   dependencies = [
     chardet

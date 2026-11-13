@@ -14,7 +14,6 @@ buildPythonPackage (finalAttrs: {
   pyproject = true;
 
   src = fetchFromGitLab {
-    domain = "dev.gajim.org";
     owner = "gajim";
     repo = "omemo-dr";
     tag = "v${finalAttrs.version}";
@@ -34,7 +33,7 @@ buildPythonPackage (finalAttrs: {
 
   meta = {
     description = "OMEMO Double Ratchet";
-    homepage = "https://dev.gajim.org/gajim/omemo-dr/";
+    homepage = "https://gitlab.com/gajim/omemo-dr";
     license = lib.licenses.gpl3Only;
   };
 })

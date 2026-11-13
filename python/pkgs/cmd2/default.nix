@@ -13,12 +13,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "cmd2";
-  version = "3.2.1";
+  version = "4.4.1";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-bGNyobJs0Uu2IJZTyJ1zAP58FDno3KMPW2tv/bXyFPo=";
+    hash = "sha256-6O8/m/L7j3Ks3a+TS5fEnRTGrivnJxxUe5dZOr3qbB4=";
   };
 
   build-system = [ setuptools-scm ];

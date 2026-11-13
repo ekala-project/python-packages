@@ -7,12 +7,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "hiredis";
-  version = "3.4.0";
+  version = "3.5.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-2hkzE1RDOvaixUwh8tcLoISTPA19LENXjsXFtEZnStU=";
+    hash = "sha256-widZLMVrffJHq+R1XCZyOWW+aJcr4hSfpEGsM9ghMbo=";
   };
 
   build-system = [ setuptools ];

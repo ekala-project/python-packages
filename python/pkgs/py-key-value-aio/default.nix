@@ -2,7 +2,7 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
-  hatchling,
+  uv-build,
   beartype,
   typing-extensions,
 
@@ -27,13 +27,7 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-N+bqgKkSVGEKW/BEWgcFiHEuFjGbgIn/j33Vd0YoJ7s=";
   };
 
-  postPatch = ''
-    substituteInPlace pyproject.toml \
-      --replace-fail 'requires = ["uv_build>=0.11.4,<0.12"]' 'requires = ["hatchling"]' \
-      --replace-fail 'build-backend = "uv_build"' 'build-backend = "hatchling.build"'
-  '';
-
-  build-system = [ hatchling ];
+  build-system = [ uv-build ];
 
   dependencies = [
     beartype

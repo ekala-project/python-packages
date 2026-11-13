@@ -2,33 +2,34 @@
   lib,
   buildPythonPackage,
   fetchPypi,
-  setuptools,
+  hatchling,
   python-dateutil,
-  pytz,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "croniter";
-  version = "6.0.0";
+  version = "7.0.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-N8UEsxOVYRSpg+ziwrB3kLHxCU/p2BzJRzkhR0glVXc=";
+    hash = "sha256-oLJWgwPHdPak6i1M4ucrHukRApxwcNZKG+/gXNsQf1o=";
   };
 
-  build-system = [ setuptools ];
+  # upstream pins exact versions of build-system dependencies
+  postPatch = ''
+    sed -i '/^\[build-system\]/,/^build-backend/c\[build-system]\nrequires = ["hatchling"]\nbuild-backend = "hatchling.build"' pyproject.toml
+  '';
 
-  dependencies = [
-    python-dateutil
-    pytz
-  ];
+  build-system = [ hatchling ];
+
+  dependencies = [ python-dateutil ];
 
   pythonImportsCheck = [ "croniter" ];
 
   meta = {
     description = "Library to iterate over datetime object with cron like format";
-    homepage = "https://github.com/kiorky/croniter";
+    homepage = "https://github.com/pallets-eco/croniter";
     license = lib.licenses.mit;
   };
 })

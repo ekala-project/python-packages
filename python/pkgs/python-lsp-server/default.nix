@@ -46,6 +46,7 @@ buildPythonPackage (finalAttrs: {
 
   pythonRelaxDeps = [
     "autopep8"
+    "jedi"
   ];
 
   build-system = [ setuptools-scm ];

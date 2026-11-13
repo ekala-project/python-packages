@@ -1,18 +1,21 @@
 {
   lib,
   buildPythonPackage,
-  fetchPypi,
+  fetchFromGitHub,
   setuptools,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "openrgb-python";
-  version = "0.3.6";
+  version = "0.3.8";
   pyproject = true;
 
-  src = fetchPypi {
-    inherit (finalAttrs) pname version;
-    hash = "sha256-86jy8hoOgQocdCeapjaRFO9PKx/TW9kcN16UKSWNVps=";
+  # PyPI only ships a wheel for 0.3.8
+  src = fetchFromGitHub {
+    owner = "jath03";
+    repo = "openrgb-python";
+    tag = "v${finalAttrs.version}";
+    hash = "sha256-AncGoP4M++lkjGUw+3wGx2bGajqeCPB7hZWf0dAcCSE=";
   };
 
   build-system = [ setuptools ];

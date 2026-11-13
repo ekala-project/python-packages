@@ -4,8 +4,8 @@
   fetchFromGitHub,
   pytestCheckHook,
   pytest-cov-stub,
-  setuptools,
-  setuptools-scm,
+  hatchling,
+  hatch-vcs,
   scipy,
   pandas,
   numpy,
@@ -13,19 +13,19 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "biocutils";
-  version = "0.4.1";
+  version = "0.5.1";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "BiocPy";
     repo = "BiocUtils";
     tag = finalAttrs.version;
-    hash = "sha256-CKIAJsWw9zCjhIpZpgFgakvszjO+1lZS8535LMfEH2Y=";
+    hash = "sha256-oPJEi8yoSlghiNkS4IWYMg2YfmGo0etiAsJ8YRq+jMM=";
   };
 
   build-system = [
-    setuptools
-    setuptools-scm
+    hatchling
+    hatch-vcs
   ];
 
   dependencies = [ numpy ];

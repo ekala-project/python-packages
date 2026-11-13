@@ -11,13 +11,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-commerce";
-  version = "6.0.0";
+  version = "6.0.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit (finalAttrs) pname version;
-    extension = "zip";
-    sha256 = "6f5447395503b2318f451d24f8021ee08db1cac44f1c3337ea690700419626b6";
+    pname = "azure_mgmt_commerce";
+    inherit (finalAttrs) version;
+    sha256 = "sha256-5KMvKvaEAgsC4ehH0tlAYE3b1gECYSYsM3kf/Gkv3q4=";
   };
 
   build-system = [ setuptools ];

@@ -9,13 +9,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "setuptools-gettext";
-  version = "0.1.18";
+  version = "0.1.20";
   pyproject = true;
 
   src = fetchPypi {
     pname = "setuptools_gettext";
     inherit (finalAttrs) version;
-    hash = "sha256-ySsK5Ibe9QJobNlE8WVZgZ5C+NwLnWg89i50FTl/KzU=";
+    hash = "sha256-yC03SIWbg/ndMB7X9WTFgRmAumrB71yyhctS2TXsSFY=";
   };
 
   build-system = [ setuptools ];

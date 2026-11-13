@@ -10,12 +10,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "bytecode";
-  version = "0.19.0";
+  version = "0.19.1";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-+3M5VzlsuCMB8/ec0yCu8mLNBZLJPWtP1lZ3FQaZliQ=";
+    hash = "sha256-9ZpqUamAA39kGWRIUE0S+wSTeujcuYCUMmXnma8pQ64=";
   };
 
   build-system = [

@@ -4,7 +4,6 @@
   fetchFromGitHub,
   hatch-vcs,
   hatchling,
-  gitMinimal,
   importlib-metadata,
   pydantic,
 }:
@@ -18,8 +17,7 @@ buildPythonPackage (finalAttrs: {
     owner = "pyapp-kit";
     repo = "pydantic-compat";
     tag = "v${finalAttrs.version}";
-    leaveDotGit = true;
-    hash = "sha256-LU+NaQd0W2nRqHmnIcSXfEgIN+TIBkkR871+40Z+WR4=";
+    hash = "sha256-MnfEbE+5jknX15F34l3LTYk9I+y2/sKIt846VzJ6ayo=";
   };
 
   build-system = [
@@ -27,9 +25,7 @@ buildPythonPackage (finalAttrs: {
     hatchling
   ];
 
-  nativeBuildInputs = [
-    gitMinimal
-  ];
+  env.SETUPTOOLS_SCM_PRETEND_VERSION = finalAttrs.version;
 
   dependencies = [
     importlib-metadata

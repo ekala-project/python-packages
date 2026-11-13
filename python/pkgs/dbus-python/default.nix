@@ -18,7 +18,7 @@ lib.fix (
   finalPackage:
   buildPythonPackage (finalAttrs: {
     pname = "dbus-python";
-    version = "1.4.0";
+    version = "1.5.1";
     pyproject = true;
 
     disabled = isPyPy;
@@ -29,8 +29,9 @@ lib.fix (
     ];
 
     src = fetchPypi {
-      inherit (finalAttrs) pname version;
-      hash = "sha256-mRZm5Jj2Db8+Sbi3Z49VWbimUDT99hquYs3s232Jx3A=";
+      pname = "dbus_python";
+      inherit (finalAttrs) version;
+      hash = "sha256-V0I8+H0Jt9CE9CC1W3N/5lTDMzmwbfd5RWINl3lcasQ=";
     };
 
     patches = [

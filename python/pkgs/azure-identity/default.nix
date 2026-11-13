@@ -12,13 +12,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "azure-identity";
-  version = "1.25.3";
+  version = "1.27.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_identity";
     inherit (finalAttrs) version;
-    hash = "sha256-qyPA1jAV9QtjDvbGzzlecmL0Oc4G5dB6ZOh0xyT42eY=";
+    hash = "sha256-akxQ4l6OmkezJKla0CSJflbLPGJB4AlOk7Emor9x7cU=";
   };
 
   build-system = [ setuptools ];
@@ -30,6 +30,9 @@ buildPythonPackage (finalAttrs: {
     msal-extensions
     typing-extensions
   ];
+
+  # msal in this package set lags behind upstream's lower bound
+  pythonRelaxDeps = [ "msal" ];
 
   pythonImportsCheck = [ "azure.identity" ];
 

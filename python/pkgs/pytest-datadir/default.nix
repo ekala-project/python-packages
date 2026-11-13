@@ -2,6 +2,7 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
+  pytest,
   setuptools,
   setuptools-scm,
 }:
@@ -22,6 +23,9 @@ buildPythonPackage (finalAttrs: {
     setuptools
     setuptools-scm
   ];
+
+  buildInputs = [ pytest ];
+
   pythonImportsCheck = [ "pytest_datadir" ];
 
   meta = {

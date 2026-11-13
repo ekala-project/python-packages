@@ -8,12 +8,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "iniparse";
-  version = "0.5";
+  version = "0.5.3";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-ky5SOdUm56y1BAF7twe+ZwGaxCimkyNo5oUWkQk6qEI=";
+    hash = "sha256-nK39ffpVGu1Y+R8zMyF1Ok199v92VlH9pa/+/6zjP+g=";
   };
 
   build-system = [ setuptools ];

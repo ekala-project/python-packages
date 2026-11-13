@@ -7,12 +7,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "testfixtures";
-  version = "12.3.0";
+  version = "12.4.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-2AfOub3W6nzAZjNw3VVoM5BWs13BXCbv/RriZ+MjrPE=";
+    hash = "sha256-zAEIYU+IrOiBe1h76gZhW90iX+w5LtPeivq/9dHvIcc=";
   };
 
   build-system = [ hatchling ];

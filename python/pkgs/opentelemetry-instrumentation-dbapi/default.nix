@@ -16,6 +16,11 @@ buildPythonPackage {
 
   build-system = [ hatchling ];
 
+  pythonRelaxDeps = [
+    "opentelemetry-semantic-conventions"
+    "wrapt"
+  ];
+
   dependencies = [
     opentelemetry-api
     opentelemetry-instrumentation

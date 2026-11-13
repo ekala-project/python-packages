@@ -7,14 +7,14 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "rectangle-packer";
-  version = "2.1.0";
+  version = "2.1.1";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "Penlect";
     repo = "rectangle-packer";
     tag = finalAttrs.version;
-    hash = "sha256-rdryJvY1kSRVIlC8LOr+//0fQLWEIExRQxuI3W53n18=";
+    hash = "sha256-fsBZzcDMXAk0GhsGd6KGPOHzbWj1jhTAVJSRNYN+RlU=";
   };
 
   build-system = [

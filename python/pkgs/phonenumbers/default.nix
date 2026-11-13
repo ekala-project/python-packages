@@ -7,12 +7,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "phonenumbers";
-  version = "9.0.38";
+  version = "9.0.43";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-aAa+vUZjivL8JglnXqBGBnpAUS7Kgb8URhMuL9op0RM=";
+    hash = "sha256-1OUIq4AMPlziGbFL4znes9VaCrga+C/qRHSfyr0B6Qg=";
   };
 
   build-system = [ setuptools ];

@@ -8,13 +8,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "django-filter";
-  version = "26.1";
+  version = "26.2";
   pyproject = true;
 
   src = fetchPypi {
     pname = "django_filter";
     inherit (finalAttrs) version;
-    hash = "sha256-ZuoEAxsGjHfIbhrCbO16P48Tznl/V5V1Fwfj3u/FgFQ=";
+    hash = "sha256-/VzIOZX76fXwf7Xc2hb94PBN4ez474Jii2wOySG3Ua8=";
   };
 
   build-system = [ flit-core ];

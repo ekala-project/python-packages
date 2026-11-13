@@ -10,7 +10,6 @@
   pkg-config,
   # buildInputs
   libtool,
-  libxml2,
   libxslt,
   # dependencies
   lxml,
@@ -34,6 +33,9 @@ buildPythonPackage (finalAttrs: {
       --replace-fail "setuptools==" "setuptools>="
   '';
 
+  # The GitHub tarball has no version metadata for setuptools-scm
+  env.SETUPTOOLS_SCM_PRETEND_VERSION = finalAttrs.version;
+
   build-system = [
     pkgconfig
     setuptools-scm9
@@ -45,7 +47,8 @@ buildPythonPackage (finalAttrs: {
 
   buildInputs = [
     libtool
-    libxml2
+    # python3Packages.libxml2 is the python bindings (default output "py")
+    pkgs.libxml2
     libxslt
     pkgs.xmlsec
   ];

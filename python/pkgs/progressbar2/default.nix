@@ -11,12 +11,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "progressbar2";
-  version = "4.6.0";
+  version = "4.7.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-/kjIlVqEQor3e/8mQrpHBB4bj3yGelt8yU+LwlWo8M8=";
+    hash = "sha256-9BIkObANykFCT3h+pRSEeGhdJldCB4wcfD7eMfBr0AE=";
   };
 
   postPatch = ''
@@ -27,6 +27,10 @@ buildPythonPackage (finalAttrs: {
     setuptools
     setuptools-scm
   ];
+
+  # Upstream requires python-utils >= 4.1.4, but every python_utils API used
+  # by progressbar is already available in the packaged 3.9.1.
+  pythonRelaxDeps = [ "python-utils" ];
 
   dependencies = [ python-utils ];
   pythonImportsCheck = [ "progressbar" ];

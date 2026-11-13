@@ -9,12 +9,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "tqdm";
-  version = "4.70.0";
+  version = "4.70.1";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-VbCw29l0YtBuvukeTawk7U1HAr6Csk8H5sHSfgjOoiA=";
+    hash = "sha256-zv0OyhGyo3o67ndlRNT0rpE/AmiBNbVVa4eI36R0r8Q=";
   };
 
   nativeBuildInputs = [

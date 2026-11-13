@@ -7,13 +7,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "adafruit-pureio";
-  version = "1.1.11";
+  version = "1.1.12";
   pyproject = true;
 
   src = fetchPypi {
-    pname = "Adafruit_PureIO";
+    pname = "adafruit_pureio";
     inherit (finalAttrs) version;
-    hash = "sha256-xM+7NlcxlC0fEJKhFvR9/a4K7xjFsn8QcrWCStXqjHw=";
+    hash = "sha256-HruEFlKP9xBXD7CtMh/tiF1QvsdIzM0pNen9azNsHQg=";
   };
 
   build-system = [ setuptools-scm ];

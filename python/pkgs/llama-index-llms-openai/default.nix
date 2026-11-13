@@ -9,13 +9,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "llama-index-llms-openai";
-  version = "0.8.1";
+  version = "0.8.3";
   pyproject = true;
 
   src = fetchPypi {
     pname = "llama_index_llms_openai";
     inherit (finalAttrs) version;
-    hash = "sha256-F5v3nlRLeIRRozpJxtqYo3IxSY2qdOXGrJYgMJWLYgU=";
+    hash = "sha256-onwXT7hnAglYFRPLWSKRUIBD8Qta/qUZhFRQGSGAi6Y=";
   };
 
   build-system = [ hatchling ];

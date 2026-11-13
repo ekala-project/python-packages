@@ -13,13 +13,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-rdbms";
-  version = "10.1.0";
+  version = "10.1.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit (finalAttrs) pname version;
-    extension = "zip";
-    hash = "sha256-qH1AHIdshHNM3UiIr1UeShRhtLMo2YFq9gy4rFl58DU=";
+    pname = "azure_mgmt_rdbms";
+    inherit (finalAttrs) version;
+    hash = "sha256-ljRVrODWVm0pmCZxPlTtj6h6iP7GRn6P05Mjh8oKLow=";
   };
 
   build-system = [ setuptools ];

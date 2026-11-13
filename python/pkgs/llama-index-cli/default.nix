@@ -21,6 +21,11 @@ buildPythonPackage (finalAttrs: {
 
   build-system = [ hatchling ];
 
+  pythonRelaxDeps = [
+    "llama-index-embeddings-openai"
+    "llama-index-llms-openai"
+  ];
+
   dependencies = [
     llama-index-core
     llama-index-embeddings-openai

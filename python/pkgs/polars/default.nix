@@ -32,6 +32,14 @@ buildPythonPackage (finalAttrs: {
 
   requiredSystemFeatures = [ "big-parallel" ];
 
+  # ethnum 1.5.2 builds TryFromIntError by transmuting `()`, which no longer
+  # compiles now that TryFromIntError is not zero-sized. Build it safely.
+  postPatch = ''
+    substituteInPlace "$cargoDepsCopy"/source-registry-0/ethnum-1.5.2/src/error.rs \
+      --replace-fail "pub const fn tfie()" "pub fn tfie()" \
+      --replace-fail "unsafe { mem::transmute(()) }" "u8::try_from(-1i8).unwrap_err()"
+  '';
+
   build-system = [
     setuptools
     build

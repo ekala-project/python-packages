@@ -19,6 +19,8 @@ buildPythonPackage {
 
   build-system = [ hatchling ];
 
+  pythonRelaxDeps = [ "opentelemetry-semantic-conventions" ];
+
   dependencies = [
     billiard
     celery

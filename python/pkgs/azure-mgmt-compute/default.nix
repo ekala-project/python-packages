@@ -10,13 +10,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-compute";
-  version = "38.3.0";
+  version = "39.0.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_mgmt_compute";
     inherit (finalAttrs) version;
-    hash = "sha256-IxDmCPePs6TTi+IG7CX/B9Z7HJI2/UVo+FevZ0yxdzo=";
+    hash = "sha256-AYfdAor8urh9Q1SYzRafnlT7tXwIeFvNWQCKmgEoYfo=";
   };
 
   build-system = [ setuptools ];

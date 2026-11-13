@@ -6,6 +6,7 @@
   pytest-xdist,
   pytest-dependency,
   pytest-mock,
+  pytest,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -21,6 +22,8 @@ buildPythonPackage (finalAttrs: {
   };
 
   build-system = [ setuptools ];
+
+  buildInputs = [ pytest ];
   strictDeps = true;
 
   meta = {

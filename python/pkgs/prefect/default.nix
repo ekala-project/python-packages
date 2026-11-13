@@ -103,6 +103,11 @@ buildPythonPackage (finalAttrs: {
     versioningit
   ];
 
+  pythonRelaxDeps = [
+    "apprise"
+    "websockets"
+  ];
+
   dependencies = [
     aiosqlite
     alembic

@@ -5,7 +5,7 @@
   fetchpatch,
   fetchPypi,
   # build-system
-  setuptools,
+  flit-core,
   fido2,
   intelhex,
   lib,
@@ -24,7 +24,7 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-88DuhgX4FCwzIKzw4RqWgMtjRdf5huVlKEHAAEminuQ=";
   };
 
-  build-system = [ setuptools ];
+  build-system = [ flit-core ];
 
   postPatch = ''
     substituteInPlace setup.py \
@@ -38,6 +38,8 @@ buildPythonPackage (finalAttrs: {
       hash = "sha256-O0XQoWwhwvLc0CchUTXSuWgHMNG2ZPDy7FsU3RQrdp8=";
     })
   ];
+
+  pythonRelaxDeps = [ "fido2" ];
 
   dependencies = [
     click

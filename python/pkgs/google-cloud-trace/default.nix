@@ -13,13 +13,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "google-cloud-trace";
-  version = "1.20.0";
+  version = "1.21.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "google_cloud_trace";
     inherit (finalAttrs) version;
-    hash = "sha256-9ab5uNpTC3bEUhY7g+UIHBaW8bT2cpDIeLDnNw8ekQo=";
+    hash = "sha256-Xg4CtR253vC+0vg2J/pQQ6juzQDkd6f7mNHgTDGnE8A=";
   };
 
   build-system = [ setuptools ];

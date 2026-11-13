@@ -5,6 +5,7 @@
   botocore,
   brotli,
   buildPythonPackage,
+  pythonOlder,
   cryptography,
   cssselect,
   defusedxml,
@@ -66,7 +67,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   dependencies = [
-    backports-zstd
     brotli
     cryptography
     cssselect
@@ -85,7 +85,8 @@ buildPythonPackage (finalAttrs: {
     twisted
     w3lib
     zope-interface
-  ];
+  ]
+  ++ lib.optionals (pythonOlder "3.14") [ backports-zstd ];
   env.LC_ALL = "en_US.UTF-8";
   postInstall = ''
     installManPage extras/scrapy.1

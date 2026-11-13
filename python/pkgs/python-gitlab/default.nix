@@ -9,13 +9,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "python-gitlab";
-  version = "8.5.0";
+  version = "8.6.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "python_gitlab";
     inherit (finalAttrs) version;
-    hash = "sha256-YoUp7Ezh+ae6LBRbLPXk7sowFUGOUEsub7pwFxtrG1k=";
+    hash = "sha256-0WAhZPtYqygM7vRg+vAVzsbn2Duy2cuuRLpEittVaO8=";
   };
 
   build-system = [ setuptools ];

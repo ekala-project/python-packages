@@ -18,14 +18,14 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "rich-toolkit";
-  version = "0.20.4";
+  version = "0.20.6";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "patrick91";
     repo = "rich-toolkit";
     tag = finalAttrs.version;
-    hash = "sha256-LiFzz2omvXuc0alR6lz29kNsKPhHzhv69SYy0tX2ytY=";
+    hash = "sha256-2y8K/LGQYwvRbMTil8aWG24rgqvdVSyMVzryR5JRz1I=";
   };
 
   postPatch = ''

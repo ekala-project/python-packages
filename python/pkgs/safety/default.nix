@@ -42,6 +42,7 @@ buildPythonPackage (finalAttrs: {
 
   pythonRelaxDeps = [
     "safety-schemas"
+    "typer"
   ];
 
   dependencies = [

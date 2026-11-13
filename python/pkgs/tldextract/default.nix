@@ -16,12 +16,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "tldextract";
-  version = "5.3.2";
+  version = "5.4.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-wBdDG8CADy09G1fM424GZo8JMPYKbYxGFdTiuNopj6k=";
+    hash = "sha256-bJIjISwVwlwNor9zE4k8FPF1yza2SgxC2mekaODGHuM=";
   };
 
   build-system = [

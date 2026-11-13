@@ -7,12 +7,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "merge3";
-  version = "0.0.16";
+  version = "1.0.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-CFLeQ4HLRr5e9O1J46wgxaSgzUao/0u7hwvCeqtUMwY=";
+    hash = "sha256-SoJRBozbLBq6dtMa5q/15qR8eaHuEHHVpY83vwnyp5A=";
   };
 
   build-system = [ setuptools ];

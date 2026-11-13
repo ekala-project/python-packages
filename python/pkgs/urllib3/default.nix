@@ -3,6 +3,7 @@
   buildPythonPackage,
   fetchFromGitHub,
   isPyPy,
+  pythonOlder,
 
   # build-system
   hatchling,
@@ -37,7 +38,7 @@ buildPythonPackage (finalAttrs: {
     brotli = if isPyPy then [ brotlicffi ] else [ brotli ];
     h2 = [ h2 ];
     socks = [ pysocks ];
-    zstd = [ backports-zstd ];
+    zstd = lib.optionals (pythonOlder "3.14") [ backports-zstd ];
   };
   # Tests in urllib3 are mostly timeout-based instead of event-based and
   # are therefore inherently flaky. On your own machine, the tests will

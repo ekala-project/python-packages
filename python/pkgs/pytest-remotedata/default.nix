@@ -2,31 +2,31 @@
   lib,
   buildPythonPackage,
   fetchPypi,
-  setuptools,
-  setuptools-scm,
+  hatchling,
+  hatch-vcs,
   pytest,
-  six,
+  packaging,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "pytest-remotedata";
-  version = "0.4.1";
+  version = "0.4.3";
   pyproject = true;
 
   src = fetchPypi {
-    pname = "pytest-remotedata";
+    pname = "pytest_remotedata";
     inherit (finalAttrs) version;
-    hash = "sha256-BcCL9jjN0e1m6wFzihZHw8cUc3w+w6vgCdLB95O0u1k=";
+    hash = "sha256-KXFPu+rWyeUD9WHeCGbFjcedFaXLFUgLsrlTYmMlAuQ=";
   };
 
   build-system = [
-    setuptools
-    setuptools-scm
+    hatchling
+    hatch-vcs
   ];
 
   dependencies = [
     pytest
-    six
+    packaging
   ];
 
   pythonImportsCheck = [ "pytest_remotedata" ];

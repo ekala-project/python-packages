@@ -3,21 +3,25 @@
   fetchPypi,
   buildPythonPackage,
   setuptools,
+  setuptools-scm,
   requests,
   stone,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "dropbox";
-  version = "12.2.0";
+  version = "12.2.4";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-FQ6oaYFy5LTbVM0r3hnc6iuEi3dsIfum5RE0iRHwh3A=";
+    hash = "sha256-57hJVV4oZeswb5C66NXAnb4NkliFIyZg2S0L6iaeIA0=";
   };
 
-  build-system = [ setuptools ];
+  build-system = [
+    setuptools
+    setuptools-scm
+  ];
 
   dependencies = [
     requests

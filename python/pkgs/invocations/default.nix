@@ -11,6 +11,7 @@
   tqdm,
   twine,
   setuptools,
+  pip,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -34,7 +35,10 @@ buildPythonPackage (finalAttrs: {
 
   build-system = [ setuptools ];
 
+  pythonRelaxDeps = [ "pip" ];
+
   dependencies = [
+    pip
     build
     blessed
     invoke

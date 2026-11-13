@@ -20,6 +20,10 @@ buildPythonPackage (finalAttrs: {
 
   build-system = [ setuptools ];
 
+  dependencies = [
+    hypothesis
+  ];
+
   nativeCheckInputs = [
     pytestCheckHook
     hypothesis

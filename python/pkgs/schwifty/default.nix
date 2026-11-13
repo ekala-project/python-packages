@@ -14,7 +14,7 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "schwifty";
-  version = "2026.7.3";
+  version = "2026.11.0";
   pyproject = true;
 
   src = fetchPypi {

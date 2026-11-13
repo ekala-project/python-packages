@@ -4,7 +4,6 @@
   fetchFromGitHub,
   fetchurl,
   setuptools-scm,
-  git,
   sphinx,
 }:
 
@@ -17,13 +16,12 @@ buildPythonPackage (finalAttrs: {
     owner = "astropy";
     repo = "sphinx-automodapi";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-F5QAHjnLjvcdZOtpY2UIaZliRIv5rciDHWi6DQ9tUmc=";
-    leaveDotGit = true;
+    hash = "sha256-jr/fPxGP6SZQTlz8QQEETJCj1a/8TDxbkCTbsVyqnJA=";
   };
 
   build-system = [ setuptools-scm ];
 
-  nativeBuildInputs = [ git ];
+  env.SETUPTOOLS_SCM_PRETEND_VERSION = finalAttrs.version;
 
   dependencies = [ sphinx ];
 

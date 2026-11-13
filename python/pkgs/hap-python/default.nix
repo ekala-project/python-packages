@@ -18,14 +18,14 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "hap-python";
-  version = "5.0.0";
+  version = "5.2.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "ikalchev";
     repo = "HAP-python";
-    tag = finalAttrs.version;
-    hash = "sha256-+EhxoO5X/ANGh008WE0sJeBsu8SRnuds3hXGxNWpKnk=";
+    tag = "v${finalAttrs.version}";
+    hash = "sha256-ZCsiTps8fjVGV4tRUIN4Ue+opB4B0mRgvmvmm1CzOHQ=";
   };
 
   build-system = [ setuptools ];

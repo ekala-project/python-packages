@@ -9,12 +9,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "ujson";
-  version = "6.0.0";
+  version = "6.1.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-gOIzk/63B1guCtSVw5ekR3tkbQgJTS32T3MW+fr9iq4=";
+    hash = "sha256-rvfqTNni6fijXEU4qXgNWMgNdsXaZqja0mm0zG2TDCk=";
   };
 
   build-system = [ setuptools ];

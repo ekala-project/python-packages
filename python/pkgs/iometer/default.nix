@@ -3,7 +3,7 @@
   aiohttp-sse-client,
   aioresponses,
   buildPythonPackage,
-  fetchFromGitHub,
+  fetchPypi,
   lib,
   poetry-core,
   pytest-asyncio,
@@ -16,11 +16,9 @@ buildPythonPackage (finalAttrs: {
   version = "1.0.2";
   pyproject = true;
 
-  src = fetchFromGitHub {
-    owner = "iometer-gmbh";
-    repo = "iometer.py";
-    tag = "v${finalAttrs.version}";
-    hash = "sha256-50tq+z1+8CX58Yj6GztYXStHMG+IncOHDgwK8WhxVcQ=";
+  src = fetchPypi {
+    inherit (finalAttrs) pname version;
+    hash = "sha256-Go3C3Nmo9vVATZmdWM9GPG0PbfqHHhB9fUel38UgD98=";
   };
 
   build-system = [ poetry-core ];

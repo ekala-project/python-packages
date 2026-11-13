@@ -7,13 +7,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "zope.hookable";
-  version = "8.3";
+  version = "8.4";
   pyproject = true;
 
   src = fetchPypi {
     pname = "zope_hookable";
     inherit (finalAttrs) version;
-    hash = "sha256-oFyfiks/IRhMxCPa1hFjQsHFmBjuseTL34QfQkOVLU8=";
+    hash = "sha256-yg/689O7yoPpA3g5WrMb33xmvfPe1NeIzBxkURRqaew=";
   };
 
   build-system = [ setuptools ];

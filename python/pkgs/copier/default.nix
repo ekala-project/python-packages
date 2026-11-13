@@ -69,7 +69,12 @@ buildPythonPackage (finalAttrs: {
     questionary
   ];
 
-  makeWrapperArgs = [ "--suffix PATH : ${lib.makeBinPath [ git ]}" ];
+  makeWrapperArgs = [
+    "--suffix"
+    "PATH"
+    ":"
+    (lib.makeBinPath [ git ])
+  ];
 
   meta = {
     description = "Library and command-line utility for rendering projects templates";

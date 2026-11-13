@@ -10,13 +10,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-servicelinker";
-  version = "1.1.0";
+  version = "1.2.0b3";
   pyproject = true;
 
   src = fetchPypi {
-    inherit (finalAttrs) pname version;
-    hash = "sha256-QVw6Y9HachwBRwCbF0cSGLCAkSJtNnXBvsj5YX1TmJU=";
-    extension = "zip";
+    pname = "azure_mgmt_servicelinker";
+    inherit (finalAttrs) version;
+    hash = "sha256-xRwRH7dsWeWPzsz+z9EZ+Mg+TWT9yneka2LYHsaj6ik=";
   };
 
   build-system = [ setuptools ];

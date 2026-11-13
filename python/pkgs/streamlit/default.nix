@@ -34,12 +34,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "streamlit";
-  version = "1.63.0";
+  version = "1.67.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-HqASGITVYGzwVbjEJgBSja8H0EAeqr/I4i8A4jXqU+s=";
+    hash = "sha256-WBWdrhGZISJQv6X7ugdAmWEpADJmwsN9RlFR73bEjzs=";
   };
 
   build-system = [ setuptools ];

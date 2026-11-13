@@ -20,12 +20,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "nbconvert";
-  version = "7.17.1";
+  version = "7.17.2";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-NNDQp+c848urbFquj09Gh5coCwH9i9LKdG2oVp7d19I=";
+    hash = "sha256-NEohjoWVEXzjc5btAl2ZTxRtB2Im66xZJVovoIWrJNg=";
   };
 
   # Add $out/share/jupyter to the list of paths that are used to search for

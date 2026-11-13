@@ -7,12 +7,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "pylsqpack";
-  version = "0.3.24";
+  version = "1.1.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-jsRV9EYUIo+J441AwbHjeJViDiDsayHjtWL6i3miOJA=";
+    hash = "sha256-CL8maJPcrtgX1yrBRQaglcl7MJ9orlemlGmdGGZgRQ4=";
   };
 
   build-system = [ setuptools ];

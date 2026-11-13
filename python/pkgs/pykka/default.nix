@@ -7,12 +7,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "pykka";
-  version = "4.4.2";
+  version = "4.5.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-VPz7ntXvkuuYv5lhz977xz3fvyQGDjGdUP3m7GbQDYo=";
+    hash = "sha256-gg/MNgRlUrSdfrYf6YCI0aKWMc8zFOjOS8Jqrq2NzU8=";
   };
 
   build-system = [ hatchling ];

@@ -8,12 +8,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "pykcs11";
-  version = "1.5.20";
+  version = "1.5.21";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-H3p8gWT6xjY4Kqew1wJ5rVWBN5dI/BeiC8C+j+V0wlk=";
+    hash = "sha256-WBpS7dKdMzpCC1tCLdoLiKFMXsf6iYtY62lpRFo+RVQ=";
   };
 
   build-system = [ setuptools ];

@@ -20,6 +20,9 @@
   requests,
   retrying,
   nest-asyncio,
+  janus,
+  pydantic,
+  comm,
 
   celery,
   kombu,
@@ -88,6 +91,9 @@ buildPythonPackage (finalAttrs: {
     requests
     retrying
     nest-asyncio
+    janus
+    pydantic
+    comm
   ];
 
   pythonRelaxDeps = [

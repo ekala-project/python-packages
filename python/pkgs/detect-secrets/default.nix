@@ -24,8 +24,7 @@ buildPythonPackage (finalAttrs: {
     owner = "Yelp";
     repo = "detect-secrets";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-Jkmx8gZIbyfjoZRbc+Hd4tDoZTZ/dhJwHfTIU9lt5jY=";
-    leaveDotGit = true;
+    hash = "sha256-VSq9x77OAVadPTqTAhxfx5+HKqXQ+ZTENHdoCuYSFdk=";
   };
 
   build-system = [ setuptools ];

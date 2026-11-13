@@ -7,12 +7,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "rope";
-  version = "1.14.0";
+  version = "1.15.2";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-iAPjtmcxUET2JwsMaaEMBnn58yLtjv5iRak863ZY2mk=";
+    hash = "sha256-fOMEqoY1DZRUUztoF9DHwBMBsKT601bYNytdd981dW8=";
   };
 
   build-system = [ setuptools ];

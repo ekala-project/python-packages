@@ -23,7 +23,7 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-e0UvRwUs+rKFF3ky8bnHV22ZA9sU+AoghcMui2pIzQ0=";
   };
 
-  sourceRoot = "source/python";
+  sourceRoot = "${finalAttrs.src.name}/python";
 
   preBuild = "./build.sh";
 

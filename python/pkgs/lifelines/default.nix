@@ -33,6 +33,8 @@ buildPythonPackage (finalAttrs: {
 
   build-system = [ setuptools ];
 
+  pythonRelaxDeps = [ "pandas" ];
+
   dependencies = [
     autograd
     autograd-gamma

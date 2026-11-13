@@ -10,13 +10,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-botservice";
-  version = "2.0.0";
+  version = "3.0.0b1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit (finalAttrs) pname version;
-    hash = "sha256-hsBNJ8UnwZ2WAKiCFfriulJNxnRFU4ew0OUXIrWm1ro=";
-    extension = "zip";
+    pname = "azure_mgmt_botservice";
+    inherit (finalAttrs) version;
+    hash = "sha256-zjf956+s8UkOhJ4H6wz+Jnx7tyJpcqzziMYmYP1o9FE=";
   };
 
   build-system = [ setuptools ];

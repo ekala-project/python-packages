@@ -23,6 +23,14 @@ buildPythonPackage (finalAttrs: {
   build-system = [ setuptools-scm ];
 
   postPatch = ''
+    # setuptools 82 dropped pkg_resources; setup.py only uses it for version checks
+    substituteInPlace pyproject.toml \
+      --replace-fail '"setuptools>=39.2,<82",' '"setuptools",'
+    substituteInPlace setup.py \
+      --replace-fail "import pkg_resources" "" \
+      --replace-fail 'pkg_resources.require("setuptools>=39.2")' "" \
+      --replace-fail 'pkg_resources.require("setuptools_scm")' ""
+
         # pytest 9.1 removed the func_name field from IdMaker, reducing its
         # positional argument count from 7 to 6. Add a version guard so that
         # the correct number of arguments is passed at import time.

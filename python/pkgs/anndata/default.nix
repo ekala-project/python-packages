@@ -47,7 +47,8 @@ buildPythonPackage (finalAttrs: {
     scipy
     scverse-misc
     zarr
-  ];
+  ]
+  ++ scverse-misc.optional-dependencies.settings;
   pythonImportsCheck = [ "anndata" ];
 
   # Optionally disable pytest-xdist to make it easier to debug the test suite.

@@ -3,24 +3,21 @@
   stdenv,
   buildPythonPackage,
   fetchFromGitHub,
-  anyio,
-  attrs,
   setuptools_80,
   setuptools-scm,
-  tenacity,
   tzlocal,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "apscheduler";
-  version = "4.0.0a6";
+  version = "3.11.3";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "agronholm";
     repo = "apscheduler";
     tag = finalAttrs.version;
-    hash = "sha256-1Gv8Cm0YA6/z2onJu1pSJj0v4lrBLeEfGo+qkJLUwWY=";
+    hash = "sha256-a1EeDOMYH9O5tRBQigZSLp6kBPp81+6biI0s0N79Sck=";
   };
 
   postPatch = ''
@@ -33,9 +30,6 @@ buildPythonPackage (finalAttrs: {
   ];
 
   dependencies = [
-    anyio
-    attrs
-    tenacity
     tzlocal
   ];
   pythonImportsCheck = [ "apscheduler" ];

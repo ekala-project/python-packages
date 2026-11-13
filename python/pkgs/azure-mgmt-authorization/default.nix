@@ -13,13 +13,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-authorization";
-  version = "4.0.0";
+  version = "5.0.0b2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit (finalAttrs) pname version;
-    extension = "zip";
-    hash = "sha256-abhavAmuZPxyl1vUNDEXDYx+tdFmdUuYqsXzhF3lfcQ=";
+    pname = "azure_mgmt_authorization";
+    inherit (finalAttrs) version;
+    hash = "sha256-/Y8IT4rjuWyXC0pPAtnem9VbYMSf2PIGVf30sTESnFc=";
   };
 
   build-system = [ setuptools ];

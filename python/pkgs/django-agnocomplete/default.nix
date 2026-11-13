@@ -2,7 +2,7 @@
   lib,
   django,
   buildPythonPackage,
-  fetchFromGitHub,
+  fetchPypi,
   setuptools,
   setuptools-scm,
   requests,
@@ -18,11 +18,9 @@ buildPythonPackage (finalAttrs: {
   version = "2.2.0";
   pyproject = true;
 
-  src = fetchFromGitHub {
-    owner = "peopledoc";
-    repo = "django-agnocomplete";
-    tag = finalAttrs.version;
-    hash = "sha256-SDuLJM/ZvROkBOSbaVi6FMDRcR5Um4UrdPSq1ZMrlXM=";
+  src = fetchPypi {
+    inherit (finalAttrs) pname version;
+    hash = "sha256-8yZvmQKb5PLOjuRJqsnf9om4MIPoaGnwoUXbe7XirS4=";
   };
 
   build-system = [

@@ -29,18 +29,21 @@
 }:
 buildPythonPackage (finalAttrs: {
   pname = "marimo";
-  version = "0.23.14";
+  version = "0.25.2";
   pyproject = true;
 
   # The github archive does not include the static assets
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-8z8Xq7UQbtq/aSHQFtkabY8CtNGw7VmQOZV7j39blIk=";
+    hash = "sha256-PPo4rITGZiXh98t9yBpB69WSJEAA/+N+/7KKkXZQVrA=";
   };
 
   build-system = [ uv-build ];
 
-  pythonRelaxDeps = [ "jedi" ];
+  pythonRelaxDeps = [
+    "jedi"
+    "msgspec"
+  ];
 
   dependencies = [
     click

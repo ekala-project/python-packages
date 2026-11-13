@@ -2,7 +2,7 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
-  cmake,
+  pkgs,
   setuptools,
 }:
 
@@ -28,7 +28,12 @@ buildPythonPackage (finalAttrs: {
       --replace-fail "4.5.0" "${finalAttrs.version}"
   '';
 
-  nativeBuildInputs = [ cmake ];
+  # cmake generates include/tlsh_version.h, which the extension needs.
+  # pkgs.cmake: the python scope's cmake has no configure hook
+  nativeBuildInputs = [
+    pkgs.cmake
+    pkgs.cmake.configurePhaseHook
+  ];
 
   postConfigure = ''
     cd ../py_ext

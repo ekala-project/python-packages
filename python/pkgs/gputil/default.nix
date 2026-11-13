@@ -22,7 +22,12 @@ buildPythonPackage (finalAttrs: {
 
   build-system = [ setuptools ];
 
-  dependencies = [ setuptools ];
+  # distutils was removed in Python 3.12
+  postPatch = ''
+    substituteInPlace GPUtil/GPUtil.py \
+      --replace-fail "from distutils import spawn" "import shutil" \
+      --replace-fail "spawn.find_executable('nvidia-smi')" "shutil.which('nvidia-smi')"
+  '';
 
   pythonImportsCheck = [ "GPUtil" ];
 

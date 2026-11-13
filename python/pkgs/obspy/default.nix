@@ -14,6 +14,7 @@
   requests,
   scipy,
   sqlalchemy,
+  setuptools_80,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -40,6 +41,7 @@ buildPythonPackage (finalAttrs: {
     requests
     scipy
     sqlalchemy
+    setuptools_80 # needs pkg_resources at runtime
   ];
 
   # Tests require Internet access.

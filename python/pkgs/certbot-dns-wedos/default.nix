@@ -7,17 +7,18 @@
   setuptools,
   requests,
   pytz,
+  tldextract,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "certbot-dns-wedos";
-  version = "2.4";
+  version = "2.5";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) version;
     pname = "certbot_dns_wedos";
-    hash = "sha256-Sle3hoBLwVPF30caCyYtt3raY5Gs9ekg0DthvHxvB4E=";
+    hash = "sha256-3+vel/7ACjD2Ce40PbYOxQWK6K0GuKOh+aCFxmVOAQk=";
   };
 
   build-system = [ setuptools ];
@@ -27,6 +28,7 @@ buildPythonPackage (finalAttrs: {
     acme
     requests
     pytz
+    tldextract
   ];
 
   pythonImportsCheck = [ "certbot_dns_wedos" ];

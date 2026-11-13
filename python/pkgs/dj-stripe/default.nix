@@ -25,6 +25,8 @@ buildPythonPackage (finalAttrs: {
 
   build-system = [ hatchling ];
 
+  pythonRelaxDeps = [ "stripe" ];
+
   dependencies = [
     django
     stripe

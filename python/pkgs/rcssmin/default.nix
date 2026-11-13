@@ -7,12 +7,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "rcssmin";
-  version = "1.2.2";
+  version = "1.3.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-gGmG6vdBRUXtwoodKVI+lWDknhUf9KM32dHwJx1uHMQ=";
+    hash = "sha256-/xWjiQ6zUPGqnsNJmPkUxOL7E/lJSW98JegHV4KBrc8=";
   };
 
   build-system = [ setuptools ];

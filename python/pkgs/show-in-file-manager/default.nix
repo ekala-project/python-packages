@@ -5,8 +5,8 @@
   fetchPypi,
 
   # build-system
-  argparse-manpage,
-  setuptools,
+  hatch-argparse-manpage,
+  hatchling,
 
   # dependencies
   packaging,
@@ -15,17 +15,18 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "show-in-file-manager";
-  version = "1.1.5";
+  version = "1.1.6";
   pyproject = true;
 
   src = fetchPypi {
-    inherit (finalAttrs) pname version;
-    hash = "sha256-7ROhgKHUj9iP3UxYv7yzhgJoZBo4gFGSyBTUE4cZLYQ=";
+    pname = "show_in_file_manager";
+    inherit (finalAttrs) version;
+    hash = "sha256-VZtZbj5WOADPadc0zSNoJCeanYINHYQWQMXxPgBY+bY=";
   };
 
   build-system = [
-    argparse-manpage
-    setuptools
+    hatch-argparse-manpage
+    hatchling
   ];
 
   dependencies = [ packaging ] ++ lib.optional stdenv.hostPlatform.isLinux pyxdg;

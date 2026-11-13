@@ -9,12 +9,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "editor";
-  version = "1.8.0";
+  version = "2.0.1";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-sH4bvLizPwXC5u08537pdWNUrahAoYqtfAU22Wf+TAs=";
+    hash = "sha256-bs3/Qr9KMrolD0Jnbbzddc5fpJjKjdHhkYxjolGFOM8=";
   };
 
   build-system = [ hatchling ];

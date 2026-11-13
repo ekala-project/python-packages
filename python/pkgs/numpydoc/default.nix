@@ -3,6 +3,7 @@
   fetchPypi,
   buildPythonPackage,
   setuptools,
+  setuptools-scm,
   jinja2,
   sphinx,
   tabulate,
@@ -10,15 +11,18 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "numpydoc";
-  version = "1.10.0";
+  version = "1.11.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-P3lw9u7jCRImCmsxrHK7okMoMM1nIlaewX7o0+9f+gE=";
+    hash = "sha256-JtsK2qyAh+mNoFyGsRGY3v2WKu98IfTf/ScDyMbrQYc=";
   };
 
-  build-system = [ setuptools ];
+  build-system = [
+    setuptools
+    setuptools-scm
+  ];
 
   dependencies = [
     jinja2

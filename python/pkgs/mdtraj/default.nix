@@ -40,6 +40,11 @@ buildPythonPackage (finalAttrs: {
     })
   ];
 
+  postPatch = ''
+    substituteInPlace pyproject.toml \
+      --replace-fail '"numpy~=2.0,<2.5"' '"numpy"'
+  '';
+
   build-system = [
     cython
     numpy
@@ -49,6 +54,8 @@ buildPythonPackage (finalAttrs: {
   ];
 
   buildInputs = [ zlib ] ++ lib.optionals stdenv.cc.isClang [ llvmPackages.openmp ];
+
+  pythonRelaxDeps = [ "numpy" ];
 
   dependencies = [
     netcdf4

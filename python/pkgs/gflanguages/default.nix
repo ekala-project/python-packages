@@ -2,6 +2,7 @@
   lib,
   buildPythonPackage,
   fetchPypi,
+  gfmetadata,
   protobuf,
   regex,
   setuptools,
@@ -10,12 +11,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "gflanguages";
-  version = "0.7.7";
+  version = "0.7.11";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-JR+lmwGhPR/RoskpouNzGOE9kRgvSGgzx5Xa196k0eA=";
+    hash = "sha256-Fl0eLXwbAwi5+rJIqWbvgWQFxxpBt5wd0KY4vxW0/OM=";
   };
 
   # Relax the dependency on protobuf 3. Other packages in the Google Fonts
@@ -32,6 +33,7 @@ buildPythonPackage (finalAttrs: {
   ];
 
   dependencies = [
+    gfmetadata
     protobuf
     regex
   ];

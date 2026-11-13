@@ -6,43 +6,54 @@
   # build-system
   hatchling,
   hatch-vcs,
+  hatch-fancy-pypi-readme,
+  docutils,
 
   # dependencies
   cachetools,
-  chardet,
   colorama,
   filelock,
   packaging,
   platformdirs,
   pluggy,
   pyproject-api,
+  python-discovery,
+  tomli-w,
   virtualenv,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "tox";
-  version = "4.34.1";
+  version = "4.67.13";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-7x6Cl0wvXqApVNWQ7guWf61QDDh5smTqGe+5pVTzzGA=";
+    hash = "sha256-n3C0TKLjHZHY/i4pF/UFVUlQrcOWHA7nC7QtsW2QP2I=";
   };
 
   build-system = [
     hatchling
     hatch-vcs
+    hatch-fancy-pypi-readme
+    docutils
+  ];
+
+  pythonRelaxDeps = [
+    "cachetools"
+    "python-discovery"
   ];
 
   dependencies = [
     cachetools
-    chardet
     colorama
     filelock
     packaging
     platformdirs
     pluggy
     pyproject-api
+    python-discovery
+    tomli-w
     virtualenv
   ];
 

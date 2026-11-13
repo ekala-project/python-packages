@@ -34,6 +34,8 @@ buildPythonPackage (finalAttrs: {
 
   build-system = [ setuptools-scm ];
 
+  pythonRelaxDeps = [ "typepy" ];
+
   dependencies = [
     dataproperty
     mbstrdecoder

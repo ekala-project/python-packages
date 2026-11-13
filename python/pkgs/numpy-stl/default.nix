@@ -1,32 +1,31 @@
 {
   lib,
   buildPythonPackage,
-  cython,
   fetchPypi,
   numpy,
   pytestCheckHook,
   python-utils,
-  setuptools,
+  typing-extensions,
+  uv-build,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "numpy-stl";
-  version = "3.2.0";
+  version = "4.1.3";
   pyproject = true;
 
   src = fetchPypi {
     pname = "numpy_stl";
     inherit (finalAttrs) version;
-    hash = "sha256-WiDD95zdqgq8akuZ9Uhqzu1PiBUvKbGaV6zIROGD/U0=";
+    hash = "sha256-KCD2S6Yyg7/lYIHzbrkIkZYUHQjrXgDs0bpQznju4Qc=";
   };
 
-  build-system = [ setuptools ];
-
-  nativeBuildInputs = [ cython ];
+  build-system = [ uv-build ];
 
   dependencies = [
     numpy
     python-utils
+    typing-extensions
   ];
 
   nativeCheckInputs = [ pytestCheckHook ];

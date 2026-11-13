@@ -20,6 +20,8 @@ buildPythonPackage (finalAttrs: {
 
   build-system = [ hatchling ];
 
+  pythonRelaxDeps = [ "opentelemetry-semantic-conventions" ];
+
   dependencies = [
     django
     opentelemetry-api

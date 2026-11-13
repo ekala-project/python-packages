@@ -13,6 +13,21 @@
   glib,
 }:
 
+let
+  # TODO: remove the overrideAttrs once corepkgs' boost passes
+  # --user-config=user-config.jam when enablePython is set; otherwise b2
+  # never sees the python configuration and skips Boost.Python.
+  boost' =
+    (boost.override {
+      enablePython = true;
+      inherit python;
+    }).overrideAttrs
+      (old: {
+        postConfigure = (old.postConfigure or "") + ''
+          cat user-config.jam >> project-config.jam
+        '';
+      });
+in
 buildPythonPackage (finalAttrs: {
   pname = "gattlib";
   version = "0.20210616";
@@ -48,7 +63,7 @@ buildPythonPackage (finalAttrs: {
 
   buildInputs = [
     bluez
-    boost
+    boost'
     glib
   ];
 

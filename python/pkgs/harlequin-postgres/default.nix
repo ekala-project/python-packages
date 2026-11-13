@@ -10,13 +10,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "harlequin-postgres";
-  version = "1.4.1";
+  version = "1.6.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "harlequin_postgres";
     inherit (finalAttrs) version;
-    hash = "sha256-41LHQxJ1Lyeaozv5coTjIu8UR/GFlbC1gyZa2EPfe6s=";
+    hash = "sha256-SGCJBPgWIkk/8k9wW5Re5P+Vx7MV1cn8gdkFggS8IQQ=";
   };
 
   build-system = [

@@ -12,13 +12,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-containerinstance";
-  version = "10.1.0";
+  version = "10.2.0b2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit (finalAttrs) pname version;
-    extension = "zip";
-    hash = "sha256-eNQ3rbKFdPRIyDjtXwH5ztN4GWCYBh3rWdn3AxcEwX4=";
+    pname = "azure_mgmt_containerinstance";
+    inherit (finalAttrs) version;
+    hash = "sha256-Iw7ruTV1/8Zy2LEIg27IscLMMbDvURQPOJPREYvw9tI=";
   };
 
   build-system = [ setuptools ];

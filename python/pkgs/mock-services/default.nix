@@ -1,7 +1,7 @@
 {
   lib,
   buildPythonPackage,
-  fetchFromGitHub,
+  fetchPypi,
   fetchpatch,
   attrs,
   funcsigs,
@@ -15,11 +15,9 @@ buildPythonPackage (finalAttrs: {
   version = "0.3.1";
   pyproject = true;
 
-  src = fetchFromGitHub {
-    owner = "peopledoc";
-    repo = "mock-services";
-    tag = finalAttrs.version;
-    sha256 = "1rqyyfwngi1xsd9a81irjxacinkj1zf6nqfvfxhi55ky34x5phf9";
+  src = fetchPypi {
+    inherit (finalAttrs) pname version;
+    hash = "sha256-sH1RpVsYtzmaLDD9uQCGl98X13F6BK/MyfiWVs6CwZM=";
   };
 
   patches = [

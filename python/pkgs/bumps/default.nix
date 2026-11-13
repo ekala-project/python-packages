@@ -15,17 +15,18 @@
   python,
   scipy,
   setuptools,
+  uncertainties,
   versioningit,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "bumps";
-  version = "1.0.3";
+  version = "1.0.5";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-O5GUoyDlB0X2Z/O3JprN3omoOBDIhv0xrKfUSHTgGpM=";
+    hash = "sha256-mpfKnzG8TV364kE7VmWa2Rzc0/6mZOmMvczPEHEDqjo=";
   };
 
   pythonRemoveDeps = [
@@ -50,6 +51,7 @@ buildPythonPackage (finalAttrs: {
     python
     python-socketio
     scipy
+    uncertainties
     # mpld3 # not packaged
   ];
 

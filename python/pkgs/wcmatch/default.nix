@@ -8,12 +8,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "wcmatch";
-  version = "11.0.1";
+  version = "12.0.1";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-HqK0+meLjKJoJTeY1ZY5Nd85Ey1Hw+JBwKBzIiQAXn0=";
+    hash = "sha256-Tqas73W2V79xrI+pUgFlv1rlUSDE5lWJWlt9TGmJbF4=";
   };
 
   build-system = [ hatchling ];

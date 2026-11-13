@@ -15,12 +15,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "qcengine";
-  version = "0.51.0";
+  version = "0.52.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-I6Ei0TIylYWordjNAj0wXAxMH1Ayv4p6siJz4F18TA0=";
+    hash = "sha256-K9zJPTOkOot5n0fYFS7DtK4CND6X2h7LZW10HIzpMOg=";
   };
 
   build-system = [

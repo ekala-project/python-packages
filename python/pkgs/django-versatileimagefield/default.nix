@@ -21,6 +21,7 @@ buildPythonPackage (finalAttrs: {
 
   build-system = [ setuptools ];
   dependencies = [
+    django
     pillow
     python-magic
   ];

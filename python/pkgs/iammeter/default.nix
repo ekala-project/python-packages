@@ -4,19 +4,31 @@
   fetchPypi,
   # build-system
   setuptools,
+  # dependencies
+  aiohttp,
+  requests,
+  voluptuous,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "iammeter";
-  version = "0.2.1";
+  version = "0.3.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-Q0o392Xf3cY5BkX4ic6pE3XKMSgek5cpW4TMqSh+Ew8=";
+    hash = "sha256-D6CIk0G5c8E7Fmiz/rb1blXh4Ryi3Ld6hF++14U1LyI=";
   };
 
   build-system = [ setuptools ];
+
+  pythonRelaxDeps = [ "aiohttp" ];
+
+  dependencies = [
+    aiohttp
+    requests
+    voluptuous
+  ];
 
   # Module has no tests
 

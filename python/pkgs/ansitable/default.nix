@@ -11,12 +11,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "ansitable";
-  version = "1.0.1";
+  version = "1.2.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-ts0OLMuhxkAkZtnmpV+5Of7BUjmAO2J8irVM8u23DMk=";
+    hash = "sha256-baf/GemGygLLZK3f2Nv7qLYQVP/44O/kWLeP0KLZyhs=";
   };
 
   build-system = [ hatchling ];

@@ -25,6 +25,11 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-qw8sSgsMu6YTiQlzsrePnDKkFBtrxD9RK6ZZE5jFeX0=";
   };
 
+  postPatch = ''
+    substituteInPlace pyproject.toml \
+      --replace-fail '"setuptools_scm>=9.2.0,<10"' '"setuptools_scm"'
+  '';
+
   build-system = [
     setuptools-scm
     cython

@@ -1,32 +1,30 @@
 {
   lib,
-  alibabacloud-endpoint-util,
-  alibabacloud-openapi-util,
+  alibabacloud-gateway-pop,
   alibabacloud-tea-openapi,
-  alibabacloud-tea-util,
   buildPythonPackage,
+  darabonba-core,
   fetchPypi,
   setuptools,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "alibabacloud-rds20140815";
-  version = "15.9.1";
+  version = "16.1.4";
   pyproject = true;
 
   src = fetchPypi {
     pname = "alibabacloud_rds20140815";
     inherit (finalAttrs) version;
-    hash = "sha256-nR1TzieZC84LqDnZWEVp5iTjCwwGU/MVbGSv2n0f4Eg=";
+    hash = "sha256-9vPOedmjTmDWZbozbzFOLdmh1dLP6/UIjVf5YOxphs4=";
   };
 
   build-system = [ setuptools ];
 
   dependencies = [
-    alibabacloud-endpoint-util
-    alibabacloud-openapi-util
+    alibabacloud-gateway-pop
     alibabacloud-tea-openapi
-    alibabacloud-tea-util
+    darabonba-core
   ];
 
   pythonImportsCheck = [ "alibabacloud_rds20140815" ];

@@ -62,7 +62,11 @@ buildPythonPackage (finalAttrs: {
     six
   ];
 
-  makeWrapperArgs = [ "--set-default OPENSSL_CONF ${opensslConf}" ];
+  makeWrapperArgs = [
+    "--set-default"
+    "OPENSSL_CONF"
+    "${opensslConf}"
+  ];
 
   pythonImportsCheck = [
     "impacket"

@@ -49,11 +49,10 @@ buildPythonPackage (finalAttrs: {
     urllib3
   ];
 
-  nativeCheckInputs = [
-    pytestCheckHook
-    # kaggle creates its config dir at import time; needs a writable HOME.
-    writableTmpDirAsHomeHook
-  ];
+  # kaggle creates its config dir at import time; needs a writable HOME.
+  nativeBuildInputs = [ writableTmpDirAsHomeHook ];
+
+  nativeCheckInputs = [ pytestCheckHook ];
 
   # kaggle authenticates at import time; fake creds for the offline checks.
   env = {

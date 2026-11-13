@@ -4,6 +4,7 @@
   fetchFromGitHub,
   poetry-core,
   pydantic,
+  ttp,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -20,7 +21,10 @@ buildPythonPackage (finalAttrs: {
 
   build-system = [ poetry-core ];
 
-  dependencies = [ pydantic ];
+  dependencies = [
+    pydantic
+    ttp
+  ];
 
   postPatch = ''
     substituteInPlace pyproject.toml \

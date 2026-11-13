@@ -8,12 +8,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "watchdog";
-  version = "6.0.0";
+  version = "7.1.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-nd98gv2jro4k3s2hM47eZuHJmIPbk3Edj7lB6qLYwoI=";
+    hash = "sha256-04YeJVQW9JoThEdMsu+gl94WX7Mw1MVDLOZwi1Ce2SI=";
   };
 
   build-system = [ setuptools ];

@@ -11,7 +11,6 @@
   jupyter-client,
   jupyter-core,
   matplotlib-inline,
-  nest-asyncio,
   packaging,
   psutil,
   pyzmq,
@@ -21,16 +20,22 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "ipykernel";
-  version = "7.1.0";
+  version = "7.4.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-WKP8iFM9WTDDVG3H6sZsbSiKzeT4AeIAHmXtxdyc8Ns=";
+    hash = "sha256-QzARTSK5szV1ssfGh1P8j6q7vPvGCwzf+fFN1M5jdC8=";
   };
 
-  # debugpy is optional, see https://github.com/ipython/ipykernel/pull/767
-  pythonRemoveDeps = [ "debugpy" ];
+  pythonRemoveDeps = [
+    # debugpy is optional, see https://github.com/ipython/ipykernel/pull/767
+    "debugpy"
+    # only needed for the tk event loop; not packaged yet
+    "nest-asyncio2"
+  ];
+
+  pythonRelaxDeps = [ "tornado" ];
 
   nativeBuildInputs = [ hatchling ];
 
@@ -40,7 +45,6 @@ buildPythonPackage (finalAttrs: {
     jupyter-client
     jupyter-core
     matplotlib-inline
-    nest-asyncio
     packaging
     psutil
     pyzmq

@@ -11,12 +11,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "preshed";
-  version = "3.0.13";
+  version = "3.0.15";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-119xi7/ZfpkveCfg+n+vapG92cki1bqktQ1icxOWy4k=";
+    hash = "sha256-R8bM2eK1Y59Zg6FkW7Jw6IEpZMA/I+mJ7nmWxkaR/cg=";
   };
 
   build-system = [ setuptools ];

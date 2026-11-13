@@ -5,6 +5,8 @@
   # build-system
   setuptools,
   zlib,
+  numpy,
+  setuptools-scm,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -19,7 +21,11 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-Vq/QdJg2qObJ49lHZ4RjULfI0f7pScLRWGW8NBZoMAw=";
   };
 
-  build-system = [ setuptools ];
+  build-system = [
+    numpy
+    setuptools
+    setuptools-scm
+  ];
 
   buildInputs = [ zlib ];
 

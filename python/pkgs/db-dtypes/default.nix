@@ -25,6 +25,8 @@ buildPythonPackage (finalAttrs: {
 
   pythonRemoveDeps = lib.optionals (pyarrow == null) [ "pyarrow" ];
 
+  pythonRelaxDeps = [ "pandas" ];
+
   dependencies = [
     numpy
     packaging

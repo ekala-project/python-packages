@@ -67,11 +67,18 @@ buildPythonPackage (finalAttrs: {
   ++ pbs-installer.optional-dependencies.download
   ++ pbs-installer.optional-dependencies.install;
 
-  pythonRelaxDeps = [ "installer" ];
+  pythonRelaxDeps = [
+    "findpython"
+    "installer"
+    "poetry-core"
+  ];
 
   pythonNamespaces = [ "poetry" ];
 
-  makeWrapperArgs = [ "--unset PYTHONPATH" ];
+  makeWrapperArgs = [
+    "--unset"
+    "PYTHONPATH"
+  ];
 
   meta = {
     description = "Python dependency management and packaging made easy";

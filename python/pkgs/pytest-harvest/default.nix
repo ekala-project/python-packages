@@ -7,6 +7,7 @@
   decopatch,
   makefun,
   six,
+  setuptools_80,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -31,8 +32,9 @@ buildPythonPackage (finalAttrs: {
       --replace-fail "LooseVersion" "parse"
   '';
 
-  nativeBuildInputs = [
+  build-system = [
     setuptools-scm
+    setuptools_80 # setup.py imports pkg_resources
   ];
 
   buildInputs = [ pytest ];

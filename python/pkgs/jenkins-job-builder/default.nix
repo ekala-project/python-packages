@@ -25,6 +25,8 @@ buildPythonPackage (finalAttrs: {
 
   postPatch = ''
     export HOME=$(mktemp -d)
+    substituteInPlace pyproject.toml \
+      --replace-fail '"setuptools<81"' '"setuptools"'
   '';
 
   build-system = [ setuptools ];

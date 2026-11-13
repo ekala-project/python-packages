@@ -11,6 +11,7 @@
   nbconvert,
   param,
   pyflakes,
+  pyct,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -23,7 +24,10 @@ buildPythonPackage (finalAttrs: {
     sha256 = "sha256-mIdr4mppQqKGBdlLwLECCvKgwYmGMY1zjq/gzV0urRQ=";
   };
 
-  build-system = [ setuptools ];
+  build-system = [
+    pyct
+    setuptools
+  ];
 
   dependencies = [
     pytest

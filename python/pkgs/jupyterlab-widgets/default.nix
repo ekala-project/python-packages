@@ -8,19 +8,21 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "jupyterlab-widgets";
-  version = "3.0.16";
+  version = "3.0.17";
   pyproject = true;
 
   src = fetchPypi {
     pname = "jupyterlab_widgets";
     inherit (finalAttrs) version;
-    hash = "sha256-Qj2gUHHVXPJ6nmAiFtNaOmWj5BzfnF07ZDuBTOOMGeA=";
+    hash = "sha256-bmH+IcqKZgORgKXMUqQz4HJ50v7nnIvpY+ANVRk/F6g=";
   };
 
-  # jupyterlab is required to build from source but we use the pre-build package
+  # jupyter_builder is only needed to build the labextension from source,
+  # but the sdist ships the pre-built assets; the hatch hook is provided by
+  # hatch-jupyter-builder.
   postPatch = ''
     substituteInPlace pyproject.toml \
-      --replace '"jupyterlab~=4.0"' ""
+      --replace-fail '"jupyter_builder>=1.0"' ""
   '';
 
   build-system = [

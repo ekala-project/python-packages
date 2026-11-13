@@ -36,5 +36,7 @@ buildPythonPackage {
   meta = opentelemetry-instrumentation.meta // {
     homepage = "https://github.com/open-telemetry/opentelemetry-python-contrib/blob/main/instrumentation/opentelemetry-instrumentation-botocore";
     description = "Botocore instrumentation for OpenTelemetry";
+    # imports opentelemetry._events, which newer opentelemetry-api no longer provides
+    broken = true;
   };
 }

@@ -8,12 +8,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "pyspnego";
-  version = "0.12.2";
+  version = "0.12.4";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-RIpJGpvw5fuVdWf+RuaAn6g2qkDfzM68x0C7ZKyxvhw=";
+    hash = "sha256-rLMU1spcnOh5lLHuu+LYtofg1WT51lCzBq+0yPnC/9U=";
   };
 
   build-system = [ setuptools ];

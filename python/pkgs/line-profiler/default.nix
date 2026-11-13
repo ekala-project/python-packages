@@ -10,11 +10,12 @@
   scikit-build,
   cmake,
   ubelt,
+  typing-extensions,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "line-profiler";
-  version = "5.0.2";
+  version = "5.1.0";
   pyproject = true;
 
   disabled = isPyPy;
@@ -22,7 +23,7 @@ buildPythonPackage (finalAttrs: {
   src = fetchPypi {
     pname = "line_profiler";
     inherit (finalAttrs) version;
-    hash = "sha256-jYqZDITGS83kWvIq9QLRe8CuEHvkBc5Bu6kq9cOcAAA=";
+    hash = "sha256-Vxei3M8M7WX9GbpeR5WBxHQSgx/naLwhHG0PW6Gtm0c=";
   };
 
   build-system = [ setuptools ];
@@ -32,6 +33,8 @@ buildPythonPackage (finalAttrs: {
     cmake
     scikit-build
   ];
+
+  dependencies = [ typing-extensions ];
 
   optional-dependencies = {
     ipython = [ ipython ];

@@ -4,7 +4,7 @@
   fetchFromGitHub,
   fetchpatch,
   poetry-core,
-  setuptools,
+  setuptools_80,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -30,7 +30,9 @@ buildPythonPackage (finalAttrs: {
 
   build-system = [ poetry-core ];
 
-  dependencies = [ setuptools ];
+  dependencies = [
+    setuptools_80 # needs pkg_resources at runtime
+  ];
 
   # Tests require a running NATS server
 

@@ -45,5 +45,7 @@ buildPythonPackage (finalAttrs: {
     description = "Pulumi python amazon web services provider";
     homepage = "https://github.com/pulumi/pulumi-aws";
     license = lib.licenses.asl20;
+    # depends on pulumi, which is not packaged
+    broken = true;
   };
 })

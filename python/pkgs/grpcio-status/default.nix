@@ -11,13 +11,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "grpcio-status";
-  version = "1.83.1";
+  version = "1.85.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "grpcio_status";
     inherit (finalAttrs) version;
-    hash = "sha256-wIyNVT1quW7/rh2SODneIpJvWjFqlC9IpIBA4EfFF68=";
+    hash = "sha256-P2umCQ15S3FIsj8DNVrd1WvuK3gXShJ4TE2bTijIko4=";
   };
 
   build-system = [ setuptools ];

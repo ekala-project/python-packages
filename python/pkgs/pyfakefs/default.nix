@@ -7,12 +7,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "pyfakefs";
-  version = "6.2.0";
+  version = "6.3.2";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-5Zo220R79QnOnJerPRUQwIzFGJXFMRMlpWCl5bXcGUA=";
+    hash = "sha256-fGe99MEbQpA8fLbHT6Y0Mkha/Gl61viezOb7Ck5PJO0=";
   };
 
   build-system = [ setuptools ];

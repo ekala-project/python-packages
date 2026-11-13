@@ -1,21 +1,23 @@
 {
   lib,
   buildPythonPackage,
-  fetchPypi,
-  setuptools,
+  fetchFromGitHub,
+  hatchling,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "banal";
-  version = "1.0.6";
+  version = "1.1.2";
   pyproject = true;
 
-  src = fetchPypi {
-    inherit (finalAttrs) pname version;
-    hash = "sha256-L+AskwX1MWhEGUj0oD37+i6sxz2zDbSpMwkIPLDiUKU=";
+  src = fetchFromGitHub {
+    owner = "pudo";
+    repo = "banal";
+    tag = finalAttrs.version;
+    hash = "sha256-+G4zSKJangqV1RBJcuK16gAJmpPQQmPg3vEkO9HSFss=";
   };
 
-  build-system = [ setuptools ];
+  build-system = [ hatchling ];
 
   pythonImportsCheck = [ "banal" ];
 

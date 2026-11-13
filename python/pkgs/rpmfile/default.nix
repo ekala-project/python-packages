@@ -2,23 +2,23 @@
   lib,
   buildPythonPackage,
   fetchPypi,
-  setuptools,
-  setuptools-scm,
+  hatchling,
+  hatch-vcs,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "rpmfile";
-  version = "2.1.0";
+  version = "2.2.1";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-CsK7qJJ3xxhcuGHJxtfQyaJovlFpUW28amjxVWqeP5k=";
+    hash = "sha256-j/xE0V+NK2ytHqiFsJ4cpfF0RTLCRxBVTz/khzUG6do=";
   };
 
   build-system = [
-    setuptools
-    setuptools-scm
+    hatchling
+    hatch-vcs
   ];
 
   pythonImportsCheck = [ "rpmfile" ];

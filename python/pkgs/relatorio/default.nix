@@ -2,22 +2,26 @@
   lib,
   buildPythonPackage,
   fetchPypi,
-  setuptools,
+  hatchling,
+  hatch-tryton,
   genshi,
   lxml,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "relatorio";
-  version = "0.11.1";
+  version = "1.0.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-e6CvclFrRfXR5fL2ZG1LZxTTsTRouLsDicCwvXtySGE=";
+    hash = "sha256-GKDoxHIJo9a1ZcETZzD/FJIHwa51SPX5VDgslJgjf0I=";
   };
 
-  build-system = [ setuptools ];
+  build-system = [
+    hatchling
+    hatch-tryton
+  ];
 
   dependencies = [
     genshi
@@ -29,6 +33,6 @@ buildPythonPackage (finalAttrs: {
   meta = {
     description = "Templating library able to output odt and pdf files";
     homepage = "https://relatorio.tryton.org/";
-    license = lib.licenses.gpl2Plus;
+    license = lib.licenses.gpl3Plus;
   };
 })

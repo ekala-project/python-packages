@@ -4,21 +4,26 @@
   fetchPypi,
   django,
   setuptools,
+  setuptools-scm,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "django-colorful";
-  version = "1.3";
+  version = "1.4.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit (finalAttrs) pname version;
-    hash = "sha256-/SRvL7KX7QdNxDSZZtM6HILQMIt/sNbvbi52uQzv/7c=";
+    pname = "django_colorful";
+    inherit (finalAttrs) version;
+    hash = "sha256-9mg3SyD22BNaLeRTTKDW2L2z1GI124ZkqNhTLlrw9m4=";
   };
 
-  build-system = [ setuptools ];
+  build-system = [
+    setuptools
+    setuptools-scm
+  ];
 
-  buildInputs = [ django ];
+  dependencies = [ django ];
 
   # Tests aren't run
 

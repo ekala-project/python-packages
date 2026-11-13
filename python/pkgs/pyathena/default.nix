@@ -13,21 +13,28 @@
   python-dateutil,
   sqlalchemy,
   tenacity,
+  tzdata,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "pyathena";
-  version = "3.36.0";
+  version = "4.2.1";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-AN2Y/6d/HKMLMLNVXru04vccVdMt2LJKCDioE1k/J94=";
+    hash = "sha256-n3PpCzVaesXMdbLWFWCeUsz/J3Jr6OrbPHVf85qSpUk=";
   };
 
   build-system = [
     hatchling
     hatch-vcs
+  ];
+
+  pythonRelaxDeps = [
+    "boto3"
+    "botocore"
+    "fsspec"
   ];
 
   dependencies = [
@@ -36,6 +43,7 @@ buildPythonPackage (finalAttrs: {
     fsspec
     tenacity
     python-dateutil
+    tzdata
   ];
 
   optional-dependencies = {

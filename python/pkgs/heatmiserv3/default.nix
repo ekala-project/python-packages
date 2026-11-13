@@ -12,23 +12,19 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "heatmiserv3";
-  version = "2.0.6";
+  version = "3.0.1";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "andylockran";
     repo = "heatmiserV3";
     tag = finalAttrs.version;
-    hash = "sha256-mwzW52g3Uz7zxL9R5zePDyxMSramEiaiVm6VPlNyNts=";
+    hash = "sha256-crpiSlRSEZBmzsQabEuuJqPpFr/+FTykcZcbSVI2n1M=";
   };
 
   build-system = [ hatchling ];
 
-  pythonRemoveDeps = [
-    # https://github.com/andylockran/heatmiserV3/pull/113
-    "pytest"
-    "pytest-cov"
-  ];
+  pythonRelaxDeps = [ "importlib-resources" ];
 
   dependencies = [
     appdirs

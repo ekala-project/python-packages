@@ -13,13 +13,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-subscription";
-  version = "3.1.1";
+  version = "3.2.0b2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit (finalAttrs) pname version;
-    extension = "zip";
-    hash = "sha256-TiVbTOm5JDV7uMUAmzyIogFNMgOySV4iVvoCe/hOgA4=";
+    pname = "azure_mgmt_subscription";
+    inherit (finalAttrs) version;
+    hash = "sha256-OODkCvi06zNe1RdO8CKNId9z0+7wOYVMQ9KAewD7TmM=";
   };
 
   build-system = [ setuptools ];

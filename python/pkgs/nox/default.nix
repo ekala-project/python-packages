@@ -15,12 +15,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "nox";
-  version = "2026.8.17";
+  version = "2026.10.20";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-jZxpybmWpZ2x6yxpaN6uvC7bxVMX0gWYG7xKNzUdPy4=";
+    hash = "sha256-XaV8AJw9/ddiwGjZB5sXlm7JZ6nrAs2OvPAWqUbq9n8=";
   };
 
   build-system = [ hatchling ];

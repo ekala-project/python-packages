@@ -13,13 +13,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-hanaonazure";
-  version = "1.0.0";
+  version = "1.0.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit (finalAttrs) pname version;
-    extension = "zip";
-    hash = "sha256-8vg0L7/e2L5BZfsNbwELaN8HSIaBHbPiyaULNg7i3To=";
+    pname = "azure_mgmt_hanaonazure";
+    inherit (finalAttrs) version;
+    hash = "sha256-kJb/Z0sKo52A4usdZaMot5OgdrxlODV6KyKuVrSs6GQ=";
   };
 
   build-system = [ setuptools ];

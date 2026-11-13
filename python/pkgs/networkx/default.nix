@@ -17,12 +17,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "networkx";
-  version = "3.6.1";
+  version = "3.7";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-JrfDV6zMDIzeVYrUhig3KLZbapXYXuHNZrr6tMgWhQk=";
+    hash = "sha256-/XelEb2Q8589AWNRNFtSz1MZuBO9ygHeP3VdPMpi6Wo=";
   };
 
   nativeBuildInputs = [ setuptools ];

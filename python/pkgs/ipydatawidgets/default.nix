@@ -22,6 +22,15 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-OU8kiVdlh8/XVTd6CaBn9GytIggZZQkgIf0avL54Uqg=";
   };
 
+  # The sdist ships the prebuilt extensions; jupyterlab and the intermediate
+  # jlabextension/build output are only needed to rebuild them
+  postPatch = ''
+    substituteInPlace pyproject.toml \
+      --replace-fail '"jupyterlab==3.*", ' ""
+    substituteInPlace setup.py \
+      --replace-fail "os.path.join(here, 'packages', 'jlabextension', 'build', 'index.js')," ""
+  '';
+
   build-system = [ setuptools ];
 
   nativeBuildInputs = [ jupyter-packaging ];

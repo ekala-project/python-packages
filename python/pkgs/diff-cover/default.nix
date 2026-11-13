@@ -4,36 +4,32 @@
   fetchPypi,
 
   # build-system
-  poetry-core,
+  hatchling,
 
   # dependencies
   chardet,
   jinja2,
-  jinja2-pluralize,
   pluggy,
   pygments,
-  tomli,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "diff_cover";
-  version = "10.5.1";
+  version = "11.0.1";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-8clBfGIRHkCoHEgsaSxc3RMf+TMXuqmTBEyykZEuu6M=";
+    hash = "sha256-GP/zud9vKMYpU4WfsWMC0d7AGJ158+pDfAvK1cxg3PM=";
   };
 
-  build-system = [ poetry-core ];
+  build-system = [ hatchling ];
 
   dependencies = [
     chardet
     jinja2
-    jinja2-pluralize
     pluggy
     pygments
-    tomli
   ];
 
   pythonImportsCheck = [ "diff_cover" ];

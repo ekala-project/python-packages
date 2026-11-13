@@ -7,6 +7,7 @@
   pycryptodome,
   requests,
   six,
+  setuptools_80,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -28,7 +29,7 @@ buildPythonPackage (finalAttrs: {
     pycryptodome
     requests
     six
-    setuptools
+    setuptools_80 # needs pkg_resources at runtime
   ];
 
   pythonImportsCheck = [ "httpsig" ];

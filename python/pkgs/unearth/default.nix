@@ -5,7 +5,7 @@
   fetchpatch,
   packaging,
   pdm-backend,
-  httpx,
+  httpx2,
   flask,
   pytest-httpserver,
   pytest-mock,
@@ -15,19 +15,19 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "unearth";
-  version = "0.18.3";
+  version = "0.19.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-FAZ88RQckG94fW2dBwy8/dRD/RBYrsqmUM6VGaoQ29w=";
+    hash = "sha256-2Fp7FkgzwdyFMqWQBDy9cVn2rSuR/D508qFv8l7QmMg=";
   };
 
   build-system = [ pdm-backend ];
 
   dependencies = [
     packaging
-    httpx
+    httpx2
   ];
   pythonImportsCheck = [ "unearth" ];
 

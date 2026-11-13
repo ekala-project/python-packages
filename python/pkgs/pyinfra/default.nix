@@ -52,6 +52,7 @@ buildPythonPackage (finalAttrs: {
 
   pythonRelaxDeps = [
     "paramiko"
+    "types-paramiko"
   ];
 
   meta = {

@@ -3,20 +3,21 @@
   buildPythonPackage,
   fetchPypi,
   # build-system
-  setuptools,
+  flit-core,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "sphinxcontrib-jsmath";
-  version = "1.0.1";
+  version = "2.0.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit (finalAttrs) pname version;
-    sha256 = "a9925e4a4587247ed2191a22df5f6970656cb8ca2bd6284309578f2153e0c4b8";
+    pname = "sphinxcontrib_jsmath";
+    inherit (finalAttrs) version;
+    sha256 = "sha256-VR94DPlof5w8dPDPnxisoG4NaViFNFPzgD/k01fFuSQ=";
   };
 
-  build-system = [ setuptools ];
+  build-system = [ flit-core ];
 
   # Check is disabled due to circular dependency of sphinx
 

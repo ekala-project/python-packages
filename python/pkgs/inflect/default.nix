@@ -8,19 +8,26 @@
   setuptools-scm,
 
   # dependencies
+  jaraco-functools,
   more-itertools,
   typeguard,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "inflect";
-  version = "7.5.0";
+  version = "7.6.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-+vGYAcN0LtWgWozjiODY/hoH+NCVyCIB65BPXSetVx8=";
+    hash = "sha256-tGh1tQU0p81fz7WnyXG7k/5olIxDylPpgzvR4aaSIb0=";
   };
+
+  # coherent.licensed is only used to infer license metadata, which is already declared
+  postPatch = ''
+    substituteInPlace pyproject.toml \
+      --replace-fail '"coherent.licensed",' ""
+  '';
 
   build-system = [
     setuptools
@@ -28,6 +35,7 @@ buildPythonPackage (finalAttrs: {
   ];
 
   dependencies = [
+    jaraco-functools
     more-itertools
     typeguard
   ];

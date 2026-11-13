@@ -11,19 +11,20 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "pkg-about";
-  version = "2.4.4";
+  version = "2.5.1";
   pyproject = true;
 
   src = fetchPypi {
     pname = "pkg_about";
     inherit (finalAttrs) version;
-    hash = "sha256-tURSRw79LnIOWij+JzDLLjKNPts9gcXdN4tQ9u/gbuQ=";
+    hash = "sha256-TvtV6p2+F2vWMdaIRJMHm8rPske1hXaP1haEG5ufLBA=";
   };
 
   # Unnecessarily requires the newest versions available for these
   postPatch = ''
     sed -i 's/"setuptools>=[^"]*"/"setuptools>=${setuptools.version}"/' pyproject.toml
     sed -i 's/"packaging>=[^"]*"/"packaging>=${packaging.version}"/' pyproject.toml
+    sed -i 's/"build>=[^"]*"/"build>=${build.version}"/' pyproject.toml
   '';
 
   build-system = [

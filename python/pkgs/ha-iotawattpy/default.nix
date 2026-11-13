@@ -3,21 +3,22 @@
   buildPythonPackage,
   fetchPypi,
   httpx,
-  setuptools,
+  hatchling,
   pytestCheckHook,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "ha-iotawattpy";
-  version = "0.1.2";
+  version = "0.3.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit (finalAttrs) pname version;
-    hash = "sha256-eMsBEbmENjbJME9Gzo4O9LbGo1i0MP0IuwLUAYqxbI8=";
+    pname = "ha_iotawattpy";
+    inherit (finalAttrs) version;
+    hash = "sha256-5DFpSyuAidEdRGYVMbxEfTFA6uzqABnB0AKRytatdK8=";
   };
 
-  build-system = [ setuptools ];
+  build-system = [ hatchling ];
 
   dependencies = [ httpx ];
 
@@ -27,7 +28,7 @@ buildPythonPackage (finalAttrs: {
 
   meta = {
     description = "Python library for the IoTaWatt Energy device";
-    homepage = "https://github.com/gtdiehl/iotawattpy";
+    homepage = "https://github.com/home-assistant-libs/iotawattpy";
     license = lib.licenses.gpl3Plus;
   };
 })

@@ -9,6 +9,8 @@
   # dependencies
   aiofiles,
   aiohttp,
+  pyserial,
+  pyserial-asyncio-fast,
 
   # tests
   mock,
@@ -17,12 +19,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "evolutionhttp";
-  version = "0.0.19";
+  version = "0.1.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-VhWYhkrZVUDu1I6ZZTZlTUhNfpma29tEYBLoT7xBd1M=";
+    hash = "sha256-idsvna8V3o2LDmcxMSrWr4AioiW0zjnKevpE0X922AA=";
   };
 
   build-system = [ hatchling ];
@@ -30,6 +32,8 @@ buildPythonPackage (finalAttrs: {
   dependencies = [
     aiofiles
     aiohttp
+    pyserial
+    pyserial-asyncio-fast
   ];
 
   nativeCheckInputs = [

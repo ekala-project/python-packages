@@ -67,6 +67,7 @@ buildPythonPackage (finalAttrs: {
   ];
 
   dependencies = [
+    ast-serialize
     librt
     mypy-extensions
     pathspec

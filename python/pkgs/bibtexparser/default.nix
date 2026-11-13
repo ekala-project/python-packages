@@ -4,28 +4,24 @@
   fetchFromGitHub,
   setuptools,
   pylatexenc,
-  pyparsing,
   pytestCheckHook,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "bibtexparser";
-  version = "2.0.0b9";
+  version = "2.1.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "sciunto-org";
     repo = "python-${finalAttrs.pname}";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-viBY2hZXsXsfjpi7zMFh3CwQFOKL41F3x0IKULelo/o=";
+    hash = "sha256-ZapMA1x+DUjZuq7RAK3pADuPJuvWXyEuDBfLcEf+Z7Q=";
   };
 
   build-system = [ setuptools ];
 
-  dependencies = [
-    pylatexenc
-    pyparsing
-  ];
+  dependencies = [ pylatexenc ];
 
   nativeCheckInputs = [ pytestCheckHook ];
 
@@ -34,9 +30,6 @@ buildPythonPackage (finalAttrs: {
   meta = {
     description = "Bibtex parser for Python";
     homepage = "https://github.com/sciunto-org/python-bibtexparser";
-    license = with lib.licenses; [
-      lgpl3Only # or
-      bsd3
-    ];
+    license = lib.licenses.mit;
   };
 })

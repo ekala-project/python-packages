@@ -15,21 +15,17 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "ipytablewidgets";
-  version = "0.3.2";
+  version = "0.3.4";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-CGkb//mLUmkyv+hmVJX5+04JGCfw+TtfBxMTXW0bhsw=";
+    hash = "sha256-ni4933km+meObT131hsPWBckhBwjZBbQVG0iepNxjRk=";
   };
 
-  # Opened https://github.com/progressivis/ipytablewidgets/issues/3 to ask if
-  # jupyterlab can be updated upstream. (From commits, it looks like it was
-  # set to this version on purpose.) In the meantime, the build still works.
-  #
   postPatch = ''
     substituteInPlace pyproject.toml \
-      --replace 'jupyterlab>=3.0.0,<3.7' 'jupyterlab>=3.0.0'
+      --replace-fail '"setuptools>=40.8.0,<80"' '"setuptools>=40.8.0"'
   '';
 
   build-system = [

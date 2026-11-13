@@ -5,7 +5,7 @@
   setuptools,
   buildPythonPackage,
   python,
-  graphviz,
+  pkgs,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -22,7 +22,12 @@ buildPythonPackage (finalAttrs: {
 
   build-system = [ setuptools ];
 
-  makeWrapperArgs = [ "--prefix PATH : ${lib.makeBinPath [ graphviz ]}" ];
+  makeWrapperArgs = [
+    "--prefix"
+    "PATH"
+    ":"
+    (lib.makeBinPath [ pkgs.graphviz ])
+  ];
 
   # Needed so dot is on path of the test script
   checkPhase = ''

@@ -9,17 +9,23 @@
 }:
 
 buildPythonPackage (finalAttrs: {
-  version = "3.6.7";
+  version = "3.6.9";
   pyproject = true;
   pname = "rpy2";
 
   disabled = isPyPy;
   src = fetchPypi {
     inherit (finalAttrs) version pname;
-    hash = "sha256-8ftGSc59FOk1EzCI3sl82ifrN858xxA4X4HcpVb+jJ8=";
+    hash = "sha256-93fiAOh0n3PTT4YEZdvJPYh4MQ1cgn8RFfVHQGu8Qlg=";
   };
 
   build-system = [ setuptools ];
+
+  # rpy2 is a metapackage; the rinterface/robjects components lag behind
+  pythonRelaxDeps = [
+    "rpy2-rinterface"
+    "rpy2-robjects"
+  ];
 
   dependencies = [
     rpy2-rinterface

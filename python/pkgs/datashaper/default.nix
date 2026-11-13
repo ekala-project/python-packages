@@ -22,7 +22,10 @@ buildPythonPackage (finalAttrs: {
 
   build-system = [ poetry-core ];
 
-  pythonRelaxDeps = [ "pyarrow" ];
+  pythonRelaxDeps = [
+    "pyarrow"
+    "pandas"
+  ];
 
   dependencies = [
     dacite

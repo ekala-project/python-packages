@@ -12,14 +12,14 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "pydash";
-  version = "8.0.6";
+  version = "8.1.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "dgilland";
     repo = "pydash";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-8DPeM9Q9NrlVF9a6vIfJLGyyB2SrWpZZRHZKqU/DT2w=";
+    hash = "sha256-0EdZQqDOOSDk0EdLrQWSvNt/xIDt8iziPZkNNRfaYnU=";
   };
 
   build-system = [ setuptools ];

@@ -20,6 +20,8 @@ buildPythonPackage {
 
   build-system = [ hatchling ];
 
+  pythonRelaxDeps = [ "opentelemetry-semantic-conventions" ];
+
   dependencies = [
     flask
     opentelemetry-api

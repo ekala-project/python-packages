@@ -23,6 +23,10 @@ buildPythonPackage (finalAttrs: {
     setuptools
   ];
 
+  dependencies = [
+    flake8
+  ];
+
   nativeCheckInputs = [
     flake8
     pytestCheckHook

@@ -12,12 +12,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "uhi";
-  version = "1.1.1";
+  version = "1.2.1";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-05xNwWLWkby0Q1KanPX+mbEeFKOHzfgoQVTMJYcNL/A=";
+    hash = "sha256-/G7lskV69UTYmATvX1Uwyl/JSKUuMWjNXEU5sDp0Lc4=";
   };
 
   build-system = [

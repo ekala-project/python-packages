@@ -13,12 +13,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "pysaml2";
-  version = "7.5.4";
+  version = "7.5.5";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-uCfcqrc8T3/gAclFQB60Qs/aXSIAHOpQwgwTjpre/+o=";
+    hash = "sha256-vRw/NmeAfeYdcNjlzzJhhxnZ3BuRptFqKR73oeqlL/8=";
   };
 
   pythonRelaxDeps = [

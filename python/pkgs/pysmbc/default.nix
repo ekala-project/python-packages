@@ -27,5 +27,7 @@ buildPythonPackage (finalAttrs: {
     description = "Libsmbclient binding for Python";
     homepage = "https://github.com/hamano/pysmbc";
     license = lib.licenses.gpl2Plus;
+    # needs libsmbclient from samba, which is not packaged
+    broken = true;
   };
 })

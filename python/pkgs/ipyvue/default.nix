@@ -9,13 +9,20 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "ipyvue";
-  version = "1.12.0";
+  version = "3.1.1";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-QIteamTiA/xnn0R6Bx49vBeKspBpgvJIrfci/IR3P/o=";
+    hash = "sha256-ZtyXnMyFYNGn2MtfJNjVIcOABV2c/vb/9U7oVsH3cpo=";
   };
+
+  # The sdist ships the prebuilt labextension; jupyterlab is only needed
+  # to rebuild the JS assets from a git checkout.
+  postPatch = ''
+    substituteInPlace pyproject.toml \
+      --replace-fail '"jupyterlab~=4.0",' ""
+  '';
 
   build-system = [ setuptools ];
 
@@ -25,7 +32,7 @@ buildPythonPackage (finalAttrs: {
 
   meta = {
     description = "Jupyter widgets base for Vue libraries";
-    homepage = "https://github.com/mariobuikhuizen/ipyvue";
+    homepage = "https://github.com/widgetti/ipyvue";
     license = lib.licenses.mit;
   };
 })

@@ -3,7 +3,7 @@
   buildPythonPackage,
   fetchPypi,
   # build-system
-  setuptools,
+  poetry-core,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -16,7 +16,7 @@ buildPythonPackage (finalAttrs: {
     hash = "sha256-8UhaZyGdN/N6UwR7pPYQR2hZCz3TrBxr1KOBJRx28ok=";
   };
 
-  build-system = [ setuptools ];
+  build-system = [ poetry-core ];
 
   pythonImportsCheck = [ "localimport" ];
 

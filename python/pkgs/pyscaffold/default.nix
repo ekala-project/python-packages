@@ -50,6 +50,8 @@ buildPythonPackage (finalAttrs: {
     substituteInPlace setup.cfg --replace "platformdirs>=2,<4" "platformdirs"
   '';
 
+  pythonRelaxDeps = [ "configupdater" ];
+
   dependencies = [
     colorama
     configupdater

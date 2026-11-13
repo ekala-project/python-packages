@@ -3,27 +3,29 @@
   buildPythonPackage,
   fetchPypi,
   # build-system
-  setuptools,
+  flit-core,
   blessed,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "dashing";
-  version = "0.1.0";
+  version = "0.2.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-JRRgjg8pp3Xb0bERFWEhnOg9U8+kuqL+QQH6uE/Vbxs=";
+    hash = "sha256-rrVgIOoq4XCglJj/I/nDDMdsArg940Z+EmIRJXirvZs=";
   };
 
-  build-system = [ setuptools ];
+  build-system = [ flit-core ];
 
   dependencies = [ blessed ];
+
+  pythonImportsCheck = [ "dashing" ];
 
   meta = {
     homepage = "https://github.com/FedericoCeratto/dashing";
     description = "Terminal dashboards for Python";
-    license = lib.licenses.gpl3;
+    license = lib.licenses.lgpl3Plus;
   };
 })

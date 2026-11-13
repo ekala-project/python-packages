@@ -2,24 +2,29 @@
   lib,
   buildPythonPackage,
   fetchFromGitHub,
-  setuptools,
+  uv-build,
   pytestCheckHook,
   colorama,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "ansimarkup";
-  version = "2.1.0";
+  version = "2.2.0";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "gvalkov";
     repo = "python-ansimarkup";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-+kZt8tv09RHrMRZtvJPBBiFaeCksXyrlHqIabPrXYDY=";
+    hash = "sha256-nM0XalJm7/PwjSj9imw1yYjfdwofV2bcA/jsjIibsEI=";
   };
 
-  build-system = [ setuptools ];
+  postPatch = ''
+    substituteInPlace pyproject.toml \
+      --replace-fail "uv_build>=0.9.29,<0.10.0" uv_build
+  '';
+
+  build-system = [ uv-build ];
 
   dependencies = [ colorama ];
 

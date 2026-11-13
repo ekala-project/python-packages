@@ -7,22 +7,22 @@
   hatchling,
 
   # dependencies
-  httpx,
+  httpx2,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "safehttpx";
-  version = "0.1.7";
+  version = "0.2.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-2yAcCXjEHt24u0gPPu5Z3WcwT92RZGA16dmnIASanSM=";
+    hash = "sha256-vWmKWhcwd3BAzP2sCu96e9sQ9ZkxeWxMmcAD3JDf8oE=";
   };
 
   build-system = [ hatchling ];
 
-  dependencies = [ httpx ];
+  dependencies = [ httpx2 ];
 
   pythonImportsCheck = [ "safehttpx" ];
 

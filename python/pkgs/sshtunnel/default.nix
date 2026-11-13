@@ -9,16 +9,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "sshtunnel";
-  version = "0.4.0";
+  version = "0.5.1";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-58sOp3Tbgb+RhE2yLecqQKro97D5u5ug9mbUdO9r+fw=";
+    hash = "sha256-t2KJAeNKKXoadU0Tbl4SYs/e8cPgoZ91R0RX/7SdaDg=";
   };
-
-  # https://github.com/pahaz/sshtunnel/pull/301
-  patches = [ ./paramiko-4.0-compat.patch ];
 
   build-system = [ setuptools ];
 

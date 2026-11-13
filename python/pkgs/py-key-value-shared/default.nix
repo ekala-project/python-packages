@@ -41,5 +41,7 @@ buildPythonPackage (finalAttrs: {
     description = "Shared code between key-value-aio and key-value-sync";
     homepage = "https://github.com/strawgate/py-key-value";
     license = lib.licenses.asl20;
+    # key-value-shared was merged into py-key-value-aio upstream; the 0.4 source has no such subproject
+    broken = true;
   };
 })

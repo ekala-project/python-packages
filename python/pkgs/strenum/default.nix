@@ -16,7 +16,7 @@ buildPythonPackage (finalAttrs: {
     owner = "irgeek";
     repo = "StrEnum";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-LrDLIWiV/zIbl7CwKh7DAy4LoLyY7+hfUu8nqduclnA=";
+    hash = "sha256-QK8MI1fTlojp8de/2C3Fi6vcpMuxQlpBshfip8AXcMA=";
   };
 
   patches = [

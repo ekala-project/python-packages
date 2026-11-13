@@ -10,12 +10,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "msal";
-  version = "1.38.0";
+  version = "1.39.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-TxD/Ele6z9F4HyLoW9K41DrRtJDztqr9eQZnHK3t1GQ=";
+    hash = "sha256-arfeM15tf1cX4sfh2/huTdovas88Vnc7eNxT68Y5W18=";
   };
 
   build-system = [ setuptools ];

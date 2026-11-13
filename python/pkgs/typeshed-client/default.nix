@@ -9,12 +9,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "typeshed_client";
-  version = "2.13.0";
+  version = "2.15.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-hc5zvpil46Ucr7LikhZT43Wc5+nRUwrcypNd7CARUvI=";
+    hash = "sha256-wVRqd3BUvuISjie7ULRVQAoY+AlipQPVNQfa7OXD60U=";
   };
 
   build-system = [ setuptools ];

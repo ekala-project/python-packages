@@ -5,30 +5,26 @@
   python-dateutil,
   scramp,
   hatchling,
-  setuptools,
+  versioningit,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "pg8000";
-  version = "1.31.5";
+  version = "1.31.6";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-RuuwO+UrenfAPHJcedosooHW6PWVd8pmsXyQCWGMrng=";
+    hash = "sha256-VTskAlbUstjwrSryjQffH5mAJH90rJjSwrVzdi7B/xs=";
   };
-
-  postPatch = ''
-    # Upstream uses versioningit to set the version
-    sed -i "/versioningit >=/d" pyproject.toml
-    sed -i '/^name =.*/a version = "${finalAttrs.version}"' pyproject.toml
-    sed -i "/dynamic =/d" pyproject.toml
-  '';
 
   build-system = [
     hatchling
-    setuptools
+    versioningit
   ];
+
+  # Upstream pins scramp == 1.5.0
+  pythonRelaxDeps = [ "scramp" ];
 
   dependencies = [
     python-dateutil

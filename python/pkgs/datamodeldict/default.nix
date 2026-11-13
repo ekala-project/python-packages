@@ -3,22 +3,22 @@
   buildPythonPackage,
   fetchPypi,
   # build-system
-  setuptools,
+  uv-build,
   xmltodict,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "datamodeldict";
-  version = "0.9.9";
+  version = "0.9.11";
   pyproject = true;
 
   src = fetchPypi {
-    pname = "DataModelDict";
+    pname = "datamodeldict";
     inherit (finalAttrs) version;
-    hash = "sha256-DadBRsc8qEu9PWgMNllGS2ESKL7kgBLDhg4yDr87WRk=";
+    hash = "sha256-ziLE297fyVJw2Fjz/GuinnSgZy7LuwZP9N3KPAXiEQw=";
   };
 
-  build-system = [ setuptools ];
+  build-system = [ uv-build ];
 
   dependencies = [ xmltodict ];
 

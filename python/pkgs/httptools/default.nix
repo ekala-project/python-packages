@@ -8,12 +8,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "httptools";
-  version = "0.8.0";
+  version = "0.9.0";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-ayoy8Y2X4W6Qgn16gZ/6jb2MwkX8Th+p0QlbVO9L2Zk=";
+    hash = "sha256-1ITrt+Oj81l7D2RfvRuFYzZ0yoCMH1uhHCyvfGb1yLY=";
   };
 
   postPatch = ''

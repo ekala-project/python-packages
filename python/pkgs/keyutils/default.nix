@@ -2,10 +2,10 @@
   lib,
   buildPythonPackage,
   cython,
-  fetchFromGitHub,
+  fetchPypi,
   # build-system
   setuptools,
-  keyutils,
+  pkgs,
 }:
 
 buildPythonPackage (finalAttrs: {
@@ -13,12 +13,9 @@ buildPythonPackage (finalAttrs: {
   version = "0.6";
   pyproject = true;
 
-  # github version comes bundled with tests
-  src = fetchFromGitHub {
-    owner = "sassoftware";
-    repo = "python-keyutils";
-    tag = finalAttrs.version;
-    sha256 = "0pfqfr5xqgsqkxzrmj8xl2glyl4nbq0irs0k6ik7iy3gd3mxf5g1";
+  src = fetchPypi {
+    inherit (finalAttrs) pname version;
+    hash = "sha256-qc+6zDOlraFlUx/y1uEkHsk6nwyrxjIF1v9z+O/zN1I=";
   };
 
   build-system = [ setuptools ];
@@ -32,6 +29,8 @@ buildPythonPackage (finalAttrs: {
   '';
 
   nativeBuildInputs = [ cython ];
+
+  buildInputs = [ pkgs.keyutils ];
 
   meta = {
     description = "Set of python bindings for keyutils";

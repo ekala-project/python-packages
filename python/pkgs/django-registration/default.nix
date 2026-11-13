@@ -23,6 +23,7 @@ buildPythonPackage (finalAttrs: {
   build-system = [ pdm-backend ];
 
   dependencies = [
+    django
     confusable-homoglyphs
   ];
 

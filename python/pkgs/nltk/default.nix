@@ -14,20 +14,15 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "nltk";
-  version = "3.10.3";
+  version = "3.10.4";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-u5MnpGHDgRwvpJAOA4QEAfISat+zDABygnxDO9JETqQ=";
+    hash = "sha256-RGefTpIgq/1JbSyM2yL4QlzL5VdgT5qlysscRAA9q8E=";
   };
 
   build-system = [ setuptools ];
-
-  patches = [
-    # https://github.com/nltk/nltk/security/advisories/GHSA-jm6w-m3j8-898g
-    # https://github.com/nltk/nltk/security/advisories/GHSA-469j-vmhf-r6v7
-  ];
 
   dependencies = [
     click

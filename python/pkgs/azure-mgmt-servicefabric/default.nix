@@ -10,12 +10,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-servicefabric";
-  version = "2.1.0";
+  version = "2.2.0b2";
   pyproject = true;
 
   src = fetchPypi {
-    inherit (finalAttrs) pname version;
-    hash = "sha256-oIQzBJVUQ2yQhEvIqWgg6INplITm/8mQMv0lcfjF99Y=";
+    pname = "azure_mgmt_servicefabric";
+    inherit (finalAttrs) version;
+    hash = "sha256-c46H7aPFj0EbqQ0RLfXHnqlJB2g/19PBHt2bXiNtSmk=";
   };
 
   nativeBuildInputs = [ setuptools ];

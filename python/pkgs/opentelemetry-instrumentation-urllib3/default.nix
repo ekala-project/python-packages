@@ -20,7 +20,7 @@
   respx,
 }:
 
-buildPythonPackage {
+buildPythonPackage rec {
   inherit (opentelemetry-instrumentation) version src;
   pname = "opentelemetry-instrumentation-urllib3";
   pyproject = true;
@@ -28,6 +28,11 @@ buildPythonPackage {
   sourceRoot = "${opentelemetry-instrumentation.src.name}/instrumentation/opentelemetry-instrumentation-urllib3";
 
   build-system = [ hatchling ];
+
+  pythonRelaxDeps = [
+    "opentelemetry-semantic-conventions"
+    "wrapt"
+  ];
 
   dependencies = [
     opentelemetry-api
@@ -42,6 +47,9 @@ buildPythonPackage {
       urllib3
     ];
   };
+
+  # the module imports the instrumented library, so pythonImportsCheck needs it
+  nativeBuildInputs = optional-dependencies.instruments;
 
   pythonImportsCheck = [ "opentelemetry.instrumentation.urllib3" ];
   meta = opentelemetry-instrumentation.meta // {

@@ -11,13 +11,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-loganalytics";
-  version = "12.0.0";
+  version = "14.0.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit (finalAttrs) pname version;
-    extension = "zip";
-    hash = "sha256-2hKKfgKRvn+iBjhI35KpGAz1wW1CrcCdK8Lv1xFTa/s=";
+    pname = "azure_mgmt_loganalytics";
+    inherit (finalAttrs) version;
+    hash = "sha256-IA7Mh0S2FsZ7QKLjnRGDGgYGAh24oZnHm/wkb4gGrTU=";
   };
 
   build-system = [ setuptools ];

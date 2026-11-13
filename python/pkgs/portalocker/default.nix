@@ -4,35 +4,31 @@
   fetchPypi,
 
   # build-system
-  setuptools,
-  setuptools-scm,
+  uv-build,
 
-  # dependencies
+  # optional-dependencies
   redis,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "portalocker";
-  version = "3.2.0";
+  version = "4.4.2";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-HzAClWpUqMNzBYbFx3vxj65BSeB+rxwp/D+vTVo/iaw=";
+    hash = "sha256-eshbsqo8eHO/KsclhvxhVK+kZxrHhplKFmF6a3zLPl4=";
   };
 
-  nativeBuildInputs = [
-    setuptools
-    setuptools-scm
-  ];
+  build-system = [ uv-build ];
 
-  dependencies = [ redis ];
+  optional-dependencies.redis = [ redis ];
 
   pythonImportsCheck = [ "portalocker" ];
 
   meta = {
     description = "Library to provide an easy API to file locking";
     homepage = "https://github.com/WoLpH/portalocker";
-    license = lib.licenses.psfl;
+    license = lib.licenses.bsd3;
   };
 })

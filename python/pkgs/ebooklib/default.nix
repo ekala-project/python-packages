@@ -13,12 +13,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "ebooklib";
-  version = "0.20";
+  version = "0.21";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-NeL519OZB76NOa4t6yYbGYSJRZA649u2V3sYfq1p6YU=";
+    hash = "sha256-+oFdVE9yIyHJ/THYlXRzsmFwJ9MJFDGqaQ1t2T94UiI=";
   };
 
   build-system = [ setuptools ];

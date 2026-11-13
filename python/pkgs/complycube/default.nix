@@ -9,13 +9,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "complycube";
-  version = "1.1.8";
+  version = "1.1.9";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) version;
     pname = "complycube";
-    hash = "sha256-lN8J9QQ9YvclYzuXtck+lt1IgS5McOE1YU0NLl9rW0I=";
+    hash = "sha256-ZcttKDUb2HEzfxbjHi2gb12UJCcbZCYUlpIf4KObQB8=";
   };
 
   nativeBuildInputs = [ setuptools ];

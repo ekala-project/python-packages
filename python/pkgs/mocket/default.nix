@@ -17,12 +17,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "mocket";
-  version = "3.14.4";
+  version = "3.15.1";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    hash = "sha256-lfEO2gUKkVDNiX4Tz8C2kIXEVdIUmMvdefh2+lHPmtA=";
+    hash = "sha256-aV/40QPWMT/At9gF2GG7y52JGBHv9ACIYhEG9Qodzi8=";
   };
 
   build-system = [ hatchling ];

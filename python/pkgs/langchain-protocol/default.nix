@@ -12,14 +12,19 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "langchain-protocol";
-  version = "0.0.18";
+  version = "0.0.21";
   pyproject = true;
 
   src = fetchPypi {
     pname = "langchain_protocol";
     inherit (finalAttrs) version;
-    hash = "sha256-7D4ReC8e0MnbOOWp7QGw56DT+6QG+qiu9llLc8VqY+Y=";
+    hash = "sha256-BLPoCFIjOo2zmznTrSQ42JJTHcDs1BRZ6FehOe4OYBw=";
   };
+
+  postPatch = ''
+    substituteInPlace pyproject.toml \
+      --replace-fail '"hatchling>=1.26,<1.30"' '"hatchling>=1.26"'
+  '';
 
   build-system = [ hatchling ];
 

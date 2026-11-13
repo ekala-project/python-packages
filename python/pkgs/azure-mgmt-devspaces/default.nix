@@ -3,27 +3,30 @@
   buildPythonPackage,
   fetchPypi,
   setuptools,
+  msrest,
   msrestazure,
   azure-common,
+  azure-mgmt-core,
   azure-mgmt-nspkg,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "azure-mgmt-devspaces";
-  version = "0.2.0";
+  version = "1.0.0b3";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    extension = "zip";
-    hash = "sha256-87TIvgadTe7CP47HX1zJnZh5XXyVtSHXe0EeFFPWcjc=";
+    hash = "sha256-ZYYTEWZKEC8lb3rX0jGX/gU5BNIIvYBtodw/rRY+dfc=";
   };
 
   build-system = [ setuptools ];
 
   dependencies = [
+    msrest
     msrestazure
     azure-common
+    azure-mgmt-core
     azure-mgmt-nspkg
   ];
 

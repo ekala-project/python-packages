@@ -30,6 +30,9 @@ buildPythonPackage (finalAttrs: {
     jsmin
     mkdocs
   ];
+  # htmlmin2 is a maintained fork of htmlmin providing the same module
+  pythonRemoveDeps = [ "htmlmin2" ];
+
   # Some tests fail with an assertion error failure
 
   pythonImportsCheck = [ "mkdocs" ];

@@ -23,6 +23,9 @@ buildPythonPackage (finalAttrs: {
 
   build-system = [ setuptools ];
 
+  # passlib is provided by the libpass fork, which has a different dist name
+  pythonRemoveDeps = [ "passlib" ];
+
   dependencies = [
     passlib
     pyparsing
