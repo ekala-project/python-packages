@@ -12,13 +12,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "sqlalchemy-utils";
-  version = "0.41.2";
+  version = "0.43.0";
   pyproject = true;
 
   src = fetchPypi {
-    pname = "SQLAlchemy-Utils";
+    pname = "sqlalchemy_utils";
     inherit (finalAttrs) version;
-    hash = "sha256-vFmcjDszGeU85sXDxHESC9Ml0AcftvOKEOkk49B7mZA=";
+    hash = "sha256-fodB28LA+ZLSGBzWneE94pKzoqUwWp2oMuENVAq87b8=";
   };
 
   build-system = [ setuptools ];
