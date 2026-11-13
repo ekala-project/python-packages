@@ -1,7 +1,7 @@
 {
   lib,
   buildPythonPackage,
-  fetchPypi,
+  fetchFromSourcehut,
 
   # build-system
   setuptools,
@@ -15,12 +15,16 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "yoyo-migrations";
-  version = "8.2.0";
+  version = "9.0.0";
   pyproject = true;
 
-  src = fetchPypi {
-    inherit (finalAttrs) pname version;
-    hash = "sha256-ggYGoD4mLPHNT1niVsKPpEZCUiTVuCo9EnX9eBeFI+Q=";
+  # 9.0.0 has no sdist on PyPI
+  src = fetchFromSourcehut {
+    vc = "hg";
+    owner = "~olly";
+    repo = "yoyo";
+    rev = "v${finalAttrs.version}-release";
+    hash = "sha256-y3dI1NCx/qYW1121ylq5Kk+ha3Rb8a4ObMQCPwiwxC4=";
   };
 
   build-system = [ setuptools ];
