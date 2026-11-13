@@ -13,13 +13,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "wsme";
-  version = "0.12.1";
+  version = "0.13.0";
   pyproject = true;
 
   src = fetchPypi {
-    pname = "WSME";
-    inherit (finalAttrs) version;
-    hash = "sha256-m36yJErzxwSskUte0iGVS7aK3QqLKy84okSwZ7M3mS0=";
+    inherit (finalAttrs) pname version;
+    hash = "sha256-W/MgEO2UPs+z8IeVpGAuJoPfXV6ozHHq8evj9EnzmDM=";
   };
 
   build-system = [ setuptools ];
