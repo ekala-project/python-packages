@@ -4,24 +4,27 @@
   fetchPypi,
   setuptools,
   cheroot,
-  legacy-cgi,
+  more-itertools,
+  multipart,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "web.py";
-  version = "0.62";
+  version = "0.76";
   pyproject = true;
 
   src = fetchPypi {
-    inherit (finalAttrs) pname version;
-    hash = "sha256-XOaEyqJAZUyuWVDai0t7wXiBIDHgj5kFGNByvUSrUl4=";
+    pname = "web_py";
+    inherit (finalAttrs) version;
+    hash = "sha256-8Jc97iBKf7zo2l5nLRfmsJ4kStStXDPJy2ykI9BAAZg=";
   };
 
   build-system = [ setuptools ];
 
   dependencies = [
     cheroot
-    legacy-cgi
+    more-itertools
+    multipart
   ];
 
   pythonImportsCheck = [ "web" ];
