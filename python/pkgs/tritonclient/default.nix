@@ -1,6 +1,5 @@
 {
   lib,
-  stdenv,
   buildPythonPackage,
   fetchPypi,
   numpy,
@@ -15,33 +14,19 @@
 
 let
   pname = "tritonclient";
-  version = "2.68.0";
+  version = "2.74.0";
   format = "wheel";
 in
 buildPythonPackage (finalAttrs: {
   inherit pname version format;
 
-  src =
-    let
-      platforms = {
-        aarch64-linux = "manylinux2014_aarch64";
-        x86_64-linux = "manylinux1_x86_64";
-      };
-      hashes = {
-        aarch64-linux = "sha256-RkHdD4yPvo85Fqts07XFsgiMUCFXWiWuHQqfGDznJGk=";
-        x86_64-linux = "sha256-7h98H/ipZk56193fhhaSR62Mnis4Wakn/ZhOrhWa4vc=";
-      };
-    in
-    fetchPypi {
-      inherit pname version format;
-      python = "py3";
-      dist = "py3";
-      platform =
-        platforms.${stdenv.hostPlatform.system}
-          or (throw "Unsupported system: ${stdenv.hostPlatform.system}");
-      hash =
-        hashes.${stdenv.hostPlatform.system} or (throw "Unsupported system: ${stdenv.hostPlatform.system}");
-    };
+  src = fetchPypi {
+    inherit pname version format;
+    python = "py3";
+    dist = "py3";
+    platform = "any";
+    hash = "sha256-AlLeMFgb+USsNvEjGO0sqdct/59mIq/Jo33P1G92+O4=";
+  };
 
   dependencies = [
     numpy
