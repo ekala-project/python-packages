@@ -3,14 +3,15 @@
   buildPythonPackage,
   fetchPypi,
   # build-system
-  setuptools,
+  hatchling,
+  # dependencies
   django,
-  six,
+  django-pgware,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "django-pglocks";
-  version = "1.0.4";
+  version = "2.1.0";
   pyproject = true;
 
   meta = {
@@ -20,16 +21,16 @@ buildPythonPackage (finalAttrs: {
   };
 
   src = fetchPypi {
-    inherit (finalAttrs) pname version;
-    sha256 = "3c47c66fbfbd268ef46269673a0516a039539b0972b8ed2ec9cfee44c4b65523";
+    pname = "django_pglocks";
+    inherit (finalAttrs) version;
+    hash = "sha256-o9VSaC3FDJKnvQ/l8Cbj6Il1gIXQiUowH+RDfFfJ1k8=";
   };
 
-  build-system = [ setuptools ];
+  build-system = [ hatchling ];
 
-  buildInputs = [ django ];
   dependencies = [
     django
-    six
+    django-pgware
   ];
 
   # tests need a postgres database
