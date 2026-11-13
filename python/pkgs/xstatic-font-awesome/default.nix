@@ -7,13 +7,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "xstatic-font-awesome";
-  version = "6.2.1.1";
+  version = "6.2.1.2";
   pyproject = true;
 
   src = fetchPypi {
-    pname = "XStatic-Font-Awesome";
+    pname = "xstatic_font_awesome";
     inherit (finalAttrs) version;
-    hash = "sha256-8HWHEJYShjjy4VOQINgid1TD2IXdaOfubemgEjUHaCg=";
+    hash = "sha256-nzyy8Dj619NSciN10/Ja80banuCT7Z3CyMRr2RGrGXE=";
   };
 
   # xstatic uses pkg_resources.declare_namespace, removed in setuptools 83.
