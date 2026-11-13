@@ -23,14 +23,14 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "flax";
-  version = "0.12.7";
+  version = "0.12.12";
   pyproject = true;
 
   src = fetchFromGitHub {
     owner = "google";
     repo = "flax";
     tag = "v${finalAttrs.version}";
-    hash = "sha256-a78KiTsCCARWZvbxz9QKdUKnjkDJGXcPVVJu5rU4m/U=";
+    hash = "sha256-ERyzGKGu/8Cj5pPwiRatNOACPfwDiwjeqnBWkcnLD4k=";
   };
 
   build-system = [
