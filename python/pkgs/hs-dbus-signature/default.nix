@@ -10,12 +10,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "hs-dbus-signature";
-  version = "0.7";
+  version = "0.8.1";
   pyproject = true;
 
   src = fetchPypi {
-    inherit (finalAttrs) pname version;
-    hash = "sha256-NNnTcSX+K8zU+sj1QBd13h7aEXN9VqltJMNWCuhgZ6I=";
+    pname = "hs_dbus_signature";
+    inherit (finalAttrs) version;
+    hash = "sha256-iSCSUNuioB4v3x9sQr+tPKZZaG7pHaG9hspugOzImFk=";
   };
 
   build-system = [ setuptools ];
