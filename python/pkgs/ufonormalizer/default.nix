@@ -9,13 +9,12 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "ufonormalizer";
-  version = "0.6.2";
+  version = "0.6.3";
   pyproject = true;
 
   src = fetchPypi {
     inherit (finalAttrs) pname version;
-    sha256 = "sha256-TFcVu5SDgfLGQa+CuUk4rSQtm1Nl3RxbfOPXVVaibDo=";
-    extension = "zip";
+    hash = "sha256-wycQl6up0pBZS3XCtDLPaBCIt0/j6zNMpDGTJOK93U4=";
   };
 
   build-system = [ setuptools ];
