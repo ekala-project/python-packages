@@ -11,18 +11,20 @@
   pytest-filter-subpackage,
   pytest-mock,
   pytest-remotedata,
+  pytest-skip-slow,
   setuptools,
   setuptools-scm,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "pytest-astropy";
-  version = "0.11.0";
+  version = "0.12.0";
   pyproject = true;
 
   src = fetchPypi {
-    inherit (finalAttrs) pname version;
-    hash = "sha256-Tq6qme2RFj7Y+arBMscKgfJbxMEvPNVNujKfwmxnObU=";
+    pname = "pytest_astropy";
+    inherit (finalAttrs) version;
+    hash = "sha256-C9/x+menhW7Imcb3gQqGkRJT12IBowgi1+TvFLZxvcA=";
   };
 
   build-system = [
@@ -41,6 +43,7 @@ buildPythonPackage (finalAttrs: {
     pytest-filter-subpackage
     pytest-mock
     pytest-remotedata
+    pytest-skip-slow
   ];
 
   # pytest-astropy is a meta package that only propagates requirements
