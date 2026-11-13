@@ -7,12 +7,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "wheezy.template";
-  version = "3.2.2";
+  version = "3.2.5";
   pyproject = true;
 
   src = fetchPypi {
-    inherit (finalAttrs) pname version;
-    hash = "sha256-hknPXHGPPNjRAr0TYVosPaTntsjwQjOKZBCU+qFlIHw=";
+    pname = "wheezy_template";
+    inherit (finalAttrs) version;
+    hash = "sha256-x8C/ha8PcMou9LbqmnTvNy9zOSqhe+oNiF3LpzVtCGc=";
   };
 
   build-system = [ setuptools ];
