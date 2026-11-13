@@ -7,13 +7,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "xstatic-jquery";
-  version = "3.5.1.1";
+  version = "3.7.1.1";
   pyproject = true;
 
   src = fetchPypi {
-    pname = "XStatic-jQuery";
+    pname = "xstatic_jquery";
     inherit (finalAttrs) version;
-    hash = "sha256-4K6PjsW70oBFukvKBnZ6OL1fwnz5tx9DRYn1k3Dc0yM=";
+    hash = "sha256-DCrHgNg4i/2LlFhvag+GVB6HArX8lvHe2ZeGYhSAlEU=";
   };
 
   build-system = [ setuptools_80 ];
