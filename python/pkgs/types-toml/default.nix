@@ -8,12 +8,13 @@
 
 buildPythonPackage (finalAttrs: {
   pname = "types-toml";
-  version = "0.10.8.20240310";
+  version = "0.10.8.20260518";
   pyproject = true;
 
   src = fetchPypi {
-    inherit (finalAttrs) pname version;
-    hash = "sha256-PUFQEwKXJDamuLI5yFCyZollfiUoG0j/DsBjRbiDAzE=";
+    pname = "types_toml";
+    inherit (finalAttrs) version;
+    hash = "sha256-gOEPrNJP3tqdXGchh9cr46woSEN4jWf1quWePgFttv4=";
   };
 
   build-system = [ setuptools ];
