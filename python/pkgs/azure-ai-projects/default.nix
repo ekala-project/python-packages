@@ -7,20 +7,21 @@
   azure-core,
   azure-identity,
   azure-storage-blob,
-  azure-ai-agents,
+  httpx2,
+  openai,
   isodate,
   typing-extensions,
 }:
 
 buildPythonPackage (finalAttrs: {
   pname = "azure-ai-projects";
-  version = "1.0.0";
+  version = "2.11.0";
   pyproject = true;
 
   src = fetchPypi {
     pname = "azure_ai_projects";
     inherit (finalAttrs) version;
-    hash = "sha256-tfAwJMzw/VQ/vg9avMdORbFezMHHGrh/xxxjBh2f1jw=";
+    hash = "sha256-7aNA2nyr/9CwW0tbuMbIpbelqPyklXhaEJfy/sjBU/g=";
   };
 
   build-system = [
@@ -32,10 +33,14 @@ buildPythonPackage (finalAttrs: {
     azure-core
     azure-identity
     azure-storage-blob
-    azure-ai-agents
+    httpx2
+    openai
     isodate
     typing-extensions
   ];
+
+  # requires openai>=3.0.0; only openai 2.x is packaged
+  pythonRelaxDeps = [ "openai" ];
 
   pythonImportsCheck = [
     "azure.ai.projects"
